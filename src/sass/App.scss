@@ -1,0 +1,76 @@
+@import '../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
+@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+
+body {
+  margin: $size-scale-max $size-scale-med;
+}
+
+.main-wrapper {
+  max-width: $size-width-max;
+  margin: 0 auto;
+}
+
+code {
+  color: $color-base-chili;
+}
+
+.indention {
+  padding-left: $size-scale-med;
+  border-left: 1px solid $color-base-manatee;
+  margin-bottom: $size-scale-xxl;
+}
+
+.install {
+  padding: $size-scale-sml 0 $size-scale-sml $size-scale-lg !important;
+  margin-bottom: $size-scale-xxl;
+}
+
+.html {
+  padding: $size-scale-med !important;
+
+  @include breakpoint-narrow {
+    padding: $size-scale-lg $size-scale-sml $size-scale-lg $size-scale-lg !important;
+  }
+}
+
+pre {
+  margin-top: 0;
+}
+
+.exampleWrapper {
+  $stripe: #f3f3f3;
+  $background: $color-base-white;
+
+  border-width: 1px 1px 0;
+  background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
+  float: left;
+  width: 100%;
+}
+
+.afterCode {
+  margin-bottom: $size-scale-max;
+  border-width: 0 1px 1px;
+}
+
+footer {
+  // @include breakpoint-narrow {
+  //   padding: $size-scale-xxl;
+  // }
+  margin: $size-scale-xxl 0;
+}
+
+.dataSelected {
+  $stripe: $color-base-cloud;
+  $background: $color-base-white;
+
+  border-width: 1px 1px 0;
+  background: repeating-linear-gradient( 45deg, $stripe, $stripe 5px, $background 5px, $background 10px);
+
+  color: $color-base-shark;
+  line-height: $size-scale-xxl;
+  padding: 0 10px 0;
+
+  span {
+    color: $color-base-chili;
+  }
+}
