@@ -53,9 +53,6 @@ pre {
 }
 
 footer {
-  // @include breakpoint-narrow {
-  //   padding: $size-scale-xxl;
-  // }
   margin: $size-scale-xxl 0;
 }
 
@@ -74,3 +71,18 @@ footer {
     color: $color-base-chili;
   }
 }
+
+.util_swatchBox {
+  margin-bottom: var(--size-scale-xxl);
+  @include breakpoint-narrow {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+ods-swatch {
+  display: block;
+  flex-basis: 25%;
+  flex-grow: 2;
+}
+
