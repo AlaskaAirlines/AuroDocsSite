@@ -22,7 +22,7 @@ class Swatch extends Component {
     const brand = data.color;
     Object.keys(brand).forEach(function(key) {
       let data = brand[key];
-      console.log(Object.keys(data));
+      // console.log(Object.keys(data));
     });
 
     const brandBlue = data.color.brand.blue;
