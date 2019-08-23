@@ -4,6 +4,7 @@ import Typography from './content/typography';
 import Hyperlink from './content/hyperlink';
 import Options from './content/options';
 import Swatch from './content/swatch';
+import Icons from './content/icons';
 import ComplexContent from './content/complexContent';
 import Button from './content/button';
 import Footer from './components/footer';
@@ -17,6 +18,8 @@ function App() {
       <Swatch />
 
       <Typography />
+
+      <Icons />
 
       <Hyperlink />
 

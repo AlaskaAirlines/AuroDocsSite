@@ -1,5 +1,5 @@
 import React from 'react';
-import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
+// import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
 import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
 import 'highlight.js/styles/github.css';
 import Highlight from 'react-highlight';

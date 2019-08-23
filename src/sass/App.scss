@@ -86,3 +86,36 @@ ods-swatch {
   flex-grow: 2;
 }
 
+.iconsWrapper {
+  display: flex;
+  // justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: var(--size-scale-xxl);
+
+  span {
+    position: absolute;
+    font-size: var(--size-font-breakpoint-all-small);
+    top: 100px;
+  }
+
+  div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--size-border-radius-default);
+    background-color: var(--color-base-cloud);
+    color: var(--color-type-theme-light-link);
+    margin: 0 var(--size-scale-sml) var(--size-scale-sml) 0;
+    width: 150px;
+    height: 125px;
+  }
+
+  .classicCheckMark {
+    color: var(--color-base-galapagos);
+  }
+
+  .close {
+    color: var(--color-base-orca);
+  }
+}

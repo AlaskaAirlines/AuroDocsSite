@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import Highlight from 'react-highlight';
 import LinkIcons from '../components/linkIcons';
-import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
+// import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
 // import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
 // import "@alaskaairux/ods-inputoptions/dist/ods-inputoptions";
 import "@alaskaairux/ods-swatch/dist/ods-swatch";
@@ -21,7 +21,7 @@ class Swatch extends Component {
   componentDidMount() {
     const brand = data.color;
     Object.keys(brand).forEach(function(key) {
-      let data = brand[key];
+      // let data = brand[key];
       // console.log(Object.keys(data));
     });
 

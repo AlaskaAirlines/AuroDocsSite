@@ -1,5 +1,5 @@
 import React from 'react';
-import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
+// import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
 import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
 import "@alaskaairux/ods-button/dist/ods-button";
 import "@alaskaairux/ods-inputoptions/dist/ods-inputoptions";
