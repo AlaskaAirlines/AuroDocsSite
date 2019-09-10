@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import Highlight from 'react-highlight';
 import LinkIcons from '../components/linkIcons';
 import '@alaskaairux/orion-icons/dist/tokens/CSSTokenProperties.css';
 import '../sass/App.scss';
@@ -28,13 +27,6 @@ import Close from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/close.
 import Stepout from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/stepout.svg';
 
 class Icons extends Component {
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     ...
-  //   }
-  // };
 
   showVersion() {
     const pjson = require('../../package.json');

@@ -1,0 +1,100 @@
+@import '../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
+@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/baseline";
+
+.ods-markdown {
+  footer img {
+    width: 50px;
+  }
+
+  img {
+    &[alt="NPM"],
+    &[alt="npm (scoped)"],
+    &[alt="Build Status"] {
+      height: 20px;
+      float: left;
+      margin-right: 5px;
+    }
+  }
+
+  img {
+    &[alt="NPM"] {
+      width: 120px;
+      float: none;
+      margin: 0;
+    }
+  }
+
+  img {
+    &[alt="npm (scoped)"] {
+      width: 88px;
+    }
+  }
+
+  img {
+    &[alt="Build Status"] {
+      width: 90px;
+    }
+  }
+
+  img {
+    &[alt="Orion Design System Logo"] {
+      width: 125px;
+      margin: 0 0 10px 10px;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    @extend .heading;
+  }
+
+  h1 {
+    @extend .heading--max;
+  }
+
+  h2 {
+    @extend .heading--xxl;
+  }
+
+  h3 {
+    @extend .heading--xl;
+  }
+
+  a {
+    @extend .hyperlink;
+    @extend .hyperlink--inline;
+  }
+
+  pre  {
+    overflow: auto;
+    background-color: var(--color-base-cloud);
+    padding: var(--size-scale-lg);
+  }
+
+  table {
+    border-spacing: 5px;
+    margin-bottom: var(--size-scale-xl);
+
+    tr {
+      &:nth-child(even) {
+        background-color: $color-base-cloud;
+      }
+    }
+  }
+
+  table, th, td {
+    border: 1px solid $color-base-fog;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 15px;
+  }
+
+  footer {
+    font-size: var(--size-font-breakpoint-all-small);
+    color: var(--color-base-shark);
+  }
+}

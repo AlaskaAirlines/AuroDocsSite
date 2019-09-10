@@ -7,6 +7,7 @@ import Swatch from './content/swatch';
 import Icons from './content/icons';
 import ComplexContent from './content/complexContent';
 import Button from './content/button';
+import Generator from './content/generator';
 import Footer from './components/footer';
 import './sass/App.scss';
 import './scripts/orion';
@@ -28,6 +29,8 @@ function App() {
       <Options />
 
       <ComplexContent />
+
+      <Generator />
 
       <Footer />
     </main>

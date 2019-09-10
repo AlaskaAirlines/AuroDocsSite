@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "@alaskaairux/ods-button": "^2.7.5",
+    "@alaskaairux/ods-docs": "^1.0.3",
     "@alaskaairux/ods-hyperlink": "^1.0.6",
     "@alaskaairux/ods-inputoptions": "^1.1.4",
     "@alaskaairux/ods-swatch": "^1.0.1",
+    "@alaskaairux/ods-wc-generator": "^1.0.16",
     "@alaskaairux/orion-design-tokens": "^2.7.0",
     "@alaskaairux/orion-icons": "^1.6.2",
     "@alaskaairux/orion-web-core-style-sheets": "^2.6.7",
@@ -16,6 +18,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-highlight": "^0.12.0",
+    "react-markdown": "^4.2.2",
     "react-scripts": "3.0.1",
     "typescript": "^3.6.2"
   },
