@@ -7,7 +7,25 @@ import "@alaskaairux/ods-button/dist/ods-button";
 import 'highlight.js/styles/github.css';
 import '../sass/App.scss';
 
+import ReactMarkdown from 'react-markdown';
+import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
+
 class Buttons extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      docsBuildStatus: null
+    }
+  };
+
+  componentWillMount() {
+    fetch(buildStatus).then((response) => response.text()).then((text) => {
+      this.setState({
+        docsBuildStatus: text
+      })
+    })
+  }
 
   showVersion() {
     const pjson = require('../../package.json');
@@ -20,13 +38,19 @@ class Buttons extends Component {
     return (
       <section id="buttons">
 
-        <h1 className="heading heading--max">Buttons</h1>
+
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
           npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
           code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/ods-button.js"
           version={this.showVersion()}
         />
+
+        <section className="ods-markdown">
+          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
+        </section>
+
+        <h1 className="heading heading--max">Buttons</h1>
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>The Orion Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
@@ -71,6 +95,7 @@ class Buttons extends Component {
             <ods-button outercontext condensed>Condensed</ods-button>
             <ods-button outercontext isactive>Active</ods-button>
             <ods-button outercontext disabled>Disabled</ods-button>
+            <ods-button outercontext flowtype="complete">Complete</ods-button>
           </div>
         </div>
 
@@ -81,6 +106,7 @@ class Buttons extends Component {
   <ods-button outercontext condensed>Condensed</ods-button>
   <ods-button outercontext isactive>Active</ods-button>
   <ods-button outercontext disabled>Disabled</ods-button>
+  <ods-button outercontext flowtype="complete">Complete</ods-button>
 </div>`
           }
         </Highlight>
