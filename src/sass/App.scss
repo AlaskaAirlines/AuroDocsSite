@@ -82,8 +82,9 @@ footer {
 
 ods-swatch {
   display: block;
-  flex-basis: 25%;
+  flex-basis: 30%;
   flex-grow: 2;
+  overflow: hidden;
 }
 
 .iconsWrapper {
@@ -106,8 +107,20 @@ ods-swatch {
     background-color: var(--color-base-cloud);
     color: var(--color-type-theme-light-link);
     margin: 0 var(--size-scale-sml) var(--size-scale-sml) 0;
-    width: 150px;
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+
+    width: calc(50% - var(--size-scale-micro));
     height: 125px;
+
+    @include breakpoint-narrow {
+      width: 150px;
+      &:nth-child(even) {
+        margin-right: var(--size-scale-sml);
+      }
+    }
   }
 
   .classicCheckMark {
