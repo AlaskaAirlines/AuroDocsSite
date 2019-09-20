@@ -8,13 +8,17 @@ import Icons from './content/icons';
 import ComplexContent from './content/complexContent';
 import Button from './content/button';
 import Generator from './content/generator';
+import Nav from './components/nav';
 import Footer from './components/footer';
+
 import './sass/App.scss';
 import './scripts/orion';
 
 function App() {
   return (
     <main className="main-wrapper">
+
+      <Nav />
 
       <Swatch />
 

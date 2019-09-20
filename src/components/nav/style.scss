@@ -1,0 +1,47 @@
+@import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/layoutProperties";
+
+.mainSiteNav {
+  margin-bottom: var(--size-scale-max);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hyperlink {
+  @include breakpoint-narrow {
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  margin-bottom: var(--size-scale-sml);
+
+  &:last-child {
+    margin-right: auto;
+  }
+}
+
+.floatingTopLink {
+  @include breakpoint-narrow {
+    width: auto;
+  }
+
+  position: fixed;
+  z-index: 1001;
+  border: 1px solid var(--color-base-mist);
+  right: 50%;
+  margin-right: -45%;
+  bottom: var(--size-scale-sml);
+  background-color: rgba(255,255,255,.8);
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 3px;
+  &:hover {
+    cursor: pointer;
+  }
+}
