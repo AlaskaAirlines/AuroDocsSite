@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@alaskaairux/ods-button": "^2.7.9",
+    "@alaskaairux/ods-button": "^2.7.10",
     "@alaskaairux/ods-docs": "^1.0.5",
     "@alaskaairux/ods-hyperlink": "^1.0.7",
     "@alaskaairux/ods-inputoptions": "^1.1.4",

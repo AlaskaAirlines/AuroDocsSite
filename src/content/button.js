@@ -95,7 +95,6 @@ class Buttons extends Component {
             <ods-button outercontext condensed>Condensed</ods-button>
             <ods-button outercontext isactive>Active</ods-button>
             <ods-button outercontext disabled>Disabled</ods-button>
-            <ods-button outercontext flowtype="complete">Complete</ods-button>
           </div>
         </div>
 
@@ -106,10 +105,26 @@ class Buttons extends Component {
   <ods-button outercontext condensed>Condensed</ods-button>
   <ods-button outercontext isactive>Active</ods-button>
   <ods-button outercontext disabled>Disabled</ods-button>
-  <ods-button outercontext flowtype="complete">Complete</ods-button>
 </div>`
           }
         </Highlight>
+
+        <div className="exampleWrapper">
+          <div className="ods-containedButtons">
+            <ods-button outercontext flowtype="complete">Complete</ods-button>
+            <ods-button outercontext isactive flowtype="complete">Active complete</ods-button>
+          </div>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {
+`<div className="ods-containedButtons">
+  <ods-button outercontext flowtype="complete">Complete</ods-button>
+  <ods-button outercontext isactive flowtype="complete">Active complete</ods-button>
+</div>`
+          }
+        </Highlight>
+
         <div className="exampleWrapper">
           <div className="ods-containedButtons">
             <ods-button outercontext buttontype="secondary">Default</ods-button>
