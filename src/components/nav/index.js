@@ -58,6 +58,10 @@ class Nav extends Component {
           Input Options
         </Link>
 
+        <Link className="hyperlink" activeClass="active" to="toast" spy={true} smooth={true} offset={-50} duration={2000}>
+          Toast
+        </Link>
+
         <Link className="hyperlink" activeClass="active" to="generator" spy={true} smooth={true} offset={-50} duration={2000}>
           WC Generator
         </Link>

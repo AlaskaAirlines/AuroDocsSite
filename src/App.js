@@ -7,6 +7,7 @@ import Swatch from './content/swatch';
 import Icons from './content/icons';
 import ComplexContent from './content/complexContent';
 import Button from './content/button';
+import Toast from './content/toast';
 import Generator from './content/generator';
 import Nav from './components/nav';
 import Footer from './components/footer';
@@ -31,6 +32,8 @@ function App() {
       <Button />
 
       <Options />
+
+      <Toast />
 
       <ComplexContent />
 

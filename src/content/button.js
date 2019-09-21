@@ -63,24 +63,19 @@ class Buttons extends Component {
         </Highlight>
 
         <div className="exampleWrapper">
-          <ods-button>Default</ods-button>
+          <ods-button>default</ods-button>
         </div>
 
         <Highlight className='html afterCode'>
           {`<ods-button>Default</ods-button>`}
         </Highlight>
 
-        {/* <div className="indention util_fontWeightLight util_type--secondary">
-          <p>When needed, <code>ods-button</code> supports autofocus.</p>
-          <p>Be sure not to touch the view, and this element should appear with the <code>:focus</code> UI.</p>
+        <div className="exampleWrapper">
+          <ods-button theme="classic">classic default</ods-button>
         </div>
 
-        <div className="exampleWrapper">
-          <ods-button autofocus>Default</ods-button>
-        </div> */}
-
         <Highlight className='html afterCode'>
-          {`<ods-button autofocus>Default</ods-button>`}
+          {`<ods-button theme="classic">Classic default</ods-button>`}
         </Highlight>
 
         <div className="indention util_fontWeightLight util_type--secondary">
@@ -91,10 +86,10 @@ class Buttons extends Component {
 
         <div className="exampleWrapper">
           <div className="ods-containedButtons">
-            <ods-button outercontext>Default</ods-button>
-            <ods-button outercontext condensed>Condensed</ods-button>
-            <ods-button outercontext isactive>Active</ods-button>
-            <ods-button outercontext disabled>Disabled</ods-button>
+            <ods-button outercontext>default</ods-button>
+            <ods-button outercontext condensed>condensed</ods-button>
+            <ods-button outercontext isactive>active</ods-button>
+            <ods-button outercontext disabled>disabled</ods-button>
           </div>
         </div>
 
@@ -111,8 +106,28 @@ class Buttons extends Component {
 
         <div className="exampleWrapper">
           <div className="ods-containedButtons">
-            <ods-button outercontext flowtype="complete">Complete</ods-button>
-            <ods-button outercontext isactive flowtype="complete">Active complete</ods-button>
+            <ods-button outercontext theme="classic">default</ods-button>
+            <ods-button outercontext condensed theme="classic">condensed</ods-button>
+            <ods-button outercontext isactive theme="classic">active</ods-button>
+            <ods-button outercontext disabled theme="classic">disabled</ods-button>
+          </div>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {
+`<div className="ods-containedButtons">
+  <ods-button outercontext theme="classic">Default</ods-button>
+  <ods-button outercontext condensed theme="classic">Condensed</ods-button>
+  <ods-button outercontext isactive theme="classic">Active</ods-button>
+  <ods-button outercontext disabled theme="classic">Disabled</ods-button>
+</div>`
+          }
+        </Highlight>
+
+        <div className="exampleWrapper">
+          <div className="ods-containedButtons">
+            <ods-button outercontext flowtype="complete">complete</ods-button>
+            <ods-button outercontext isactive flowtype="complete">active complete</ods-button>
           </div>
         </div>
 
@@ -141,6 +156,26 @@ class Buttons extends Component {
   <ods-button outercontext buttontype="secondary" condensed>Condensed</ods-button>
   <ods-button outercontext buttontype="secondary" isactive>Active</ods-button>
   <ods-button outercontext buttontype="secondary" disabled>Disabled</ods-button>
+</div>`
+          }
+        </Highlight>
+
+        <div className="exampleWrapper">
+          <div className="ods-containedButtons">
+            <ods-button outercontext buttontype="secondary" theme="classic">Default</ods-button>
+            <ods-button outercontext buttontype="secondary" condensed theme="classic">Condensed</ods-button>
+            <ods-button outercontext buttontype="secondary" isactive theme="classic">Active</ods-button>
+            <ods-button outercontext buttontype="secondary" disabled theme="classic">Disabled</ods-button>
+          </div>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {
+`<div className="ods-containedButtons">
+  <ods-button outercontext buttontype="secondary" theme="classic">Default</ods-button>
+  <ods-button outercontext buttontype="secondary" condensed theme="classic">Condensed</ods-button>
+  <ods-button outercontext buttontype="secondary" isactive theme="classic">Active</ods-button>
+  <ods-button outercontext buttontype="secondary" disabled theme="classic">Disabled</ods-button>
 </div>`
           }
         </Highlight>
