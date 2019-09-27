@@ -18,6 +18,11 @@ code {
   padding-left: $size-scale-med;
   border-left: 1px solid $color-base-manatee;
   margin-bottom: $size-scale-xxl;
+
+  &--warning {
+    border-color: var(--color-background-alert);
+    border-width: 4px;
+  }
 }
 
 .install {
@@ -105,7 +110,6 @@ ods-swatch {
     align-items: center;
     border-radius: var(--size-border-radius-default);
     background-color: var(--color-base-cloud);
-    color: var(--color-type-theme-light-link);
     margin: 0 var(--size-scale-sml) var(--size-scale-sml) 0;
 
     &:nth-child(even) {
@@ -121,13 +125,5 @@ ods-swatch {
         margin-right: var(--size-scale-sml);
       }
     }
-  }
-
-  .classicCheckMark {
-    color: var(--color-base-galapagos);
-  }
-
-  .close {
-    color: var(--color-base-orca);
   }
 }

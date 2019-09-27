@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import LinkIcons from '../components/linkIcons';
 import '@alaskaairux/orion-icons/dist/tokens/CSSTokenProperties.css';
+import '../sass/icons.scss';
 import '../sass/App.scss';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
@@ -22,9 +23,24 @@ import Chevronup from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/ch
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import Classiccheckmark from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/classiccheckmark.svg';
 // eslint-disable-next-line import/no-webpack-loader-syntax
+import Checkmarklg from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/checkmarklg.svg';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import Checkmarksml from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/checkmarksml.svg';
+// eslint-disable-next-line import/no-webpack-loader-syntax
 import Close from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/close.svg';
 // eslint-disable-next-line import/no-webpack-loader-syntax
+import Closelg from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/closelg.svg';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import Closesml from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/closesml.svg';
+// eslint-disable-next-line import/no-webpack-loader-syntax
 import Stepout from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/stepout.svg';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import Stepoutlg from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/stepoutlg.svg';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import Alert from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/alert.svg';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import Creditcard from '-!svg-react-loader!@alaskaairux/orion-icons/dist/icons/creditcard.svg';
+
 
 class Icons extends Component {
 
@@ -88,13 +104,41 @@ class Icons extends Component {
             <Classiccheckmark />
             <span>classiccheckmark.svg</span>
           </div>
+          <div title="checkmarklg.svg" className="checkmark">
+            <Checkmarklg />
+            <span>checkmarklg.svg</span>
+          </div>
+          <div title="checkmarksml.svg" className="checkmark">
+            <Checkmarksml />
+            <span>checkmarksml.svg</span>
+          </div>
           <div title="close.svg" className="close">
             <Close />
             <span>close.svg</span>
           </div>
+          <div title="closelg.svg" className="close">
+            <Closelg />
+            <span>closelg.svg</span>
+          </div>
+          <div title="closesml.svg" className="close">
+            <Closesml />
+            <span>closesml.svg</span>
+          </div>
           <div title="stepout.svg">
             <Stepout />
             <span>stepout.svg</span>
+          </div>
+          <div title="stepoutlg.svg">
+            <Stepoutlg />
+            <span>stepoutlg.svg</span>
+          </div>
+          <div title="alert.svg" className="alert">
+            <Alert />
+            <span>alert.svg</span>
+          </div>
+          <div title="creditcard.svg" className="creditCard">
+            <Creditcard />
+            <span>creditcard.svg</span>
           </div>
         </div>
 

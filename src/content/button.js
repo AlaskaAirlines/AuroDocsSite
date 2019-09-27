@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import Highlight from 'react-highlight';
 import LinkIcons from '../components/linkIcons';
-// import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
 import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
 import "@alaskaairux/ods-button/dist/ods-button";
 import 'highlight.js/styles/github.css';
 import '../sass/App.scss';
+
+import closelg from '@alaskaairux/orion-icons/dist/icons/closelg_es6.js';
+import chevronright from '@alaskaairux/orion-icons/dist/icons/chevronright_es6.js';
+import chevronleft from '@alaskaairux/orion-icons/dist/icons/chevronleft_es6.js';
+import stepoutlg from '@alaskaairux/orion-icons/dist/icons/stepoutlg_es6.js';
 
 import ReactMarkdown from 'react-markdown';
 import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
@@ -52,6 +56,12 @@ class Buttons extends Component {
 
         <h1 className="heading heading--max">Buttons</h1>
 
+        <div className="indention indention--warning util_fontWeightLight util_type--secondary">
+          <p><strong>ALERT: </strong>There appears to be a bug with <strong>Safari</strong> where the CSS pseudo selector <code>:first-child</code> is not being honered when used within a HTML custom element. The expected style is to have the first letter of the string inside the button to always be UPPERCASE regardless of the casing of the content entered into the <code>slot</code> of the element. </p>
+
+          <p>The work-around until this bug is resolved is to simply use proper casing when entering content into the <code>slot</code> of the custom elememnt.</p>
+        </div>
+
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>The Orion Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
           <p>See <ods-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</ods-hyperlink> for more information as how to install and full API for the <code>ods-button</code> Orion base element.</p>
@@ -63,7 +73,9 @@ class Buttons extends Component {
         </Highlight>
 
         <div className="exampleWrapper">
-          <ods-button>default</ods-button>
+          <ods-button>
+            default
+          </ods-button>
         </div>
 
         <Highlight className='html afterCode'>
@@ -142,10 +154,10 @@ class Buttons extends Component {
 
         <div className="exampleWrapper">
           <div className="ods-containedButtons">
-            <ods-button outercontext buttontype="secondary">Default</ods-button>
-            <ods-button outercontext buttontype="secondary" condensed>Condensed</ods-button>
-            <ods-button outercontext buttontype="secondary" isactive>Active</ods-button>
-            <ods-button outercontext buttontype="secondary" disabled>Disabled</ods-button>
+            <ods-button outercontext buttontype="secondary">default</ods-button>
+            <ods-button outercontext buttontype="secondary" condensed>condensed</ods-button>
+            <ods-button outercontext buttontype="secondary" isactive>active</ods-button>
+            <ods-button outercontext buttontype="secondary" disabled>disabled</ods-button>
           </div>
         </div>
 
@@ -162,10 +174,10 @@ class Buttons extends Component {
 
         <div className="exampleWrapper">
           <div className="ods-containedButtons">
-            <ods-button outercontext buttontype="secondary" theme="classic">Default</ods-button>
-            <ods-button outercontext buttontype="secondary" condensed theme="classic">Condensed</ods-button>
-            <ods-button outercontext buttontype="secondary" isactive theme="classic">Active</ods-button>
-            <ods-button outercontext buttontype="secondary" disabled theme="classic">Disabled</ods-button>
+            <ods-button outercontext buttontype="secondary" theme="classic">default</ods-button>
+            <ods-button outercontext buttontype="secondary" condensed theme="classic">condensed</ods-button>
+            <ods-button outercontext buttontype="secondary" isactive theme="classic">active</ods-button>
+            <ods-button outercontext buttontype="secondary" disabled theme="classic">disabled</ods-button>
           </div>
         </div>
 
@@ -183,8 +195,8 @@ class Buttons extends Component {
         <div className="exampleWrapper">
           <div className="ods-containedButtons">
             <ods-hyperlink role="button">Cancel</ods-hyperlink>
-            <ods-button outercontext>Primary offer</ods-button>
-            <ods-button outercontext buttontype="secondary">Secondary offer</ods-button>
+            <ods-button outercontext>primary offer</ods-button>
+            <ods-button outercontext buttontype="secondary">secondary offer</ods-button>
           </div>
         </div>
 
@@ -192,8 +204,8 @@ class Buttons extends Component {
           {
 `<div className="ods-containedButtons">
   <ods-hyperlink role="button">Cancel</ods-hyperlink>
-  <ods-button>Primary offer</ods-button>
-  <ods-button buttontype="secondary">Secondary offer</ods-button>
+  <ods-button>primary offer</ods-button>
+  <ods-button buttontype="secondary">secondary offer</ods-button>
 </div>`
           }
         </Highlight>
@@ -201,18 +213,69 @@ class Buttons extends Component {
         <div className="exampleWrapper">
           <div className="ods-containedButtons">
             <ods-hyperlink role="button">Cancel</ods-hyperlink>
-            <ods-button outercontext>Save</ods-button>
+            <ods-button outercontext>save</ods-button>
           </div>
         </div>
 
         <Highlight className='html afterCode'>
           {
 `<div className="ods-containedButtons">
-  <ods-hyperlink role="button">Hyperlink button</ods-hyperlink>
+  <ods-hyperlink role="button">Cancel</ods-hyperlink>
   <ods-button outercontext>Default button</ods-button>
 </div>`
           }
+        </Highlight>
 
+        <div className="indention util_fontWeightLight util_type--secondary">
+          <p>The following examples illustrate how to use Orion Icons with the ods-button custom element.</p>
+          <p>See <ods-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/orion-icons" target="_blank">instructions</ods-hyperlink> for more information as how to install and full API for the <code>Orion Icons</code> library of assets.</p>
+        </div>
+
+        <div className="exampleWrapper">
+          <div className="ods-containedButtons">
+            <ods-button outercontext svgIconLeft={chevronleft.svg}>Previous step</ods-button>
+            <ods-button outercontext svgIconRight={chevronright.svg}>Previous step</ods-button>
+            <ods-button outercontext svgIconLeft={closelg.svg} buttontype="secondary">Remove</ods-button>
+            <ods-button outercontext svgIconRight={stepoutlg.svg} flowtype="complete">Move data</ods-button>
+          </div>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {
+`import closelg from '@alaskaairux/orion-icons/dist/icons/closelg_es6.js';
+import chevronright from '@alaskaairux/orion-icons/dist/icons/chevronright_es6.js';
+import chevronleft from '@alaskaairux/orion-icons/dist/icons/chevronleft_es6.js';
+import stepoutlg from '@alaskaairux/orion-icons/dist/icons/stepoutlg_es6.js';
+
+<div className="ods-containedButtons">
+  <ods-button outercontext svgIconLeft={chevronleft.svg}>Previous step</ods-button>
+  <ods-button outercontext svgIconRight={chevronright.svg}>Previous step</ods-button>
+  <ods-button outercontext svgIconLeft={closelg.svg} buttontype="secondary">Remove</ods-button>
+  <ods-button outercontext svgIconRight={stepoutlg.svg} flowtype="complete">Move data</ods-button>
+</div>`
+          }
+        </Highlight>
+
+        <div className="exampleWrapper">
+          <div className="ods-containedButtons">
+            <ods-button outercontext theme="classic" svgIconLeft={chevronleft.svg}>Previous step</ods-button>
+            <ods-button outercontext theme="classic" svgIconRight={chevronright.svg}>Previous step</ods-button>
+            <ods-button outercontext theme="classic" svgIconLeft={closelg.svg} buttontype="secondary">Remove</ods-button>
+          </div>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {
+`import closelg from '@alaskaairux/orion-icons/dist/icons/closelg_es6.js';
+import chevronright from '@alaskaairux/orion-icons/dist/icons/chevronright_es6.js';
+import chevronleft from '@alaskaairux/orion-icons/dist/icons/chevronleft_es6.js';
+
+<div className="ods-containedButtons">
+  <ods-button outercontext svgIconLeft={chevronleft.svg}>Previous step</ods-button>
+  <ods-button outercontext theme="classic" svgIconRight={chevronright.svg}>Previous step</ods-button>
+  <ods-button outercontext theme="classic" outercontext svgIconLeft={closelg.svg} buttontype="secondary">Remove</ods-button>
+</div>`
+          }
         </Highlight>
       </section>
     );
