@@ -1,10 +1,13 @@
+@import '../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
+
 $iconMap: (
   toggleArrow: true,
   chevronArrow: true,
   classiccheckmark: true,
+  checkmarkLg: true,
+  checkmarkSml: true,
   stepout: true,
   stepoutLg: true,
-  checkmarkLg: true,
   close: true,
   closeLg: true,
   closeSml: true,
