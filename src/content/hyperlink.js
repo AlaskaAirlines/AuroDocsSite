@@ -68,6 +68,23 @@ class Hyperlink extends Component {
         </Highlight>
 
         <div className="indention util_fontWeightLight util_type--secondary">
+          <p>In special cases, the <code>ods-hyperlink</code> element can be used for a CTA 'button' look when the button UI is desired, but the semantic use is an anchor tag.</p>
+          <p>In this scenario, by passing in the <code>cta</code> flag, the hyperlink presents itself as a button. As illustrated, this will also work with the <code>target="_blank"</code> feature.</p>
+        </div>
+
+        <div className="exampleWrapper">
+          <ods-hyperlink cta href="#">Cancel button</ods-hyperlink>
+          <ods-hyperlink cta target="_blank" href="#">Cancel button</ods-hyperlink>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {
+`<ods-hyperlink cta href="#">Cancel button</ods-hyperlink>
+<ods-hyperlink cta target="_blank" href="#">Cancel button</ods-hyperlink>`
+          }
+        </Highlight>
+
+        <div className="indention util_fontWeightLight util_type--secondary">
           <p>Aside from the standard hyperlink use-case, the <code>ods-hyperlink</code> element is intended to be used for <code>tab</code> situations as illustrated below where the 'tab' ui is desired.</p>
           <p>In this scenario an <code>href</code> no longer can be applied to the element. But a click-event must be passed to the element. In this example clicking on the 'link' will produce a default dialog box.</p>
           <p>When using the <code>role="tab"</code> style, it is required to wrap the tabs in a parent container with <code>role="tablist"</code> for a11y compliance. For Orion Design, you are required to apply the CSS class of <code>ods-tablist</code>. See <ods-hyperlink inline href="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#ods-utility-css-.ods-tablist" target="_blank">Orion Web Core Style Sheets</ods-hyperlink> docs for more information.</p>

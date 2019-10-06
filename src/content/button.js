@@ -79,7 +79,7 @@ class Buttons extends Component {
         </div>
 
         <Highlight className='html afterCode'>
-          {`<ods-button>Default</ods-button>`}
+          {`<ods-button>default</ods-button>`}
         </Highlight>
 
         <div className="exampleWrapper">
@@ -87,7 +87,7 @@ class Buttons extends Component {
         </div>
 
         <Highlight className='html afterCode'>
-          {`<ods-button theme="classic">Classic default</ods-button>`}
+          {`<ods-button theme="classic">classic default</ods-button>`}
         </Highlight>
 
         <div className="indention util_fontWeightLight util_type--secondary">
@@ -233,10 +233,10 @@ class Buttons extends Component {
 
         <div className="exampleWrapper">
           <div className="ods-containedButtons">
-            <ods-button outercontext svgIconLeft={chevronleft.svg}>Previous step</ods-button>
-            <ods-button outercontext svgIconRight={chevronright.svg}>Previous step</ods-button>
-            <ods-button outercontext svgIconLeft={closelg.svg} buttontype="secondary">Remove</ods-button>
-            <ods-button outercontext svgIconRight={stepoutlg.svg} flowtype="complete">Move data</ods-button>
+            <ods-button outercontext svgIconLeft={chevronleft.svg}>previous step</ods-button>
+            <ods-button outercontext svgIconRight={chevronright.svg}>previous step</ods-button>
+            <ods-button outercontext svgIconLeft={closelg.svg} buttontype="secondary">remove</ods-button>
+            <ods-button outercontext svgIconRight={stepoutlg.svg} flowtype="complete">move data</ods-button>
           </div>
         </div>
 
@@ -248,19 +248,19 @@ import chevronleft from '@alaskaairux/orion-icons/dist/icons/chevronleft_es6.js'
 import stepoutlg from '@alaskaairux/orion-icons/dist/icons/stepoutlg_es6.js';
 
 <div className="ods-containedButtons">
-  <ods-button outercontext svgIconLeft={chevronleft.svg}>Previous step</ods-button>
-  <ods-button outercontext svgIconRight={chevronright.svg}>Previous step</ods-button>
-  <ods-button outercontext svgIconLeft={closelg.svg} buttontype="secondary">Remove</ods-button>
-  <ods-button outercontext svgIconRight={stepoutlg.svg} flowtype="complete">Move data</ods-button>
+  <ods-button outercontext svgIconLeft={chevronleft.svg}>previous step</ods-button>
+  <ods-button outercontext svgIconRight={chevronright.svg}>previous step</ods-button>
+  <ods-button outercontext svgIconLeft={closelg.svg} buttontype="secondary">remove</ods-button>
+  <ods-button outercontext svgIconRight={stepoutlg.svg} flowtype="complete">move data</ods-button>
 </div>`
           }
         </Highlight>
 
         <div className="exampleWrapper">
           <div className="ods-containedButtons">
-            <ods-button outercontext theme="classic" svgIconLeft={chevronleft.svg}>Previous step</ods-button>
-            <ods-button outercontext theme="classic" svgIconRight={chevronright.svg}>Previous step</ods-button>
-            <ods-button outercontext theme="classic" svgIconLeft={closelg.svg} buttontype="secondary">Remove</ods-button>
+            <ods-button outercontext theme="classic" svgIconLeft={chevronleft.svg}>previous step</ods-button>
+            <ods-button outercontext theme="classic" svgIconRight={chevronright.svg}>previous step</ods-button>
+            <ods-button outercontext theme="classic" svgIconLeft={closelg.svg} buttontype="secondary">remove</ods-button>
           </div>
         </div>
 
@@ -271,9 +271,9 @@ import chevronright from '@alaskaairux/orion-icons/dist/icons/chevronright_es6.j
 import chevronleft from '@alaskaairux/orion-icons/dist/icons/chevronleft_es6.js';
 
 <div className="ods-containedButtons">
-  <ods-button outercontext svgIconLeft={chevronleft.svg}>Previous step</ods-button>
-  <ods-button outercontext theme="classic" svgIconRight={chevronright.svg}>Previous step</ods-button>
-  <ods-button outercontext theme="classic" outercontext svgIconLeft={closelg.svg} buttontype="secondary">Remove</ods-button>
+  <ods-button outercontext svgIconLeft={chevronleft.svg}>previous step</ods-button>
+  <ods-button outercontext theme="classic" svgIconRight={chevronright.svg}>previous step</ods-button>
+  <ods-button outercontext theme="classic" outercontext svgIconLeft={closelg.svg} buttontype="secondary">remove</ods-button>
 </div>`
           }
         </Highlight>
