@@ -73,14 +73,68 @@ class Hyperlink extends Component {
         </div>
 
         <div className="exampleWrapper">
-          <ods-hyperlink cta href="#">Cancel button</ods-hyperlink>
-          <ods-hyperlink cta target="_blank" href="#">Cancel button</ods-hyperlink>
+          <ods-hyperlink cta href="#">CTA button</ods-hyperlink>
         </div>
 
         <Highlight className='html afterCode'>
           {
-`<ods-hyperlink cta href="#">Cancel button</ods-hyperlink>
-<ods-hyperlink cta target="_blank" href="#">Cancel button</ods-hyperlink>`
+`<ods-hyperlink cta href="#">CTA button</ods-hyperlink>`
+          }
+        </Highlight>
+
+        <div className="exampleWrapper">
+          <ods-hyperlink cta responsive href="#">CTA responsive button</ods-hyperlink>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {
+`<ods-hyperlink cta responsive href="#">CTA responsive button</ods-hyperlink>`
+          }
+        </Highlight>
+
+        <div className="exampleWrapper">
+          <div className="ods-containedButtons ods-containedButtons--reverse">
+            <ods-hyperlink cta href="#">CTA responsive reverse button</ods-hyperlink>
+          </div>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {
+`<div className="ods-containedButtons ods-containedButtons--reverse">
+  <ods-hyperlink cta href="#">CTA responsive reverse button</ods-hyperlink>
+</div>`
+          }
+        </Highlight>
+
+        <div className="exampleWrapper">
+          <div className="ods-containedButtons">
+            <ods-hyperlink cta href="#">CTA button</ods-hyperlink>
+            <ods-hyperlink cta target="_blank" href="#">External CTA button</ods-hyperlink>
+          </div>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {
+`<div className="ods-containedButtons">
+  <ods-hyperlink cta href="#">CTA button</ods-hyperlink>
+  <ods-hyperlink cta target="_blank" href="#">External CTA button</ods-hyperlink>
+</div>`
+          }
+        </Highlight>
+
+        <div className="exampleWrapper">
+          <div className="ods-containedButtons ods-containedButtons--reverse">
+            <ods-hyperlink cta href="#">CTA button</ods-hyperlink>
+            <ods-hyperlink cta target="_blank" href="#">External CTA button</ods-hyperlink>
+          </div>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {
+`<div className="ods-containedButtons ods-containedButtons--reverse">
+  <ods-hyperlink cta href="#">CTA button</ods-hyperlink>
+  <ods-hyperlink cta target="_blank" href="#">External CTA button</ods-hyperlink>
+</div>`
           }
         </Highlight>
 
