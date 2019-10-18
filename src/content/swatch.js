@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import LinkIcons from '../components/linkIcons';
-import "@alaskaairux/ods-swatch/dist/ods-swatch";
+import "@alaskaairux/ods-swatch";
 import '../sass/App.scss';
 import data from "../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenColorVariables.js";
 

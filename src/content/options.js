@@ -3,7 +3,7 @@ import Highlight from 'react-highlight';
 import LinkIcons from '../components/linkIcons';
 // import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
 import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
-import "@alaskaairux/ods-inputoptions/dist/ods-inputoptions";
+import "@alaskaairux/ods-inputoptions";
 import 'highlight.js/styles/github.css';
 import '../sass/App.scss';
 

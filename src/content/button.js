@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Highlight from 'react-highlight';
 import LinkIcons from '../components/linkIcons';
 import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
-import "@alaskaairux/ods-button/dist/ods-button";
+import "@alaskaairux/ods-button";
 import 'highlight.js/styles/github.css';
 import '../sass/App.scss';
 
