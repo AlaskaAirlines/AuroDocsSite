@@ -31,6 +31,25 @@ class Swatch extends Component {
     // });
   }
 
+  _getColors = (color, colorSet) => {
+    if (color.hasOwnProperty("name") && color.hasOwnProperty("value")) {
+      colorSet.push(
+        <ods-swatch
+          key={color['name']}
+          backgroundcolor={color['value']}
+          colorname={color['name']}>
+        </ods-swatch>
+      )
+    }
+
+    if (color instanceof Object) {
+      for (let key in color) {
+        this._getColors(color[key], colorSet)
+      }
+    }
+
+    return colorSet;
+  }
 
   showVersion() {
     const pjson = require('../../package.json');
@@ -58,126 +77,15 @@ class Swatch extends Component {
         </div>
 
         <div className="util_swatchBox">
-          <ods-swatch
-            backgroundcolor={brand.blue.midnight.base.value}
-            colorname={brand.blue.midnight.base.name}></ods-swatch>
+          {this._getColors(brand, [])}
         </div>
 
         <div className="util_swatchBox">
-          <ods-swatch
-            backgroundcolor={brand.blue.atlas.base.value}
-            colorname={brand.blue.atlas.base.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={brand.blue.atlas.lighten.value}
-            colorname={brand.blue.atlas.lighten.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={brand.blue.atlas.darken.value}
-            colorname={brand.blue.atlas.darken.name}></ods-swatch>
+          {this._getColors(base, [])}
         </div>
 
         <div className="util_swatchBox">
-          <ods-swatch
-            backgroundcolor={brand.blue.breeze.base.value}
-            colorname={brand.blue.breeze.base.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={brand.blue.breeze.lighten.value}
-            colorname={brand.blue.breeze.lighten.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={brand.blue.breeze.darken.value}
-            colorname={brand.blue.breeze.darken.name}></ods-swatch>
-        </div>
-
-        <div className="util_swatchBox">
-          <ods-swatch
-            backgroundcolor={brand.green.tropical.base.value}
-            colorname={brand.green.tropical.base.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={brand.green.tropical.lighten.value}
-            colorname={brand.green.tropical.lighten.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={brand.green.tropical.darken.value}
-            colorname={brand.green.tropical.darken.name}></ods-swatch>
-        </div>
-
-        <div className="util_swatchBox">
-          <ods-swatch
-            backgroundcolor={base.white.value}
-            colorname={base.white.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={base.orca.value}
-            colorname={base.orca.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={base.shark.value}
-            colorname={base.shark.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={base.manatee.value}
-            colorname={base.manatee.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={base.fog.value}
-            colorname={base.fog.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={base.cloud.value}
-            colorname={base.cloud.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={base.mist.value}
-            colorname={base.mist.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={base.dusk.value}
-            colorname={base.dusk.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={base.galapagos.value}
-            colorname={base.galapagos.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={base.chili.value}
-            colorname={base.chili.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={base.limeade.value}
-            colorname={base.limeade.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={base.beluga.value}
-            colorname={base.beluga.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={base.nemo.value}
-            colorname={base.nemo.name}></ods-swatch>
-        </div>
-
-        <div className="util_swatchBox">
-          <ods-swatch
-            backgroundcolor={background.bookingBar.value}
-            colorname={background.bookingBar.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={background.footer.value}
-            colorname={background.footer.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={background.accountDrawer.value}
-            colorname={background.accountDrawer.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={background.logo.value}
-            colorname={background.logo.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={background.headline.value}
-            colorname={background.headline.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={background.header.value}
-            colorname={background.header.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={background.sectionSeperator.value}
-            colorname={background.sectionSeperator.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={background.error.value}
-            colorname={background.error.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={background.alert.value}
-            colorname={background.alert.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={background.advisory.value}
-            colorname={background.advisory.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={background.dark.rule.value}
-            colorname={background.dark.rule.name}></ods-swatch>
-          <ods-swatch
-            backgroundcolor={background.light.rule.value}
-            colorname={background.light.rule.name}></ods-swatch>
+          {this._getColors(background, [])}
         </div>
 
       </section>
