@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { Link } from "react-scroll";
+//import { Link } from "react-scroll";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './style.scss';
 
 let lastScrollY = 0;
@@ -38,37 +44,40 @@ class Nav extends Component {
   render() {
     return (
       <nav className="mainSiteNav" id="mainNav">
-        <Link className="hyperlink" activeClass="active" to="typography" spy={true} smooth={true} offset={-50} duration={2000}>
+        <Link className="hyperlink" to="typography">
           Typography
         </Link>
 
-        <Link className="hyperlink" activeClass="active" to="buttons" spy={true} smooth={true} offset={-50} duration={2000}>
+        <Link className="hyperlink" to="button">
           Buttons
         </Link>
 
-        <Link className="hyperlink" activeClass="active" to="icons" spy={true} smooth={true} offset={-50} duration={2000}>
+        <Link className="hyperlink" to="icons">
           Icons
         </Link>
 
-        <Link className="hyperlink" activeClass="active" to="hyperlinks" spy={true} smooth={true} offset={-50} duration={2000}>
+        <Link className="hyperlink" to="hyperlink">
           Hyperlinks
         </Link>
 
-        <Link className="hyperlink" activeClass="active" to="inputOptions" spy={true} smooth={true} offset={-50} duration={2000}>
+        <Link className="hyperlink" to="options">
           Input Options
         </Link>
 
-        <Link className="hyperlink" activeClass="active" to="toast" spy={true} smooth={true} offset={-50} duration={2000}>
+        <Link className="hyperlink" to="toast">
           Toast
         </Link>
 
-        <Link className="hyperlink" activeClass="active" to="generator" spy={true} smooth={true} offset={-50} duration={2000}>
+        <Link className="hyperlink" to="generator">
           WC Generator
         </Link>
-
-        <Link activeClass="active" to="mainNav" spy={true} smooth={true} offset={-50} duration={2000}>
-          <span className="floatingTopLink util_displayHidden" ref={this.option}>Back To Top</span>
+        <Link className="hyperlink" to="webcorestylesheets">
+          Web Core Stylesheets
         </Link>
+
+        <div className="hyperlink" onClick={() => window.scrollTo(0, 0)}>
+          <span className="floatingTopLink util_displayHidden" ref={this.option}>Back To Top</span>
+        </div>
       </nav>
     );
   };

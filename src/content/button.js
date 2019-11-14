@@ -43,6 +43,7 @@ class Buttons extends Component {
       <section id="buttons">
 
 
+        <h1 className="heading heading--max">Buttons</h1>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
           npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
@@ -54,7 +55,6 @@ class Buttons extends Component {
           <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
         </section>
 
-        <h1 className="heading heading--max">Buttons</h1>
 
         <div className="indention indention--warning util_fontWeightLight util_type--secondary">
           <p><strong>ALERT: </strong>There appears to be a bug with <strong>Safari</strong> where the CSS pseudo selector <code>:first-child</code> is not being honered when used within a HTML custom element. The expected style is to have the first letter of the string inside the button to always be UPPERCASE regardless of the casing of the content entered into the <code>slot</code> of the element. </p>

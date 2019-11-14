@@ -1,0 +1,38 @@
+ul.sidenav, ul.sidenav ul {
+    list-style: none;
+}
+
+ul.sidenav {
+    font-size: 1em;
+    color: #222222;
+    padding: 1em;
+
+    a {
+        text-decoration: none;
+        color: #222222;
+    }
+
+
+    li {
+        background: #FFFFFF;
+        transition: ease all 0.3s;
+        padding: 0.5em;
+    }
+
+    ul li {
+        border-left: solid 1px #F7F7F7;
+        padding-left: 1em;
+        cursor: pointer;
+
+        &.active, &:hover {
+            border-left: solid 5px #0074C8;
+            background: #F7F7F7;
+        }
+    }
+
+    .section-title {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #7a7a7a
+    }
+}

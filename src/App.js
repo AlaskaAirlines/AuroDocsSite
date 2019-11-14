@@ -9,8 +9,32 @@ import ComplexContent from './content/complexContent';
 import Button from './content/button';
 import Toast from './content/toast';
 import Generator from './content/generator';
-import Nav from './components/nav';
 import Footer from './components/footer';
+import WebCoreStyleSheets from './content/webcorestylesheets';
+import SideNav from './components/side-nav';
+import {
+  HomeDocs,
+  A11yDocs,
+  AltBuildDocs,
+  BabelSupportDocs,
+  BrowsersSupportDocs,
+  CallbackDocs,
+  ContributingDocs,
+  CustomPropertiesDocs,
+  FocusVisibleDocs,
+  IsTouchingDocs,
+  NewReactProjectSetupDocs,
+  PollyfillDocs,
+  TechDetailsDocs,
+  TestsDocs
+} from './content/docs';
+import './style.scss';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 import './sass/App.scss';
 import './scripts/orion';
@@ -19,27 +43,72 @@ function App() {
   return (
     <main className="main-wrapper">
 
-      <Nav />
+      <Router>
+      {/*<Nav /> */}
+      <SideNav />
 
-      <Swatch />
+      <Switch>
+        <Route path="/swatch">
+          <Swatch />
+        </Route>
 
-      <Typography />
+        <Route path="/typography">
+          <Typography />
+        </Route>
 
-      <Icons />
+        <Route path="/icons">
+          <Icons />
+        </Route>
 
-      <Hyperlink />
+        <Route path="/hyperlink">
+          <Hyperlink />
+        </Route>
 
-      <Button />
+        <Route path="/button">
+          <Button />
+        </Route>
 
-      <Options />
+        <Route path="/options">
+          <Options />
+        </Route>
 
-      <Toast />
+        <Route path="/toast">
+          <Toast />
+        </Route>
 
-      <ComplexContent />
+        <Route path="/complexcontent">
+          <ComplexContent />
+        </Route>
 
-      <Generator />
+        <Route path="/generator">
+          <Generator />
+        </Route>
+
+        <Route path="/webcorestylesheets">
+          <WebCoreStyleSheets />
+        </Route>
+
+        <Route path="/A11yDocs"><A11yDocs /></Route>
+        <Route path="/AltBuildDocs"><AltBuildDocs /></Route>
+        <Route path="/BabelSupportDocs"><BabelSupportDocs /></Route>
+        <Route path="/BrowsersSupportDocs"><BrowsersSupportDocs /></Route>
+        <Route path="/CallbackDocs">	<CallbackDocs /></Route>
+   	    <Route path="/ContributingDocs">	<ContributingDocs /></Route>
+   	    <Route path="/CustomPropertiesDocs">	<CustomPropertiesDocs /></Route>
+       	<Route path="/FocusVisibleDocs">	<FocusVisibleDocs /></Route>
+        <Route path="/IsTouchingDocs">	<IsTouchingDocs /></Route>
+        <Route path="/NewReactProjectSetupDocs">	<NewReactProjectSetupDocs /></Route>
+        <Route path="/PollyfillDocs">	<PollyfillDocs /></Route>
+        <Route path="/TechDetailsDocs">	<TechDetailsDocs /></Route>
+        <Route path="/TestsDocs">	<TestsDocs /></Route>
+
+        <Route path="/" >
+          <HomeDocs />
+        </Route>
+      </Switch>
 
       <Footer />
+      </Router>
     </main>
   )
 }
