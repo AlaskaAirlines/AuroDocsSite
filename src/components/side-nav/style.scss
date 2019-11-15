@@ -1,38 +1,40 @@
-ul.sidenav, ul.sidenav ul {
-    list-style: none;
+@import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/animation";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/displayProperties";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/baseline";
+
+.sidenav,
+.sidenav ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    @include transition;
+  }
 }
 
-ul.sidenav {
-    font-size: 1em;
-    color: #222222;
-    padding: 1em;
+.sidenav {
+  width: 10%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  margin: 0 0 0 $size-scale-med;
 
-    a {
-        text-decoration: none;
-        color: #222222;
+  .hyperlink {
+    margin-bottom: $size-scale-micro;
+
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
+}
 
-
-    li {
-        background: #FFFFFF;
-        transition: ease all 0.3s;
-        padding: 0.5em;
-    }
-
-    ul li {
-        border-left: solid 1px #F7F7F7;
-        padding-left: 1em;
-        cursor: pointer;
-
-        &.active, &:hover {
-            border-left: solid 5px #0074C8;
-            background: #F7F7F7;
-        }
-    }
-
-    .section-title {
-        font-weight: bold;
-        font-size: 1.2em;
-        color: #7a7a7a
-    }
+.hyperlink--active {
+  color: $color-base-orca !important;
+  &:hover {
+    text-decoration: none !important;
+  }
 }
