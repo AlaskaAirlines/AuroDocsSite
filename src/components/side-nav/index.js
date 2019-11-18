@@ -47,6 +47,10 @@ export default function SideNav(props) {
         {
           title: "Input Options",
           route: "options"
+        },
+        {
+          title: "Swatch",
+          route: "swatch"
         }
       ]
     },
