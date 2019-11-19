@@ -39,19 +39,43 @@ const buildImports = (iconPaths) => {
     return importText
 }
 
-const buildElements = (iconPaths) => {
-    let elements = "";
-    iconPaths.forEach(i => {
-        const file = getFile(i);
-        const tag = getImportName(i);
-        elements += `
-        <div title="${file}">
-            <${tag} />
-            <span>${file}</span>
-        </div>
-        `
-    })
-    return elements;
+const buildElements = (sortedIcons) => {
+
+    let allCategories = '';
+    for(let category in sortedIcons) {
+      let iconPaths = sortedIcons[category];
+      let elements = "";
+      iconPaths.forEach(i => {
+          const file = getFile(i);
+          const tag = getImportName(i);
+          elements += `
+          <div title="${file}">
+              <${tag} />
+              <span>${file}</span>
+          </div>
+          `
+      });
+
+      allCategories += `
+      <section>
+      <h2 className="icon-category">${category}</h2>
+      <div className="iconsWrapper">
+      ${elements}
+      </div>
+      </section>
+      `;
+    }
+
+    
+    return allCategories;
+}
+
+const getCategory = (iconPath) => {
+  // @alaskaairux/orion-icons/dist/icons/interface/check-stroke.svg
+  const iconAndDist = iconPath.split('dist/icons/')[1];
+  let category = "other";
+  if(iconAndDist.includes('/')) category = iconAndDist.split('/')[0];
+  return category;
 }
 
 
@@ -62,14 +86,21 @@ const buildElements = (iconPaths) => {
         if(f.includes('.svg')) icons.push(f.split('node_modules/')[1]);
     }
 
+    const sortedIcons = {};
+    icons.forEach(i => {
+      const category = getCategory(i);
+      if(!sortedIcons[category]) sortedIcons[category] = [];
+      sortedIcons[category].push(i);
+    });
+
     const iconListComponentText = `
     import React from "react";
     ${buildImports(icons)}
 
     export default function () {
         return (
-          <div className="iconsWrapper">
-            ${buildElements(icons)}
+          <div id="icon-list">
+            ${buildElements(sortedIcons)}
           </div>
         )
       } 

@@ -7,8 +7,8 @@ import 'highlight.js/styles/github.css';
 import '../sass/App.scss';
 
 import closelg from '@alaskaairux/orion-icons/dist/icons/close-lg_es6.js';
-import chevronright from '@alaskaairux/orion-icons/dist/icons/chevron-right_es6.js';
-import chevronleft from '@alaskaairux/orion-icons/dist/icons/chevron-left_es6.js';
+import chevronright from '@alaskaairux/orion-icons/dist/icons/interface/chevron-right_es6.js';
+import chevronleft from '@alaskaairux/orion-icons/dist/icons/interface/chevron-left_es6.js';
 import stepoutlg from '@alaskaairux/orion-icons/dist/icons/step-out-lg_es6.js';
 
 import ReactMarkdown from 'react-markdown';
