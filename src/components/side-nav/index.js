@@ -14,19 +14,19 @@ export default function SideNav(props) {
           title: "Home",
           route: ""
         },
-        { title: "A11y", route: "A11yDocs" },
-        { title: "Alt Build", route: "AltBuildDocs" },
-        { title: "Babel Support", route: "BabelSupportDocs" },
-        { title: "Browsers Support", route: "BrowsersSupportDocs" },
-        { title: "Callback", route: "callbackdocs" },
-        { title: "Contributing", route: "ContributingDocs" },
-        { title: "Custom Properties", route: "CustomPropertiesDocs" },
-        { title: "Focus Visible", route: "FocusVisibleDocs" },
-        { title: "Is Touching", route: "IsTouchingDocs" },
-        { title: "New React Project Setup", route: "NewReactProjectSetupDocs" },
-        { title: "Pollyfill", route: "PollyfillDocs" },
-        { title: "Tech Details", route: "TechDetailsDocs" },
-        { title: "Tests", route: "TestsDocs" },
+        { title: "A11y", route: "/A11yDocs" },
+        { title: "Alt Build", route: "/AltBuildDocs" },
+        { title: "Babel Support", route: "/BabelSupportDocs" },
+        { title: "Browsers Support", route: "/BrowsersSupportDocs" },
+        { title: "Callback", route: "/callbackdocs" },
+        { title: "Contributing", route: "/ContributingDocs" },
+        { title: "Custom Properties", route: "/CustomPropertiesDocs" },
+        { title: "Focus Visible", route: "/FocusVisibleDocs" },
+        { title: "Is Touching", route: "/IsTouchingDocs" },
+        { title: "New React Project Setup", route: "/NewReactProjectSetupDocs" },
+        { title: "Pollyfill", route: "/PollyfillDocs" },
+        { title: "Tech Details", route: "/TechDetailsDocs" },
+        { title: "Tests", route: "/TestsDocs" },
       ]
     },
     {
@@ -34,23 +34,23 @@ export default function SideNav(props) {
       items: [
         {
           title: "Button",
-          route: 'button'
+          route: '/button'
         },
         {
           title: "Hyperlink",
-          route: 'hyperlink'
+          route: '/hyperlink'
         },
         {
           title: "Toast",
-          route: "toast"
+          route: "/toast"
         },
         {
           title: "Input Options",
-          route: "options"
+          route: "/options"
         },
         {
           title: "Swatch",
-          route: "swatch"
+          route: "/swatch"
         }
       ]
     },
@@ -59,19 +59,19 @@ export default function SideNav(props) {
       items: [
         {
           title: "Typography",
-          route: "typography"
+          route: "/typography"
         },
         {
           title: "Icons",
-          route: "icons"
+          route: "/icons"
         },
         {
           title: "Generator",
-          route: "generator"
+          route: "/generator"
         },
         {
           title: "Web Core Stylesheets",
-          route: "webcorestylesheets"
+          route: "/webcorestylesheets"
         }
       ]
     }
