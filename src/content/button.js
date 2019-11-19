@@ -6,10 +6,10 @@ import "@alaskaairux/ods-button";
 import 'highlight.js/styles/github.css';
 import '../sass/App.scss';
 
-import closelg from '@alaskaairux/orion-icons/dist/icons/closelg_es6.js';
-import chevronright from '@alaskaairux/orion-icons/dist/icons/chevronright_es6.js';
-import chevronleft from '@alaskaairux/orion-icons/dist/icons/chevronleft_es6.js';
-import stepoutlg from '@alaskaairux/orion-icons/dist/icons/stepoutlg_es6.js';
+import closelg from '@alaskaairux/orion-icons/dist/icons/close-lg_es6.js';
+import chevronright from '@alaskaairux/orion-icons/dist/icons/chevron-right_es6.js';
+import chevronleft from '@alaskaairux/orion-icons/dist/icons/chevron-left_es6.js';
+import stepoutlg from '@alaskaairux/orion-icons/dist/icons/step-out-lg_es6.js';
 
 import ReactMarkdown from 'react-markdown';
 import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
