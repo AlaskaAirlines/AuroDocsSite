@@ -28,17 +28,25 @@ export class MarkdownWrapper extends Component {
   }
 
   showVersion() {
-    const pjson = require('../../package.json');
-    const dependencies = pjson.dependencies[this.module];
-    return `${this.module}: ${dependencies}`;
+    if (this.module) {
+      const pjson = require('../../package.json');
+      const dependencies = pjson.dependencies[this.module];
+      return `${this.module}: ${dependencies}`;
+    }
   };
+
+  getNpm() {
+    if (this.module) {
+      return `https://www.npmjs.com/package/${this.module}`
+    }
+  }
 
   render() {
     return (
       <section>
         <LinkIcons
           github={this.githubURL}
-          npm={`https://www.npmjs.com/package/${this.module}`}
+          npm={this.getNpm()}
           code={this.codeURL}
           version={this.showVersion()}
         />

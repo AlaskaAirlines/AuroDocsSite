@@ -23,10 +23,26 @@ export default function SideNav(props) {
         { title: "Custom Properties", route: "/CustomPropertiesDocs" },
         { title: "Focus Visible", route: "/FocusVisibleDocs" },
         { title: "Is Touching", route: "/IsTouchingDocs" },
-        { title: "New React Project Setup", route: "/NewReactProjectSetupDocs" },
         { title: "Pollyfill", route: "/PollyfillDocs" },
         { title: "Tech Details", route: "/TechDetailsDocs" },
         { title: "Tests", route: "/TestsDocs" },
+      ]
+    },
+    {
+      title: "Project Setup",
+      items: [
+        {
+          title: "React Setup",
+          route: "/ReactSetup"
+        },
+        {
+          title: "Angular Setup",
+          route: "/AngularSetup"
+        },
+        {
+          title: "Javascript Setup",
+          route: "/JavascriptSetup"
+        }
       ]
     },
     {

@@ -23,10 +23,12 @@ import {
   CustomPropertiesDocs,
   FocusVisibleDocs,
   IsTouchingDocs,
-  NewReactProjectSetupDocs,
   PollyfillDocs,
   TechDetailsDocs,
-  TestsDocs
+  TestsDocs,
+  ReactDemoDocs,
+  AngularDemoDocs,
+  JavascriptDemoDocs
 } from './content/docs';
 import './style.scss';
 
@@ -97,10 +99,13 @@ function App() {
    	    <Route path="/CustomPropertiesDocs">	<CustomPropertiesDocs /></Route>
        	<Route path="/FocusVisibleDocs">	<FocusVisibleDocs /></Route>
         <Route path="/IsTouchingDocs">	<IsTouchingDocs /></Route>
-        <Route path="/NewReactProjectSetupDocs">	<NewReactProjectSetupDocs /></Route>
         <Route path="/PollyfillDocs">	<PollyfillDocs /></Route>
         <Route path="/TechDetailsDocs">	<TechDetailsDocs /></Route>
         <Route path="/TestsDocs">	<TestsDocs /></Route>
+
+        <Route path="/ReactSetup">	<ReactDemoDocs /></Route>
+        <Route path="/AngularSetup">	<AngularDemoDocs /></Route>
+        <Route path="/JavascriptSetup">	<JavascriptDemoDocs /></Route>
 
         <Route path="/" >
           <HomeDocs />

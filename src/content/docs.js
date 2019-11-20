@@ -7,6 +7,24 @@ class Docs extends ExternalMarkdownWrapper {
   codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/tree/master/src"
 }
 
+export class ReactDemoDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/OrionReactDemo"
+  codeURL = "https://github.com/AlaskaAirlines/OrionReactDemo"
+  readme = "PROJECT_SETUP.md"
+}
+
+export class AngularDemoDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/OrionAngularDemo"
+  codeURL = "https://github.com/AlaskaAirlines/OrionAngularDemo"
+  readme = "PROJECT_SETUP.md"
+}
+
+export class JavascriptDemoDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo"
+  codeURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo"
+  readme = "PROJECT_SETUP.md"
+}
+
 export class HomeDocs extends Docs {
   readme = "src/README.md"
 }
@@ -45,10 +63,6 @@ export class FocusVisibleDocs extends Docs {
 
 export class IsTouchingDocs extends Docs {
   readme = "src/IS_TOUCHING.md"
-}
-
-export class NewReactProjectSetupDocs extends Docs {
-  readme = "src/NEW_REACT_PROJECT_SETUP.md"
 }
 
 export class PollyfillDocs extends Docs {
