@@ -2,31 +2,26 @@ import {ExternalMarkdownWrapper} from './markdown-wrapper';
 
 
 class Docs extends ExternalMarkdownWrapper {
-  module = "@alaskaairux/ods-docs"
   githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs"
   codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/tree/master/src"
 }
 
 export class ReactDemoDocs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/OrionReactDemo"
-  codeURL = "https://github.com/AlaskaAirlines/OrionReactDemo"
-  readme = "PROJECT_SETUP.md"
+  codeURL = "https://github.com/AlaskaAirlines/OrionReactDemo/tree/master/src"
+  readme = "README.md"
 }
 
 export class AngularDemoDocs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/OrionAngularDemo"
-  codeURL = "https://github.com/AlaskaAirlines/OrionAngularDemo"
-  readme = "PROJECT_SETUP.md"
+  codeURL = "https://github.com/AlaskaAirlines/OrionAngularDemo/tree/master/src"
+  readme = "README.md"
 }
 
 export class JavascriptDemoDocs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo"
-  codeURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo"
-  readme = "PROJECT_SETUP.md"
-}
-
-export class HomeDocs extends Docs {
-  readme = "src/README.md"
+  codeURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo/tree/master/src"
+  readme = "README.md"
 }
 
 export class A11yDocs extends Docs {

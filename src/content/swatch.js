@@ -40,14 +40,13 @@ class Swatch extends Component {
   render() {
     return (
       <section id="Swatch">
-
-        <h1 className="heading heading--max">Token Color Swatches</h1>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch"
           npm="https://www.npmjs.com/package/@alaskaairux/ods-swatch"
           code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/blob/master/src/ods-swatch.js"
           version={this.showVersion()}
         />
+        <h1 className="heading heading--max">Design Token Colors</h1>
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>The Orion Design System fully supports a wide range of colors for different use cases. The following examples illustrate common swatch uses with color data.</p>

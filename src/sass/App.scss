@@ -1,14 +1,18 @@
 @import '../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
 @import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 
-/*
-body {
-  margin: $size-scale-max $size-scale-med !important;
-}
-*/
 .main-wrapper {
   max-width: $size-width-max;
   margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+
+  & > section {
+    width: 70%;
+    margin-top: $size-scale-med;
+  }
 }
 
 code {
@@ -93,6 +97,7 @@ ods-swatch {
   overflow: hidden;
 }
 
+// OH HELL NO!
 #icon-list {
   .icon-category {
     text-transform: capitalize;
@@ -102,7 +107,7 @@ ods-swatch {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: var(--size-scale-xxl);
-    
+
     span {
       position: absolute;
       font-size: var(--size-font-breakpoint-all-small);

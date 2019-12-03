@@ -4,8 +4,6 @@ import '../sass/markdown.scss';
 
 import ReactMarkdown from 'react-markdown';
 
-//import readme from '@alaskaairux/ods-wc-generator/README.md'
-
 export class MarkdownWrapper extends Component {
 
   constructor(props) {
@@ -69,7 +67,7 @@ export class ExternalMarkdownWrapper extends MarkdownWrapper {
       user: details[0],
       name: details[1]
     };
-    
+
     return `https://raw.githubusercontent.com/${repo.user}/${repo.name}/master/${this.readme}`
   }
 }

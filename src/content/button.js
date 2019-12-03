@@ -41,26 +41,17 @@ class Buttons extends Component {
   render() {
     return (
       <section id="buttons">
-
-
-        <h1 className="heading heading--max">Buttons</h1>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
           npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
           code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/ods-button.js"
           version={this.showVersion()}
         />
+        <h1 className="heading heading--max">Buttons</h1>
 
         <section className="ods-markdown">
           <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
         </section>
-
-
-        <div className="indention indention--warning util_fontWeightLight util_type--secondary">
-          <p><strong>ALERT: </strong>There appears to be a bug with <strong>Safari</strong> where the CSS pseudo selector <code>:first-child</code> is not being honered when used within a HTML custom element. The expected style is to have the first letter of the string inside the button to always be UPPERCASE regardless of the casing of the content entered into the <code>slot</code> of the element. </p>
-
-          <p>The work-around until this bug is resolved is to simply use proper casing when entering content into the <code>slot</code> of the custom elememnt.</p>
-        </div>
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>The Orion Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>

@@ -36,6 +36,10 @@ function LinkIcons(props) {
       return (
         <small>{props.version}</small>
       )
+    } else {
+      return (
+        <small>npm not available</small>
+      )
     }
   }
 

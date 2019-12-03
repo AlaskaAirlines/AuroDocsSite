@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@alaskaairux/ods-docs": "^1.0.5",
     "@alaskaairux/ods-hyperlink": "^1.1.0",
     "@alaskaairux/ods-inputoptions": "^1.1.5",
     "@alaskaairux/ods-swatch": "^1.0.4",

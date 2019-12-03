@@ -73,10 +73,6 @@ export default function SideNav(props) {
     {
       title: "Docs",
       items: [
-        {
-          title: "Home",
-          route: ""
-        },
         { title: "A11y", route: "/A11yDocs" },
         { title: "Alt Build", route: "/AltBuildDocs" },
         { title: "Babel Support", route: "/BabelSupportDocs" },

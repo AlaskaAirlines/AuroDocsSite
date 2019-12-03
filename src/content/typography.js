@@ -16,7 +16,6 @@ class Typography extends Component {
   render() {
     return (
       <section id="typography">
-        <h1 className="heading heading--max">Typography</h1>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionWebCoreStyleSheets"
           npm="https://www.npmjs.com/package/@alaskaairux/orion-web-core-style-sheets"
@@ -24,6 +23,7 @@ class Typography extends Component {
           docs="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#heading"
           version={this.showVersion()}
         />
+        <h1 className="heading heading--max">Typography</h1>
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>Basic typography is the conerstone of all web design. The Orion Design System fully supports a wide range of typography styles.</p>
           <p>All typography is based on the use of <code>AS Circular</code>, a custom font created for use with Alaska Airline's web brand. </p>

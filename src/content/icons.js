@@ -18,14 +18,14 @@ class Icons extends Component {
   render() {
     return (
       <section id="icons">
-
-        <h1 className="heading heading--max">Orion Icons</h1>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionIcons"
           npm="https://www.npmjs.com/package/@alaskaairux/orion-icons"
           code="https://github.com/AlaskaAirlines/OrionIcons/tree/master/src/icons"
           version={this.showVersion()}
         />
+        <h1 className="heading heading--max">Orion Icons</h1>
+
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>The Orion Design System fully supports a wide range of icons for different use cases. The following examples illustrate common icon uses.</p>

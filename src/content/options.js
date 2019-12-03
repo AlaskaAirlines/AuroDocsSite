@@ -42,13 +42,13 @@ class Options extends Component {
     return (
       <section id="inputOptions">
 
-        <h1 className="heading heading--max">Input Options</h1>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-inputoptions"
           npm="https://www.npmjs.com/package/@alaskaairux/ods-ods-inputoptions"
           code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-inputoptions/blob/master/src/ods-ods-inputoptions.js"
           version={this.showVersion()}
         />
+        <h1 className="heading heading--max">Input Options</h1>
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>The Orion Design System fully supports a wide range of options types and styles. The following examples illustrate common input option uses followed up by code examples.</p>
