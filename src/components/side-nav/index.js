@@ -8,7 +8,70 @@ export default function SideNav(props) {
 
   const [options, setOptions] = useState([
     {
-      title: "Documentation",
+      title: "Core elements",
+      items: [
+        {
+          title: "Typography",
+          route: "/typography"
+        },
+        {
+          title: "Icons",
+          route: "/icons"
+        },
+        {
+          title: "Colors",
+          route: "/swatch"
+        },
+        {
+          title: "WC-Stylesheets",
+          route: "/webcorestylesheets"
+        }
+      ]
+    },
+    {
+      title: "Components",
+      items: [
+        {
+          title: "Button",
+          route: '/button'
+        },
+        {
+          title: "Hyperlink",
+          route: '/hyperlink'
+        },
+        {
+          title: "Input Options",
+          route: "/options"
+        },
+        {
+          title: "Toast",
+          route: "/toast"
+        }
+      ]
+    },
+    {
+      title: "Project Setup",
+      items: [
+        {
+          title: "React Setup",
+          route: "/ReactSetup"
+        },
+        {
+          title: "Angular Setup",
+          route: "/AngularSetup"
+        },
+        {
+          title: "Javascript Setup",
+          route: "/JavascriptSetup"
+        },
+        {
+          title: "WC Generator",
+          route: "/generator"
+        }
+      ]
+    },
+    {
+      title: "Docs",
       items: [
         {
           title: "Home",
@@ -26,69 +89,6 @@ export default function SideNav(props) {
         { title: "Pollyfill", route: "/PollyfillDocs" },
         { title: "Tech Details", route: "/TechDetailsDocs" },
         { title: "Tests", route: "/TestsDocs" },
-      ]
-    },
-    {
-      title: "Project Setup",
-      items: [
-        {
-          title: "React Setup",
-          route: "/ReactSetup"
-        },
-        {
-          title: "Angular Setup",
-          route: "/AngularSetup"
-        },
-        {
-          title: "Javascript Setup",
-          route: "/JavascriptSetup"
-        }
-      ]
-    },
-    {
-      title: "Components",
-      items: [
-        {
-          title: "Button",
-          route: '/button'
-        },
-        {
-          title: "Hyperlink",
-          route: '/hyperlink'
-        },
-        {
-          title: "Toast",
-          route: "/toast"
-        },
-        {
-          title: "Input Options",
-          route: "/options"
-        },
-        {
-          title: "Swatch",
-          route: "/swatch"
-        }
-      ]
-    },
-    {
-      title: "Other",
-      items: [
-        {
-          title: "Typography",
-          route: "/typography"
-        },
-        {
-          title: "Icons",
-          route: "/icons"
-        },
-        {
-          title: "Generator",
-          route: "/generator"
-        },
-        {
-          title: "Web Core Stylesheets",
-          route: "/webcorestylesheets"
-        }
       ]
     }
   ]);

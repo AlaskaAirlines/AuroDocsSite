@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
 import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
 import LinkIcons from '../components/linkIcons';
 import 'highlight.js/styles/github.css';

@@ -46,73 +46,38 @@ function App() {
     <main className="main-wrapper">
 
       <Router>
-      {/*<Nav /> */}
-      <SideNav />
+        <SideNav />
 
-      <Switch>
-        <Route path="/swatch">
-          <Swatch />
-        </Route>
+        <Switch>
+          <Route path="/swatch"><Swatch /></Route>
+          <Route path="/typography">/<Typography /></Route>
+          <Route path="/icons"><Icons /></Route>
+          <Route path="/hyperlink"><Hyperlink /></Route>
+          <Route path="/button"><Button /></Route>
+          <Route path="/options"><Options /></Route>
+          <Route path="/toast"><Toast /></Route>
+          <Route path="/complexcontent"><ComplexContent /></Route>
+          <Route path="/generator"><Generator /></Route>
+          <Route path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
+          <Route path="/A11yDocs"><A11yDocs /></Route>
+          <Route path="/AltBuildDocs"><AltBuildDocs /></Route>
+          <Route path="/BabelSupportDocs"><BabelSupportDocs /></Route>
+          <Route path="/BrowsersSupportDocs"><BrowsersSupportDocs /></Route>
+          <Route path="/CallbackDocs">	<CallbackDocs /></Route>
+          <Route path="/ContributingDocs">	<ContributingDocs /></Route>
+          <Route path="/CustomPropertiesDocs">	<CustomPropertiesDocs /></Route>
+          <Route path="/FocusVisibleDocs">	<FocusVisibleDocs /></Route>
+          <Route path="/IsTouchingDocs">	<IsTouchingDocs /></Route>
+          <Route path="/PollyfillDocs">	<PollyfillDocs /></Route>
+          <Route path="/TechDetailsDocs">	<TechDetailsDocs /></Route>
+          <Route path="/TestsDocs">	<TestsDocs /></Route>
+          <Route path="/ReactSetup">	<ReactDemoDocs /></Route>
+          <Route path="/AngularSetup">	<AngularDemoDocs /></Route>
+          <Route path="/JavascriptSetup">	<JavascriptDemoDocs /></Route>
+          <Route path="/" ><HomeDocs /></Route>
+        </Switch>
 
-        <Route path="/typography">
-          <Typography />
-        </Route>
-
-        <Route path="/icons">
-          <Icons />
-        </Route>
-
-        <Route path="/hyperlink">
-          <Hyperlink />
-        </Route>
-
-        <Route path="/button">
-          <Button />
-        </Route>
-
-        <Route path="/options">
-          <Options />
-        </Route>
-
-        <Route path="/toast">
-          <Toast />
-        </Route>
-
-        <Route path="/complexcontent">
-          <ComplexContent />
-        </Route>
-
-        <Route path="/generator">
-          <Generator />
-        </Route>
-
-        <Route path="/webcorestylesheets">
-          <WebCoreStyleSheets />
-        </Route>
-
-        <Route path="/A11yDocs"><A11yDocs /></Route>
-        <Route path="/AltBuildDocs"><AltBuildDocs /></Route>
-        <Route path="/BabelSupportDocs"><BabelSupportDocs /></Route>
-        <Route path="/BrowsersSupportDocs"><BrowsersSupportDocs /></Route>
-        <Route path="/CallbackDocs">	<CallbackDocs /></Route>
-   	    <Route path="/ContributingDocs">	<ContributingDocs /></Route>
-   	    <Route path="/CustomPropertiesDocs">	<CustomPropertiesDocs /></Route>
-       	<Route path="/FocusVisibleDocs">	<FocusVisibleDocs /></Route>
-        <Route path="/IsTouchingDocs">	<IsTouchingDocs /></Route>
-        <Route path="/PollyfillDocs">	<PollyfillDocs /></Route>
-        <Route path="/TechDetailsDocs">	<TechDetailsDocs /></Route>
-        <Route path="/TestsDocs">	<TestsDocs /></Route>
-
-        <Route path="/ReactSetup">	<ReactDemoDocs /></Route>
-        <Route path="/AngularSetup">	<AngularDemoDocs /></Route>
-        <Route path="/JavascriptSetup">	<JavascriptDemoDocs /></Route>
-
-        <Route path="/" >
-          <HomeDocs />
-        </Route>
-      </Switch>
-
-      <Footer />
+        <Footer />
       </Router>
     </main>
   )

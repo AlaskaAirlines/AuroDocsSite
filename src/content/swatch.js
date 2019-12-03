@@ -10,27 +10,6 @@ const background = data.color.background;
 
 class Swatch extends Component {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     ...
-  //   }
-  // };
-
-  componentDidMount() {
-    //const brand = data.color.brand;
-    // Object.keys(brand).forEach(function(key) {
-    //   let data = brand[key];
-    //   console.log(Object.keys(data));
-    // });
-
-    // const brandBlue = data.color.brand.blue;
-    // Object.keys(brandBlue).forEach(function(key) {
-    //   let data = brandBlue[key];
-    //   console.log(Object.keys(data));
-    // });
-  }
-
   _getColors = (color, colorSet) => {
     if (color.hasOwnProperty("name") && color.hasOwnProperty("value")) {
       colorSet.push(
