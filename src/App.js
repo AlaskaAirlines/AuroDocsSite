@@ -1,5 +1,6 @@
 import React from 'react';
 import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
+import '@alaskaairux/orion-design-tokens/dist/tokens/CSSCustomProperties.css';
 import Typography from './content/typography';
 import Hyperlink from './content/hyperlink';
 import Options from './content/options';

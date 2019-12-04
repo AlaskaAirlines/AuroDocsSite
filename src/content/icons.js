@@ -4,7 +4,7 @@ import '@alaskaairux/orion-icons/dist/tokens/CSSTokenProperties.css';
 import '../sass/icons.scss';
 import '../sass/App.scss';
 
-// import IconList from './iconList';
+import IconList from './iconList';
 
 
 class Icons extends Component {
@@ -32,7 +32,7 @@ class Icons extends Component {
           <p>See <ods-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/orion-icons" target="_blank">Orion Icons</ods-hyperlink> for more information as how to install and full API for icon use.</p>
         </div>
 
-        {/* <IconList /> */}
+        <IconList />
 
       </section>
     );
