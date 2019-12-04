@@ -1,4 +1,4 @@
-const { resolve } = require('path');
+const { resolve, normalize } = require('path');
 const { readdir } = require('fs').promises;
 const fs = require('fs');
 
@@ -7,9 +7,9 @@ async function* getFiles(dir) {
   for (const dirent of dirents) {
     const res = resolve(dir, dirent.name);
     if (dirent.isDirectory()) {
-      yield* getFiles(res);
+      yield* getFiles(normalize(res));
     } else {
-      yield res;
+      yield res.replace(/\\/g, '/');
     }
   }
 }
@@ -81,7 +81,6 @@ const getCategory = (iconPath) => {
 
 (async () => {
     const icons = [];
-    const imports = "";
     for await (const f of getFiles('./node_modules/@alaskaairux/orion-icons/dist/icons')) {
         if(f.includes('.svg')) icons.push(f.split('node_modules/')[1]);
     }

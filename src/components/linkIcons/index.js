@@ -8,7 +8,6 @@ import GetCode from '-!svg-react-loader!../../assets/getCode.svg';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import Docs from '-!svg-react-loader!../../assets/docsSite.svg';
 import './style.scss';
-import { version } from 'punycode';
 
 function LinkIcons(props) {
 
