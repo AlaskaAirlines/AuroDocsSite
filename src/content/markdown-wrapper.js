@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import LinkIcons from '../components/linkIcons';
 import '../sass/markdown.scss';
-
 import ReactMarkdown from 'react-markdown';
 
 export class MarkdownWrapper extends Component {
@@ -21,10 +20,6 @@ export class MarkdownWrapper extends Component {
     })
   }
 
-  getMarkdown() {
-    return this.readme;
-  }
-
   showVersion() {
     if (this.module) {
       const pjson = require('../../package.json');
@@ -37,6 +32,20 @@ export class MarkdownWrapper extends Component {
     if (this.module) {
       return `https://www.npmjs.com/package/${this.module}`
     }
+  }
+}
+
+
+export class ExternalMarkdownWrapper extends MarkdownWrapper {
+
+  getMarkdown() {
+    const details = this.githubURL.split("github.com/")[1].split("/");
+    const repo = {
+      user: details[0],
+      name: details[1]
+    };
+
+    return `https://raw.githubusercontent.com/${repo.user}/${repo.name}/master/${this.readme}`
   }
 
   render() {
@@ -58,16 +67,20 @@ export class MarkdownWrapper extends Component {
   }
 }
 
-
-export class ExternalMarkdownWrapper extends MarkdownWrapper {
+export class InternalMarkdownWrapper extends MarkdownWrapper {
 
   getMarkdown() {
-    const details = this.githubURL.split("github.com/")[1].split("/");
-    const repo = {
-      user: details[0],
-      name: details[1]
-    };
+    return this.readme
+  }
 
-    return `https://raw.githubusercontent.com/${repo.user}/${repo.name}/master/${this.readme}`
+  render() {
+    return (
+      <section>
+        <section className="ods-markdown">
+          <ReactMarkdown source={this.state.docsGenerator} escapeHtml={false}/>
+        </section>
+
+      </section>
+    );
   }
 }

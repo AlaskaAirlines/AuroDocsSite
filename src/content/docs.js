@@ -1,15 +1,13 @@
-import {ExternalMarkdownWrapper} from './markdown-wrapper';
-import {PagesMarkdownWrapper} from './pages-wrapper';
-
+import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from './markdown-wrapper';
 
 class Docs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs"
   codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/tree/master/src"
 }
 
-class Pages extends PagesMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/"
-}
+// class Pages extends InternalMarkdownWrapper {
+//   dir= "./src/content/pages/"
+// }
 
 export class ReactDemoDocs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/OrionReactDemo"
@@ -29,8 +27,8 @@ export class JavascriptDemoDocs extends ExternalMarkdownWrapper {
   readme = "README.md"
 }
 
-export class DigitalPersonality extends Pages {
-  readme = "src/contentPages/digital-personality.md"
+export class DigitalPersonality extends InternalMarkdownWrapper {
+  readme = "./pages/digitalPersonality/digital-personality.md"
 }
 
 export class A11yDocs extends Docs {
