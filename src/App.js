@@ -28,7 +28,8 @@ import {
   TestsDocs,
   ReactDemoDocs,
   AngularDemoDocs,
-  JavascriptDemoDocs
+  JavascriptDemoDocs,
+  DigitalPersonality
 } from './content/docs';
 import './style.scss';
 
@@ -62,17 +63,18 @@ function App() {
             <Route path="/AltBuildDocs"><AltBuildDocs /></Route>
             <Route path="/BabelSupportDocs"><BabelSupportDocs /></Route>
             <Route path="/BrowsersSupportDocs"><BrowsersSupportDocs /></Route>
-            <Route path="/CallbackDocs">	<CallbackDocs /></Route>
-            <Route path="/ContributingDocs">	<ContributingDocs /></Route>
-            <Route path="/CustomPropertiesDocs">	<CustomPropertiesDocs /></Route>
-            <Route path="/FocusVisibleDocs">	<FocusVisibleDocs /></Route>
-            <Route path="/IsTouchingDocs">	<IsTouchingDocs /></Route>
-            <Route path="/PollyfillDocs">	<PollyfillDocs /></Route>
-            <Route path="/TechDetailsDocs">	<TechDetailsDocs /></Route>
-            <Route path="/TestsDocs">	<TestsDocs /></Route>
-            <Route path="/ReactSetup">	<ReactDemoDocs /></Route>
-            <Route path="/AngularSetup">	<AngularDemoDocs /></Route>
-            <Route path="/JavascriptSetup">	<JavascriptDemoDocs /></Route>
+            <Route path="/CallbackDocs"><CallbackDocs /></Route>
+            <Route path="/ContributingDocs"><ContributingDocs /></Route>
+            <Route path="/CustomPropertiesDocs"><CustomPropertiesDocs /></Route>
+            <Route path="/FocusVisibleDocs"><FocusVisibleDocs /></Route>
+            <Route path="/IsTouchingDocs"><IsTouchingDocs /></Route>
+            <Route path="/PollyfillDocs"><PollyfillDocs /></Route>
+            <Route path="/TechDetailsDocs"><TechDetailsDocs /></Route>
+            <Route path="/TestsDocs"><TestsDocs /></Route>
+            <Route path="/ReactSetup"><ReactDemoDocs /></Route>
+            <Route path="/AngularSetup"><AngularDemoDocs /></Route>
+            <Route path="/JavascriptSetup"><JavascriptDemoDocs /></Route>
+            <Route path="/DigitalPersonality"><DigitalPersonality /></Route>
             <Route path="/" ><Typography /></Route>
           </Switch>
         </Router>

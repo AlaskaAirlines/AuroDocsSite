@@ -133,7 +133,7 @@ class Swatch extends Component {
         <auro-swatch-list darkmode componentData={this._getColors(alert, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="heading heading--xl">Digital Personality</h2>
-        <p className="util_fontWeightLight">These digital personality tokens should be used within the <ods-hyperlink inline target="_blank" href="https://alaska-airlines-1.gitbook.io/auro/-LtVaDez_DqafB3dME31/foundations/color/digital-personality">Digital personality</ods-hyperlink> guidelines.</p>
+        <p className="util_fontWeightLight">These digital personality tokens should be used within the <ods-hyperlink inline href="/DigitalPersonality">Digital personality</ods-hyperlink> guidelines.</p>
 
         <h3 className="heading heading--lg">Midnight</h3>
         <auro-swatch-list componentData={this._getColors(midnight, 'neutral', [])}></auro-swatch-list>
