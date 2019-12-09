@@ -14,8 +14,6 @@ import Footer from './components/footer';
 import WebCoreStyleSheets from './content/webcorestylesheets';
 import SideNav from './components/side-nav';
 import './style.scss';
-
-// import DigitalPersonality from './content/pages/digitalPersonality/digital-personality.js';
 import {
   A11yDocs,
   AltBuildDocs,

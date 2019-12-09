@@ -10,7 +10,7 @@
   display: flex;
 
   & > section {
-    width: 70%;
+    width: 75%;
     margin-top: $size-scale-med;
   }
 }
@@ -51,10 +51,7 @@ pre {
   $stripe: #f3f3f3;
   $background: $color-base-white;
 
-  border-width: 1px 1px 0;
   background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
-  float: left;
-  width: 100%;
 }
 
 .afterCode {
@@ -137,5 +134,25 @@ ods-swatch {
         }
       }
     }
+  }
+}
+
+.avatarWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.avatarWrapper--4up {
+  auro-color-avatar {
+    flex-basis: 25%;
+    padding-right: 2%;
+  }
+}
+
+.avatarWrapper--3up {
+  auro-color-avatar {
+    flex-basis: 33%;
+    padding-right: 5%;
   }
 }

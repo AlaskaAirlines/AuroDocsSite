@@ -1,22 +1,12 @@
 import React, { Component } from "react";
 import LinkIcons from '../components/linkIcons';
-import "@alaskaairux/ods-swatch";
+// import "@alaskaairux/ods-swatch";
 import "@alaskaairux/ods-swatch/dist/auro-swatch-list";
+import "@alaskaairux/ods-swatch/dist/auro-color-avatar";
 import '../sass/App.scss';
-import data from '../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens//JSData--color.js'
+import data from '../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/JSData--color.js'
 import header from '../assets/color/header.png';
 import windows from '../assets/color/windows.png';
-import alertsDark from '../assets/color/alertsDark.png';
-import alertsLight from '../assets/color/alertsLight.png';
-import borderDark from '../assets/color/borderDark.png';
-import borderLight from '../assets/color/borderLight.png';
-import iconsDark from '../assets/color/iconsDark.png';
-import iconsLight from '../assets/color/iconsLight.png';
-import interactionDark from '../assets/color/interactionDark.png';
-import interactionLight from '../assets/color/interactionLight.png';
-import textDark from '../assets/color/textDark.png';
-import textLight from '../assets/color/textLight.png';
-
 
 const background = data.color.background;
 const border = data.color.border;
@@ -35,9 +25,9 @@ const ui = data.color.ui;
 
 class Swatch extends Component {
 
-  _getColors = (color, type, colorSet) => {
+  _getColors = (color, background, colorSet) => {
 
-    if (color.hasOwnProperty(type) && color.hasOwnProperty('name')) {
+    if (color.hasOwnProperty(background) && color.hasOwnProperty('name')) {
       colorSet.push(
         { "backgroundcolor": color['value'], "colorname": color['name'], "wcag": color['wcag'], "usage": color['usage'] }
       )
@@ -45,11 +35,43 @@ class Swatch extends Component {
 
     if (color instanceof Object) {
       for (let key in color) {
-        this._getColors(color[key], type, colorSet)
+        this._getColors(color[key], background, colorSet)
       }
     }
 
     return JSON.stringify(colorSet);
+  }
+
+  _getAvatars = (color, type, background, colorSet) => {
+
+    if (color.hasOwnProperty(background) && color.hasOwnProperty('name')) {
+      if (background === 'onDark') {
+        colorSet.push(
+          <auro-color-avatar
+            avatartype={type}
+            colorname={color['name']}
+            ondark
+            >
+          </auro-color-avatar>
+        )
+      } else {
+        colorSet.push(
+          <auro-color-avatar
+            avatartype={type}
+            colorname={color['name']}
+            >
+          </auro-color-avatar>
+        )
+      }
+    }
+
+    if (color instanceof Object) {
+      for (let key in color) {
+        this._getAvatars(color[key], type, background, colorSet)
+      }
+    }
+
+    return colorSet;
   }
 
   showVersion() {
@@ -88,48 +110,69 @@ class Swatch extends Component {
 
         <h2 className="heading heading--xl">User Interaction</h2>
         <h3 className="heading heading--lg">For light backgrounds</h3>
-        <img className="util_marginBottom--xl" src={interactionLight} alt="page header" />
 
+        <div className="avatarWrapper avatarWrapper--4up">
+          {this._getAvatars(ui, 'ui', 'onLight', [])}
+        </div>
         <auro-swatch-list componentData={this._getColors(ui, 'onLight', [])}></auro-swatch-list>
 
         <h3 className="heading heading--lg">For dark backgrounds</h3>
-        <img className="util_marginBottom--xl" src={interactionDark} alt="page header" />
+        <div className="avatarWrapper avatarWrapper--4up">
+          {this._getAvatars(ui, 'ui', 'onDark', [])}
+        </div>
         <auro-swatch-list darkmode componentData={this._getColors(ui, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="heading heading--xl">Border</h2>
         <h3 className="heading heading--lg">For light backgrounds</h3>
-        <img className="util_marginBottom--xl" src={borderLight} alt="page header" />
+        <div className="avatarWrapper avatarWrapper--4up">
+          {this._getAvatars(border, 'border', 'onLight', [])}
+        </div>
         <auro-swatch-list componentData={this._getColors(border, 'onLight', [])}></auro-swatch-list>
 
         <h3 className="heading heading--lg">For dark backgrounds</h3>
-        <img className="util_marginBottom--xl" src={borderDark} alt="page header" />
+        <div className="avatarWrapper avatarWrapper--4up">
+          {this._getAvatars(border, 'border', 'onDark', [])}
+        </div>
         <auro-swatch-list darkmode componentData={this._getColors(border, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="heading heading--xl">Text</h2>
         <h3 className="heading heading--lg">For light backgrounds</h3>
-        <img className="util_marginBottom--xl" src={textLight} alt="page header" />
+
+        <div className="avatarWrapper avatarWrapper--3up">
+          {this._getAvatars(text, 'font', 'onLight', [])}
+        </div>
         <auro-swatch-list componentData={this._getColors(text, 'onLight', [])}></auro-swatch-list>
 
         <h3 className="heading heading--lg">For dark backgrounds</h3>
-        <img className="util_marginBottom--xl" src={textDark} alt="page header" />
+        <div className="avatarWrapper avatarWrapper--3up">
+          {this._getAvatars(text, 'font', 'onDark', [])}
+        </div>
         <auro-swatch-list darkmode componentData={this._getColors(text, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="heading heading--xl">Icon</h2>
         <h3 className="heading heading--lg">For light backgrounds</h3>
-        <img className="util_marginBottom--xl" src={iconsLight} alt="page header" />
+        <div className="avatarWrapper avatarWrapper--4up">
+          {this._getAvatars(icon, 'icon', 'onLight', [])}
+        </div>
         <auro-swatch-list componentData={this._getColors(icon, 'onLight', [])}></auro-swatch-list>
 
         <h3 className="heading heading--lg">For dark backgrounds</h3>
-        <img className="util_marginBottom--xl" src={iconsDark} alt="page header" />
+        <div className="avatarWrapper avatarWrapper--4up">
+          {this._getAvatars(icon, 'icon', 'onDark', [])}
+        </div>
         <auro-swatch-list darkmode componentData={this._getColors(icon, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="heading heading--xl">Alerts / Messaging</h2>
         <h3 className="heading heading--lg">For light backgrounds</h3>
-        <img className="util_marginBottom--xl" src={alertsLight} alt="page header" />
+        <div className="avatarWrapper avatarWrapper--3up">
+          {this._getAvatars(alert, 'alert', 'onLight', [])}
+        </div>
         <auro-swatch-list componentData={this._getColors(alert, 'onLight', [])}></auro-swatch-list>
 
         <h3 className="heading heading--lg">For dark backgrounds</h3>
-        <img className="util_marginBottom--xl" src={alertsDark} alt="page header" />
+        <div className="avatarWrapper avatarWrapper--4up">
+          {this._getAvatars(alert, 'alert', 'onDark', [])}
+        </div>
         <auro-swatch-list darkmode componentData={this._getColors(alert, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="heading heading--xl">Digital Personality</h2>
