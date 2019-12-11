@@ -1,6 +1,7 @@
 import React from 'react';
 import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
 import '@alaskaairux/orion-design-tokens/dist/tokens/CSSCustomProperties.css';
+import DeprecatedTokens from './content/pages/deprecated/tokens';
 import Typography from './content/typography';
 import Hyperlink from './content/hyperlink';
 import Options from './content/options';
@@ -50,6 +51,7 @@ function App() {
         <Router>
           <SideNav />
           <Switch>
+            <Route path="/deprecated/tokens"><DeprecatedTokens /></Route>
             <Route path="/swatch"><Swatch /></Route>
             <Route path="/typography"><Typography /></Route>
             <Route path="/icons"><Icons /></Route>

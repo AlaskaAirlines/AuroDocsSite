@@ -87,6 +87,15 @@ export default function SideNav(props) {
         { title: "Tech Details", route: "/TechDetailsDocs" },
         { title: "Tests", route: "/TestsDocs" },
       ]
+    },
+    {
+      title: "Other support ...",
+      items: [
+        {
+          title: "Deprecated Tokens",
+          route: "/deprecated/tokens"
+        }
+      ]
     }
   ]);
 

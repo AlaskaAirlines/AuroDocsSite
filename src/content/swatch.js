@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import LinkIcons from '../components/linkIcons';
 // import "@alaskaairux/ods-swatch";
 import "@alaskaairux/ods-swatch/dist/auro-swatch-list";
+import "@alaskaairux/ods-swatch/dist/auro-tokens-list";
 import "@alaskaairux/ods-swatch/dist/auro-color-avatar";
 import '../sass/App.scss';
-import data from '../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/JSData--color.js'
+import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSData--color.js'
 import header from '../assets/color/header.png';
 import windows from '../assets/color/windows.png';
 
@@ -110,7 +111,6 @@ class Swatch extends Component {
 
         <h2 className="heading heading--xl">User Interaction</h2>
         <h3 className="heading heading--lg">For light backgrounds</h3>
-
         <div className="avatarWrapper avatarWrapper--4up">
           {this._getAvatars(ui, 'ui', 'onLight', [])}
         </div>
@@ -201,8 +201,6 @@ class Swatch extends Component {
 
         <h3 className="heading heading--lg">Goldcoast</h3>
         <auro-swatch-list componentData={this._getColors(goldcoast, 'neutral', [])}></auro-swatch-list>
-
-
       </section>
     );
   }
