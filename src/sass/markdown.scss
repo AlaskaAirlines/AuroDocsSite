@@ -1,6 +1,7 @@
-@import '../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
-@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
-@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/baseline";
+@import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
+@import '~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables';
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/baseline";
 
 .ods-markdown {
   footer img {

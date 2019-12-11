@@ -92,6 +92,10 @@ export default function SideNav(props) {
       title: "Other support ...",
       items: [
         {
+          title: "Auro Design Tokens",
+          route: "/designTokens/tokens"
+        },
+        {
           title: "Deprecated Tokens",
           route: "/deprecated/tokens"
         }

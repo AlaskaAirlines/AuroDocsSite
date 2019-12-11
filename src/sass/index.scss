@@ -1,14 +1,15 @@
 // Orion tokens
-@import '../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
+@import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
+@import '~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables';
 
 // Auro tokens
-@import "../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
+@import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
 
 // OWCSS imports
-@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
-@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/baseline";
-@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/fonts";
-@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/fontStyles";
-@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/componentSupport/tablist";
-@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/componentSupport/containedButtons";
-@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/layoutProperties";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/baseline";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/fonts";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/fontStyles";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/componentSupport/tablist";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/componentSupport/containedButtons";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/layoutProperties";

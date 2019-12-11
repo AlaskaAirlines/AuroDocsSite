@@ -40,13 +40,8 @@ class DeprecatedTokens extends Component {
           version={this.showVersion()}
         />
 
-        <h1 className="heading heading--max">Deprecated Tokens</h1>
-        <p className="util_fontWeightLight">The following list is a display of the current state of Design Tokens that have been declaired as deprecated and are scheduled to be removed from upcoming major releases. </p>
-        <p>Please be sure to update your use of these tokes as soon as possible as not to run into upgrading issues. </p>
-
-        <h2 className="heading heading--xl">Tokens list</h2>
-
-        <auro-tokens-list componentData={this._getTokens(deprecated, [])}></auro-tokens-list>
+        <h2 className="heading heading--xl">Deprecated tokens list</h2>
+        <p className="util_fontWeightLight">The following is a list of deprecated Orion tokens, and if applicable, an adjacent Auro token. All deprecated tokens will be removed with an upcoming major release. </p>
 
         <auro-tokens-list deprecated componentData={this._getTokens(deprecated, [])}></auro-tokens-list>
 
