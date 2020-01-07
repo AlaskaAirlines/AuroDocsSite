@@ -8,37 +8,25 @@ export default function SideNav(props) {
 
   const [options, setOptions] = useState([
     {
-      title: "Auro Optimized",
+      title: "Core elements",
       items: [
         {
-          title: "Colors and tokens",
+          title: "Colors",
           route: "/colors"
         },{
-          title: "WCSS",
-          route: "/webcorestylesheets"
-        },{
-          title: "Auro design tokens",
-          route: "/designTokens/tokens"
-        },{
-          title: "Deprecated tokens",
-          route: "/deprecated/tokens"
-        }
-      ]
-    },
-    {
-      title: "Orion Core elements",
-      items: [
-        {
           title: "Typography",
           route: "/Typography"
         },{
           title: "Icons",
           route: "/icons"
+        },{
+          title: "WC-Stylesheets",
+          route: "/webcorestylesheets"
         }
       ]
     },
     {
-      title: "Orion Components",
+      title: "Components",
       items: [
         {
           title: "Button",
@@ -56,7 +44,7 @@ export default function SideNav(props) {
       ]
     },
     {
-      title: "Development Support",
+      title: "Project Setup",
       items: [
         {
           title: "React Setup",
@@ -74,7 +62,7 @@ export default function SideNav(props) {
       ]
     },
     {
-      title: "All the docs",
+      title: "Docs",
       items: [
         { title: "Digital Personality", route: "/DigitalPersonality" },
         { title: "A11y", route: "/A11yDocs" },
@@ -89,6 +77,18 @@ export default function SideNav(props) {
         { title: "Pollyfill", route: "/PollyfillDocs" },
         { title: "Tech Details", route: "/TechDetailsDocs" },
         { title: "Tests", route: "/TestsDocs" },
+      ]
+    },
+    {
+      title: "Other support ...",
+      items: [
+        {
+          title: "Auro Design Tokens",
+          route: "/designTokens/tokens"
+        },{
+          title: "Deprecated Tokens",
+          route: "/deprecated/tokens"
+        }
       ]
     }
   ]);

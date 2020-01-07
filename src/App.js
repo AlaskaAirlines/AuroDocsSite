@@ -40,6 +40,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect
 } from "react-router-dom";
 
 import './sass/App.scss';
@@ -52,9 +53,10 @@ function App() {
         <Router>
           <SideNav />
           <Switch>
+            <Redirect exact from="/" to="colors" />
             <Route path="/deprecated/tokens"><DeprecatedTokens /></Route>
             <Route path="/designTokens/tokens"><DesignTokens /></Route>
-            <Route path="/swatch"><Swatch /></Route>
+            <Route path="/colors"><Swatch /></Route>
             <Route path="/typography"><Typography /></Route>
             <Route path="/icons"><Icons /></Route>
             <Route path="/hyperlink"><Hyperlink /></Route>
@@ -80,7 +82,7 @@ function App() {
             <Route path="/AngularSetup"><AngularDemoDocs /></Route>
             <Route path="/JavascriptSetup"><JavascriptDemoDocs /></Route>
             <Route path="/DigitalPersonality"><DigitalPersonality /></Route>
-            <Route path="/" ><Typography /></Route>
+            <Route path="/Typography" ><Typography /></Route>
           </Switch>
         </Router>
       </div>

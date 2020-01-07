@@ -1,6 +1,5 @@
 // Orion tokens
 @import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
-@import '~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables';
 
 // Auro tokens
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
@@ -13,3 +12,11 @@
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/componentSupport/tablist";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/componentSupport/containedButtons";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/layoutProperties";
+
+// Selector generator
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/_layoutPropertiesGenerator";
+@import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariableMap";
+
+$auro-spacing-types: stack;
+$auro-spacing-options: xl;
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/spacingUtility";

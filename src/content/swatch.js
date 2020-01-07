@@ -92,7 +92,7 @@ class Swatch extends Component {
           version={this.showVersion()}
         />
 
-        <img className="util_marginBottom--xl" src={header} alt="page header" />
+        <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
 
         <h1 className="heading heading--max">Color</h1>
         <p className="util_fontWeightLight">The colors within our digital experiences differs from our physical materials. What may appear vibrant on paper may seem dull and uninspired on a glowing screen. As a result, the colors we use within our digital experiences are adjusted to create a more vibrant and inspirational experiences for our guests. In addition to our core colors, an extended palette has been created to add warmth, deeper connection, and more human characteristics to the digital brand.</p>
