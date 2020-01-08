@@ -72,6 +72,10 @@ $prefix: null;
     @extend .auro_heading--600;
   }
 
+  h4 {
+    @extend .auro_heading--500;
+  }
+
   a {
     @extend .hyperlink;
     @extend .hyperlink--inline;
