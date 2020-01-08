@@ -58,54 +58,54 @@ class DeprecatedTokens extends Component {
           version={this.showVersion()}
         />
 
-        <h1 className="heading heading--max">Auro Design Tokens</h1>
-        <p className="util_fontWeightLight">The following is a list of all non-color based Auro tokens</p>
-        <h3 className="heading heading--lg">Animation</h3>
+        <h1 className="auro_heading auro_heading--display">Auro Design Tokens</h1>
+        <p className="auro_baseParagraph">The following is a list of all non-color based Auro tokens</p>
+        <h3 className="auro_heading auro_heading--600">Animation</h3>
         <auro-tokens-list componentData={this._getTokens(animation, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Breakpoint</h3>
+        <h3 className="auro_heading auro_heading--600">Breakpoint</h3>
         <auro-tokens-list componentData={this._getTokens(breakpoint, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Depth</h3>
+        <h3 className="auro_heading auro_heading--600">Depth</h3>
         <auro-tokens-list componentData={this._getTokens(depth, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Size</h3>
+        <h3 className="auro_heading auro_heading--600">Size</h3>
         <auro-tokens-list unit="rem" componentData={this._getTokens(size, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Borders</h3>
+        <h3 className="auro_heading auro_heading--600">Borders</h3>
         <auro-tokens-list unit="rem" componentData={this._getTokens(border, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Unitless values</h3>
+        <h3 className="auro_heading auro_heading--600">Unitless values</h3>
         <auro-tokens-list componentData={this._getTokens(unitless, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Font families</h3>
+        <h3 className="auro_heading auro_heading--600">Font families</h3>
         <auro-tokens-list componentData={this._getTokens(font, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Heading defaults</h3>
+        <h3 className="auro_heading auro_heading--600">Heading defaults</h3>
         <auro-tokens-list componentData={this._getTokens(textHeadingDefault, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Heading display</h3>
+        <h3 className="auro_heading auro_heading--600">Heading display</h3>
         <auro-tokens-list componentData={this._getTokens(textHeadingDisplay, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Heading 800</h3>
+        <h3 className="auro_heading auro_heading--600">Heading 800</h3>
         <auro-tokens-list componentData={this._getTokens(textHeading800, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Heading 700</h3>
+        <h3 className="auro_heading auro_heading--600">Heading 700</h3>
         <auro-tokens-list componentData={this._getTokens(textHeading700, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Heading 600</h3>
+        <h3 className="auro_heading auro_heading--600">Heading 600</h3>
         <auro-tokens-list componentData={this._getTokens(textHeading600, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Heading 500</h3>
+        <h3 className="auro_heading auro_heading--600">Heading 500</h3>
         <auro-tokens-list componentData={this._getTokens(textHeading500, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Heading 400</h3>
+        <h3 className="auro_heading auro_heading--600">Heading 400</h3>
         <auro-tokens-list componentData={this._getTokens(textHeading400, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Heading 300</h3>
+        <h3 className="auro_heading auro_heading--600">Heading 300</h3>
         <auro-tokens-list componentData={this._getTokens(textHeading300, [])}></auro-tokens-list>
 
-        <h3 className="heading heading--lg">Body (default, lg, sm, xs)</h3>
+        <h3 className="auro_heading auro_heading--600">Body (default, lg, sm, xs)</h3>
         <auro-tokens-list componentData={this._getTokens(textBody, [])}></auro-tokens-list>
 
       </section>

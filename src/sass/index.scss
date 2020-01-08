@@ -8,10 +8,17 @@
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/baseline";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/fonts";
-@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/fontStyles";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/componentSupport/tablist";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/componentSupport/containedButtons";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/layoutProperties";
+
+// Auro typography
+$prefix: true;
+$paragraph: true;
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/essentials";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/fontStyles";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/headings";
+$prefix: null;
 
 // Selector generator
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/_layoutPropertiesGenerator";

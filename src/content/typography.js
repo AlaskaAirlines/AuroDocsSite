@@ -4,6 +4,7 @@ import LinkIcons from '../components/linkIcons';
 import 'highlight.js/styles/github.css';
 import Highlight from 'react-highlight';
 import '../sass/App.scss';
+import header from '../assets/typography/header.png';
 
 class Typography extends Component {
   showVersion() {
@@ -23,75 +24,183 @@ class Typography extends Component {
           docs="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#heading"
           version={this.showVersion()}
         />
-        <h1 className="heading heading--max">Typography</h1>
+        <h1 className="auro_heading auro_heading--display">Typography</h1>
+
+        <img className="util_stackMarginXl--bottom util_marginBottom--xl" src={header} alt="page header" />
+
+        <h2 className="auro_heading auro_heading--600">Overview</h2>
+        <p className="auro_baseParagraph">Typography carries content and builds hierarchy and structure within an experience. Our typography is simple and clear, never jarring or overly striking</p>
+
+        <h2 className="auro_heading auro_heading--600">Accessibility</h2>
+        <p className="auro_baseParagraph">To ensure that usage of typography complies with accessibility guidelines:</p>
+
+        <ul>
+          <li>Use h1-h6 to identify headings (<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code> and <code>h1</code>)</li>
+          <li>
+            Use headings to label page regions
+            <ul>
+              <li>Use the aria-label attribute to associate headings with their page region, as described in the label page regions tutorial</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p className="auro_baseParagraph">Assistive technologies skim the structure of a page:</p>
+        <ul>
+          <li>Use heading levels to allow users to navigate to or skip over specific sections</li>
+          <li>Avoid skipping heading levels (e.g., <code>h2</code> to <code>h4</code> )</li>
+        </ul>
+
+        <h2 className="auro_heading auro_heading--600">Design Tokens</h2>
+        <p className="auro_baseParagraph">We use design tokens to represent the decisions of Auro's visual language. We store font specifications using variable names instead of hard-coded typography values.</p>
+
+        <h2 className="auro_heading auro_heading--600">Headings</h2>
         <div className="indention util_fontWeightLight util_type--secondary">
-          <p>Basic typography is the conerstone of all web design. The Orion Design System fully supports a wide range of typography styles.</p>
-          <p>All typography is based on the use of <code>AS Circular</code>, a custom font created for use with Alaska Airline's web brand. </p>
-          <p>The following examples illustrate common typography uses followed up by a code example. All utility classes shown can be found in the <ods-hyperlink inline href="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/" target="_blank">Orion Web Core Style Sheets</ods-hyperlink> documentation.</p>
+          <p>Due to the combination of Orion selectors with Auro selectors, this demo is using the <code>$prefix</code> option to name-space the Auro selectors.</p>
+          <p>See the <ods-hyperlink inline href="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#variable-prefix" target="_blank">WCSS docs for more info</ods-hyperlink>.</p>
         </div>
 
-        <Highlight className='install'>
-          {`$npm i @alaskaairux/orion-web-core-style-sheets`}
+        <div className="exampleWrapper">
+          <h1 className="auro_heading auro_heading--display">Example .auro_heading--display</h1>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<h1 className="auro_heading auro_heading--display">Example .auro_heading--display</h1>`}
         </Highlight>
 
         <div className="exampleWrapper">
+          <h1 className="auro_heading auro_heading--800">Example .auro_heading--800</h1>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<h1 className="auro_heading auro_heading--800">Example .auro_heading--800</h1>`}
+        </Highlight>
+
+        <div className="exampleWrapper">
+          <h1 className="auro_heading auro_heading--700">Example .auro_heading--700</h1>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<h1 className="auro_heading auro_heading--700">Example .auro_heading--700</h1>`}
+        </Highlight>
+
+        <div className="exampleWrapper">
+          <h1 className="auro_heading auro_heading--600">Example .auro_heading--600</h1>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<h1 className="auro_heading auro_heading--600">Example .auro_heading--600</h1>`}
+        </Highlight>
+
+        <div className="exampleWrapper">
+          <h1 className="auro_heading auro_heading--500">Example .auro_heading--500</h1>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<h1 className="auro_heading auro_heading--500">Example .auro_heading--500</h1>`}
+        </Highlight>
+
+        <div className="exampleWrapper">
+          <h1 className="auro_heading auro_heading--400">Example .auro_heading--400</h1>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<h1 className="auro_heading auro_heading--400">Example .auro_heading--400</h1>`}
+        </Highlight>
+
+        <div className="exampleWrapper">
+          <h1 className="auro_heading auro_heading--300">Example .auro_heading--300</h1>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<h1 className="auro_heading auro_heading--300">Example .auro_heading--300</h1>`}
+        </Highlight>
+
+        <h2 className="auro_heading auro_heading--600">Paragraph style</h2>
+
+        <div className="exampleWrapper auro_baseType">
+          <p className="auro_baseParagraph">Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<p className="auro_baseParagraph">Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>`}
+        </Highlight>
+
+        <h2 className="auro_heading auro_heading--600">Utility type selectors</h2>
+
+        <div className="exampleWrapper auro_baseType">
+          <p className="auro_util_body--lg">Example .auro_util_body--lg</p>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<p className="auro_util_body--lg">Example .auro_util_body--lg`}
+        </Highlight>
+
+        <div className="exampleWrapper auro_baseType">
+          <p className="auro_util_body--sm">Example .auro_util_body--sm</p>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<p className="auro_util_body--sm">Example .auro_util_body--sm`}
+        </Highlight>
+
+        <div className="exampleWrapper auro_baseType">
+          <p className="auro_util_body--xs">Example .auro_util_body--xs</p>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<p className="auro_util_body--xs">Example .auro_util_body--xs`}
+        </Highlight>
+
+
+
+        <h2 className="auro_heading auro_heading--600">Deprecated selectors </h2>
+
+        <div className="exampleWrapper--deprecated">
           <h1 className="heading heading--max">Example .heading--max</h1>
         </div>
         <Highlight className='html afterCode'>
           {`<h1 className="heading heading--max">Example heading--xl</h1>`}
         </Highlight>
 
-        <div className="exampleWrapper">
+        <div className="exampleWrapper--deprecated">
           <h1 className="heading heading--xxl">Example .heading--xxl</h1>
         </div>
         <Highlight className='html afterCode'>
           {`<h1 className="heading heading--xxl">Example heading--xl</h1>`}
         </Highlight>
 
-        <div className="exampleWrapper">
+        <div className="exampleWrapper--deprecated">
           <h1 className="heading heading--xl">Example .heading--xl</h1>
         </div>
         <Highlight className='html afterCode'>
           {`<h1 className="heading heading--xl">Example heading--xl</h1>`}
         </Highlight>
 
-        <div className="exampleWrapper">
+        <div className="exampleWrapper--deprecated">
           <p className="util_type--xl">Example .util_type--xl</p>
         </div>
         <Highlight className='html afterCode'>
           {`<p className="util_type--xl">Example .util_type--lg</p>`}
         </Highlight>
 
-        <div className="exampleWrapper">
+        <div className="exampleWrapper--deprecated">
           <h1 className="heading heading--lg">Example .heading--lg</h1>
         </div>
         <Highlight className='html afterCode'>
           {`<h1 className="heading heading--lg">Example heading--xl</h1>`}
         </Highlight>
 
-        <div className="exampleWrapper">
+        <div className="exampleWrapper--deprecated">
           <p className="util_type--lg">Example .util_type--lg</p>
         </div>
         <Highlight className='html afterCode'>
           {`<p className="util_type--lg">Example .util_type--lg</p>`}
         </Highlight>
 
-        <div className="exampleWrapper">
+        <div className="exampleWrapper--deprecated">
           <p className="util_type--secondary">Example .util_type--secondary</p>
         </div>
         <Highlight className='html afterCode'>
           {`<p className="util_type--secondary">Example .util_type--lg</p>`}
         </Highlight>
 
-        <div className="exampleWrapper">
+        <div className="exampleWrapper--deprecated">
           <p className="util_fontWeightLight">Example .util_fontWeightLight</p>
         </div>
-
         <Highlight className='html afterCode'>
           {`<p className="util_fontWeightLight">Example .util_type--lg</p>`}
         </Highlight>
 
-        <div className="exampleWrapper">
+        <div className="exampleWrapper--deprecated">
           <p>Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <Highlight className='html afterCode'>

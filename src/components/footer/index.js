@@ -18,9 +18,9 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        <p>Global dependencies:</p>
+        {/* <p>Global dependencies:</p>
         <small>{this.showVersionTokens()}</small><br/>
-        <small>{this.showVersionIcons()}</small>
+        <small>{this.showVersionIcons()}</small> */}
       </footer>
     );
   }

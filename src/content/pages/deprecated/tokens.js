@@ -40,8 +40,8 @@ class DeprecatedTokens extends Component {
           version={this.showVersion()}
         />
 
-        <h2 className="heading heading--xl">Deprecated tokens list</h2>
-        <p className="util_fontWeightLight">The following is a list of deprecated Orion tokens, and if applicable, an adjacent Auro token. All deprecated tokens will be removed with an upcoming major release. </p>
+        <h1 className="auro_heading auro_heading--display">Deprecated tokens list</h1>
+        <p className="auro_baseParagraph">The following is a list of deprecated Orion tokens, and if applicable, an adjacent Auro token. All deprecated tokens will be removed with an upcoming major release. </p>
 
         <auro-tokens-list deprecated componentData={this._getTokens(deprecated, [])}></auro-tokens-list>
 

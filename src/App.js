@@ -6,7 +6,7 @@ import DesignTokens from './content/pages/designTokens/tokens';
 import Typography from './content/typography';
 import Hyperlink from './content/hyperlink';
 import Options from './content/options';
-import Swatch from './content/swatch';
+import Colors from './content/colors';
 import Icons from './content/icons';
 import ComplexContent from './content/complexContent';
 import Button from './content/button';
@@ -15,7 +15,6 @@ import Generator from './content/generator';
 import Footer from './components/footer';
 import WebCoreStyleSheets from './content/webcorestylesheets';
 import SideNav from './components/side-nav';
-import './style.scss';
 import {
   A11yDocs,
   AltBuildDocs,
@@ -56,7 +55,7 @@ function App() {
             <Redirect exact from="/" to="colors" />
             <Route path="/deprecated/tokens"><DeprecatedTokens /></Route>
             <Route path="/designTokens/tokens"><DesignTokens /></Route>
-            <Route path="/colors"><Swatch /></Route>
+            <Route path="/colors"><Colors /></Route>
             <Route path="/typography"><Typography /></Route>
             <Route path="/icons"><Icons /></Route>
             <Route path="/hyperlink"><Hyperlink /></Route>

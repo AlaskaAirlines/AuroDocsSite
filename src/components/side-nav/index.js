@@ -14,6 +14,9 @@ export default function SideNav(props) {
           title: "Colors and tokens",
           route: "/colors"
         },{
+          title: "Typography",
+          route: "/Typography"
+        },{
           title: "WCSS",
           route: "/webcorestylesheets"
         },{
@@ -29,9 +32,6 @@ export default function SideNav(props) {
       title: "Orion Core elements",
       items: [
         {
-          title: "Typography",
-          route: "/Typography"
-        },{
           title: "Icons",
           route: "/icons"
         }
