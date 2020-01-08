@@ -185,7 +185,6 @@ auro-swatch-list,
 auro-tokens-list {
   display: block;
   overflow: scroll;
-  margin-right: 30px;
 
   @include auro_breakpoint--lg {
     overflow: initial;
