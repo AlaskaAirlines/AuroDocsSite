@@ -60,52 +60,52 @@ class Typography extends Component {
         </div>
 
         <div className="exampleWrapper">
-          <h1 className="auro_heading auro_heading--display">Example .auro_heading--display</h1>
+          <h1 className="auro_heading auro_heading--display">.auro_heading--display</h1>
         </div>
         <Highlight className='html afterCode'>
-          {`<h1 className="auro_heading auro_heading--display">Example .auro_heading--display</h1>`}
+          {`<h1 className="auro_heading auro_heading--display">.auro_heading--display</h1>`}
         </Highlight>
 
         <div className="exampleWrapper">
-          <h1 className="auro_heading auro_heading--800">Example .auro_heading--800</h1>
+          <h1 className="auro_heading auro_heading--800">.auro_heading--800</h1>
         </div>
         <Highlight className='html afterCode'>
-          {`<h1 className="auro_heading auro_heading--800">Example .auro_heading--800</h1>`}
+          {`<h1 className="auro_heading auro_heading--800">.auro_heading--800</h1>`}
         </Highlight>
 
         <div className="exampleWrapper">
-          <h1 className="auro_heading auro_heading--700">Example .auro_heading--700</h1>
+          <h1 className="auro_heading auro_heading--700">.auro_heading--700</h1>
         </div>
         <Highlight className='html afterCode'>
-          {`<h1 className="auro_heading auro_heading--700">Example .auro_heading--700</h1>`}
+          {`<h1 className="auro_heading auro_heading--700">.auro_heading--700</h1>`}
         </Highlight>
 
         <div className="exampleWrapper">
-          <h1 className="auro_heading auro_heading--600">Example .auro_heading--600</h1>
+          <h1 className="auro_heading auro_heading--600">.auro_heading--600</h1>
         </div>
         <Highlight className='html afterCode'>
-          {`<h1 className="auro_heading auro_heading--600">Example .auro_heading--600</h1>`}
+          {`<h1 className="auro_heading auro_heading--600">.auro_heading--600</h1>`}
         </Highlight>
 
         <div className="exampleWrapper">
-          <h1 className="auro_heading auro_heading--500">Example .auro_heading--500</h1>
+          <h1 className="auro_heading auro_heading--500">.auro_heading--500</h1>
         </div>
         <Highlight className='html afterCode'>
-          {`<h1 className="auro_heading auro_heading--500">Example .auro_heading--500</h1>`}
+          {`<h1 className="auro_heading auro_heading--500">.auro_heading--500</h1>`}
         </Highlight>
 
         <div className="exampleWrapper">
-          <h1 className="auro_heading auro_heading--400">Example .auro_heading--400</h1>
+          <h1 className="auro_heading auro_heading--400">.auro_heading--400</h1>
         </div>
         <Highlight className='html afterCode'>
-          {`<h1 className="auro_heading auro_heading--400">Example .auro_heading--400</h1>`}
+          {`<h1 className="auro_heading auro_heading--400">.auro_heading--400</h1>`}
         </Highlight>
 
         <div className="exampleWrapper">
-          <h1 className="auro_heading auro_heading--300">Example .auro_heading--300</h1>
+          <h1 className="auro_heading auro_heading--300">.auro_heading--300</h1>
         </div>
         <Highlight className='html afterCode'>
-          {`<h1 className="auro_heading auro_heading--300">Example .auro_heading--300</h1>`}
+          {`<h1 className="auro_heading auro_heading--300">.auro_heading--300</h1>`}
         </Highlight>
 
         <h2 className="auro_heading auro_heading--600">Paragraph style</h2>
@@ -120,24 +120,24 @@ class Typography extends Component {
         <h2 className="auro_heading auro_heading--600">Utility type selectors</h2>
 
         <div className="exampleWrapper auro_baseType">
-          <p className="auro_util_body--lg">Example .auro_util_body--lg</p>
+          <p className="auro_util_body--lg">.auro_util_body--lg</p>
         </div>
         <Highlight className='html afterCode'>
-          {`<p className="auro_util_body--lg">Example .auro_util_body--lg`}
+          {`<p className="auro_util_body--lg">.auro_util_body--lg`}
         </Highlight>
 
         <div className="exampleWrapper auro_baseType">
-          <p className="auro_util_body--sm">Example .auro_util_body--sm</p>
+          <p className="auro_util_body--sm">.auro_util_body--sm</p>
         </div>
         <Highlight className='html afterCode'>
-          {`<p className="auro_util_body--sm">Example .auro_util_body--sm`}
+          {`<p className="auro_util_body--sm">.auro_util_body--sm`}
         </Highlight>
 
         <div className="exampleWrapper auro_baseType">
-          <p className="auro_util_body--xs">Example .auro_util_body--xs</p>
+          <p className="auro_util_body--xs">.auro_util_body--xs</p>
         </div>
         <Highlight className='html afterCode'>
-          {`<p className="auro_util_body--xs">Example .auro_util_body--xs`}
+          {`<p className="auro_util_body--xs">.auro_util_body--xs`}
         </Highlight>
 
 
@@ -145,59 +145,59 @@ class Typography extends Component {
         <h2 className="auro_heading auro_heading--600">Deprecated selectors </h2>
 
         <div className="exampleWrapper--deprecated">
-          <h1 className="heading heading--max">Example .heading--max</h1>
+          <h1 className="heading heading--max">.heading--max</h1>
         </div>
         <Highlight className='html afterCode'>
-          {`<h1 className="heading heading--max">Example heading--xl</h1>`}
+          {`<h1 className="heading heading--max">heading--xl</h1>`}
         </Highlight>
 
         <div className="exampleWrapper--deprecated">
-          <h1 className="heading heading--xxl">Example .heading--xxl</h1>
+          <h1 className="heading heading--xxl">.heading--xxl</h1>
         </div>
         <Highlight className='html afterCode'>
-          {`<h1 className="heading heading--xxl">Example heading--xl</h1>`}
+          {`<h1 className="heading heading--xxl">heading--xl</h1>`}
         </Highlight>
 
         <div className="exampleWrapper--deprecated">
-          <h1 className="heading heading--xl">Example .heading--xl</h1>
+          <h1 className="heading heading--xl">.heading--xl</h1>
         </div>
         <Highlight className='html afterCode'>
-          {`<h1 className="heading heading--xl">Example heading--xl</h1>`}
+          {`<h1 className="heading heading--xl">heading--xl</h1>`}
         </Highlight>
 
         <div className="exampleWrapper--deprecated">
-          <p className="util_type--xl">Example .util_type--xl</p>
+          <p className="util_type--xl">.util_type--xl</p>
         </div>
         <Highlight className='html afterCode'>
-          {`<p className="util_type--xl">Example .util_type--lg</p>`}
+          {`<p className="util_type--xl">.util_type--lg</p>`}
         </Highlight>
 
         <div className="exampleWrapper--deprecated">
-          <h1 className="heading heading--lg">Example .heading--lg</h1>
+          <h1 className="heading heading--lg">.heading--lg</h1>
         </div>
         <Highlight className='html afterCode'>
-          {`<h1 className="heading heading--lg">Example heading--xl</h1>`}
+          {`<h1 className="heading heading--lg">heading--xl</h1>`}
         </Highlight>
 
         <div className="exampleWrapper--deprecated">
-          <p className="util_type--lg">Example .util_type--lg</p>
+          <p className="util_type--lg">.util_type--lg</p>
         </div>
         <Highlight className='html afterCode'>
-          {`<p className="util_type--lg">Example .util_type--lg</p>`}
+          {`<p className="util_type--lg">.util_type--lg</p>`}
         </Highlight>
 
         <div className="exampleWrapper--deprecated">
-          <p className="util_type--secondary">Example .util_type--secondary</p>
+          <p className="util_type--secondary">.util_type--secondary</p>
         </div>
         <Highlight className='html afterCode'>
-          {`<p className="util_type--secondary">Example .util_type--lg</p>`}
+          {`<p className="util_type--secondary">.util_type--lg</p>`}
         </Highlight>
 
         <div className="exampleWrapper--deprecated">
-          <p className="util_fontWeightLight">Example .util_fontWeightLight</p>
+          <p className="util_fontWeightLight">.util_fontWeightLight</p>
         </div>
         <Highlight className='html afterCode'>
-          {`<p className="util_fontWeightLight">Example .util_type--lg</p>`}
+          {`<p className="util_fontWeightLight">.util_type--lg</p>`}
         </Highlight>
 
         <div className="exampleWrapper--deprecated">

@@ -19,10 +19,11 @@
 .sidenav {
   position: fixed;
   top: 80px;
-  width: 15%;
+  width: 248px;
   overflow: scroll;
   height: -webkit-fill-available;
   padding-bottom: 300px;
+  margin-left: 10px;
 
   .hyperlink {
     margin-bottom: $size-scale-micro;
@@ -30,6 +31,11 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  @include auro_breakpoint--lg {
+    width: 245px;
+    margin: 0;
   }
 }
 
