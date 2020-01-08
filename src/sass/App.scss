@@ -37,6 +37,11 @@ header {
 
   img {
     height: 60px;
+    margin-left: 10px;
+
+    @include auro_breakpoint--lg {
+      margin-left: 0;
+    }
   }
 }
 
