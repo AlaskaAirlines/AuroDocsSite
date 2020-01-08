@@ -15,6 +15,7 @@ import Generator from './content/generator';
 import Footer from './components/footer';
 import WebCoreStyleSheets from './content/webcorestylesheets';
 import SideNav from './components/side-nav';
+import logo from './assets/logo.png';
 import {
   A11yDocs,
   AltBuildDocs,
@@ -48,6 +49,9 @@ import './scripts/orion';
 function App() {
   return (
     <main className="main-wrapper">
+      <header>
+        <img src={logo} alt="Alaska | Auro Design System logo" />
+      </header>
       <div className="wrapper">
         <Router>
           <SideNav />

@@ -17,7 +17,12 @@
 }
 
 .sidenav {
-  width: 20%;
+  position: fixed;
+  top: 80px;
+  width: 15%;
+  overflow: scroll;
+  height: -webkit-fill-available;
+  padding-bottom: 300px;
 
   .hyperlink {
     margin-bottom: $size-scale-micro;
