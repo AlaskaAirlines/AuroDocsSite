@@ -17,13 +17,27 @@
 }
 
 .sidenav {
+  display: none;
   position: fixed;
-  top: 80px;
-  width: 248px;
+  z-index: 100;
+  background-color: white;
+  width: 75%;
+  margin-left: 0;
+  padding-left: 10px;
+  height: 100%;
   overflow: scroll;
-  height: -webkit-fill-available;
-  padding-bottom: 300px;
-  margin-left: 10px;
+  padding-bottom: 200px;
+
+
+  &Mobile--open {
+    display: block;
+    background-color: white;
+    width: 75%;
+    box-shadow: 0px 15px 28px -10px #666;
+    margin-left: 0;
+    padding-left: 10px;
+    top: 80px;
+  }
 
   .auro_hyperlink {
     margin-bottom: $size-scale-micro;
@@ -36,6 +50,15 @@
   @include auro_breakpoint--lg {
     width: 245px;
     margin: 0;
+  }
+
+  @include auro_breakpoint--sm {
+    display: block;
+    width: 248px;
+    top: 80px;
+    height: -webkit-fill-available;
+    padding-bottom: 300px;
+    margin-left: 10px;
   }
 }
 

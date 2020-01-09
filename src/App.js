@@ -50,7 +50,9 @@ function App() {
   return (
     <main className="main-wrapper">
       <header>
-        <img src={logo} alt="Alaska | Auro Design System logo" />
+        <a href="/">
+          <img src={logo} alt="Alaska | Auro Design System logo" />
+        </a>
       </header>
       <div className="wrapper">
         <Router>

@@ -94,7 +94,7 @@ export default function SideNav(props) {
   ]);
 
   return (
-    <nav className="sidenav">
+    <nav className="sidenav sidenavMobile--open">
       {options.map(s => (
         <Fragment key={s.title}>
           <p className="heading heading--lg" key={s.title}>{s.title}</p>
