@@ -51,14 +51,13 @@ class DeprecatedTokens extends Component {
   render() {
     return (
       <section>
+        <h1 className="auro_heading auro_heading--display">Auro Design Tokens</h1>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionDesignTokens"
           npm="https://www.npmjs.com/package/@alaskaairux/orion-design-tokens"
           code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
           version={this.showVersion()}
         />
-
-        <h1 className="auro_heading auro_heading--display">Auro Design Tokens</h1>
         <p className="auro_baseParagraph">The following is a list of all non-color based Auro tokens</p>
         <h3 className="auro_heading auro_heading--600">Animation</h3>
         <auro-tokens-list componentData={this._getTokens(animation, [])}></auro-tokens-list>

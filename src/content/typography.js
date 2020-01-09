@@ -17,6 +17,8 @@ class Typography extends Component {
   render() {
     return (
       <section id="typography">
+        <h1 className="auro_heading auro_heading--display">Typography</h1>
+        <img className="util_stackMarginSm--bottom" src={header} alt="page header" />
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionWebCoreStyleSheets"
           npm="https://www.npmjs.com/package/@alaskaairux/orion-web-core-style-sheets"
@@ -24,9 +26,6 @@ class Typography extends Component {
           docs="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#heading"
           version={this.showVersion()}
         />
-        <h1 className="auro_heading auro_heading--display">Typography</h1>
-
-        <img className="util_stackMarginXl--bottom util_marginBottom--xl" src={header} alt="page header" />
 
         <h2 className="auro_heading auro_heading--600">Overview</h2>
         <p className="auro_baseParagraph">Typography carries content and builds hierarchy and structure within an experience. Our typography is simple and clear, never jarring or overly striking</p>

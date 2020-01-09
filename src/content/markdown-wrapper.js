@@ -51,16 +51,16 @@ export class ExternalMarkdownWrapper extends MarkdownWrapper {
   render() {
     return (
       <section>
+        <article className="ods-markdown">
+          <ReactMarkdown source={this.state.docsGenerator} escapeHtml={false}/>
+        </article>
+
         <LinkIcons
           github={this.githubURL}
           npm={this.getNpm()}
           code={this.codeURL}
           version={this.showVersion()}
         />
-
-        <section className="ods-markdown">
-          <ReactMarkdown source={this.state.docsGenerator} escapeHtml={false}/>
-        </section>
 
       </section>
     );
