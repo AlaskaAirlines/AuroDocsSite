@@ -4,7 +4,7 @@
 // Auro tokens
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
 
-@import "../../node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 
 .main-wrapper {
   @include auro_breakpoint--md {
@@ -26,25 +26,6 @@
 
     @include auro_breakpoint--sm {
       margin-left: 280px;
-    }
-  }
-}
-
-header {
-  height: 80px;
-  padding: 10px 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  border-bottom: 1px solid $auro-color-border-primary-on-light;
-  background-color: white;
-
-  img {
-    height: 60px;
-    margin-left: 10px;
-
-    @include auro_breakpoint--lg {
-      margin-left: 0;
     }
   }
 }

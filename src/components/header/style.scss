@@ -1,0 +1,26 @@
+// Orion tokens
+@import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
+
+// Auro tokens
+@import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
+
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+
+.siteHeader {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid $auro-color-border-primary-on-light;
+  background-color: white;
+  @include auro_breakpoint--lg {
+    padding: 10px 0;
+  }
+
+  img {
+    height: 60px;
+  }
+}

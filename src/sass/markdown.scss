@@ -99,6 +99,9 @@ $prefix: null;
   }
 
   table {
+    overflow: scroll;
+    display: block;
+    width: auto;
     border-spacing: 5px;
     margin-bottom: var(--size-scale-xl);
 

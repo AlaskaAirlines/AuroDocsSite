@@ -13,9 +13,9 @@ import Button from './content/button';
 import Toast from './content/toast';
 import Generator from './content/generator';
 import Footer from './components/footer';
+import Header from './components/header';
 import WebCoreStyleSheets from './content/webcorestylesheets';
 import SideNav from './components/side-nav';
-import logo from './assets/logo.png';
 import {
   A11yDocs,
   AltBuildDocs,
@@ -43,19 +43,24 @@ import {
   Redirect
 } from "react-router-dom";
 
+import ScrollToTop from './components/ScrollToTop';
+
 import './sass/App.scss';
 import './scripts/orion';
 
 function App() {
   return (
     <main className="main-wrapper">
-      <header>
-        <a href="/">
-          <img src={logo} alt="Alaska | Auro Design System logo" />
-        </a>
-      </header>
+      <Header />
       <div className="wrapper">
+        <input id="menuCheckbox" type="checkbox" className="menuCheckbox util_displayHiddenVisually"></input>
+        <label for="menuCheckbox" className="menuCheckbox--label">
+          <img className="menuIcon" src="https://img.icons8.com/material/24/000000/menu--v1.png"></img>
+          <img className="closeIcon" width="24" src="https://img.icons8.com/material/26/000000/multiply--v1.png"></img>
+        </label>
+
         <Router>
+          <ScrollToTop />
           <SideNav />
           <Switch>
             <Redirect exact from="/" to="colors" />

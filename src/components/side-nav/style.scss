@@ -17,27 +17,17 @@
 }
 
 .sidenav {
-  display: none;
+  left: -300px;
+  transition: all .3s ease;
   position: fixed;
   z-index: 100;
   background-color: white;
   width: 75%;
-  margin-left: 0;
   padding-left: 10px;
   height: 100%;
   overflow: scroll;
   padding-bottom: 200px;
-
-
-  &Mobile--open {
-    display: block;
-    background-color: white;
-    width: 75%;
-    box-shadow: 0px 15px 28px -10px #666;
-    margin-left: 0;
-    padding-left: 10px;
-    top: 80px;
-  }
+  top: 80px;
 
   .auro_hyperlink {
     margin-bottom: $size-scale-micro;
@@ -54,11 +44,12 @@
 
   @include auro_breakpoint--sm {
     display: block;
+    opacity: 1;
+    left: auto;
     width: 248px;
     top: 80px;
     height: -webkit-fill-available;
     padding-bottom: 300px;
-    margin-left: 10px;
   }
 }
 
@@ -66,5 +57,69 @@
   color: $color-base-orca !important;
   &:hover {
     text-decoration: none !important;
+  }
+}
+
+.menuCheckbox,
+.menuCheckbox--label {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.menuCheckbox--label {
+  &::before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $auro-color-background-lighter;
+    box-shadow: 0px 0px 10px #222;
+    right: -12px;
+    top: -13px;
+    z-index: -1;
+
+    @include auro_breakpoint--sm {
+      display: none;
+    }
+  }
+}
+
+.menuIcon {
+  display: block;
+
+  @include auro_breakpoint--sm {
+    display: none;
+  }
+}
+
+.closeIcon {
+  display: none;
+}
+
+.menuCheckbox:checked + .menuCheckbox--label {
+  .menuIcon {
+    display: none;
+  }
+  .closeIcon {
+    display: block;
+  }
+}
+
+.menuCheckbox {
+  &:checked {
+    & ~ .sidenav {
+      opacity: 1;
+      left: 0;
+      background-color: $auro-color-background-lightest;
+      width: 75%;
+      box-shadow: 0px 15px 28px -10px $auro-color-background-darker;
+      margin-left: 0;
+      padding-left: 10px;
+      top: 80px;
+    }
   }
 }
