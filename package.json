@@ -5,10 +5,10 @@
   "dependencies": {
     "@alaskaairux/ods-button": "^4.2.0",
     "@alaskaairux/ods-hyperlink": "^1.3.0",
-    "@alaskaairux/ods-inputoptions": "^1.1.5",
+    "@alaskaairux/ods-inputoptions": "^1.1.7",
     "@alaskaairux/ods-swatch": "^1.2.1",
     "@alaskaairux/ods-toast": "^1.1.1",
-    "@alaskaairux/ods-wc-generator": "^1.0.20",
+    "@alaskaairux/ods-wc-generator": "^1.1.1",
     "@alaskaairux/orion-design-tokens": "^2.10.2",
     "@alaskaairux/orion-icons": "^2.0.0",
     "@alaskaairux/orion-web-core-style-sheets": "^2.8.2",
