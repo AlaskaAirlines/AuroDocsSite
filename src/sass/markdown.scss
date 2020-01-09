@@ -3,6 +3,9 @@
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/baseline";
 
+// accessibility
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/focusVisible";
+
 // Auro typography
 $prefix: true;
 $paragraph: true;
@@ -79,6 +82,10 @@ $prefix: null;
   a {
     @extend .hyperlink;
     @extend .hyperlink--inline;
+
+    &.focus-visible {
+      @include focus-hyperlink(sass);
+    }
   }
 
   p {
