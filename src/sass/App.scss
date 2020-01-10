@@ -171,10 +171,6 @@ auro-tokens-list {
   display: block;
   overflow: scroll;
 
-  @include auro_breakpoint--lg {
-    overflow: initial;
-  }
-
   background:
     linear-gradient(90deg, white 0%, rgba(255,255,255,0)),
     linear-gradient(-90deg, white 0%, rgba(255,255,255,0)) 100% 0,
@@ -192,6 +188,11 @@ auro-tokens-list {
   background-color: #fff;
   background-size: 100px 200%, 100px 100%, 25px 100%, 25px 100%;
   background-attachment: local, local, scroll, scroll;
+
+  @include auro_breakpoint--lg {
+    overflow: initial;
+    background: initial;
+  }
 }
 
 .avatarWrapper {

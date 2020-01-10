@@ -1,12 +1,33 @@
 import React, { Component } from "react";
-import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
 import LinkIcons from '../components/linkIcons';
-import 'highlight.js/styles/github.css';
 import Highlight from 'react-highlight';
-import '../sass/App.scss';
 import header from '../assets/typography/header.png';
+import allTokens from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--allTokens.js';
+import deprecated from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--deprecated.js';
+import _getTokens from "../functions/getTokens";
+import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
+import "@alaskaairux/ods-swatch/dist/auro-tokens-list";
+import 'highlight.js/styles/github.css';
+import '../sass/App.scss';
+
+const font = allTokens.font;
+const textBody = allTokens.text.body;
+const textHeadingDefault = allTokens.text.heading.default;
+const textHeadingDisplay = allTokens.text.heading.display;
+const textHeading800 = allTokens.text.heading[800];
+const textHeading700 = allTokens.text.heading[700];
+const textHeading600 = allTokens.text.heading[600];
+const textHeading500 = allTokens.text.heading[500];
+const textHeading400 = allTokens.text.heading[400];
+const textHeading300 = allTokens.text.heading[300];
+
+const weight = deprecated.weight;
+const scale = deprecated.size.scale;
+const fontSize = deprecated.size.font;
+const deprecatedType = {...weight, ...scale, ...fontSize }
 
 class Typography extends Component {
+
   showVersion() {
     const pjson = require('../../package.json');
     const dependencies = pjson.dependencies['@alaskaairux/orion-web-core-style-sheets'];
@@ -27,10 +48,10 @@ class Typography extends Component {
           version={this.showVersion()}
         />
 
-        <h2 className="auro_heading auro_heading--600">Overview</h2>
+        <h3 className="auro_heading auro_heading--600">Overview</h3>
         <p className="auro_baseParagraph">Typography carries content and builds hierarchy and structure within an experience. Our typography is simple and clear, never jarring or overly striking</p>
 
-        <h2 className="auro_heading auro_heading--600">Accessibility</h2>
+        <h3 className="auro_heading auro_heading--600">Accessibility</h3>
         <p className="auro_baseParagraph">To ensure that usage of typography complies with accessibility guidelines:</p>
 
         <ul>
@@ -49,10 +70,10 @@ class Typography extends Component {
           <li>Avoid skipping heading levels (e.g., <code>h2</code> to <code>h4</code> )</li>
         </ul>
 
-        <h2 className="auro_heading auro_heading--600">Design Tokens</h2>
+        <h3 className="auro_heading auro_heading--600">Design Tokens</h3>
         <p className="auro_baseParagraph">We use design tokens to represent the decisions of Auro's visual language. We store font specifications using variable names instead of hard-coded typography values.</p>
 
-        <h2 className="auro_heading auro_heading--600">Headings</h2>
+        <h2 className="auro_heading auro_heading--800">Headings</h2>
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>Due to the combination of Orion selectors with Auro selectors, this demo is using the <code>$prefix</code> option to name-space the Auro selectors.</p>
           <p>See the <ods-hyperlink inline href="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#variable-prefix" target="_blank">WCSS docs for more info</ods-hyperlink>.</p>
@@ -107,7 +128,7 @@ class Typography extends Component {
           {`<h1 className="auro_heading auro_heading--300">.auro_heading--300</h1>`}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--600">Paragraph style</h2>
+        <h2 className="auro_heading auro_heading--800">Paragraph style</h2>
 
         <div className="exampleWrapper auro_baseType">
           <p className="auro_baseParagraph">Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -116,7 +137,7 @@ class Typography extends Component {
           {`<p className="auro_baseParagraph">Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>`}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--600">Utility type selectors</h2>
+        <h2 className="auro_heading auro_heading--800">Utility type selectors</h2>
 
         <div className="exampleWrapper auro_baseType">
           <p className="auro_util_body--lg">.auro_util_body--lg</p>
@@ -139,9 +160,42 @@ class Typography extends Component {
           {`<p className="auro_util_body--xs">.auro_util_body--xs`}
         </Highlight>
 
+        <h2 className="auro_heading auro_heading--800">Design tokens</h2>
+
+        <h3 className="auro_heading auro_heading--500">Font families</h3>
+        <auro-tokens-list componentData={_getTokens(font, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--500">Heading defaults</h3>
+        <auro-tokens-list componentData={_getTokens(textHeadingDefault, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--500">Heading display</h3>
+        <auro-tokens-list componentData={_getTokens(textHeadingDisplay, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--500">Heading 800</h3>
+        <auro-tokens-list componentData={_getTokens(textHeading800, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--500">Heading 700</h3>
+        <auro-tokens-list componentData={_getTokens(textHeading700, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--500">Heading 600</h3>
+        <auro-tokens-list componentData={_getTokens(textHeading600, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--500">Heading 500</h3>
+        <auro-tokens-list componentData={_getTokens(textHeading500, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--500">Heading 400</h3>
+        <auro-tokens-list componentData={_getTokens(textHeading400, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--500">Heading 300</h3>
+        <auro-tokens-list componentData={_getTokens(textHeading300, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--500">Body (default, lg, sm, xs)</h3>
+        <auro-tokens-list componentData={_getTokens(textBody, [])}></auro-tokens-list>
 
 
-        <h2 className="auro_heading auro_heading--600">Deprecated selectors </h2>
+
+        <h2 className="auro_heading auro_heading--800">Deprecated selectors </h2>
+        <p className="auro_baseParagraph">The following selectors have been deperecated and all projects should discontinue use. Please see<ods-hyperlink inline href="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#%E2%80%A0deprecated-css-.heading" target="_blank">the WCSS automated doc site</ods-hyperlink> for cross reference information.</p>
 
         <div className="exampleWrapper--deprecated">
           <h1 className="heading heading--max">.heading--max</h1>
@@ -205,6 +259,12 @@ class Typography extends Component {
         <Highlight className='html afterCode'>
           {`<p>Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>`}
         </Highlight>
+
+
+        <h2 className="auro_heading auro_heading--800">Deprecated Tokens </h2>
+        <p className="auro_baseParagraph">The following tokens have been deperecated and all projects should discontinue use.</p>
+
+        <auro-tokens-list deprecated componentData={_getTokens(deprecatedType, [])}></auro-tokens-list>
       </section>
     );
   }

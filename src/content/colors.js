@@ -118,7 +118,7 @@ class Colors extends Component {
         <div className="avatarWrapper avatarWrapper--4up">
           {this._getAvatars(ui, 'ui', 'onDark', [])}
         </div>
-        <auro-swatch-list darkmode componentData={this._getColors(ui, 'onDark', [])}></auro-swatch-list>
+        <auro-swatch-list onDark componentData={this._getColors(ui, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="auro_heading auro_heading--600">Border</h2>
         <h3 className="auro_heading auro_heading--400">For light backgrounds</h3>
@@ -131,7 +131,7 @@ class Colors extends Component {
         <div className="avatarWrapper avatarWrapper--4up">
           {this._getAvatars(border, 'border', 'onDark', [])}
         </div>
-        <auro-swatch-list darkmode componentData={this._getColors(border, 'onDark', [])}></auro-swatch-list>
+        <auro-swatch-list onDark componentData={this._getColors(border, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="auro_heading auro_heading--600">Text</h2>
         <h3 className="auro_heading auro_heading--400">For light backgrounds</h3>
@@ -145,7 +145,7 @@ class Colors extends Component {
         <div className="avatarWrapper avatarWrapper--3up">
           {this._getAvatars(text, 'font', 'onDark', [])}
         </div>
-        <auro-swatch-list darkmode componentData={this._getColors(text, 'onDark', [])}></auro-swatch-list>
+        <auro-swatch-list onDark componentData={this._getColors(text, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="auro_heading auro_heading--600">Icon</h2>
         <h3 className="auro_heading auro_heading--400">For light backgrounds</h3>
@@ -158,7 +158,7 @@ class Colors extends Component {
         <div className="avatarWrapper avatarWrapper--4up">
           {this._getAvatars(icon, 'icon', 'onDark', [])}
         </div>
-        <auro-swatch-list darkmode componentData={this._getColors(icon, 'onDark', [])}></auro-swatch-list>
+        <auro-swatch-list onDark componentData={this._getColors(icon, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="auro_heading auro_heading--600">Alerts / Messaging</h2>
         <h3 className="auro_heading auro_heading--400">For light backgrounds</h3>
@@ -171,7 +171,7 @@ class Colors extends Component {
         <div className="avatarWrapper avatarWrapper--4up">
           {this._getAvatars(alert, 'alert', 'onDark', [])}
         </div>
-        <auro-swatch-list darkmode componentData={this._getColors(alert, 'onDark', [])}></auro-swatch-list>
+        <auro-swatch-list onDark componentData={this._getColors(alert, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="auro_heading auro_heading--600">Digital Personality</h2>
         <p className="util_fontWeightLight">These digital personality tokens should be used within the <ods-hyperlink inline href="/DigitalPersonality">Digital personality</ods-hyperlink> guidelines.</p>

@@ -8,7 +8,7 @@ export default function SideNav(props) {
 
   const [options, setOptions] = useState([
     {
-      title: "Auro Optimized",
+      title: "Auro Core elements",
       items: [
         {
           title: "Colors and tokens",
@@ -16,6 +16,9 @@ export default function SideNav(props) {
         },{
           title: "Typography",
           route: "/Typography"
+        },{
+          title: "Icons",
+          route: "/icons"
         },{
           title: "WCSS",
           route: "/webcorestylesheets"
@@ -25,15 +28,6 @@ export default function SideNav(props) {
         },{
           title: "Deprecated tokens",
           route: "/deprecated/tokens"
-        }
-      ]
-    },
-    {
-      title: "Orion Core elements",
-      items: [
-        {
-          title: "Icons",
-          route: "/icons"
         }
       ]
     },

@@ -22,7 +22,9 @@ $prefix: null;
 
 // Auro Selector generators
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/_layoutPropertiesGenerator";
-@import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariableMap";
+
 $auro-spacing-types: stack;
 $auro-spacing-options: xl;
+$important: true;
+@import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariableMap";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/spacingUtility";
