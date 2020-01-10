@@ -76,7 +76,7 @@ const buildElements = (sortedIcons) => {
 
 const getCategory = (iconPath) => {
   const iconAndDist = iconPath.split('dist/icons/')[1];
-  let category = "deprecated";
+  let category = "Deprecated";
 
   if(iconAndDist.includes('/')) category = iconAndDist.split('/')[0];
 

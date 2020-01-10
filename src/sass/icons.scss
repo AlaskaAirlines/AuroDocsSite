@@ -1,18 +1,26 @@
-@import '../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
+@import "../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
 
 $iconMap: (
-  toggleArrow: true,
-  chevronArrow: true,
+  toggleArrow: false,
+  chevronArrow: false,
   classiccheckmark: true,
-  checkmarkLg: true,
-  checkmarkSml: true,
-  stepout: true,
-  stepoutLg: true,
-  close: true,
-  closeLg: true,
-  closeSml: true,
-  alert: true,
-  creditcard: true
-);
+  stepout: false,
+  stepoutLg: false,
+  checkmarkLg: false,
+  checkmarkSml: false,
+  close: false,
+  closeLg: false,
+  closeSml: false,
+  alert: false,
+  creditcard: false,
+  addToCalendar: false,
+  boardingPassFilled: false,
+  boardingPassStroke: false,
+  bookingFilled: false,
+  bookingStroke: false,
+  calendar: false,
+  radarFilled: false,
+  radarStroke: false
+) !default;
 
-@import '~@alaskaairux/orion-icons/dist/orion-icons';
+@import '~@alaskaairux/orion-icons/dist/icons';
