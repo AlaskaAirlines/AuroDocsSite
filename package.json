@@ -9,20 +9,19 @@
     "@alaskaairux/ods-swatch": "^1.2.3",
     "@alaskaairux/ods-toast": "^1.1.1",
     "@alaskaairux/ods-wc-generator": "^1.1.1",
-    "@alaskaairux/orion-design-tokens": "^2.10.4",
+    "@alaskaairux/orion-design-tokens": "^2.10.5",
     "@alaskaairux/orion-icons": "^2.0.2",
-    "@alaskaairux/orion-web-core-style-sheets": "^2.8.4",
-    "@webcomponents/webcomponentsjs": "^2.3.0",
+    "@alaskaairux/orion-web-core-style-sheets": "^2.8.5",
+    "@webcomponents/webcomponentsjs": "^2.4.1",
     "focus-visible": "^5.0.2",
-    "node-sass": "^4.12.0",
-    "react": "^16.10.0",
-    "react-dom": "^16.10.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-highlight": "^0.12.0",
-    "react-markdown": "^4.2.2",
+    "react-markdown": "^4.3.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.0.1",
-    "react-scroll": "^1.7.14",
-    "typescript": "^3.6.3"
+    "react-scripts": "^3.3.0",
+    "typescript": "^3.7.5"
   },
   "scripts": {
     "copyfiles": "copyfiles -f ./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/fonts/*.* ./src/fonts",
@@ -49,7 +48,7 @@
     ]
   },
   "devDependencies": {
-    "copyfiles": "^2.1.1",
+    "copyfiles": "^2.2.0",
     "svg-react-loader": "^0.4.6"
   }
 }
