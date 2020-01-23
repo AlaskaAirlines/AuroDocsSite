@@ -22,7 +22,7 @@ class Hyperlink extends Component {
           code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink/blob/master/src/ods-hyperlink.js"
           version={this.showVersion()}
         />
-        <h1 className="heading heading--max">Hyperlink</h1>
+        <h1 className="auro_heading auro_heading--display">Hyperlink</h1>
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>Hyperlinks form the backbone of how users navigate through a site or app. The following example illustrates how the <code>ods-hyperlink</code> Orion component can be used.</p>

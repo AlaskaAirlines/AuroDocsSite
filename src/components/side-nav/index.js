@@ -32,6 +32,15 @@ export default function SideNav(props) {
       ]
     },
     {
+      title: "Auro Components",
+      items: [
+        {
+          title: "Hyperlink",
+          route: '/auro-hyperlink'
+        }
+      ]
+    },
+    {
       title: "Orion Components",
       items: [
         {
@@ -94,7 +103,7 @@ export default function SideNav(props) {
           <p className="heading heading--lg" key={s.title}>{s.title}</p>
             {s.items.map(o => (
               <Link key={o.title} to={o.route}
-                className={o.active ? 'auro_hyperlink auro_hyperlink--active util_displayBlock' : 'auro_hyperlink util_displayBlock'}
+                className={o.active ? 'auro_hyperlink auro_hyperlink--active auro_hyperlink--nav' : 'auro_hyperlink auro_hyperlink--nav'}
                 >
                 <span
                   onClick={() => {

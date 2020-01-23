@@ -13,6 +13,11 @@
   }
 }
 
+.ondark {
+  background-color: var(--auro-color-background-darkest);
+  padding: 10px 20px;
+}
+
 .wrapper {
   & > section {
     margin-left: 20px;

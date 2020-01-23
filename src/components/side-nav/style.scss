@@ -53,11 +53,13 @@
   }
 }
 
-.hyperlink--active {
-  color: $color-base-orca !important;
-  &:hover {
-    text-decoration: none !important;
-  }
+.auro_hyperlink--active {
+  color: $auro-color-text-primary-on-light !important;
+}
+
+.auro_hyperlink--active.auro_hyperlink--nav:not(.is-touching):hover {
+  text-decoration: none !important;
+  cursor: default;
 }
 
 .menuCheckbox,

@@ -5,6 +5,7 @@ import DeprecatedTokens from './content/pages/deprecated/tokens';
 import DesignTokens from './content/pages/designTokens/tokens';
 import Typography from './content/typography';
 import Hyperlink from './content/hyperlink';
+import AuroHyperlink from './content/auro-hyperlink';
 import Options from './content/options';
 import Colors from './content/colors';
 import Icons from './content/icons';
@@ -70,6 +71,7 @@ function App() {
             <Route path="/typography"><Typography /></Route>
             <Route path="/icons"><Icons /></Route>
             <Route path="/hyperlink"><Hyperlink /></Route>
+            <Route path="/auro-hyperlink"><AuroHyperlink /></Route>
             <Route path="/button"><Button /></Route>
             <Route path="/options"><Options /></Route>
             <Route path="/toast"><Toast /></Route>
