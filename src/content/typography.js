@@ -5,7 +5,7 @@ import header from '../assets/typography/header.png';
 import allTokens from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--allTokens.js';
 import deprecated from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--deprecated.js';
 import _getTokens from "../functions/getTokens";
-import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
+import "@alaskaairux/ods-hyperlink/dist/auro-hyperlink";
 import "@alaskaairux/ods-swatch/dist/auro-tokens-list";
 import 'highlight.js/styles/github.css';
 import '../sass/App.scss';
@@ -76,7 +76,7 @@ class Typography extends Component {
         <h2 className="auro_heading auro_heading--800">Headings</h2>
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>Due to the combination of Orion selectors with Auro selectors, this demo is using the <code>$prefix</code> option to name-space the Auro selectors.</p>
-          <p>See the <ods-hyperlink inline href="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#variable-prefix" target="_blank">WCSS docs for more info</ods-hyperlink>.</p>
+          <p>See the <auro-hyperlink href="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#variable-prefix" target="_blank">WCSS docs for more info</auro-hyperlink>.</p>
         </div>
 
         <div className="exampleWrapper">
@@ -195,7 +195,7 @@ class Typography extends Component {
 
 
         <h2 className="auro_heading auro_heading--800">Deprecated selectors </h2>
-        <p className="auro_baseParagraph">The following selectors have been deperecated and all projects should discontinue use. Please see<ods-hyperlink inline href="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#%E2%80%A0deprecated-css-.heading" target="_blank">the WCSS automated doc site</ods-hyperlink> for cross reference information.</p>
+        <p className="auro_baseParagraph">The following selectors have been deperecated and all projects should discontinue use. Please see<auro-hyperlink href="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#%E2%80%A0deprecated-css-.heading" target="_blank">the WCSS automated doc site</auro-hyperlink> for cross reference information.</p>
 
         <div className="exampleWrapper--deprecated">
           <h1 className="heading heading--max">.heading--max</h1>

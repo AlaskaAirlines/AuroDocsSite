@@ -103,7 +103,7 @@ export default function SideNav(props) {
           <p className="heading heading--lg" key={s.title}>{s.title}</p>
             {s.items.map(o => (
               <Link key={o.title} to={o.route}
-                className={o.active ? 'hyperlink hyperlink--active auro_hyperlink--nav util_displayBlock' : 'auro_hyperlink auro_hyperlink--nav util_displayBlock'}
+                className={o.active ? 'auro_hyperlink auro_hyperlink--active auro_hyperlink--nav util_displayBlock' : 'auro_hyperlink auro_hyperlink--nav util_displayBlock'}
                 >
                 <span
                   onClick={() => {

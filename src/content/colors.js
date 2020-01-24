@@ -96,7 +96,7 @@ class Colors extends Component {
         <p className="auro_p">The colors within our digital experiences differs from our physical materials. What may appear vibrant on paper may seem dull and uninspired on a glowing screen. As a result, the colors we use within our digital experiences are adjusted to create a more vibrant and inspirational experiences for our guests. In addition to our core colors, an extended palette has been created to add warmth, deeper connection, and more human characteristics to the digital brand.</p>
 
         <h2 className="auro_heading auro_heading--600">Accessibility</h2>
-        <p className="auro_baseParagraph">We've chosen these colors to be accessed, understood, and used by all people regardless of their age, background, or ability. These colors meet or exceed color contrast <ods-hyperlink inline target="_blank" href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG AA accessibility standards</ods-hyperlink>. </p>
+        <p className="auro_baseParagraph">We've chosen these colors to be accessed, understood, and used by all people regardless of their age, background, or ability. These colors meet or exceed color contrast <auro-hyperlink target="_blank" href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG AA accessibility standards</auro-hyperlink>. </p>
 
         <h2 className="auro_heading auro_heading--600">Design Tokens</h2>
         <p className="auro_baseParagraph">We use design tokens to represent the design decisions of our visual language. Color specifications are stored using specific variable names, instead of hard-coded hex or RGBa values.</p>
@@ -174,7 +174,7 @@ class Colors extends Component {
         <auro-swatch-list onDark componentData={this._getColors(alert, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="auro_heading auro_heading--600">Digital Personality</h2>
-        <p className="util_fontWeightLight">These digital personality tokens should be used within the <ods-hyperlink inline href="/DigitalPersonality">Digital personality</ods-hyperlink> guidelines.</p>
+        <p className="util_fontWeightLight">These digital personality tokens should be used within the <auro-hyperlink href="/DigitalPersonality">Digital personality</auro-hyperlink> guidelines.</p>
 
         <h3 className="auro_heading auro_heading--400">Midnight</h3>
         <auro-swatch-list componentData={this._getColors(midnight, 'neutral', [])}></auro-swatch-list>

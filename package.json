@@ -11,7 +11,7 @@
     "@alaskaairux/ods-wc-generator": "^1.1.1",
     "@alaskaairux/orion-design-tokens": "^2.10.5",
     "@alaskaairux/orion-icons": "^2.0.4",
-    "@alaskaairux/orion-web-core-style-sheets": "^2.8.6",
+    "@alaskaairux/orion-web-core-style-sheets": "^2.8.7",
     "@webcomponents/webcomponentsjs": "^2.4.1",
     "focus-visible": "^5.0.2",
     "node-sass": "^4.13.1",
