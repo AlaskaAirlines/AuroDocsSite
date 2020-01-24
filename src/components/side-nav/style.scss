@@ -53,11 +53,13 @@
   }
 }
 
-.auro_hyperlink--active {
+.auro_hyperlink--active,
+.hyperlink--active {
   color: $auro-color-text-primary-on-light !important;
 }
 
-.auro_hyperlink--active.auro_hyperlink--nav:not(.is-touching):hover {
+.auro_hyperlink--active.auro_hyperlink--nav:not(.is-touching):hover,
+.hyperlink--active.hyperlink--nav:not(.is-touching):hover {
   text-decoration: none !important;
   cursor: default;
 }
