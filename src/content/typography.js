@@ -8,7 +8,6 @@ import _getTokens from "../functions/getTokens";
 import "@alaskaairux/ods-hyperlink/dist/auro-hyperlink";
 import "@alaskaairux/ods-swatch/dist/auro-tokens-list";
 import 'highlight.js/styles/github.css';
-import '../sass/App.scss';
 
 const font = allTokens.font;
 const textBody = allTokens.text.body;

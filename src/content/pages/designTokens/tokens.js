@@ -3,7 +3,6 @@ import LinkIcons from '../../../components/linkIcons';
 import _getTokens from "../../../functions/getTokens";
 import allTokens from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--allTokens.js';
 import "@alaskaairux/ods-swatch/dist/auro-tokens-list";
-import '../../../sass/App.scss';
 
 const animation = allTokens.animation;
 const breakpoint = allTokens.breakpoint;

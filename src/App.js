@@ -44,8 +44,9 @@ import {
   Redirect
 } from "react-router-dom";
 
-import ScrollToTop from './components/ScrollToTop';
+// import ScrollToTop from './components/ScrollToTop';
 
+import './sass/index.scss';
 import './sass/App.scss';
 import './scripts/orion';
 
@@ -61,7 +62,7 @@ function App() {
         </label>
 
         <Router>
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
           <SideNav />
           <Switch>
             <Redirect exact from="/" to="colors" />

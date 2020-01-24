@@ -1,10 +1,9 @@
-// Orion tokens
-@import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
-
-// Auro tokens
+// Auro Support
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
-
+// Orion support
+@import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+
 
 .main-wrapper {
   @include auro_breakpoint--md {

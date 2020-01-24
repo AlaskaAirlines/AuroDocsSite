@@ -5,7 +5,6 @@ import "@alaskaairux/ods-button/dist/ods-button";
 import "@alaskaairux/ods-inputoptions/dist/ods-inputoptions";
 import Highlight from 'react-highlight';
 import 'highlight.js/styles/github.css';
-import '../sass/App.scss';
 
 function ComplexContent() {
   return (

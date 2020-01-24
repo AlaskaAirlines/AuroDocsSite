@@ -4,7 +4,6 @@ import LinkIcons from '../components/linkIcons';
 import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
 import "@alaskaairux/ods-button";
 import 'highlight.js/styles/github.css';
-import '../sass/App.scss';
 
 import closelg from '@alaskaairux/orion-icons/dist/icons/close-lg_es6.js';
 import chevronright from '@alaskaairux/orion-icons/dist/icons/interface/chevron-right_es6.js';

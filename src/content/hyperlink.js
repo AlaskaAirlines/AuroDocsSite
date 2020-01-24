@@ -3,7 +3,6 @@ import "@alaskaairux/ods-hyperlink";
 import 'highlight.js/styles/github.css';
 import Highlight from 'react-highlight';
 import LinkIcons from '../components/linkIcons';
-import '../sass/App.scss';
 
 class Hyperlink extends Component {
   showVersion() {

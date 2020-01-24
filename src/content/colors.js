@@ -3,7 +3,6 @@ import LinkIcons from '../components/linkIcons';
 import "@alaskaairux/ods-swatch/dist/auro-swatch-list";
 import "@alaskaairux/ods-swatch/dist/auro-tokens-list";
 import "@alaskaairux/ods-swatch/dist/auro-color-avatar";
-import '../sass/App.scss';
 import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSData--color.js'
 import header from '../assets/color/header.png';
 import windows from '../assets/color/windows.png';

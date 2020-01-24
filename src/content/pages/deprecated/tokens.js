@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import LinkIcons from '../../../components/linkIcons';
 import deprecated from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--deprecated.js';
 import "@alaskaairux/ods-swatch/dist/auro-tokens-list";
-import '../../../sass/App.scss';
 
 class DeprecatedTokens extends Component {
 
