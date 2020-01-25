@@ -33,7 +33,8 @@ import {
   ReactDemoDocs,
   AngularDemoDocs,
   JavascriptDemoDocs,
-  DigitalPersonality
+  DigitalPersonality,
+  AuroHyperlinkDocs
 } from './content/docs';
 
 
@@ -43,8 +44,6 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-
-// import ScrollToTop from './components/ScrollToTop';
 
 import './sass/index.scss';
 import './sass/App.scss';
@@ -62,7 +61,6 @@ function App() {
         </label>
 
         <Router>
-          {/* <ScrollToTop /> */}
           <SideNav />
           <Switch>
             <Redirect exact from="/" to="colors" />
@@ -73,6 +71,7 @@ function App() {
             <Route path="/icons"><Icons /></Route>
             <Route path="/hyperlink"><Hyperlink /></Route>
             <Route path="/auro-hyperlink"><AuroHyperlink /></Route>
+            <Route path="/auroHyperlinkDocs"><AuroHyperlinkDocs /></Route>
             <Route path="/button"><Button /></Route>
             <Route path="/options"><Options /></Route>
             <Route path="/toast"><Toast /></Route>

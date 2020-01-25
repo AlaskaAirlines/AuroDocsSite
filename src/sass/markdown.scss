@@ -6,12 +6,13 @@
 // accessibility
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/focusVisible";
 
-// Auro typography
+// Auro typography and spacing
 $prefix: true;
 $paragraph: true;
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/essentials";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/fontStyles";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/headings";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/layoutPropertiesGenerator";
 $prefix: null;
 
 .ods-markdown {
@@ -65,18 +66,25 @@ $prefix: null;
 
   h1 {
     @extend .auro_heading--display;
+    @extend .auro_util_marginBottom--xl;
   }
 
   h2 {
     @extend .auro_heading--700;
+    @extend .auro_util_marginBottom--md;
+    @extend .auro_util_marginTop--xl;
   }
 
   h3 {
     @extend .auro_heading--600;
+    @extend .auro_util_marginBottom--md;
+    @extend .auro_util_marginTop--xl;
   }
 
   h4 {
     @extend .auro_heading--500;
+    @extend .auro_util_marginBottom--md;
+    @extend .auro_util_marginTop--xl;
   }
 
   a {
@@ -100,7 +108,6 @@ $prefix: null;
 
   table {
     overflow: scroll;
-    display: block;
     width: auto;
     border-spacing: 5px;
     margin-bottom: var(--size-scale-xl);
@@ -110,10 +117,22 @@ $prefix: null;
         background-color: $color-base-cloud;
       }
     }
+
+    th {
+      text-align: left;
+    }
+
+    @include auro_breakpoint--sm {
+      width: 100%;
+    }
   }
 
-  table, th, td {
-    border: 1px solid $color-base-fog;
+  table {
+    border-collapse: collapse;
+  }
+
+  thead {
+    border-bottom: 1px solid $color-base-fog;
     border-collapse: collapse;
   }
 

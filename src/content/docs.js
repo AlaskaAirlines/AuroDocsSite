@@ -24,6 +24,12 @@ export class JavascriptDemoDocs extends ExternalMarkdownWrapper {
   readme = "README.md"
 }
 
+export class AuroHyperlinkDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink"
+  codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink/tree/master/src"
+  readme = "README.md"
+}
+
 export class DigitalPersonality extends InternalMarkdownWrapper {
   readme = DigitalPersonalityPage
 }
