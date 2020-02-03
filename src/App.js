@@ -1,6 +1,8 @@
 import React from 'react';
+
 import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
 import '@alaskaairux/orion-design-tokens/dist/tokens/CSSCustomProperties.css';
+
 import DeprecatedTokens from './content/pages/deprecated/tokens';
 import DesignTokens from './content/pages/designTokens/tokens';
 import Typography from './content/typography';
@@ -45,8 +47,11 @@ import {
   Redirect
 } from "react-router-dom";
 
+import ScrollToTop from './components/ScrollToTop';
+
 import './sass/index.scss';
 import './sass/App.scss';
+
 import './scripts/orion';
 
 function App() {
@@ -61,6 +66,7 @@ function App() {
         </label>
 
         <Router>
+          <ScrollToTop />
           <SideNav />
           <Switch>
             <Redirect exact from="/" to="colors" />

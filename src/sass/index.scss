@@ -1,10 +1,15 @@
+/* index.scss */
+
 // Orion tokens
+/* ------------------------ orion tokens ------------------------ */
 @import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
 
 // Auro tokens
+/* auro tokens */
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
 
 // OWCSS imports
+/* ------------------------ OWCSS imports ------------------------ */
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/baseline";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/fonts";
@@ -13,6 +18,7 @@
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/layoutProperties";
 
 // Auro typography
+/* ------------------------ Auro typography ------------------------ */
 $prefix: true;
 $paragraph: true;
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/essentials";
@@ -21,6 +27,7 @@ $paragraph: true;
 $prefix: null;
 
 // Auro Selector generators
+/* ------------------------ Auro Selector generators ------------------------ */
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/_layoutPropertiesGenerator";
 
 $auro-spacing-types: stack;
