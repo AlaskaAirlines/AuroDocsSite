@@ -1,12 +1,17 @@
 // Auro Support
 /* ------------------------ Auro Support ------------------------ */
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
+
 // Orion support
 /* ------------------------ Orion Support ------------------------ */
 @import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/animation";
 
+
+$prefix: true;
+$paragraph: true;
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/essentials";
 
 .main-wrapper {
   @include auro_breakpoint--md {
@@ -252,8 +257,10 @@ auro-tokens-list {
   padding-bottom: 200px;
   top: 80px;
 
-  .auro_hyperlink {
+  a {
+    @extend .auro_hyperlink;
     margin-bottom: $size-scale-micro;
+    display: block;
 
     &:last-child {
       margin-bottom: 0;
