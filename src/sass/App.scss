@@ -81,6 +81,13 @@ pre {
   background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
 }
 
+.exampleWrapper--ondark {
+  $stripe: $auro-color-background-lighter;
+  $background: $color-base-white;
+
+  background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
+}
+
 .exampleWrapper--deprecated {
   $stripe: $auro-color-alert-advisory-on-light;
   $background: $color-base-white;
