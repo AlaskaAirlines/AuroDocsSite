@@ -8,6 +8,7 @@ import DesignTokens from './content/pages/designTokens/tokens';
 import Typography from './content/typography';
 import Hyperlink from './content/hyperlink';
 import AuroHyperlink from './content/auro-hyperlink';
+import AuroButton from './content/auro-button';
 import Options from './content/options';
 import Colors from './content/colors';
 import Icons from './content/icons';
@@ -78,6 +79,7 @@ function App() {
             <Route path="/hyperlink"><Hyperlink /></Route>
             <Route path="/auro-hyperlink"><AuroHyperlink /></Route>
             <Route path="/auroHyperlinkDocs"><AuroHyperlinkDocs /></Route>
+            <Route path="/auro-button"><AuroButton /></Route>
             <Route path="/button"><Button /></Route>
             <Route path="/options"><Options /></Route>
             <Route path="/toast"><Toast /></Route>

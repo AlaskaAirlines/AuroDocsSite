@@ -40,6 +40,10 @@ export default function SideNav(props) {
         {
           title: "└ docs",
           route: '/auroHyperlinkDocs'
+        },
+        {
+          title: "Button",
+          route: '/auro-button'
         }
       ]
     },

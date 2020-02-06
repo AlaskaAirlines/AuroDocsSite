@@ -82,8 +82,8 @@ pre {
 }
 
 .exampleWrapper--ondark {
-  $stripe: $auro-color-background-lighter;
-  $background: $color-base-white;
+  $stripe: $auro-color-background-darkest;
+  $background: $auro-color-background-darker;
 
   background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
 }
@@ -265,7 +265,6 @@ auro-tokens-list {
   top: 80px;
 
   a {
-    @extend .auro_hyperlink;
     margin-bottom: $size-scale-micro;
     display: block;
 
