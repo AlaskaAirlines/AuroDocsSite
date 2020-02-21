@@ -37,7 +37,8 @@ import {
   AngularDemoDocs,
   JavascriptDemoDocs,
   DigitalPersonality,
-  AuroHyperlinkDocs
+  AuroHyperlinkDocs,
+  AuroButtonDocs
 } from './content/docs';
 
 
@@ -79,6 +80,7 @@ function App() {
             <Route path="/hyperlink"><Hyperlink /></Route>
             <Route path="/auro-hyperlink"><AuroHyperlink /></Route>
             <Route path="/auroHyperlinkDocs"><AuroHyperlinkDocs /></Route>
+            <Route path="/auroButtonDocs"><AuroButtonDocs /></Route>
             <Route path="/auro-button"><AuroButton /></Route>
             <Route path="/button"><Button /></Route>
             <Route path="/options"><Options /></Route>

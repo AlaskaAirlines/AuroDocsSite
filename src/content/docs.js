@@ -30,6 +30,12 @@ export class AuroHyperlinkDocs extends ExternalMarkdownWrapper {
   readme = "README.md"
 }
 
+export class AuroButtonDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
+  codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/tree/master/src"
+  readme = "README.md"
+}
+
 export class DigitalPersonality extends InternalMarkdownWrapper {
   readme = DigitalPersonalityPage
 }
