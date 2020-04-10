@@ -59,13 +59,13 @@ stages:
     steps:
       - download: current
         artifact: site
-      - task: Npm@1
-        displayName: 'npm install serve'
-        inputs:
-          command: custom
-          workingDir: '$(System.DefaultWorkingDirectory)'
-          verbose: false
-          customCommand: 'install -g serve'
+      # - task: Npm@1
+      #   displayName: 'npm install serve'
+      #   inputs:
+      #     command: custom
+      #     workingDir: '$(System.DefaultWorkingDirectory)'
+      #     verbose: false
+      #     customCommand: 'install -g serve'
       - task: AzureRmWebAppDeployment@4
         displayName: 'Azure App Service Deploy: Orion Site'
         inputs:
