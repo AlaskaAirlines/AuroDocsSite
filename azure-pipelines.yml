@@ -25,30 +25,30 @@ stages:
     - task: Npm@1
       displayName: 'npm install'
       inputs:
-        workingDir: '$(System.DefaultWorkingDirectory)/_auro-docsite'
+        workingDir: '$(System.DefaultWorkingDirectory)'
         verbose: false
     - task: Npm@1
-      displayName: 'npm copy font files'
+      displayName: 'npm rebuildSass'
       inputs:
         command: custom
-        workingDir: '$(System.DefaultWorkingDirectory)/_auro-docsite'
+        workingDir: '$(System.DefaultWorkingDirectory)'
         verbose: false
-        customCommand: 'run copyfiles'
+        customCommand: 'run rebuildSass'
     - task: Npm@1
       displayName: 'npm buildIcons'
       inputs:
         command: custom
-        workingDir: '$(System.DefaultWorkingDirectory)/_auro-docsite'
+        workingDir: '$(System.DefaultWorkingDirectory)'
         verbose: false
         customCommand: 'run buildIcons'
     - task: Npm@1
       displayName: 'npm build'
       inputs:
         command: custom
-        workingDir: '$(System.DefaultWorkingDirectory)/_auro-docsite'
+        workingDir: '$(System.DefaultWorkingDirectory)'
         verbose: false
         customCommand: 'run build'
-    - publish: '$(System.DefaultWorkingDirectory)/_auro-docsite'
+    - publish: '$(System.DefaultWorkingDirectory)'
       artifact: site
 - stage: DeployToTest
   condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
