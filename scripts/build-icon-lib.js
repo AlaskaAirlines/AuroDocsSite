@@ -76,7 +76,7 @@ const buildElements = (sortedIcons) => {
 
 const getCategory = (iconPath) => {
   const iconAndDist = iconPath.split('dist/icons/')[1];
-  let category = "Deprecated";
+  let category = "Legacy";
 
   if(iconAndDist.includes('/')) category = iconAndDist.split('/')[0];
 
@@ -86,7 +86,7 @@ const getCategory = (iconPath) => {
 
 (async () => {
     const icons = [];
-    for await (const f of getFiles('./node_modules/@alaskaairux/orion-icons/dist/icons')) {
+    for await (const f of getFiles('./node_modules/@alaskaairux/icons/dist/icons')) {
       if(f.includes('.svg')) icons.push(f.split('node_modules/')[1]);
     }
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import LinkIcons from '../components/linkIcons';
-import '@alaskaairux/orion-icons/dist/tokens/CSSTokenProperties.css';
+import '@alaskaairux/icons/dist/tokens/CSSTokenProperties.css';
 import '../sass/icons.scss';
 import icons from '../assets/icons/icons.png';
 
@@ -11,8 +11,8 @@ class Icons extends Component {
 
   showVersion() {
     const pjson = require('../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/orion-icons'];
-    return `@alaskaairux/orion-icons: ${dependencies}`;
+    const dependencies = pjson.dependencies['@alaskaairux/icons'];
+    return `@alaskaairux/icons: ${dependencies}`;
   };
 
   render() {
@@ -21,9 +21,9 @@ class Icons extends Component {
         <h1 className="auro_heading auro_heading--display">Icons</h1>
         <img className="util_stackMarginSm--bottom" src={icons} alt="page header" />
         <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionIcons"
-          npm="https://www.npmjs.com/package/@alaskaairux/orion-icons"
-          code="https://github.com/AlaskaAirlines/OrionIcons/tree/master/src/icons"
+          github="https://github.com/AlaskaAirlines/Icons"
+          npm="https://www.npmjs.com/package/@alaskaairux/icons"
+          code="https://github.com/AlaskaAirlines/Icons/tree/master/src/icons"
           version={this.showVersion()}
         />
 
