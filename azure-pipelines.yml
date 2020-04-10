@@ -59,6 +59,13 @@ stages:
     steps:
       - download: current
         artifact: site
+      - task: Npm@1
+        displayName: 'npm install serve'
+        inputs:
+          command: custom
+          workingDir: '$(System.DefaultWorkingDirectory)'
+          verbose: false
+          customCommand: 'install -g serve'
       - task: AzureRmWebAppDeployment@4
         displayName: 'Azure App Service Deploy: Orion Site'
         inputs:
@@ -67,4 +74,4 @@ stages:
           WebAppName: 'auro-test-site-w2'
           packageForLinux: '$(Pipeline.Workspace)/site'
           RuntimeStack: 'NODE|12-lts'
-          StartupCommand: 'node node_modules/react-scripts/scripts/start.js'
+          StartupCommand: 'serve -s build'
