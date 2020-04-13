@@ -92,7 +92,7 @@ stages:
             inputs:
               azureSubscription: 'aurodesignsystem-qa-group-SPN'
               appType: webAppLinux
-              WebAppName: 'auro-test-site-w2'
+              WebAppName: 'auro-qa-site-w2'
               packageForLinux: '$(Pipeline.Workspace)/site'
               RuntimeStack: 'NODE|12-lts'
               StartupCommand: 'pm2 serve /home/site/wwwroot --no-daemon'
@@ -115,7 +115,7 @@ stages:
             inputs:
               azureSubscription: 'aurodesignsystem-prod-group-SPN'
               appType: webAppLinux
-              WebAppName: 'auro-test-site-w2'
+              WebAppName: 'auro-prod-site-w2'
               packageForLinux: '$(Pipeline.Workspace)/site'
               RuntimeStack: 'NODE|12-lts'
               StartupCommand: 'pm2 serve /home/site/wwwroot --no-daemon'
