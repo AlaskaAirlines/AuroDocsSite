@@ -48,7 +48,7 @@ stages:
         workingDir: '$(System.DefaultWorkingDirectory)'
         verbose: false
         customCommand: 'run build'
-    - publish: '$(System.DefaultWorkingDirectory)'
+    - publish: '$(System.DefaultWorkingDirectory)/build'
       artifact: site
 - stage: DeployToTest
   condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
@@ -59,13 +59,6 @@ stages:
     steps:
       - download: current
         artifact: site
-      # - task: Npm@1
-      #   displayName: 'npm install serve'
-      #   inputs:
-      #     command: custom
-      #     workingDir: '$(System.DefaultWorkingDirectory)'
-      #     verbose: false
-      #     customCommand: 'install -g serve'
       - task: AzureRmWebAppDeployment@4
         displayName: 'Azure App Service Deploy: Orion Site'
         inputs:
@@ -74,4 +67,5 @@ stages:
           WebAppName: 'auro-test-site-w2'
           packageForLinux: '$(Pipeline.Workspace)/site'
           RuntimeStack: 'NODE|12-lts'
-          StartupCommand: 'serve -s build'
+          #StartupCommand: 'node node_modules/react-scripts/scripts/start.js'
+          StartupCommand: 'pm2 serve /home/site/wwwroot --no-daemon'
