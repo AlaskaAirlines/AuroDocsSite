@@ -13,6 +13,10 @@ $prefix: true;
 $paragraph: true;
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/essentials";
 
+body {
+  background-color: var(--auro-color-background-lightest);
+}
+
 .main-wrapper {
   @include auro_breakpoint--md {
     max-width: $size-width-max;
