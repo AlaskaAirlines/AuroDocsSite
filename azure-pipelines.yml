@@ -72,7 +72,7 @@ stages:
               WebAppName: 'auro-test-site-w2'
               packageForLinux: '$(Pipeline.Workspace)/site'
               RuntimeStack: 'NODE|12-lts'
-              StartupCommand: 'pm2 serve /home/site/wwwroot --no-daemon'
+              StartupCommand: 'pm2 serve /home/site/wwwroot --spa --no-daemon'
 - stage: DeployToQA
   condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
   jobs:
@@ -95,7 +95,7 @@ stages:
               WebAppName: 'auro-qa-site-w2'
               packageForLinux: '$(Pipeline.Workspace)/site'
               RuntimeStack: 'NODE|12-lts'
-              StartupCommand: 'pm2 serve /home/site/wwwroot --no-daemon'
+              StartupCommand: 'pm2 serve /home/site/wwwroot --spa --no-daemon'
 - stage: DeployToProd
   condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
   jobs:
@@ -118,4 +118,4 @@ stages:
               WebAppName: 'auro-prod-site-w2'
               packageForLinux: '$(Pipeline.Workspace)/site'
               RuntimeStack: 'NODE|12-lts'
-              StartupCommand: 'pm2 serve /home/site/wwwroot --no-daemon'
+              StartupCommand: 'pm2 serve /home/site/wwwroot --spa --no-daemon'
