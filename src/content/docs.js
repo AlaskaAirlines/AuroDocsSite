@@ -56,10 +56,6 @@ export class BrowsersSupportDocs extends Docs {
   readme = "src/BROWSER_SUPPORT.md"
 }
 
-export class CallbackDocs extends Docs {
-  readme = "src/CALLBACK.md"
-}
-
 export class ContributingDocs extends Docs {
   readme = "src/CONTRIBUTING.md"
 }

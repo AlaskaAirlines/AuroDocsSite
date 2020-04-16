@@ -95,7 +95,6 @@ export default function SideNav(props) {
         { title: "Alt Build", route: "/AltBuildDocs" },
         { title: "Babel Support", route: "/BabelSupportDocs" },
         { title: "Browsers Support", route: "/BrowsersSupportDocs" },
-        { title: "Callback", route: "/callbackdocs" },
         { title: "Contributing", route: "/ContributingDocs" },
         { title: "Custom Properties", route: "/CustomPropertiesDocs" },
         { title: "Focus Visible", route: "/FocusVisibleDocs" },

@@ -25,7 +25,6 @@ import {
   AltBuildDocs,
   BabelSupportDocs,
   BrowsersSupportDocs,
-  CallbackDocs,
   ContributingDocs,
   CustomPropertiesDocs,
   FocusVisibleDocs,
@@ -92,7 +91,6 @@ function App() {
             <Route path="/AltBuildDocs"><AltBuildDocs /></Route>
             <Route path="/BabelSupportDocs"><BabelSupportDocs /></Route>
             <Route path="/BrowsersSupportDocs"><BrowsersSupportDocs /></Route>
-            <Route path="/CallbackDocs"><CallbackDocs /></Route>
             <Route path="/ContributingDocs"><ContributingDocs /></Route>
             <Route path="/CustomPropertiesDocs"><CustomPropertiesDocs /></Route>
             <Route path="/FocusVisibleDocs"><FocusVisibleDocs /></Route>
