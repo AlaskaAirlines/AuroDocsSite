@@ -1,9 +1,5 @@
 /* index.scss */
 
-// Orion tokens
-/* ------------------------ orion tokens ------------------------ */
-@import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
-
 // Auro tokens
 /* auro tokens */
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
@@ -11,7 +7,6 @@
 // OWCSS imports
 /* ------------------------ OWCSS imports ------------------------ */
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
-@import "~@alaskaairux/orion-web-core-style-sheets/dist/baseline";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/fonts";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/componentSupport/tablist";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/componentSupport/containedButtons";

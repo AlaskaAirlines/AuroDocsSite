@@ -46,7 +46,7 @@ class Buttons extends Component {
           code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/ods-button.js"
           version={this.showVersion()}
         />
-        <h1 className="heading heading--max">Buttons</h1>
+        <h1 className="auro_heading auro_heading--display">ODS Buttons</h1>
 
         <section className="ods-markdown">
           <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>

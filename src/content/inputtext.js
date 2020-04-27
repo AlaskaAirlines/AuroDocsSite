@@ -22,7 +22,7 @@ class InputText extends Component {
           code="https://github.com/AlaskaAirlines/ods-inputtext/blob/master/src/ods-inputtext.js"
           version={this.showVersion()}
         />
-        <h1 className="heading heading--max">InputText</h1>
+        <h1 className="auro_heading auro_heading--display">ODS InputText</h1>
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>InputText provides users a way to enter data into a form. The following examples illustrate common inputtext uses followed up by code examples.</p>

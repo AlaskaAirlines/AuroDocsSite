@@ -22,7 +22,7 @@ class Toast extends Component {
           code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-toast/blob/master/src/ods-toast.js"
           version={this.showVersion()}
         />
-        <h1 className="heading heading--max">Toast</h1>
+        <h1 className="auro_heading auro_heading--display">ODS Toast</h1>
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>A Toast serves as a feedback and confirmation interaction feedback after a user has taken action within an interface.</p>

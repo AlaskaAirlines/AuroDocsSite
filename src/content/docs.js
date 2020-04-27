@@ -3,11 +3,20 @@
 import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from './markdown-wrapper';
 
 // Import local markdown docs
-import DigitalPersonalityPage from './pages/digitalPersonality/digital-personality.md';
+import ColorDesignGuidlinesPage from './pages/colors/designGuidlines/index.md';
+import GettingStartedDevsPage from './pages/gettingStarted/developers/index.md';
 import PhilosophyPage from './pages/philosophy/philosophy.md';
+import IconsDesignPage from './pages/iconsDesign/index.md';
 
-export class DigitalPersonality extends InternalMarkdownWrapper {
-  readme = DigitalPersonalityPage
+export class ColorDesignGuidlines extends InternalMarkdownWrapper {
+  readme = ColorDesignGuidlinesPage
+}
+
+export class GettingStartedDevs extends InternalMarkdownWrapper {
+  readme = GettingStartedDevsPage
+}
+export class IconsDesign extends InternalMarkdownWrapper {
+  readme = IconsDesignPage
 }
 
 export class Philosophy extends InternalMarkdownWrapper {
@@ -22,10 +31,6 @@ class Docs extends ExternalMarkdownWrapper {
 
 export class A11yDocs extends Docs {
   readme = "src/A11Y.md"
-}
-
-export class AltBuildDocs extends Docs {
-  readme = "src/ALT_BUILD.md"
 }
 
 export class BabelSupportDocs extends Docs {
@@ -62,6 +67,10 @@ export class TechDetailsDocs extends Docs {
 
 export class TestsDocs extends Docs {
   readme = "src/TESTS.md"
+}
+
+export class ComponentsDocs extends Docs {
+  readme = "src/COMPONENTS.md"
 }
 
 

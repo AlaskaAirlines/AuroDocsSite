@@ -46,7 +46,7 @@ class Options extends Component {
           code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-inputoptions/blob/master/src/ods-ods-inputoptions.js"
           version={this.showVersion()}
         />
-        <h1 className="heading heading--max">Input Options</h1>
+        <h1 className="auro_heading auro_heading--display">ODS Input Options</h1>
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>The Orion Design System fully supports a wide range of options types and styles. The following examples illustrate common input option uses followed up by code examples.</p>

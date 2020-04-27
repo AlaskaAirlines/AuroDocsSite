@@ -30,7 +30,14 @@ class DeprecatedTokens extends Component {
           code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
           version={this.showVersion()}
         />
-        <p className="auro_baseParagraph">The following is a list of all non-color or non-type based Auro tokens</p>
+        <p>Design tokens represent the design decisions needed to construct and maintain a design system — spacing, color, typography, animation, etc. — represented as data.  These can represent anything defined by design: color as an RGB value, and opacity as a number, animation ease, etc.</p>
+        <p>Note that design tokens:</p>
+        <ul>
+          <li>May not have a long lifespan</li>
+          <li>May alter the value more frequently</li>
+          <li>May be used for a wide variety of purposes</li>
+        </ul>
+        <p className="auro_baseParagraph">Please see <auro-hyperlink relative href="/colors">Colors</auro-hyperlink> or <auro-hyperlink relative href="/typography">Typography</auro-hyperlink> for their individual sets of tokens.</p>
         <h3 className="auro_heading auro_heading--600">Animation</h3>
         <auro-tokens-list componentData={_getTokens(animation, [])}></auro-tokens-list>
 
