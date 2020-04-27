@@ -66,6 +66,9 @@ export default function SideNav(props) {
         },{
           title: "Toast",
           route: "/toast"
+        },{
+          title: "InputText",
+          route: "/inputtext"
         }
       ]
     },

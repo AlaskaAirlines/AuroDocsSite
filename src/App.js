@@ -15,6 +15,7 @@ import Icons from './content/icons';
 import ComplexContent from './content/complexContent';
 import Button from './content/button';
 import Toast from './content/toast';
+import InputText from './content/inputtext';
 import Generator from './content/generator';
 import Footer from './components/footer';
 import Header from './components/header';
@@ -84,6 +85,7 @@ function App() {
             <Route path="/button"><Button /></Route>
             <Route path="/options"><Options /></Route>
             <Route path="/toast"><Toast /></Route>
+            <Route path="/inputtext"><InputText /></Route>
             <Route path="/complexcontent"><ComplexContent /></Route>
             <Route path="/generator"><Generator /></Route>
             <Route path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
