@@ -6,7 +6,7 @@ Our digital brand colors are complemented by an additional set of colors informe
 
 Complementary colors provide us with greater range and flexibility to scale our brand. Complementary color usage can vary depending on need, but they should be considered when you want a conversational tone in an interaction.
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/369435460" width="640" height="384" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe title="vimeo-player" src="https://player.vimeo.com/video/369435460" width="640" height="384" frameborder="0" allowfullscreen></iframe> -->
 
 ## Color in action
 

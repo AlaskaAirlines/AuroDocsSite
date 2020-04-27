@@ -43,16 +43,15 @@ class AuroButtons extends Component {
         />
         <h1 className="auro_heading auro_heading--display">Auro Button</h1>
 
-        <section className="ods-markdown">
-          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
-        </section>
+        <p>The Auro Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
+        <p>See <auro-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>auro-button</code> Auro base element.</p>
+        <p>Illustrated in this example is a stand-alone use of <code>auro-button</code>.</p>
 
-        <div className="indention util_fontWeightLight util_type--secondary">
-          <p>The Auro Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
-          <p>See <auro-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>auro-button</code> Auro base element.</p>
-          <p>Illustrated in this example is a stand-alone use of <code>auro-button</code>.</p>
-        </div>
-
+        <Highlight className='install'>
+          {
+`$npm i @alaskaairux/ods-button
+import "@alaskaairux/ods-button/dist/auro-button";`}
+        </Highlight>
 
         <h2 className="auro_heading auro_heading--700">Auro Button - Default States</h2>
 
@@ -119,6 +118,10 @@ class AuroButtons extends Component {
         <Highlight className='html afterCode'>
           {`<auro-button tertiary ondark>Tertiary</auro-button>`}
         </Highlight>
+
+        <section className="ods-markdown">
+          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
+        </section>
       </section>
     );
   }

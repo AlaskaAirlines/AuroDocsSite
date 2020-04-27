@@ -1,43 +1,23 @@
+
+// Import primary markdown tools
 import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from './markdown-wrapper';
+
+// Import local markdown docs
 import DigitalPersonalityPage from './pages/digitalPersonality/digital-personality.md';
-
-class Docs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs"
-  codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/tree/master/src"
-}
-
-export class ReactDemoDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/OrionReactDemo"
-  codeURL = "https://github.com/AlaskaAirlines/OrionReactDemo/tree/master/src"
-  readme = "README.md"
-}
-
-export class AngularDemoDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/OrionAngularDemo"
-  codeURL = "https://github.com/AlaskaAirlines/OrionAngularDemo/tree/master/src"
-  readme = "README.md"
-}
-
-export class JavascriptDemoDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo"
-  codeURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo/tree/master/src"
-  readme = "README.md"
-}
-
-export class AuroHyperlinkDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink"
-  codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink/tree/master/src"
-  readme = "README.md"
-}
-
-export class AuroButtonDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
-  codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/tree/master/src"
-  readme = "README.md"
-}
+import PhilosophyPage from './pages/philosophy/philosophy.md';
 
 export class DigitalPersonality extends InternalMarkdownWrapper {
   readme = DigitalPersonalityPage
+}
+
+export class Philosophy extends InternalMarkdownWrapper {
+  readme = PhilosophyPage
+}
+
+// wrapper for general docs section
+class Docs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs"
+  codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/tree/master/src"
 }
 
 export class A11yDocs extends Docs {
@@ -72,7 +52,7 @@ export class IsTouchingDocs extends Docs {
   readme = "src/IS_TOUCHING.md"
 }
 
-export class PollyfillDocs extends Docs {
+export class PolyfillDocs extends Docs {
   readme = "src/POLYFILL.md"
 }
 
@@ -82,4 +62,36 @@ export class TechDetailsDocs extends Docs {
 
 export class TestsDocs extends Docs {
   readme = "src/TESTS.md"
+}
+
+
+// docs from demo repos
+export class ReactDemoDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/OrionReactDemo"
+  codeURL = "https://github.com/AlaskaAirlines/OrionReactDemo/tree/master/src"
+  readme = "README.md"
+}
+
+export class AngularDemoDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/OrionAngularDemo"
+  codeURL = "https://github.com/AlaskaAirlines/OrionAngularDemo/tree/master/src"
+  readme = "README.md"
+}
+
+export class JavascriptDemoDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo"
+  codeURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo/tree/master/src"
+  readme = "README.md"
+}
+
+export class AuroHyperlinkDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink"
+  codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink/tree/master/src"
+  readme = "README.md"
+}
+
+export class AuroButtonDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
+  codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/tree/master/src"
+  readme = "README.md"
 }

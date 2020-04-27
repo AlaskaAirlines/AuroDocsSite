@@ -7,14 +7,23 @@ export default function SideNav(props) {
 
   const [options, setOptions] = useState([
     {
+      title: "Welcome to Auro",
+      items: [
+        { title: "Philosophy", route: "/philosophy" }
+      ]
+    },
+    {
       title: "Auro Core elements",
       items: [
         {
           title: "Colors and tokens",
           route: "/colors"
+        },
+        {
+          title: "└ Digital Personality", route: "/digitalPersonality"
         },{
           title: "Typography",
-          route: "/Typography"
+          route: "/typography"
         },{
           title: "Icons",
           route: "/icons"
@@ -56,19 +65,19 @@ export default function SideNav(props) {
       items: [
         {
           title: "Button",
-          route: '/button'
+          route: '/ods-button'
         },{
           title: "Hyperlink",
-          route: '/hyperlink'
+          route: '/ods-hyperlink'
         },{
           title: "Input Options",
-          route: "/options"
+          route: "/ods-options"
         },{
           title: "Toast",
-          route: "/toast"
+          route: "/ods-toast"
         },{
           title: "InputText",
-          route: "/inputtext"
+          route: "/ods-inputtext"
         }
       ]
     },
@@ -77,13 +86,13 @@ export default function SideNav(props) {
       items: [
         {
           title: "React Setup",
-          route: "/ReactSetup"
+          route: "/reactSetup"
         },{
           title: "Angular Setup",
-          route: "/AngularSetup"
+          route: "/angularSetup"
         },{
           title: "Javascript Setup",
-          route: "/JavascriptSetup"
+          route: "/javascriptSetup"
         },{
           title: "WC Generator",
           route: "/generator"
@@ -93,18 +102,17 @@ export default function SideNav(props) {
     {
       title: "All the docs",
       items: [
-        { title: "Digital Personality", route: "/DigitalPersonality" },
-        { title: "A11y", route: "/A11yDocs" },
-        { title: "Alt Build", route: "/AltBuildDocs" },
-        { title: "Babel Support", route: "/BabelSupportDocs" },
-        { title: "Browsers Support", route: "/BrowsersSupportDocs" },
-        { title: "Contributing", route: "/ContributingDocs" },
-        { title: "Custom Properties", route: "/CustomPropertiesDocs" },
-        { title: "Focus Visible", route: "/FocusVisibleDocs" },
-        { title: "Is Touching", route: "/IsTouchingDocs" },
-        { title: "Pollyfill", route: "/PollyfillDocs" },
-        { title: "Tech Details", route: "/TechDetailsDocs" },
-        { title: "Tests", route: "/TestsDocs" },
+        { title: "A11y", route: "/a11yDocs" },
+        { title: "Alt Build", route: "/altBuildDocs" },
+        { title: "Babel Support", route: "/babelSupportDocs" },
+        { title: "Browsers Support", route: "/browsersSupportDocs" },
+        { title: "Contributing", route: "/contributingDocs" },
+        { title: "Custom Properties", route: "/customPropertiesDocs" },
+        { title: "Focus Visible", route: "/focusVisibleDocs" },
+        { title: "Is Touching", route: "/isTouchingDocs" },
+        { title: "Polyfill", route: "/polyfillDocs" },
+        { title: "Tech Details", route: "/techDetailsDocs" },
+        { title: "Tests", route: "/testsDocs" },
       ]
     }
   ]);

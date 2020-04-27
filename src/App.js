@@ -30,12 +30,13 @@ import {
   CustomPropertiesDocs,
   FocusVisibleDocs,
   IsTouchingDocs,
-  PollyfillDocs,
+  PolyfillDocs,
   TechDetailsDocs,
   TestsDocs,
   ReactDemoDocs,
   AngularDemoDocs,
   JavascriptDemoDocs,
+  Philosophy,
   DigitalPersonality,
   AuroHyperlinkDocs,
   AuroButtonDocs
@@ -71,40 +72,40 @@ function App() {
           <ScrollToTop />
           <SideNav />
           <Switch>
-            <Redirect exact from="/" to="colors" />
-            <Route path="/deprecated/tokens"><DeprecatedTokens /></Route>
-            <Route path="/designTokens/tokens"><DesignTokens /></Route>
-            <Route path="/colors"><Colors /></Route>
-            <Route path="/typography"><Typography /></Route>
-            <Route path="/icons"><Icons /></Route>
-            <Route path="/hyperlink"><Hyperlink /></Route>
+            <Redirect exact from="/" to="Philosophy" />
+            <Route path="/a11yDocs"><A11yDocs /></Route>
+            <Route path="/altBuildDocs"><AltBuildDocs /></Route>
+            <Route path="/angularSetup"><AngularDemoDocs /></Route>
+            <Route path="/auro-button"><AuroButton /></Route>
+            <Route path="/auroButtonDocs"><AuroButtonDocs /></Route>
             <Route path="/auro-hyperlink"><AuroHyperlink /></Route>
             <Route path="/auroHyperlinkDocs"><AuroHyperlinkDocs /></Route>
-            <Route path="/auroButtonDocs"><AuroButtonDocs /></Route>
-            <Route path="/auro-button"><AuroButton /></Route>
-            <Route path="/button"><Button /></Route>
-            <Route path="/options"><Options /></Route>
-            <Route path="/toast"><Toast /></Route>
-            <Route path="/inputtext"><InputText /></Route>
+            <Route path="/babelSupportDocs"><BabelSupportDocs /></Route>
+            <Route path="/browsersSupportDocs"><BrowsersSupportDocs /></Route>
+            <Route path="/ods-button"><Button /></Route>
+            <Route path="/colors"><Colors /></Route>
             <Route path="/complexcontent"><ComplexContent /></Route>
+            <Route path="/contributingDocs"><ContributingDocs /></Route>
+            <Route path="/customPropertiesDocs"><CustomPropertiesDocs /></Route>
+            <Route path="/designTokens/tokens"><DesignTokens /></Route>
+            <Route path="/deprecated/tokens"><DeprecatedTokens /></Route>
+            <Route path="/digitalPersonality"><DigitalPersonality /></Route>
+            <Route path="/focusVisibleDocs"><FocusVisibleDocs /></Route>
             <Route path="/generator"><Generator /></Route>
+            <Route path="/hyperlink"><Hyperlink /></Route>
+            <Route path="/icons"><Icons /></Route>
+            <Route path="/ods-inputtext"><InputText /></Route>
+            <Route path="/isTouchingDocs"><IsTouchingDocs /></Route>
+            <Route path="/javascriptSetup"><JavascriptDemoDocs /></Route>
+            <Route path="/ods-options"><Options /></Route>
+            <Route path="/polyfillDocs"><PolyfillDocs /></Route>
+            <Route path="/philosophy"><Philosophy /></Route>
+            <Route path="/reactSetup"><ReactDemoDocs /></Route>
+            <Route path="/testsDocs"><TestsDocs /></Route>
+            <Route path="/techDetailsDocs"><TechDetailsDocs /></Route>
+            <Route path="/ods-toast"><Toast /></Route>
+            <Route path="/typography"><Typography /></Route>
             <Route path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
-            <Route path="/A11yDocs"><A11yDocs /></Route>
-            <Route path="/AltBuildDocs"><AltBuildDocs /></Route>
-            <Route path="/BabelSupportDocs"><BabelSupportDocs /></Route>
-            <Route path="/BrowsersSupportDocs"><BrowsersSupportDocs /></Route>
-            <Route path="/ContributingDocs"><ContributingDocs /></Route>
-            <Route path="/CustomPropertiesDocs"><CustomPropertiesDocs /></Route>
-            <Route path="/FocusVisibleDocs"><FocusVisibleDocs /></Route>
-            <Route path="/IsTouchingDocs"><IsTouchingDocs /></Route>
-            <Route path="/PollyfillDocs"><PollyfillDocs /></Route>
-            <Route path="/TechDetailsDocs"><TechDetailsDocs /></Route>
-            <Route path="/TestsDocs"><TestsDocs /></Route>
-            <Route path="/ReactSetup"><ReactDemoDocs /></Route>
-            <Route path="/AngularSetup"><AngularDemoDocs /></Route>
-            <Route path="/JavascriptSetup"><JavascriptDemoDocs /></Route>
-            <Route path="/DigitalPersonality"><DigitalPersonality /></Route>
-            <Route path="/Typography" ><Typography /></Route>
           </Switch>
         </Router>
       </div>
