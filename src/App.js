@@ -1,6 +1,9 @@
 import React from 'react';
 
+// This import is only needed to support legacy Orion Web Components
 import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
+
+// Required for Auro Web Components
 import '@alaskaairux/orion-design-tokens/dist/tokens/CSSCustomProperties.css';
 
 import AuroButton from './content/auro-button';

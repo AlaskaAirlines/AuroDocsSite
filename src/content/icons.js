@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import LinkIcons from '../components/linkIcons';
-import '@alaskaairux/icons/dist/tokens/CSSTokenProperties.css';
-import '../sass/icons.scss';
 import icons from '../assets/icons/icons.png';
 
 import IconList from './iconList';

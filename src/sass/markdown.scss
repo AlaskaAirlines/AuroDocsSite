@@ -21,6 +21,10 @@ $prefix: null;
     min-height: 100%;
   }
 
+  strong {
+    @extend .auro_heading--300;
+  }
+
   img {
     &[alt="NPM"],
     &[alt="npm (scoped)"],
@@ -66,25 +70,25 @@ $prefix: null;
 
   h1 {
     @extend .auro_heading--display;
-    @extend .auro_util_marginBottom--xl;
+    // @extend .auro_util_marginBottom--xl;
   }
 
   h2 {
     @extend .auro_heading--700;
-    @extend .auro_util_marginBottom--md;
-    @extend .auro_util_marginTop--xl;
+    // @extend .auro_util_marginBottom--md;
+    // @extend .auro_util_marginTop--xl;
   }
 
   h3 {
     @extend .auro_heading--600;
-    @extend .auro_util_marginBottom--md;
-    @extend .auro_util_marginTop--xl;
+    // @extend .auro_util_marginBottom--md;
+    // @extend .auro_util_marginTop--xl;
   }
 
   h4 {
     @extend .auro_heading--500;
-    @extend .auro_util_marginBottom--md;
-    @extend .auro_util_marginTop--xl;
+    // @extend .auro_util_marginBottom--md;
+    // @extend .auro_util_marginTop--xl;
   }
 
   a {
@@ -102,19 +106,26 @@ $prefix: null;
 
   pre  {
     overflow: auto;
-    background-color: var(--color-base-cloud);
-    padding: var(--size-scale-lg);
+    background-color: var(--auro-color-background-darkest);
+    padding: var(--auro-size-lg);
+
+    code {
+      color: var(--auro-color-text-primary-on-dark);
+      font-size: .9rem;
+    }
   }
+
+
 
   table {
     overflow: scroll;
     width: auto;
     border-spacing: 5px;
-    margin-bottom: var(--size-scale-xl);
+    margin-bottom: var(--auro-size-xl);
 
     tr {
       &:nth-child(even) {
-        background-color: var(--color-base-cloud);
+        background-color: var(--auro-color-base-gray-100);
       }
     }
 
@@ -132,7 +143,7 @@ $prefix: null;
   }
 
   thead {
-    border-bottom: 1px solid var(--color-base-fog);
+    border-bottom: 1px solid var(--auro-color-base-gray-200);
     border-collapse: collapse;
   }
 
@@ -141,7 +152,7 @@ $prefix: null;
   }
 
   footer {
-    font-size: var(--size-font-breakpoint-all-small);
-    color: var(--color-base-shark);
+    font-size: var(--auro-text-body-size-xs);
+    color: var(--auro-color-base-gray-100);
   }
 }

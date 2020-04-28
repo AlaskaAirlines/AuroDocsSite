@@ -19,12 +19,12 @@ export default function SideNav(props) {
         { title: "Colors", route: "/colors" },
         { title: "└ Design Guidlines", route: "/color/designGuidlines" },
         { title: "└ Digital Personality", route: "/color/digitalPersonality" },
+        { title: "Design tokens", route: "/designTokens/tokens" },
+        { title: "└ Deprecated", route: "/deprecated/tokens" },
         { title: "Typography", route: "/typography" },
         { title: "└ Design Guidlines", route: "/type/designGuidlines" },
         { title: "Icons", route: "/icons" },
         { title: "└ Design Guidlines", route: "/icon/designGuidlines" },
-        { title: "Design tokens", route: "/designTokens/tokens" },
-        { title: "└ Deprecated", route: "/deprecated/tokens" },
         { title: "Layout", route: "/layout" },
         { title: "Grid", route: "/grid" },
         { title: "└ Design Guidlines", route: "/gridDesignGuidlines" },
@@ -83,10 +83,10 @@ export default function SideNav(props) {
     <nav className="sidenav">
       {options.map(s => (
         <Fragment key={s.title}>
-          <p className="heading heading--lg" key={s.title}>{s.title}</p>
+          <p className="auro_heading auro_heading--400" key={s.title}>{s.title}</p>
             {s.items.map(o => (
               <Link key={o.title} to={o.route}
-                className={o.active ? 'auro_hyperlink auro_hyperlink--active auro_hyperlink--nav util_displayBlock' : 'auro_hyperlink auro_hyperlink--nav util_displayBlock'}
+                className={o.active ? 'auro_hyperlink auro_hyperlink--active auro_hyperlink--nav' : 'auro_hyperlink auro_hyperlink--nav'}
                 >
                 <span
                   onClick={() => {

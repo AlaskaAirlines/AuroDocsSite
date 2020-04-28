@@ -33,7 +33,7 @@ body {
   & > section {
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: $size-scale-med;
+    margin-top: var(--auro-size-md);
 
     @include auro_breakpoint--lg {
       margin-left: 260px;
@@ -47,13 +47,13 @@ body {
 }
 
 code {
-  color: $color-base-chili;
+  color: var(--auro-color-brand-canyon-400);
 }
 
 .indention {
-  padding-left: $size-scale-med;
-  border-left: 1px solid $color-base-manatee;
-  margin-bottom: $size-scale-xxl;
+  padding-left: var(--auro-size-md);
+  border-left: 1px solid var(--auro-color-base-neutral-500);
+  margin-bottom: var(--auro-size-xxl);
 
   &--warning {
     border-color: var(--color-background-alert);
@@ -62,15 +62,15 @@ code {
 }
 
 .install {
-  padding: $size-scale-sml 0 $size-scale-sml $size-scale-lg !important;
-  margin-bottom: $size-scale-xxl;
+  padding: var(--auro-size-xs) 0 var(--auro-size-xs) var(--auro-size-lg) !important;
+  margin-bottom: var(--auro-size-xxl);
 }
 
 .html {
   padding: $size-scale-med !important;
 
   @include breakpoint-narrow {
-    padding: $size-scale-lg $size-scale-sml $size-scale-lg $size-scale-lg !important;
+    padding: var(--auro-size-lg) var(--auro-size-xs) var(--auro-size-lg) var(--auro-size-lg) !important;
   }
 }
 
@@ -80,21 +80,21 @@ pre {
 
 .exampleWrapper {
   $stripe: #f3f3f3;
-  $background: $color-base-white;
+  $background: var(--auro-color-base-white);
 
   background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
 }
 
 .exampleWrapper--ondark {
-  $stripe: $auro-color-background-darkest;
-  $background: $auro-color-background-darker;
+  $stripe: var(--auro-color-background-darkest);
+  $background: var(--auro-color-background-darker);
 
   background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
 }
 
 .exampleWrapper--deprecated {
-  $stripe: $auro-color-alert-advisory-on-light;
-  $background: $color-base-white;
+  $stripe: var(--auro-color-alert-advisory-on-light);
+  $background: var(--auro-color-base-white);
 
   background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
 }
@@ -107,32 +107,32 @@ pre {
 }
 
 .afterCode {
-  margin-bottom: $size-scale-max;
+  margin-bottom: var(--auro-size-xxl);
   border-width: 0 1px 1px;
 }
 
 footer {
-  margin: $size-scale-xxl 0;
+  margin: var(--auro-size-xxl) 0;
 }
 
 .dataSelected {
-  $stripe: $color-base-cloud;
-  $background: $color-base-white;
+  $stripe: var(--auro-color-background-lighter);
+  $background: var(--auro-color-base-white);
 
   border-width: 1px 1px 0;
   background: repeating-linear-gradient( 45deg, $stripe, $stripe 5px, $background 5px, $background 10px);
 
-  color: $color-base-shark;
-  line-height: $size-scale-xxl;
+  color: var(--auro-color-background-lighter);
+  line-height: var(--auro-size-xxl);
   padding: 0 10px 0;
 
   span {
-    color: $color-base-chili;
+    color: var(--auro-color-base-crimson-500);
   }
 }
 
 .util_swatchBox {
-  margin-bottom: var(--size-scale-xxl);
+  margin-bottom: var(--auro-size-xxl);
   @include breakpoint-narrow {
     display: flex;
     flex-flow: row wrap;
@@ -146,78 +146,44 @@ ods-swatch {
   overflow: hidden;
 }
 
-// OH HELL NO!
-#icon-list {
-  .icon-category {
-    text-transform: capitalize;
+// icons view
+.iconsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--auro-size-xxl);
+
+  span {
+    position: absolute;
+    font-size: var(--auro-text-body-size-xs);
+    top: 100px;
   }
 
-  .iconsWrapper {
+  div {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: var(--size-scale-xxl);
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--auro-border-radius);
+    background-color: var(--auro-color-base-gray-100);
+    margin: 0 var(--auro-size-xs) var(--auro-size-xs) 0;
 
-    span {
-      position: absolute;
-      font-size: var(--size-font-breakpoint-all-small);
-      top: 100px;
+    &:nth-child(even) {
+      margin-right: 0;
     }
 
-    div {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: var(--size-border-radius-default);
-      background-color: var(--color-base-cloud);
-      margin: 0 var(--size-scale-sml) var(--size-scale-sml) 0;
+    width: calc(50% - var(--auro-size-xxs));
+    height: 125px;
 
+    @include breakpoint-narrow {
+      width: 150px;
       &:nth-child(even) {
-        margin-right: 0;
-      }
-
-      width: calc(50% - var(--size-scale-micro));
-      height: 125px;
-
-      @include breakpoint-narrow {
-        width: 150px;
-        &:nth-child(even) {
-          margin-right: var(--size-scale-sml);
-        }
+        margin-right: var(--auro-size-xs);
       }
     }
   }
 }
 
-auro-swatch-list,
-auro-tokens-list {
-  display: block;
-  overflow: scroll;
-
-  background:
-    linear-gradient(90deg, white 0%, rgba(255,255,255,0)),
-    linear-gradient(-90deg, white 0%, rgba(255,255,255,0)) 100% 0,
-    radial-gradient(
-      farthest-side at 0% 50%,
-      rgba(0,0,0,.2),
-      rgba(0,0,0,0)
-    ),
-    radial-gradient(
-      farthest-side at 100% 50%,
-      rgba(0,0,0,.2),
-      rgba(0,0,0,0)
-    ) 100% 0%;
-  background-repeat: no-repeat;
-  background-color: #fff;
-  background-size: 100px 200%, 100px 100%, 25px 100%, 25px 100%;
-  background-attachment: local, local, scroll, scroll;
-
-  @include auro_breakpoint--lg {
-    overflow: initial;
-    background: initial;
-  }
-}
-
+// Color design token content wrappers
 .avatarWrapper {
   display: block;
   margin-bottom: 2rem;
@@ -275,9 +241,12 @@ auro-tokens-list {
   padding-bottom: 200px;
   top: 80px;
 
+  .auro_heading {
+    margin: var(--auro-size-lg) 0 var(--auro-size-md);
+  }
+
   a {
-    margin-bottom: $size-scale-micro;
-    display: block;
+    margin-bottom: var(--auro-size-xxs);
 
     &:last-child {
       margin-bottom: 0;
@@ -302,7 +271,7 @@ auro-tokens-list {
 
 .auro_hyperlink--active,
 .hyperlink--active {
-  color: $auro-color-text-primary-on-light !important;
+  color: var(--auro-color-text-primary-on-light) !important;
 }
 
 .auro_hyperlink--active.auro_hyperlink--nav:not(.is-touching):hover,
@@ -327,7 +296,7 @@ auro-tokens-list {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: $auro-color-background-lighter;
+    background-color: var(--auro-color-background-lighter);
     box-shadow: 0px 0px 10px #222;
     right: -12px;
     top: -13px;
@@ -365,9 +334,9 @@ auro-tokens-list {
     & ~ .sidenav {
       opacity: 1;
       left: 0;
-      background-color: $auro-color-background-lightest;
+      background-color: var(--auro-color-background-lightest);
       width: 75%;
-      box-shadow: 0px 15px 28px -10px $auro-color-background-darker;
+      box-shadow: 0px 15px 28px -10px var(--auro-color-background-darker);
       margin-left: 0;
       padding-left: 10px;
       top: 80px;

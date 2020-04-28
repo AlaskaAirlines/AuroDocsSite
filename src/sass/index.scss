@@ -1,6 +1,9 @@
 /* index.scss */
 
-// Auro tokens
+// Orion tokens - can be removed when Orion examples are also removed
+/* ------------------------ orion tokens ------------------------ */
+@import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
+
 /* auro tokens */
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
 
@@ -30,3 +33,5 @@ $auro-spacing-options: xl;
 $important: true;
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariableMap";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/spacingUtility";
+
+

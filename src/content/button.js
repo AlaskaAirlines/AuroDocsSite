@@ -8,7 +8,6 @@ import 'highlight.js/styles/github.css';
 import closelg from '@alaskaairux/orion-icons/dist/icons/close-lg_es6.js';
 import chevronright from '@alaskaairux/orion-icons/dist/icons/interface/chevron-right_es6.js';
 import chevronleft from '@alaskaairux/orion-icons/dist/icons/interface/chevron-left_es6.js';
-import stepoutlg from '@alaskaairux/orion-icons/dist/icons/step-out-lg_es6.js';
 
 import ReactMarkdown from 'react-markdown';
 import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
@@ -47,10 +46,6 @@ class Buttons extends Component {
           version={this.showVersion()}
         />
         <h1 className="auro_heading auro_heading--display">ODS Buttons</h1>
-
-        <section className="ods-markdown">
-          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
-        </section>
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>The Orion Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
@@ -277,7 +272,6 @@ class Buttons extends Component {
             <ods-button svgIconLeft={chevronleft.svg}>previous step</ods-button>
             <ods-button svgIconRight={chevronright.svg}>previous step</ods-button>
             <ods-button svgIconLeft={closelg.svg} buttontype="secondary">remove</ods-button>
-            <ods-button svgIconRight={stepoutlg.svg} flowtype="complete">move data</ods-button>
           </div>
         </div>
 
@@ -286,13 +280,11 @@ class Buttons extends Component {
 `import closelg from '@alaskaairux/orion-icons/dist/icons/closelg_es6.js';
 import chevronright from '@alaskaairux/orion-icons/dist/icons/chevronright_es6.js';
 import chevronleft from '@alaskaairux/orion-icons/dist/icons/chevronleft_es6.js';
-import stepoutlg from '@alaskaairux/orion-icons/dist/icons/stepoutlg_es6.js';
 
 <div className="ods-containedButtons">
   <ods-button svgIconLeft={chevronleft.svg}>previous step</ods-button>
   <ods-button svgIconRight={chevronright.svg}>previous step</ods-button>
   <ods-button svgIconLeft={closelg.svg} buttontype="secondary">remove</ods-button>
-  <ods-button svgIconRight={stepoutlg.svg} flowtype="complete">move data</ods-button>
 </div>`
           }
         </Highlight>
@@ -318,6 +310,10 @@ import chevronleft from '@alaskaairux/orion-icons/dist/icons/chevronleft_es6.js'
 </div>`
           }
         </Highlight>
+
+        <section className="ods-markdown">
+          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
+        </section>
       </section>
     );
   }
