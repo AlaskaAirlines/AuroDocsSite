@@ -37,14 +37,20 @@ import {
   ColorDesignGuidlines,
   FocusVisibleDocs,
   GettingStartedDevs,
+  Grid,
+  GridDesignGuidlines,
   IsTouchingDocs,
   IconsDesign,
   JavascriptDemoDocs,
+  Layout,
   Philosophy,
   PolyfillDocs,
   ReactDemoDocs,
+  Spacing,
   TechDetailsDocs,
-  TestsDocs
+  TestsDocs,
+  TypeDesignGuidlines,
+  VoiceTone
 } from './content/docs';
 
 
@@ -104,16 +110,22 @@ function App() {
 
             <Route path="/generator"><Generator /></Route>
             <Route path="/gettingStarted/devs"><GettingStartedDevs /></Route>
+            <Route path="/grid"><Grid /></Route>
+            <Route path="/gridDesignGuidlines"><GridDesignGuidlines /></Route>
             <Route path="/ods-hyperlink"><Hyperlink /></Route>
             <Route path="/icons"><Icons /></Route>
             <Route path="/icon/designGuidlines"><IconsDesign /></Route>
             <Route path="/ods-inputtext"><InputText /></Route>
             <Route path="/javascriptSetup"><JavascriptDemoDocs /></Route>
             <Route path="/ods-options"><Options /></Route>
+            <Route path="/layout"><Layout /></Route>
             <Route path="/philosophy"><Philosophy /></Route>
             <Route path="/reactSetup"><ReactDemoDocs /></Route>
+            <Route path="/spacing"><Spacing /></Route>
             <Route path="/ods-toast"><Toast /></Route>
             <Route path="/typography"><Typography /></Route>
+            <Route path="/type/designGuidlines"><TypeDesignGuidlines /></Route>
+            <Route path="/voiceandtone"><VoiceTone /></Route>
             <Route path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
           </Switch>
         </Router>

@@ -20,10 +20,16 @@ export default function SideNav(props) {
         { title: "└ Design Guidlines", route: "/color/designGuidlines" },
         { title: "└ Digital Personality", route: "/color/digitalPersonality" },
         { title: "Typography", route: "/typography" },
+        { title: "└ Design Guidlines", route: "/type/designGuidlines" },
         { title: "Icons", route: "/icons" },
         { title: "└ Design Guidlines", route: "/icon/designGuidlines" },
         { title: "Design tokens", route: "/designTokens/tokens" },
         { title: "└ Deprecated", route: "/deprecated/tokens" },
+        { title: "Layout", route: "/layout" },
+        { title: "Grid", route: "/grid" },
+        { title: "└ Design Guidlines", route: "/gridDesignGuidlines" },
+        { title: "└ Spacing", route: "/spacing" },
+        { title: "Voice and Tone", route: "/voiceandtone" },
         { title: "WCSS", route: "/webcorestylesheets" }
       ]
     },

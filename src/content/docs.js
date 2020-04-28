@@ -5,8 +5,14 @@ import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from './markdown-wrapp
 // Import local markdown docs
 import ColorDesignGuidlinesPage from './pages/colors/designGuidlines/index.md';
 import GettingStartedDevsPage from './pages/gettingStarted/developers/index.md';
+import GridPage from './pages/grid.md';
+import GridDesignGuidlinesPage from './pages/gridDesignGuidlines.md';
 import PhilosophyPage from './pages/philosophy/philosophy.md';
 import IconsDesignPage from './pages/iconsDesign/index.md';
+import LayoutPage from './pages/layout.md';
+import SpacingPage from './pages/spacing.md';
+import TypeDesignGuidlinesPage from './pages/typeDesignGuidlines.md';
+import VoiceTonePage from './pages/voiceTone.md';
 
 export class ColorDesignGuidlines extends InternalMarkdownWrapper {
   readme = ColorDesignGuidlinesPage
@@ -15,12 +21,37 @@ export class ColorDesignGuidlines extends InternalMarkdownWrapper {
 export class GettingStartedDevs extends InternalMarkdownWrapper {
   readme = GettingStartedDevsPage
 }
+
+export class Grid extends InternalMarkdownWrapper {
+  readme = GridPage
+}
+
+export class GridDesignGuidlines extends InternalMarkdownWrapper {
+  readme = GridDesignGuidlinesPage
+}
+
 export class IconsDesign extends InternalMarkdownWrapper {
   readme = IconsDesignPage
 }
 
+export class Layout extends InternalMarkdownWrapper {
+  readme = LayoutPage
+}
+
 export class Philosophy extends InternalMarkdownWrapper {
   readme = PhilosophyPage
+}
+
+export class Spacing extends InternalMarkdownWrapper {
+  readme = SpacingPage
+}
+
+export class TypeDesignGuidlines extends InternalMarkdownWrapper {
+  readme = TypeDesignGuidlinesPage
+}
+
+export class VoiceTone extends InternalMarkdownWrapper {
+  readme = VoiceTonePage
 }
 
 // wrapper for general docs section
