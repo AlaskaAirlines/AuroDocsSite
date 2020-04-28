@@ -19,7 +19,7 @@ body {
 
 .main-wrapper {
   @include auro_breakpoint--md {
-    max-width: $size-width-max;
+    max-width: 70rem;
     margin: 0 auto;
   }
 }
@@ -238,6 +238,13 @@ auro-tokens-list {
 .avatarWrapper--3up {
   auro-color-avatar {
     flex-basis: 33%;
+    padding-right: 5%;
+  }
+}
+
+.avatarWrapper--2up {
+  auro-color-avatar {
+    flex-basis: 50%;
     padding-right: 5%;
   }
 }
