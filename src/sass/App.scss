@@ -17,13 +17,6 @@ body {
   background-color: var(--auro-color-background-lightest);
 }
 
-.main-wrapper {
-  @include auro_breakpoint--md {
-    max-width: 70rem;
-    margin: 0 auto;
-  }
-}
-
 .ondark {
   background-color: var(--auro-color-background-darkest);
   padding: 10px 20px;
@@ -35,15 +28,29 @@ body {
     margin-right: 20px;
     margin-top: var(--auro-size-md);
 
-    @include auro_breakpoint--lg {
-      margin-left: 260px;
-      margin-right: 0;
+    @include auro_breakpoint--sm {
+      max-width: 30rem;
+      margin: var(--auro-size-md) auto 0 260px;
     }
 
-    @include auro_breakpoint--sm {
-      margin-left: 280px;
+    @include auro_breakpoint--md {
+      max-width: 60%;
+      margin: var(--auro-size-md) auto 0 30%;
+    }
+
+    @include auro_breakpoint--lg {
+      max-width: 50%;
+    }
+
+    @include auro_breakpoint($min: 1500px) {
+      max-width: 40%;
     }
   }
+}
+
+auro-swatch-list {
+  overflow: scroll;
+  display: block;
 }
 
 code {
@@ -234,11 +241,9 @@ ods-swatch {
   position: fixed;
   z-index: 100;
   background-color: white;
-  width: 75%;
-  padding-left: 10px;
+  padding-left: 30px;
   height: 100%;
   overflow: scroll;
-  padding-bottom: 200px;
   top: 80px;
 
   .auro_heading {
@@ -259,6 +264,7 @@ ods-swatch {
   }
 
   @include auro_breakpoint--sm {
+    left: 0;
     display: block;
     opacity: 1;
     left: auto;

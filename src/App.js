@@ -93,7 +93,7 @@ function App() {
             <Route path="/auro-hyperlink"><AuroHyperlink /></Route>
             <Route path="/auroHyperlinkDocs"><AuroHyperlinkDocs /></Route>
             <Route path="/ods-button"><Button /></Route>
-            <Route path="/auroColors"><ColorsPage /></Route>
+            <Route path="/colors"><ColorsPage /></Route>
             <Route path="/color/designGuidlines"><ColorDesignGuidlines /></Route>
             <Route path="/color/digitalPersonality"><ColorDigitalPersonality /></Route>
             <Route path="/designTokens/tokens"><DesignTokens /></Route>

@@ -4,6 +4,10 @@ import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSData--color.js'
 import header from '../assets/color/header.png';
 import windows from '../assets/color/windows.png';
 
+import "@alaskaairux/ods-swatch/dist/auro-swatch-list";
+import "@alaskaairux/ods-swatch/dist/auro-tokens-list";
+import "@alaskaairux/ods-swatch/dist/auro-color-avatar";
+
 const background = data.color.background;
 const border = data.color.border;
 const midnight = data.color.brand.midnight;
