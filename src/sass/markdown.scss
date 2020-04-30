@@ -21,6 +21,18 @@ $prefix: null;
     min-height: 100%;
   }
 
+  blockquote {
+    margin-left: 0;
+    border-left: 1px solid var(--auro-color-border-active-on-light);
+    padding-left: 30px;
+    color: var(--auro-color-text-secondary-on-light);
+    font-weight: 200;
+
+    p {
+      line-height: 2;
+    }
+  }
+
   strong {
     @extend .auro_heading--300;
   }
@@ -92,8 +104,7 @@ $prefix: null;
   }
 
   a {
-    @extend .hyperlink;
-    @extend .hyperlink--inline;
+    @extend .auro_hyperlink;
 
     &.focus-visible {
       @include focus-hyperlink(sass);
@@ -123,6 +134,7 @@ $prefix: null;
     display: block;
     border-spacing: 5px;
     margin-bottom: var(--auro-size-xl);
+    font-weight: 200;
 
     tr {
       &:nth-child(even) {

@@ -104,6 +104,10 @@ export class ComponentsDocs extends Docs {
   readme = "src/COMPONENTS.md"
 }
 
+export class GovernanceDocs extends Docs {
+  readme = "src/GOVERNANCE.md"
+}
+
 
 // docs from demo repos
 export class ReactDemoDocs extends ExternalMarkdownWrapper {

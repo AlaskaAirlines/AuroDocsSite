@@ -42,6 +42,7 @@ import {
   GettingStartedDevs,
   Grid,
   GridDesignGuidlines,
+  GovernanceDocs,
   IsTouchingDocs,
   IconsDesign,
   JavascriptDemoDocs,
@@ -106,6 +107,7 @@ function App() {
             <Route path="/docs/contributing"><ContributingDocs /></Route>
             <Route path="/docs/customProperties"><CustomPropertiesDocs /></Route>
             <Route path="/docs/focusVisible"><FocusVisibleDocs /></Route>
+            <Route path="/docs/governance"><GovernanceDocs /></Route>
             <Route path="/docs/isTouching"><IsTouchingDocs /></Route>
             <Route path="/docs/polyfill"><PolyfillDocs /></Route>
             <Route path="/docs/tests"><TestsDocs /></Route>

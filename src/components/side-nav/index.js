@@ -71,6 +71,7 @@ export default function SideNav(props) {
         { title: "Contributing", route: "/docs/contributing" },
         { title: "Custom Properties", route: "/docs/customProperties" },
         { title: "Focus Visible", route: "/docs/focusVisible" },
+        { title: "Governance", route: "/docs/governance" },
         { title: "Is Touching", route: "/docs/isTouching" },
         { title: "Polyfill", route: "/docs/polyfill" },
         { title: "Tech Details", route: "/docs/techDetails" },
