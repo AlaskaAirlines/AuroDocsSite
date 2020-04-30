@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import LinkIcons from '../components/linkIcons';
-import "@alaskaairux/ods-swatch/dist/auro-swatch-list";
-import "@alaskaairux/ods-swatch/dist/auro-tokens-list";
-import "@alaskaairux/ods-swatch/dist/auro-color-avatar";
 import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSData--color.js'
 
 import ReactMarkdown from 'react-markdown';

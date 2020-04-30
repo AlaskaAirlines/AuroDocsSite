@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "@alaskaairux/ods-toast";
 import 'highlight.js/styles/github.css';
 import Highlight from 'react-highlight';
 import LinkIcons from '../components/linkIcons';

@@ -5,8 +5,6 @@ import header from '../assets/typography/header.png';
 import allTokens from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--allTokens.js';
 import deprecated from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--deprecated.js';
 import _getTokens from "../functions/getTokens";
-import "@alaskaairux/ods-hyperlink/dist/auro-hyperlink";
-import "@alaskaairux/ods-swatch/dist/auro-tokens-list";
 import 'highlight.js/styles/github.css';
 
 const font = allTokens.font;

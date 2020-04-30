@@ -82,10 +82,10 @@ export default function SideNav(props) {
   return (
     <nav className="sidenav">
       {options.map(s => (
-        <Fragment key={s.title}>
+        <Fragment key={Math.random()}>
           <p className="auro_heading auro_heading--400" key={s.title}>{s.title}</p>
             {s.items.map(o => (
-              <Link key={o.title} to={o.route}
+              <Link key={o.route} to={o.route}
                 className={o.active ? 'auro_hyperlink auro_hyperlink--active auro_hyperlink--nav' : 'auro_hyperlink auro_hyperlink--nav'}
                 >
                 <span

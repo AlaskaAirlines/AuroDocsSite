@@ -14,16 +14,14 @@
     "@alaskaairux/orion-icons": "^2.1.5",
     "@alaskaairux/orion-web-core-style-sheets": "^2.9.1",
     "@alaskaairux/wc-generator": "^2.2.5",
-    "@webcomponents/webcomponentsjs": "^2.4.3",
     "focus-visible": "^5.1.0",
     "node-sass": "^4.14.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-highlight": "^0.12.0",
     "react-markdown": "^4.3.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1",
-    "typescript": "^3.7.5"
+    "react-scripts": "^3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,14 +37,18 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 3 edge version",
+      "ie 11",
+      "last 2 safari major version"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 3 edge version",
+      "ie 11",
+      "last 2 safari major version"
     ]
   },
   "devDependencies": {

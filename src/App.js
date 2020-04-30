@@ -9,7 +9,7 @@ import '@alaskaairux/orion-design-tokens/dist/tokens/CSSCustomProperties.css';
 import AuroButton from './content/auro-button';
 import AuroHyperlink from './content/auro-hyperlink';
 import Button from './content/button';
-import Colors from './content/colors';
+import ColorsPage from './content/colors';
 import ColorDigitalPersonality from './content/digitalPersonality';
 import DeprecatedTokens from './content/pages/deprecated/tokens';
 import DesignTokens from './content/pages/designTokens/tokens';
@@ -86,14 +86,14 @@ function App() {
           <ScrollToTop />
           <SideNav />
           <Switch>
-            <Redirect exact from="/" to="Philosophy" />
+            <Redirect exact from="/" to="philosophy" />
             <Route path="/angularSetup"><AngularDemoDocs /></Route>
             <Route path="/auro-button"><AuroButton /></Route>
             <Route path="/auroButtonDocs"><AuroButtonDocs /></Route>
             <Route path="/auro-hyperlink"><AuroHyperlink /></Route>
             <Route path="/auroHyperlinkDocs"><AuroHyperlinkDocs /></Route>
             <Route path="/ods-button"><Button /></Route>
-            <Route path="/colors"><Colors /></Route>
+            <Route path="/auroColors"><ColorsPage /></Route>
             <Route path="/color/designGuidlines"><ColorDesignGuidlines /></Route>
             <Route path="/color/digitalPersonality"><ColorDigitalPersonality /></Route>
             <Route path="/designTokens/tokens"><DesignTokens /></Route>

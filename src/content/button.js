@@ -1,14 +1,10 @@
 import React, { Component } from "react";
 import Highlight from 'react-highlight';
 import LinkIcons from '../components/linkIcons';
-import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
-import "@alaskaairux/ods-button";
 import 'highlight.js/styles/github.css';
-
 import closelg from '@alaskaairux/orion-icons/dist/icons/close-lg_es6.js';
 import chevronright from '@alaskaairux/orion-icons/dist/icons/interface/chevron-right_es6.js';
 import chevronleft from '@alaskaairux/orion-icons/dist/icons/interface/chevron-left_es6.js';
-
 import ReactMarkdown from 'react-markdown';
 import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
 
