@@ -67,6 +67,7 @@ export default function SideNav(props) {
         { title: "A11y", route: "/docs/a11y" },
         { title: "Babel Support", route: "/docs/babelSupport" },
         { title: "Browsers Support", route: "/docs/browsersSupport" },
+        { title: "Compliance", route: "/docs/compliance" },
         { title: "Components", route: "/docs/components" },
         { title: "Contributing", route: "/docs/contributing" },
         { title: "Custom Properties", route: "/docs/customProperties" },

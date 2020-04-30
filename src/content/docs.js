@@ -108,6 +108,10 @@ export class GovernanceDocs extends Docs {
   readme = "src/GOVERNANCE.md"
 }
 
+export class ComplianceDocs extends Docs {
+  readme = "src/COMPLIANCE.md"
+}
+
 
 // docs from demo repos
 export class ReactDemoDocs extends ExternalMarkdownWrapper {

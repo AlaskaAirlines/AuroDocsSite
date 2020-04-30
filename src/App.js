@@ -36,6 +36,7 @@ import {
   BrowsersSupportDocs,
   ComponentsDocs,
   ContributingDocs,
+  ComplianceDocs,
   CustomPropertiesDocs,
   ColorDesignGuidlines,
   FocusVisibleDocs,
@@ -104,6 +105,7 @@ function App() {
             <Route path="/docs/babelSupport"><BabelSupportDocs /></Route>
             <Route path="/docs/browsersSupport"><BrowsersSupportDocs /></Route>
             <Route path="/docs/components"><ComponentsDocs /></Route>
+            <Route path="/docs/compliance"><ComplianceDocs /></Route>
             <Route path="/docs/contributing"><ContributingDocs /></Route>
             <Route path="/docs/customProperties"><CustomPropertiesDocs /></Route>
             <Route path="/docs/focusVisible"><FocusVisibleDocs /></Route>
