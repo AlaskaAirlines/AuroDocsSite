@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import LinkIcons from '../components/linkIcons';
 import '../sass/markdown.scss';
 import ReactMarkdown from 'react-markdown';
 
@@ -54,14 +53,6 @@ export class ExternalMarkdownWrapper extends MarkdownWrapper {
         <article className="ods-markdown">
           <ReactMarkdown source={this.state.docsGenerator} escapeHtml={false}/>
         </article>
-
-        <LinkIcons
-          github={this.githubURL}
-          npm={this.getNpm()}
-          code={this.codeURL}
-          version={this.showVersion()}
-        />
-
       </section>
     );
   }
