@@ -18,6 +18,7 @@ const alpine = data.color.brand.alpine;
 const flamingo = data.color.brand.flamingo;
 const canyon = data.color.brand.canyon;
 const goldcoast = data.color.brand.goldcoast;
+const gray = data.color.base.gray;
 const alert = data.color.alert;
 const icon = data.color.icon;
 const text = data.color.text;
@@ -199,6 +200,9 @@ class Colors extends Component {
 
         <h3 className="auro_heading auro_heading--400">Goldcoast</h3>
         <auro-swatch-list componentData={this._getColors(goldcoast, 'neutral', [])}></auro-swatch-list>
+
+        <h3 className="auro_heading auro_heading--400">Gray</h3>
+        <auro-swatch-list componentData={this._getColors(gray, 'neutral', [])}></auro-swatch-list>
       </section>
     );
   }
