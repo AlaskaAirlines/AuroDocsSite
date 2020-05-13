@@ -22,6 +22,7 @@
 
   .focus-visible {
     background-color: $color-brand-blue-atlas-base;
+    outline: none;
 
     svg {
       fill: $color-base-white;
