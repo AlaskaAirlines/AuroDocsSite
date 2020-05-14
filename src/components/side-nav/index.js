@@ -75,6 +75,7 @@ export default function SideNav(props) {
         { title: "Governance", route: "/docs/governance" },
         { title: "Is Touching", route: "/docs/isTouching" },
         { title: "Polyfill", route: "/docs/polyfill" },
+        { title: "Slots", route: "/docs/slots" },
         { title: "Tech Details", route: "/docs/techDetails" },
         { title: "Tests", route: "/docs/tests" },
       ]

@@ -96,6 +96,10 @@ export class TechDetailsDocs extends Docs {
   readme = "src/TECH_DETAILS.md"
 }
 
+export class SlotsDocs extends Docs {
+  readme = "src/SLOTS.md"
+}
+
 export class TestsDocs extends Docs {
   readme = "src/TESTS.md"
 }
