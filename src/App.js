@@ -34,11 +34,14 @@ import {
   AuroHyperlinkDocs,
   BabelSupportDocs,
   BrowsersSupportDocs,
+  ColorTransparent,
   ComponentsDocs,
   ContributingDocs,
   ComplianceDocs,
+  CssConventionsDocs,
   CustomPropertiesDocs,
   ColorDesignGuidlines,
+  DesignTokensDocs,
   FocusVisibleDocs,
   GettingStartedDevs,
   Grid,
@@ -99,7 +102,9 @@ function App() {
             <Route path="/colors"><ColorsPage /></Route>
             <Route path="/color/designGuidlines"><ColorDesignGuidlines /></Route>
             <Route path="/color/digitalPersonality"><ColorDigitalPersonality /></Route>
+            <Route path="/color/trasnparancy"><ColorTransparent /></Route>
             <Route path="/designTokens/tokens"><DesignTokens /></Route>
+            <Route path="/tokens/docs"><DesignTokensDocs /></Route>
             <Route path="/deprecated/tokens"><DeprecatedTokens /></Route>
 
             <Route path="/docs/a11y"><A11yDocs /></Route>
@@ -109,6 +114,7 @@ function App() {
             <Route path="/docs/compliance"><ComplianceDocs /></Route>
             <Route path="/docs/contributing"><ContributingDocs /></Route>
             <Route path="/docs/customProperties"><CustomPropertiesDocs /></Route>
+            <Route path="/docs/cssConventions"><CssConventionsDocs /></Route>
             <Route path="/docs/focusVisible"><FocusVisibleDocs /></Route>
             <Route path="/docs/governance"><GovernanceDocs /></Route>
             <Route path="/docs/isTouching"><IsTouchingDocs /></Route>

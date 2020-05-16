@@ -14,6 +14,8 @@ $paragraph: true;
 $focus: true;
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/essentials";
 
+@import "~@alaskaairux/orion-design-tokens/dist/tokens/SassCustomPropertiesColorRGB";
+
 body {
   background-color: var(--auro-color-background-lightest);
 }
@@ -347,4 +349,36 @@ ods-swatch {
       top: 80px;
     }
   }
+}
+
+.transparencyBlock {
+  line-height: 100px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: var(--auro-size-md);
+}
+
+
+.auro-color-brand-tropical-400--20 {
+  background-color: rgba($auro-color-brand-tropical-400, 0.2);
+}
+
+.auro-color-brand-tropical-400--50 {
+  background-color: rgba($auro-color-brand-tropical-400, 0.5);
+}
+
+.auro-color-brand-tropical-400--80 {
+  background-color: rgba($auro-color-brand-tropical-400, 0.8);
+}
+
+.auro-rgb-color-brand-alpine-400--20 {
+  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.2);
+}
+
+.auro-rgb-color-brand-alpine-400--50 {
+  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.5);
+}
+
+.auro-rgb-color-brand-alpine-400--80 {
+  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.8);
 }

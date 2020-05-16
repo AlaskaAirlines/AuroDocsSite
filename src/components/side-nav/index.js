@@ -19,7 +19,9 @@ export default function SideNav(props) {
         { title: "Colors", route: "/colors" },
         { title: "└ Design Guidlines", route: "/color/designGuidlines" },
         { title: "└ Digital Personality", route: "/color/digitalPersonality" },
+        { title: "└ Transparancy", route: "/color/trasnparancy" },
         { title: "Design tokens", route: "/designTokens/tokens" },
+        { title: "└ Docs", route: "/tokens/docs" },
         { title: "└ Deprecated", route: "/deprecated/tokens" },
         { title: "Typography", route: "/typography" },
         { title: "└ Design Guidlines", route: "/type/designGuidlines" },
@@ -37,9 +39,9 @@ export default function SideNav(props) {
       title: "Auro Components",
       items: [
         { title: "Button", route: '/auro-button' },
-        { title: "└ docs", route: '/auroButtonDocs' },
+        { title: "└ Docs", route: '/auroButtonDocs' },
         { title: "Hyperlink", route: '/auro-hyperlink' },
-        { title: "└ docs", route: '/auroHyperlinkDocs' }
+        { title: "└ Docs", route: '/auroHyperlinkDocs' }
       ]
     },
     {
@@ -69,6 +71,7 @@ export default function SideNav(props) {
         { title: "Browsers Support", route: "/docs/browsersSupport" },
         { title: "Compliance", route: "/docs/compliance" },
         { title: "Components", route: "/docs/components" },
+        { title: "CSS Conventions", route: "/docs/cssConventions"},
         { title: "Contributing", route: "/docs/contributing" },
         { title: "Custom Properties", route: "/docs/customProperties" },
         { title: "Focus Visible", route: "/docs/focusVisible" },

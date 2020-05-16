@@ -13,6 +13,7 @@ import LayoutPage from './pages/layout.md';
 import SpacingPage from './pages/spacing.md';
 import TypeDesignGuidlinesPage from './pages/typeDesignGuidlines.md';
 import VoiceTonePage from './pages/voiceTone.md';
+import ColorTransparentPage from './pages/colors/transparent.md';
 
 export class ColorDesignGuidlines extends InternalMarkdownWrapper {
   readme = ColorDesignGuidlinesPage
@@ -54,6 +55,10 @@ export class VoiceTone extends InternalMarkdownWrapper {
   readme = VoiceTonePage
 }
 
+export class ColorTransparent extends InternalMarkdownWrapper {
+  readme = ColorTransparentPage
+}
+
 // wrapper for general docs section
 class Docs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs"
@@ -78,6 +83,10 @@ export class ContributingDocs extends Docs {
 
 export class CustomPropertiesDocs extends Docs {
   readme = "src/CUSTOM_PROPERTIES.md"
+}
+
+export class CssConventionsDocs extends Docs {
+  readme = "src/CSSCONVENTIONS.md"
 }
 
 export class FocusVisibleDocs extends Docs {
@@ -114,6 +123,13 @@ export class GovernanceDocs extends Docs {
 
 export class ComplianceDocs extends Docs {
   readme = "src/COMPLIANCE.md"
+}
+
+// docs from other repos
+export class DesignTokensDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/AuroDesignTokens"
+  codeURL = "https://github.com/AlaskaAirlines/AuroDesignTokens/tree/master/src"
+  readme = "README.md"
 }
 
 
