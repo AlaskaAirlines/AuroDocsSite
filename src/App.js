@@ -59,7 +59,8 @@ import {
   TechDetailsDocs,
   TestsDocs,
   TypeDesignGuidlines,
-  VoiceTone
+  VoiceTone,
+  WhyCustomelementsDocs
 } from './content/docs';
 
 
@@ -122,6 +123,7 @@ function App() {
             <Route path="/docs/slots"><SlotsDocs /></Route>
             <Route path="/docs/tests"><TestsDocs /></Route>
             <Route path="/docs/techDetails"><TechDetailsDocs /></Route>
+            <Route path="/docs/why"><WhyCustomelementsDocs /></Route>
 
             <Route path="/generator"><Generator /></Route>
             <Route path="/gettingStarted/devs"><GettingStartedDevs /></Route>

@@ -38,8 +38,8 @@ class DeprecatedTokens extends Component {
           code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
           version={this.showVersion()}
         />
-        <p className="auro_baseParagraph">The following is a list of deprecated Orion tokens, and if applicable, an adjacent Auro token. All deprecated tokens will be removed with an upcoming major release. </p>
-
+        <p className="auro_baseParagraph">The following is a list of deprecated Orion tokens. Adjacent from a deprecated token will be its new Auro token.</p>
+        <p className="auro_baseParagraph">All deprecated tokens will be removed with the next  major release. </p>
         <auro-tokens-list deprecated componentData={this._getTokens(deprecated, [])}></auro-tokens-list>
 
       </section>

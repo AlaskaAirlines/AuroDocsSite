@@ -10,29 +10,42 @@ export default function SideNav(props) {
       title: "Welcome to Auro",
       items: [
         { title: "Philosophy", route: "/philosophy" },
-        { title: "Developers", route: "/gettingStarted/devs" }
+      ]
+    },
+    {
+      title: "Getting Started",
+      items: [
+        { title: "Developers", route: "/gettingStarted/devs" },
+        { title: "└ Generator", route: "/generator" }
       ]
     },
     {
       title: "Auro Core",
       items: [
-        { title: "Colors", route: "/colors" },
-        { title: "└ Design Guidlines", route: "/color/designGuidlines" },
-        { title: "└ Digital Personality", route: "/color/digitalPersonality" },
-        { title: "└ Transparancy", route: "/color/trasnparancy" },
         { title: "Design tokens", route: "/designTokens/tokens" },
         { title: "└ Docs", route: "/tokens/docs" },
         { title: "└ Deprecated", route: "/deprecated/tokens" },
+
+        { title: "Color", route: "/colors" },
+        // { title: "└ Design Guidlines", route: "/color/designGuidlines" },
+        { title: "└ Digital Personality", route: "/color/digitalPersonality" },
+        { title: "└ Transparancy", route: "/color/trasnparancy" },
+
+
         { title: "Typography", route: "/typography" },
         { title: "└ Design Guidlines", route: "/type/designGuidlines" },
+
         { title: "Icons", route: "/icons" },
         { title: "└ Design Guidlines", route: "/icon/designGuidlines" },
-        { title: "Layout", route: "/layout" },
+
+        // { title: "Layout", route: "/layout" },
+
         { title: "Grid", route: "/grid" },
         { title: "└ Design Guidlines", route: "/gridDesignGuidlines" },
-        { title: "└ Spacing", route: "/spacing" },
-        { title: "Voice and Tone", route: "/voiceandtone" },
-        { title: "WCSS", route: "/webcorestylesheets" }
+
+        { title: "Spacing", route: "/spacing" },
+
+        { title: "Voice and Tone", route: "/voiceandtone" }
       ]
     },
     {
@@ -55,34 +68,52 @@ export default function SideNav(props) {
       ]
     },
     {
-      title: "Development Support",
+      title: "Dev resources",
       items: [
-        { title: "React Setup", route: "/reactSetup" },
-        { title: "Angular Setup", route: "/angularSetup" },
-        { title: "Javascript Setup", route: "/javascriptSetup" },
-        { title: "WC Generator", route: "/generator" }
+        // { title: "A11y", route: "/docs/a11y" },
+        // { title: "Babel Support", route: "/docs/babelSupport" },
+        { title: "Browsers Support", route: "/docs/browsersSupport" },
+        { title: "Components", route: "/docs/components" },
+        // { title: "Hover", route: "/docs/isTouching" },
+        { title: "<slot> element", route: "/docs/slots" },
+        // { title: "Tech overview", route: "/docs/techDetails" },
+        { title: "Automated testing", route: "/docs/tests" },
+        // { title: "why?", route: "/docs/why" }
       ]
     },
     {
-      title: "All the docs",
+      title: "Pollyfills",
       items: [
-        { title: "A11y", route: "/docs/a11y" },
-        { title: "Babel Support", route: "/docs/babelSupport" },
-        { title: "Browsers Support", route: "/docs/browsersSupport" },
-        { title: "Compliance", route: "/docs/compliance" },
-        { title: "Components", route: "/docs/components" },
-        { title: "CSS Conventions", route: "/docs/cssConventions"},
-        { title: "Contributing", route: "/docs/contributing" },
-        { title: "Custom Properties", route: "/docs/customProperties" },
         { title: "Focus Visible", route: "/docs/focusVisible" },
-        { title: "Governance", route: "/docs/governance" },
-        { title: "Is Touching", route: "/docs/isTouching" },
-        { title: "Polyfill", route: "/docs/polyfill" },
-        { title: "Slots", route: "/docs/slots" },
-        { title: "Tech Details", route: "/docs/techDetails" },
-        { title: "Tests", route: "/docs/tests" },
+        { title: "Webcomponentsjs", route: "/docs/polyfill" }
       ]
-    }
+    },
+    {
+      title: "CSS resources",
+      items: [
+        { title: "CSS Conventions", route: "/docs/cssConventions"},
+        { title: "CSS Custom Properties", route: "/docs/customProperties" },
+        { title: "Touch support", route: "/docs/isTouching" },
+        { title: "WC Style Sheets", route: "/webcorestylesheets" }
+      ]
+    },
+    {
+      title: "Process",
+      items: [
+        { title: "Compliance", route: "/docs/compliance" },
+        { title: "Contributing", route: "/docs/contributing" },
+        { title: "Governance", route: "/docs/governance" },
+      ]
+    },
+    // {
+    //   title: "Example projects",
+    //   items: [
+    //     { title: "React Setup", route: "/reactSetup" },
+    //     { title: "Angular Setup", route: "/angularSetup" },
+    //     { title: "Javascript Setup", route: "/javascriptSetup" }
+
+    //   ]
+    // }
   ]);
 
   return (

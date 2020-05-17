@@ -29,13 +29,9 @@ class DeprecatedTokens extends Component {
           code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
           version={this.showVersion()}
         />
-        <p>Design tokens represent the design decisions needed to construct and maintain a design system — spacing, color, typography, animation, etc. — represented as data.  These can represent anything defined by design: color as an RGB value, and opacity as a number, animation ease, etc.</p>
-        <p>Note that design tokens:</p>
-        <ul>
-          <li>May not have a long lifespan</li>
-          <li>May alter the value more frequently</li>
-          <li>May be used for a wide variety of purposes</li>
-        </ul>
+        <p>Auro Design Tokens. Named values that store visual design data. Spacing, color, typography, animation, layering, etc. Tokens may represent anything that can be defined by design. Color as a Hex or RGB value. Space defined by pixels or REMs. Indexes illustrated as a number and an animation as a curve. Used in the place of hard-coded values within a project, Design Tokens ensure consistency across all of Alaska's digital products. </p>
+        <p>Auro Design Tokens define a single source of truth. When included in any digital product, web app, native app, design file, they define a platform from which any project may spring from with the confidence that it always be in sync at scale across the enterprise. </p>
+
         <p className="auro_baseParagraph">Please see <auro-hyperlink relative href="/colors">Colors</auro-hyperlink> or <auro-hyperlink relative href="/typography">Typography</auro-hyperlink> for their individual sets of tokens.</p>
         <h3 className="auro_heading auro_heading--600">Animation</h3>
         <auro-tokens-list componentData={_getTokens(animation, [])}></auro-tokens-list>

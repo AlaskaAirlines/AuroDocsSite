@@ -125,6 +125,10 @@ export class ComplianceDocs extends Docs {
   readme = "src/COMPLIANCE.md"
 }
 
+export class WhyCustomelementsDocs extends Docs {
+  readme = "src/WHY_CUSTOMELEMENT.md"
+}
+
 // docs from other repos
 export class DesignTokensDocs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/AuroDesignTokens"
