@@ -29,6 +29,8 @@ class InputText extends Component {
           <p>Illustrated in this example is a stand-alone use of <code>ods-inputtext</code>.</p>
         </div>
 
+        <h2 className="auro_heading auro_heading--700">Install</h2>
+
         <Highlight className='install'>
           {`$npm i @alaskaairux/ods-inputtext`}
         </Highlight>

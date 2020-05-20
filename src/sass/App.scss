@@ -25,26 +25,32 @@ body {
   padding: 10px 20px;
 }
 
-.wrapper {
-  & > section {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: var(--auro-size-md);
+footer,
+.wrapper > section {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: var(--auro-size-md);
 
-    @include auro_breakpoint--sm {
-      max-width: 30rem;
-      margin: var(--auro-size-md) auto 0 260px;
-    }
-
-    @include auro_breakpoint--md {
-      max-width: 60%;
-      margin: var(--auro-size-md) auto 0 25%;
-    }
-
-    @include auro_breakpoint($min: 1800px) {
-      max-width: 40%;
-    }
+  @include auro_breakpoint--sm {
+    max-width: 30rem;
+    margin: var(--auro-size-md) auto 0 260px;
   }
+
+  @include auro_breakpoint--md {
+    max-width: 60%;
+    margin: var(--auro-size-md) auto 0 25%;
+  }
+
+  @include auro_breakpoint($min: 1800px) {
+    max-width: 40%;
+  }
+}
+
+footer {
+  padding-top:var(--auro-size-xxxl);
+  padding-bottom: 80px;
+  color: var(--auro-color-text-secondary-on-light);
+  font-weight: 100;
 }
 
 auro-swatch-list {
@@ -117,10 +123,6 @@ pre {
 .afterCode {
   margin-bottom: var(--auro-size-xxl);
   border-width: 0 1px 1px;
-}
-
-footer {
-  margin: var(--auro-size-xxl) 0;
 }
 
 .dataSelected {
@@ -243,9 +245,10 @@ ods-swatch {
   z-index: 100;
   background-color: white;
   padding-left: 30px;
-  height: 100%;
+  height: calc(100% - 80px);
   overflow: scroll;
   top: 80px;
+  background-color: var(--auro-color-background-lighter);
 
   .auro_heading {
     margin: var(--auro-size-lg) 0 var(--auro-size-md);
@@ -271,8 +274,7 @@ ods-swatch {
     left: auto;
     width: 248px;
     top: 80px;
-    height: -webkit-fill-available;
-    padding-bottom: 300px;
+    padding-bottom: 100px;
   }
 }
 

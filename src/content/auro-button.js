@@ -33,17 +33,16 @@ class AuroButtons extends Component {
   render() {
     return (
       <section id="buttons">
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
-          npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
-          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/auro-button.js"
-          version={this.showVersion()}
-        />
         <h1 className="auro_heading auro_heading--display">Auro Button</h1>
 
         <p>The Auro Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
         <p>See <auro-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>auro-button</code> Auro base element.</p>
         <p>Illustrated in this example is a stand-alone use of <code>auro-button</code>.</p>
+
+        <h2 className="auro_heading auro_heading--700">Install</h2>
+        <section className="ods-markdown">
+          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
+        </section>
 
         <Highlight className='install'>
           {
@@ -84,7 +83,8 @@ import "@alaskaairux/ods-button/dist/auro-button";`}
         </div>
 
         <Highlight className='html afterCode'>
-          {`<div class="exampleWrapper auro_containedButtons">
+          {`
+<div class="exampleWrapper auro_containedButtons">
     <auro-button>Primary</auro-button>
     <auro-button secondary>Secondary</auro-button>
     <auro-button tertiary>Tertiary</auro-button>
@@ -117,9 +117,12 @@ import "@alaskaairux/ods-button/dist/auro-button";`}
           {`<auro-button tertiary ondark>Tertiary</auro-button>`}
         </Highlight>
 
-        <section className="ods-markdown">
-          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
-        </section>
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
+          npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
+          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/auro-button.js"
+          version={this.showVersion()}
+        />
       </section>
     );
   }

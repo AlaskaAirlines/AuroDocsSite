@@ -1,5 +1,3 @@
-# Digital personality
-
 ## Overview
 
 Our digital brand colors are complemented by an additional set of colors informed by both physical and digital expressions. This allows designers to define hierarchy, highlight content, and better guide our guests.

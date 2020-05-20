@@ -29,9 +29,6 @@ $prefix: null;
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/_layoutPropertiesGenerator";
 
 $auro-spacing-types: stack;
-$auro-spacing-options: xl;
 $important: true;
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariableMap";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/spacingUtility";
-
-

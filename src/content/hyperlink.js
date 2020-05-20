@@ -27,6 +27,7 @@ class Hyperlink extends Component {
           <p>See <ods-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-hyperlink" target="_blank">instructions</ods-hyperlink> for more information as how to install and full API for the <code>ods-hyperlink</code> Orion base element.</p>
         </div>
 
+        <h2 className="auro_heading auro_heading--700">Install</h2>
         <Highlight className='install'>
           {`$npm i @alaskaairux/ods-hyperlink`}
         </Highlight>

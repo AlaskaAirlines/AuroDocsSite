@@ -35,19 +35,21 @@ class Buttons extends Component {
   render() {
     return (
       <section id="buttons">
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
-          npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
-          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/ods-button.js"
-          version={this.showVersion()}
-        />
+
         <h1 className="auro_heading auro_heading--display">ODS Buttons</h1>
+
+
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>The Orion Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
           <p>See <ods-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</ods-hyperlink> for more information as how to install and full API for the <code>ods-button</code> Orion base element.</p>
           <p>Illustrated in this example is a stand-alone use of <code>ods-button</code>.</p>
         </div>
+
+        <h2 className="auro_heading auro_heading--700">Install</h2>
+        <section className="ods-markdown">
+          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
+        </section>
 
         <Highlight className='install'>
           {`$npm i @alaskaairux/ods-button`}
@@ -307,9 +309,12 @@ import chevronleft from '@alaskaairux/orion-icons/dist/icons/chevronleft_es6.js'
           }
         </Highlight>
 
-        <section className="ods-markdown">
-          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
-        </section>
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
+          npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
+          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/ods-button.js"
+          version={this.showVersion()}
+        />
       </section>
     );
   }

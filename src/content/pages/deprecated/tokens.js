@@ -32,16 +32,15 @@ class DeprecatedTokens extends Component {
     return (
       <section>
         <h1 className="auro_heading auro_heading--display">Deprecated tokens list</h1>
+        <p className="auro_baseParagraph">The following is a list of deprecated Orion tokens. Adjacent from a deprecated token will be its new Auro token.</p>
+        <p className="auro_baseParagraph">All deprecated tokens will be removed with the next  major release. </p>
+        <auro-tokens-list deprecated componentData={this._getTokens(deprecated, [])}></auro-tokens-list>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionDesignTokens"
           npm="https://www.npmjs.com/package/@alaskaairux/orion-design-tokens"
           code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
           version={this.showVersion()}
         />
-        <p className="auro_baseParagraph">The following is a list of deprecated Orion tokens. Adjacent from a deprecated token will be its new Auro token.</p>
-        <p className="auro_baseParagraph">All deprecated tokens will be removed with the next  major release. </p>
-        <auro-tokens-list deprecated componentData={this._getTokens(deprecated, [])}></auro-tokens-list>
-
       </section>
     );
   }

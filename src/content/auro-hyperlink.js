@@ -3,7 +3,25 @@ import 'highlight.js/styles/github.css';
 import Highlight from 'react-highlight';
 import LinkIcons from '../components/linkIcons';
 
+import ReactMarkdown from 'react-markdown';
+import buildStatus from '@alaskaairux/ods-hyperlink/docs/BUILD_STATUS.md'
+
 class Hyperlink extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      docsBuildStatus: null
+    }
+  };
+
+  componentWillMount() {
+    fetch(buildStatus).then((response) => response.text()).then((text) => {
+      this.setState({
+        docsBuildStatus: text
+      })
+    })
+  }
+
   showVersion() {
     const pjson = require('../../package.json');
     const dependencies = pjson.dependencies['@alaskaairux/ods-hyperlink'];
@@ -12,32 +30,33 @@ class Hyperlink extends Component {
   };
 
   sayHello() {
-    console.log('Hello, you clicked the button!');
+    alert('Hello, you clicked the button!');
   }
 
   handleKeyPress = (event) => {
     if(event.keyCode === 13){
-      console.log('Win for a11y! The return key submits!')
+      alert('Win for a11y! The return key submits!')
     }
     else if(event.keyCode === 32){
-      console.log('Win for a11y! The spacebar submits!')
+      alert('Win for a11y! The spacebar submits!')
     }
   }
 
   render() {
     return (
       <section id="hyperlinks">
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink"
-          npm="https://www.npmjs.com/package/@alaskaairux/ods-hyperlink"
-          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink/blob/master/src/ods-hyperlink.js"
-          version={this.showVersion()}
-        />
+
         <h1 className="auro_heading auro_heading--display">Auro Hyperlink</h1>
 
         <p>Hyperlinks form the backbone of how users navigate through a site or app. The following example illustrates how the <code>auro-hyperlink</code> Auro component can be used.</p>
         <p>See <auro-hyperlink href="https://www.npmjs.com/package/@alaskaairux/ods-hyperlink" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>ods-hyperlink</code> Orion base element.</p>
         <p>The current state of <code>ods-hyperlink</code> is engineered to deprecate the ods- namespace and assist engineers to transition to Auro. </p>
+
+        <h2 className="auro_heading auro_heading--700">Install</h2>
+
+        <section className="ods-markdown">
+          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
+        </section>
 
         <Highlight className='install'>
           {
@@ -146,6 +165,13 @@ handleKeyPress = (event) => {
 }`
 }
         </Highlight>
+
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink"
+          npm="https://www.npmjs.com/package/@alaskaairux/ods-hyperlink"
+          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink/blob/master/src/ods-hyperlink.js"
+          version={this.showVersion()}
+        />
       </section>
     );
   }

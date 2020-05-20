@@ -38,36 +38,6 @@ $prefix: null;
   }
 
   img {
-    &[alt="NPM"],
-    &[alt="npm (scoped)"],
-    &[alt="Build Status"] {
-      height: 20px;
-      float: left;
-      margin-right: 5px;
-    }
-  }
-
-  img {
-    &[alt="NPM"] {
-      width: 120px;
-      float: none;
-      margin: 0;
-    }
-  }
-
-  img {
-    &[alt="npm (scoped)"] {
-      width: 88px;
-    }
-  }
-
-  img {
-    &[alt="Build Status"] {
-      width: 90px;
-    }
-  }
-
-  img {
     &[alt="Orion Design System Logo"] {
       width: 125px;
       margin: 0 0 10px 10px;

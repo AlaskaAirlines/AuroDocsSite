@@ -91,6 +91,10 @@ class Colors extends Component {
   render() {
     return (
       <section className="auro_baseType">
+        <h1 className="auro_heading auro_heading--display">Digital personality</h1>
+
+
+
         <section className="ods-markdown">
           <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
         </section>

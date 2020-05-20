@@ -53,6 +53,13 @@ export class ExternalMarkdownWrapper extends MarkdownWrapper {
         <article className="ods-markdown">
           <ReactMarkdown source={this.state.docsGenerator} escapeHtml={false}/>
         </article>
+
+        {/* <LinkIcons
+          github="https://github.com/AlaskaAirlines/OrionDesignTokens"
+          npm="https://www.npmjs.com/package/@alaskaairux/orion-design-tokens"
+          code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
+          version={this.showVersion()}
+        /> */}
       </section>
     );
   }
@@ -71,6 +78,12 @@ export class InternalMarkdownWrapper extends MarkdownWrapper {
           <ReactMarkdown source={this.state.docsGenerator} escapeHtml={false}/>
         </section>
 
+        {/* <LinkIcons
+          github="https://github.com/AlaskaAirlines/OrionDesignTokens"
+          npm="https://www.npmjs.com/package/@alaskaairux/orion-design-tokens"
+          code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
+          version={this.showVersion()}
+        /> */}
       </section>
     );
   }
