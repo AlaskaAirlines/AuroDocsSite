@@ -11,9 +11,9 @@ import "@alaskaairux/ods-button";
 import "@alaskaairux/ods-button/dist/auro-button";
 
 // swatch
-import "@alaskaairux/ods-swatch/dist/auro-swatch-list";
-import "@alaskaairux/ods-swatch/dist/auro-tokens-list";
-import "@alaskaairux/ods-swatch/dist/auro-color-avatar";
+import "@alaskaairux/auro-swatch/dist/auro-swatch-list";
+import "@alaskaairux/auro-swatch/dist/auro-tokens-list";
+import "@alaskaairux/auro-swatch/dist/auro-color-avatar";
 
 // input type text
 import "@alaskaairux/ods-inputtext";
