@@ -13,93 +13,96 @@ export default function SideNav(props) {
     {
       title: "Getting Started",
       items: [
-        { linkTitle: "Developers", route: "/gettingStarted/devs" },
-        { linkTitle: "└ Generator", route: "/generator" }
+        { linkTitle: "Developers", route: "/getting-started/developers", parent: true },
+        { linkTitle: "- generator", route: "/getting-started/developers/generator", subNav: true  }
       ]
     },
     {
       title: "Auro Core",
       items: [
-        { linkTitle: "Design tokens", route: "/designTokens/tokens" },
-        { linkTitle: "└ Docs", route: "/tokens/docs" },
-        { linkTitle: "└ Deprecated", route: "/deprecated/tokens" },
+        { linkTitle: "Design tokens", route: "/core/design-tokens", parent: true },
+        { linkTitle: "- info", route: "/core/design-tokens/info", subNav: true },
+        { linkTitle: "- deprecated", route: "/core/design-tokens/deprecated", subNav: true },
 
-        { linkTitle: "Color", route: "/colors" },
-        // { linkTitle: "└ Design Guidlines", route: "/color/designGuidlines" },
-        { linkTitle: "└ Digital Personality", route: "/color/digitalPersonality" },
-        { linkTitle: "└ Transparancy", route: "/color/trasnparancy" },
+        { linkTitle: "Color", route: "/core/color", parent: true },
+        // { linkTitle: "- Design Guidlines", route: "/core/color/guidlines" },
+        { linkTitle: "- digital personality", route: "/core/color/digital-personality", subNav: true },
+        { linkTitle: "- transparancy", route: "/core/color/trasnparancy", subNav: true },
 
 
-        { linkTitle: "Typography", route: "/typography" },
-        { linkTitle: "└ Design Guidlines", route: "/type/designGuidlines" },
+        { linkTitle: "Typography", route: "/core/typography", parent: true },
+        { linkTitle: "- guidlines", route: "/core/typography/guidlines", subNav: true },
 
-        { linkTitle: "Icons", route: "/auroIcons" },
-        { linkTitle: "└ Design Guidlines", route: "/icon/designGuidlines" },
+        { linkTitle: "Icons", route: "/core/auro-icons", parent: true },
+        { linkTitle: "- guidlines", route: "/core/auro-icons/guidlines", subNav: true },
 
-        // { linkTitle: "Layout", route: "/layout" },
+        // { linkTitle: "Layout", route: "/core/layout" },
 
-        { linkTitle: "Grid", route: "/grid" },
-        { linkTitle: "└ Design Guidlines", route: "/gridDesignGuidlines" },
+        { linkTitle: "Grid", route: "/core/grid", parent: true },
+        { linkTitle: "- guidlines", route: "/core/grid/guidlines", subNav: true },
 
-        { linkTitle: "Spacing", route: "/spacing" },
+        { linkTitle: "Spacing", route: "/core/spacing", parent: true },
 
-        { linkTitle: "Voice and Tone", route: "/voiceandtone" }
+        { linkTitle: "Voice and Tone", route: "/core/voice-and-tone", parent: true }
       ]
     },
     {
       title: "Auro Components",
       items: [
-        { linkTitle: "Button", route: '/auro-button' },
-        { linkTitle: "└ Docs", route: '/auroButtonDocs' },
-        { linkTitle: "Hyperlink", route: '/auro-hyperlink' },
-        { linkTitle: "└ Docs", route: '/auroHyperlinkDocs' }
+        { linkTitle: "Button", route: '/components/auro/button', parent: true },
+        { linkTitle: "- info", route: '/components/auro/button/info', subNav: true },
+        { linkTitle: "- api", route: '/components/auro/button/api', subNav: true },
+        { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
+        { linkTitle: "- info", route: '/components/auro/hyperlink/info', subNav: true }
       ]
     },
     {
       title: "Orion Components",
       items: [
-        { linkTitle: "Button", route: '/ods-button' },
-        { linkTitle: "Hyperlink", route: '/ods-hyperlink' },
-        { linkTitle: "Input Options", route: "/ods-options" },
-        // { linkTitle: "Toast", route: "/ods-toast" },
-        { linkTitle: "InputText", route: "/ods-inputtext" }
+        { linkTitle: "Button", route: '/components/orion/button', parent: true },
+        { linkTitle: "- info", route: '/components/orion/button/info', subNav: true },
+        { linkTitle: "- api", route: '/components/orion/button/api', subNav: true },
+        { linkTitle: "Hyperlink", route: '/components/orion/hyperlink', parent: true },
+        { linkTitle: "Input Options", route: "/components/orion/options", parent: true },
+        // { linkTitle: "Toast", route: "/components/orion/toast" },
+        { linkTitle: "InputText", route: "/components/orion/inputtext", parent: true }
       ]
     },
     {
       title: "Dev resources",
       items: [
-        // { linkTitle: "A11y", route: "/docs/a11y" },
-        // { linkTitle: "Babel Support", route: "/docs/babelSupport" },
-        { linkTitle: "Browsers Support", route: "/docs/browsersSupport" },
-        { linkTitle: "Components", route: "/docs/components" },
-        { linkTitle: "<slot> element", route: "/docs/slots" },
-        // { linkTitle: "Tech overview", route: "/docs/techDetails" },
-        { linkTitle: "Automated testing", route: "/docs/tests" },
-        // { linkTitle: "why?", route: "/docs/why" }
+        // { linkTitle: "A11y", route: "/support/a11y" },
+        // { linkTitle: "Babel Support", route: "/support/babelSupport" },
+        { linkTitle: "Component status", route: "/support/components", parent: true },
+        { linkTitle: "The <slot> element", route: "/support/slots", parent: true },
+        { linkTitle: "Automated testing", route: "/support/tests", parent: true },
+        { linkTitle: "Browser Support", route: "/support/browsersSupport", parent: true },
+        // { linkTitle: "Tech overview", route: "/support/techDetails" },
+        // { linkTitle: "why?", route: "/support/why" }
       ]
     },
     {
       title: "Pollyfills",
       items: [
-        { linkTitle: "Focus Visible", route: "/docs/focusVisible" },
-        { linkTitle: "Webcomponentsjs", route: "/docs/polyfill" }
+        { linkTitle: "Focus Visible", route: "/support/focusVisible", parent: true},
+        { linkTitle: "Webcomponentsjs", route: "/support/polyfill", parent: true }
       ]
     },
     {
       title: "CSS resources",
       items: [
-        { linkTitle: "CSS Conventions", route: "/docs/cssConventions"},
-        { linkTitle: "CSS Custom Properties", route: "/docs/customProperties" },
-        { linkTitle: "Touch support", route: "/docs/isTouching" },
-        { linkTitle: "WC Style Sheets", route: "/webcorestylesheets" }
+        { linkTitle: "CSS Conventions", route: "/support/css-conventions", parent: true},
+        { linkTitle: "CSS Custom Properties", route: "/support/custom-properties", parent: true },
+        // { linkTitle: "Touch support", route: "/support/isTouching", parent: true },
+        { linkTitle: "WC Style Sheets", route: "/webcorestylesheets", parent: true }
       ]
     },
     {
       title: "Process",
       items: [
-        { linkTitle: "Compliance", route: "/docs/compliance" },
-        { linkTitle: "Contributing", route: "/docs/contributing" },
-        { linkTitle: "Governance", route: "/docs/governance" },
+        { linkTitle: "Compliance", route: "/support/compliance", parent: true },
+        { linkTitle: "Contributing", route: "/support/contributing", parent: true },
+        { linkTitle: "Governance", route: "/support/governance", parent: true },
       ]
     },
     // {
@@ -124,10 +127,11 @@ export default function SideNav(props) {
 
 
               {/* TODO: Toggle HIDDEN attr on click to hide/show nav items within a block */}
-              <div className="nav">
+              <div className="navBlock">
                 {navBlock.items.map(link => (
                   <Link key={link.route} to={link.route}
-                    className={link.active ? 'auro_hyperlink auro_hyperlink--active auro_hyperlink--nav isActive' : 'auro_hyperlink auro_hyperlink--nav isLink'}>
+
+                    className={`auro_hyperlink auro_hyperlink--nav ${link.active ? 'auro_hyperlink--active': ''} ${link.subNav ? 'auro_hyperlink--subNav': ''} ${link.parent ? 'auro_hyperlink--parent': ''}`}>
 
                     {/* onClick event that sets nav item state to isActive */}
                     <span

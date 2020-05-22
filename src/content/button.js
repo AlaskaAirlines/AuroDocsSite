@@ -5,7 +5,6 @@ import 'highlight.js/styles/github.css';
 import closelg from '@alaskaairux/orion-icons/dist/icons/close-lg_es6.js';
 import chevronright from '@alaskaairux/orion-icons/dist/icons/interface/chevron-right_es6.js';
 import chevronleft from '@alaskaairux/orion-icons/dist/icons/interface/chevron-left_es6.js';
-import ReactMarkdown from 'react-markdown';
 import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
 
 class Buttons extends Component {
@@ -36,24 +35,26 @@ class Buttons extends Component {
     return (
       <section id="buttons">
 
-        <h1 className="auro_heading auro_heading--display">ODS Buttons</h1>
+      <h1 className="auro_heading auro_heading--display">Orion Button</h1>
 
+      <p>The Orion Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
+      <p>See <auro-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>ods-button</code> Orion base element.</p>
+      <p>Illustrated in this example is a stand-alone use of <code>ods-button</code>.</p>
 
+        <h2 className="auro_heading auro_heading--800">Button use cases</h2>
 
-        <div className="indention util_fontWeightLight util_type--secondary">
-          <p>The Orion Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
-          <p>See <ods-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</ods-hyperlink> for more information as how to install and full API for the <code>ods-button</code> Orion base element.</p>
-          <p>Illustrated in this example is a stand-alone use of <code>ods-button</code>.</p>
-        </div>
+        <p>The <code>ods-button</code> element should be used in situations where users may:</p>
+        <ul>
+          <li>submit a form</li>
+          <li>begin a new task</li>
+          <li>trigger a new UI element to appear on the page</li>
+          <li>specify a new or next step in a process</li>
+        </ul>
 
-        <h2 className="auro_heading auro_heading--700">Install</h2>
-        <section className="ods-markdown">
-          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
-        </section>
+        <h2 className="auro_heading auro_heading--800">Buttons are not Hyperlinks</h2>
+        <p>In cases were the action of the button would not fit the criteria above, it is most likely a Hyperlink. In that situation it is recommended that the <code>ods-hyperlink</code> element be used.</p>
 
-        <Highlight className='install'>
-          {`$npm i @alaskaairux/ods-button`}
-        </Highlight>
+        <h2 className="auro_heading auro_heading--700">Auro Button - Default States</h2>
 
         <div className="exampleWrapper">
           <ods-button>default</ods-button>

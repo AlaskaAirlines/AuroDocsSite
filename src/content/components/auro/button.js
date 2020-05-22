@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import Highlight from 'react-highlight';
-import LinkIcons from '../components/linkIcons';
+import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
-
-import ReactMarkdown from 'react-markdown';
 import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
 
 class AuroButtons extends Component {
@@ -24,7 +22,7 @@ class AuroButtons extends Component {
   }
 
   showVersion() {
-    const pjson = require('../../package.json');
+    const pjson = require('../../../../package.json');
     const dependencies = pjson.dependencies['@alaskaairux/ods-button'];
 
     return `@alaskaairux/ods-button: ${dependencies}`;
@@ -39,18 +37,20 @@ class AuroButtons extends Component {
         <p>See <auro-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>auro-button</code> Auro base element.</p>
         <p>Illustrated in this example is a stand-alone use of <code>auro-button</code>.</p>
 
-        <h2 className="auro_heading auro_heading--700">Install</h2>
-        <section className="ods-markdown">
-          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
-        </section>
+        <h2 className="auro_heading auro_heading--800">Button use cases</h2>
 
-        <Highlight className='install'>
-          {
-`$npm i @alaskaairux/ods-button
-import "@alaskaairux/ods-button/dist/auro-button";`}
-        </Highlight>
+        <p>The <code>auro-button</code> element should be used in situations where users may:</p>
+        <ul>
+          <li>submit a form</li>
+          <li>begin a new task</li>
+          <li>trigger a new UI element to appear on the page</li>
+          <li>specify a new or next step in a process</li>
+        </ul>
 
-        <h2 className="auro_heading auro_heading--700">Auro Button - Default States</h2>
+        <h2 className="auro_heading auro_heading--800">Buttons are not Hyperlinks</h2>
+        <p>In cases were the action of the button would not fit the criteria above, it is most likely a Hyperlink. In that situation it is recommended that the <code>auro-hyperlink</code> element be used.</p>
+
+        <h2 className="auro_heading auro_heading--700">Default States</h2>
 
         <div className="demo--inline exampleWrapper">
           <auro-button>Primary</auro-button>

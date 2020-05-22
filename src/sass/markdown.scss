@@ -54,25 +54,18 @@ $prefix: null;
 
   h1 {
     @extend .auro_heading--display;
-    // @extend .auro_util_marginBottom--xl;
   }
 
   h2 {
     @extend .auro_heading--700;
-    // @extend .auro_util_marginBottom--md;
-    // @extend .auro_util_marginTop--xl;
   }
 
   h3 {
     @extend .auro_heading--600;
-    // @extend .auro_util_marginBottom--md;
-    // @extend .auro_util_marginTop--xl;
   }
 
   h4 {
     @extend .auro_heading--500;
-    // @extend .auro_util_marginBottom--md;
-    // @extend .auro_util_marginTop--xl;
   }
 
   a {
@@ -89,11 +82,12 @@ $prefix: null;
 
   pre  {
     overflow: auto;
-    background-color: var(--auro-color-background-darkest);
+    background-color: var(--auro-color-base-gray-100);
     padding: var(--auro-size-lg);
+    margin-bottom: var(--auro-size-xxl);
 
     code {
-      color: var(--auro-color-text-primary-on-dark);
+      color: var(--auro-color-text-primary-on-light);
       font-size: .9rem;
     }
   }

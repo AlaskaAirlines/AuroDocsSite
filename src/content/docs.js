@@ -2,7 +2,7 @@
 // Import primary markdown tools
 import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from './markdown-wrapper';
 
-// Import local markdown docs
+// The following files need to be moved to a better directory structure
 import ColorDesignGuidlinesPage from './pages/colors/designGuidlines/index.md';
 import GettingStartedDevsPage from './pages/gettingStarted/developers/index.md';
 import GridPage from './pages/grid.md';
@@ -61,8 +61,8 @@ export class ColorTransparent extends InternalMarkdownWrapper {
 
 // wrapper for general docs section
 class Docs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs"
-  codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/tree/master/src"
+  githubURL = "https://github.com/AlaskaAirlines/auro_docs"
+  codeURL = "https://github.com/AlaskaAirlines/auro_docs/tree/master/src"
 }
 
 export class A11yDocs extends Docs {
@@ -177,8 +177,29 @@ export class AuroHyperlinkDocs extends ExternalMarkdownWrapper {
   readme = "README.md"
 }
 
-export class AuroButtonDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
-  codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/tree/master/src"
+// Docs from individual repos
+
+// ods/auro button
+export class AuroButtonInfo extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/ods-button"
+  codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
   readme = "README.md"
+}
+
+export class OdsButtonInfo extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/ods-button"
+  codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
+  readme = "README.md"
+}
+
+export class AuroButtonApi extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/ods-button"
+  codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
+  readme = "docs/auro/api.md"
+}
+
+export class OdsButtonApi extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/ods-button"
+  codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
+  readme = "docs/ods/api.md"
 }

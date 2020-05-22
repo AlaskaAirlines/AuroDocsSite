@@ -2,8 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Redirect
+  Route
 } from "react-router-dom";
 
 // Importing Sass
@@ -23,8 +22,14 @@ import '@alaskaairux/orion-design-tokens/dist/tokens/CSSCustomProperties.css';
 import ScrollToTop from './components/ScrollToTop';
 
 // JS content files
-import AuroButton from './content/auro-button';
+import NotFound from './content/notFound.js';
+
+import AuroButton from './content/components/auro/button';
 import AuroHyperlink from './content/auro-hyperlink';
+
+
+
+// The following files need to be moved to a better directory structure
 import Button from './content/button';
 import ColorsPage from './content/colors';
 import ColorDigitalPersonality from './content/digitalPersonality';
@@ -49,7 +54,10 @@ import SideNav from './components/side-nav';
 import {
   A11yDocs,
   AngularDemoDocs,
-  AuroButtonDocs,
+  AuroButtonInfo,
+  OdsButtonInfo,
+  AuroButtonApi,
+  OdsButtonApi,
   AuroHyperlinkDocs,
   BabelSupportDocs,
   BrowsersSupportDocs,
@@ -99,85 +107,91 @@ function App() {
           <ScrollToTop />
           <SideNav />
           <Switch>
+
             {/* Home */}
-            <Redirect exact from="/" to="philosophy" />
-            <Route path="/philosophy"><Philosophy /></Route>
+            <Route exact path='/' component={Philosophy} />
+            <Route exact path="/philosophy"><Philosophy /></Route>
 
             {/* Getting Started */}
-            <Route path="/gettingStarted/devs"><GettingStartedDevs /></Route>
-            <Route path="/generator"><Generator /></Route>
+            <Route exact path="/getting-started/developers"><GettingStartedDevs /></Route>
+            <Route exact path="/getting-started/developers/generator"><Generator /></Route>
 
             {/* Auro Core */}
-            <Route path="/designTokens/tokens"><DesignTokens /></Route>
-            <Route path="/tokens/docs"><DesignTokensDocs /></Route>
-            <Route path="/deprecated/tokens"><DeprecatedTokens /></Route>
+            <Route exact path="/core/design-tokens"><DesignTokens /></Route>
+            <Route exact path="/core/design-tokens/info"><DesignTokensDocs /></Route>
+            <Route exact path="/core/design-tokens/deprecated"><DeprecatedTokens /></Route>
 
             {/* Color */}
-            <Route path="/colors"><ColorsPage /></Route>
-            <Route path="/color/designGuidlines"><ColorDesignGuidlines /></Route> {/* not used */} {/* reevaluate content */}
-            <Route path="/color/digitalPersonality"><ColorDigitalPersonality /></Route>
-            <Route path="/color/trasnparancy"><ColorTransparent /></Route>
+            <Route exact path="/core/color"><ColorsPage /></Route>
+            <Route exact path="/core/color/guidlines"><ColorDesignGuidlines /></Route> {/* not used */} {/* reevaluate content */}
+            <Route exact path="/core/color/digital-personality"><ColorDigitalPersonality /></Route>
+            <Route exact path="/core/color/trasnparancy"><ColorTransparent /></Route>
 
             {/* Typography */}
-            <Route path="/typography"><Typography /></Route>
-            <Route path="/type/designGuidlines"><TypeDesignGuidlines /></Route>
+            <Route exact path="/core/typography"><Typography /></Route>
+            <Route exact path="/core/typography/guidlines"><TypeDesignGuidlines /></Route>
 
             {/* Icons */}
-            <Route path="/auroIcons"><AuroIcons /></Route>
-            <Route path="/icon/designGuidlines"><IconsDesign /></Route>
+            <Route exact path="/core/auro-icons"><AuroIcons /></Route>
+            <Route exact path="/core/auro-icons/guidlines"><IconsDesign /></Route>
 
             {/* Layout */}
-            <Route path="/layout"><Layout /></Route> {/* not used */} {/* reevaluate content */}
-            <Route path="/grid"><Grid /></Route>
-            <Route path="/gridDesignGuidlines"><GridDesignGuidlines /></Route>
-            <Route path="/spacing"><Spacing /></Route>
+            <Route exact path="/core/layout"><Layout /></Route> {/* not used */} {/* reevaluate content */}
+            <Route exact path="/core/grid"><Grid /></Route>
+            <Route exact path="/core/grid/guidlines"><GridDesignGuidlines /></Route>
+            <Route exact path="/core/spacing"><Spacing /></Route>
 
             {/* Voice */}
-            <Route path="/voiceandtone"><VoiceTone /></Route>
+            <Route path="/core/voice-and-tone"><VoiceTone /></Route>
 
             {/* Auro Components */}
-            <Route path="/auro-button"><AuroButton /></Route>
-            <Route path="/auroButtonDocs"><AuroButtonDocs /></Route>
-            <Route path="/auro-hyperlink"><AuroHyperlink /></Route>
-            <Route path="/auroHyperlinkDocs"><AuroHyperlinkDocs /></Route>
+            <Route exact path="/components/auro/button"><AuroButton /></Route>
+            <Route exact path="/components/auro/button/info"><AuroButtonInfo /></Route>
+            <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
+            <Route exact path="/components/auro/hyperlink"><AuroHyperlink /></Route>
+            <Route exact path="/components/auro/hyperlink/info"><AuroHyperlinkDocs /></Route>
 
             {/* Orion Components */}
-            <Route path="/ods-button"><Button /></Route>
-            <Route path="/ods-hyperlink"><Hyperlink /></Route>
-            <Route path="/ods-options"><Options /></Route>
-            <Route path="/ods-toast"><Toast /></Route> {/* not used */} {/* reevaluate content */}
-            <Route path="/ods-inputtext"><InputText /></Route>
+            <Route exact path="/components/orion/button"><Button /></Route>
+            <Route exact path="/components/orion/button/info"><OdsButtonInfo /></Route>
+            <Route exact path="/components/orion/button/api"><OdsButtonApi /></Route>
+            <Route exact path="/components/orion/hyperlink"><Hyperlink /></Route>
+            <Route exact path="/components/orion/options"><Options /></Route>
+            <Route exact path="/components/orion/toast"><Toast /></Route> {/* not used */} {/* reevaluate content */}
+            <Route exact path="/components/orion/inputtext"><InputText /></Route>
 
             {/* Dev resources */}
-            <Route path="/docs/a11y"><A11yDocs /></Route> {/* not used */} {/* reevaluate content */}
-            <Route path="/docs/babelSupport"><BabelSupportDocs /></Route> {/* not used */} {/* reevaluate content */}
-            <Route path="/docs/browsersSupport"><BrowsersSupportDocs /></Route>
-            <Route path="/docs/components"><ComponentsDocs /></Route>
-            <Route path="/docs/slots"><SlotsDocs /></Route>
-            <Route path="/docs/techDetails"><TechDetailsDocs /></Route> {/* not used */} {/* reevaluate content */}
-            <Route path="/docs/tests"><TestsDocs /></Route>
-            <Route path="/docs/why"><WhyCustomelementsDocs /></Route> {/* not used */} {/* reevaluate content */}
+            <Route exact path="/support/a11y"><A11yDocs /></Route> {/* not used */} {/* reevaluate content */}
+            <Route exact path="/support/babelSupport"><BabelSupportDocs /></Route> {/* not used */} {/* reevaluate content */}
+            <Route exact path="/support/browsersSupport"><BrowsersSupportDocs /></Route>
+            <Route exact path="/support/components"><ComponentsDocs /></Route>
+            <Route exact path="/support/slots"><SlotsDocs /></Route>
+            <Route exact path="/support/techDetails"><TechDetailsDocs /></Route> {/* not used */} {/* reevaluate content */}
+            <Route exact path="/support/tests"><TestsDocs /></Route>
+            <Route exact path="/support/why"><WhyCustomelementsDocs /></Route> {/* not used */} {/* reevaluate content */}
 
             {/* Pollyfills */}
-            <Route path="/docs/focusVisible"><FocusVisibleDocs /></Route>
-            <Route path="/docs/polyfill"><PolyfillDocs /></Route>
+            <Route exact path="/support/focusVisible"><FocusVisibleDocs /></Route>
+            <Route exact path="/support/polyfill"><PolyfillDocs /></Route>
 
             {/* CSS */}
-            <Route path="/docs/cssConventions"><CssConventionsDocs /></Route>
-            <Route path="/docs/customProperties"><CustomPropertiesDocs /></Route>
-            <Route path="/docs/isTouching"><IsTouchingDocs /></Route>
-            <Route path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
+            <Route exact path="/support/css-conventions"><CssConventionsDocs /></Route>
+            <Route exact path="/support/custom-properties"><CustomPropertiesDocs /></Route>
+            <Route exact path="/support/isTouching"><IsTouchingDocs /></Route> {/* not used */} {/* reevaluate content */}
+            <Route exact path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
 
             {/* Process */}
-            <Route path="/docs/compliance"><ComplianceDocs /></Route>
-            <Route path="/docs/contributing"><ContributingDocs /></Route>
-            <Route path="/docs/governance"><GovernanceDocs /></Route>
+            <Route exact path="/support/compliance"><ComplianceDocs /></Route>
+            <Route exact path="/support/contributing"><ContributingDocs /></Route>
+            <Route exact path="/support/governance"><GovernanceDocs /></Route>
 
             {/* Example Projects  */}
             {/* Content for these pages need to be updated and have better descriptions of project */}
-            <Route path="/angularSetup"><AngularDemoDocs /></Route> {/* not used */}
-            <Route path="/javascriptSetup"><JavascriptDemoDocs /></Route> {/* not used */}
-            <Route path="/reactSetup"><ReactDemoDocs /></Route> {/* not used */}
+            <Route exact path="/angularSetup"><AngularDemoDocs /></Route> {/* not used */}
+            <Route exact path="/javascriptSetup"><JavascriptDemoDocs /></Route> {/* not used */}
+            <Route exact path="/reactSetup"><ReactDemoDocs /></Route> {/* not used */}
+
+            <Route path="*"><NotFound /></Route>
 
           </Switch>
         </Router>

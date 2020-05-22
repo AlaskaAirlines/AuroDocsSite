@@ -74,7 +74,7 @@ code {
 }
 
 .install {
-  padding: var(--auro-size-xs) 0 var(--auro-size-xs) var(--auro-size-lg) !important;
+  padding: var(--auro-size-lg) 0 var(--auro-size-xl) var(--auro-size-lg) !important;
   margin-bottom: var(--auro-size-xxl);
 }
 
@@ -287,6 +287,19 @@ ods-swatch {
 .hyperlink--active.hyperlink--nav:not(.is-touching):hover {
   text-decoration: none !important;
   cursor: default;
+}
+
+.auro_hyperlink--nav {
+  margin-top: var(--auro-size-md);
+}
+
+.auro_hyperlink--subNav {
+  margin-top: 0;
+  padding-left: var(--auro-size-xs);
+}
+
+.auro_hyperlink--parent + .auro_hyperlink--parent {
+  margin-top: 0;
 }
 
 .menuCheckbox,

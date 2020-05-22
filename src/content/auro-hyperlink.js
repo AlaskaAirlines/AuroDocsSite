@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import 'highlight.js/styles/github.css';
 import Highlight from 'react-highlight';
 import LinkIcons from '../components/linkIcons';
-
-import ReactMarkdown from 'react-markdown';
 import buildStatus from '@alaskaairux/ods-hyperlink/docs/BUILD_STATUS.md'
 
 class Hyperlink extends Component {
@@ -49,20 +47,10 @@ class Hyperlink extends Component {
         <h1 className="auro_heading auro_heading--display">Auro Hyperlink</h1>
 
         <p>Hyperlinks form the backbone of how users navigate through a site or app. The following example illustrates how the <code>auro-hyperlink</code> Auro component can be used.</p>
-        <p>See <auro-hyperlink href="https://www.npmjs.com/package/@alaskaairux/ods-hyperlink" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>ods-hyperlink</code> Orion base element.</p>
-        <p>The current state of <code>ods-hyperlink</code> is engineered to deprecate the ods- namespace and assist engineers to transition to Auro. </p>
+        <p>See <auro-hyperlink href="https://www.npmjs.com/package/@alaskaairux/ods-hyperlink" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>ods-hyperlink</code> Auro base element.</p>
+        <p>The current state of <code>auro-hyperlink</code> is engineered to deprecate the ods- namespace and assist engineers to transition to Auro. </p>
 
-        <h2 className="auro_heading auro_heading--700">Install</h2>
-
-        <section className="ods-markdown">
-          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
-        </section>
-
-        <Highlight className='install'>
-          {
-`$npm i @alaskaairux/ods-hyperlink
-import "@alaskaairux/ods-hyperlink/dist/auro-hyperlink";`}
-        </Highlight>
+        <h2 className="auro_heading auro_heading--700">Default States</h2>
 
         <div className="demo--inline exampleWrapper">
           <auro-hyperlink>No href</auro-hyperlink>
