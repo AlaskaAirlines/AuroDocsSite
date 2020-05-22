@@ -72,7 +72,6 @@ export default function SideNav(props) {
         // { linkTitle: "Babel Support", route: "/docs/babelSupport" },
         { linkTitle: "Browsers Support", route: "/docs/browsersSupport" },
         { linkTitle: "Components", route: "/docs/components" },
-        // { linkTitle: "Hover", route: "/docs/isTouching" },
         { linkTitle: "<slot> element", route: "/docs/slots" },
         // { linkTitle: "Tech overview", route: "/docs/techDetails" },
         { linkTitle: "Automated testing", route: "/docs/tests" },

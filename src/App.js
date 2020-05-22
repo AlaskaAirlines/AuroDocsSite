@@ -99,57 +99,86 @@ function App() {
           <ScrollToTop />
           <SideNav />
           <Switch>
+            {/* Home */}
             <Redirect exact from="/" to="philosophy" />
-            <Route path="/angularSetup"><AngularDemoDocs /></Route>
-            <Route path="/auro-button"><AuroButton /></Route>
-            <Route path="/auroButtonDocs"><AuroButtonDocs /></Route>
-            <Route path="/auro-hyperlink"><AuroHyperlink /></Route>
-            <Route path="/auroHyperlinkDocs"><AuroHyperlinkDocs /></Route>
-            <Route path="/ods-button"><Button /></Route>
-            <Route path="/colors"><ColorsPage /></Route>
-            <Route path="/color/designGuidlines"><ColorDesignGuidlines /></Route>
-            <Route path="/color/digitalPersonality"><ColorDigitalPersonality /></Route>
-            <Route path="/color/trasnparancy"><ColorTransparent /></Route>
+            <Route path="/philosophy"><Philosophy /></Route>
+
+            {/* Getting Started */}
+            <Route path="/gettingStarted/devs"><GettingStartedDevs /></Route>
+            <Route path="/generator"><Generator /></Route>
+
+            {/* Auro Core */}
             <Route path="/designTokens/tokens"><DesignTokens /></Route>
             <Route path="/tokens/docs"><DesignTokensDocs /></Route>
             <Route path="/deprecated/tokens"><DeprecatedTokens /></Route>
 
-            <Route path="/docs/a11y"><A11yDocs /></Route>
-            <Route path="/docs/babelSupport"><BabelSupportDocs /></Route>
-            <Route path="/docs/browsersSupport"><BrowsersSupportDocs /></Route>
-            <Route path="/docs/components"><ComponentsDocs /></Route>
-            <Route path="/docs/compliance"><ComplianceDocs /></Route>
-            <Route path="/docs/contributing"><ContributingDocs /></Route>
-            <Route path="/docs/customProperties"><CustomPropertiesDocs /></Route>
-            <Route path="/docs/cssConventions"><CssConventionsDocs /></Route>
-            <Route path="/docs/focusVisible"><FocusVisibleDocs /></Route>
-            <Route path="/docs/governance"><GovernanceDocs /></Route>
-            <Route path="/docs/isTouching"><IsTouchingDocs /></Route>
-            <Route path="/docs/polyfill"><PolyfillDocs /></Route>
-            <Route path="/docs/slots"><SlotsDocs /></Route>
-            <Route path="/docs/tests"><TestsDocs /></Route>
-            <Route path="/docs/techDetails"><TechDetailsDocs /></Route>
-            <Route path="/docs/why"><WhyCustomelementsDocs /></Route>
+            {/* Color */}
+            <Route path="/colors"><ColorsPage /></Route>
+            <Route path="/color/designGuidlines"><ColorDesignGuidlines /></Route> {/* not used */} {/* reevaluate content */}
+            <Route path="/color/digitalPersonality"><ColorDigitalPersonality /></Route>
+            <Route path="/color/trasnparancy"><ColorTransparent /></Route>
 
-            <Route path="/generator"><Generator /></Route>
-            <Route path="/gettingStarted/devs"><GettingStartedDevs /></Route>
-            <Route path="/grid"><Grid /></Route>
-            <Route path="/gridDesignGuidlines"><GridDesignGuidlines /></Route>
-            <Route path="/ods-hyperlink"><Hyperlink /></Route>
-            <Route path="/auroIcons"><AuroIcons /></Route>
-            <Route path="/icon/designGuidlines"><IconsDesign /></Route>
-            <Route path="/ods-inputtext"><InputText /></Route>
-            <Route path="/javascriptSetup"><JavascriptDemoDocs /></Route>
-            <Route path="/ods-options"><Options /></Route>
-            <Route path="/layout"><Layout /></Route>
-            <Route path="/philosophy"><Philosophy /></Route>
-            <Route path="/reactSetup"><ReactDemoDocs /></Route>
-            <Route path="/spacing"><Spacing /></Route>
-            <Route path="/ods-toast"><Toast /></Route>
+            {/* Typography */}
             <Route path="/typography"><Typography /></Route>
             <Route path="/type/designGuidlines"><TypeDesignGuidlines /></Route>
+
+            {/* Icons */}
+            <Route path="/auroIcons"><AuroIcons /></Route>
+            <Route path="/icon/designGuidlines"><IconsDesign /></Route>
+
+            {/* Layout */}
+            <Route path="/layout"><Layout /></Route> {/* not used */} {/* reevaluate content */}
+            <Route path="/grid"><Grid /></Route>
+            <Route path="/gridDesignGuidlines"><GridDesignGuidlines /></Route>
+            <Route path="/spacing"><Spacing /></Route>
+
+            {/* Voice */}
             <Route path="/voiceandtone"><VoiceTone /></Route>
+
+            {/* Auro Components */}
+            <Route path="/auro-button"><AuroButton /></Route>
+            <Route path="/auroButtonDocs"><AuroButtonDocs /></Route>
+            <Route path="/auro-hyperlink"><AuroHyperlink /></Route>
+            <Route path="/auroHyperlinkDocs"><AuroHyperlinkDocs /></Route>
+
+            {/* Orion Components */}
+            <Route path="/ods-button"><Button /></Route>
+            <Route path="/ods-hyperlink"><Hyperlink /></Route>
+            <Route path="/ods-options"><Options /></Route>
+            <Route path="/ods-toast"><Toast /></Route> {/* not used */} {/* reevaluate content */}
+            <Route path="/ods-inputtext"><InputText /></Route>
+
+            {/* Dev resources */}
+            <Route path="/docs/a11y"><A11yDocs /></Route> {/* not used */} {/* reevaluate content */}
+            <Route path="/docs/babelSupport"><BabelSupportDocs /></Route> {/* not used */} {/* reevaluate content */}
+            <Route path="/docs/browsersSupport"><BrowsersSupportDocs /></Route>
+            <Route path="/docs/components"><ComponentsDocs /></Route>
+            <Route path="/docs/slots"><SlotsDocs /></Route>
+            <Route path="/docs/techDetails"><TechDetailsDocs /></Route> {/* not used */} {/* reevaluate content */}
+            <Route path="/docs/tests"><TestsDocs /></Route>
+            <Route path="/docs/why"><WhyCustomelementsDocs /></Route> {/* not used */} {/* reevaluate content */}
+
+            {/* Pollyfills */}
+            <Route path="/docs/focusVisible"><FocusVisibleDocs /></Route>
+            <Route path="/docs/polyfill"><PolyfillDocs /></Route>
+
+            {/* CSS */}
+            <Route path="/docs/cssConventions"><CssConventionsDocs /></Route>
+            <Route path="/docs/customProperties"><CustomPropertiesDocs /></Route>
+            <Route path="/docs/isTouching"><IsTouchingDocs /></Route>
             <Route path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
+
+            {/* Process */}
+            <Route path="/docs/compliance"><ComplianceDocs /></Route>
+            <Route path="/docs/contributing"><ContributingDocs /></Route>
+            <Route path="/docs/governance"><GovernanceDocs /></Route>
+
+            {/* Example Projects  */}
+            {/* Content for these pages need to be updated and have better descriptions of project */}
+            <Route path="/angularSetup"><AngularDemoDocs /></Route> {/* not used */}
+            <Route path="/javascriptSetup"><JavascriptDemoDocs /></Route> {/* not used */}
+            <Route path="/reactSetup"><ReactDemoDocs /></Route> {/* not used */}
+
           </Switch>
         </Router>
       </div>
