@@ -1,4 +1,17 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+
+// Importing Sass
+import './sass/index.scss';
+import './sass/App.scss';
+
+// Logo to appear in console
+import './scripts/auro-consoleLogo';
 
 // This import is only needed to support legacy Orion Web Components
 import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
@@ -6,24 +19,30 @@ import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
 // Required for Auro Web Components
 import '@alaskaairux/orion-design-tokens/dist/tokens/CSSCustomProperties.css';
 
+// Feature to scroll UI to top on click event
+import ScrollToTop from './components/ScrollToTop';
+
+// JS content files
 import AuroButton from './content/auro-button';
 import AuroHyperlink from './content/auro-hyperlink';
 import Button from './content/button';
 import ColorsPage from './content/colors';
 import ColorDigitalPersonality from './content/digitalPersonality';
-import DeprecatedTokens from './content/pages/deprecated/tokens';
-import DesignTokens from './content/pages/designTokens/tokens';
-import Footer from './components/footer';
-import Generator from './content/generator';
-import Header from './components/header';
 import Hyperlink from './content/hyperlink';
-import Icons from './content/icons';
+import AuroIcons from './content/auroIcons';
 import InputText from './content/inputtext';
 import Options from './content/options';
-import SideNav from './components/side-nav';
 import Toast from './content/toast';
 import Typography from './content/typography';
-import WebCoreStyleSheets from './content/webcorestylesheets';
+import DeprecatedTokens from './content/pages/deprecated/tokens';
+import DesignTokens from './content/pages/designTokens/tokens';
+
+
+// imported block components
+import Footer from './components/footer';
+import Header from './components/header';
+import SideNav from './components/side-nav';
+
 
 // import resources for markdown docs from ./src/content/docs
 // then add the appropiate Route below
@@ -60,23 +79,10 @@ import {
   TestsDocs,
   TypeDesignGuidlines,
   VoiceTone,
-  WhyCustomelementsDocs
+  WhyCustomelementsDocs,
+  WebCoreStyleSheets,
+  Generator
 } from './content/docs';
-
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from "react-router-dom";
-
-import ScrollToTop from './components/ScrollToTop';
-
-import './sass/index.scss';
-import './sass/App.scss';
-
-import './scripts/orion';
 
 function App() {
   return (
@@ -130,7 +136,7 @@ function App() {
             <Route path="/grid"><Grid /></Route>
             <Route path="/gridDesignGuidlines"><GridDesignGuidlines /></Route>
             <Route path="/ods-hyperlink"><Hyperlink /></Route>
-            <Route path="/icons"><Icons /></Route>
+            <Route path="/auroIcons"><AuroIcons /></Route>
             <Route path="/icon/designGuidlines"><IconsDesign /></Route>
             <Route path="/ods-inputtext"><InputText /></Route>
             <Route path="/javascriptSetup"><JavascriptDemoDocs /></Route>

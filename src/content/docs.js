@@ -136,6 +136,21 @@ export class DesignTokensDocs extends ExternalMarkdownWrapper {
   readme = "README.md"
 }
 
+export class WebCoreStyleSheets extends ExternalMarkdownWrapper {
+  module = "@alaskaairux/orion-web-core-style-sheets"
+  githubURL = "https://github.com/AlaskaAirlines/OrionWebCoreStyleSheets"
+  codeURL = "https://github.com/AlaskaAirlines/OrionWebCoreStyleSheets/tree/master/src"
+  readme = "README.md"
+}
+
+export class Generator extends ExternalMarkdownWrapper {
+  module = "@alaskaairux/wc-generator"
+  githubURL = "https://github.com/AlaskaAirlines/wc-generator"
+  codeURL = "https://github.com/AlaskaAirlines/WC-Generator/tree/master/template"
+  readme = "README.md"
+
+}
+
 
 // docs from demo repos
 export class ReactDemoDocs extends ExternalMarkdownWrapper {

@@ -33,7 +33,7 @@ export default function SideNav(props) {
         { linkTitle: "Typography", route: "/typography" },
         { linkTitle: "└ Design Guidlines", route: "/type/designGuidlines" },
 
-        { linkTitle: "Icons", route: "/icons" },
+        { linkTitle: "Icons", route: "/auroIcons" },
         { linkTitle: "└ Design Guidlines", route: "/icon/designGuidlines" },
 
         // { linkTitle: "Layout", route: "/layout" },
