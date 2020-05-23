@@ -19,7 +19,7 @@ These steps assume you already have npm setup for your project.
 ### Design tokens
 
 ```
-npm i @alaskaairux/orion-design-tokens
+$ npm i @alaskaairux/orion-design-tokens
 ```
 
 All components have a dependency on the [design tokens](/designTokens/tokens). Installing and integrate the design tokens in to your front-end build will give you the ability to use the colors, spacing, sizing and other aspects of the design system.

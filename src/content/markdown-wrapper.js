@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import '../sass/markdown.scss';
 import ReactMarkdown from 'react-markdown';
+import CodeBlock from '../components/CodeBlock';
 
 export class MarkdownWrapper extends Component {
 
@@ -51,7 +52,13 @@ export class ExternalMarkdownWrapper extends MarkdownWrapper {
     return (
       <section>
         <article className="ods-markdown">
-          <ReactMarkdown source={this.state.docsGenerator} escapeHtml={false}/>
+          <ReactMarkdown
+            source={this.state.docsGenerator}
+            escapeHtml={false}
+            renderers={{
+              code: CodeBlock,
+            }}
+          />
         </article>
 
         {/* <LinkIcons

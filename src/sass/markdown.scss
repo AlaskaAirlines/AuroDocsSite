@@ -83,11 +83,10 @@ $prefix: null;
   pre  {
     overflow: auto;
     background-color: var(--auro-color-base-gray-100);
-    padding: var(--auro-size-lg);
+    padding: var(--auro-size-lg) !important;
     margin-bottom: var(--auro-size-xxl);
 
     code {
-      color: var(--auro-color-text-primary-on-light);
       font-size: .9rem;
     }
   }
