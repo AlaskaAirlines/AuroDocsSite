@@ -99,6 +99,7 @@ $prefix: null;
     border-spacing: 5px;
     margin-bottom: var(--auro-size-xl);
     font-weight: 200;
+    display: block;
 
     tr {
       &:nth-child(even) {
@@ -112,6 +113,7 @@ $prefix: null;
 
     @include auro_breakpoint--sm {
       width: 100%;
+      display: table;
     }
   }
 
