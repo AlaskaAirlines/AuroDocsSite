@@ -1,10 +1,10 @@
 # Getting started as a developer
 
-Getting started with a design system is one thing, getting started with a design system build with web components is another. The resources provided here are to help developers that are new to using either Auro or web components get up and running right away. 
+Getting started with a design system is one thing, getting started with a design system build with web components is another. The resources provided here are to help developers that are new to using either Auro or web components get up and running right away.
 
 ## Helpful Concepts To Learn
 
-### What are web components? 
+### What are web components?
 
 > Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers, and can be used with any JavaScript library or framework that works with HTML.
 
@@ -14,7 +14,7 @@ Getting started with a design system is one thing, getting started with a design
 
 > Components are the building blocks of modern web applications. What best practices should you follow when building your own components so they can stand the test of time?
 
--- [Building web components](https://developers.google.com/web/fundamentals/web-components) at developers.google.com 
+-- [Building web components](https://developers.google.com/web/fundamentals/web-components) at developers.google.com
 
 ### Custom Elements Everywhere
 
@@ -22,12 +22,16 @@ Getting started with a design system is one thing, getting started with a design
 
 -- [Custom Elements Everywhere](https://custom-elements-everywhere.com/)
 
+## Auro Web Component Generator
+
+The [Design System Web Component Generator](/getting-started/developers/generator) is a project tool intended to assist developers with an easy to configure and execute Web Component development environment for the purpose of building custom elements for the Design System.
+
 
 ## Making your project Auro Ready
 
-When starting a new project and using Auro with web components, while there are many differences between the various frameworks, this setup is constant. 
+When starting a new project and using Auro with web components, while there are many differences between the various frameworks, this setup is constant.
 
-The following steps address the basic [compliance](/support/compliance) model. 
+The following steps address the basic [compliance](/support/compliance) model.
 
 ### Design tokens
 
@@ -41,11 +45,11 @@ The design tokens are the **absolute base of the system** and at bare minimum th
 
 For more information, be sure to see the full [design token API info](/core/design-tokens/info)
 
-### Web Core Style Sheets 
+### Web Core Style Sheets
 
 WC Style Sheets (WCSS) is a responsive, mobile-first collection of styles and tools designed to make it quick and simple for developers to create web experiences using the Auro Design Language.
 
-See [WC Style Sheets](/webcorestylesheets) for all information related to use. Also see the [automated documentation site](https://alaskaairlines.github.io/WebCoreStyleSheets/) for all information related to the features and API of WC Style Sheets. 
+See [WC Style Sheets](/webcorestylesheets) for all information related to use. Also see the [automated documentation site](https://alaskaairlines.github.io/WebCoreStyleSheets/) for all information related to the features and API of WC Style Sheets.
 
 ### Icon Library
 
@@ -60,7 +64,3 @@ Further information can be found in the [icons](/core/auro-icons/info) section.
 ### Auro Components
 
 Auro Components are pre-styled, fully functional html custom elements for common UI primitives, such as buttons, hyperlinks, and inputs. You can also browse the list of all released [components and related Design System resources](/support/components).
-
-## Auro Web Component Generator 
-
-The [Design System Web Component Generator](/getting-started/developers/generator) is a project tool intended to assist developers with an easy to configure and execute Web Component development environment for the purpose of building custom elements for the Design System.
