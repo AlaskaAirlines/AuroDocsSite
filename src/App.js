@@ -69,6 +69,7 @@ import {
   CustomPropertiesDocs,
   ColorDesignGuidlines,
   DesignTokensDocs,
+  AuroIconsInfo,
   FocusVisibleDocs,
   GettingStartedDevs,
   Grid,
@@ -133,6 +134,7 @@ function App() {
 
             {/* Icons */}
             <Route exact path="/core/auro-icons"><AuroIcons /></Route>
+            <Route exact path="/core/auro-icons/info"><AuroIconsInfo /></Route>
             <Route exact path="/core/auro-icons/guidlines"><IconsDesign /></Route>
 
             {/* Layout */}

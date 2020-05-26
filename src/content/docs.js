@@ -148,7 +148,13 @@ export class Generator extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/wc-generator"
   codeURL = "https://github.com/AlaskaAirlines/WC-Generator/tree/master/template"
   readme = "README.md"
+}
 
+export class AuroIconsInfo extends ExternalMarkdownWrapper {
+  module = "@alaskaairux/icons"
+  githubURL = "https://github.com/AlaskaAirlines/icons"
+  codeURL = "https://github.com/AlaskaAirlines/icons/tree/master/template"
+  readme = "README.md"
 }
 
 

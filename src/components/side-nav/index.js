@@ -34,6 +34,7 @@ export default function SideNav(props) {
         { linkTitle: "- guidlines", route: "/core/typography/guidlines", subNav: true },
 
         { linkTitle: "Icons", route: "/core/auro-icons", parent: true },
+        { linkTitle: "- info", route: "/core/auro-icons/info", subNav: true },
         { linkTitle: "- guidlines", route: "/core/auro-icons/guidlines", subNav: true },
 
         // { linkTitle: "Layout", route: "/core/layout" },
