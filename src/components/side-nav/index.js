@@ -82,6 +82,15 @@ export default function SideNav(props) {
       ]
     },
     {
+      title: "Example projects",
+      items: [
+        { linkTitle: "React Setup", route: "/reactSetup" },
+        // { linkTitle: "Angular Setup", route: "/angularSetup" },
+        // { linkTitle: "Javascript Setup", route: "/javascriptSetup" }
+
+      ]
+    },
+    {
       title: "Pollyfills",
       items: [
         { linkTitle: "Focus Visible", route: "/support/focusVisible", parent: true},
@@ -104,16 +113,7 @@ export default function SideNav(props) {
         { linkTitle: "Contributing", route: "/support/contributing", parent: true },
         { linkTitle: "Governance", route: "/support/governance", parent: true },
       ]
-    },
-    // {
-    //   title: "Example projects",
-    //   items: [
-    //     { linkTitle: "React Setup", route: "/reactSetup" },
-    //     { linkTitle: "Angular Setup", route: "/angularSetup" },
-    //     { linkTitle: "Javascript Setup", route: "/javascriptSetup" }
-
-    //   ]
-    // }
+    }
   ]);
 
   return (
