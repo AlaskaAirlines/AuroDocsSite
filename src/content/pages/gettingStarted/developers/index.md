@@ -1,20 +1,33 @@
 # Getting started as a developer
 
+Getting started with a design system is one thing, getting started with a design system build with web components is another. The resources provided here are to help developers that are new to using either Auro or web components get up and running right away. 
+
 ## Helpful Concepts To Learn
 
-* Web Components
-    * [What are web components?](https://www.webcomponents.org/introduction)
-    * [Building web components](https://developers.google.com/web/fundamentals/web-components)
-    * [Web components and JS Frameworks](https://custom-elements-everywhere.com/)
-* NPM (node package manager)
-    * [What is npm?](https://docs.npmjs.com/about-npm/)
-    * [Install and setup npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+### What are web components? 
 
-> Much of the guides provided expect an understanding of Javascript, HTML, CSS, and front-end build systems such as (webpack, rollup, gulp, etc ...)
+> Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers, and can be used with any JavaScript library or framework that works with HTML.
+
+-- [What are web components?](https://www.webcomponents.org/introduction) at webcomponents.org
+
+### Building web components
+
+> Components are the building blocks of modern web applications. What best practices should you follow when building your own components so they can stand the test of time?
+
+-- [Building web components](https://developers.google.com/web/fundamentals/web-components) at developers.google.com 
+
+### Custom Elements Everywhere
+
+> Custom Elements are the lynchpin in the Web Components specifications. They give developers the ability to define their own HTML elements. When coupled with Shadow DOM, Custom Elements should be able to work in any application. But things don't always work seamlessly.
+
+-- [Custom Elements Everywhere](https://custom-elements-everywhere.com/)
+
 
 ## Making your project Auro Ready
 
-These steps assume you already have npm setup for your project.
+When starting a new project and using Auro with web components, while there are many differences between the various frameworks, this setup is constant. 
+
+The following steps address the basic [compliance](/support/compliance) model. 
 
 ### Design tokens
 
@@ -22,18 +35,32 @@ These steps assume you already have npm setup for your project.
 $ npm i @alaskaairux/orion-design-tokens
 ```
 
-All components have a dependency on the [design tokens](/designTokens/tokens). Installing and integrate the design tokens in to your front-end build will give you the ability to use the colors, spacing, sizing and other aspects of the design system.
+[Design tokens](/core/design-tokens) are a set of pre-defined variables used to manage the design of products. Installing and integrating the design tokens in to your front-end build will give you the ability to use the colors, spacing, sizing and other aspects of the design system.
 
 The design tokens are the **absolute base of the system** and at bare minimum this package alone will get you started with being able to build design system compliant experiences.
 
-### Auro Icons
+For more information, be sure to see the full [design token API info](/core/design-tokens/info)
+
+### Web Core Style Sheets 
+
+WC Style Sheets (WCSS) is a responsive, mobile-first collection of styles and tools designed to make it quick and simple for developers to create web experiences using the Auro Design Language.
+
+See [WC Style Sheets](/webcorestylesheets) for all information related to use. Also see the [automated documentation site](https://alaskaairlines.github.io/WebCoreStyleSheets/) for all information related to the features and API of WC Style Sheets. 
+
+### Icon Library
+
+The Icons package contains standard set of SVG icons that can be used with any web project.
 
 ```
-$ npm i @alaskaairux/icons
+$ npm i @alaskaairux/orion-icons -D
 ```
 
-When adding icons to your UIs, Auro provides a full set of pre-designed and fully vetted [icons](/icons) for you to choose from.
+Further information can be found in the [icons](/core/auro-icons/info) section.
 
 ### Auro Components
 
-Auro Components are pre-styled, fully functional html custom elements for common UI primitives, such as buttons, hyperlinks, and inputs. You can also browse the list of all released [components and related Design System resources](/docs/components).
+Auro Components are pre-styled, fully functional html custom elements for common UI primitives, such as buttons, hyperlinks, and inputs. You can also browse the list of all released [components and related Design System resources](/support/components).
+
+## Auro Web Component Generator 
+
+The [Design System Web Component Generator](/getting-started/developers/generator) is a project tool intended to assist developers with an easy to configure and execute Web Component development environment for the purpose of building custom elements for the Design System.
