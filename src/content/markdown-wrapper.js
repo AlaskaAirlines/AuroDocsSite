@@ -10,6 +10,9 @@ export class MarkdownWrapper extends Component {
     this.state = {
       docsGenerator: null
     }
+
+    this.flatten = this.flatten.bind(this);
+    this.HeadingRenderer = this.HeadingRenderer.bind(this);
   };
 
   componentWillMount() {
@@ -33,7 +36,24 @@ export class MarkdownWrapper extends Component {
       return `https://www.npmjs.com/package/${this.module}`
     }
   }
+
+  flatten(text, child) {
+    return typeof child === 'string'
+      ? text + child
+      : React.Children.toArray(child.props.children).reduce(this.flatten, text)
+  }
+
+  HeadingRenderer(props) {
+
+    console.log(this);
+
+    var children = React.Children.toArray(props.children)
+    var text = children.reduce(this.flatten, '')
+    var slug = text.toLowerCase().replace(/\W/g, '-')
+    return React.createElement('h' + props.level, {id: slug}, props.children)
+  }
 }
+
 
 
 export class ExternalMarkdownWrapper extends MarkdownWrapper {
@@ -57,16 +77,10 @@ export class ExternalMarkdownWrapper extends MarkdownWrapper {
             escapeHtml={false}
             renderers={{
               code: CodeBlock,
+              heading: this.HeadingRenderer
             }}
           />
         </article>
-
-        {/* <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionDesignTokens"
-          npm="https://www.npmjs.com/package/@alaskaairux/orion-design-tokens"
-          code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
-          version={this.showVersion()}
-        /> */}
       </section>
     );
   }
@@ -82,7 +96,14 @@ export class InternalMarkdownWrapper extends MarkdownWrapper {
     return (
       <section>
         <section className="ods-markdown">
-          <ReactMarkdown source={this.state.docsGenerator} escapeHtml={false}/>
+          <ReactMarkdown
+            source={this.state.docsGenerator}
+            escapeHtml={false}
+            renderers={{
+              code: CodeBlock,
+              heading: this.HeadingRenderer
+            }}
+          />
         </section>
 
         {/* <LinkIcons

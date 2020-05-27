@@ -2,6 +2,8 @@
 
 Getting started with a design system is one thing, getting started with a design system build with web components is another. The resources provided here are to help developers that are new to using either Auro or web components get up and running right away.
 
+<div id="zoo"></div>
+
 ## Helpful Concepts To Learn
 
 ### What are web components?

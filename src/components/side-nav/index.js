@@ -18,7 +18,7 @@ export default function SideNav(props) {
       ]
     },
     {
-      title: "Auro Core",
+      title: "Core",
       items: [
         { linkTitle: "Design tokens", route: "/core/design-tokens", parent: true },
         { linkTitle: "- info", route: "/core/design-tokens/info", subNav: true },
@@ -48,7 +48,7 @@ export default function SideNav(props) {
       ]
     },
     {
-      title: "Auro Components",
+      title: "Components",
       items: [
         { linkTitle: "Button", route: '/components/auro/button', parent: true },
         { linkTitle: "- info", route: '/components/auro/button/info', subNav: true },
@@ -58,7 +58,7 @@ export default function SideNav(props) {
       ]
     },
     {
-      title: "Orion Components",
+      title: "Legacy Components",
       items: [
         { linkTitle: "Button", route: '/components/orion/button', parent: true },
         { linkTitle: "- info", route: '/components/orion/button/info', subNav: true },
@@ -99,7 +99,7 @@ export default function SideNav(props) {
       ]
     },
     {
-      title: "CSS resources",
+      title: "CSS",
       items: [
         { linkTitle: "CSS Conventions", route: "/support/css-conventions", parent: true},
         { linkTitle: "CSS Custom Properties", route: "/support/custom-properties", parent: true },
