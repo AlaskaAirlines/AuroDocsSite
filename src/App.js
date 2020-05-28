@@ -39,6 +39,7 @@ import InputText from './content/inputtext';
 import Options from './content/options';
 import Toast from './content/toast';
 import Typography from './content/typography';
+import TypographyDeprecated from './content/typographyDeprecated';
 import DeprecatedTokens from './content/pages/deprecated/tokens';
 import DesignTokens from './content/pages/designTokens/tokens';
 
@@ -67,13 +68,11 @@ import {
   ComplianceDocs,
   CssConventionsDocs,
   CustomPropertiesDocs,
-  ColorDesignGuidlines,
   DesignTokensDocs,
   AuroIconsInfo,
   FocusVisibleDocs,
   GettingStartedDevs,
   Grid,
-  GridDesignGuidlines,
   GovernanceDocs,
   IsTouchingDocs,
   IconsDesign,
@@ -114,22 +113,22 @@ function App() {
             <Route exact path="/philosophy"><Philosophy /></Route>
 
             {/* Getting Started */}
-            <Route exact path="/getting-started/developers"><GettingStartedDevs /></Route>
+            <Route exact path="/getting-started/developers/overview"><GettingStartedDevs /></Route>
             <Route exact path="/getting-started/developers/generator"><Generator /></Route>
 
             {/* Auro Core */}
-            <Route exact path="/core/design-tokens"><DesignTokens /></Route>
-            <Route exact path="/core/design-tokens/info"><DesignTokensDocs /></Route>
-            <Route exact path="/core/design-tokens/deprecated"><DeprecatedTokens /></Route>
+            <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
+            <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensDocs /></Route>
+            <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
 
             {/* Color */}
             <Route exact path="/core/color"><ColorsPage /></Route>
-            <Route exact path="/core/color/guidlines"><ColorDesignGuidlines /></Route> {/* not used */} {/* reevaluate content */}
             <Route exact path="/core/color/digital-personality"><ColorDigitalPersonality /></Route>
             <Route exact path="/core/color/trasnparancy"><ColorTransparent /></Route>
 
             {/* Typography */}
             <Route exact path="/core/typography"><Typography /></Route>
+            <Route exact path="/core/typography/deprecated"><TypographyDeprecated /></Route>
             <Route exact path="/core/typography/guidlines"><TypeDesignGuidlines /></Route>
 
             {/* Icons */}
@@ -140,7 +139,6 @@ function App() {
             {/* Layout */}
             <Route exact path="/core/layout"><Layout /></Route> {/* not used */} {/* reevaluate content */}
             <Route exact path="/core/grid"><Grid /></Route>
-            <Route exact path="/core/grid/guidlines"><GridDesignGuidlines /></Route>
             <Route exact path="/core/spacing"><Spacing /></Route>
 
             {/* Voice */}
@@ -183,9 +181,9 @@ function App() {
             <Route exact path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
 
             {/* Process */}
-            <Route exact path="/support/compliance"><ComplianceDocs /></Route>
-            <Route exact path="/support/contributing"><ContributingDocs /></Route>
-            <Route exact path="/support/governance"><GovernanceDocs /></Route>
+            <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
+            <Route exact path="/getting-started/developers/contributing"><ContributingDocs /></Route>
+            <Route exact path="/getting-started/governance"><GovernanceDocs /></Route>
 
             {/* Example Projects  */}
             {/* Content for these pages need to be updated and have better descriptions of project */}

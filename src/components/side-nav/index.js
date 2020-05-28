@@ -5,45 +5,60 @@ export default function SideNav(props) {
 
   const [siteNav, setNav] = useState([
     {
-      title: "Welcome to Auro",
+      header: "Welcome to Auro",
       items: [
         { linkTitle: "Philosophy", route: "/philosophy" },
       ]
     },
     {
-      title: "Getting Started",
+      header: 'Getting Started',
+      title: "Developers",
       items: [
-        { linkTitle: "Developers", route: "/getting-started/developers", parent: true },
-        { linkTitle: "- generator", route: "/getting-started/developers/generator", subNav: true  }
+        { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
+        { linkTitle: "Generator", route: "/getting-started/developers/generator", parent: true  },
+        { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
+        { linkTitle: "- install", route: "/getting-started/developers/design-tokens/install", subNav: true },
+        { linkTitle: "- deprecated", route: "/getting-started/developers/design-tokens/deprecated", subNav: true },
+        { linkTitle: "Compliance", route: "/getting-started/developers/compliance", parent: true },
+        { linkTitle: "Contributing", route: "/getting-started/developers/contributing", parent: true },
+        { linkTitle: "Governance", route: "/getting-started/governance", parent: true },
       ]
     },
     {
-      title: "Core",
+      header: 'Guide',
+      title: "Color",
       items: [
-        { linkTitle: "Design tokens", route: "/core/design-tokens", parent: true },
-        { linkTitle: "- info", route: "/core/design-tokens/info", subNav: true },
-        { linkTitle: "- deprecated", route: "/core/design-tokens/deprecated", subNav: true },
+        { linkTitle: "Overview", route: "/core/color/digital-personality", parent: true },
+        { linkTitle: "Usage", route: "/core/color", parent: true },
+      ]
+    },
+    {
+      title: 'Typography',
+      items: [
+        { linkTitle: "Overview", route: "/core/typography/guidlines", parent: true },
+        { linkTitle: "Usage", route: "/core/typography", parent: true },
+        { linkTitle: "Deprecated", route: "/core/typography/deprecated", parent: true }
+      ]
+    },
+    {
+      title: 'Icons',
+      items: [
+        { linkTitle: "Overview", route: "/core/auro-icons/guidlines", parent: true },
+        { linkTitle: "Usage", route: "/core/auro-icons", parent: true },
+        { linkTitle: "Library", route: "/core/auro-icons/info", parent: true },
 
-        { linkTitle: "Color", route: "/core/color", parent: true },
-        // { linkTitle: "- Design Guidlines", route: "/core/color/guidlines" },
-        { linkTitle: "- digital personality", route: "/core/color/digital-personality", subNav: true },
-        { linkTitle: "- transparancy", route: "/core/color/trasnparancy", subNav: true },
-
-
-        { linkTitle: "Typography", route: "/core/typography", parent: true },
-        { linkTitle: "- guidlines", route: "/core/typography/guidlines", subNav: true },
-
-        { linkTitle: "Icons", route: "/core/auro-icons", parent: true },
-        { linkTitle: "- info", route: "/core/auro-icons/info", subNav: true },
-        { linkTitle: "- guidlines", route: "/core/auro-icons/guidlines", subNav: true },
-
-        // { linkTitle: "Layout", route: "/core/layout" },
-
+      ]
+    },
+    {
+      title: 'Layout',
+      items: [
         { linkTitle: "Grid", route: "/core/grid", parent: true },
-        { linkTitle: "- guidlines", route: "/core/grid/guidlines", subNav: true },
-
         { linkTitle: "Spacing", route: "/core/spacing", parent: true },
-
+        // { linkTitle: "Layout", route: "/core/layout" },
+      ]
+    },
+    {
+      items: [
         { linkTitle: "Voice and Tone", route: "/core/voice-and-tone", parent: true }
       ]
     },
@@ -106,14 +121,6 @@ export default function SideNav(props) {
         // { linkTitle: "Touch support", route: "/support/isTouching", parent: true },
         { linkTitle: "WC Style Sheets", route: "/webcorestylesheets", parent: true }
       ]
-    },
-    {
-      title: "Process",
-      items: [
-        { linkTitle: "Compliance", route: "/support/compliance", parent: true },
-        { linkTitle: "Contributing", route: "/support/contributing", parent: true },
-        { linkTitle: "Governance", route: "/support/governance", parent: true },
-      ]
     }
   ]);
 
@@ -124,7 +131,9 @@ export default function SideNav(props) {
 
           <section>
             {/* heading for nav block, uses first title in the object */}
-            <p className="auro_heading auro_heading--400 isHeading" key={navBlock.title}>{navBlock.title}</p>
+            <p className="isHeading auro_heading auro_heading--500" key={navBlock.header}>{navBlock.header}</p>
+
+            <p className="auro_heading auro_heading--300" key={navBlock.title}>{navBlock.title}</p>
 
 
               {/* TODO: Toggle HIDDEN attr on click to hide/show nav items within a block */}

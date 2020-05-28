@@ -3,10 +3,8 @@
 import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from './markdown-wrapper';
 
 // The following files need to be moved to a better directory structure
-import ColorDesignGuidlinesPage from './pages/colors/designGuidlines/index.md';
 import GettingStartedDevsPage from './pages/gettingStarted/developers/index.md';
 import GridPage from './pages/grid.md';
-import GridDesignGuidlinesPage from './pages/gridDesignGuidlines.md';
 import PhilosophyPage from './pages/philosophy/philosophy.md';
 import IconsDesignPage from './pages/iconsDesign/index.md';
 import LayoutPage from './pages/layout.md';
@@ -15,20 +13,12 @@ import TypeDesignGuidlinesPage from './pages/typeDesignGuidlines.md';
 import VoiceTonePage from './pages/voiceTone.md';
 import ColorTransparentPage from './pages/colors/transparent.md';
 
-export class ColorDesignGuidlines extends InternalMarkdownWrapper {
-  readme = ColorDesignGuidlinesPage
-}
-
 export class GettingStartedDevs extends InternalMarkdownWrapper {
   readme = GettingStartedDevsPage
 }
 
 export class Grid extends InternalMarkdownWrapper {
   readme = GridPage
-}
-
-export class GridDesignGuidlines extends InternalMarkdownWrapper {
-  readme = GridDesignGuidlinesPage
 }
 
 export class IconsDesign extends InternalMarkdownWrapper {

@@ -7,6 +7,7 @@
 Our spacing model is grounded in both math and visual psychology.  We achieve rhythm and hierarchy by grouping related elements, and building an appropriate distance between elements that are less closely related. Focus on optimizing screen real estate and prioritizing white space.
 
 ## Spacing Concepts
+
 ### Box Model
 
 All HTML elements can be considered boxes. Based off of the HTML foundational box model.
@@ -36,12 +37,12 @@ Horizontal - The horizontal space between items
 |48px|xxl|var(--auro-size-xxl)|
 |64px|xxxl|var(--auro-size-xxxl)|
 
+See [Web Core Style Sheets support](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_spacing)
+
 
 ## Inset Padding
 
 Default – The padding around an element where all sides are equal
-
-This layout feature is part of [Web Core Style Sheets](https://alaskaairlines.github.io/WebCoreStyleSheets/#mixin-auro_inset)
 
 ![](/images/content/spacing/space_inset_show.jpg)
 
@@ -87,3 +88,6 @@ Squish – Increased padding to left and right of an element; the left and right
 |16px / 32px|.util_insetXl--squish|
 |24px / 48px|.util_insetXxl--squish|
 |32px / 64px|.util_insetXxxl--squish|
+
+
+See [Web Core Style Sheets support](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_inset)

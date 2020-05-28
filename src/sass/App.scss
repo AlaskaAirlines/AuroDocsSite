@@ -16,8 +16,16 @@ $focus: true;
 
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SassCustomPropertiesColorRGB";
 
+%see {
+  outline: 2px solid red;
+}
+
 body {
   background-color: var(--auro-color-background-lightest);
+}
+
+.link {
+  @extend .auro_hyperlink;
 }
 
 .ondark {
@@ -27,10 +35,6 @@ body {
 
 footer,
 .wrapper > section {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: var(--auro-size-md);
-
   @include auro_breakpoint--sm {
     max-width: 30rem;
     margin: var(--auro-size-md) auto 0 260px;
@@ -78,6 +82,7 @@ p code {
   margin-bottom: var(--auro-size-xxl);
 }
 
+// ------ component demo UI -----------
 .html {
   padding: $size-scale-med !important;
 
@@ -140,23 +145,24 @@ pre {
     color: var(--auro-color-base-crimson-500);
   }
 }
+// --------------------------------------
 
-.util_swatchBox {
-  margin-bottom: var(--auro-size-xxl);
-  @include breakpoint-narrow {
-    display: flex;
-    flex-flow: row wrap;
-  }
-}
+// .util_swatchBox {
+//   margin-bottom: var(--auro-size-xxl);
+//   @include breakpoint-narrow {
+//     display: flex;
+//     flex-flow: row wrap;
+//   }
+// }
 
-ods-swatch {
-  display: block;
-  flex-basis: 30%;
-  flex-grow: 2;
-  overflow: hidden;
-}
+// ods-swatch {
+//   display: block;
+//   flex-basis: 30%;
+//   flex-grow: 2;
+//   overflow: hidden;
+// }
 
-// icons view
+// ------------ icons view --------------------
 .iconsWrapper {
   display: flex;
   flex-wrap: wrap;
@@ -192,8 +198,9 @@ ods-swatch {
     }
   }
 }
+// ----------------------------------------------
 
-// Color design token content wrappers
+// ------------ color view -----------------
 .avatarWrapper {
   display: block;
   margin-bottom: 2rem;
@@ -224,6 +231,7 @@ ods-swatch {
     padding-right: 5%;
   }
 }
+// -------------------------------------------
 
 
 /* ------------------------ Side Nav ------------------------ */
@@ -250,8 +258,8 @@ ods-swatch {
   top: 80px;
   background-color: var(--auro-color-background-lighter);
 
-  .auro_heading {
-    margin: var(--auro-size-lg) 0 var(--auro-size-md);
+  .isHeading {
+    margin: var(--auro-size-lg) 0 0;
   }
 
   a {
@@ -291,6 +299,10 @@ ods-swatch {
 
 .auro_hyperlink--nav {
   margin-top: var(--auro-size-md);
+
+  &:first-child {
+    margin-top: var(--auro-size-xs);
+  }
 }
 
 .auro_hyperlink--subNav {
@@ -366,6 +378,8 @@ ods-swatch {
   }
 }
 
+
+// ----------- color transparancy view ------------------------
 .transparencyBlock {
   line-height: 100px;
   text-align: center;
@@ -373,28 +387,53 @@ ods-swatch {
   margin-bottom: var(--auro-size-md);
 }
 
-
-.auro-color-brand-tropical-400--20 {
-  background-color: rgba($auro-color-brand-tropical-400, 0.2);
+.transparentSwatch {
+  height: 15px;
+  border-radius: 3px;
+  width: 50%;
 }
 
-.auro-color-brand-tropical-400--50 {
-  background-color: rgba($auro-color-brand-tropical-400, 0.5);
+// sass example
+.auro-color-brand-alpine-400--50 {
+  background-color: rgba($auro-color-brand-alpine-400, 0.5);
 }
 
-.auro-color-brand-tropical-400--80 {
-  background-color: rgba($auro-color-brand-tropical-400, 0.8);
+// CSS custom properties examples
+.auro-rgb-color-brand-alpine-400--10 {
+  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.1);
 }
 
 .auro-rgb-color-brand-alpine-400--20 {
   background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.2);
 }
 
+.auro-rgb-color-brand-alpine-400--30 {
+  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.3);
+}
+
+.auro-rgb-color-brand-alpine-400--40 {
+  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.4);
+}
+
 .auro-rgb-color-brand-alpine-400--50 {
   background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.5);
+}
+
+.auro-rgb-color-brand-alpine-400--60 {
+  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.6);
+}
+
+.auro-rgb-color-brand-alpine-400--70 {
+  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.7);
 }
 
 .auro-rgb-color-brand-alpine-400--80 {
   background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.8);
   color: white;
 }
+
+.auro-rgb-color-brand-alpine-400--90 {
+  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.9);
+  color: white;
+}
+// -------------------------------------------------------------

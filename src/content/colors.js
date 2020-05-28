@@ -3,6 +3,9 @@ import LinkIcons from '../components/linkIcons';
 import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSData--color.js'
 import header from '../assets/color/header.png';
 import windows from '../assets/color/windows.png';
+import ReactMarkdown from 'react-markdown';
+import CodeBlock from '../components/CodeBlock';
+import buildStatus from './pages/colors/transparent.md'
 
 const background = data.color.background;
 const border = data.color.border;
@@ -21,6 +24,24 @@ const text = data.color.text;
 const ui = data.color.ui;
 
 class Colors extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      docsBuildStatus: null
+    }
+
+    this.flatten = this.flatten.bind(this);
+    this.HeadingRenderer = this.HeadingRenderer.bind(this);
+  };
+
+  componentWillMount() {
+    fetch(buildStatus).then((response) => response.text()).then((text) => {
+      this.setState({
+        docsBuildStatus: text
+      })
+    })
+  }
 
   _getColors = (color, background, colorSet) => {
 
@@ -78,10 +99,23 @@ class Colors extends Component {
     return `@alaskaairux/orion-design-tokens: ${dependencies}`;
   };
 
+  flatten(text, child) {
+    return typeof child === 'string'
+      ? text + child
+      : React.Children.toArray(child.props.children).reduce(this.flatten, text)
+  }
+
+  HeadingRenderer(props) {
+    var children = React.Children.toArray(props.children)
+    var text = children.reduce(this.flatten, '')
+    var slug = text.toLowerCase().replace(/\W/g, '-')
+    return React.createElement('h' + props.level, {id: slug}, props.children)
+  }
+
   render() {
     return (
       <section className="auro_baseType">
-        <h1 className="auro_heading auro_heading--display">Color</h1>
+        <h1 className="auro_heading auro_heading--display">Color usage</h1>
 
         <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
 
@@ -194,6 +228,16 @@ class Colors extends Component {
 
         <h3 className="auro_heading auro_heading--400">Gray</h3>
         <auro-swatch-list componentData={this._getColors(gray, 'neutral', [])}></auro-swatch-list>
+
+        <section className="ods-markdown">
+          <ReactMarkdown
+            source={this.state.docsBuildStatus}
+            escapeHtml={false}
+            renderers={{
+              code: CodeBlock,
+              heading: this.HeadingRenderer
+            }}/>
+        </section>
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionDesignTokens"

@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import LinkIcons from '../components/linkIcons';
-import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSData--color.js'
-
+import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--allTokens.js';
+import _getTokens from "../functions/getTokens"
 import ReactMarkdown from 'react-markdown';
-import buildStatus from '../content/pages/digitalPersonality/digital-personality.md'
+import CodeBlock from '../components/CodeBlock';
+import personality from '../content/pages/digitalPersonality/digital-personality.md'
+import guidelines from '../content/pages/colors/designGuidelines.md'
 
 
 const midnight = data.color.brand.midnight;
@@ -20,16 +22,39 @@ class Colors extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      docsBuildStatus: null
+      personalityBuild: null,
+      guidelinesBuild: null
     }
+
+    this.flatten = this.flatten.bind(this);
+    this.headingRenderer = this.headingRenderer.bind(this);
   };
 
   componentWillMount() {
-    fetch(buildStatus).then((response) => response.text()).then((text) => {
+    fetch(personality).then((response) => response.text()).then((text) => {
       this.setState({
-        docsBuildStatus: text
+        personalityBuild: text
       })
     })
+
+    fetch(guidelines).then((response) => response.text()).then((text) => {
+      this.setState({
+        guidelinesBuild: text
+      })
+    })
+  }
+
+  flatten(text, child) {
+    return typeof child === 'string'
+      ? text + child
+      : React.Children.toArray(child.props.children).reduce(this.flatten, text)
+  }
+
+  headingRenderer(props) {
+    var children = React.Children.toArray(props.children)
+    var text = children.reduce(this.flatten, '')
+    var slug = text.toLowerCase().replace(/\W/g, '-')
+    return React.createElement('h' + props.level, {id: slug}, props.children)
   }
 
   _getColors = (color, background, colorSet) => {
@@ -91,30 +116,35 @@ class Colors extends Component {
   render() {
     return (
       <section className="auro_baseType">
-        <h1 className="auro_heading auro_heading--display">Digital personality</h1>
-
-
+        <h1 className="auro_heading auro_heading--display">Overview</h1>
 
         <section className="ods-markdown">
-          <ReactMarkdown source={this.state.docsBuildStatus} escapeHtml={false}/>
+          <ReactMarkdown
+            source={this.state.personalityBuild}
+            escapeHtml={false}
+            renderers={{
+              code: CodeBlock,
+              heading: this.headingRenderer
+            }}/>
         </section>
 
         <h3 className="auro_heading auro_heading--600">Midnight</h3>
         <p>Midnight reinforces our confident tone and builds off of our wordmark color. This color is most effective in situations that call for being bold and brand-forward.</p>
         <p>Use Midnight sparingly. Refer to the Design Guidelines section for more information on using Midnight.</p>
-        <auro-swatch-list componentData={this._getColors(midnight, 'neutral', [])}></auro-swatch-list>
+
+        <auro-tokens-list swatch componentData={_getTokens(midnight, [])}></auro-tokens-list>
 
         <h3 className="auro_heading auro_heading--600">Atlas</h3>
         <p>Use Atlas for interactions on a light background. Don't use Atlas for non-interactive elements: this can dilute the experience and cause confusion for guests.</p>
-        <auro-swatch-list componentData={this._getColors(atlas, 'neutral', [])}></auro-swatch-list>
+        <auro-tokens-list swatch componentData={_getTokens(atlas, [])}></auro-tokens-list>
 
         <h3 className="auro_heading auro_heading--600">Breeze</h3>
         <p>Use Breeze for interactions on a dark background. Don't use Breeze for non-interactive elements: this can dilute the experience and cause confusion for guests.</p>
-        <auro-swatch-list componentData={this._getColors(breeze, 'neutral', [])}></auro-swatch-list>
+        <auro-tokens-list swatch componentData={_getTokens(breeze, [])}></auro-tokens-list>
 
         <h3 className="auro_heading auro_heading--600">Tropical</h3>
         <p>Tropical enhances our interface with a vibrant, electric tone analogous to our blue hues. This tone should be used only to compliment or highlight other content.</p>
-        <auro-swatch-list componentData={this._getColors(tropical, 'neutral', [])}></auro-swatch-list>
+        <auro-tokens-list swatch componentData={_getTokens(tropical, [])}></auro-tokens-list>
 
         <h2 className="auro_heading auro_heading--800">Conversational colors</h2>
         <p>Our conversational colors add warmth and energy to our experience. Each color evokes or elicits a specific emotion.</p>
@@ -122,19 +152,29 @@ class Colors extends Component {
 
         <h3 className="auro_heading auro_heading--600">Alpine</h3>
         <p>Alpine carries a tone of friendly sophistication.</p>
-        <auro-swatch-list componentData={this._getColors(alpine, 'neutral', [])}></auro-swatch-list>
+        <auro-tokens-list swatch componentData={_getTokens(alpine, [])}></auro-tokens-list>
 
         <h3 className="auro_heading auro_heading--600">Flamingo</h3>
         <p>Flamingo is a playful and emotive color, and can be used to imply warmth and affection.</p>
-        <auro-swatch-list componentData={this._getColors(flamingo, 'neutral', [])}></auro-swatch-list>
+        <auro-tokens-list swatch componentData={_getTokens(flamingo, [])}></auro-tokens-list>
 
         <h3 className="auro_heading auro_heading--600">Canyon</h3>
         <p>Canyon is a bold color that captures excitement. This color is most effective when appealing to the adventure and discovery of travel.</p>
-        <auro-swatch-list componentData={this._getColors(canyon, 'neutral', [])}></auro-swatch-list>
+        <auro-tokens-list swatch componentData={_getTokens(canyon, [])}></auro-tokens-list>
 
         <h3 className="auro_heading auro_heading--600">Goldcoast</h3>
         <p>Goldcoast inspires joy. It is a way to capture the fun of travel in our interfaces. Use Goldcoast to highlight content that might otherwise be lost on the page. Most complimentary to our blue hues, consider Goldcoast to add depth and contrast.</p>
-        <auro-swatch-list componentData={this._getColors(goldcoast, 'neutral', [])}></auro-swatch-list>
+        <auro-tokens-list swatch componentData={_getTokens(goldcoast, [])}></auro-tokens-list>
+
+        <section className="ods-markdown">
+          <ReactMarkdown
+            source={this.state.guidelinesBuild}
+            escapeHtml={false}
+            renderers={{
+              code: CodeBlock,
+              heading: this.headingRenderer
+            }}/>
+        </section>
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionDesignTokens"

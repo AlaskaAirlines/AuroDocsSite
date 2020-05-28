@@ -1,10 +1,8 @@
-# Design guidelines
-
-## Foundational
+## Design guidelines
 
 ### Reserve the use of blue
 
-Midnight is our primary brand color, and should be used sparingly to avoid overuse—giving more prominence to the Alaska Airlines brand. 
+Midnight is our primary brand color, and should be used sparingly to avoid overuse—giving more prominence to the Alaska Airlines brand.
 
 **Do**
 
@@ -16,12 +14,3 @@ Midnight is our primary brand color, and should be used sparingly to avoid overu
 * Don't use Midnight for heading text, unless it's been approved for a specific marketing campaign
 * Don't use Midnight as interaction color. Instead, consider using `color-ui-default`
 * Don't blue-wash the guest experience for the sake of branding
-
-### Using digital personality colors
-
-When working with non-transactional experiences, digital personality colors can be used to add ... (ツ)_/¯ 
-
-### Interaction color
-
-Interaction colors are used for components such as button, checkbox, link ... (ツ)_/¯ 
-
