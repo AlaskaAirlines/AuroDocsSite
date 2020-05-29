@@ -118,7 +118,7 @@ class Colors extends Component {
       <section className="auro_baseType">
         <h1 className="auro_heading auro_heading--display">Overview</h1>
 
-        <section className="ods-markdown">
+        <section className="auro-markdown">
           <ReactMarkdown
             source={this.state.personalityBuild}
             escapeHtml={false}
@@ -166,7 +166,7 @@ class Colors extends Component {
         <p>Goldcoast inspires joy. It is a way to capture the fun of travel in our interfaces. Use Goldcoast to highlight content that might otherwise be lost on the page. Most complimentary to our blue hues, consider Goldcoast to add depth and contrast.</p>
         <auro-tokens-list swatch componentData={_getTokens(goldcoast, [])}></auro-tokens-list>
 
-        <section className="ods-markdown">
+        <section className="auro-markdown">
           <ReactMarkdown
             source={this.state.guidelinesBuild}
             escapeHtml={false}

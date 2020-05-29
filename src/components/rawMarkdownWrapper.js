@@ -56,12 +56,8 @@ export class RawMarkdownWrapper extends Component {
         return <a href={url}>{props.children}</a>
       }
 
-      else if (props.href.includes("AlaskaAirlines") || props.href.includes("apache") || props.href.includes("@alaskaairux")) {
-        return <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
-      }
-
       else {
-        return <a href={props.href} target="_blank" rel="noopener noreferrer">
+        return <a href={props.href} class="externalLink" target="_blank" rel="noopener noreferrer">
           {props.children}
           <ExternalLink />
         </a>
@@ -92,7 +88,7 @@ export class ExternalMarkdownWrapper extends RawMarkdownWrapper {
 
     return (
       <section>
-        <article className="ods-markdown">
+        <article className="auro-markdown">
           <ReactMarkdown
             source={this.state.docsGenerator}
             escapeHtml={false}
@@ -117,7 +113,7 @@ export class InternalMarkdownWrapper extends RawMarkdownWrapper {
   render() {
     return (
       <section>
-        <section className="ods-markdown">
+        <section className="auro-markdown">
           <ReactMarkdown
             source={this.state.docsGenerator}
             escapeHtml={false}

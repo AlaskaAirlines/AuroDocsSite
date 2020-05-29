@@ -23,7 +23,7 @@ class AuroButtonInstall extends MarkdownPageWrapper {
 
         <Nav />
 
-        <section className="ods-markdown">
+        <section className="auro-markdown">
           <ReactMarkdown
             source={this.state.contentBuild}
             escapeHtml={false}

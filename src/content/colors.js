@@ -264,7 +264,7 @@ class Colors extends Component {
         <h3 className="auro_heading auro_heading--400">Gray</h3>
         <auro-swatch-list componentData={this._getColors(gray, 'neutral', [])}></auro-swatch-list>
 
-        <section className="ods-markdown">
+        <section className="auro-markdown">
           <ReactMarkdown
             source={this.state.docsBuildStatus}
             escapeHtml={false}

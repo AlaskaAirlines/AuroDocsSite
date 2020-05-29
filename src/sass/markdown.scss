@@ -15,7 +15,7 @@ $paragraph: true;
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/layoutPropertiesGenerator";
 $prefix: null;
 
-.ods-markdown {
+.auro-markdown {
   footer img {
     width: 50px;
     min-height: 100%;
@@ -24,14 +24,22 @@ $prefix: null;
   blockquote {
     margin-left: 0;
     border-left: 1px solid var(--auro-color-border-active-on-light);
-    padding-left: 30px;
+    padding: var(--auro-size-xs);
+    padding-left: var(--auro-size-xl);
     color: var(--auro-color-text-secondary-on-light);
     font-weight: 200;
-    margin-top: var(--auro-size-xxl);
-    margin-bottom: var(--auro-size-xxl);
+    margin-top: var(--auro-size-lg);
+    margin-bottom: var(--auro-size-lg);
 
     p {
       line-height: 2;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    & + p {
+      margin-bottom: var(--auro-size-xl);
     }
   }
 
