@@ -42,7 +42,8 @@ import Typography from './content/typography';
 import TypographyDeprecated from './content/typographyDeprecated';
 import DeprecatedTokens from './content/pages/deprecated/tokens';
 import DesignTokens from './content/pages/designTokens/tokens';
-
+import AuroButtonApi from './content/components/auro/buttonApi';
+import AuroButtonInstall from './content/components/auro/buttonInstall';
 
 // imported block components
 import Footer from './components/footer';
@@ -55,9 +56,9 @@ import SideNav from './components/side-nav';
 import {
   A11yDocs,
   AngularDemoDocs,
-  AuroButtonInfo,
+  // AuroButtonInfo,
   OdsButtonInfo,
-  AuroButtonApi,
+  // AuroButtonApi,
   OdsButtonApi,
   AuroHyperlinkDocs,
   BabelSupportDocs,
@@ -133,7 +134,7 @@ function App() {
 
             {/* Icons */}
             <Route exact path="/core/auro-icons"><AuroIcons /></Route>
-            <Route exact path="/core/auro-icons/info"><AuroIconsInfo /></Route>
+            <Route exact path="/core/auro-icons/install"><AuroIconsInfo /></Route>
             <Route exact path="/core/auro-icons/guidlines"><IconsDesign /></Route>
 
             {/* Layout */}
@@ -146,7 +147,8 @@ function App() {
 
             {/* Auro Components */}
             <Route exact path="/components/auro/button"><AuroButton /></Route>
-            <Route exact path="/components/auro/button/info"><AuroButtonInfo /></Route>
+            <Route exact path="/components/auro/button/install"><AuroButtonInstall /></Route>
+            {/* <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route> */}
             <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
             <Route exact path="/components/auro/hyperlink"><AuroHyperlink /></Route>
             <Route exact path="/components/auro/hyperlink/info"><AuroHyperlinkDocs /></Route>

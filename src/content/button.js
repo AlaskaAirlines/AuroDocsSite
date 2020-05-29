@@ -6,24 +6,8 @@ import 'highlight.js/styles/github.css';
 import closelg from '@alaskaairux/orion-icons/dist/icons/close-lg_es6.js';
 import chevronright from '@alaskaairux/orion-icons/dist/icons/interface/chevron-right_es6.js';
 import chevronleft from '@alaskaairux/orion-icons/dist/icons/interface/chevron-left_es6.js';
-import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
 
 class Buttons extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      docsBuildStatus: null
-    }
-  };
-
-  componentWillMount() {
-    fetch(buildStatus).then((response) => response.text()).then((text) => {
-      this.setState({
-        docsBuildStatus: text
-      })
-    })
-  }
 
   showVersion() {
     const pjson = require('../../package.json');
@@ -36,18 +20,18 @@ class Buttons extends Component {
     return (
       <section id="buttons">
 
-      <h1 className="auro_heading auro_heading--display">Orion Button</h1>
-
-      <div role="tablist" className="ods-tablist tabList">
+        <div role="tablist" className="ods-tablist tabList">
           <NavLink exact className="tab link" to={`/components/auro/button`} activeClassName="active">Button</NavLink>
           <NavLink exact className="tab link" to={`/components/auro/button/info`} activeClassName="active">Install</NavLink>
           <NavLink exact className="tab link" to={`/components/auro/button/api`} activeClassName="active">API</NavLink>
           <NavLink exact className="tab link" to={`/components/orion/button`} activeClassName="active">Legacy</NavLink>
-      </div>
+        </div>
 
-      <p>The Orion Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
-      <p>See <auro-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>ods-button</code> Orion base element.</p>
-      <p>Illustrated in this example is a stand-alone use of <code>ods-button</code>.</p>
+        <h1 className="auro_heading auro_heading--display">Orion Button</h1>
+
+        <p>The Orion Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
+        <p>See <auro-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>ods-button</code> Orion base element.</p>
+        <p>Illustrated in this example is a stand-alone use of <code>ods-button</code>.</p>
 
         <h2 className="auro_heading auro_heading--800">Button use cases</h2>
 
@@ -62,7 +46,7 @@ class Buttons extends Component {
         <h2 className="auro_heading auro_heading--800">Buttons are not Hyperlinks</h2>
         <p>In cases were the action of the button would not fit the criteria above, it is most likely a Hyperlink. In that situation it is recommended that the <code>ods-hyperlink</code> element be used.</p>
 
-        <h2 className="auro_heading auro_heading--700">Auro Button - Default States</h2>
+        <h2 className="auro_heading auro_heading--700">Orion Button states</h2>
 
         <div className="exampleWrapper">
           <ods-button>default</ods-button>

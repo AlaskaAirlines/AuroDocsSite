@@ -43,7 +43,7 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Overview", route: "/core/auro-icons/guidlines", parent: true },
         { linkTitle: "Usage", route: "/core/auro-icons", parent: true },
-        { linkTitle: "Library", route: "/core/auro-icons/info", parent: true },
+        { linkTitle: "Library", route: "/core/auro-icons/install", parent: true },
 
       ]
     },
@@ -64,8 +64,6 @@ export default function SideNav(props) {
       header: "Components",
       items: [
         { linkTitle: "Button", route: '/components/auro/button', parent: true },
-        // { linkTitle: "- Install", route: '/components/auro/button/info', subNav: true },
-        // { linkTitle: "- api", route: '/components/auro/button/api', subNav: true },
         { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
         { linkTitle: "- info", route: '/components/auro/hyperlink/info', subNav: true }
       ]

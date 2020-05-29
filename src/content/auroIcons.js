@@ -16,7 +16,7 @@ class Icons extends Component {
   render() {
     return (
       <section id="icons">
-        <h1 className="auro_heading auro_heading--display">Icons</h1>
+        <h1 className="auro_heading auro_heading--display">Icon use</h1>
         <img className="util_stackMarginXl--bottom" src={icons} alt="page header" />
 
         <h2 className="auro_heading auro_heading--600">Overview</h2>

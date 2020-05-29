@@ -176,11 +176,11 @@ export class AuroHyperlinkDocs extends ExternalMarkdownWrapper {
 // Docs from individual repos
 
 // ods/auro button
-export class AuroButtonInfo extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/ods-button"
-  codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
-  readme = "README.md"
-}
+// export class AuroButtonInfo extends ExternalMarkdownWrapper {
+//   githubURL = "https://github.com/AlaskaAirlines/ods-button"
+//   codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
+//   readme = "README.md"
+// }
 
 export class OdsButtonInfo extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/ods-button"
@@ -188,11 +188,11 @@ export class OdsButtonInfo extends ExternalMarkdownWrapper {
   readme = "README.md"
 }
 
-export class AuroButtonApi extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/ods-button"
-  codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
-  readme = "docs/auro/api.md"
-}
+// export class AuroButtonApi extends ExternalMarkdownWrapper {
+//   githubURL = "https://github.com/AlaskaAirlines/ods-button"
+//   codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
+//   readme = "docs/auro/api.md"
+// }
 
 export class OdsButtonApi extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/ods-button"
