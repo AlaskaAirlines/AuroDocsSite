@@ -1,8 +1,4 @@
-# Getting started as a developer
-
-
-
-## Helpful Concepts To Learn
+# Overview
 
 ### What are web components?
 

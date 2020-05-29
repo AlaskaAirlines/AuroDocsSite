@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { ButtonNav } from './buttonNav';
 import Highlight from 'react-highlight';
 import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
@@ -33,15 +33,9 @@ class AuroButtons extends Component {
     return (
       <section id="buttons">
 
-        <div role="tablist" className="ods-tablist tabList">
-          <NavLink exact className="tab link" to={`/components/auro/button`} activeClassName="is-active">Button</NavLink>
-          <NavLink exact className="tab link" to={`/components/auro/button/install`} activeClassName="is-active">Install</NavLink>
-          <NavLink exact className="tab link" to={`/components/auro/button/api`} activeClassName="is-active">API</NavLink>
-          <NavLink exact className="tab link" to={`/components/orion/button`} activeClassName="is-active">Legacy</NavLink>
-        </div>
+        <ButtonNav />
 
         <h1 className="auro_heading auro_heading--display">Auro Button</h1>
-
 
         <p>The Auro Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
         <p>See <auro-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>auro-button</code> Auro base element.</p>

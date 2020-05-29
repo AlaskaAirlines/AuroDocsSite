@@ -428,12 +428,10 @@ pre {
 
 .auro-rgb-color-brand-alpine-400--80 {
   background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.8);
-  color: white;
 }
 
 .auro-rgb-color-brand-alpine-400--90 {
   background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.9);
-  color: white;
 }
 // -------------------------------------------------------------
 
@@ -474,5 +472,24 @@ auro-tokens-list {
 
   @include auro_breakpoint--md {
     overflow: unset;
+  }
+}
+
+// extrenal link style
+.externalLink:not([href*='npmjs']):not([href*='travis']):not([href*='apache']) {
+  position: relative;
+  padding-right: var(--auro-size-sm);
+
+  &:after {
+    content: '';
+    mask: url('/svg/external-link-sm.svg');
+    mask-size: cover;
+    position: absolute;
+    top: 0.5px;
+    right: 0;
+    background-size: var(--auro-size-sm) var(--auro-size-sm);
+    height: var(--auro-size-sm);
+    width: var(--auro-size-sm);
+    background-color: var(--auro-color-ui-default-on-light);
   }
 }

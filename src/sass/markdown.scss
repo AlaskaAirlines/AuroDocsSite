@@ -74,26 +74,6 @@ $prefix: null;
     &.focus-visible {
       @include focus-hyperlink(sass);
     }
-
-    &[href*="http"] {
-      &:not([href*='npmjs']):not([href*='travis']):not([href*='apache']) {
-        position: relative;
-        padding-right: var(--auro-size-sm);
-
-        &:after {
-          content: '';
-          mask: url('/svg/external-link-sm.svg');
-          mask-size: cover;
-          position: absolute;
-          top: 0.5px;
-          right: 0;
-          background-size: var(--auro-size-sm) var(--auro-size-sm);
-          height: var(--auro-size-sm);
-          width: var(--auro-size-sm);
-          background-color: var(--auro-color-ui-default-on-light);
-        }
-      }
-    }
   }
 
   p {
@@ -110,8 +90,6 @@ $prefix: null;
       font-size: .9rem;
     }
   }
-
-
 
   table {
     overflow: scroll;

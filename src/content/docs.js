@@ -3,7 +3,7 @@
 import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from './markdown-wrapper';
 
 // The following files need to be moved to a better directory structure
-import GettingStartedDevsPage from './pages/gettingStarted/developers/index.md';
+import GettingStartedDevsPage from './pages/gettingStarted/developers/overview.md';
 import GridPage from './pages/grid.md';
 import PhilosophyPage from './pages/philosophy/philosophy.md';
 import IconsDesignPage from './pages/iconsDesign/index.md';
