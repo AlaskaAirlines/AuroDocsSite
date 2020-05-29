@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { ButtonNav } from './buttonNav';
 import _getTokens from "../../../functions/getTokens"
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from '../../../components/CodeBlock';
-import { MarkdownPageWrapper } from './markdownPageWrapper';
+import { MarkdownPageWrapper } from '../../../components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/ods-button/master/README.md';
 

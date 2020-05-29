@@ -41,9 +41,13 @@ import Toast from './content/toast';
 import Typography from './content/typography';
 import TypographyDeprecated from './content/typographyDeprecated';
 import DeprecatedTokens from './content/pages/deprecated/tokens';
-import DesignTokens from './content/pages/designTokens/tokens';
+
 import AuroButtonApi from './content/components/auro/buttonApi';
 import AuroButtonInstall from './content/components/auro/buttonInstall';
+
+
+import DesignTokens from './content/pages/designTokens/tokens';
+import DesignTokensInstall from './content/pages/designTokens/install';
 
 // imported block components
 import Footer from './components/footer';
@@ -69,7 +73,7 @@ import {
   ComplianceDocs,
   CssConventionsDocs,
   CustomPropertiesDocs,
-  DesignTokensDocs,
+  // DesignTokensDocs,
   AuroIconsInfo,
   FocusVisibleDocs,
   GettingStartedDevs,
@@ -119,7 +123,7 @@ function App() {
 
             {/* Auro Core */}
             <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
-            <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensDocs /></Route>
+            <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensInstall /></Route>
             <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
 
             {/* Color */}

@@ -120,11 +120,11 @@ export class WhyCustomelementsDocs extends Docs {
 }
 
 // docs from other repos
-export class DesignTokensDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/AuroDesignTokens"
-  codeURL = "https://github.com/AlaskaAirlines/AuroDesignTokens/tree/master/src"
-  readme = "README.md"
-}
+// export class DesignTokensDocs extends ExternalMarkdownWrapper {
+//   githubURL = "https://github.com/AlaskaAirlines/AuroDesignTokens"
+//   codeURL = "https://github.com/AlaskaAirlines/AuroDesignTokens/tree/master/src"
+//   readme = "README.md"
+// }
 
 export class WebCoreStyleSheets extends ExternalMarkdownWrapper {
   module = "@alaskaairux/orion-web-core-style-sheets"

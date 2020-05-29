@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import _getTokens from "../../../functions/getTokens"
+import _getTokens from "../functions/getTokens"
 
 export class MarkdownPageWrapper extends Component {
 

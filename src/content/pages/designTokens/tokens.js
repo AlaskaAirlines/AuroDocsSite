@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { TokenNav } from './tokenNav';
 import { NavLink } from "react-router-dom";
 import LinkIcons from '../../../components/linkIcons';
 import _getTokens from "../../../functions/getTokens";
@@ -47,12 +48,7 @@ class DeprecatedTokens extends Component {
     return (
       <section>
 
-
-        <div role="tablist" className="ods-tablist tabList">
-          <NavLink exact className="tab link" to={`/getting-started/developers/design-tokens`} activeClassName="is-active">Design Tokens</NavLink>
-          <NavLink exact className="tab link" to={`/getting-started/developers/design-tokens/install`} activeClassName="is-active">Install</NavLink>
-          <NavLink exact className="tab link" to={`/getting-started/developers/design-tokens/deprecated`} activeClassName="is-active">Deprecated</NavLink>
-        </div>
+        <TokenNav />
 
         <h1 className="auro_heading auro_heading--display">Auro Design Tokens</h1>
         <p>Auro Design Tokens. Named values that store visual design data. Spacing, color, typography, animation, layering, etc. Tokens may represent anything that can be defined by design. Color as a Hex or RGB value. Space defined by pixels or REMs. Indexes illustrated as a number and an animation as a curve. Used in the place of hard-coded values within a project, Design Tokens ensure consistency across all of Alaska's digital products. </p>
@@ -135,13 +131,6 @@ class DeprecatedTokens extends Component {
 
         <h4 className="auro_heading auro_heading--400">Heading 300</h4>
         <auro-tokens-list componentData={_getTokens(textHeading300, [])}></auro-tokens-list>
-
-
-
-
-
-
-
 
         <h3 className="auro_heading auro_heading--600">Unitless values</h3>
         <auro-tokens-list componentData={_getTokens(unitless, [])}></auro-tokens-list>

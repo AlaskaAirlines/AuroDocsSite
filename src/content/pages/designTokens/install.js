@@ -1,14 +1,15 @@
-import React, { Component } from "react";
-import { ButtonNav } from './buttonNav';
+import React from "react";
+import { TokenNav } from './tokenNav';
 import _getTokens from "../../../functions/getTokens"
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from '../../../components/CodeBlock';
 import { MarkdownPageWrapper } from '../../../components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/ods-button/master/docs/auro/api.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/AuroDesignTokens/master/README.md';
 
-class AuroButtonApi extends MarkdownPageWrapper {
+class TokenInstall extends MarkdownPageWrapper {
 
+  // function to get text from MD document
   componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
       this.setState({
@@ -21,7 +22,7 @@ class AuroButtonApi extends MarkdownPageWrapper {
     return (
       <section className="auro_baseType">
 
-        <ButtonNav />
+        <TokenNav />
 
         <section className="ods-markdown">
           <ReactMarkdown
@@ -29,7 +30,8 @@ class AuroButtonApi extends MarkdownPageWrapper {
             escapeHtml={false}
             renderers={{
               code: CodeBlock,
-              heading: this.headingRenderer
+              heading: this.headingRenderer,
+              link: this.linkRenderer
             }}/>
         </section>
       </section>
@@ -37,4 +39,4 @@ class AuroButtonApi extends MarkdownPageWrapper {
   }
 }
 
-export default AuroButtonApi;
+export default TokenInstall;
