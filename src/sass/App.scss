@@ -32,6 +32,8 @@ body {
 
 footer,
 .wrapper > section {
+  margin: var(--auro-size-md);
+
   @include auro_breakpoint--sm {
     max-width: 30rem;
     margin: var(--auro-size-md) auto 0 260px;
@@ -317,6 +319,10 @@ pre {
   bottom: 50px;
   right: 30px;
   z-index: 1000;
+
+  @include auro_breakpoint--sm {
+    display: none;
+  }
 }
 
 .menuCheckbox--label {
@@ -332,10 +338,6 @@ pre {
     right: -12px;
     top: -13px;
     z-index: -1;
-
-  @include auro_breakpoint--sm {
-      display: none;
-    }
   }
 }
 
@@ -438,7 +440,7 @@ pre {
 .link {
   @extend .auro_hyperlink;
 
-  &.active {
+  &.is-active {
     color: #054687;
     text-decoration: none;
     border-bottom: 2px solid currentColor;
@@ -462,5 +464,15 @@ pre {
 
   &:hover {
     padding-bottom: calc(1rem - 1px);
+  }
+}
+
+// this really should be done in the component?
+auro-tokens-list {
+  display: block;
+  overflow: scroll;
+
+  @include auro_breakpoint--md {
+    overflow: unset;
   }
 }

@@ -34,10 +34,10 @@ class AuroButtons extends Component {
       <section id="buttons">
 
         <div role="tablist" className="ods-tablist tabList">
-          <NavLink exact className="tab link" to={`/components/auro/button`} activeClassName="active">Button</NavLink>
-          <NavLink exact className="tab link" to={`/components/auro/button/install`} activeClassName="active">Install</NavLink>
-          <NavLink exact className="tab link" to={`/components/auro/button/api`} activeClassName="active">API</NavLink>
-          <NavLink exact className="tab link" to={`/components/orion/button`} activeClassName="active">Legacy</NavLink>
+          <NavLink exact className="tab link" to={`/components/auro/button`} activeClassName="is-active">Button</NavLink>
+          <NavLink exact className="tab link" to={`/components/auro/button/install`} activeClassName="is-active">Install</NavLink>
+          <NavLink exact className="tab link" to={`/components/auro/button/api`} activeClassName="is-active">API</NavLink>
+          <NavLink exact className="tab link" to={`/components/orion/button`} activeClassName="is-active">Legacy</NavLink>
         </div>
 
         <h1 className="auro_heading auro_heading--display">Auro Button</h1>

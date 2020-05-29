@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import LinkIcons from '../../../components/linkIcons';
 import deprecated from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--deprecated.js';
 
@@ -31,6 +32,11 @@ class DeprecatedTokens extends Component {
   render() {
     return (
       <section>
+        <div role="tablist" className="ods-tablist tabList">
+          <NavLink exact className="tab link" to={`/getting-started/developers/design-tokens`} activeClassName="is-active">Design Tokens</NavLink>
+          <NavLink exact className="tab link" to={`/getting-started/developers/design-tokens/install`} activeClassName="is-active">Install</NavLink>
+          <NavLink exact className="tab link" to={`/getting-started/developers/design-tokens/deprecated`} activeClassName="is-active">Deprecated</NavLink>
+        </div>
         <h1 className="auro_heading auro_heading--display">Deprecated tokens list</h1>
         <p className="auro_baseParagraph">The following is a list of deprecated Orion tokens. Adjacent from a deprecated token will be its new Auro token.</p>
         <p className="auro_baseParagraph">All deprecated tokens will be removed with the next  major release. </p>

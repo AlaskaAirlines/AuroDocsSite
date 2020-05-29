@@ -46,15 +46,15 @@ class DeprecatedTokens extends Component {
   render() {
     return (
       <section>
-        <h1 className="auro_heading auro_heading--display">Auro Design Tokens</h1>
+
 
         <div role="tablist" className="ods-tablist tabList">
-          <NavLink exact className="tab link" to={`/getting-started/developers/design-tokens`} activeClassName="active">Design Tokens</NavLink>
-          <NavLink exact className="tab link" to={`/getting-started/developers/design-tokens/install`} activeClassName="active">Install</NavLink>
-          <NavLink exact className="tab link" to={`/getting-started/developers/design-tokens/deprecated`} activeClassName="active">Deprecated</NavLink>
+          <NavLink exact className="tab link" to={`/getting-started/developers/design-tokens`} activeClassName="is-active">Design Tokens</NavLink>
+          <NavLink exact className="tab link" to={`/getting-started/developers/design-tokens/install`} activeClassName="is-active">Install</NavLink>
+          <NavLink exact className="tab link" to={`/getting-started/developers/design-tokens/deprecated`} activeClassName="is-active">Deprecated</NavLink>
         </div>
 
-
+        <h1 className="auro_heading auro_heading--display">Auro Design Tokens</h1>
         <p>Auro Design Tokens. Named values that store visual design data. Spacing, color, typography, animation, layering, etc. Tokens may represent anything that can be defined by design. Color as a Hex or RGB value. Space defined by pixels or REMs. Indexes illustrated as a number and an animation as a curve. Used in the place of hard-coded values within a project, Design Tokens ensure consistency across all of Alaska's digital products. </p>
         <p>Auro Design Tokens define a single source of truth. When included in any digital product, web app, native app, design file, they define a platform from which any project may spring from with the confidence that it always be in sync at scale across the enterprise. </p>
 
