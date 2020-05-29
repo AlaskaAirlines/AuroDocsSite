@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+import { Nav } from './components/auro/nav';
 import Highlight from 'react-highlight';
 import LinkIcons from '../components/linkIcons';
 import 'highlight.js/styles/github.css';
@@ -20,17 +21,17 @@ class Buttons extends Component {
     return (
       <section id="buttons">
 
-        <div role="tablist" className="ods-tablist tabList">
-          <NavLink exact className="tab link" to={`/components/auro/button`} activeClassName="is-active">Button</NavLink>
-          <NavLink exact className="tab link" to={`/components/auro/button/info`} activeClassName="is-active">Install</NavLink>
-          <NavLink exact className="tab link" to={`/components/auro/button/api`} activeClassName="is-active">API</NavLink>
-          <NavLink exact className="tab link" to={`/components/orion/button`} activeClassName="is-active">Legacy</NavLink>
-        </div>
+        <Nav />
 
         <h1 className="auro_heading auro_heading--display">Orion Button</h1>
-
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
+          npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
+          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/ods-button.js"
+          version={this.showVersion()}
+        />
         <p>The Orion Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
-        <p>See <auro-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>ods-button</code> Orion base element.</p>
+        <p>See <auro-hyperlink relative inline href="/components/auro/button/install">install instructions</auro-hyperlink> for more information as how to install and the full API for the <code>ods-button</code> Orion base element.</p>
         <p>Illustrated in this example is a stand-alone use of <code>ods-button</code>.</p>
 
         <h2 className="auro_heading auro_heading--800">Button use cases</h2>
@@ -302,12 +303,7 @@ import chevronleft from '@alaskaairux/orion-icons/dist/icons/chevronleft_es6.js'
           }
         </Highlight>
 
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
-          npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
-          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/ods-button.js"
-          version={this.showVersion()}
-        />
+
       </section>
     );
   }

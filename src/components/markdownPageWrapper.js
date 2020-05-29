@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
 
 export class MarkdownPageWrapper extends Component {
 
@@ -42,12 +44,11 @@ export class MarkdownPageWrapper extends Component {
         return <a href={url}>{props.children}</a>
       }
 
-      else if (props.href.includes("AlaskaAirlines") || props.href.includes("apache") || props.href.includes("@alaskaairux")) {
-        return <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
-      }
-
       else {
-        return <a href={props.href} class="externalLink" target="_blank" rel="noopener noreferrer">{props.children}</a>
+        return <a href={props.href} target="_blank" rel="noopener noreferrer">
+          {props.children}
+          <ExternalLink />
+        </a>
       }
     }
 

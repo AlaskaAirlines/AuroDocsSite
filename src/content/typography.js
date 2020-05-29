@@ -3,7 +3,6 @@ import LinkIcons from '../components/linkIcons';
 import Highlight from 'react-highlight';
 import header from '../assets/typography/header.png';
 import allTokens from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--allTokens.js';
-import deprecated from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--deprecated.js';
 import _getTokens from "../functions/getTokens";
 import 'highlight.js/styles/github.css';
 
@@ -17,11 +16,6 @@ const textHeading600 = allTokens.text.heading[600];
 const textHeading500 = allTokens.text.heading[500];
 const textHeading400 = allTokens.text.heading[400];
 const textHeading300 = allTokens.text.heading[300];
-
-const weight = deprecated.weight;
-const scale = deprecated.size.scale;
-const fontSize = deprecated.size.font;
-const deprecatedType = {...weight, ...scale, ...fontSize }
 
 class Typography extends Component {
 

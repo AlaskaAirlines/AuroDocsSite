@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import 'sass/markdown.scss';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
 
 export class RawMarkdownWrapper extends Component {
 
@@ -59,7 +61,10 @@ export class RawMarkdownWrapper extends Component {
       }
 
       else {
-        return <a href={props.href} class="externalLink" target="_blank" rel="noopener noreferrer">{props.children}</a>
+        return <a href={props.href} target="_blank" rel="noopener noreferrer">
+          {props.children}
+          <ExternalLink />
+        </a>
       }
     }
 

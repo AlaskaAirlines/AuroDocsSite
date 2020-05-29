@@ -33,6 +33,7 @@ body {
 footer,
 .wrapper > section {
   margin: var(--auro-size-md);
+  padding-top: var(--auro-size-md);
 
   @include auro_breakpoint--sm {
     max-width: 30rem;
@@ -463,21 +464,9 @@ auro-tokens-list {
   }
 }
 
-// extrenal link style
-.externalLink {
-  position: relative;
-  padding-right: var(--auro-size-sm);
-
-  &:after {
-    content: '';
-    mask: url('/svg/external-link-sm.svg');
-    mask-size: cover;
-    position: absolute;
-    top: 0.5px;
-    right: 0;
-    background-size: var(--auro-size-sm) var(--auro-size-sm);
-    height: var(--auro-size-sm);
-    width: var(--auro-size-sm);
-    background-color: var(--auro-color-ui-default-on-light);
+// Hides external icon from repo badges
+img[src*='shields.io'] {
+  & + svg {
+    display: none;
   }
 }

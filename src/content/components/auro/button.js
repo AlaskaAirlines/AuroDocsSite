@@ -36,9 +36,14 @@ class AuroButtons extends Component {
         <Nav />
 
         <h1 className="auro_heading auro_heading--display">Auro Button</h1>
-
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
+          npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
+          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/auro-button.js"
+          version={this.showVersion()}
+        />
         <p>The Auro Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
-        <p>See <auro-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-button" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>auro-button</code> Auro base element.</p>
+        <p>See <auro-hyperlink relative inline href="/components/auro/button/install">install instructions</auro-hyperlink> for more information as how to install and full API for the <code>auro-button</code> Auro base element.</p>
         <p>Illustrated in this example is a stand-alone use of <code>auro-button</code>.</p>
 
         <h2 className="auro_heading auro_heading--800">Button use cases</h2>
@@ -121,12 +126,7 @@ class AuroButtons extends Component {
           {`<auro-button tertiary ondark>Tertiary</auro-button>`}
         </Highlight>
 
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
-          npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
-          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/auro-button.js"
-          version={this.showVersion()}
-        />
+
       </section>
     );
   }
