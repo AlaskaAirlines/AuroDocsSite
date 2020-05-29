@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function SideNav(props) {
 
@@ -19,7 +19,7 @@ export default function SideNav(props) {
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "Compliance", route: "/getting-started/developers/compliance", parent: true },
         { linkTitle: "Contributing", route: "/getting-started/developers/contributing", parent: true },
-        { linkTitle: "Governance", route: "/getting-started/governance", parent: true },
+        { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
       ]
     },
     {
@@ -135,7 +135,7 @@ export default function SideNav(props) {
               {/* TODO: Toggle HIDDEN attr on click to hide/show nav items within a block */}
               <div className="navBlock">
                 {navBlock.items.map(link => (
-                  <Link key={link.route} to={link.route}
+                  <NavLink exact key={link.route} to={link.route} activeClassName="is-active"
 
                     className={`auro_hyperlink auro_hyperlink--nav ${link.active ? 'auro_hyperlink--active': ''} ${link.subNav ? 'auro_hyperlink--subNav': ''} ${link.parent ? 'auro_hyperlink--parent': ''}`}>
 
@@ -149,7 +149,7 @@ export default function SideNav(props) {
 
                       {link.linkTitle}
                     </span>
-                  </Link>
+                  </NavLink>
                 ))}
               </div>
             </section>

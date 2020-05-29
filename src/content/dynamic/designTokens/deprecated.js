@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import { TokenNav } from '../designTokens/tokenNav';
-import LinkIcons from '../../../components/linkIcons';
+import { Nav } from './nav';
+import LinkIcons from 'components/linkIcons';
 import deprecated from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--deprecated.js';
 
 class DeprecatedTokens extends Component {
@@ -34,7 +33,7 @@ class DeprecatedTokens extends Component {
     return (
       <section>
 
-        <TokenNav />
+        <Nav />
 
         <h1 className="auro_heading auro_heading--display">Deprecated tokens list</h1>
         <p className="auro_baseParagraph">The following is a list of deprecated Orion tokens. Adjacent from a deprecated token will be its new Auro token.</p>

@@ -3,9 +3,7 @@
 import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from './markdown-wrapper';
 
 // The following files need to be moved to a better directory structure
-import GettingStartedDevsPage from './pages/gettingStarted/developers/overview.md';
 import GridPage from './pages/grid.md';
-import PhilosophyPage from './pages/philosophy/philosophy.md';
 import IconsDesignPage from './pages/iconsDesign/index.md';
 import LayoutPage from './pages/layout.md';
 import SpacingPage from './pages/spacing.md';
@@ -13,9 +11,53 @@ import TypeDesignGuidlinesPage from './pages/typeDesignGuidlines.md';
 import VoiceTonePage from './pages/voiceTone.md';
 import ColorTransparentPage from './pages/colors/transparent.md';
 
-export class GettingStartedDevs extends InternalMarkdownWrapper {
-  readme = GettingStartedDevsPage
+// Markdown content
+import PhilosophyPage from './markdown/philosophy.md';
+import GettingStartedDevsOverviewPage from './markdown/developerOverview.md';
+
+// Markdown classes
+// wrapper for general docs section
+class ExternalDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/auro_docs"
+  codeURL = "https://github.com/AlaskaAirlines/auro_docs/tree/master/src"
 }
+
+export class Philosophy extends InternalMarkdownWrapper {
+  readme = PhilosophyPage
+}
+
+export class GettingStartedDevsOverview extends InternalMarkdownWrapper {
+  readme = GettingStartedDevsOverviewPage
+}
+
+export class WCGenerator extends ExternalMarkdownWrapper {
+  module = "@alaskaairux/wc-generator"
+  githubURL = "https://github.com/AlaskaAirlines/wc-generator"
+  codeURL = "https://github.com/AlaskaAirlines/WC-Generator/tree/master/template"
+  readme = "README.md"
+}
+
+export class ComplianceDocs extends ExternalDocs {
+  readme = "src/COMPLIANCE.md"
+}
+
+export class ContributingDocs extends ExternalDocs {
+  readme = "src/CONTRIBUTING.md"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export class Grid extends InternalMarkdownWrapper {
   readme = GridPage
@@ -29,9 +71,7 @@ export class Layout extends InternalMarkdownWrapper {
   readme = LayoutPage
 }
 
-export class Philosophy extends InternalMarkdownWrapper {
-  readme = PhilosophyPage
-}
+
 
 export class Spacing extends InternalMarkdownWrapper {
   readme = SpacingPage
@@ -49,82 +89,67 @@ export class ColorTransparent extends InternalMarkdownWrapper {
   readme = ColorTransparentPage
 }
 
-// wrapper for general docs section
-class Docs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/auro_docs"
-  codeURL = "https://github.com/AlaskaAirlines/auro_docs/tree/master/src"
-}
 
-export class A11yDocs extends Docs {
+
+export class A11yDocs extends ExternalDocs {
   readme = "src/A11Y.md"
 }
 
-export class BabelSupportDocs extends Docs {
+export class BabelSupportDocs extends ExternalDocs {
   readme = "src/BABEL_SUPPORT.md"
 }
 
-export class BrowsersSupportDocs extends Docs {
+export class BrowsersSupportDocs extends ExternalDocs {
   readme = "src/BROWSER_SUPPORT.md"
 }
 
-export class ContributingDocs extends Docs {
-  readme = "src/CONTRIBUTING.md"
-}
 
-export class CustomPropertiesDocs extends Docs {
+
+export class CustomPropertiesDocs extends ExternalDocs {
   readme = "src/CUSTOM_PROPERTIES.md"
 }
 
-export class CssConventionsDocs extends Docs {
+export class CssConventionsDocs extends ExternalDocs {
   readme = "src/CSSCONVENTIONS.md"
 }
 
-export class FocusVisibleDocs extends Docs {
+export class FocusVisibleDocs extends ExternalDocs {
   readme = "src/FOCUS_VISIBLE.md"
 }
 
-export class IsTouchingDocs extends Docs {
+export class IsTouchingDocs extends ExternalDocs {
   readme = "src/IS_TOUCHING.md"
 }
 
-export class PolyfillDocs extends Docs {
+export class PolyfillDocs extends ExternalDocs {
   readme = "src/POLYFILL.md"
 }
 
-export class TechDetailsDocs extends Docs {
+export class TechDetailsDocs extends ExternalDocs {
   readme = "src/TECH_DETAILS.md"
 }
 
-export class SlotsDocs extends Docs {
+export class SlotsDocs extends ExternalDocs {
   readme = "src/SLOTS.md"
 }
 
-export class TestsDocs extends Docs {
+export class TestsDocs extends ExternalDocs {
   readme = "src/TESTS.md"
 }
 
-export class ComponentsDocs extends Docs {
+export class ComponentsDocs extends ExternalDocs {
   readme = "src/COMPONENTS.md"
 }
 
-export class GovernanceDocs extends Docs {
+export class GovernanceDocs extends ExternalDocs {
   readme = "src/GOVERNANCE.md"
 }
 
-export class ComplianceDocs extends Docs {
-  readme = "src/COMPLIANCE.md"
-}
 
-export class WhyCustomelementsDocs extends Docs {
+
+export class WhyCustomelementsDocs extends ExternalDocs {
   readme = "src/WHY_CUSTOMELEMENT.md"
 }
-
-// docs from other repos
-// export class DesignTokensDocs extends ExternalMarkdownWrapper {
-//   githubURL = "https://github.com/AlaskaAirlines/AuroDesignTokens"
-//   codeURL = "https://github.com/AlaskaAirlines/AuroDesignTokens/tree/master/src"
-//   readme = "README.md"
-// }
 
 export class WebCoreStyleSheets extends ExternalMarkdownWrapper {
   module = "@alaskaairux/orion-web-core-style-sheets"
@@ -133,12 +158,7 @@ export class WebCoreStyleSheets extends ExternalMarkdownWrapper {
   readme = "README.md"
 }
 
-export class Generator extends ExternalMarkdownWrapper {
-  module = "@alaskaairux/wc-generator"
-  githubURL = "https://github.com/AlaskaAirlines/wc-generator"
-  codeURL = "https://github.com/AlaskaAirlines/WC-Generator/tree/master/template"
-  readme = "README.md"
-}
+
 
 export class AuroIconsInfo extends ExternalMarkdownWrapper {
   module = "@alaskaairux/icons"
@@ -173,26 +193,11 @@ export class AuroHyperlinkDocs extends ExternalMarkdownWrapper {
   readme = "README.md"
 }
 
-// Docs from individual repos
-
-// ods/auro button
-// export class AuroButtonInfo extends ExternalMarkdownWrapper {
-//   githubURL = "https://github.com/AlaskaAirlines/ods-button"
-//   codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
-//   readme = "README.md"
-// }
-
 export class OdsButtonInfo extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/ods-button"
   codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
   readme = "README.md"
 }
-
-// export class AuroButtonApi extends ExternalMarkdownWrapper {
-//   githubURL = "https://github.com/AlaskaAirlines/ods-button"
-//   codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
-//   readme = "docs/auro/api.md"
-// }
 
 export class OdsButtonApi extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/ods-button"

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import '../sass/markdown.scss';
+import 'sass/markdown.scss';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from '../components/CodeBlock';
+import CodeBlock from 'components/CodeBlock';
 
 export class MarkdownWrapper extends Component {
 
@@ -49,7 +49,7 @@ export class MarkdownWrapper extends Component {
       if (props.href.includes("auro.alaskaair.com")) {
 
         let url = props.href
-        url = url.replace(/^.*\/\/[^\/]+/, '')
+        url = url.replace(/^.*\/\/[^/]+/, '')
         return <a href={url}>{props.children}</a>
       }
 

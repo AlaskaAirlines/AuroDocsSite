@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import _getTokens from "../functions/getTokens"
 
 export class MarkdownPageWrapper extends Component {
 
@@ -34,12 +33,17 @@ export class MarkdownPageWrapper extends Component {
     let pattern = /^((http|https|ftp):\/\/)/;
 
     if(pattern.test(props.href)) {
+
       // filter out links that are set to internal URLs
       if (props.href.includes("auro.alaskaair.com")) {
 
         let url = props.href
-        url = url.replace(/^.*\/\/[^\/]+/, '')
+        url = url.replace(/^.*\/\/[^/]+/, '')
         return <a href={url}>{props.children}</a>
+      }
+
+      else if (props.href.includes("AlaskaAirlines") || props.href.includes("apache") || props.href.includes("@alaskaairux")) {
+        return <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
       }
 
       else {

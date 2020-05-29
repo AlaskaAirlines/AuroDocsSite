@@ -285,9 +285,12 @@ pre {
   }
 }
 
+.auro_hyperlink.is-active,
 .auro_hyperlink--active,
 .hyperlink--active {
   color: var(--auro-color-text-primary-on-light) !important;
+  text-decoration: none !important;
+  cursor: default;
 }
 
 .auro_hyperlink--active.auro_hyperlink--nav:not(.is-touching):hover,
@@ -476,7 +479,9 @@ auro-tokens-list {
 }
 
 // extrenal link style
-.externalLink:not([href*='npmjs']):not([href*='travis']):not([href*='apache']) {
+// .externalLink:not([href*='npmjs']):not([href*='travis']):not([href*='apache']):not([href*='github']) {
+
+.externalLink {
   position: relative;
   padding-right: var(--auro-size-sm);
 

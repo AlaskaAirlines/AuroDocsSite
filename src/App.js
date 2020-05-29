@@ -40,14 +40,8 @@ import Options from './content/options';
 import Toast from './content/toast';
 import Typography from './content/typography';
 import TypographyDeprecated from './content/typographyDeprecated';
-import DeprecatedTokens from './content/pages/deprecated/tokens';
-
 import AuroButtonApi from './content/components/auro/buttonApi';
 import AuroButtonInstall from './content/components/auro/buttonInstall';
-
-
-import DesignTokens from './content/pages/designTokens/tokens';
-import DesignTokensInstall from './content/pages/designTokens/install';
 
 // imported block components
 import Footer from './components/footer';
@@ -55,35 +49,40 @@ import Header from './components/header';
 import SideNav from './components/side-nav';
 
 
+
+
+
+// cleaned up js docs
+import DesignTokens from './content/dynamic/designTokens/tokens';
+import DeprecatedTokens from './content/dynamic/designTokens/deprecated';
+import DesignTokensInstall from './content/dynamic/designTokens/install';
+
+
+
 // import resources for markdown docs from ./src/content/docs
 // then add the appropiate Route below
 import {
   A11yDocs,
   AngularDemoDocs,
-  // AuroButtonInfo,
   OdsButtonInfo,
-  // AuroButtonApi,
   OdsButtonApi,
   AuroHyperlinkDocs,
   BabelSupportDocs,
   BrowsersSupportDocs,
   ColorTransparent,
   ComponentsDocs,
-  ContributingDocs,
-  ComplianceDocs,
+
+
   CssConventionsDocs,
   CustomPropertiesDocs,
-  // DesignTokensDocs,
   AuroIconsInfo,
   FocusVisibleDocs,
-  GettingStartedDevs,
   Grid,
   GovernanceDocs,
   IsTouchingDocs,
   IconsDesign,
   JavascriptDemoDocs,
   Layout,
-  Philosophy,
   PolyfillDocs,
   ReactDemoDocs,
   SlotsDocs,
@@ -94,7 +93,16 @@ import {
   VoiceTone,
   WhyCustomelementsDocs,
   WebCoreStyleSheets,
-  Generator
+
+
+  // cleaned up markdown docs
+  Philosophy,
+  GettingStartedDevsOverview,
+  WCGenerator,
+  ComplianceDocs,
+  ContributingDocs,
+
+
 } from './content/docs';
 
 function App() {
@@ -117,14 +125,21 @@ function App() {
             <Route exact path='/' component={Philosophy} />
             <Route exact path="/philosophy"><Philosophy /></Route>
 
-            {/* Getting Started */}
-            <Route exact path="/getting-started/developers/overview"><GettingStartedDevs /></Route>
-            <Route exact path="/getting-started/developers/generator"><Generator /></Route>
+            {/* Getting Started/developers */}
+            <Route exact path="/getting-started/developers/overview"><GettingStartedDevsOverview /></Route>
+            <Route exact path="/getting-started/developers/generator"><WCGenerator /></Route>
 
-            {/* Auro Core */}
             <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
-            <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensInstall /></Route>
-            <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
+              <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensInstall /></Route>
+              <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
+
+            <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
+            <Route exact path="/getting-started/developers/contributing"><ContributingDocs /></Route>
+            <Route exact path="/getting-started/developers/governance"><GovernanceDocs /></Route>
+
+
+
+
 
             {/* Color */}
             <Route exact path="/core/color"><ColorsPage /></Route>
@@ -187,9 +202,7 @@ function App() {
             <Route exact path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
 
             {/* Process */}
-            <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
-            <Route exact path="/getting-started/developers/contributing"><ContributingDocs /></Route>
-            <Route exact path="/getting-started/governance"><GovernanceDocs /></Route>
+
 
             {/* Example Projects  */}
             {/* Content for these pages need to be updated and have better descriptions of project */}

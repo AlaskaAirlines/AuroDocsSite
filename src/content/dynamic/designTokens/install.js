@@ -1,6 +1,5 @@
 import React from "react";
-import { TokenNav } from './tokenNav';
-import _getTokens from "../../../functions/getTokens"
+import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from '../../../components/CodeBlock';
 import { MarkdownPageWrapper } from '../../../components/markdownPageWrapper';
@@ -22,7 +21,7 @@ class TokenInstall extends MarkdownPageWrapper {
     return (
       <section className="auro_baseType">
 
-        <TokenNav />
+        <Nav />
 
         <section className="ods-markdown">
           <ReactMarkdown

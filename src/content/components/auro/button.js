@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ButtonNav } from './buttonNav';
+import { Nav } from './nav';
 import Highlight from 'react-highlight';
 import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
@@ -33,7 +33,7 @@ class AuroButtons extends Component {
     return (
       <section id="buttons">
 
-        <ButtonNav />
+        <Nav />
 
         <h1 className="auro_heading auro_heading--display">Auro Button</h1>
 

@@ -1,9 +1,8 @@
-import React, { Component } from "react";
-import { ButtonNav } from './buttonNav';
-import _getTokens from "../../../functions/getTokens"
+import React from "react";
+import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from '../../../components/CodeBlock';
-import { MarkdownPageWrapper } from '../../../components/markdownPageWrapper';
+import CodeBlock from 'components/CodeBlock';
+import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/ods-button/master/docs/auro/api.md';
 
@@ -21,7 +20,7 @@ class AuroButtonApi extends MarkdownPageWrapper {
     return (
       <section className="auro_baseType">
 
-        <ButtonNav />
+        <Nav />
 
         <section className="ods-markdown">
           <ReactMarkdown

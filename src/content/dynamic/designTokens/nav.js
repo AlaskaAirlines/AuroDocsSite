@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
-export class TokenNav extends Component {
+export class Nav extends Component {
 
   render() {
     return (

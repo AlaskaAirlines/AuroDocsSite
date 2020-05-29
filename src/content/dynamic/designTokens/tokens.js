@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { TokenNav } from './tokenNav';
-import { NavLink } from "react-router-dom";
+import { Nav } from './nav';
 import LinkIcons from '../../../components/linkIcons';
 import _getTokens from "../../../functions/getTokens";
 import allTokens from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--allTokens.js';
@@ -48,7 +47,7 @@ class DeprecatedTokens extends Component {
     return (
       <section>
 
-        <TokenNav />
+        <Nav />
 
         <h1 className="auro_heading auro_heading--display">Auro Design Tokens</h1>
         <p>Auro Design Tokens. Named values that store visual design data. Spacing, color, typography, animation, layering, etc. Tokens may represent anything that can be defined by design. Color as a Hex or RGB value. Space defined by pixels or REMs. Indexes illustrated as a number and an animation as a curve. Used in the place of hard-coded values within a project, Design Tokens ensure consistency across all of Alaska's digital products. </p>
@@ -56,7 +55,7 @@ class DeprecatedTokens extends Component {
 
         <p>Tokens are stored as JSON data and can be output as CSS custom properties, Sass, native iOS and Android, among many others. Tokens are represented here as <auro-hyperlink target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">CSS custom properties</auro-hyperlink>.
 
-        See <Link className="link" to={`/core/design-tokens/info`}>Design Tokens API</Link> for a full listing currently supported output types.</p>
+        See <Link className="link" to={`/getting-started/developers/design-tokens/install`}>Design Tokens API</Link> for a full listing currently supported output types.</p>
 
         <h3 className="auro_heading auro_heading--600">Animation</h3>
         <auro-tokens-list componentData={_getTokens(animation, [])}></auro-tokens-list>
