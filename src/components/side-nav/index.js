@@ -17,8 +17,6 @@ export default function SideNav(props) {
         { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
         { linkTitle: "Generator", route: "/getting-started/developers/generator", parent: true  },
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
-        { linkTitle: "- install", route: "/getting-started/developers/design-tokens/install", subNav: true },
-        { linkTitle: "- deprecated", route: "/getting-started/developers/design-tokens/deprecated", subNav: true },
         { linkTitle: "Compliance", route: "/getting-started/developers/compliance", parent: true },
         { linkTitle: "Contributing", route: "/getting-started/developers/contributing", parent: true },
         { linkTitle: "Governance", route: "/getting-started/governance", parent: true },
@@ -63,11 +61,11 @@ export default function SideNav(props) {
       ]
     },
     {
-      title: "Components",
+      header: "Components",
       items: [
         { linkTitle: "Button", route: '/components/auro/button', parent: true },
-        { linkTitle: "- info", route: '/components/auro/button/info', subNav: true },
-        { linkTitle: "- api", route: '/components/auro/button/api', subNav: true },
+        // { linkTitle: "- Install", route: '/components/auro/button/info', subNav: true },
+        // { linkTitle: "- api", route: '/components/auro/button/api', subNav: true },
         { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
         { linkTitle: "- info", route: '/components/auro/hyperlink/info', subNav: true }
       ]
@@ -75,9 +73,9 @@ export default function SideNav(props) {
     {
       title: "Legacy Components",
       items: [
-        { linkTitle: "Button", route: '/components/orion/button', parent: true },
-        { linkTitle: "- info", route: '/components/orion/button/info', subNav: true },
-        { linkTitle: "- api", route: '/components/orion/button/api', subNav: true },
+        // { linkTitle: "Button", route: '/components/orion/button', parent: true },
+        // { linkTitle: "- info", route: '/components/orion/button/info', subNav: true },
+        // { linkTitle: "- api", route: '/components/orion/button/api', subNav: true },
         { linkTitle: "Hyperlink", route: '/components/orion/hyperlink', parent: true },
         { linkTitle: "Input Options", route: "/components/orion/options", parent: true },
         // { linkTitle: "Toast", route: "/components/orion/toast" },
@@ -85,7 +83,7 @@ export default function SideNav(props) {
       ]
     },
     {
-      title: "Dev resources",
+      header: "Dev resources",
       items: [
         // { linkTitle: "A11y", route: "/support/a11y" },
         // { linkTitle: "Babel Support", route: "/support/babelSupport" },

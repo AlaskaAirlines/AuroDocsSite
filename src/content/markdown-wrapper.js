@@ -105,13 +105,6 @@ export class InternalMarkdownWrapper extends MarkdownWrapper {
             }}
           />
         </section>
-
-        {/* <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionDesignTokens"
-          npm="https://www.npmjs.com/package/@alaskaairux/orion-design-tokens"
-          code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
-          version={this.showVersion()}
-        /> */}
       </section>
     );
   }

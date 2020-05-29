@@ -7,6 +7,7 @@
 @import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/animation";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/anchor-roleTab";
 
 
 $prefix: true;
@@ -22,10 +23,6 @@ $focus: true;
 
 body {
   background-color: var(--auro-color-background-lightest);
-}
-
-.link {
-  @extend .auro_hyperlink;
 }
 
 .ondark {
@@ -437,3 +434,33 @@ pre {
   color: white;
 }
 // -------------------------------------------------------------
+
+.link {
+  @extend .auro_hyperlink;
+
+  &.active {
+    color: #054687;
+    text-decoration: none;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: calc(1rem - 1px);
+    cursor: default !important;
+  }
+}
+
+.tabList {
+  height: auto;
+  line-height: calc(3rem - 1px);
+  margin-bottom: 2rem;
+}
+
+.tab {
+  @include auro_anchorTab(sass, noncomponent);
+
+  display: inline-block;
+  border-color: transparent;
+  text-decoration: none;
+
+  &:hover {
+    padding-bottom: calc(1rem - 1px);
+  }
+}
