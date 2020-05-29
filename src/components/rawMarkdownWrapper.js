@@ -3,7 +3,7 @@ import 'sass/markdown.scss';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 
-export class MarkdownWrapper extends Component {
+export class RawMarkdownWrapper extends Component {
 
   constructor(props) {
     super(props);
@@ -45,12 +45,17 @@ export class MarkdownWrapper extends Component {
     let pattern = /^((http|https|ftp):\/\/)/;
 
     if(pattern.test(props.href)) {
+
       // filter out links that are set to internal URLs
       if (props.href.includes("auro.alaskaair.com")) {
 
         let url = props.href
         url = url.replace(/^.*\/\/[^/]+/, '')
         return <a href={url}>{props.children}</a>
+      }
+
+      else if (props.href.includes("AlaskaAirlines") || props.href.includes("apache") || props.href.includes("@alaskaairux")) {
+        return <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
       }
 
       else {
@@ -66,7 +71,7 @@ export class MarkdownWrapper extends Component {
 
 
 
-export class ExternalMarkdownWrapper extends MarkdownWrapper {
+export class ExternalMarkdownWrapper extends RawMarkdownWrapper {
 
   getMarkdown() {
     const details = this.githubURL.split("github.com/")[1].split("/");
@@ -98,7 +103,7 @@ export class ExternalMarkdownWrapper extends MarkdownWrapper {
   }
 }
 
-export class InternalMarkdownWrapper extends MarkdownWrapper {
+export class InternalMarkdownWrapper extends RawMarkdownWrapper {
 
   getMarkdown() {
     return this.readme

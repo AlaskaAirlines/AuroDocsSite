@@ -27,7 +27,7 @@ The [Design System Web Component Generator](/getting-started/developers/generato
 
 When starting a new project and using Auro with web components, while there are many differences between the various frameworks, this setup is constant.
 
-The following steps address the basic [compliance](/support/compliance) model.
+The following steps address the basic [compliance](/getting-started/developers/compliance) model.
 
 ### Design tokens
 
@@ -35,11 +35,11 @@ The following steps address the basic [compliance](/support/compliance) model.
 $ npm i @alaskaairux/orion-design-tokens
 ```
 
-[Design tokens](/core/design-tokens) are a set of pre-defined variables used to manage the design of products. Installing and integrating the design tokens in to your front-end build will give you the ability to use the colors, spacing, sizing and other aspects of the design system.
+[Design tokens](/getting-started/developers/design-tokens) are a set of pre-defined variables used to manage the design of products. Installing and integrating the design tokens in to your front-end build will give you the ability to use the colors, spacing, sizing and other aspects of the design system.
 
 The design tokens are the **absolute base of the system** and at bare minimum this package alone will get you started with being able to build design system compliant experiences.
 
-For more information, be sure to see the full [design token API info](/core/design-tokens/info)
+For more information, be sure to see the full [design token API info](/getting-started/developers/design-tokens/install)
 
 ### Web Core Style Sheets
 
@@ -55,7 +55,7 @@ The Icons package contains standard set of SVG icons that can be used with any w
 $ npm i @alaskaairux/orion-icons -D
 ```
 
-Further information can be found in the [icons](/core/auro-icons/info) section.
+Further information can be found in the [icons](/core/auro-icons/install) section.
 
 ### Auro Components
 

@@ -144,22 +144,7 @@ pre {
     color: var(--auro-color-base-crimson-500);
   }
 }
-// --------------------------------------
 
-// .util_swatchBox {
-//   margin-bottom: var(--auro-size-xxl);
-//   @include breakpoint-narrow {
-//     display: flex;
-//     flex-flow: row wrap;
-//   }
-// }
-
-// ods-swatch {
-//   display: block;
-//   flex-basis: 30%;
-//   flex-grow: 2;
-//   overflow: hidden;
-// }
 
 // ------------ icons view --------------------
 .iconsWrapper {
@@ -479,8 +464,6 @@ auro-tokens-list {
 }
 
 // extrenal link style
-// .externalLink:not([href*='npmjs']):not([href*='travis']):not([href*='apache']):not([href*='github']) {
-
 .externalLink {
   position: relative;
   padding-right: var(--auro-size-sm);

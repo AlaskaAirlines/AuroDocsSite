@@ -112,12 +112,47 @@ class Colors extends Component {
     return React.createElement('h' + props.level, {id: slug}, props.children)
   }
 
+  // function to re-write anchor element based on type of URL
+  linkRenderer(props) {
+    let pattern = /^((http|https|ftp):\/\/)/;
+
+    if(pattern.test(props.href)) {
+
+      // filter out links that are set to internal URLs
+      if (props.href.includes("auro.alaskaair.com")) {
+
+        let url = props.href
+        url = url.replace(/^.*\/\/[^/]+/, '')
+        return <a href={url}>{props.children}</a>
+      }
+
+      else if (props.href.includes("AlaskaAirlines") || props.href.includes("apache") || props.href.includes("@alaskaairux")) {
+        return <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>
+      }
+
+      else {
+        return <a href={props.href} class="externalLink" target="_blank" rel="noopener noreferrer">{props.children}</a>
+      }
+    }
+
+    else if (!pattern.test(props.href)) {
+      return <a href={props.href}>{props.children}</a>
+    }
+  }
+
   render() {
     return (
       <section className="auro_baseType">
         <h1 className="auro_heading auro_heading--display">Color usage</h1>
 
         <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
+
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/OrionDesignTokens"
+          npm="https://www.npmjs.com/package/@alaskaairux/orion-design-tokens"
+          code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
+          version={this.showVersion()}
+        />
 
         <p className="auro_p">The colors within our digital experiences differs from our physical materials. What may appear vibrant on paper may seem dull and uninspired on a glowing screen. As a result, the colors we use within our digital experiences are adjusted to create a more vibrant and inspirational experiences for our guests. In addition to our core colors, an extended palette has been created to add warmth, deeper connection, and more human characteristics to the digital brand.</p>
 
@@ -235,16 +270,10 @@ class Colors extends Component {
             escapeHtml={false}
             renderers={{
               code: CodeBlock,
-              heading: this.HeadingRenderer
+              heading: this.HeadingRenderer,
+              link: this.linkRenderer
             }}/>
         </section>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionDesignTokens"
-          npm="https://www.npmjs.com/package/@alaskaairux/orion-design-tokens"
-          code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

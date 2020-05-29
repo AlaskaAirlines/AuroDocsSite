@@ -1,6 +1,6 @@
 
 // Import primary markdown tools
-import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from './markdown-wrapper';
+import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from '../components/rawMarkdownWrapper';
 
 // The following files need to be moved to a better directory structure
 import GridPage from './pages/grid.md';

@@ -1,7 +1,5 @@
 # Design Guidlines
 
-## Foundational
-
 ### Our typeface
 
 ![](/images/content/typography/Type_OurTypeface.jpg)
@@ -57,7 +55,7 @@ Two modes define our type's color.
 * On-light: primary site environment
 * On-dark: copy on dark photography; further usage to be defined.
 
-Additional details about the usage of typography on light or dark backgrounds can be found within [color - design tokens](/colors).
+Additional details about the usage of typography on light or dark backgrounds can be found within [color usage](/core/color) page.
 
 ### Reverse weight scale
 
