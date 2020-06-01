@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import 'highlight.js/styles/github.css';
 import Highlight from 'react-highlight';
-import LinkIcons from '../components/linkIcons';
+import LinkIcons from 'components/linkIcons';
+import { Nav } from './nav';
 
 class Hyperlink extends Component {
   showVersion() {
-    const pjson = require('../../package.json');
+    const pjson = require('../../../../package.json');
     const dependencies = pjson.dependencies['@alaskaairux/ods-hyperlink'];
 
     return `@alaskaairux/ods-hyperlink: ${dependencies}`;
@@ -14,12 +15,9 @@ class Hyperlink extends Component {
   render() {
     return (
       <section id="hyperlinks">
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink"
-          npm="https://www.npmjs.com/package/@alaskaairux/ods-hyperlink"
-          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink/blob/master/src/ods-hyperlink.js"
-          version={this.showVersion()}
-        />
+
+        <Nav />
+
         <h1 className="auro_heading auro_heading--display">ODS Hyperlink</h1>
 
         <div className="indention util_fontWeightLight util_type--secondary">
@@ -159,6 +157,14 @@ class Hyperlink extends Component {
 </div>`
           }
         </Highlight>
+
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink"
+          npm="https://www.npmjs.com/package/@alaskaairux/ods-hyperlink"
+          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink/blob/master/src/ods-hyperlink.js"
+          version={this.showVersion()}
+        />
+
       </section>
     );
   }

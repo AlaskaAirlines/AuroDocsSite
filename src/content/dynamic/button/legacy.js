@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-// import { NavLink } from "react-router-dom";
-import { Nav } from './components/auro/nav';
+import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from '../components/linkIcons';
+import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 import closelg from '@alaskaairux/orion-icons/dist/icons/close-lg_es6.js';
 import chevronright from '@alaskaairux/orion-icons/dist/icons/interface/chevron-right_es6.js';
@@ -11,7 +10,7 @@ import chevronleft from '@alaskaairux/orion-icons/dist/icons/interface/chevron-l
 class Buttons extends Component {
 
   showVersion() {
-    const pjson = require('../../package.json');
+    const pjson = require('../../../../package.json');
     const dependencies = pjson.dependencies['@alaskaairux/ods-button'];
 
     return `@alaskaairux/ods-button: ${dependencies}`;

@@ -30,6 +30,10 @@ body {
   padding: 10px 20px;
 }
 
+hr {
+  margin: var(--auro-size-xxl) 0;
+}
+
 footer,
 .wrapper > section {
   margin: var(--auro-size-md);

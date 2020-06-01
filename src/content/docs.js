@@ -58,7 +58,6 @@ export class ContributingDocs extends ExternalDocs {
 
 
 
-
 export class Grid extends InternalMarkdownWrapper {
   readme = GridPage
 }
@@ -185,22 +184,4 @@ export class JavascriptDemoDocs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo"
   codeURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo/tree/master/src"
   readme = "README.md"
-}
-
-export class AuroHyperlinkDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink"
-  codeURL = "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink/tree/master/src"
-  readme = "README.md"
-}
-
-export class OdsButtonInfo extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/ods-button"
-  codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
-  readme = "README.md"
-}
-
-export class OdsButtonApi extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/ods-button"
-  codeURL = "https://github.com/AlaskaAirlines/ods-button/tree/master/src"
-  readme = "docs/ods/api.md"
 }

@@ -1,27 +1,13 @@
 import React, { Component } from "react";
 import 'highlight.js/styles/github.css';
 import Highlight from 'react-highlight';
-import LinkIcons from '../components/linkIcons';
-import buildStatus from '@alaskaairux/ods-hyperlink/docs/BUILD_STATUS.md'
+import LinkIcons from 'components/linkIcons';
+import { Nav } from './nav';
 
 class Hyperlink extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      docsBuildStatus: null
-    }
-  };
-
-  componentWillMount() {
-    fetch(buildStatus).then((response) => response.text()).then((text) => {
-      this.setState({
-        docsBuildStatus: text
-      })
-    })
-  }
 
   showVersion() {
-    const pjson = require('../../package.json');
+    const pjson = require('../../../../package.json');
     const dependencies = pjson.dependencies['@alaskaairux/ods-hyperlink'];
 
     return `@alaskaairux/ods-hyperlink: ${dependencies}`;
@@ -43,6 +29,8 @@ class Hyperlink extends Component {
   render() {
     return (
       <section id="hyperlinks">
+
+        <Nav />
 
         <h1 className="auro_heading auro_heading--display">Auro Hyperlink</h1>
 
@@ -140,15 +128,15 @@ class Hyperlink extends Component {
 // supporting javascript //
 
 sayHello() {
-  console.log('Hello, you clicked the button!');
+  alert('Hello, you clicked the button!');
 }
 
 handleKeyPress = (event) => {
   if(event.keyCode === 13){
-    console.log('Win for a11y! The return key submits!')
+    alert('Win for a11y! The return key submits!')
   }
   else if(event.keyCode === 32){
-    console.log('Win for a11y! The spacebar submits!')
+    alert('Win for a11y! The spacebar submits!')
   }
 }`
 }

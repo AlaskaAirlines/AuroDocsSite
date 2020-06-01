@@ -24,24 +24,39 @@ import ScrollToTop from './components/ScrollToTop';
 // JS content files
 import NotFound from './content/notFound.js';
 
-import AuroButton from './content/components/auro/button';
-import AuroHyperlink from './content/auro-hyperlink';
+import AuroButton from './content/dynamic/button/button';
+import AuroButtonApi from './content/dynamic/button/api';
+import AuroButtonInstall from './content/dynamic/button/install';
+import Button from './content/dynamic/button/legacy'; // legacy
 
+import AuroHyperlink from './content/dynamic/hyperlink/hyperlink';
+import AuroHyperlinkInstall from './content/dynamic/hyperlink/install';
+import AuroHyperlinkApi from './content/dynamic/hyperlink/api';
+import Hyperlink from './content/dynamic/hyperlink/legacy'; // legacy
+
+import Options from './content/dynamic/inputOptions/legacy'; // legacy
 
 
 // The following files need to be moved to a better directory structure
-import Button from './content/button';
+
 import ColorsPage from './content/colors';
 import ColorDigitalPersonality from './content/digitalPersonality';
-import Hyperlink from './content/hyperlink';
+
+
+
+
+
+
+
+
+
 import AuroIcons from './content/auroIcons';
 import InputText from './content/inputtext';
-import Options from './content/options';
+
 import Toast from './content/toast';
 import Typography from './content/typography';
 import TypographyDeprecated from './content/typographyDeprecated';
-import AuroButtonApi from './content/components/auro/buttonApi';
-import AuroButtonInstall from './content/components/auro/buttonInstall';
+
 
 // imported block components
 import Footer from './components/footer';
@@ -64,15 +79,10 @@ import DesignTokensInstall from './content/dynamic/designTokens/install';
 import {
   A11yDocs,
   AngularDemoDocs,
-  OdsButtonInfo,
-  OdsButtonApi,
-  AuroHyperlinkDocs,
   BabelSupportDocs,
   BrowsersSupportDocs,
   ColorTransparent,
   ComponentsDocs,
-
-
   CssConventionsDocs,
   CustomPropertiesDocs,
   AuroIconsInfo,
@@ -128,18 +138,13 @@ function App() {
             {/* Getting Started/developers */}
             <Route exact path="/getting-started/developers/overview"><GettingStartedDevsOverview /></Route>
             <Route exact path="/getting-started/developers/generator"><WCGenerator /></Route>
-
-            <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
-              <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensInstall /></Route>
-              <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
-
             <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
             <Route exact path="/getting-started/developers/contributing"><ContributingDocs /></Route>
             <Route exact path="/getting-started/developers/governance"><GovernanceDocs /></Route>
-
-
-
-
+            {/* Design Tokens */}
+            <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
+            <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensInstall /></Route>
+            <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
 
             {/* Color */}
             <Route exact path="/core/color"><ColorsPage /></Route>
@@ -164,20 +169,39 @@ function App() {
             {/* Voice */}
             <Route path="/core/voice-and-tone"><VoiceTone /></Route>
 
-            {/* Auro Components */}
+            {/* Auro Button */}
             <Route exact path="/components/auro/button"><AuroButton /></Route>
             <Route exact path="/components/auro/button/install"><AuroButtonInstall /></Route>
-            {/* <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route> */}
             <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
+            {/* Legacy */}
+            <Route exact path="/components/orion/button"><Button /></Route>
+
+            {/* Auro Hyperlink */}
             <Route exact path="/components/auro/hyperlink"><AuroHyperlink /></Route>
-            <Route exact path="/components/auro/hyperlink/info"><AuroHyperlinkDocs /></Route>
+            <Route exact path="/components/auro/hyperlink/install"><AuroHyperlinkInstall /></Route>
+            <Route exact path="/components/auro/hyperlink/api"><AuroHyperlinkApi /></Route>
+            <Route exact path="/components/orion/hyperlink"><Hyperlink /></Route>
+
+            {/* inputOptions */}
+            <Route exact path="/components/orion/inputOptions/legacy"><Options /></Route>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             {/* Orion Components */}
-            <Route exact path="/components/orion/button"><Button /></Route>
-            <Route exact path="/components/orion/button/info"><OdsButtonInfo /></Route>
-            <Route exact path="/components/orion/button/api"><OdsButtonApi /></Route>
-            <Route exact path="/components/orion/hyperlink"><Hyperlink /></Route>
-            <Route exact path="/components/orion/options"><Options /></Route>
+
             <Route exact path="/components/orion/toast"><Toast /></Route> {/* not used */} {/* reevaluate content */}
             <Route exact path="/components/orion/inputtext"><InputText /></Route>
 

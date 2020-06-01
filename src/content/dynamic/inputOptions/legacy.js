@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Highlight from 'react-highlight';
-import LinkIcons from '../components/linkIcons';
+import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
+import { Nav } from './nav';
 
 class Options extends Component {
 
@@ -28,7 +29,7 @@ class Options extends Component {
 
 
   showVersion() {
-    const pjson = require('../../package.json');
+    const pjson = require('../../../../package.json');
     const dependencies = pjson.dependencies['@alaskaairux/ods-inputoptions'];
 
     return `@alaskaairux/ods-inputoptions: ${dependencies}`;
@@ -38,12 +39,7 @@ class Options extends Component {
     return (
       <section id="inputOptions">
 
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-inputoptions"
-          npm="https://www.npmjs.com/package/@alaskaairux/ods-ods-inputoptions"
-          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-inputoptions/blob/master/src/ods-ods-inputoptions.js"
-          version={this.showVersion()}
-        />
+        <Nav />
         <h1 className="auro_heading auro_heading--display">ODS Input Options</h1>
 
         <div className="indention util_fontWeightLight util_type--secondary">
@@ -262,7 +258,12 @@ class Options extends Component {
         </Highlight>
 
 
-
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-inputoptions"
+          npm="https://www.npmjs.com/package/@alaskaairux/ods-ods-inputoptions"
+          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-inputoptions/blob/master/src/ods-ods-inputoptions.js"
+          version={this.showVersion()}
+        />
 
 
 

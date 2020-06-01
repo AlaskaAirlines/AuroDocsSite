@@ -35,7 +35,7 @@ class AuroButtons extends Component {
 
         <Nav />
 
-        <h1 className="auro_heading auro_heading--display">Auro Button</h1>
+        <h1 className="auro_heading auro_heading--display">Button</h1>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
           npm="https://www.npmjs.com/package/@alaskaairux/ods-button"

@@ -52,7 +52,6 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Grid", route: "/core/grid", parent: true },
         { linkTitle: "Spacing", route: "/core/spacing", parent: true },
-        // { linkTitle: "Layout", route: "/core/layout" },
       ]
     },
     {
@@ -65,18 +64,13 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Button", route: '/components/auro/button', parent: true },
         { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
-        { linkTitle: "- info", route: '/components/auro/hyperlink/info', subNav: true }
+        { linkTitle: "Input Options", route: "/components/orion/inputOptions/legacy", parent: true },
       ]
     },
     {
       title: "Legacy Components",
       items: [
-        // { linkTitle: "Button", route: '/components/orion/button', parent: true },
-        // { linkTitle: "- info", route: '/components/orion/button/info', subNav: true },
-        // { linkTitle: "- api", route: '/components/orion/button/api', subNav: true },
-        { linkTitle: "Hyperlink", route: '/components/orion/hyperlink', parent: true },
-        { linkTitle: "Input Options", route: "/components/orion/options", parent: true },
-        // { linkTitle: "Toast", route: "/components/orion/toast" },
+
         { linkTitle: "InputText", route: "/components/orion/inputtext", parent: true }
       ]
     },
