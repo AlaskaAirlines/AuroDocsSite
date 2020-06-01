@@ -45,19 +45,6 @@ export class ContributingDocs extends ExternalDocs {
   readme = "src/CONTRIBUTING.md"
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 export class Grid extends InternalMarkdownWrapper {
   readme = GridPage
 }
@@ -69,8 +56,6 @@ export class IconsDesign extends InternalMarkdownWrapper {
 export class Layout extends InternalMarkdownWrapper {
   readme = LayoutPage
 }
-
-
 
 export class Spacing extends InternalMarkdownWrapper {
   readme = SpacingPage
@@ -88,8 +73,6 @@ export class ColorTransparent extends InternalMarkdownWrapper {
   readme = ColorTransparentPage
 }
 
-
-
 export class A11yDocs extends ExternalDocs {
   readme = "src/A11Y.md"
 }
@@ -102,8 +85,6 @@ export class BrowsersSupportDocs extends ExternalDocs {
   readme = "src/BROWSER_SUPPORT.md"
 }
 
-
-
 export class CustomPropertiesDocs extends ExternalDocs {
   readme = "src/CUSTOM_PROPERTIES.md"
 }
@@ -112,16 +93,8 @@ export class CssConventionsDocs extends ExternalDocs {
   readme = "src/CSSCONVENTIONS.md"
 }
 
-export class FocusVisibleDocs extends ExternalDocs {
-  readme = "src/FOCUS_VISIBLE.md"
-}
-
 export class IsTouchingDocs extends ExternalDocs {
   readme = "src/IS_TOUCHING.md"
-}
-
-export class PolyfillDocs extends ExternalDocs {
-  readme = "src/POLYFILL.md"
 }
 
 export class TechDetailsDocs extends ExternalDocs {
@@ -144,8 +117,6 @@ export class GovernanceDocs extends ExternalDocs {
   readme = "src/GOVERNANCE.md"
 }
 
-
-
 export class WhyCustomelementsDocs extends ExternalDocs {
   readme = "src/WHY_CUSTOMELEMENT.md"
 }
@@ -156,8 +127,6 @@ export class WebCoreStyleSheets extends ExternalMarkdownWrapper {
   codeURL = "https://github.com/AlaskaAirlines/OrionWebCoreStyleSheets/tree/master/src"
   readme = "README.md"
 }
-
-
 
 export class AuroIconsInfo extends ExternalMarkdownWrapper {
   module = "@alaskaairux/icons"

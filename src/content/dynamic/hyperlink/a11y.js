@@ -4,11 +4,10 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/ods-inputOptions/master/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/ods-hyperlink/master/docs/a11y.md';
 
-class OdsOptionsInstall extends MarkdownPageWrapper {
+class AuroButtonA11y extends MarkdownPageWrapper {
 
-  // function to get text from MD document
   componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
       this.setState({
@@ -29,8 +28,7 @@ class OdsOptionsInstall extends MarkdownPageWrapper {
             escapeHtml={false}
             renderers={{
               code: CodeBlock,
-              heading: this.headingRenderer,
-              link: this.linkRenderer
+              heading: this.headingRenderer
             }}/>
         </section>
       </section>
@@ -38,4 +36,4 @@ class OdsOptionsInstall extends MarkdownPageWrapper {
   }
 }
 
-export default OdsOptionsInstall;
+export default AuroButtonA11y;

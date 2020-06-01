@@ -64,14 +64,8 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Button", route: '/components/auro/button', parent: true },
         { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
-        { linkTitle: "Input Options", route: "/components/orion/inputOptions/legacy", parent: true },
-      ]
-    },
-    {
-      title: "Legacy Components",
-      items: [
-
-        { linkTitle: "InputText", route: "/components/orion/inputtext", parent: true }
+        { linkTitle: "Input Options", route: "/components/orion/inputOptions/", parent: true },
+        { linkTitle: "InputText", route: "/components/orion/inputtext/", parent: true }
       ]
     },
     {
@@ -85,6 +79,7 @@ export default function SideNav(props) {
         { linkTitle: "Browser Support", route: "/support/browsersSupport", parent: true },
         // { linkTitle: "Tech overview", route: "/support/techDetails" },
         // { linkTitle: "why?", route: "/support/why" }
+        { linkTitle: "Polyfills", route: "/support/polyfills/focusvisible", parent: true},
       ]
     },
     {
@@ -94,13 +89,6 @@ export default function SideNav(props) {
         // { linkTitle: "Angular Setup", route: "/angularSetup" },
         // { linkTitle: "Javascript Setup", route: "/javascriptSetup" }
 
-      ]
-    },
-    {
-      title: "Pollyfills",
-      items: [
-        { linkTitle: "Focus Visible", route: "/support/focusVisible", parent: true},
-        { linkTitle: "Webcomponentsjs", route: "/support/polyfill", parent: true }
       ]
     },
     {

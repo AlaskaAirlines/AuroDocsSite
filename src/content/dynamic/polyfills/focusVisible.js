@@ -4,9 +4,9 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/ods-inputOptions/master/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro_docs/master/src/FOCUS_VISIBLE.md';
 
-class OdsOptionsInstall extends MarkdownPageWrapper {
+class FocusVisible extends MarkdownPageWrapper {
 
   // function to get text from MD document
   componentWillMount() {
@@ -38,4 +38,4 @@ class OdsOptionsInstall extends MarkdownPageWrapper {
   }
 }
 
-export default OdsOptionsInstall;
+export default FocusVisible;
