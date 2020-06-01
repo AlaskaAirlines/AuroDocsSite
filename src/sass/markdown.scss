@@ -100,12 +100,12 @@ $prefix: null;
   }
 
   table {
+    display: block;
     overflow: scroll;
     width: auto;
-    border-spacing: 5px;
+    border-spacing: var(--auro-size-sm);
     margin-bottom: var(--auro-size-xl);
-    font-weight: 200;
-    display: block;
+    font-weight: var(--auro-text-heading-display-weight);
 
     tr {
       &:nth-child(even) {
@@ -115,6 +115,8 @@ $prefix: null;
 
     th {
       text-align: left;
+      font-weight: var(--auro-text-heading-default-weight);
+      color: var(--auro-color-text-secondary-on-light);
     }
 
     @include auro_breakpoint--sm {
@@ -127,13 +129,17 @@ $prefix: null;
     border-collapse: collapse;
   }
 
+  tbody {
+    white-space: nowrap;
+  }
+
   thead {
     border-bottom: 1px solid var(--auro-color-base-gray-200);
     border-collapse: collapse;
   }
 
   th, td {
-    padding: 15px;
+    padding: var(--auro-size-md);
   }
 
   footer {
