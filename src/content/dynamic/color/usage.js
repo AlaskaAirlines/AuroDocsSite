@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import LinkIcons from '../components/linkIcons';
+import LinkIcons from 'components/linkIcons';
 import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSData--color.js'
-import header from '../assets/color/header.png';
-import windows from '../assets/color/windows.png';
+import header from 'assets/color/header.png';
+import windows from 'assets/color/windows.png';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from '../components/CodeBlock';
-import buildStatus from './pages/colors/transparent.md'
+import CodeBlock from 'components/CodeBlock';
+import transparentColors from './transparent.md';
+import { Nav} from './nav.js';
 
 const background = data.color.background;
 const border = data.color.border;
@@ -28,7 +29,7 @@ class Colors extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      docsBuildStatus: null
+      buildTransparentColors: null
     }
 
     this.flatten = this.flatten.bind(this);
@@ -36,9 +37,9 @@ class Colors extends Component {
   };
 
   componentWillMount() {
-    fetch(buildStatus).then((response) => response.text()).then((text) => {
+    fetch(transparentColors).then((response) => response.text()).then((text) => {
       this.setState({
-        docsBuildStatus: text
+        buildTransparentColors: text
       })
     })
   }
@@ -93,7 +94,7 @@ class Colors extends Component {
   }
 
   showVersion() {
-    const pjson = require('../../package.json');
+    const pjson = require('../../../../package.json');
     const dependencies = pjson.dependencies['@alaskaairux/orion-design-tokens'];
 
     return `@alaskaairux/orion-design-tokens: ${dependencies}`;
@@ -143,16 +144,16 @@ class Colors extends Component {
   render() {
     return (
       <section className="auro_baseType">
-        <h1 className="auro_heading auro_heading--display">Color usage</h1>
+
+
 
         <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
 
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionDesignTokens"
-          npm="https://www.npmjs.com/package/@alaskaairux/orion-design-tokens"
-          code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
-          version={this.showVersion()}
-        />
+        <Nav />
+
+        <h1 className="auro_heading auro_heading--display">Color usage</h1>
+
+
 
         <p className="auro_p">The colors within our digital experiences differs from our physical materials. What may appear vibrant on paper may seem dull and uninspired on a glowing screen. As a result, the colors we use within our digital experiences are adjusted to create a more vibrant and inspirational experiences for our guests. In addition to our core colors, an extended palette has been created to add warmth, deeper connection, and more human characteristics to the digital brand.</p>
 
@@ -266,7 +267,7 @@ class Colors extends Component {
 
         <section className="auro-markdown">
           <ReactMarkdown
-            source={this.state.docsBuildStatus}
+            source={this.state.buildTransparentColors}
             escapeHtml={false}
             renderers={{
               code: CodeBlock,
@@ -274,6 +275,13 @@ class Colors extends Component {
               link: this.linkRenderer
             }}/>
         </section>
+
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/OrionDesignTokens"
+          npm="https://www.npmjs.com/package/@alaskaairux/orion-design-tokens"
+          code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
+          version={this.showVersion()}
+        />
       </section>
     );
   }

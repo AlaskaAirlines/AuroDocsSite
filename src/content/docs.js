@@ -9,7 +9,6 @@ import LayoutPage from './pages/layout.md';
 import SpacingPage from './pages/spacing.md';
 import TypeDesignGuidlinesPage from './pages/typeDesignGuidlines.md';
 import VoiceTonePage from './pages/voiceTone.md';
-import ColorTransparentPage from './pages/colors/transparent.md';
 
 // Markdown content
 import PhilosophyPage from './markdown/philosophy.md';
@@ -67,10 +66,6 @@ export class TypeDesignGuidlines extends InternalMarkdownWrapper {
 
 export class VoiceTone extends InternalMarkdownWrapper {
   readme = VoiceTonePage
-}
-
-export class ColorTransparent extends InternalMarkdownWrapper {
-  readme = ColorTransparentPage
 }
 
 export class A11yDocs extends ExternalDocs {

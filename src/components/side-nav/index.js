@@ -24,10 +24,8 @@ export default function SideNav(props) {
     },
     {
       header: 'Guide',
-      title: "Color",
       items: [
-        { linkTitle: "Overview", route: "/core/color/digital-personality", parent: true },
-        { linkTitle: "Usage", route: "/core/color", parent: true },
+        { linkTitle: "Color", route: "/color/overview", parent: true },
       ]
     },
     {

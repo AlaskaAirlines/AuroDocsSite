@@ -29,6 +29,10 @@ import DesignTokens from './content/dynamic/designTokens/tokens';
 import DeprecatedTokens from './content/dynamic/designTokens/deprecated';
 import DesignTokensInstall from './content/dynamic/designTokens/install';
 
+// color
+import ColorUsage from './content/dynamic/color/usage';
+import ColorOverview from './content/dynamic/color/overview';
+
 // button
 import AuroButton from './content/dynamic/button/button';
 import AuroButtonApi from './content/dynamic/button/api';
@@ -56,8 +60,7 @@ import Webcomponentsjs from './content/dynamic/polyfills/webcomponentsjs';
 
 // The following files need to be moved to a better directory structure
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-import ColorsPage from './content/colors';
-import ColorDigitalPersonality from './content/digitalPersonality';
+
 import AuroIcons from './content/auroIcons';
 import Typography from './content/typography';
 import TypographyDeprecated from './content/typographyDeprecated';
@@ -75,7 +78,6 @@ import {
   AngularDemoDocs,
   BabelSupportDocs,
   BrowsersSupportDocs,
-  ColorTransparent,
   ComponentsDocs,
   CssConventionsDocs,
   CustomPropertiesDocs,
@@ -139,9 +141,8 @@ function App() {
             <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
 
             {/* Color */}
-            <Route exact path="/core/color"><ColorsPage /></Route>
-            <Route exact path="/core/color/digital-personality"><ColorDigitalPersonality /></Route>
-            <Route exact path="/core/color/trasnparancy"><ColorTransparent /></Route>
+            <Route exact path="/color/usage"><ColorUsage /></Route>
+            <Route exact path="/color/overview"><ColorOverview /></Route>
 
             {/* Typography */}
             <Route exact path="/core/typography"><Typography /></Route>

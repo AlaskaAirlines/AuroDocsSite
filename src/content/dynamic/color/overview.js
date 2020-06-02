@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import LinkIcons from '../components/linkIcons';
+import LinkIcons from 'components/linkIcons';
 import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--allTokens.js';
-import _getTokens from "../functions/getTokens"
+import _getTokens from "functions/getTokens"
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from '../components/CodeBlock';
-import personality from '../content/pages/digitalPersonality/digital-personality.md'
-import guidelines from '../content/pages/colors/designGuidelines.md'
+import CodeBlock from 'components/CodeBlock';
+import personality from 'content/pages/digitalPersonality/digital-personality.md'
+import guidelines from './guidelines.md'
+import { Nav} from './nav.js';
 
 
 const midnight = data.color.brand.midnight;
@@ -107,7 +108,7 @@ class Colors extends Component {
   }
 
   showVersion() {
-    const pjson = require('../../package.json');
+    const pjson = require('../../../../package.json');
     const dependencies = pjson.dependencies['@alaskaairux/orion-design-tokens'];
 
     return `@alaskaairux/orion-design-tokens: ${dependencies}`;
@@ -116,6 +117,8 @@ class Colors extends Component {
   render() {
     return (
       <section className="auro_baseType">
+        <Nav />
+
         <h1 className="auro_heading auro_heading--display">Overview</h1>
 
         <section className="auro-markdown">
