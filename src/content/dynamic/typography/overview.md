@@ -1,8 +1,8 @@
-# Design Guidlines
+![](/images/content/typography/Type_OurTypeface.jpg)
+
+# Typography Overview
 
 ### Our typeface
-
-![](/images/content/typography/Type_OurTypeface.jpg)
 
 The Auro Design System uses AS Circular, a custom typeface for all copy for web, mobile, and kiosks. Structured yet simple, our font ensures clarity and readability. Using three distinct lighter-weights, we maintain a level consistency within our content hierarchy.
 

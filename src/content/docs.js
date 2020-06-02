@@ -7,12 +7,12 @@ import GridPage from './pages/grid.md';
 import IconsDesignPage from './pages/iconsDesign/index.md';
 import LayoutPage from './pages/layout.md';
 import SpacingPage from './pages/spacing.md';
-import TypeDesignGuidlinesPage from './pages/typeDesignGuidlines.md';
 import VoiceTonePage from './pages/voiceTone.md';
 
 // Markdown content
 import PhilosophyPage from './markdown/philosophy.md';
 import GettingStartedDevsOverviewPage from './markdown/developerOverview.md';
+
 
 // Markdown classes
 // wrapper for general docs section
@@ -58,10 +58,6 @@ export class Layout extends InternalMarkdownWrapper {
 
 export class Spacing extends InternalMarkdownWrapper {
   readme = SpacingPage
-}
-
-export class TypeDesignGuidlines extends InternalMarkdownWrapper {
-  readme = TypeDesignGuidlinesPage
 }
 
 export class VoiceTone extends InternalMarkdownWrapper {

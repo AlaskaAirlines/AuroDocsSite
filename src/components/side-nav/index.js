@@ -26,14 +26,7 @@ export default function SideNav(props) {
       header: 'Guide',
       items: [
         { linkTitle: "Color", route: "/color/overview", parent: true },
-      ]
-    },
-    {
-      title: 'Typography',
-      items: [
-        { linkTitle: "Overview", route: "/core/typography/guidlines", parent: true },
-        { linkTitle: "Usage", route: "/core/typography", parent: true },
-        { linkTitle: "Deprecated", route: "/core/typography/deprecated", parent: true }
+        { linkTitle: "Typography", route: "/typography/overview", parent: true },
       ]
     },
     {

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import LinkIcons from '../components/linkIcons';
+import LinkIcons from 'components/linkIcons';
 import Highlight from 'react-highlight';
-import header from '../assets/typography/header.png';
+import header from 'assets/typography/header.png';
 import allTokens from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--allTokens.js';
-import _getTokens from "../functions/getTokens";
+import _getTokens from "functions/getTokens";
 import 'highlight.js/styles/github.css';
+import { Nav } from './nav.js';
 
 const font = allTokens.font;
 const textBody = allTokens.text.body;
@@ -20,7 +21,7 @@ const textHeading300 = allTokens.text.heading[300];
 class Typography extends Component {
 
   showVersion() {
-    const pjson = require('../../package.json');
+    const pjson = require('../../../../package.json');
     const dependencies = pjson.dependencies['@alaskaairux/orion-web-core-style-sheets'];
 
     return `@alaskaairux/orion-web-core-style-sheets: ${dependencies}`;
@@ -29,8 +30,11 @@ class Typography extends Component {
   render() {
     return (
       <section id="typography">
-        <h1 className="auro_heading auro_heading--display">Typography Usage</h1>
+        <Nav/>
         <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
+
+        <h1 className="auro_heading auro_heading--display">Typography Usage</h1>
+
 
         <h3 className="auro_heading auro_heading--600">Overview</h3>
         <p className="auro_baseParagraph">Typography carries content and builds hierarchy and structure within an experience. Our typography is simple and clear, never jarring or overly striking</p>

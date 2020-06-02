@@ -33,6 +33,11 @@ import DesignTokensInstall from './content/dynamic/designTokens/install';
 import ColorUsage from './content/dynamic/color/usage';
 import ColorOverview from './content/dynamic/color/overview';
 
+// typography
+import TypographyOverview from './content/dynamic/typography/overview';
+import TypographyUsage from './content/dynamic/typography/usage';
+import TypographyDeprecated from './content/dynamic/typography/deprecated';
+
 // button
 import AuroButton from './content/dynamic/button/button';
 import AuroButtonApi from './content/dynamic/button/api';
@@ -62,8 +67,8 @@ import Webcomponentsjs from './content/dynamic/polyfills/webcomponentsjs';
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 import AuroIcons from './content/auroIcons';
-import Typography from './content/typography';
-import TypographyDeprecated from './content/typographyDeprecated';
+
+
 
 
 // imported block components
@@ -93,7 +98,6 @@ import {
   Spacing,
   TechDetailsDocs,
   TestsDocs,
-  TypeDesignGuidlines,
   VoiceTone,
   WhyCustomelementsDocs,
   WebCoreStyleSheets,
@@ -145,9 +149,14 @@ function App() {
             <Route exact path="/color/overview"><ColorOverview /></Route>
 
             {/* Typography */}
-            <Route exact path="/core/typography"><Typography /></Route>
-            <Route exact path="/core/typography/deprecated"><TypographyDeprecated /></Route>
-            <Route exact path="/core/typography/guidlines"><TypeDesignGuidlines /></Route>
+            <Route exact path="/typography/overview"><TypographyOverview /></Route>
+
+
+            <Route exact path="/typography/usage"><TypographyUsage /></Route>
+
+
+            <Route exact path="/typography/deprecated"><TypographyDeprecated /></Route>
+
 
             {/* Icons */}
             <Route exact path="/core/auro-icons"><AuroIcons /></Route>
