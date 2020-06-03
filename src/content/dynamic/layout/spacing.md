@@ -1,9 +1,3 @@
-![](/images/content/spacing/space_cover.png)
-
-# Spacing
-
-## Overview
-
 Our spacing model is grounded in both math and visual psychology.  We achieve rhythm and hierarchy by grouping related elements, and building an appropriate distance between elements that are less closely related. Focus on optimizing screen real estate and prioritizing white space.
 
 ## Spacing Concepts

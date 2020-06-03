@@ -1,9 +1,3 @@
-![](/images/content/grid/grid_cover.png)
-
-# Grid
-
-## Overview
-
 The grid is a responsive, mobile first, fluid system that scales 12 columns across the viewport of a device.  The grid is based on a 16 pixel uniform spacing structure that's used to appropriately arrange content into aligned columns and rows.
 
 ## Anatomy
