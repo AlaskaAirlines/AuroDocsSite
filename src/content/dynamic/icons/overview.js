@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import guidelines from './overview.md'
@@ -40,13 +39,6 @@ class Colors extends Component {
     return React.createElement('h' + props.level, {id: slug}, props.children)
   }
 
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/orion-design-tokens'];
-
-    return `@alaskaairux/orion-design-tokens: ${dependencies}`;
-  };
-
   render() {
     return (
       <section className="auro_baseType">
@@ -62,13 +54,6 @@ class Colors extends Component {
               heading: this.headingRenderer
             }}/>
         </section>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionDesignTokens"
-          npm="https://www.npmjs.com/package/@alaskaairux/orion-design-tokens"
-          code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
-          version={this.showVersion()}
-        />
       </section>
     );
   }
