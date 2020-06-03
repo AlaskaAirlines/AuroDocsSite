@@ -69,6 +69,11 @@ import OdsOptionsInstall from './content/dynamic/inputOptions/install';
 import InputText from './content/dynamic/inputText/legacy';
 import InputTextInstall from './content/dynamic/inputText/install';
 
+// Table
+import AuroTable from './content/dynamic/table/table';
+import AuroTableApi from './content/dynamic/table/api';
+import AuroTableInstall from './content/dynamic/table/install';
+
 // polyfills
 import FocusVisible from './content/dynamic/polyfills/focusVisible';
 import Webcomponentsjs from './content/dynamic/polyfills/webcomponentsjs';
@@ -172,6 +177,11 @@ function App() {
             <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
             {/* Legacy */}
             <Route exact path="/components/orion/button"><Button /></Route>
+
+            {/* Auro Table */}
+            <Route exact path="/components/auro/table"><AuroTable /></Route>
+            <Route exact path="/components/auro/table/install"><AuroTableInstall /></Route>
+            <Route exact path="/components/auro/table/api"><AuroTableApi /></Route>
 
             {/* Auro Hyperlink */}
             <Route exact path="/components/auro/hyperlink"><AuroHyperlink /></Route>

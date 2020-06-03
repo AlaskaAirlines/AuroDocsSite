@@ -38,7 +38,8 @@ export default function SideNav(props) {
         { linkTitle: "Button", route: '/components/auro/button', parent: true },
         { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
         { linkTitle: "Input Options", route: "/components/orion/inputOptions/", parent: true },
-        { linkTitle: "InputText", route: "/components/orion/inputtext/", parent: true }
+        { linkTitle: "InputText", route: "/components/orion/inputtext/", parent: true },
+        { linkTitle: "Table", route: '/components/auro/table', parent: true },
       ]
     },
     {

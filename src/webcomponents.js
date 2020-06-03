@@ -10,6 +10,9 @@ import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
 import "@alaskaairux/ods-button";
 import "@alaskaairux/ods-button/dist/auro-button";
 
+// table
+import "@alaskaairux/auro-table/dist/auro-table";
+
 // swatch
 import "@alaskaairux/auro-swatch/dist/auro-swatch-list";
 import "@alaskaairux/auro-swatch/dist/auro-tokens-list";
