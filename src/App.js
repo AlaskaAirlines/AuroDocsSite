@@ -43,6 +43,10 @@ import IconsOverview from './content/dynamic/icons/overview';
 import IconsUsage from './content/dynamic/icons/usage.js';
 import IconsInstall from './content/dynamic/icons/install.js';
 
+// layout
+import LayoutGrid from './content/dynamic/layout/grid';
+import LayoutSpacing from './content/dynamic/layout/spacing';
+
 
 // button
 import AuroButton from './content/dynamic/button/button';
@@ -84,14 +88,12 @@ import {
   ComponentsDocs,
   CssConventionsDocs,
   CustomPropertiesDocs,
-  Grid,
   GovernanceDocs,
   IsTouchingDocs,
   JavascriptDemoDocs,
   Layout,
   ReactDemoDocs,
   SlotsDocs,
-  Spacing,
   TechDetailsDocs,
   TestsDocs,
   VoiceTone,
@@ -152,15 +154,14 @@ function App() {
 
             {/* Icons */}
             <Route exact path="/icons/overview"><IconsOverview /></Route>
-
             <Route exact path="/icons/usage"><IconsUsage /></Route>
             <Route exact path="/icons/install"><IconsInstall /></Route>
 
 
             {/* Layout */}
             <Route exact path="/core/layout"><Layout /></Route> {/* not used */} {/* reevaluate content */}
-            <Route exact path="/core/grid"><Grid /></Route>
-            <Route exact path="/core/spacing"><Spacing /></Route>
+            <Route exact path="/layout/grid"><LayoutGrid /></Route>
+            <Route exact path="/layout/spacing"><LayoutSpacing /></Route>
 
             {/* Voice */}
             <Route path="/core/voice-and-tone"><VoiceTone /></Route>

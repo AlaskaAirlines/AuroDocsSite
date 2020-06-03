@@ -1,6 +1,6 @@
-# Spacing
-
 ![](/images/content/spacing/space_cover.png)
+
+# Spacing
 
 ## Overview
 

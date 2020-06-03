@@ -1,6 +1,6 @@
-# Grid
-
 ![](/images/content/grid/grid_cover.png)
+
+# Grid
 
 ## Overview
 

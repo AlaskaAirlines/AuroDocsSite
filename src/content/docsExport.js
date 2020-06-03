@@ -2,16 +2,11 @@
 // Import primary markdown tools
 import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from '../components/rawMarkdownWrapper';
 
-// The following files need to be moved to a better directory structure
-import GridPage from './pages/grid.md';
-import LayoutPage from './pages/layout.md';
-import SpacingPage from './pages/spacing.md';
-import VoiceTonePage from './pages/voiceTone.md';
-
-// Markdown content
+// internal markedown docs
 import PhilosophyPage from './markdown/philosophy.md';
 import GettingStartedDevsOverviewPage from './markdown/developerOverview.md';
-
+import LayoutPage from './markdown/layout.md';
+import VoiceTonePage from './markdown/voiceTone.md';
 
 // Markdown classes
 // wrapper for general docs section
@@ -28,6 +23,14 @@ export class GettingStartedDevsOverview extends InternalMarkdownWrapper {
   readme = GettingStartedDevsOverviewPage
 }
 
+export class Layout extends InternalMarkdownWrapper {
+  readme = LayoutPage
+}
+
+export class VoiceTone extends InternalMarkdownWrapper {
+  readme = VoiceTonePage
+}
+
 export class WCGenerator extends ExternalMarkdownWrapper {
   module = "@alaskaairux/wc-generator"
   githubURL = "https://github.com/AlaskaAirlines/wc-generator"
@@ -41,22 +44,6 @@ export class ComplianceDocs extends ExternalDocs {
 
 export class ContributingDocs extends ExternalDocs {
   readme = "src/CONTRIBUTING.md"
-}
-
-export class Grid extends InternalMarkdownWrapper {
-  readme = GridPage
-}
-
-export class Layout extends InternalMarkdownWrapper {
-  readme = LayoutPage
-}
-
-export class Spacing extends InternalMarkdownWrapper {
-  readme = SpacingPage
-}
-
-export class VoiceTone extends InternalMarkdownWrapper {
-  readme = VoiceTonePage
 }
 
 export class A11yDocs extends ExternalDocs {
