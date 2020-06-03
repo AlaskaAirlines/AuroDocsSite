@@ -101,6 +101,7 @@ $prefix: null;
 
   table {
     display: block;
+    border-collapse: collapse;
     overflow: scroll;
     width: auto;
     border-spacing: var(--auro-size-sm);
@@ -116,17 +117,12 @@ $prefix: null;
     th {
       text-align: left;
       font-weight: var(--auro-text-heading-default-weight);
-      color: var(--auro-color-text-secondary-on-light);
     }
 
     @include auro_breakpoint--sm {
       width: 100%;
       display: table;
     }
-  }
-
-  table {
-    border-collapse: collapse;
   }
 
   thead {
