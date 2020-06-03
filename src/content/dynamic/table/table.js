@@ -82,7 +82,36 @@ const data=[
 `}
         </Highlight>
 
+        <h2 className="auro_heading auro_heading--700">WCSS Support</h2>
 
+        <p>For use cases where the general design of the Auro Table is needed, but the component is unseable, please use the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-auro-css-#{$scope}.auro_table" target="_blank">.auro_table</auro-hyperlink> styles from the Web Core Style Sheets library.</p>
+
+        <Highlight className='html afterCode'>
+          {`
+<table class="auro_table">
+  <thead>
+    <tr>
+      <th>The table header</th>
+      <th>The table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>The table body</td>
+      <td>with two columns</td>
+    </tr>
+    <tr>
+      <td>The table body</td>
+      <td>with two columns</td>
+    </tr>
+    <tr>
+      <td>The table body</td>
+      <td>with two columns</td>
+    </tr>
+  </tbody>
+</table>
+`}
+        </Highlight>
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-table"
