@@ -4,13 +4,13 @@ import Highlight from 'react-highlight';
 import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 
-const headers=["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-const data=[
+const headers=JSON.stringify(["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]);
+const data=JSON.stringify([
   {"": "Dance class", "Monday": "5:00pm","Wednesday": "5:00pm" },
   {"": "Night classes", "Thursday": "7:00pm","Friday": "7:00pm" },
   {"": "Team meeting", "Wednesday": "10:00am" },
   {"": "Morning workout", "Monday": "8:00am", "Tuesday": "8:00am", "Wednesday": "8:00am", "Thursday": "8:00am", "Friday": "8:00am" }
-]
+])
 
 class AuroTable extends Component {
 
@@ -48,7 +48,7 @@ class AuroTable extends Component {
         <h2 className="auro_heading auro_heading--700">Default table</h2>
 
         <div className="demo--inline exampleWrapper">
-          <auro-table nowrap columnHeaders={JSON.stringify(headers)} componentData={JSON.stringify(data)}>Default text</auro-table>
+          <auro-table nowrap columnHeaders={headers} componentData={data}>Default text</auro-table>
         </div>
 
         <Highlight className='html afterCode'>
@@ -66,19 +66,19 @@ class AuroTable extends Component {
 `}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--700">React Example</h2>
+        <h2 className="auro_heading auro_heading--700">React and Svelte support</h2>
 
         <Highlight className='html afterCode'>
           {`
-const headers=["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-const data=[
+const headers=JSON.stringify(["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]);
+const data=JSON.stringify([
   {"": "Dance class", "Monday": "5:00pm","Wednesday": "5:00pm" },
   {"": "Night classes", "Thursday": "7:00pm","Friday": "7:00pm" },
   {"": "Team meeting", "Wednesday": "10:00am" },
   {"": "Morning workout", "Monday": "8:00am", "Tuesday": "8:00am", "Wednesday": "8:00am", "Thursday": "8:00am", "Friday": "8:00am" }
-]
+])
 
-<auro-table nowrap columnHeaders={JSON.stringify(headers)} componentData={JSON.stringify(data)}>Default text</auro-table>
+<auro-table nowrap columnHeaders={headers} componentData={data}>Default text</auro-table>
 `}
         </Highlight>
 
