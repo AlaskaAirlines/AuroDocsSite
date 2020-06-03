@@ -38,6 +38,12 @@ import TypographyOverview from './content/dynamic/typography/overview';
 import TypographyUsage from './content/dynamic/typography/usage';
 import TypographyDeprecated from './content/dynamic/typography/deprecated';
 
+// icons
+import IconsOverview from './content/dynamic/icons/overview';
+import IconsUsage from './content/dynamic/icons/usage.js';
+import IconsInstall from './content/dynamic/icons/install.js';
+
+
 // button
 import AuroButton from './content/dynamic/button/button';
 import AuroButtonApi from './content/dynamic/button/api';
@@ -63,14 +69,6 @@ import InputTextInstall from './content/dynamic/inputText/install';
 import FocusVisible from './content/dynamic/polyfills/focusVisible';
 import Webcomponentsjs from './content/dynamic/polyfills/webcomponentsjs';
 
-// The following files need to be moved to a better directory structure
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-import AuroIcons from './content/auroIcons';
-
-
-
-
 // imported block components
 import Footer from './components/footer';
 import Header from './components/header';
@@ -86,11 +84,9 @@ import {
   ComponentsDocs,
   CssConventionsDocs,
   CustomPropertiesDocs,
-  AuroIconsInfo,
   Grid,
   GovernanceDocs,
   IsTouchingDocs,
-  IconsDesign,
   JavascriptDemoDocs,
   Layout,
   ReactDemoDocs,
@@ -111,7 +107,7 @@ import {
   ContributingDocs,
 
 
-} from './content/docs';
+} from './content/docsExport';
 
 function App() {
   return (
@@ -150,18 +146,16 @@ function App() {
 
             {/* Typography */}
             <Route exact path="/typography/overview"><TypographyOverview /></Route>
-
-
             <Route exact path="/typography/usage"><TypographyUsage /></Route>
-
-
             <Route exact path="/typography/deprecated"><TypographyDeprecated /></Route>
 
 
             {/* Icons */}
-            <Route exact path="/core/auro-icons"><AuroIcons /></Route>
-            <Route exact path="/core/auro-icons/install"><AuroIconsInfo /></Route>
-            <Route exact path="/core/auro-icons/guidlines"><IconsDesign /></Route>
+            <Route exact path="/icons/overview"><IconsOverview /></Route>
+
+            <Route exact path="/icons/usage"><IconsUsage /></Route>
+            <Route exact path="/icons/install"><IconsInstall /></Route>
+
 
             {/* Layout */}
             <Route exact path="/core/layout"><Layout /></Route> {/* not used */} {/* reevaluate content */}

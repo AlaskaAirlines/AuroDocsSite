@@ -4,7 +4,6 @@ import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from '../components/ra
 
 // The following files need to be moved to a better directory structure
 import GridPage from './pages/grid.md';
-import IconsDesignPage from './pages/iconsDesign/index.md';
 import LayoutPage from './pages/layout.md';
 import SpacingPage from './pages/spacing.md';
 import VoiceTonePage from './pages/voiceTone.md';
@@ -46,10 +45,6 @@ export class ContributingDocs extends ExternalDocs {
 
 export class Grid extends InternalMarkdownWrapper {
   readme = GridPage
-}
-
-export class IconsDesign extends InternalMarkdownWrapper {
-  readme = IconsDesignPage
 }
 
 export class Layout extends InternalMarkdownWrapper {
@@ -116,13 +111,6 @@ export class WebCoreStyleSheets extends ExternalMarkdownWrapper {
   module = "@alaskaairux/orion-web-core-style-sheets"
   githubURL = "https://github.com/AlaskaAirlines/OrionWebCoreStyleSheets"
   codeURL = "https://github.com/AlaskaAirlines/OrionWebCoreStyleSheets/tree/master/src"
-  readme = "README.md"
-}
-
-export class AuroIconsInfo extends ExternalMarkdownWrapper {
-  module = "@alaskaairux/icons"
-  githubURL = "https://github.com/AlaskaAirlines/icons"
-  codeURL = "https://github.com/AlaskaAirlines/icons/tree/master/template"
   readme = "README.md"
 }
 

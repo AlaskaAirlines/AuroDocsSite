@@ -27,15 +27,7 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Color", route: "/color/overview", parent: true },
         { linkTitle: "Typography", route: "/typography/overview", parent: true },
-      ]
-    },
-    {
-      title: 'Icons',
-      items: [
-        { linkTitle: "Overview", route: "/core/auro-icons/guidlines", parent: true },
-        { linkTitle: "Usage", route: "/core/auro-icons", parent: true },
-        { linkTitle: "Install", route: "/core/auro-icons/install", parent: true },
-
+        { linkTitle: "Icons", route: "/icons/overview", parent: true },
       ]
     },
     {
