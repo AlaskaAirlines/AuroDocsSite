@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
-import overview from './overview.md'
+import overview from './personalityUsage.md'
 import { Nav} from './nav.js';
-import header from 'assets/color/header.png';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
 
@@ -71,9 +70,7 @@ class ColorsOverview extends Component {
       <section className="auro_baseType">
         <Nav />
 
-        <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
-
-        <h1 className="auro_heading auro_heading--display">Overview</h1>
+        <h1 className="auro_heading auro_heading--display">Your Personal Use is ok with me</h1>
 
         <section className="auro-markdown">
           <ReactMarkdown

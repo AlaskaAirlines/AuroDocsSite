@@ -30,8 +30,12 @@ import DeprecatedTokens from './content/dynamic/designTokens/deprecated';
 import DesignTokensInstall from './content/dynamic/designTokens/install';
 
 // color
-import ColorUsage from './content/dynamic/color/usage';
 import ColorOverview from './content/dynamic/color/overview';
+import CoreDigitalPaletteUsage from './content/dynamic/color/coreUsage';
+import PersonalityPaletteUsage from './content/dynamic/color/personalityUsage';
+
+import ColorUsageLegacy from './content/dynamic/color/usage_legacy';
+import ColorOverviewLegacy from './content/dynamic/color/overview_legacy';
 
 // typography
 import TypographyOverview from './content/dynamic/typography/overview';
@@ -148,8 +152,12 @@ function App() {
             <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
 
             {/* Color */}
-            <Route exact path="/color/usage"><ColorUsage /></Route>
             <Route exact path="/color/overview"><ColorOverview /></Route>
+            <Route exact path="/color/core-digital-palette-usage"><CoreDigitalPaletteUsage /></Route>
+            <Route exact path="/color/personality-palette-usage"><PersonalityPaletteUsage /></Route>
+
+            <Route exact path="/color/usage_legacy"><ColorUsageLegacy /></Route>
+            <Route exact path="/color/overview_legacy"><ColorOverviewLegacy /></Route>
 
             {/* Typography */}
             <Route exact path="/typography/overview"><TypographyOverview /></Route>
