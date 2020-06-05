@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
-import ReactMarkdown from 'react-markdown';
+import Release from './release';
 
 const RELEASES = gql`
 { 
@@ -10,7 +10,7 @@ const RELEASES = gql`
       repositories(first:100, orderBy:{field: NAME, direction: ASC }) {
         nodes {
           name,
-          releases(first:5, orderBy: {field: CREATED_AT, direction:DESC }) {
+          releases(last:2, orderBy: {field: CREATED_AT, direction:DESC }) {
             nodes {
               name,
               updatedAt,
@@ -34,14 +34,9 @@ class ReleaseDashboard extends Component {
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, releases }) => (
-              <div key={name}>
-                <h1 className="auro_heading auro_heading--display">{name}</h1>
-                {releases.nodes.map(({name, description}) => (
-                  <div key={name}>
-                    <ReactMarkdown source={description} />
-                  </div>
-                ))}
-              </div>
+              releases.nodes.length > 0
+                ? <Release key={name} name={name} releases={releases} />
+                : ''
             ));
           }}
           </Query>
