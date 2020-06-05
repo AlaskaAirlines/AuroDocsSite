@@ -82,6 +82,9 @@ import AuroTableInstall from './content/dynamic/table/install';
 import FocusVisible from './content/dynamic/polyfills/focusVisible';
 import Webcomponentsjs from './content/dynamic/polyfills/webcomponentsjs';
 
+// release Dashboard
+import ReleaseDashboard from './content/dynamic/releaseDashboard/releaseDashboard';
+
 // imported block components
 import Footer from './components/footer';
 import Header from './components/header';
@@ -120,131 +123,146 @@ import {
 
 } from './content/docsExport';
 
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from '@apollo/react-hooks';
+
+const API_KEY = process.env.REACT_APP_GITHUB_API_KEY;
+
+const client = new ApolloClient({
+  uri: 'https://api.github.com/graphql',
+  headers: {
+    authorization: `Bearer ${API_KEY}`
+  }
+});
+
 function App() {
   return (
-    <main className="main-wrapper">
-      <Header />
-      <div className="wrapper">
-        <input id="menuCheckbox" type="checkbox" className="menuCheckbox util_displayHiddenVisually"></input>
-        <label htmlFor="menuCheckbox" className="menuCheckbox--label">
-          <img className="menuIcon" src="https://img.icons8.com/material/24/000000/menu--v1.png" alt="icon"></img>
-          <img className="closeIcon" width="24" src="https://img.icons8.com/material/26/000000/multiply--v1.png" alt="icon"></img>
-        </label>
+    <ApolloProvider client={client}>
+      <main className="main-wrapper">
+        <Header />
+        <div className="wrapper">
+          <input id="menuCheckbox" type="checkbox" className="menuCheckbox util_displayHiddenVisually"></input>
+          <label htmlFor="menuCheckbox" className="menuCheckbox--label">
+            <img className="menuIcon" src="https://img.icons8.com/material/24/000000/menu--v1.png" alt="icon"></img>
+            <img className="closeIcon" width="24" src="https://img.icons8.com/material/26/000000/multiply--v1.png" alt="icon"></img>
+          </label>
 
-        <Router>
-          <ScrollToTop />
-          <SideNav />
-          <Switch>
+          <Router>
+            <ScrollToTop />
+            <SideNav />
+            <Switch>
 
-            {/* Home */}
-            <Route exact path='/' component={Philosophy} />
-            <Route exact path="/philosophy"><Philosophy /></Route>
+              {/* Home */}
+              <Route exact path='/' component={Philosophy} />
+              <Route exact path="/philosophy"><Philosophy /></Route>
 
-            {/* Getting Started/developers */}
-            <Route exact path="/getting-started/developers/overview"><GettingStartedDevsOverview /></Route>
-            <Route exact path="/getting-started/developers/generator"><WCGenerator /></Route>
-            <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
-            <Route exact path="/getting-started/developers/contributing"><ContributingDocs /></Route>
-            <Route exact path="/getting-started/developers/governance"><GovernanceDocs /></Route>
-            {/* Design Tokens */}
-            <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
-            <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensInstall /></Route>
-            <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
+              {/* Getting Started/developers */}
+              <Route exact path="/getting-started/developers/overview"><GettingStartedDevsOverview /></Route>
+              <Route exact path="/getting-started/developers/generator"><WCGenerator /></Route>
+              <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
+              <Route exact path="/getting-started/developers/contributing"><ContributingDocs /></Route>
+              <Route exact path="/getting-started/developers/governance"><GovernanceDocs /></Route>
+              {/* Design Tokens */}
+              <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
+              <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensInstall /></Route>
+              <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
 
-            {/* Color */}
-            <Route exact path="/color/overview"><ColorOverview /></Route>
-            <Route exact path="/color/core-digital-palette-usage"><CoreDigitalPaletteUsage /></Route>
-            <Route exact path="/color/personality-palette-usage"><PersonalityPaletteUsage /></Route>
+              {/* Color */}
+              <Route exact path="/color/overview"><ColorOverview /></Route>
+              <Route exact path="/color/core-digital-palette-usage"><CoreDigitalPaletteUsage /></Route>
+              <Route exact path="/color/personality-palette-usage"><PersonalityPaletteUsage /></Route>
 
-            <Route exact path="/color/usage_legacy"><ColorUsageLegacy /></Route>
-            <Route exact path="/color/overview_legacy"><ColorOverviewLegacy /></Route>
+              <Route exact path="/color/usage_legacy"><ColorUsageLegacy /></Route>
+              <Route exact path="/color/overview_legacy"><ColorOverviewLegacy /></Route>
 
-            {/* Typography */}
-            <Route exact path="/typography/overview"><TypographyOverview /></Route>
-            <Route exact path="/typography/usage"><TypographyUsage /></Route>
-            <Route exact path="/typography/deprecated"><TypographyDeprecated /></Route>
-
-
-            {/* Icons */}
-            <Route exact path="/icons/overview"><IconsOverview /></Route>
-            <Route exact path="/icons/usage"><IconsUsage /></Route>
-            <Route exact path="/icons/install"><IconsInstall /></Route>
+              {/* Typography */}
+              <Route exact path="/typography/overview"><TypographyOverview /></Route>
+              <Route exact path="/typography/usage"><TypographyUsage /></Route>
+              <Route exact path="/typography/deprecated"><TypographyDeprecated /></Route>
 
 
-            {/* Layout */}
-            <Route exact path="/core/layout"><Layout /></Route> {/* not used */} {/* reevaluate content */}
-            <Route exact path="/layout/grid"><LayoutGrid /></Route>
-            <Route exact path="/layout/spacing"><LayoutSpacing /></Route>
-
-            {/* Voice */}
-            <Route path="/core/voice-and-tone"><VoiceTone /></Route>
-
-            {/* Auro Button */}
-            <Route exact path="/components/auro/button"><AuroButton /></Route>
-            <Route exact path="/components/auro/button/install"><AuroButtonInstall /></Route>
-            <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
-            {/* Legacy */}
-            <Route exact path="/components/orion/button"><Button /></Route>
-
-            {/* Auro Table */}
-            <Route exact path="/components/auro/table"><AuroTable /></Route>
-            <Route exact path="/components/auro/table/install"><AuroTableInstall /></Route>
-            <Route exact path="/components/auro/table/api"><AuroTableApi /></Route>
-
-            {/* Auro Hyperlink */}
-            <Route exact path="/components/auro/hyperlink"><AuroHyperlink /></Route>
-            <Route exact path="/components/auro/hyperlink/install"><AuroHyperlinkInstall /></Route>
-            <Route exact path="/components/auro/hyperlink/api"><AuroHyperlinkApi /></Route>
-            <Route exact path="/components/auro/hyperlink/a11y"><AuroHyperlinkA11y /></Route>
-            <Route exact path="/components/orion/hyperlink"><Hyperlink /></Route>
-
-            {/* inputOptions */}
-            <Route exact path="/components/orion/inputOptions/"><Options /></Route>
-            <Route exact path="/components/orion/inputOptions/install"><OdsOptionsInstall /></Route>
-
-            {/* inputText */}
-            <Route exact path="/components/orion/inputText/"><InputText /></Route>
-            <Route exact path="/components/orion/inputText/install"><InputTextInstall /></Route>
+              {/* Icons */}
+              <Route exact path="/icons/overview"><IconsOverview /></Route>
+              <Route exact path="/icons/usage"><IconsUsage /></Route>
+              <Route exact path="/icons/install"><IconsInstall /></Route>
 
 
-            {/* Dev resources */}
-            <Route exact path="/support/a11y"><A11yDocs /></Route> {/* not used */} {/* reevaluate content */}
-            <Route exact path="/support/babelSupport"><BabelSupportDocs /></Route> {/* not used */} {/* reevaluate content */}
-            <Route exact path="/support/browsersSupport"><BrowsersSupportDocs /></Route>
-            <Route exact path="/support/components"><ComponentsDocs /></Route>
-            <Route exact path="/support/slots"><SlotsDocs /></Route>
-            <Route exact path="/support/techDetails"><TechDetailsDocs /></Route> {/* not used */} {/* reevaluate content */}
-            <Route exact path="/support/tests"><TestsDocs /></Route>
-            <Route exact path="/support/why"><WhyCustomelementsDocs /></Route> {/* not used */} {/* reevaluate content */}
+              {/* Layout */}
+              <Route exact path="/core/layout"><Layout /></Route> {/* not used */} {/* reevaluate content */}
+              <Route exact path="/layout/grid"><LayoutGrid /></Route>
+              <Route exact path="/layout/spacing"><LayoutSpacing /></Route>
 
-            <Route exact path="/support/polyfills/focusvisible"><FocusVisible /></Route>
-            <Route exact path="/support/polyfills/webcomponentsjs"><Webcomponentsjs /></Route>
+              {/* Voice */}
+              <Route path="/core/voice-and-tone"><VoiceTone /></Route>
 
-            {/* Pollyfills */}
-            {/* <Route exact path="./support/polyfills/focusvisible"><PolyfillDocs /></Route> */}
+              {/* Auro Button */}
+              <Route exact path="/components/auro/button"><AuroButton /></Route>
+              <Route exact path="/components/auro/button/install"><AuroButtonInstall /></Route>
+              <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
+              {/* Legacy */}
+              <Route exact path="/components/orion/button"><Button /></Route>
 
-            {/* CSS */}
-            <Route exact path="/support/css-conventions"><CssConventionsDocs /></Route>
-            <Route exact path="/support/custom-properties"><CustomPropertiesDocs /></Route>
-            <Route exact path="/support/isTouching"><IsTouchingDocs /></Route> {/* not used */} {/* reevaluate content */}
-            <Route exact path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
+              {/* Auro Table */}
+              <Route exact path="/components/auro/table"><AuroTable /></Route>
+              <Route exact path="/components/auro/table/install"><AuroTableInstall /></Route>
+              <Route exact path="/components/auro/table/api"><AuroTableApi /></Route>
 
-            {/* Process */}
+              {/* Auro Hyperlink */}
+              <Route exact path="/components/auro/hyperlink"><AuroHyperlink /></Route>
+              <Route exact path="/components/auro/hyperlink/install"><AuroHyperlinkInstall /></Route>
+              <Route exact path="/components/auro/hyperlink/api"><AuroHyperlinkApi /></Route>
+              <Route exact path="/components/auro/hyperlink/a11y"><AuroHyperlinkA11y /></Route>
+              <Route exact path="/components/orion/hyperlink"><Hyperlink /></Route>
+
+              {/* inputOptions */}
+              <Route exact path="/components/orion/inputOptions/"><Options /></Route>
+              <Route exact path="/components/orion/inputOptions/install"><OdsOptionsInstall /></Route>
+
+              {/* inputText */}
+              <Route exact path="/components/orion/inputText/"><InputText /></Route>
+              <Route exact path="/components/orion/inputText/install"><InputTextInstall /></Route>
 
 
-            {/* Example Projects  */}
-            {/* Content for these pages need to be updated and have better descriptions of project */}
-            <Route exact path="/angularSetup"><AngularDemoDocs /></Route> {/* not used */}
-            <Route exact path="/javascriptSetup"><JavascriptDemoDocs /></Route> {/* not used */}
-            <Route exact path="/reactSetup"><ReactDemoDocs /></Route> {/* not used */}
+              {/* Dev resources */}
+              <Route exact path="/support/a11y"><A11yDocs /></Route> {/* not used */} {/* reevaluate content */}
+              <Route exact path="/support/babelSupport"><BabelSupportDocs /></Route> {/* not used */} {/* reevaluate content */}
+              <Route exact path="/support/browsersSupport"><BrowsersSupportDocs /></Route>
+              <Route exact path="/support/components"><ComponentsDocs /></Route>
+              <Route exact path="/support/slots"><SlotsDocs /></Route>
+              <Route exact path="/support/techDetails"><TechDetailsDocs /></Route> {/* not used */} {/* reevaluate content */}
+              <Route exact path="/support/tests"><TestsDocs /></Route>
+              <Route exact path="/support/why"><WhyCustomelementsDocs /></Route> {/* not used */} {/* reevaluate content */}
 
-            <Route path="*"><NotFound /></Route>
+              <Route exact path="/support/polyfills/focusvisible"><FocusVisible /></Route>
+              <Route exact path="/support/polyfills/webcomponentsjs"><Webcomponentsjs /></Route>
+              <Route exact path="/support/releaseDashboard"><ReleaseDashboard /></Route>
 
-          </Switch>
-        </Router>
-      </div>
-      <Footer />
-    </main>
+              {/* Pollyfills */}
+              {/* <Route exact path="./support/polyfills/focusvisible"><PolyfillDocs /></Route> */}
+
+              {/* CSS */}
+              <Route exact path="/support/css-conventions"><CssConventionsDocs /></Route>
+              <Route exact path="/support/custom-properties"><CustomPropertiesDocs /></Route>
+              <Route exact path="/support/isTouching"><IsTouchingDocs /></Route> {/* not used */} {/* reevaluate content */}
+              <Route exact path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
+
+              {/* Process */}
+
+
+              {/* Example Projects  */}
+              {/* Content for these pages need to be updated and have better descriptions of project */}
+              <Route exact path="/angularSetup"><AngularDemoDocs /></Route> {/* not used */}
+              <Route exact path="/javascriptSetup"><JavascriptDemoDocs /></Route> {/* not used */}
+              <Route exact path="/reactSetup"><ReactDemoDocs /></Route> {/* not used */}
+
+              <Route path="*"><NotFound /></Route>
+
+            </Switch>
+          </Router>
+        </div>
+        <Footer />
+      </main>
+    </ApolloProvider>
   )
 }
 
