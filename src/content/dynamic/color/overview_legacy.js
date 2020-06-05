@@ -4,7 +4,7 @@ import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--allToke
 import _getTokens from "functions/getTokens"
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
-import personality from 'content/pages/digitalPersonality/digital-personality.md'
+import personality from './digital-personality.md'
 import guidelines from './guidelines.md'
 import { Nav} from './nav.js';
 

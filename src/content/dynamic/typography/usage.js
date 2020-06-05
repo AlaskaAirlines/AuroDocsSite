@@ -30,8 +30,9 @@ class Typography extends Component {
   render() {
     return (
       <section id="typography">
-        <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
         <Nav/>
+        <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
+
         <h1 className="auro_heading auro_heading--display">Typography Usage</h1>
         <h3 className="auro_heading auro_heading--600">Overview</h3>
         <p className="auro_baseParagraph">Typography carries content and builds hierarchy and structure within an experience. Our typography is simple and clear, never jarring or overly striking</p>

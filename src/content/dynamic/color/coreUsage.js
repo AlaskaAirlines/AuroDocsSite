@@ -37,7 +37,7 @@ class ColorsOverview extends Component {
     })
   }
 
-  _getColors = (color, background, colorSet) => {
+  getColors = (color, background, colorSet) => {
 
     if (color.hasOwnProperty(background) && color.hasOwnProperty('name')) {
       colorSet.push(
@@ -47,14 +47,14 @@ class ColorsOverview extends Component {
 
     if (color instanceof Object) {
       for (let key in color) {
-        this._getColors(color[key], background, colorSet)
+        this.getColors(color[key], background, colorSet)
       }
     }
 
     return JSON.stringify(colorSet);
   }
 
-  _getAvatars = (color, type, background, colorSet) => {
+  getAvatars = (color, type, background, colorSet) => {
 
     if (color.hasOwnProperty(background) && color.hasOwnProperty('name')) {
       if (background === 'onDark') {
@@ -79,7 +79,7 @@ class ColorsOverview extends Component {
 
     if (color instanceof Object) {
       for (let key in color) {
-        this._getAvatars(color[key], type, background, colorSet)
+        this.getAvatars(color[key], type, background, colorSet)
       }
     }
 
@@ -134,71 +134,71 @@ class ColorsOverview extends Component {
 
         <h2 className="auro_heading auro_heading--600">Background</h2>
         <img className="util_marginBottom--xl" src={windows} alt="page header" />
-        <auro-swatch-list componentData={this._getColors(background, 'neutral', [])}></auro-swatch-list>
+        <auro-swatch-list componentData={this.getColors(background, 'neutral', [])}></auro-swatch-list>
 
         <h2 className="auro_heading auro_heading--600">User Interaction</h2>
         <h3 className="auro_heading auro_heading--400">For light backgrounds</h3>
         <div className="avatarWrapper avatarWrapper--2up">
-          {this._getAvatars(ui, 'ui', 'onLight', [])}
+          {this.getAvatars(ui, 'ui', 'onLight', [])}
         </div>
-        <auro-swatch-list componentData={this._getColors(ui, 'onLight', [])}></auro-swatch-list>
+        <auro-swatch-list componentData={this.getColors(ui, 'onLight', [])}></auro-swatch-list>
         <h3 className="auro_heading auro_heading--400">For dark backgrounds</h3>
         <div className="avatarWrapper avatarWrapper--2up">
-          {this._getAvatars(ui, 'ui', 'onDark', [])}
+          {this.getAvatars(ui, 'ui', 'onDark', [])}
         </div>
-        <auro-swatch-list onDark componentData={this._getColors(ui, 'onDark', [])}></auro-swatch-list>
+        <auro-swatch-list onDark componentData={this.getColors(ui, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="auro_heading auro_heading--600">Border</h2>
         <h3 className="auro_heading auro_heading--400">For light backgrounds</h3>
         <div className="avatarWrapper avatarWrapper--3up">
-          {this._getAvatars(border, 'border', 'onLight', [])}
+          {this.getAvatars(border, 'border', 'onLight', [])}
         </div>
-        <auro-swatch-list componentData={this._getColors(border, 'onLight', [])}></auro-swatch-list>
+        <auro-swatch-list componentData={this.getColors(border, 'onLight', [])}></auro-swatch-list>
         <h3 className="auro_heading auro_heading--400">For dark backgrounds</h3>
         <div className="avatarWrapper avatarWrapper--3up">
-          {this._getAvatars(border, 'border', 'onDark', [])}
+          {this.getAvatars(border, 'border', 'onDark', [])}
         </div>
-        <auro-swatch-list onDark componentData={this._getColors(border, 'onDark', [])}></auro-swatch-list>
+        <auro-swatch-list onDark componentData={this.getColors(border, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="auro_heading auro_heading--600">Text</h2>
         <h3 className="auro_heading auro_heading--400">For light backgrounds</h3>
 
         <div className="avatarWrapper avatarWrapper--3up">
-          {this._getAvatars(text, 'font', 'onLight', [])}
+          {this.getAvatars(text, 'font', 'onLight', [])}
         </div>
-        <auro-swatch-list componentData={this._getColors(text, 'onLight', [])}></auro-swatch-list>
+        <auro-swatch-list componentData={this.getColors(text, 'onLight', [])}></auro-swatch-list>
         <h3 className="auro_heading auro_heading--400">For dark backgrounds</h3>
         <div className="avatarWrapper avatarWrapper--3up">
-          {this._getAvatars(text, 'font', 'onDark', [])}
+          {this.getAvatars(text, 'font', 'onDark', [])}
         </div>
-        <auro-swatch-list onDark componentData={this._getColors(text, 'onDark', [])}></auro-swatch-list>
+        <auro-swatch-list onDark componentData={this.getColors(text, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="auro_heading auro_heading--600">Icon</h2>
         <h3 className="auro_heading auro_heading--400">For light backgrounds</h3>
         <div className="avatarWrapper avatarWrapper--2up">
-          {this._getAvatars(icon, 'icon', 'onLight', [])}
+          {this.getAvatars(icon, 'icon', 'onLight', [])}
         </div>
-        <auro-swatch-list componentData={this._getColors(icon, 'onLight', [])}></auro-swatch-list>
+        <auro-swatch-list componentData={this.getColors(icon, 'onLight', [])}></auro-swatch-list>
         <h3 className="auro_heading auro_heading--400">For dark backgrounds</h3>
         <div className="avatarWrapper avatarWrapper--2up">
-          {this._getAvatars(icon, 'icon', 'onDark', [])}
+          {this.getAvatars(icon, 'icon', 'onDark', [])}
         </div>
-        <auro-swatch-list onDark componentData={this._getColors(icon, 'onDark', [])}></auro-swatch-list>
+        <auro-swatch-list onDark componentData={this.getColors(icon, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="auro_heading auro_heading--600">Alerts / Messaging</h2>
         <h3 className="auro_heading auro_heading--400">For light backgrounds</h3>
         <div className="avatarWrapper avatarWrapper--3up">
-          {this._getAvatars(alert, 'alert', 'onLight', [])}
+          {this.getAvatars(alert, 'alert', 'onLight', [])}
         </div>
-        <auro-swatch-list componentData={this._getColors(alert, 'onLight', [])}></auro-swatch-list>
+        <auro-swatch-list componentData={this.getColors(alert, 'onLight', [])}></auro-swatch-list>
         <h3 className="auro_heading auro_heading--400">For dark backgrounds</h3>
         <div className="avatarWrapper avatarWrapper--2up">
-          {this._getAvatars(alert, 'alert', 'onDark', [])}
+          {this.getAvatars(alert, 'alert', 'onDark', [])}
         </div>
-        <auro-swatch-list onDark componentData={this._getColors(alert, 'onDark', [])}></auro-swatch-list>
+        <auro-swatch-list onDark componentData={this.getColors(alert, 'onDark', [])}></auro-swatch-list>
 
         <h2 className="auro_heading auro_heading--600">Gray</h2>
-        <auro-swatch-list componentData={this._getColors(gray, 'neutral', [])}></auro-swatch-list>
+        <auro-swatch-list componentData={this.getColors(gray, 'neutral', [])}></auro-swatch-list>
 
         <section className="auro-markdown">
           <ReactMarkdown

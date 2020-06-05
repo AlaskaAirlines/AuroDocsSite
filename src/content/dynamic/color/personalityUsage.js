@@ -1,10 +1,21 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
+import getTokens from "functions/getTokens"
 import overview from './personalityUsage.md'
 import { Nav} from './nav.js';
+import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSData--color.js'
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
+
+const midnight = data.color.brand.midnight;
+const atlas = data.color.brand.atlas;
+const breeze = data.color.brand.breeze;
+const tropical = data.color.brand.tropical;
+const alpine = data.color.brand.alpine;
+const flamingo = data.color.brand.flamingo;
+const canyon = data.color.brand.canyon;
+const goldcoast = data.color.brand.goldcoast;
 
 class ColorsOverview extends Component {
 
@@ -65,12 +76,29 @@ class ColorsOverview extends Component {
     }
   }
 
+  getColors = (color, background, colorSet) => {
+
+    if (color.hasOwnProperty(background) && color.hasOwnProperty('name')) {
+      colorSet.push(
+        { "backgroundcolor": color['value'], "colorname": color['name'], "wcag": color['wcag'], "usage": color['usage'] }
+      )
+    }
+
+    if (color instanceof Object) {
+      for (let key in color) {
+        this.getColors(color[key], background, colorSet)
+      }
+    }
+
+    return JSON.stringify(colorSet);
+  }
+
   render() {
     return (
       <section className="auro_baseType">
         <Nav />
 
-        <h1 className="auro_heading auro_heading--display">Your Personal Use is ok with me</h1>
+        <h1 className="auro_heading auro_heading--display">Digital Personality Palette Usage</h1>
 
         <section className="auro-markdown">
           <ReactMarkdown
@@ -82,6 +110,30 @@ class ColorsOverview extends Component {
               link: this.linkRenderer
             }}/>
         </section>
+
+        <h3 className="auro_heading auro_heading--400">Midnight</h3>
+        <auro-tokens-list swatch circle componentData={getTokens(midnight, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--400">Atlas</h3>
+        <auro-tokens-list swatch circle componentData={getTokens(atlas, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--400">Breeze</h3>
+        <auro-tokens-list swatch circle componentData={getTokens(breeze, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--400">Tropical</h3>
+        <auro-tokens-list swatch circle componentData={getTokens(tropical, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--400">Alpine</h3>
+        <auro-tokens-list swatch circle componentData={getTokens(alpine, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--400">Flamingo</h3>
+        <auro-tokens-list swatch circle componentData={getTokens(flamingo, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--400">Canyon</h3>
+        <auro-tokens-list swatch circle componentData={getTokens(canyon, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--400">Goldcoast</h3>
+        <auro-tokens-list swatch circle componentData={getTokens(goldcoast, [])}></auro-tokens-list>
       </section>
     );
   }

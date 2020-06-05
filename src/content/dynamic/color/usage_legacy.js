@@ -10,6 +10,7 @@ import { Nav} from './nav.js';
 
 const background = data.color.background;
 const border = data.color.border;
+
 const midnight = data.color.brand.midnight;
 const atlas = data.color.brand.atlas;
 const breeze = data.color.brand.breeze;
@@ -18,6 +19,7 @@ const alpine = data.color.brand.alpine;
 const flamingo = data.color.brand.flamingo;
 const canyon = data.color.brand.canyon;
 const goldcoast = data.color.brand.goldcoast;
+
 const gray = data.color.base.gray;
 const alert = data.color.alert;
 const icon = data.color.icon;
@@ -243,6 +245,16 @@ class Colors extends Component {
           {this._getAvatars(alert, 'alert', 'onDark', [])}
         </div>
         <auro-swatch-list onDark componentData={this._getColors(alert, 'onDark', [])}></auro-swatch-list>
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -10,9 +10,9 @@ export class Nav extends Component {
         <NavLink exact className="tab link" to={`/color/core-digital-palette-usage`} activeClassName="is-active">Core Digital Palette Usage</NavLink>
         <NavLink exact className="tab link" to={`/color/personality-palette-usage`} activeClassName="is-active">Personality Palette Usage</NavLink>
 
-
+{/*
         <NavLink exact className="tab link" to={`/color/overview_legacy`} activeClassName="is-active">Overview_legacy</NavLink>
-        <NavLink exact className="tab link" to={`/color/usage_legacy`} activeClassName="is-active">Usage_legcy</NavLink>
+        <NavLink exact className="tab link" to={`/color/usage_legacy`} activeClassName="is-active">Usage_legcy</NavLink> */}
       </div>
     )
   }
