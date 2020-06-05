@@ -8,7 +8,7 @@ We've chosen these colors to be accessed, understood, and used by all people reg
 
 We use design tokens to represent the design decisions of our visual language. Color specifications are stored using specific variable names, instead of hard-coded hex or RGBa values.
 
-[tokens](/color/personality-palette-usage#transactional-colors)
+Please review [Core Digital Brand Palette Usage](/color/core-digital-palette-usage) and [Digital Personality Palette Usage](/color/personality-palette-usage) for a full listing of all the color tokens.
 
 ## Reserve the use of blue
 
