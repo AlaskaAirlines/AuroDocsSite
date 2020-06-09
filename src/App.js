@@ -116,6 +116,8 @@ import {
 
   // cleaned up markdown docs
   Philosophy,
+  Epics,
+  WhatIsWhat,
   GettingStartedDevsOverview,
   WCGenerator,
   ComplianceDocs,
@@ -156,9 +158,12 @@ function App() {
               {/* Home */}
               <Route exact path='/' component={Philosophy} />
               <Route exact path="/philosophy"><Philosophy /></Route>
+              <Route exact path="/component-status"><ComponentsDocs /></Route>
+              <Route exact path="/epics"><Epics /></Route>
 
               {/* Getting Started/developers */}
               <Route exact path="/getting-started/developers/overview"><GettingStartedDevsOverview /></Route>
+              <Route exact path="/getting-started/developers/what-is-what"><WhatIsWhat /></Route>
               <Route exact path="/getting-started/developers/generator"><WCGenerator /></Route>
               <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
               <Route exact path="/getting-started/developers/contributing"><ContributingDocs /></Route>
@@ -228,7 +233,6 @@ function App() {
               <Route exact path="/support/a11y"><A11yDocs /></Route> {/* not used */} {/* reevaluate content */}
               <Route exact path="/support/babelSupport"><BabelSupportDocs /></Route> {/* not used */} {/* reevaluate content */}
               <Route exact path="/support/browsersSupport"><BrowsersSupportDocs /></Route>
-              <Route exact path="/support/components"><ComponentsDocs /></Route>
               <Route exact path="/support/slots"><SlotsDocs /></Route>
               <Route exact path="/support/techDetails"><TechDetailsDocs /></Route> {/* not used */} {/* reevaluate content */}
               <Route exact path="/support/tests"><TestsDocs /></Route>

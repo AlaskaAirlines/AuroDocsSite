@@ -7,19 +7,26 @@ export default function SideNav(props) {
     {
       header: "Welcome to Auro",
       items: [
-        { linkTitle: "Philosophy", route: "/philosophy" },
+        { linkTitle: "Philosophy", route: "/philosophy", parent: true },
+        { linkTitle: "Component status", route: "/component-status", parent: true },
       ]
     },
     {
       header: 'Getting Started',
-      title: "Developers",
+      title: "General",
       items: [
         { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
-        { linkTitle: "Generator", route: "/getting-started/developers/generator", parent: true  },
+        { linkTitle: "What is what?", route: "/getting-started/developers/what-is-what", parent: true },
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "Compliance", route: "/getting-started/developers/compliance", parent: true },
-        { linkTitle: "Contributing", route: "/getting-started/developers/contributing", parent: true },
         { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
+      ]
+    },
+    {
+      title: "Developers",
+      items: [
+        { linkTitle: "Generator", route: "/getting-started/developers/generator", parent: true  },
+        { linkTitle: "Contributing", route: "/getting-started/developers/contributing", parent: true },
       ]
     },
     {
@@ -45,7 +52,6 @@ export default function SideNav(props) {
     {
       header: "Dev resources",
       items: [
-        { linkTitle: "Component status", route: "/support/components", parent: true },
         { linkTitle: "Release Dashboard", route: "/support/releases-by-sprint", parent: true },
         { linkTitle: "Automated testing", route: "/support/tests", parent: true },
         { linkTitle: "Browser Support", route: "/support/browsersSupport", parent: true },
