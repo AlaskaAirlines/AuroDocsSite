@@ -25,7 +25,7 @@ const RELEASES = gql`
 }
 `
 
-class ReleasesByProject extends Component {
+class AllReleases extends Component {
   render() {
     return (
       <section id="releases">
@@ -47,4 +47,4 @@ class ReleasesByProject extends Component {
   }
 }
 
-export default ReleasesByProject;
+export default AllReleases;
