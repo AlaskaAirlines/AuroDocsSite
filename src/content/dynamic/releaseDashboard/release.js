@@ -6,7 +6,7 @@ class Release extends Component {
     return (
       <div key={this.props.name}>
         <h1 className="auro_heading auro_heading--display">{this.props.name}</h1>
-        {this.props.releases.nodes.map(({name, description}) => (
+        {this.props.releases.map(({name, description}) => (
           <div key={name}>
             <ReactMarkdown source={description} />
           </div>

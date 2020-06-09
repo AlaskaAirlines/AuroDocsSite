@@ -51,7 +51,7 @@ export default function SideNav(props) {
         { linkTitle: "The <slot> element", route: "/support/slots", parent: true },
         { linkTitle: "Automated testing", route: "/support/tests", parent: true },
         { linkTitle: "Browser Support", route: "/support/browsersSupport", parent: true },
-        { linkTitle: "Release Dashboard", route: "/support/releaseDashboard", parent: true },
+        { linkTitle: "Release Dashboard", route: "/support/releases-by-sprint", parent: true },
         // { linkTitle: "Tech overview", route: "/support/techDetails" },
         // { linkTitle: "why?", route: "/support/why" }
         { linkTitle: "Polyfills", route: "/support/polyfills/focusvisible", parent: true},

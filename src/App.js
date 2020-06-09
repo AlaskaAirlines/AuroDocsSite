@@ -83,7 +83,8 @@ import FocusVisible from './content/dynamic/polyfills/focusVisible';
 import Webcomponentsjs from './content/dynamic/polyfills/webcomponentsjs';
 
 // release Dashboard
-import ReleaseDashboard from './content/dynamic/releaseDashboard/releaseDashboard';
+import ReleasesByProject from './content/dynamic/releaseDashboard/releasesByProject';
+import ReleasesBySprint from './content/dynamic/releaseDashboard/releasesBySprint';
 
 // imported block components
 import Footer from './components/footer';
@@ -235,7 +236,8 @@ function App() {
 
               <Route exact path="/support/polyfills/focusvisible"><FocusVisible /></Route>
               <Route exact path="/support/polyfills/webcomponentsjs"><Webcomponentsjs /></Route>
-              <Route exact path="/support/releaseDashboard"><ReleaseDashboard /></Route>
+              <Route exact path="/support/releases-by-project"><ReleasesByProject /></Route>
+              <Route exact path="/support/releases-by-sprint"><ReleasesBySprint /></Route>
 
               {/* Pollyfills */}
               {/* <Route exact path="./support/polyfills/focusvisible"><PolyfillDocs /></Route> */}
