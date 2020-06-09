@@ -6,7 +6,7 @@ import Release from './release';
 import { Nav } from './nav';
 
 const RELEASES = gql`
-{ 
+{
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
       repositories(first:100, orderBy:{field: NAME, direction: ASC }) {
@@ -28,21 +28,24 @@ const RELEASES = gql`
 
 class ReleasesBySprint extends Component {
 
-  
+
 
   render() {
     const sprints = calculateSprints(new Date());
     return (
       <section id="releases-by-sprint">
         <Nav />
+
+        <h1 className="auro_heading auro_heading--display">Auro release dashboard</h1>
+        <p>The following is a list of Auro product releases and changelog notes for the last four sprint relesae cycles.</p>
+
         <Query query={RELEASES}>
           {({ loading, error, data }) => {
-            if (loading) return <p>Loading...</p>;
+            if (loading) return <p className="isLoading">Loading...</p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             const sprintsDataset = createSprintReleaseDataset(sprints, data.organization.team.repositories.nodes);
 
-            console.log(sprintsDataset);
             return sprintsDataset.map(({sprintName, releases}) => (
               <Release key={sprintName} name={sprintName} releases={releases} />
             ));

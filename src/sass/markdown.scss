@@ -16,6 +16,28 @@ $paragraph: true;
 $prefix: null;
 
 .auro-markdown {
+  &.releaseWrapper--data {
+    h1 {
+      text-transform: capitalize;
+    }
+
+    h1,
+    h2 {
+      @extend .auro_heading;
+      @extend .auro_heading--400;
+    }
+
+    h3 {
+      @extend .auro_heading;
+      @extend .auro_heading--300;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: var(--auro-size-lg);
+    }
+  }
+
   footer img {
     width: 50px;
     min-height: 100%;

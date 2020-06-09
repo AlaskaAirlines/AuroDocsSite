@@ -5,13 +5,13 @@ import Release from './release';
 import { Nav } from './nav';
 
 const RELEASES = gql`
-{ 
+{
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
       repositories(first:100, orderBy:{field: NAME, direction: ASC }) {
         nodes {
           name,
-          releases(last:2, orderBy: {field: CREATED_AT, direction:DESC }) {
+          releases(last:4, orderBy: {field: CREATED_AT, direction:DESC }) {
             nodes {
               name,
               updatedAt,
@@ -29,10 +29,15 @@ class AllReleases extends Component {
   render() {
     return (
       <section id="releases">
+
         <Nav />
+
+        <h1 className="auro_heading auro_heading--display">Auro release dashboard</h1>
+        <p>The following is a list of all Auro Products and their most recent releases.</p>
+
         <Query query={RELEASES}>
           {({ loading, error, data }) => {
-            if (loading) return <p>Loading...</p>;
+            if (loading) return <p className="isLoading">Loading...</p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, releases }) => (

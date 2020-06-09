@@ -8,7 +8,7 @@ const addDays = (date, days) => {
 }
 
 const calculateSprints = (date) => {
-  const sprintTime = date.getTime() - firstSprintStartDate.getTime(); 
+  const sprintTime = date.getTime() - firstSprintStartDate.getTime();
   const sprintDays = sprintTime / (1000 * 3600 * 24);
   const numberOfSprints = Math.ceil(sprintDays / sprintDurationInDays);
   const sprints = [];
@@ -34,7 +34,6 @@ const createSprintReleaseDataset = (sprints, repositories) => {
       sprints.forEach(sprint => {
         const releaseDate = new Date(release.createdAt);
         if (sprint.sprintStartDate.getTime() <= releaseDate.getTime() && releaseDate.getTime() <= sprint.sprintEndDate.getTime()) {
-          console.log(`found release ${release.name} for ${repository.name}`)
           sprint.releases.push({
             name: repository.name,
             description: release.description

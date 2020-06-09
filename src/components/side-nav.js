@@ -45,16 +45,16 @@ export default function SideNav(props) {
     {
       header: "Dev resources",
       items: [
-        // { linkTitle: "A11y", route: "/support/a11y" },
-        // { linkTitle: "Babel Support", route: "/support/babelSupport" },
         { linkTitle: "Component status", route: "/support/components", parent: true },
-        { linkTitle: "The <slot> element", route: "/support/slots", parent: true },
+        { linkTitle: "Release Dashboard", route: "/support/releases-by-sprint", parent: true },
         { linkTitle: "Automated testing", route: "/support/tests", parent: true },
         { linkTitle: "Browser Support", route: "/support/browsersSupport", parent: true },
-        { linkTitle: "Release Dashboard", route: "/support/releases-by-sprint", parent: true },
+        { linkTitle: "Polyfills", route: "/support/polyfills/focusvisible", parent: true},
+        { linkTitle: "The <slot> element", route: "/support/slots", parent: true },
+        // { linkTitle: "A11y", route: "/support/a11y" },
+        // { linkTitle: "Babel Support", route: "/support/babelSupport" },
         // { linkTitle: "Tech overview", route: "/support/techDetails" },
         // { linkTitle: "why?", route: "/support/why" }
-        { linkTitle: "Polyfills", route: "/support/polyfills/focusvisible", parent: true},
       ]
     },
     {
@@ -71,8 +71,8 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "CSS Conventions", route: "/support/css-conventions", parent: true},
         { linkTitle: "CSS Custom Properties", route: "/support/custom-properties", parent: true },
+        { linkTitle: "WC Style Sheets", route: "/webcorestylesheets", parent: true },
         // { linkTitle: "Touch support", route: "/support/isTouching", parent: true },
-        { linkTitle: "WC Style Sheets", route: "/webcorestylesheets", parent: true }
       ]
     }
   ]);
