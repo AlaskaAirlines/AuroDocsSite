@@ -20,7 +20,7 @@
 
 ## What is a "what"?
 
-In a design system there are many words that can be very confusing, such as _component_ and _element_. Here we will define come core phases that you will see throughout this project.
+In a design system there are many words that can be very confusing, such as _component_ and _element_. Here we will define a few core phases that you will see throughout this project.
 
 It needs to be pointed out that we are choosing NOT to use _element_ as this may be confused with [native HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) already supported by the browser. While HTML custom elelments are in essence elements and they are crated in HTML with tags, using _primitive_ and _component_ helps us to better communicate intent.
 
