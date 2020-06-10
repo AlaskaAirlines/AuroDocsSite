@@ -8,7 +8,9 @@ trigger:
     - README.md
 
 variables:
-  imageName: ubuntu-latest
+- name: imageName
+  value: ubuntu-latest
+- group: AuroDesignSiteSecrets
 
 stages:
 - stage: Build
@@ -42,16 +44,19 @@ stages:
         verbose: false
         customCommand: 'run buildIcons'
     - task: Npm@1
-      displayName: 'npm build'
+      displayName: 'npm build:test'
       inputs:
         command: custom
         workingDir: '$(System.DefaultWorkingDirectory)'
         verbose: false
         customCommand: 'run build'
+      env:
+        REACT_APP_GITHUB_API_KEY: $(REACT_APP_GITHUB_API_KEY)
     - publish: '$(System.DefaultWorkingDirectory)/build'
       artifact: site
+
 - stage: DeployToTest
-  condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
+  condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/fixEnvVariable'))
   jobs:
   - deployment: Deploy
     displayName: Deploy Test Code

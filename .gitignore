@@ -26,3 +26,4 @@ yarn-error.log*
 # Generated Icon Lib
 src/content/iconList.js
 .env
+env.json
