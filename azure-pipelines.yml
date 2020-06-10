@@ -56,7 +56,7 @@ stages:
       artifact: site
 
 - stage: DeployToTest
-  condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/fixEnvVariable'))
+  condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
   jobs:
   - deployment: Deploy
     displayName: Deploy Test Code
