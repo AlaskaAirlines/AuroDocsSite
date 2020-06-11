@@ -64,21 +64,21 @@ export default function SideNav(props) {
       ]
     },
     {
-      title: "Example projects",
-      items: [
-        { linkTitle: "React Setup", route: "/reactSetup" },
-        // { linkTitle: "Angular Setup", route: "/angularSetup" },
-        // { linkTitle: "Javascript Setup", route: "/javascriptSetup" }
-
-      ]
-    },
-    {
       title: "CSS",
       items: [
         { linkTitle: "CSS Conventions", route: "/support/css-conventions", parent: true},
         { linkTitle: "CSS Custom Properties", route: "/support/custom-properties", parent: true },
         { linkTitle: "WC Style Sheets", route: "/webcorestylesheets", parent: true },
         // { linkTitle: "Touch support", route: "/support/isTouching", parent: true },
+      ]
+    },
+    {
+      title: "Example projects",
+      items: [
+        { linkTitle: "React Setup", route: "/reactSetup" },
+        // { linkTitle: "Angular Setup", route: "/angularSetup" },
+        // { linkTitle: "Javascript Setup", route: "/javascriptSetup" }
+
       ]
     }
   ]);

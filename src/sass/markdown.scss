@@ -141,6 +141,10 @@ $prefix: null;
       font-weight: var(--auro-text-heading-default-weight);
     }
 
+    img {
+     max-width: unset;
+    }
+
     @include auro_breakpoint--sm {
       width: 100%;
       display: table;
