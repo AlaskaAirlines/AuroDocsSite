@@ -4,7 +4,6 @@ import {ExternalMarkdownWrapper, InternalMarkdownWrapper} from '../components/ra
 
 // internal markedown docs
 import PhilosophyPage from './markdown/philosophy.md';
-import EpicsPage from './markdown/epics.md';
 import GettingStartedDevsOverviewPage from './markdown/developerOverview.md';
 import WhatIsWhatPage from './markdown/whatIsWhat.md';
 import LayoutPage from './markdown/layout.md';
@@ -19,10 +18,6 @@ class ExternalDocs extends ExternalMarkdownWrapper {
 
 export class Philosophy extends InternalMarkdownWrapper {
   readme = PhilosophyPage
-}
-
-export class Epics extends InternalMarkdownWrapper {
-  readme = EpicsPage
 }
 
 export class WhatIsWhat extends InternalMarkdownWrapper {

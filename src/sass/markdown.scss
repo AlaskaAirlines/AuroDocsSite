@@ -16,6 +16,7 @@ $paragraph: true;
 $prefix: null;
 
 .auro-markdown {
+  &.epicWrapper--data,
   &.releaseWrapper--data {
     h1 {
       text-transform: capitalize;
@@ -35,6 +36,17 @@ $prefix: null;
     ul {
       margin: 0;
       padding-left: var(--auro-size-lg);
+    }
+  }
+
+  &.epicWrapper--data {
+    table {
+      td {
+        width: 30%;
+        &:nth-child(even) {
+          width: 50%
+        }
+      }
     }
   }
 

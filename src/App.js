@@ -24,6 +24,9 @@ import ScrollToTop from './components/ScrollToTop';
 // JS content files
 import NotFound from './content/notFound.js';
 
+// JS content files
+import Epics from './content/dynamic/epics/projectVersionZero';
+
 // design tokens
 import DesignTokens from './content/dynamic/designTokens/tokens';
 import DeprecatedTokens from './content/dynamic/designTokens/deprecated';
@@ -122,7 +125,6 @@ import {
 
   // cleaned up markdown docs
   Philosophy,
-  Epics,
   WhatIsWhat,
   GettingStartedDevsOverview,
   WCGenerator,

@@ -21,6 +21,10 @@ $focus: true;
   outline: 2px solid red;
 }
 
+.util_capitalize {
+  text-transform: capitalize;
+}
+
 body {
   background-color: var(--auro-color-background-lightest);
 }
@@ -575,4 +579,44 @@ img[src*='shields.io'] {
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
     }
+}
+
+
+.epicIssues {
+  margin-bottom: var(--auro-size-xxl);
+
+  &-container {
+    padding-left: var(--auro-size-md);
+    padding-right: var(--auro-size-md);
+
+    &:nth-child(even) {
+      background-color: var(--auro-color-background-lighter);
+    }
+  }
+
+  &-column {
+    display: flex;
+    align-items: center;
+  }
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .OPEN,
+  .CLOSED {
+    padding: 0 var(--auro-size-md);
+    border-radius: 3px;
+    line-height: 2.5;
+  }
+
+  .OPEN {
+    background-color: var(--auro-color-brand-tropical-300);
+  }
+
+  .CLOSED {
+    color: white;
+    background-color: var(--auro-color-brand-flamingo-500);
+  }
 }
