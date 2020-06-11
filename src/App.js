@@ -58,6 +58,13 @@ import AuroButtonApi from './content/dynamic/button/api';
 import AuroButtonInstall from './content/dynamic/button/install';
 import Button from './content/dynamic/button/legacy'; // legacy
 
+// wcss
+import WebCoreStyleSheets from './content/dynamic/wcss/wcss';
+import WcssFeatures from './content/dynamic/wcss/features';
+import WcssConventions from './content/dynamic/wcss/conventions';
+import WcssFaq from './content/dynamic/wcss/faq';
+import WcssTests from './content/dynamic/wcss/tests';
+
 // hyperlink
 import AuroHyperlink from './content/dynamic/hyperlink/hyperlink';
 import AuroHyperlinkInstall from './content/dynamic/hyperlink/install';
@@ -111,7 +118,6 @@ import {
   TestsDocs,
   VoiceTone,
   WhyCustomelementsDocs,
-  WebCoreStyleSheets,
 
 
   // cleaned up markdown docs
@@ -251,6 +257,11 @@ function App() {
               <Route exact path="/support/custom-properties"><CustomPropertiesDocs /></Route>
               <Route exact path="/support/isTouching"><IsTouchingDocs /></Route> {/* not used */} {/* reevaluate content */}
               <Route exact path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
+
+              <Route exact path="/webcorestylesheets/conventions"><WcssConventions /></Route>
+              <Route exact path="/webcorestylesheets/faq"><WcssFaq /></Route>
+              <Route exact path="/webcorestylesheets/tests"><WcssTests /></Route>
+              <Route exact path="/webcorestylesheets/features"><WcssFeatures /></Route>
 
               {/* Process */}
 

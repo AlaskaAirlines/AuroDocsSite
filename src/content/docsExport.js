@@ -104,12 +104,12 @@ export class WhyCustomelementsDocs extends ExternalDocs {
   readme = "src/WHY_CUSTOMELEMENT.md"
 }
 
-export class WebCoreStyleSheets extends ExternalMarkdownWrapper {
-  module = "@alaskaairux/orion-web-core-style-sheets"
-  githubURL = "https://github.com/AlaskaAirlines/OrionWebCoreStyleSheets"
-  codeURL = "https://github.com/AlaskaAirlines/OrionWebCoreStyleSheets/tree/master/src"
-  readme = "README.md"
-}
+// export class WebCoreStyleSheets extends ExternalMarkdownWrapper {
+//   module = "@alaskaairux/orion-web-core-style-sheets"
+//   githubURL = "https://github.com/AlaskaAirlines/OrionWebCoreStyleSheets"
+//   codeURL = "https://github.com/AlaskaAirlines/OrionWebCoreStyleSheets/tree/master/src"
+//   readme = "README.md"
+// }
 
 
 // docs from demo repos

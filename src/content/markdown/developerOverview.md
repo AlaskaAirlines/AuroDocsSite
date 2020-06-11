@@ -55,4 +55,4 @@ The Icons package contains standard set of SVG icons that can be used with any w
 $ npm i @alaskaairux/orion-icons -D
 ```
 
-Further information can be found in the [icons](/core/auro-icons/install) section.
+Further information can be found in the [icons](/icons/install) section.
