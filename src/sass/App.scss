@@ -494,6 +494,14 @@ img[src*='shields.io'] {
   margin: var(--auro-size-lg) 0;
   padding: 0 0 var(--auro-size-lg) 0;
   border-bottom: 1px solid var(--auro-color-border-primary-on-light);
+
+  .release {
+    padding: var(--auro-size-lg);
+    padding-top: var(--auro-size-xs);
+    &:nth-child(even) {
+      background-color: var(--auro-color-base-gray-100);
+    }
+  }
 }
 
 
