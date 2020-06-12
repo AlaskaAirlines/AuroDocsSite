@@ -583,32 +583,13 @@ img[src*='shields.io'] {
 
 
 .epicIssues {
-  margin-bottom: var(--auro-size-xxl);
-
-  &-container {
-    padding-left: var(--auro-size-md);
-    padding-right: var(--auro-size-md);
-
-    &:nth-child(even) {
-      background-color: var(--auro-color-background-lighter);
-    }
-  }
-
-  &-column {
-    display: flex;
-    align-items: center;
-  }
-
-  &-row {
-    display: flex;
-    justify-content: space-between;
-  }
-
   .OPEN,
   .CLOSED {
     padding: 0 var(--auro-size-md);
     border-radius: 3px;
     line-height: 2.5;
+    display: block;
+    text-align: center;
   }
 
   .OPEN {

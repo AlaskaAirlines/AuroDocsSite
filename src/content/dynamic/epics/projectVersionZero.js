@@ -67,7 +67,7 @@ class AllEpics extends Component {
             ));
           }}
         </Query>
-        <h2 className="auro_heading auro_heading--800">Project Version Zero: related issues</h2>
+        <h2 className="auro_heading auro_heading--800">Version Zero: related issues</h2>
         <Query query={projectZeroIssues}>
           {({ loading, error, data }) => {
             if (loading) return <p></p>;

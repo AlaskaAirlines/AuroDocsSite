@@ -32,3 +32,7 @@ $auro-spacing-types: stack;
 $important: true;
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariableMap";
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/spacingUtility";
+
+// Table
+/* ------------------------ Table ------------------------ */
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/componentSupport/table";
