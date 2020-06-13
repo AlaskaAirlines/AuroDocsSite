@@ -64,6 +64,8 @@ class Hyperlink extends Component {
           {`<auro-hyperlink href="/" target="_blank">External href</auro-hyperlink>`}
         </Highlight>
 
+        <h2 className="auro_heading auro_heading--700">Nav style</h2>
+
         <div className="demo--inline exampleWrapper">
           <auro-hyperlink href="/" nav>Nav href</auro-hyperlink>
         </div>
@@ -71,6 +73,28 @@ class Hyperlink extends Component {
         <Highlight className='html afterCode'>
           {`<auro-hyperlink href="/" nav>Nav href</auro-hyperlink>`}
         </Highlight>
+
+        <h2 className="auro_heading auro_heading--700">CTA Button</h2>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-hyperlink cta relative href="#">Default</auro-hyperlink> <auro-hyperlink cta href="" target="_blank" >Default</auro-hyperlink>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<auro-hyperlink cta relative href="#">Default</auro-hyperlink>
+<auro-hyperlink cta href="" target="_blank" >Default</auro-hyperlink>`}
+        </Highlight>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-hyperlink secondary cta relative href="#">Secondary</auro-hyperlink> <auro-hyperlink secondary cta href="" target="_blank" >Default</auro-hyperlink>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<auro-hyperlink secondary cta relative href="#">Secondary</auro-hyperlink>
+<auro-hyperlink secondary cta href="" target="_blank" >Default</auro-hyperlink>`}
+        </Highlight>
+
+        <h2 className="auro_heading auro_heading--700">On Dark</h2>
 
         <div className="demo--inline exampleWrapper">
           <div className="ondark">
@@ -101,6 +125,8 @@ class Hyperlink extends Component {
         <Highlight className='html afterCode'>
           {`<auro-hyperlink ondark target="_blank" href="/">External on dark href</auro-hyperlink>`}
         </Highlight>
+
+        <h2 className="auro_heading auro_heading--700">Role: button</h2>
 
         <p>Aside from the standard hyperlink use-case, the <code>auro-hyperlink</code> element is intended to be used for <code>button</code> situations as illustrated below.</p>
 
