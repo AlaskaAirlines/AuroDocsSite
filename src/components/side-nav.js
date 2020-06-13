@@ -9,6 +9,7 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Philosophy", route: "/philosophy", parent: true },
         { linkTitle: "Component status", route: "/component-status", parent: true },
+        { linkTitle: "Planned Work", route: "/planned-work", parent: true },
       ]
     },
     {

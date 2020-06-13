@@ -609,3 +609,15 @@ img[src*='shields.io'] {
     background-color: var(--auro-color-brand-flamingo-500);
   }
 }
+
+.issueLabel {
+  color: white;
+  padding: var(--auro-size-xs);
+  padding-left: var(--auro-size-md);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  border-radius: 3px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
