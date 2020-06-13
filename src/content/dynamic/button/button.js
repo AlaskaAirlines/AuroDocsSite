@@ -113,7 +113,8 @@ class AuroButtons extends Component {
         </div>
 
         <Highlight className='html afterCode'>
-          {`<auro-button ondark>Primary</auro-button>`}
+          {`<auro-button ondark>Primary</auro-button>
+<auro-button ondark disabled>Primary</auro-button>`}
         </Highlight>
 
         <div className="demo--inline exampleWrapper--ondark">
@@ -122,7 +123,8 @@ class AuroButtons extends Component {
         </div>
 
         <Highlight className='html afterCode'>
-          {`<auro-button secondary ondark>Secondary</auro-button>`}
+          {`<auro-button secondary ondark>Secondary</auro-button>
+<auro-button secondary ondark disabled>Secondary</auro-button>`}
         </Highlight>
 
         <div className="demo--inline exampleWrapper--ondark">
@@ -131,7 +133,8 @@ class AuroButtons extends Component {
         </div>
 
         <Highlight className='html afterCode'>
-          {`<auro-button tertiary ondark>Tertiary</auro-button>`}
+          {`<auro-button tertiary ondark>Tertiary</auro-button>
+<auro-button tertiary ondark disabled>Tertiary</auro-button>`}
         </Highlight>
 
         <h2 className="auro_heading auro_heading--700">Auro Button - pass function to button</h2>
