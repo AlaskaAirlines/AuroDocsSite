@@ -8,7 +8,7 @@ const projectZero = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 100, orderBy: {field: NAME, direction: ASC}) {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}) {
         nodes {
           name
           issues(labels: "Epic: Project Version Zero", states: OPEN, first: 10) {
@@ -29,15 +29,28 @@ const projectZeroIssues = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 100, orderBy: {field: NAME, direction: ASC}) {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}) {
         nodes {
           name
           issues(labels: "Project: Version Zero", first: 10) {
             nodes {
               title
-              state
               url
               number
+              state
+              projectCards {
+                nodes {
+                  column {
+                    name
+                  }
+                }
+              }
+              labels(first: 10, orderBy: {field: NAME, direction: ASC}) {
+                nodes {
+                  color
+                  name
+                }
+              }
             }
           }
         }
@@ -45,6 +58,7 @@ const projectZeroIssues = gql`
     }
   }
 }
+
 `
 
 class AllEpics extends Component {

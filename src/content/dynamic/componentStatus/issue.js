@@ -17,7 +17,7 @@ class Issue extends Component {
           <tr>
             <th>Stories for <em>{this.props.name}</em> repoistory</th>
             <th>Labels</th>
-            <th>Release status</th>
+            <th>Release Status</th>
           </tr>
         </thead>
         <tbody>

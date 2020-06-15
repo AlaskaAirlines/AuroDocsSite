@@ -16,7 +16,7 @@ const componentStatus = gql`
               state
               url
               number
-              labels(last: 10, orderBy: {field: NAME, direction: ASC}) {
+              labels(first: 10, orderBy: {field: NAME, direction: ASC}) {
                 nodes {
                   name
                   color
