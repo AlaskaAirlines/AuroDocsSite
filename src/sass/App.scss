@@ -608,16 +608,31 @@ img[src*='shields.io'] {
     color: white;
     background-color: var(--auro-color-brand-flamingo-500);
   }
+
+  @include auro_breakpoint--sm {
+    th,
+    td {
+      width: 40%;
+    }
+  }
+}
+
+// status issues
+.labelWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+  @include auro_breakpoint--sm {
+    width: 100% !important;
+  }
 }
 
 .issueLabel {
   color: white;
   padding: var(--auro-size-xs);
-  padding-left: var(--auro-size-md);
   line-height: 1;
   margin-bottom: 0.5rem;
   border-radius: 3px;
-  &:last-child {
-    margin-bottom: 0;
-  }
+  margin-right: 1rem;
 }

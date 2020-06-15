@@ -26,7 +26,7 @@ class Issue extends Component {
               <td>
                 <auro-hyperlink href={url} target="_blank">{title} #{number}</auro-hyperlink>
               </td>
-              <td>
+              <td className="labelWrapper">
                 {labels.nodes.map(({name, color}) => (
                   <div key={name} className="issueLabel" style={{backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
                     {name}
