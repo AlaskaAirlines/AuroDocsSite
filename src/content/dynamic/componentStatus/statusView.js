@@ -83,7 +83,7 @@ class PlannedWork extends Component {
         <h2 className="auro_heading auro_heading--700">Work In Progress</h2>
         <Query query={workInProgress}>
           {({ loading, error, data }) => {
-            if (loading) return <p></p>;
+            if (loading) return <p className="isLoading">Loading...</p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (
@@ -98,7 +98,7 @@ class PlannedWork extends Component {
         <p>The following is a list of all proposed web components and other request(s) currently proposed for discovery.</p>
         <Query query={componentStatus}>
           {({ loading, error, data }) => {
-            if (loading) return <p></p>;
+            if (loading) return <p className="isLoading">Loading...</p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (
