@@ -12,7 +12,7 @@ const epic = gql`
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}) {
         nodes {
           name
-          issues(labels: "Epic: Project Version Zero", states: OPEN, first: 20) {
+          issues(labels: "Epic: Doc Site Strategy", states: OPEN, first: 20) {
             nodes {
               title
               body
@@ -33,7 +33,7 @@ const issues = gql`
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}) {
         nodes {
           name
-          issues(labels: "Project: Version Zero", first: 50) {
+          issues(labels: "Project: Doc Site Strategy", first: 50) {
             nodes {
               title
               url

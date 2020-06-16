@@ -12,7 +12,7 @@ const epic = gql`
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}) {
         nodes {
           name
-          issues(labels: "Epic: Project User Research", states: OPEN, first: 50) {
+          issues(labels: "Epic: Project User Research", states: OPEN, first: 20) {
             nodes {
               title
               body
@@ -81,7 +81,7 @@ class AllEpics extends Component {
             ));
           }}
         </Query>
-        <h2 className="auro_heading auro_heading--800">Version Zero: related issues</h2>
+        <h2 className="auro_heading auro_heading--800">Related issues</h2>
         <Query query={issues}>
           {({ loading, error, data }) => {
             if (loading) return <p></p>;

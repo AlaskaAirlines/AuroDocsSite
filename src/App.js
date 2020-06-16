@@ -27,6 +27,7 @@ import NotFound from './content/notFound.js';
 // JS content files
 import VersionZero from './content/dynamic/epics/projectVersionZero';
 import UserResearch  from './content/dynamic/epics/projectUserResearch';
+import DocSiteStrategy from './content/dynamic/epics/projectDocSite';
 import PlannedWork from './content/dynamic/componentStatus/statusView';
 
 // design tokens
@@ -169,9 +170,12 @@ function App() {
               <Route exact path='/' component={Philosophy} />
               <Route exact path="/philosophy"><Philosophy /></Route>
               <Route exact path="/component-status"><ComponentsDocs /></Route>
+
               <Route exact path="/epics/"><VersionZero /></Route>
               <Route exact path="/epics/version-zero"><VersionZero /></Route>
               <Route exact path="/epics/user-research"><UserResearch /></Route>
+              <Route exact path="/epics/doc-site-strategy"><DocSiteStrategy /></Route>
+
               <Route exact path="/planned-work"><PlannedWork /></Route>
 
               {/* Getting Started/developers */}
