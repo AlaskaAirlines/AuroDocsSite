@@ -39,7 +39,7 @@ Primitives have a dependency on tokens.
 
 Components, like primitives, are web components, but are more complex. Components can be made up of multiple primitives and at times other components. A crucial property of a component is when two or more primitives or other components  are working in concert to complete an interaction.
 
-Components have a primary dependency primitives, but also may have a dependency on tokens or other components.
+Components have a primary dependency on primitives, but may also have dependency on tokens or other components.
 
 ## Pattern
 
@@ -47,4 +47,4 @@ Patterns are not components, although very common patterns may be captured as a 
 
 Patterns are commonly used interfaces where the makeup is entirely of primitives and other components, but due to their complexity the pattern is 'suggested use' to allow the engineer to address their concerns directly versus having to work with an overly complex API.
 
-A crucial property of a pattern is only the existence of design documentation to support a common use UI pattern
+A crucial property of a pattern is only the existence of design documentation to support a common use UI pattern.
