@@ -116,22 +116,6 @@ class Hyperlink extends Component {
 <a class="hyperlink" href="#"><slot>Relative URL</slot></a>`}
         </Highlight>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <h2 className="auro_heading auro_heading--700">Call To Action (cta) Button</h2>
 
         <div className="demo--inline exampleWrapper">
