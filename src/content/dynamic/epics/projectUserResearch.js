@@ -5,14 +5,14 @@ import Epic from './epic';
 import Issue from './issue';
 import { Nav } from './nav';
 
-const projectZero = gql`
+const epic = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}) {
         nodes {
           name
-          issues(labels: "Epic: Project Version Zero", states: OPEN, first: 10) {
+          issues(labels: "Epic: Project User Research", states: OPEN, first: 50) {
             nodes {
               title
               body
@@ -26,14 +26,14 @@ const projectZero = gql`
 }
 `
 
-const projectZeroIssues = gql`
+const issues = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}) {
         nodes {
           name
-          issues(labels: "Project: Version Zero", first: 50) {
+          issues(labels: "Project: User Research", first: 10) {
             nodes {
               title
               url
@@ -69,7 +69,7 @@ class AllEpics extends Component {
 
         <Nav />
 
-        <Query query={projectZero}>
+        <Query query={epic}>
           {({ loading, error, data }) => {
             if (loading) return <p className="isLoading">Loading...</p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
@@ -82,7 +82,7 @@ class AllEpics extends Component {
           }}
         </Query>
         <h2 className="auro_heading auro_heading--800">Version Zero: related issues</h2>
-        <Query query={projectZeroIssues}>
+        <Query query={issues}>
           {({ loading, error, data }) => {
             if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
