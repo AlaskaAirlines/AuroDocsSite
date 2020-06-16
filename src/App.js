@@ -98,6 +98,7 @@ import Webcomponentsjs from './content/dynamic/polyfills/webcomponentsjs';
 // release Dashboard
 import AllReleases from './content/dynamic/releaseDashboard/allReleases';
 import ReleasesBySprint from './content/dynamic/releaseDashboard/releasesBySprint';
+import ReleaseSummary from './content/dynamic/releaseDashboard/summaryDashboard';
 
 // imported block components
 import Footer from './components/footer';
@@ -259,6 +260,7 @@ function App() {
               <Route exact path="/support/polyfills/webcomponentsjs"><Webcomponentsjs /></Route>
               <Route exact path="/support/all-releases"><AllReleases /></Route>
               <Route exact path="/support/releases-by-sprint"><ReleasesBySprint /></Route>
+              <Route exact path="/support/releases-summary"><ReleaseSummary /></Route>
 
               {/* Pollyfills */}
               {/* <Route exact path="./support/polyfills/focusvisible"><PolyfillDocs /></Route> */}

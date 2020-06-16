@@ -6,6 +6,7 @@ export class Nav extends Component {
   render() {
     return (
       <div role="tablist" className="ods-tablist tabList">
+        <NavLink exact className="tab link" to={`/support/releases-summary`} activeClassName="is-active">Release Summary</NavLink>
         <NavLink exact className="tab link" to={`/support/releases-by-sprint`} activeClassName="is-active">Releases by Sprint</NavLink>
         <NavLink exact className="tab link" to={`/support/all-releases`} activeClassName="is-active">All Releases</NavLink>
       </div>
