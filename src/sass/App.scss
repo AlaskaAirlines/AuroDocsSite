@@ -629,10 +629,20 @@ img[src*='shields.io'] {
 }
 
 .issueLabel {
-  color: white;
-  padding: var(--auro-size-xs);
-  line-height: 1;
-  margin-bottom: 0.5rem;
-  border-radius: 3px;
-  margin-right: 1rem;
+  font-size: 0;
+  border-radius: 50%;
+  width: var(--auro-size-md);
+  height: var(--auro-size-md);
+  margin-bottom: var(--auro-size-xs);
+  margin-right: var(--auro-size-xs);
+
+  @include auro_breakpoint--sm {
+    font-size: var(--auro-text-body-size-xs);
+    border-radius: var(--auro-border-radius);
+    width: auto;
+    height: auto;
+    padding: var(--auro-size-xs);
+    line-height: var(--auro-unitless-scale-100);
+    margin-right: var(--auro-size-md);
+  }
 }

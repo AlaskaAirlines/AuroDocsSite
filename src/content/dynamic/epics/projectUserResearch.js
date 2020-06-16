@@ -50,6 +50,7 @@ const issues = gql`
                 nodes {
                   color
                   name
+                  description
                 }
               }
             }

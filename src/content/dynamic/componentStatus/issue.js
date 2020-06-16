@@ -15,7 +15,7 @@ class Issue extends Component {
       <table key={this.props.name} className="auro_table epicIssues">
         <thead>
           <tr>
-            <th>Stories for <em>{this.props.name}</em> repoistory</th>
+            <th>Issues for: {this.props.name}</th>
             <th>Labels</th>
             <th>Release Status</th>
           </tr>
@@ -27,8 +27,8 @@ class Issue extends Component {
                 <auro-hyperlink href={url} target="_blank">{title} #{number}</auro-hyperlink>
               </td>
               <td className="labelWrapper">
-                {labels.nodes.map(({name, color}) => (
-                  <div key={name} className="issueLabel" style={{backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
+                {labels.nodes.map(({name, color, description}) => (
+                  <div key={name} title={description} className="issueLabel" style={{backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
                     {name}
                   </div>
                 ))}
