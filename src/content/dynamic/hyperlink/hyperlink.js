@@ -70,28 +70,86 @@ class Hyperlink extends Component {
           <auro-hyperlink href="/" nav>Nav href</auro-hyperlink>
         </div>
 
-        <Highlight className='html afterCode'>
-          {`<auro-hyperlink href="/" nav>Nav href</auro-hyperlink>`}
-        </Highlight>
-
-        <h2 className="auro_heading auro_heading--700">CTA Button</h2>
+        <h2 className="auro_heading auro_heading--700">Relative vs absolute URLs and https enforcement</h2>
+        <p>By default the auro-hyperlink will assume that the url passed is an absolute URL to <code>www.alaskaair.com</code></p>
 
         <div className="demo--inline exampleWrapper">
-          <auro-hyperlink cta relative href="#">Default</auro-hyperlink> <auro-hyperlink cta href="" target="_blank" >Default</auro-hyperlink>
+          <auro-hyperlink href="/route-map">Absolute URL to route map</auro-hyperlink>
         </div>
 
         <Highlight className='html afterCode'>
-          {`<auro-hyperlink cta relative href="#">Default</auro-hyperlink>
+          {`// Web component example
+<auro-hyperlink href="/route-map">Absolute URL to route map</auro-hyperlink>
+
+// Output code in shadow DOM element
+<a class="hyperlink" href="https://www.alaskaair.com/route-map"><slot>Absolute URL to route map</slot></a>`}
+        </Highlight>
+
+        <p>Defining the absolute URL will render the same results regardless of protocol.</p>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-hyperlink href="http://www.alaskaair.com/route-map">http absolute URL to route map</auro-hyperlink> or
+          <auro-hyperlink href="//www.alaskaair.com/route-map">no hypertext transfer protocol absolute URL to route map</auro-hyperlink>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`// Web component example
+<auro-hyperlink href="http://www.alaskaair.com/route-map">http absolute URL to route map</auro-hyperlink> or
+<auro-hyperlink href="//www.alaskaair.com/route-map">no hypertext transfer protocol absolute URL to route map</auro-hyperlink>
+
+// Output code in shadow DOM element
+<a class="hyperlink" href="https://www.alaskaair.com/route-map"><slot>http absolute URL to route map</slot></a>
+<a class="hyperlink" href="https://www.alaskaair.com/route-map"><slot>no hypertext transfer protocol absolute URL to route map</slot></a>`}
+        </Highlight>
+
+        <p>For relative URLs, use the <code>relative</code> property.</p>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-hyperlink relative href="#">Relative URL</auro-hyperlink>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`// Web component example
+<auro-hyperlink relative href="#">Relative URL</auro-hyperlink>
+
+// Output code in shadow DOM element
+<a class="hyperlink" href="#"><slot>Relative URL</slot></a>`}
+        </Highlight>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2 className="auro_heading auro_heading--700">Call To Action (cta) Button</h2>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-hyperlink cta href="#">Default</auro-hyperlink> <auro-hyperlink cta href="" target="_blank" >Default</auro-hyperlink>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<auro-hyperlink cta href="#">Default</auro-hyperlink>
 <auro-hyperlink cta href="" target="_blank" >Default</auro-hyperlink>`}
         </Highlight>
 
         <div className="demo--inline exampleWrapper">
-          <auro-hyperlink secondary cta relative href="#">Secondary</auro-hyperlink> <auro-hyperlink secondary cta href="" target="_blank" >Default</auro-hyperlink>
+          <auro-hyperlink secondary cta href="#">Secondary</auro-hyperlink> <auro-hyperlink secondary cta href="#" target="_blank" >Secondary</auro-hyperlink>
         </div>
 
         <Highlight className='html afterCode'>
-          {`<auro-hyperlink secondary cta relative href="#">Secondary</auro-hyperlink>
-<auro-hyperlink secondary cta href="" target="_blank" >Default</auro-hyperlink>`}
+          {`<auro-hyperlink secondary cta href="#">Secondary</auro-hyperlink>
+<auro-hyperlink secondary cta href="#" target="_blank" >Secondary</auro-hyperlink>`}
         </Highlight>
 
         <h2 className="auro_heading auro_heading--700">On Dark</h2>
