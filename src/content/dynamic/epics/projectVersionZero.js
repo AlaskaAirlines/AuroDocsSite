@@ -33,7 +33,7 @@ const issues = gql`
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}) {
         nodes {
           name
-          issues(labels: "Project: Version Zero", first: 50) {
+          issues(labels: "Project: Version Zero", first: 50, orderBy: {field: UPDATED_AT, direction: ASC}) {
             nodes {
               title
               url
@@ -60,7 +60,6 @@ const issues = gql`
     }
   }
 }
-
 `
 
 class AllEpics extends Component {
