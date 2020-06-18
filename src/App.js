@@ -30,6 +30,8 @@ import UserResearch  from './content/dynamic/epics/projectUserResearch';
 import DocSiteStrategy from './content/dynamic/epics/projectDocSite';
 import PlannedWork from './content/dynamic/componentStatus/statusView';
 
+import ComponentAudit from './content/dynamic/componentAudit/auditView';
+
 // design tokens
 import DesignTokens from './content/dynamic/designTokens/tokens';
 import DeprecatedTokens from './content/dynamic/designTokens/deprecated';
@@ -178,6 +180,8 @@ function App() {
               <Route exact path="/epics/doc-site-strategy"><DocSiteStrategy /></Route>
 
               <Route exact path="/planned-work"><PlannedWork /></Route>
+
+              <Route exact path="/audit/"><ComponentAudit /></Route>
 
               {/* Getting Started/developers */}
               <Route exact path="/getting-started/developers/overview"><GettingStartedDevsOverview /></Route>
