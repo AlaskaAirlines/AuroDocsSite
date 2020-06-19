@@ -124,6 +124,10 @@ $prefix: null;
 
   p {
     @extend .auro_p;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   pre  {
