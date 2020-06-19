@@ -29,7 +29,6 @@ import VersionZero from './content/dynamic/epics/projectVersionZero';
 import UserResearch  from './content/dynamic/epics/projectUserResearch';
 import DocSiteStrategy from './content/dynamic/epics/projectDocSite';
 import PlannedWork from './content/dynamic/componentStatus/statusView';
-
 import ComponentAudit from './content/dynamic/componentAudit/auditView';
 
 // design tokens
@@ -101,6 +100,9 @@ import Webcomponentsjs from './content/dynamic/polyfills/webcomponentsjs';
 import AllReleases from './content/dynamic/releaseDashboard/allReleases';
 import ReleasesBySprint from './content/dynamic/releaseDashboard/releasesBySprint';
 import ReleaseSummary from './content/dynamic/releaseDashboard/summaryDashboard';
+
+// use Dashboard
+import UseDashboard from './content/dynamic/useDashboard/useDashboard';
 
 // imported block components
 import Footer from './components/footer';
@@ -180,8 +182,8 @@ function App() {
               <Route exact path="/epics/doc-site-strategy"><DocSiteStrategy /></Route>
 
               <Route exact path="/planned-work"><PlannedWork /></Route>
-
               <Route exact path="/audit/"><ComponentAudit /></Route>
+              <Route exact path="/ado-use"><UseDashboard /></Route>
 
               {/* Getting Started/developers */}
               <Route exact path="/getting-started/developers/overview"><GettingStartedDevsOverview /></Route>
