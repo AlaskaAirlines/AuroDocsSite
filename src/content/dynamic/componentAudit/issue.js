@@ -15,7 +15,7 @@ class Issue extends Component {
               <th>UI Kit</th>
               <th>Code</th>
               <th>Docs</th>
-              <th>Notes</th>
+              <th className="auro_table--notes">Notes</th>
               <th>State</th>
             </tr>
           </thead>

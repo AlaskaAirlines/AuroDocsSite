@@ -267,10 +267,10 @@ class AllEpics extends Component {
               return data.organization.team.repositories.nodes.map(({ labels }) => (
                 <div className="auditLegend--key">
                   {labels.nodes.map(({name, color}) => (
-                    name.includes("ODS Compliant")
+                    name.includes("ODS/V0 Compliant")
                       ? <div className="auditLegend--labelWrapper"><div key={name} data-name={name} title={name} className="issueLabel auditLabel auditLabel--legend"
                           style={{backgroundColor: '#' + color, color: '#' + color}}>
-                        </div><span>=</span><span>{name.substring(name.search("ODS Compliant"))}</span></div>
+                        </div><span>=</span><span>{name.substring(name.search("ODS/V0 Compliant"))}</span></div>
                     : ''
                   ))}
 

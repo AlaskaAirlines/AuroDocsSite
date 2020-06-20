@@ -591,9 +591,33 @@ img[src*='shields.io'] {
 
 // UI for status dashboards
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+.auro_table {
+  thead {
+    @include auro_breakpoint--md {
+      border-bottom: unset;
+    }
+  }
+}
+
+// Stickey headers
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Something to support in Auro table?
 .auro_table--audit {
   th {
     white-space: nowrap;
+
+    @include auro_breakpoint--md {
+      box-shadow: inset 0px -1px 0px 0px var(--auro-color-border-primary-on-light);
+      position: sticky;
+      top: 192px;
+      background-color: #fff;
+    }
+  }
+}
+
+.auro_table--notes {
+  @include auro_breakpoint--md {
+    width: 40%;
   }
 }
 
@@ -667,6 +691,7 @@ img[src*='shields.io'] {
 
 .auditLegend {
   position: sticky;
+  z-index: 1;
   top: 80px;
   background-color: var(--auro-color-background-lighter);
   border-bottom: 1px solid var(--auro-color-border-primary-on-light);
@@ -694,7 +719,7 @@ img[src*='shields.io'] {
   display: none;
 }
 
-[data-name*='ODS Compliant'] {
+[data-name*='ODS/V0 Compliant'] {
   border: 1px solid;
   background-color: transparent !important;
 }
