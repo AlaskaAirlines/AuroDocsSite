@@ -21,17 +21,28 @@ class Issue extends Component {
           </tr>
         </thead>
         <tbody>
-          {this.props.issues.map(({title, url, number, labels, projectCards}) => (
+          {this.props.issues.map(({title, url, number, labels, projectCards, assignees}) => (
             <tr key={title}>
               <td>
-                <auro-hyperlink href={url} target="_blank">{title} #{number}</auro-hyperlink>
+                <div>
+                  <auro-hyperlink href={url} target="_blank">{title} #{number}</auro-hyperlink>
+                </div>
+                <div className="githubAvatar--wrapper">
+                  {assignees.nodes.map(({avatarUrl, name, id}) => (
+                    assignees.nodes.length > 0
+                    ? <img key={id} src={avatarUrl} className="githubAvatar" alt={name} title={name} />
+                    : ''
+                  ))}
+                </div>
               </td>
-              <td className="labelWrapper">
-                {labels.nodes.map(({name, color, description}) => (
-                  <div key={name} title={description} className="issueLabel" style={{backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
-                    {name}
-                  </div>
-                ))}
+              <td>
+                <div className="labelWrapper">
+                  {labels.nodes.map(({name, color, description}) => (
+                    <div key={name} title={description} className="issueLabel" style={{backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
+                      {name}
+                    </div>
+                  ))}
+                </div>
               </td>
               <td>
                 {projectCards.nodes.map(({column}) => (

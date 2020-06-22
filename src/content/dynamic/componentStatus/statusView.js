@@ -29,6 +29,13 @@ const workInProgress = gql`
                   }
                 }
               }
+              assignees(last: 5) {
+                nodes {
+                  avatarUrl(size: 50)
+                  name
+                  id
+                }
+              }
             }
           }
         }
@@ -36,6 +43,7 @@ const workInProgress = gql`
     }
   }
 }
+
 `
 
 const approvedForWork = gql`
@@ -62,6 +70,13 @@ const approvedForWork = gql`
                   column {
                     name
                   }
+                }
+              }
+              assignees(last: 5) {
+                nodes {
+                  avatarUrl(size: 50)
+                  name
+                  id
                 }
               }
             }
