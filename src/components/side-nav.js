@@ -68,6 +68,7 @@ export default function SideNav(props) {
       title: "CSS",
       items: [
         { linkTitle: "CSS Conventions", route: "/support/css-conventions", parent: true},
+        { linkTitle: "ShadyCSS", route: "/support/shadycss", parent: true },
         { linkTitle: "CSS Custom Properties", route: "/support/custom-properties", parent: true },
         { linkTitle: "WC Style Sheets", route: "/webcorestylesheets", parent: true },
         // { linkTitle: "Touch support", route: "/support/isTouching", parent: true },

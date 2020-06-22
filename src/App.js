@@ -138,6 +138,7 @@ import {
   WCGenerator,
   ComplianceDocs,
   ContributingDocs,
+  ShadyCSS,
 
 
 } from './content/docsExport';
@@ -273,6 +274,8 @@ function App() {
 
               {/* CSS */}
               <Route exact path="/support/css-conventions"><CssConventionsDocs /></Route>
+              <Route exact path="/support/shadycss"><ShadyCSS /></Route>
+
               <Route exact path="/support/custom-properties"><CustomPropertiesDocs /></Route>
               <Route exact path="/support/isTouching"><IsTouchingDocs /></Route> {/* not used */} {/* reevaluate content */}
               <Route exact path="/webcorestylesheets"><WebCoreStyleSheets /></Route>

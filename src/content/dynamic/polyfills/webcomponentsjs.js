@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro_docs/master/src/POLYFILL.md';
+const markdownContent = 'https://raw.githubusercontent.com/webcomponents/polyfills/master/README.md';
 
 class Webcomponentsjs extends MarkdownPageWrapper {
 

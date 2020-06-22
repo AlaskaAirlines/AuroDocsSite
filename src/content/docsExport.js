@@ -8,6 +8,7 @@ import GettingStartedDevsOverviewPage from './markdown/developerOverview.md';
 import WhatIsWhatPage from './markdown/whatIsWhat.md';
 import LayoutPage from './markdown/layout.md';
 import VoiceTonePage from './markdown/voiceTone.md';
+import ShadyCSSPage from './markdown/shadyCSS.md'
 
 // Markdown classes
 // wrapper for general docs section
@@ -34,6 +35,10 @@ export class Layout extends InternalMarkdownWrapper {
 
 export class VoiceTone extends InternalMarkdownWrapper {
   readme = VoiceTonePage
+}
+
+export class ShadyCSS extends InternalMarkdownWrapper {
+  readme = ShadyCSSPage
 }
 
 export class WCGenerator extends ExternalMarkdownWrapper {
