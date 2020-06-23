@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactMarkdown from 'react-markdown';
+import CodeBlock from 'components/CodeBlock';
+import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-class Summary extends Component {
+class Summary extends MarkdownPageWrapper {
   createNewDate(date) {
     let endDate = new Date(date);
     return `${endDate.getUTCMonth() + 1}/${endDate.getUTCDate()}/${endDate.getUTCFullYear()}`;
@@ -14,7 +16,16 @@ class Summary extends Component {
           <div key={title}>
             <h1 className="auro_heading auro_heading--800">{title}</h1>
             <p><b>Sprint end:</b> {this.createNewDate(dueOn)} | <b>Relesae status:</b> {state.toLowerCase()}</p>
-            <ReactMarkdown source={description} />
+            <div className="auro-markdown">
+              <ReactMarkdown
+                source={description}
+                renderers={{
+                  code: CodeBlock,
+                  heading: this.headingRenderer,
+                  link: this.linkRenderer
+                }}
+              />
+            </div>
           </div>
         ))}
       </div>

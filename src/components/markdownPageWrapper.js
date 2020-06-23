@@ -45,7 +45,7 @@ export class MarkdownPageWrapper extends Component {
       }
 
       else {
-        return <a href={props.href} target="_blank" class="externalLink" rel="noopener noreferrer">
+        return <a href={props.href} target="_blank" className="externalLink" rel="noopener noreferrer">
           {props.children}
           <ExternalLink />
         </a>

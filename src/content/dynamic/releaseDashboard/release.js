@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
+import CodeBlock from 'components/CodeBlock';
+import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-class Release extends Component {
+class Release extends MarkdownPageWrapper {
   render() {
     return (
       <div key={this.props.name} className="releaseWrapper">
@@ -10,7 +12,14 @@ class Release extends Component {
           <div key={name} className="release">
             <h2 className="auro_heading auro_heading--600">{name}</h2>
             <div className="auro-markdown releaseWrapper--data">
-              <ReactMarkdown source={description} />
+              <ReactMarkdown
+                source={description}
+                renderers={{
+                  code: CodeBlock,
+                  heading: this.headingRenderer,
+                  link: this.linkRenderer
+                }}
+              />
             </div>
           </div>
         ))}
