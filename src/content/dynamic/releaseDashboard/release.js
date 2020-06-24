@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
