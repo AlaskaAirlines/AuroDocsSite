@@ -23,6 +23,8 @@ import "@alaskaairux/ods-inputtext";
 
 // input type radio/checkbox
 import "@alaskaairux/ods-inputoptions";
+import "@alaskaairux/auro-checkbox";
+import "@alaskaairux/auro-checkbox/dist/auro-checkbox-group";
 
 // toast
 import "@alaskaairux/ods-toast";

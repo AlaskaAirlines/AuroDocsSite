@@ -65,6 +65,11 @@ import AuroButtonApi from './content/dynamic/button/api';
 import AuroButtonInstall from './content/dynamic/button/install';
 import Button from './content/dynamic/button/legacy'; // legacy
 
+// checkbox
+import AuroCheckbox from './content/dynamic/checkbox/checkbox';
+import AuroCheckboxApi from './content/dynamic/checkbox/api';
+import AuroCheckboxInstall from './content/dynamic/checkbox/install';
+
 // wcss
 import WebCoreStyleSheets from './content/dynamic/wcss/wcss';
 import WcssFeatures from './content/dynamic/wcss/features';
@@ -232,6 +237,12 @@ function App() {
               <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
               {/* Legacy */}
               <Route exact path="/components/orion/button"><Button /></Route>
+
+              {/* Auro Checkbox */}
+              <Route exact path="/components/auro/checkbox"><AuroCheckbox /></Route>
+              <Route exact path="/components/auro/checkbox/install"><AuroCheckboxInstall /></Route>
+              <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route>
+              {/* <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route> */}
 
               {/* Auro Table */}
               <Route exact path="/components/auro/table"><AuroTable /></Route>

@@ -40,11 +40,13 @@ class Options extends Component {
       <section id="inputOptions">
 
         <Nav />
+        <p>Deprecated: See <auro-hyperlink href="/components/auro/checkbox" relative>Auro Checkbox</auro-hyperlink> for updated element use. </p>
         <h1 className="auro_heading auro_heading--display">ODS Input Options</h1>
+
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>The Orion Design System fully supports a wide range of options types and styles. The following examples illustrate common input option uses followed up by code examples.</p>
-          <p>See <ods-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-ods-inputoptions" target="_blank">instructions</ods-hyperlink> for more information as how to install and full API for the <code>ods-ods-inputoptions</code> Orion base element.</p>
+          <p>See <auro-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-ods-inputoptions" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>ods-ods-inputoptions</code> Orion base element.</p>
           <p>Illustrated in this example is a stand-alone use of <code>ods-ods-inputoptions</code>.</p>
         </div>
 
