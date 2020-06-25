@@ -7,7 +7,7 @@ const Actions = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro_docs") {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
           issues(filterBy: {labels: "Audit: Actions"}, first: 10) {
@@ -39,7 +39,7 @@ const Informational = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro_docs") {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
           issues(filterBy: {labels: "Audit: Informational"}, first: 10) {
@@ -71,7 +71,7 @@ const Structural = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro_docs") {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
           issues(filterBy: {labels: "Audit: Structural"}, first: 10) {
@@ -103,7 +103,7 @@ const Inputs = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro_docs") {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
           issues(filterBy: {labels: "Audit: Inputs"}, first: 10) {
@@ -135,7 +135,7 @@ const Navigation = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro_docs") {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
           issues(filterBy: {labels: "Audit: Navigation"}, first: 10) {
@@ -167,7 +167,7 @@ const Contextual = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro_docs") {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
           issues(filterBy: {labels: "Audit: Contextual"}, first: 10) {
@@ -199,7 +199,7 @@ const Content = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro_docs") {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
           issues(filterBy: {labels: "Audit: Content"}, first: 10) {
@@ -231,7 +231,7 @@ const AuditLabels = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro_docs") {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
           labels(last: 50, query: "Artwork") {

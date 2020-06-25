@@ -13,8 +13,8 @@ import ShadyCSSPage from './markdown/shadyCSS.md'
 // Markdown classes
 // wrapper for general docs section
 class ExternalDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/auro_docs"
-  codeURL = "https://github.com/AlaskaAirlines/auro_docs/tree/master/src"
+  githubURL = "https://github.com/AlaskaAirlines/auro"
+  codeURL = "https://github.com/AlaskaAirlines/auro/tree/master/src"
 }
 
 export class Philosophy extends InternalMarkdownWrapper {
