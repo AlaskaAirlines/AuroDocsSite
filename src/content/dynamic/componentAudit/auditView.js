@@ -231,7 +231,7 @@ const AuditLabels = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "AuroDesignTokens") {
         nodes {
           name
           labels(last: 50, query: "Artwork") {
