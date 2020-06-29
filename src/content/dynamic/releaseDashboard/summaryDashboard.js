@@ -17,6 +17,7 @@ const milestones = gql`
               description
               dueOn
               state
+              url
             }
           }
         }
