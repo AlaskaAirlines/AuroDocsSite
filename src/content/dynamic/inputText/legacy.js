@@ -31,52 +31,52 @@ class InputText extends Component {
           {`$npm i @alaskaairux/ods-inputtext`}
         </Highlight>
 
+        <h2 className="auro_heading auro_heading--500">Basic use, required by default</h2>
         <div className="exampleWrapper">
-          <ods-inputtext label="First name" helptext="Enter your first name" required></ods-inputtext>
+          <ods-inputtext label="First name" helptext="Enter your first name" required id="firstName01"></ods-inputtext>
         </div>
-
         <Highlight className='html afterCode'>
-          {`<ods-inputtext label="First name" helptext="Enter your first name" required></ods-inputtext>`}
+          {`<ods-inputtext label="First name" helptext="Enter your first name" required id="firstName01"></ods-inputtext>`}
         </Highlight>
 
+        <h2 className="auro_heading auro_heading--500">Preset value</h2>
         <div className="exampleWrapper">
-          <ods-inputtext label="First name" value="Alaska" required></ods-inputtext>
+          <ods-inputtext label="First name" value="James" helptext="Enter your first name" required id="firstName02"></ods-inputtext>
         </div>
-
         <Highlight className='html afterCode'>
-          {`<ods-inputtext label="First name" value="Alaska" required></ods-inputtext>`}
+          {`<ods-inputtext label="First name" value="James" helptext="Enter your first name" required id="firstName02"></ods-inputtext>`}
         </Highlight>
 
+        <h2 className="auro_heading auro_heading--500">Optional</h2>
         <div className="exampleWrapper">
-          <ods-inputtext label="First name"></ods-inputtext>
+          <ods-inputtext label="Middle name" helptext="Enter your middle name" id="midddleName01"></ods-inputtext>
         </div>
-
         <Highlight className='html afterCode'>
-          {`<ods-inputtext label="First name"></ods-inputtext>`}
+          {`<ods-inputtext label="Middle name" helptext="Enter your middle name" id="midddleName01"></ods-inputtext>`}
         </Highlight>
 
+        <h2 className="auro_heading auro_heading--500">Required with email specific error feedback</h2>
         <div className="exampleWrapper">
-          <ods-inputtext type="email" label="Email" required></ods-inputtext>
+          <ods-inputtext type="email" label="Email" required id="email01" helptext="Please enter your email address"></ods-inputtext>
         </div>
-
         <Highlight className='html afterCode'>
-          {`<ods-inputtext type="email" label="Email" required></ods-inputtext>`}
+          {`<ods-inputtext type="email" label="Email" required id="email01" helptext="Please enter your email address"></ods-inputtext>`}
         </Highlight>
 
+        <h2 className="auro_heading auro_heading--500">Disabled state</h2>
         <div className="exampleWrapper">
-          <ods-inputtext label="First name" disabled required></ods-inputtext>
+          <ods-inputtext label="First name" disabled required id="firstName03" helptext="Please enter your first name"></ods-inputtext>
         </div>
-
         <Highlight className='html afterCode'>
-          {`<ods-inputtext label="First name" disabled required></ods-inputtext>`}
+          {`<ods-inputtext label="First name" disabled required id="firstName03" helptext="Please enter your first name"></ods-inputtext>`}
         </Highlight>
 
+        <h2 className="auro_heading auro_heading--500">Error state</h2>
         <div className="exampleWrapper">
-          <ods-inputtext label="First name" value="Alaska" error="This name already exists" required></ods-inputtext>
+          <ods-inputtext label="First name" value="James" error="This name already exists" required id="firstName04"></ods-inputtext>
         </div>
-
         <Highlight className='html afterCode'>
-          {`<ods-inputtext label="First name" value="Alaska" error="This name already exists" required></ods-inputtext>`}
+          {`<ods-inputtext label="First name" value="James" error="This name already exists" required id="firstName04"></ods-inputtext>`}
         </Highlight>
 
         <LinkIcons
