@@ -15,6 +15,12 @@ class AuroCheckbox extends Component {
     }
   };
 
+  componentDidMount() {
+    // test for event listening
+    document.getElementById('unchecked').addEventListener('change', function() { console.log('change event fired') });
+    document.getElementById('unchecked').addEventListener('input', function() { console.log('input event fired') });
+  }
+
   componentWillMount() {
     fetch(buildStatus).then((response) => response.text()).then((text) => {
       this.setState({
@@ -70,11 +76,11 @@ class AuroCheckbox extends Component {
 
         <h3 className="auro_heading auro_heading--500">Default checkbox</h3>
         <div className="demo--inline exampleWrapper">
-          <auro-checkbox id="unchecked" name="exampleOption" value="checked option">Checkbox option</auro-checkbox>
+          <auro-checkbox id="unchecked" name="exampleOption" value="example checked option">Checkbox option</auro-checkbox>
         </div>
 
         <Highlight className='html afterCode'>
-          {`<auro-checkbox id="unchecked" name="exampleOption" value="checked option">Checkbox option</auro-checkbox>`}
+          {`<auro-checkbox id="unchecked" name="exampleOption" value="example checked option">Checkbox option</auro-checkbox>`}
         </Highlight>
 
         <h3 className="auro_heading auro_heading--500">Checked</h3>
