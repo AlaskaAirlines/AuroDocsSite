@@ -28,8 +28,6 @@ const RELEASES = gql`
 
 class ReleasesBySprint extends Component {
 
-
-
   render() {
     const sprints = calculateSprints(new Date());
     return (

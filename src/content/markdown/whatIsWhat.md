@@ -39,7 +39,7 @@ Primitives have a dependency on tokens.
 
 Components, like primitives, are web components, but are more complex. Components can be made up of multiple primitives and at times other components. A crucial property of a component is when two or more primitives or other components  are working in concert to complete an interaction.
 
-Components have a primary dependency on primitives, but may also have dependency on tokens or other components.
+Components may have a dependency on primitive components, but may also have a dependency on tokens or other components as well.
 
 ## Pattern
 
