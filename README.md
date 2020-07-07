@@ -1,25 +1,22 @@
-# Auro Design System Basic Site
+# Auro Design System Doc Site
 
-This repo is for the maangement of a basic 'sticker sheet' representaiton of Auro Design System elements in preperation for building the Auro Design System public web site.
+[![Build Status](https://itsals.visualstudio.com/Auro%20Design%20System/_apis/build/status/auro-docsite/auro-docsite%20CI?branchName=master)](https://itsals.visualstudio.com/Auro%20Design%20System/_build/latest?definitionId=5591&branchName=master) 
+
+This repo is the home for [auro.alaskaair.com](https://auro.alaskaair.com).
+
+This project adheres to all open-source best practices. Please review the Auro [Contributing Guidelines](https://auro.alaskaair.com/getting-started/developers/contributing) for any information regarding the editing of the site. 
 
 ## Run site locally
 
-* `npm run copyFiles` copies over the fonts
-* `npm run buildIcons` builds the icon library
-* `npm start` starts the dev server
-* `npm run dev` does all three actions together.
+After cloning the repo locally, please address these simple steps; 
 
-## Add new content
+1. `$ npm i`
+1. `$ npm run dev`
 
-Adding content means a few different things. Here are some instructions for various types.
+## Publish to site
 
-### Local markdown doc
+The CI/CD pipeline will publish a new build of the site with each merge to `master`. 
 
-An internal markdown doc means that the content is in the form of markdown and the file is located locally in this project.
+## More information 
 
-**To crate a new document:**
-
-* Find the directory `./src/content/pages/template`
-* Duplicate the directory with the name of your new content
-* No need to change file names
-* In the markdown doc, review instructions and get to work!
+For any additional information in regards to this site or the Auro Design System, please be sure you check out the [Teams Channel](https://teams.microsoft.com/l/channel/19%3a5df2ca021a6548c4af54256bbc737129%40thread.skype/Auro%2520(public)?groupId=3a6a4783-59c6-496a-a20c-ab306461a894&tenantId=0f44c5d4-42b0-45c2-bf55-d0fea8430d33)
