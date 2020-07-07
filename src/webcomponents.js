@@ -21,6 +21,9 @@ import "@alaskaairux/auro-swatch/dist/auro-color-avatar";
 // input type text
 import "@alaskaairux/ods-inputtext";
 
+// header
+import "@alaskaairux/auro-header";
+
 // input type radio/checkbox
 import "@alaskaairux/ods-inputoptions";
 import "@alaskaairux/auro-checkbox";

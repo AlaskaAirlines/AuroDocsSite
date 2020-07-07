@@ -59,6 +59,10 @@ class Typography extends Component {
         <h3 className="auro_heading auro_heading--600">Design Tokens</h3>
         <p className="auro_baseParagraph">We use design tokens to represent the decisions of Auro's visual language. We store font specifications using variable names instead of hard-coded typography values.</p>
 
+        <auro-header level="2" display="800">Auro header component</auro-header>
+
+        See <auro-hyperlink href="/components/auro/header" relative>auro-header component</auro-hyperlink> for an easy to use web componet.
+
         <h2 className="auro_heading auro_heading--800">Headings</h2>
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>Due to the combination of Orion selectors with Auro selectors, this demo is using the <code>$prefix</code> option to name-space the Auro selectors.</p>

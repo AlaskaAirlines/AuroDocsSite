@@ -43,6 +43,7 @@ export default function SideNav(props) {
     {
       header: "Components",
       items: [
+        { linkTitle: "Header", route: '/components/auro/header', parent: true },
         { linkTitle: "Button", route: '/components/auro/button', parent: true },
         { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
         { linkTitle: "Checkbox", route: '/components/auro/checkbox', parent: true },

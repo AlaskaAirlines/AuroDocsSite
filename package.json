@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@alaskaairux/auro-checkbox": "^1.1.0",
+    "@alaskaairux/auro-header": "^1.0.0",
     "@alaskaairux/auro-swatch": "^2.0.4",
     "@alaskaairux/auro-table": "^1.0.0",
     "@alaskaairux/icons": "^3.1.1",

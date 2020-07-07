@@ -734,3 +734,9 @@ img[src*='shields.io'] {
   }
 }
 
+// header color example
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+.error--on-light {
+  color: var(--auro-color-alert-error-on-light);
+}

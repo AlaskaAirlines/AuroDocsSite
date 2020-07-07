@@ -97,6 +97,11 @@ import AuroTable from './content/dynamic/table/table';
 import AuroTableApi from './content/dynamic/table/api';
 import AuroTableInstall from './content/dynamic/table/install';
 
+// Header
+import AuroHeader from './content/dynamic/header/header';
+import AuroHeaderApi from './content/dynamic/header/api';
+import AuroHeaderInstall from './content/dynamic/header/install';
+
 // polyfills
 import FocusVisible from './content/dynamic/polyfills/focusVisible';
 import Webcomponentsjs from './content/dynamic/polyfills/webcomponentsjs';
@@ -249,6 +254,11 @@ function App() {
               <Route exact path="/components/auro/table"><AuroTable /></Route>
               <Route exact path="/components/auro/table/install"><AuroTableInstall /></Route>
               <Route exact path="/components/auro/table/api"><AuroTableApi /></Route>
+
+              {/* Auro Header */}
+              <Route exact path="/components/auro/header"><AuroHeader /></Route>
+              <Route exact path="/components/auro/header/install"><AuroHeaderInstall /></Route>
+              <Route exact path="/components/auro/header/api"><AuroHeaderApi /></Route>
 
               {/* Auro Hyperlink */}
               <Route exact path="/components/auro/hyperlink"><AuroHyperlink /></Route>
