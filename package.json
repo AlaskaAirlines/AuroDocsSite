@@ -18,9 +18,12 @@
     "@alaskaairux/orion-web-core-style-sheets": "^2.10.1",
     "@apollo/react-components": "^3.1.5",
     "@apollo/react-hooks": "^3.1.5",
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
     "apollo-boost": "^0.4.9",
     "focus-visible": "^5.1.0",
     "graphql": "^15.2.0",
+    "husky": "^4.2.5",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -34,14 +37,25 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "echo \"No tests specified\" && exit 0",
     "eject": "react-scripts eject",
     "rebuildSass": "npm rebuild node-sass",
     "buildIcons": "node ./scripts/build-icon-lib.js",
     "dev": "npm-run-all rebuildSass buildIcons start"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "browserslist": {
     "production": [
