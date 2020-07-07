@@ -467,6 +467,10 @@ pre {
   }
 }
 
+.tab.focus-visible {
+  color: var(--auro-color-base-white) !important;
+}
+
 // this really should be done in the component?
 auro-tokens-list {
   display: block;
