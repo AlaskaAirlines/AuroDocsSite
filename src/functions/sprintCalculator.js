@@ -1,4 +1,4 @@
-const firstSprintStartDate = new Date("1/1/2020");
+const firstSprintStartDate = new Date("12/30/2019");
 const sprintDurationInDays = 14;
 
 const addDays = (date, days) => {

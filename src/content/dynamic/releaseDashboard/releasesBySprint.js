@@ -12,7 +12,7 @@ const RELEASES = gql`
       repositories(first:20, orderBy:{field: CREATED_AT, direction: ASC }) {
         nodes {
           name,
-          releases(first:20, orderBy: {field: CREATED_AT, direction:DESC }) {
+          releases(first:20, orderBy: {field: CREATED_AT, direction: DESC }) {
             nodes {
               name,
               createdAt,
