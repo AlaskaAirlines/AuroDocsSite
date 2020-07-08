@@ -33,11 +33,11 @@ class Typography extends Component {
         <Nav/>
         <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
 
-        <h1 className="auro_heading auro_heading--display">Typography Usage</h1>
-        <h3 className="auro_heading auro_heading--600">Overview</h3>
+        <auro-header level="1" display="display">Typography Usage</auro-header>
+        <auro-header level="3" display="600">Overview</auro-header>
         <p className="auro_baseParagraph">Typography carries content and builds hierarchy and structure within an experience. Our typography is simple and clear, never jarring or overly striking</p>
 
-        <h3 className="auro_heading auro_heading--600">Accessibility</h3>
+        <auro-header level="3" display="600">Accessibility</auro-header>
         <p className="auro_baseParagraph">To ensure that usage of typography complies with accessibility guidelines:</p>
 
         <ul>
@@ -56,17 +56,19 @@ class Typography extends Component {
           <li>Avoid skipping heading levels (e.g., <code>h2</code> to <code>h4</code> )</li>
         </ul>
 
-        <h3 className="auro_heading auro_heading--600">Design Tokens</h3>
+        <auro-header level="2" display="600">Design Tokens</auro-header>
         <p className="auro_baseParagraph">We use design tokens to represent the decisions of Auro's visual language. We store font specifications using variable names instead of hard-coded typography values.</p>
 
-        <auro-header level="2" display="800">Auro header component</auro-header>
+        <auro-header level="2" display="600">Auro header styles</auro-header>
+        <p>Header styles can be added to a project via the <auro-hyperlink href="/webcorestylesheets" relative>Auro Web Core Style Sheet package</auro-hyperlink>. Plase be sure to review the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#headings-css" target="_blank"> API documentation.</auro-hyperlink></p>
 
-        See <auro-hyperlink href="/components/auro/header" relative>auro-header component</auro-hyperlink> for an easy to use web componet.
+        <auro-header level="2" display="600">Auro header component</auro-header>
+        <p>See <auro-hyperlink href="/components/auro/header" relative>auro-header component</auro-hyperlink> for an easy to use web componet.</p>
 
-        <h2 className="auro_heading auro_heading--800">Headings</h2>
+        <auro-header level="2" display="800">Headings</auro-header>
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>Due to the combination of Orion selectors with Auro selectors, this demo is using the <code>$prefix</code> option to name-space the Auro selectors.</p>
-          <p>See the <auro-hyperlink href="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#variable-prefix" target="_blank">WCSS docs for more info</auro-hyperlink>.</p>
+          <p>See the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#scope-prefix-variable-prefix" target="_blank">WCSS docs for more info</auro-hyperlink>.</p>
         </div>
 
         <div className="exampleWrapper">
@@ -118,7 +120,8 @@ class Typography extends Component {
           {`<h1 class="auro_heading auro_heading--300">.auro_heading--300</h1>`}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--800">Paragraph style</h2>
+        <auro-header level="2" display="800">Paragraph style</auro-header>
+        <p>Paragraph styles can be added to a project via the <auro-hyperlink href="/webcorestylesheets" relative>Auro Web Core Style Sheet package</auro-hyperlink>. Be sure to review the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#essentials-css-#{$sym}#{$prefix}html#{$scope}" target="_blank">type essentials API docs.</auro-hyperlink></p>
 
         <div className="exampleWrapper auro_baseType">
           <p className="auro_baseParagraph">Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -127,7 +130,8 @@ class Typography extends Component {
           {`<p class="auro_baseParagraph">Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>`}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--800">Utility type selectors</h2>
+        <auro-header level="2" display="800">Utility type selectors</auro-header>
+        <p>Utility type styles can be added to a project via the <auro-hyperlink href="/webcorestylesheets" relative>Auro Web Core Style Sheet package</auro-hyperlink>. Plase be sure to review the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-font" target="_blank"> utility-font API documentation.</auro-hyperlink></p>
 
         <div className="exampleWrapper auro_baseType">
           <p className="auro_util_body--lg">.auro_util_body--lg</p>
@@ -150,36 +154,36 @@ class Typography extends Component {
           {`<p class="auro_util_body--xs">.auro_util_body--xs`}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--800">Design tokens</h2>
-
-        <h3 className="auro_heading auro_heading--500">Font families</h3>
+        <auro-header level="2" display="800">Design tokens</auro-header>
+        <p>Please see <auro-hyperlink href="/getting-started/developers/design-tokens/install" relative>install docs</auro-hyperlink> for more information.</p>
+        <auro-header level="3" display="500">Font families</auro-header>
         <auro-tokens-list componentData={_getTokens(font, [])}></auro-tokens-list>
 
-        <h3 className="auro_heading auro_heading--500">Heading defaults</h3>
+        <auro-header level="3" display="500">Heading defaults</auro-header>
         <auro-tokens-list componentData={_getTokens(textHeadingDefault, [])}></auro-tokens-list>
 
-        <h3 className="auro_heading auro_heading--500">Heading display</h3>
+        <auro-header level="3" display="500">Heading display</auro-header>
         <auro-tokens-list componentData={_getTokens(textHeadingDisplay, [])}></auro-tokens-list>
 
-        <h3 className="auro_heading auro_heading--500">Heading 800</h3>
+        <auro-header level="3" display="500">Heading 800</auro-header>
         <auro-tokens-list componentData={_getTokens(textHeading800, [])}></auro-tokens-list>
 
-        <h3 className="auro_heading auro_heading--500">Heading 700</h3>
+        <auro-header level="3" display="500">Heading 700</auro-header>
         <auro-tokens-list componentData={_getTokens(textHeading700, [])}></auro-tokens-list>
 
-        <h3 className="auro_heading auro_heading--500">Heading 600</h3>
+        <auro-header level="3" display="500">Heading 600</auro-header>
         <auro-tokens-list componentData={_getTokens(textHeading600, [])}></auro-tokens-list>
 
-        <h3 className="auro_heading auro_heading--500">Heading 500</h3>
+        <auro-header level="3" display="500">Heading 500</auro-header>
         <auro-tokens-list componentData={_getTokens(textHeading500, [])}></auro-tokens-list>
 
-        <h3 className="auro_heading auro_heading--500">Heading 400</h3>
+        <auro-header level="3" display="500">Heading 400</auro-header>
         <auro-tokens-list componentData={_getTokens(textHeading400, [])}></auro-tokens-list>
 
-        <h3 className="auro_heading auro_heading--500">Heading 300</h3>
+        <auro-header level="3" display="500">Heading 300</auro-header>
         <auro-tokens-list componentData={_getTokens(textHeading300, [])}></auro-tokens-list>
 
-        <h3 className="auro_heading auro_heading--500">Body (default, lg, sm, xs)</h3>
+        <auro-header level="3" display="500">Body (default, lg, sm, xs)</auro-header>
         <auro-tokens-list componentData={_getTokens(textBody, [])}></auro-tokens-list>
 
         <LinkIcons
