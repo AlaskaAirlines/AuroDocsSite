@@ -17,7 +17,7 @@ export default function SideNav(props) {
       title: "General",
       items: [
         { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
-        { linkTitle: "Component defs", route: "/getting-started/developers/component-definitions", parent: true },
+        { linkTitle: "Common defs", route: "/getting-started/developers/common-definitions", parent: true },
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "Compliance", route: "/getting-started/developers/compliance", parent: true },
         { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },

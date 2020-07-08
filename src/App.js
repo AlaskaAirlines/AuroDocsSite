@@ -198,7 +198,7 @@ function App() {
 
               {/* Getting Started/developers */}
               <Route exact path="/getting-started/developers/overview"><GettingStartedDevsOverview /></Route>
-              <Route exact path="/getting-started/developers/component-definitions"><WhatIsWhat /></Route>
+              <Route exact path="/getting-started/developers/common-definitions"><WhatIsWhat /></Route>
               <Route exact path="/getting-started/developers/what-is-what"><WhatIsWhat /></Route>
               <Route exact path="/getting-started/developers/generator"><WCGenerator /></Route>
               <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
