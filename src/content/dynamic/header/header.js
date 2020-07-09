@@ -37,7 +37,7 @@ class AuroHeader extends Component {
 
         <auro-header level="2" display="display">Header</auro-header>
 
-        <p>The auro-header component is a simple component for rendering page or content headers without having to deal with font styling. Simply choose the level of the header want and the style type.</p>
+        <p>The <code>auro-header</code> component is a simple component for rendering page or content headers without having to deal with font styling. Simply choose the level of the header want and the style type.</p>
 
         <p>The auro-header component is able to take any combination of options for heading levels and display options. See <auro-hyperlink href="/typography/usage" relative>Auro's header usage guidlines</auro-hyperlink> for additional examples sans web component dependency.</p>
 
@@ -103,6 +103,29 @@ class AuroHeader extends Component {
 
         <Highlight className='html afterCode'>
           {`<auro-header level="5" display="400">Hello World!</auro-header>`}
+        </Highlight>
+
+        <auro-header level="3" display="600">Adjust margins</auro-header>
+        <p>In some cases the margin between elements may need to be adjusted. To do this, the <code>auro-header</code> component supports adjusting either the <code>top</code> or <code>bottom</code> margins. This coupled with the <code>size</code> prop, developers have a <auro-hyperlink href="/components/auro/header/api" relative>full range of options.</auro-hyperlink></p>
+
+        <p>The following example shows how you can update the <code>bottom</code> margin to use the <code>xs</code> size setting.</p>
+
+        <p>Also note the use of the <code>util_stackMarginNone--top</code> utility selector on the <code>ol</code> from <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_spacing" target="_blank">Web Core Style Sheets</auro-hyperlink>.</p>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-header level="2" display="500" margin="bottom" size="xs">Hello World!</auro-header>
+          <ol className="util_stackMarginNone--top">
+            <li>... thing</li>
+            <li>thing ...</li>
+          </ol>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<auro-header level="2" display="500" margin="bottom" size="xs">Hello World!</auro-header>
+<ol className="util_stackMarginNone--top">
+  <li>... thing</li>
+  <li>thing ...</li>
+</ol>`}
         </Highlight>
 
         <auro-header level="3" display="600">Color inheritance</auro-header>

@@ -100,7 +100,7 @@ class Typography extends Component {
         </Highlight>
 
         <div className="exampleWrapper">
-          <h1 className="auro_heading auro_heading--500">.auro_heading--500</h1>
+          <h1 className="auro_heading auro_heading--500 util_stackMarginXxxs--bottom">.auro_heading--500</h1>
         </div>
         <Highlight className='html afterCode'>
           {`<h1 class="auro_heading auro_heading--500">.auro_heading--500</h1>`}
@@ -152,6 +152,19 @@ class Typography extends Component {
         </div>
         <Highlight className='html afterCode'>
           {`<p class="auro_util_body--xs">.auro_util_body--xs`}
+        </Highlight>
+
+        <auro-header level="2" display="800">Custom spacing</auro-header>
+        <p>The Header styles come with spacing baked in. This is to help auto stack content and components without additional effort. But there are times where customizing this spacing is required. To help with this, please refer to the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#mixin-auro_spacing" target="_blank">Auro spacing utility</auro-hyperlink> section of Web Core Style Sheets. </p>
+
+        <p>When using utility selectors, the <code>!important</code> flag is sometimes required. Please see <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-variable-important" target="_blank">how to use the important flag</auro-hyperlink> in Web Core Style Sheets.</p>
+
+        <p>The example below illustrates how you can adjust the spacing around a header element using Auro utility selectors. </p>
+        <div className="exampleWrapper">
+          <h1 className="auro_heading auro_heading--500 util_stackMarginXxxs--bottom util_stackMarginXxxs--top">.auro_heading--500</h1>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<h1 className="auro_heading auro_heading--500 util_stackMarginXxxs--bottom util_stackMarginXxxs--top">.auro_heading--500</h1>`}
         </Highlight>
 
         <auro-header level="2" display="800">Design tokens</auro-header>
