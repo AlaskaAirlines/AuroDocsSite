@@ -11,9 +11,9 @@ class Summary extends MarkdownPageWrapper {
 
   render() {
     return (
-      <div key={this.props.name} className="">
+      <div key={this.props.name}>
         {this.props.milestones.nodes.map(({title, description, dueOn, state, url}) => (
-          <div key={title}>
+          <div key={title} className="summaryWrapper">
             <h1 className="auro_heading auro_heading--800">{title}</h1>
             <p><b>Sprint end:</b> {this.createNewDate(dueOn)} | <b>Relesae status:</b> <auro-hyperlink href={url} target="_blank">{state.toLowerCase()}</auro-hyperlink></p>
             <div className="auro-markdown">

@@ -749,3 +749,17 @@ img[src*='shields.io'] {
 .my-selector {
   margin: 0;
 }
+
+
+// Release summary
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+.summaryWrapper {
+  border-bottom: 1px solid var(--auro-color-border-primary-on-light);
+  margin-bottom: var(--auro-size-xxl);
+  padding-bottom: var(--auro-size-xxl);
+
+  &:last-child {
+    border-width: 0;
+  }
+}
