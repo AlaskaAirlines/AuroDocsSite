@@ -141,6 +141,32 @@ import Xlg from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/x-lg
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Xsm from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/x-sm.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
+import Logo7H from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-7H.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoAA from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-AA.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoAS from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-AS.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoCX from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-CX.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoEK from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-EK.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoFJ from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-FJ.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoKE from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-KE.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoKL from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-KL.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoLA from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-LA.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoLH from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-LH.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoOO from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-OO.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoQF from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-QF.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoSQ from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-SQ.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
 import Ccalaska from '-!svg-react-loader!@alaskaairux/icons/dist/icons/payment/cc-alaska.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Ccamex from '-!svg-react-loader!@alaskaairux/icons/dist/icons/payment/cc-amex.svg'; 
@@ -562,6 +588,78 @@ import Roundtriparrows from '-!svg-react-loader!@alaskaairux/icons/dist/icons/te
             <div title="x-sm.svg">
               <Xsm />
               <span>x-sm.svg</span>
+            </div>
+          
+          </div>
+        </section>
+      
+        <section>
+          <h2 className="icon-category">logos</h2>
+          <div className="iconsWrapper">
+            
+            <div title="logo-7H.svg">
+              <Logo7H />
+              <span>logo-7H.svg</span>
+            </div>
+          
+            <div title="logo-AA.svg">
+              <LogoAA />
+              <span>logo-AA.svg</span>
+            </div>
+          
+            <div title="logo-AS.svg">
+              <LogoAS />
+              <span>logo-AS.svg</span>
+            </div>
+          
+            <div title="logo-CX.svg">
+              <LogoCX />
+              <span>logo-CX.svg</span>
+            </div>
+          
+            <div title="logo-EK.svg">
+              <LogoEK />
+              <span>logo-EK.svg</span>
+            </div>
+          
+            <div title="logo-FJ.svg">
+              <LogoFJ />
+              <span>logo-FJ.svg</span>
+            </div>
+          
+            <div title="logo-KE.svg">
+              <LogoKE />
+              <span>logo-KE.svg</span>
+            </div>
+          
+            <div title="logo-KL.svg">
+              <LogoKL />
+              <span>logo-KL.svg</span>
+            </div>
+          
+            <div title="logo-LA.svg">
+              <LogoLA />
+              <span>logo-LA.svg</span>
+            </div>
+          
+            <div title="logo-LH.svg">
+              <LogoLH />
+              <span>logo-LH.svg</span>
+            </div>
+          
+            <div title="logo-OO.svg">
+              <LogoOO />
+              <span>logo-OO.svg</span>
+            </div>
+          
+            <div title="logo-QF.svg">
+              <LogoQF />
+              <span>logo-QF.svg</span>
+            </div>
+          
+            <div title="logo-SQ.svg">
+              <LogoSQ />
+              <span>logo-SQ.svg</span>
             </div>
           
           </div>

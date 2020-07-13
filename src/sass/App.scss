@@ -185,6 +185,7 @@ pre {
 
     @include breakpoint-narrow {
       width: 150px;
+      padding: 1rem;
       &:nth-child(even) {
         margin-right: var(--auro-size-xs);
       }

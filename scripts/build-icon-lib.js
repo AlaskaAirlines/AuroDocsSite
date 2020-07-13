@@ -113,7 +113,7 @@ const getCategory = (iconPath) => {
       }
     `;
 
-    fs.writeFile("src/content/iconList.js", iconListComponentText, (err) => {
+    fs.writeFile("src/content/dynamic/icons/iconList.js", iconListComponentText, (err) => {
 
         if(err) return console.log(err);
 

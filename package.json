@@ -7,7 +7,7 @@
     "@alaskaairux/auro-header": "^1.1.0",
     "@alaskaairux/auro-swatch": "^2.0.4",
     "@alaskaairux/auro-table": "^1.0.0",
-    "@alaskaairux/icons": "^3.1.1",
+    "@alaskaairux/icons": "^3.2.0",
     "@alaskaairux/ods-button": "^4.6.1",
     "@alaskaairux/ods-hyperlink": "^1.5.1",
     "@alaskaairux/ods-inputoptions": "^1.1.7",
@@ -18,8 +18,8 @@
     "@alaskaairux/orion-web-core-style-sheets": "^2.10.2",
     "@apollo/react-components": "^3.1.5",
     "@apollo/react-hooks": "^3.1.5",
-    "@commitlint/cli": "^9.0.1",
-    "@commitlint/config-conventional": "^9.0.1",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
     "apollo-boost": "^0.4.9",
     "focus-visible": "^5.1.0",
     "graphql": "^15.3.0",
@@ -31,7 +31,7 @@
     "react-markdown": "^4.3.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
-    "react-scroll": "^1.7.16",
+    "react-scroll": "^1.8.0",
     "react-syntax-highlighter": "^12.2.1"
   },
   "scripts": {
