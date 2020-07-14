@@ -145,13 +145,37 @@ import Logo7H from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import LogoAA from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-AA.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoAF from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-AF.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoAM from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-AM.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
 import LogoAS from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-AS.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoAY from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-AY.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoBA from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-BA.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import LogoCX from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-CX.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoDE from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-DE.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoDL from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-DL.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoEI from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-EI.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
 import LogoEK from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-EK.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoEV from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-EV.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoFI from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-FI.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
 import LogoFJ from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-FJ.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoHA from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-HA.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoHU from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-HU.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoJL from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-JL.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import LogoKE from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-KE.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
@@ -607,9 +631,29 @@ import Roundtriparrows from '-!svg-react-loader!@alaskaairux/icons/dist/icons/te
               <span>logo-AA.svg</span>
             </div>
           
+            <div title="logo-AF.svg">
+              <LogoAF />
+              <span>logo-AF.svg</span>
+            </div>
+          
+            <div title="logo-AM.svg">
+              <LogoAM />
+              <span>logo-AM.svg</span>
+            </div>
+          
             <div title="logo-AS.svg">
               <LogoAS />
               <span>logo-AS.svg</span>
+            </div>
+          
+            <div title="logo-AY.svg">
+              <LogoAY />
+              <span>logo-AY.svg</span>
+            </div>
+          
+            <div title="logo-BA.svg">
+              <LogoBA />
+              <span>logo-BA.svg</span>
             </div>
           
             <div title="logo-CX.svg">
@@ -617,14 +661,54 @@ import Roundtriparrows from '-!svg-react-loader!@alaskaairux/icons/dist/icons/te
               <span>logo-CX.svg</span>
             </div>
           
+            <div title="logo-DE.svg">
+              <LogoDE />
+              <span>logo-DE.svg</span>
+            </div>
+          
+            <div title="logo-DL.svg">
+              <LogoDL />
+              <span>logo-DL.svg</span>
+            </div>
+          
+            <div title="logo-EI.svg">
+              <LogoEI />
+              <span>logo-EI.svg</span>
+            </div>
+          
             <div title="logo-EK.svg">
               <LogoEK />
               <span>logo-EK.svg</span>
             </div>
           
+            <div title="logo-EV.svg">
+              <LogoEV />
+              <span>logo-EV.svg</span>
+            </div>
+          
+            <div title="logo-FI.svg">
+              <LogoFI />
+              <span>logo-FI.svg</span>
+            </div>
+          
             <div title="logo-FJ.svg">
               <LogoFJ />
               <span>logo-FJ.svg</span>
+            </div>
+          
+            <div title="logo-HA.svg">
+              <LogoHA />
+              <span>logo-HA.svg</span>
+            </div>
+          
+            <div title="logo-HU.svg">
+              <LogoHU />
+              <span>logo-HU.svg</span>
+            </div>
+          
+            <div title="logo-JL.svg">
+              <LogoJL />
+              <span>logo-JL.svg</span>
             </div>
           
             <div title="logo-KE.svg">
