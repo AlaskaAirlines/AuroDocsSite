@@ -141,6 +141,10 @@ import Xlg from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/x-lg
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Xsm from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/x-sm.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
+import GlyphAA from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/glyph-AA.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import GlyphAS from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/glyph-AS.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
 import Logo7H from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-7H.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import LogoAA from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-AA.svg'; 
@@ -621,6 +625,16 @@ import Roundtriparrows from '-!svg-react-loader!@alaskaairux/icons/dist/icons/te
           <h2 className="icon-category">logos</h2>
           <div className="iconsWrapper">
             
+            <div title="glyph-AA.svg">
+              <GlyphAA />
+              <span>glyph-AA.svg</span>
+            </div>
+          
+            <div title="glyph-AS.svg">
+              <GlyphAS />
+              <span>glyph-AS.svg</span>
+            </div>
+          
             <div title="logo-7H.svg">
               <Logo7H />
               <span>logo-7H.svg</span>

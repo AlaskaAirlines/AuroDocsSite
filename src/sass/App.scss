@@ -164,7 +164,7 @@ pre {
   span {
     position: absolute;
     font-size: var(--auro-text-body-size-xs);
-    top: 100px;
+    bottom: 10px;
   }
 
   div {
@@ -185,7 +185,8 @@ pre {
 
     @include breakpoint-narrow {
       width: 150px;
-      padding: 1rem;
+      height: 150px;
+      padding: 1rem 1.5rem;
       &:nth-child(even) {
         margin-right: var(--auro-size-xs);
       }
