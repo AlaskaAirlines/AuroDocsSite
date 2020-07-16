@@ -118,7 +118,7 @@ export class AngularDemoDocs extends ExternalMarkdownWrapper {
 }
 
 export class JavascriptDemoDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo"
+  githubURL = "https://github.com/AlaskaAirlines/AuroJavascriptDemo"
   codeURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo/tree/master/src"
   readme = "README.md"
 }
