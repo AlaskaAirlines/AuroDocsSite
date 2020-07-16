@@ -132,6 +132,7 @@ import {
   GovernanceDocs,
   IsTouchingDocs,
   JavascriptDemoDocs,
+  SvelteDemoDocs,
   Layout,
   ReactDemoDocs,
   SlotsDocs,
@@ -313,8 +314,10 @@ function App() {
               {/* Example Projects  */}
               {/* Content for these pages need to be updated and have better descriptions of project */}
               <Route exact path="/angularSetup"><AngularDemoDocs /></Route> {/* not used */}
-              <Route exact path="/javascriptSetup"><JavascriptDemoDocs /></Route> {/* not used */}
-              <Route exact path="/reactSetup"><ReactDemoDocs /></Route> {/* not used */}
+              <Route exact path="/javascriptSetup"><JavascriptDemoDocs /></Route>
+              <Route exact path="/reactSetup"><ReactDemoDocs /></Route>
+              <Route exact path="/svelteSetup"><SvelteDemoDocs /></Route>
+
 
               <Route path="*"><NotFound /></Route>
 

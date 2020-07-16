@@ -81,7 +81,8 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "React Setup", route: "/reactSetup", parent: true},
         // { linkTitle: "Angular Setup", route: "/angularSetup" },
-        { linkTitle: "Javascript Setup", route: "/javascriptSetup", parent: true}
+        { linkTitle: "Javascript Setup", route: "/javascriptSetup", parent: true},
+        { linkTitle: "Svelte Setup", route: "/svelteSetup", parent: true}
 
       ]
     }

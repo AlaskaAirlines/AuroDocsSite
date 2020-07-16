@@ -106,8 +106,8 @@ export class WhyCustomelementsDocs extends ExternalDocs {
 
 // docs from demo repos
 export class ReactDemoDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/OrionReactDemo"
-  codeURL = "https://github.com/AlaskaAirlines/OrionReactDemo/tree/master/src"
+  githubURL = "https://github.com/AlaskaAirlines/AuroReactDemo"
+  codeURL = "https://github.com/AlaskaAirlines/AuroReactDemo/tree/master/src"
   readme = "README.md"
 }
 
@@ -119,6 +119,12 @@ export class AngularDemoDocs extends ExternalMarkdownWrapper {
 
 export class JavascriptDemoDocs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/AuroJavascriptDemo"
-  codeURL = "https://github.com/AlaskaAirlines/OrionJavascriptDemo/tree/master/src"
+  codeURL = "https://github.com/AlaskaAirlines/AuroJavascriptDemo/tree/master/src"
+  readme = "README.md"
+}
+
+export class SvelteDemoDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/AuroSvelteDemo"
+  codeURL = "https://github.com/AlaskaAirlines/AuroSvelteDemo/tree/master/src"
   readme = "README.md"
 }
