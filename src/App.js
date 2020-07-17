@@ -92,6 +92,11 @@ import OdsOptionsInstall from './content/dynamic/inputOptions/install';
 import InputText from './content/dynamic/inputText/legacy';
 import InputTextInstall from './content/dynamic/inputText/install';
 
+// toast
+import Toast from './content/dynamic/toast/toast';
+import ToastInstall from './content/dynamic/toast/install';
+import ToastToaster from './content/dynamic/toast/toaster';
+
 // Table
 import AuroTable from './content/dynamic/table/table';
 import AuroTableApi from './content/dynamic/table/api';
@@ -271,6 +276,11 @@ function App() {
               {/* inputOptions */}
               <Route exact path="/components/orion/inputOptions/"><Options /></Route>
               <Route exact path="/components/orion/inputOptions/install"><OdsOptionsInstall /></Route>
+
+              {/* toast */}
+              <Route exact path="/components/orion/toast/"><Toast /></Route>
+              <Route exact path="/components/orion/toast/install"><ToastInstall /></Route>
+              <Route exact path="/components/orion/toast/toaster"><ToastToaster /></Route>
 
               {/* inputText */}
               <Route exact path="/components/orion/inputText/"><InputText /></Route>

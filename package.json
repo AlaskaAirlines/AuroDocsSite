@@ -12,7 +12,7 @@
     "@alaskaairux/ods-hyperlink": "^1.5.1",
     "@alaskaairux/ods-inputoptions": "^1.1.7",
     "@alaskaairux/ods-inputtext": "^1.0.10",
-    "@alaskaairux/ods-toast": "^1.1.2",
+    "@alaskaairux/ods-toast": "^1.1.3",
     "@alaskaairux/orion-design-tokens": "^2.12.0",
     "@alaskaairux/orion-icons": "^2.1.5",
     "@alaskaairux/orion-web-core-style-sheets": "^2.10.2",

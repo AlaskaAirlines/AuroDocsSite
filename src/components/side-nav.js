@@ -50,6 +50,7 @@ export default function SideNav(props) {
         { linkTitle: "Input Options", route: "/components/orion/inputOptions/", parent: true },
         { linkTitle: "InputText", route: "/components/orion/inputtext/", parent: true },
         { linkTitle: "Table", route: '/components/auro/table', parent: true },
+        { linkTitle: "Toast", route: '/components/orion/toast', parent: true }
       ]
     },
     {
