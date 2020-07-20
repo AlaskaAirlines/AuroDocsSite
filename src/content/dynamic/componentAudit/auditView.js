@@ -259,6 +259,38 @@ const ContentLayout = gql`
 }
 `
 
+const PriorityAudit = gql`
+{
+  organization(login: "AlaskaAirlines") {
+    team(slug: "auro-team") {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+        nodes {
+          name
+          issues(filterBy: {labels: "Priority: Audit"}, first: 10) {
+            nodes {
+              title
+              url
+              state
+              labels(last: 10) {
+                nodes {
+                  name
+                  color
+                }
+              }
+              comments(last: 1) {
+                nodes {
+                  body
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
 const AuditLabels = gql`
 {
   organization(login: "AlaskaAirlines") {
@@ -337,9 +369,22 @@ class AllEpics extends Component {
 
         </div>
 
-        <Query query={Actions}>
+        <Query query={PriorityAudit}>
           {({ loading, error, data }) => {
             if (loading) return <p className="isLoading"></p>;
+            if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
+
+            return data.organization.team.repositories.nodes.map(({ name, issues }) => (
+              issues.nodes.length > 0
+                ? <Issue tableName={'Priority items'} key={name} name={name} issues={issues.nodes} />
+                : ''
+            ));
+          }}
+        </Query>
+
+        <Query query={Actions}>
+          {({ loading, error, data }) => {
+            if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (
