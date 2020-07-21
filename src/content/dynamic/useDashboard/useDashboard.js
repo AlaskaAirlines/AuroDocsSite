@@ -24,7 +24,6 @@ class UseDashboard extends Component {
       })
       .then(res => {
           const projects = res.data;
-          console.log(projects);
           this.setState(projects);
       })
       .catch(function(error){
