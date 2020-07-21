@@ -22,6 +22,7 @@
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
     "apollo-boost": "^0.4.9",
+    "axios": "^0.19.2",
     "focus-visible": "^5.1.0",
     "graphql": "^15.3.0",
     "husky": "^4.2.5",

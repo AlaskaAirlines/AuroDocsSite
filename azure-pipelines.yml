@@ -52,6 +52,7 @@ stages:
         customCommand: 'run build'
       env:
         REACT_APP_GITHUB_API_KEY: $(REACT_APP_GITHUB_API_KEY)
+        REACT_APP_ADO_PAT: $(REACT_APP_ADO_PAT)
     - publish: '$(System.DefaultWorkingDirectory)/build'
       artifact: site
 

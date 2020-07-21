@@ -8,6 +8,7 @@ class Repository extends Component {
         <h1 className="auro_heading auro_heading--600">{this.props.name}</h1>
         {this.props.files.map(({Name, Lines}) => (
           <auro-table
+            key={Name}
             nowrap
             columnHeaders={JSON.stringify(getTableHeaders())}
             componentData={JSON.stringify(generateFileTableData(Name, Lines))}>
