@@ -28,6 +28,8 @@ import "@alaskaairux/auro-header";
 import "@alaskaairux/ods-inputoptions";
 import "@alaskaairux/auro-checkbox";
 import "@alaskaairux/auro-checkbox/dist/auro-checkbox-group";
+import "@alaskaairux/auro-radio";
+import "@alaskaairux/auro-radio/dist/auro-radio-group";
 
 // toast
 import "@alaskaairux/ods-toast";

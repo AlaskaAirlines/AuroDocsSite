@@ -70,6 +70,11 @@ import AuroCheckbox from './content/dynamic/checkbox/checkbox';
 import AuroCheckboxApi from './content/dynamic/checkbox/api';
 import AuroCheckboxInstall from './content/dynamic/checkbox/install';
 
+// radio button
+import AuroRadio from './content/dynamic/radio/radio';
+import AuroRadioApi from './content/dynamic/radio/api';
+import AuroRadioInstall from './content/dynamic/radio/install';
+
 // wcss
 import WebCoreStyleSheets from './content/dynamic/wcss/wcss';
 import WcssFeatures from './content/dynamic/wcss/features';
@@ -255,6 +260,11 @@ function App() {
               <Route exact path="/components/auro/checkbox/install"><AuroCheckboxInstall /></Route>
               <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route>
               {/* <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route> */}
+
+              {/* Auro Radio button */}
+              <Route exact path="/components/auro/radio"><AuroRadio /></Route>
+              <Route exact path="/components/auro/radio/install"><AuroRadioInstall /></Route>
+              <Route exact path="/components/auro/radio/api"><AuroRadioApi /></Route>
 
               {/* Auro Table */}
               <Route exact path="/components/auro/table"><AuroTable /></Route>

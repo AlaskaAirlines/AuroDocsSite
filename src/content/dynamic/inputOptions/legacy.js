@@ -40,9 +40,9 @@ class Options extends Component {
       <section id="inputOptions">
 
         <Nav />
-        <p>Deprecated: See <auro-hyperlink href="/components/auro/checkbox" relative>Auro Checkbox</auro-hyperlink> for updated element use. </p>
-        <h1 className="auro_heading auro_heading--display">ODS Input Options</h1>
+        <p class="content--deprecated">Deprecated: See <auro-hyperlink href="/components/auro/checkbox" relative>Auro Checkbox</auro-hyperlink> or <auro-hyperlink href="/components/auro/radio" relative>Auro Radio button</auro-hyperlink> for updated element use. </p>
 
+        <h1 className="auro_heading auro_heading--display">ODS Input Options</h1>
 
         <div className="indention util_fontWeightLight util_type--secondary">
           <p>The Orion Design System fully supports a wide range of options types and styles. The following examples illustrate common input option uses followed up by code examples.</p>

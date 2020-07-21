@@ -133,6 +133,14 @@ pre {
   height: 15px;
 }
 
+.content--deprecated {
+  border: 1px solid var(--auro-color-alert-advisory-on-light);
+  background-color: var(--auro-color-alert-advisory-on-light);
+  padding: var(--auro-size-md);
+  border-radius: var(--auro-border-radius);
+  line-height: 1;
+}
+
 .afterCode {
   margin-bottom: var(--auro-size-xxl);
   border-width: 0 1px 1px;
