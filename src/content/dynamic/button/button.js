@@ -56,7 +56,7 @@ class AuroButtons extends Component {
         </ul>
 
         <h3 className="auro_heading auro_heading--800">Buttons are not Hyperlinks</h3>
-        <p>In cases were the action of the button would not fit the criteria above, it is most likely a Hyperlink. In that situation it is recommended that the <code>auro-hyperlink</code> element be used.</p>
+        <p>In cases were the action of the button would not fit the criteria above, it is most likely a Hyperlink. In that situation it is recommended that the <auro-hyperlink href="/components/auro/hyperlink" relative>auro-hyperlink</auro-hyperlink> element be used.</p>
 
         <h2 className="auro_heading auro_heading--700">Default types</h2>
 
@@ -105,6 +105,23 @@ class AuroButtons extends Component {
 </div>`}
         </Highlight>
 
+        <h2 className="auro_heading auro_heading--700">Auro Button - fluid</h2>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-button fluid>Primary</auro-button>
+          <auro-button secondary fluid>Secondary</auro-button>
+          <auro-button tertiary fluid>Tertiary</auro-button>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`
+<div className="demo--inline exampleWrapper">
+  <auro-button fluid>Primary</auro-button>
+  <auro-button secondary fluid>Secondary</auro-button>
+  <auro-button tertiary fluid>Tertiary</auro-button>
+</div>`}
+        </Highlight>
+
         <h2 className="auro_heading auro_heading--700">Auro Button - onDark</h2>
 
         <div className="demo--inline exampleWrapper--ondark">
@@ -136,6 +153,23 @@ class AuroButtons extends Component {
           {`<auro-button tertiary ondark>Tertiary</auro-button>
 <auro-button tertiary ondark disabled>Tertiary</auro-button>`}
         </Highlight>
+
+        <h2 className="auro_heading auro_heading--700">Auro Button - fluid</h2>
+
+<div className="demo--inline exampleWrapper--ondark">
+  <auro-button fluid ondark>Primary</auro-button>
+  <auro-button secondary fluid ondark>Secondary</auro-button>
+  <auro-button tertiary fluid ondark>Tertiary</auro-button>
+</div>
+
+<Highlight className='html afterCode'>
+  {`
+<div className="demo--inline exampleWrapper--ondark">
+  <auro-button fluid ondark>Primary</auro-button>
+  <auro-button secondary fluid ondark>Secondary</auro-button>
+  <auro-button tertiary fluid ondark>Tertiary</auro-button>
+</div>`}
+</Highlight>
 
         <h2 className="auro_heading auro_heading--700">Auro Button - pass function to button</h2>
 
