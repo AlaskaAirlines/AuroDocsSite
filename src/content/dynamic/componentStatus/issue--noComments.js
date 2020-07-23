@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import ReactMarkdown from 'react-markdown';
 
-class Issue extends Component {
+class IssueNoComments extends Component {
   getContrastYIQ(hexcolor) {
     hexcolor = hexcolor.replace("#", "");
     var r = parseInt(hexcolor.substr(0,2),16);
@@ -18,8 +17,7 @@ class Issue extends Component {
           <tr>
             <th>Issues for: {this.props.name}</th>
             <th>Labels</th>
-            <th>Comments</th>
-            {/* <th>Release Status</th> */}
+            <th>Release Status</th>
           </tr>
         </thead>
         <tbody>
@@ -47,19 +45,12 @@ class Issue extends Component {
                 </div>
               </td>
               <td>
-                {comments.nodes.map(({body}) => (
-                  <div className="auro-markdown">
-                    <ReactMarkdown source={body} />
-                  </div>
-                ))}
-              </td>
-              {/* <td>
                 {projectCards.nodes.map(({column}) => (
                   <div key={column.name}>
                     {column.name}
                   </div>
                 ))}
-              </td> */}
+              </td>
             </tr>
           ))}
         </tbody>
@@ -68,4 +59,4 @@ class Issue extends Component {
   }
 }
 
-export default Issue;
+export default IssueNoComments;
