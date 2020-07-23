@@ -116,6 +116,17 @@ class Hyperlink extends Component {
 <a class="hyperlink" href="#"><slot>Relative URL</slot></a>`}
         </Highlight>
 
+        <p>For telephone/text URLs, the protocol will be supported.</p>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-hyperlink href="sms:+18002527522">sms link</auro-hyperlink> or <auro-hyperlink href="tel:+18002527522">telephone link</auro-hyperlink>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<auro-hyperlink href="sms:+18002527522">sms link</auro-hyperlink> or
+<auro-hyperlink href="tel:+18002527522">telephone link</auro-hyperlink>`}
+        </Highlight>
+
         <h2 className="auro_heading auro_heading--700">Call To Action (cta) Button</h2>
 
         <div className="demo--inline exampleWrapper">
