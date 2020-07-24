@@ -63,6 +63,14 @@ class InputText extends Component {
           {`<ods-inputtext type="email" label="Email" required id="email01" helptext="Please enter your email address"></ods-inputtext>`}
         </Highlight>
 
+        <h2 className="auro_heading auro_heading--500">Password</h2>
+        <div className="exampleWrapper">
+          <ods-inputtext type="password" label="Password" required id="password01" helptext="Please enter your password"></ods-inputtext>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<ods-inputtext type="password" label="Password" required id="password01" helptext="Please enter your password"></ods-inputtext>`}
+        </Highlight>
+
         <h2 className="auro_heading auro_heading--500">Disabled state</h2>
         <div className="exampleWrapper">
           <ods-inputtext label="First name" disabled required id="firstName03" helptext="Please enter your first name"></ods-inputtext>
