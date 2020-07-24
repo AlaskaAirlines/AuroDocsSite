@@ -26,7 +26,7 @@ export default function SideNav(props) {
     {
       title: "Developers",
       items: [
-        { linkTitle: "Generator", route: "/getting-started/developers/generator", parent: true  },
+        { linkTitle: "Generator", route: "/getting-started/developers/generator/install", parent: true  },
         { linkTitle: "Contributing", route: "/getting-started/developers/contributing", parent: true },
       ]
     },

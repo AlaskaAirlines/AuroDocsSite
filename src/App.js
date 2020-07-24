@@ -31,6 +31,11 @@ import DocSiteStrategy from './content/dynamic/epics/projectDocSite';
 import PlannedWork from './content/dynamic/componentStatus/statusView';
 import ComponentAudit from './content/dynamic/componentAudit/auditView';
 
+// WC-Generator
+import GeneratorInstall from './content/dynamic/generator/install';
+import GeneratorApi from './content/dynamic/generator/api';
+import GeneratorGettngStarted from './content/dynamic/generator/gettingStarted';
+
 // design tokens
 import DesignTokens from './content/dynamic/designTokens/tokens';
 import DeprecatedTokens from './content/dynamic/designTokens/deprecated';
@@ -156,7 +161,7 @@ import {
   Philosophy,
   WhatIsWhat,
   GettingStartedDevsOverview,
-  WCGenerator,
+  // WCGenerator,
   ComplianceDocs,
   ContributingDocs,
   ShadyCSS,
@@ -211,7 +216,7 @@ function App() {
               <Route exact path="/getting-started/developers/overview"><GettingStartedDevsOverview /></Route>
               <Route exact path="/getting-started/developers/common-definitions"><WhatIsWhat /></Route>
               <Route exact path="/getting-started/developers/what-is-what"><WhatIsWhat /></Route>
-              <Route exact path="/getting-started/developers/generator"><WCGenerator /></Route>
+              {/* <Route exact path="/getting-started/developers/generator"><WCGenerator /></Route> */}
               <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
               <Route exact path="/getting-started/developers/contributing"><ContributingDocs /></Route>
               <Route exact path="/getting-started/developers/governance"><GovernanceDocs /></Route>
@@ -227,6 +232,11 @@ function App() {
 
               <Route exact path="/color/usage_legacy"><ColorUsageLegacy /></Route>
               <Route exact path="/color/overview_legacy"><ColorOverviewLegacy /></Route>
+
+              {/* Generator */}
+              <Route exact path="/getting-started/developers/generator/install"><GeneratorInstall /></Route>
+              <Route exact path="/getting-started/developers/generator/generator/api"><GeneratorApi /></Route>
+              <Route exact path="/getting-started/developers/generator/getting-started"><GeneratorGettngStarted /></Route>
 
               {/* Typography */}
               <Route exact path="/typography/overview"><TypographyOverview /></Route>
