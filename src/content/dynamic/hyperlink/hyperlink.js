@@ -8,9 +8,9 @@ class Hyperlink extends Component {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/ods-hyperlink'];
+    const dependencies = pjson.dependencies['@alaskaairux/auro--hyperlink'];
 
-    return `@alaskaairux/ods-hyperlink: ${dependencies}`;
+    return `@alaskaairux/auro-hyperlink: ${dependencies}`;
   };
 
   sayHello() {
@@ -32,13 +32,13 @@ class Hyperlink extends Component {
 
         <Nav />
 
-        <h1 className="auro_heading auro_heading--display">Auro Hyperlink</h1>
+        <auro-header>Auro Hyperlink</auro-header>
 
         <p>Hyperlinks form the backbone of how users navigate through a site or app. The following example illustrates how the <code>auro-hyperlink</code> Auro component can be used.</p>
         <p>See <auro-hyperlink href="https://www.npmjs.com/package/@alaskaairux/ods-hyperlink" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>ods-hyperlink</code> Auro base element.</p>
         <p>The current state of <code>auro-hyperlink</code> is engineered to deprecate the ods- namespace and assist engineers to transition to Auro. </p>
 
-        <h2 className="auro_heading auro_heading--700">Default States</h2>
+        <auro-header level="2" display="700">Default States</auro-header>
 
         <div className="demo--inline exampleWrapper">
           <auro-hyperlink>No href</auro-hyperlink>
@@ -64,7 +64,7 @@ class Hyperlink extends Component {
           {`<auro-hyperlink href="/" target="_blank">External href</auro-hyperlink>`}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--700">Nav style</h2>
+        <auro-header display="700" level="2">Nav style</auro-header>
 
         <div className="demo--inline exampleWrapper">
           <auro-hyperlink href="/" nav>Nav href</auro-hyperlink>
@@ -127,7 +127,7 @@ class Hyperlink extends Component {
 <auro-hyperlink href="tel:+18002527522">telephone link</auro-hyperlink>`}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--700">Call To Action (cta) Button</h2>
+        <auro-header level="2" display="700">Call To Action (cta) Buttons</auro-header>
 
         <div className="demo--inline exampleWrapper">
           <auro-hyperlink cta href="#">Default</auro-hyperlink> <auro-hyperlink cta href="" target="_blank" >Default</auro-hyperlink>
@@ -147,7 +147,7 @@ class Hyperlink extends Component {
 <auro-hyperlink secondary cta href="#" target="_blank" >Secondary</auro-hyperlink>`}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--700">On Dark</h2>
+        <auro-header level="2" display="700">On Dark</auro-header>
 
         <div className="demo--inline exampleWrapper">
           <div className="ondark">
@@ -179,7 +179,7 @@ class Hyperlink extends Component {
           {`<auro-hyperlink ondark target="_blank" href="/">External on dark href</auro-hyperlink>`}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--700">Role: button</h2>
+        <auro-header level="2" display="700">Role: button</auro-header>
 
         <p>Aside from the standard hyperlink use-case, the <code>auro-hyperlink</code> element is intended to be used for <code>button</code> situations as illustrated below.</p>
 

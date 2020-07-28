@@ -2,9 +2,9 @@
 // All Auro web components need to be listed here to be packaged properly for IE11 support
 
 // hyperlink
+import "@alaskaairux/auro-hyperlink";
+// import "@alaskaairux/ods-hyperlink/dist/auro-hyperlink";
 import "@alaskaairux/ods-hyperlink";
-import "@alaskaairux/ods-hyperlink/dist/auro-hyperlink";
-import "@alaskaairux/ods-hyperlink/dist/ods-hyperlink";
 
 // button
 import "@alaskaairux/ods-button";
