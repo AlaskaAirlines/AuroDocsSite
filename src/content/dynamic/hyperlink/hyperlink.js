@@ -70,7 +70,7 @@ class Hyperlink extends Component {
           <auro-hyperlink href="/" nav>Nav href</auro-hyperlink>
         </div>
 
-        <h2 className="auro_heading auro_heading--700">Relative vs absolute URLs and https enforcement</h2>
+        <auro-header level="2" display="700">Relative vs absolute URLs and https enforcement</auro-header>
         <p>By default the auro-hyperlink will assume that the url passed is an absolute URL to <code>www.alaskaair.com</code></p>
 
         <div className="demo--inline exampleWrapper">
