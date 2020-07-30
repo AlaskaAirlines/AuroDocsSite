@@ -31,6 +31,15 @@ import DocSiteStrategy from './content/dynamic/epics/projectDocSite';
 import PlannedWork from './content/dynamic/componentStatus/statusView';
 import ComponentAudit from './content/dynamic/componentAudit/auditView';
 
+// Design to dev handoff process
+import DesignHandoffIndex from './content/dynamic/designHandoff/index';
+import DesignHandoffParent from './content/dynamic/designHandoff/parent';
+import DesignHandoffDev from './content/dynamic/designHandoff/development';
+import DesignHandoffSym from './content/dynamic/designHandoff/symbolize';
+import DesignHandoffReview from './content/dynamic/designHandoff/review';
+import DesignHandoffLabels from './content/dynamic/designHandoff/labels';
+import DesignHandoffClose from './content/dynamic/designHandoff/close';
+
 // WC-Generator
 import GeneratorInstall from './content/dynamic/generator/install';
 import GeneratorApi from './content/dynamic/generator/api';
@@ -134,7 +143,8 @@ import Footer from './components/footer';
 import Header from './components/header';
 import SideNav from './components/side-nav';
 
-// import resources for markdown docs from ./src/content/docs
+// import resources for markdown docs from ./src/content/markdown
+// export classes from ./src/content/docsExport.js
 // then add the appropiate Route below
 import {
   A11yDocs,
@@ -156,16 +166,13 @@ import {
   VoiceTone,
   WhyCustomelementsDocs,
 
-
   // cleaned up markdown docs
   Philosophy,
   WhatIsWhat,
   GettingStartedDevsOverview,
-  // WCGenerator,
   ComplianceDocs,
   ContributingDocs,
-  ShadyCSS,
-
+  ShadyCSS
 
 } from './content/docsExport';
 
@@ -224,6 +231,15 @@ function App() {
               <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
               <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensInstall /></Route>
               <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
+
+              {/* Desing to dev handoff process */}
+              <Route exact path="/getting-started/handoff"><DesignHandoffIndex /></Route>
+              <Route exact path="/getting-started/handoff/parent"><DesignHandoffParent /></Route>
+              <Route exact path="/getting-started/handoff/development"><DesignHandoffDev /></Route>
+              <Route exact path="/getting-started/handoff/symbolize"><DesignHandoffSym /></Route>
+              <Route exact path="/getting-started/handoff/review"><DesignHandoffReview /></Route>
+              <Route exact path="/getting-started/handoff/labels"><DesignHandoffLabels /></Route>
+              <Route exact path="/getting-started/handoff/close"><DesignHandoffClose /></Route>
 
               {/* Color */}
               <Route exact path="/color/overview"><ColorOverview /></Route>

@@ -3,7 +3,6 @@
 
 // hyperlink
 import "@alaskaairux/auro-hyperlink";
-// import "@alaskaairux/ods-hyperlink/dist/auro-hyperlink";
 import "@alaskaairux/ods-hyperlink";
 
 // button

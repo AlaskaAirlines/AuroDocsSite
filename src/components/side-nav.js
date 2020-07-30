@@ -21,6 +21,7 @@ export default function SideNav(props) {
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "Compliance", route: "/getting-started/developers/compliance", parent: true },
         { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
+        { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
       ]
     },
     {
@@ -48,7 +49,6 @@ export default function SideNav(props) {
         { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
         { linkTitle: "Checkbox", route: '/components/auro/checkbox', parent: true },
         { linkTitle: "Radio Button", route: '/components/auro/radio', parent: true },
-        // { linkTitle: "Input Options", route: "/components/orion/inputOptions/", parent: true },
         { linkTitle: "InputText", route: "/components/orion/inputtext/", parent: true },
         { linkTitle: "Table", route: '/components/auro/table', parent: true },
         { linkTitle: "Toast", route: '/components/orion/toast', parent: true }
