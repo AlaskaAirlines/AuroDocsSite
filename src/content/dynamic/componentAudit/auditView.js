@@ -318,7 +318,7 @@ class AllEpics extends Component {
 
         <h1 className="auro_heading auro_heading--display">Auro Design System: Project audit</h1>
 
-        <p>This resource is provided as a way to track the progress of all components identified within the Auro Design System as either Auro or Orion complient, or in progress. </p>
+        <p>This resource is provided as a way to track the progress of all components identified within the Auro Design System as either Auro or Orion compliant, or in progress.</p>
 
         <div className="auditLegend">
           <h3 className="auro_heading auro_heading--500">Legend</h3>
