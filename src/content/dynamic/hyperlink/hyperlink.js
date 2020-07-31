@@ -8,7 +8,7 @@ class Hyperlink extends Component {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro--hyperlink'];
+    const dependencies = pjson.dependencies['@alaskaairux/auro-hyperlink'];
 
     return `@alaskaairux/auro-hyperlink: ${dependencies}`;
   };
@@ -222,9 +222,9 @@ handleKeyPress = (event) => {
         </Highlight>
 
         <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink"
-          npm="https://www.npmjs.com/package/@alaskaairux/ods-hyperlink"
-          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-hyperlink/blob/master/src/ods-hyperlink.js"
+          github="https://github.com/AlaskaAirlines/auro-hyperlink"
+          npm="https://www.npmjs.com/package/@alaskaairux/auro-hyperlink"
+          code="https://github.com/AlaskaAirlines/auro-hyperlink/blob/master/src/auro-hyperlink.js"
           version={this.showVersion()}
         />
       </section>

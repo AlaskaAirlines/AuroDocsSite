@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@alaskaairux/auro-checkbox": "^1.1.1",
-    "@alaskaairux/auro-header": "^1.2.0",
+    "@alaskaairux/auro-header": "^1.2.1",
     "@alaskaairux/auro-hyperlink": "^2.0.1",
     "@alaskaairux/auro-radio": "^1.0.1",
     "@alaskaairux/auro-swatch": "^2.0.4",
@@ -20,7 +20,7 @@
     "@alaskaairux/orion-web-core-style-sheets": "^2.10.3",
     "@apollo/react-components": "^3.1.5",
     "@apollo/react-hooks": "^3.1.5",
-    "@commitlint/cli": "^9.1.1",
+    "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.1",
     "apollo-boost": "^0.4.9",
     "axios": "^0.19.2",
