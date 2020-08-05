@@ -110,6 +110,7 @@ import OdsOptionsInstall from './content/dynamic/inputOptions/install';
 // input text
 import InputText from './content/dynamic/inputText/legacy';
 import InputTextInstall from './content/dynamic/inputText/install';
+import InputTextApi from './content/dynamic/inputText/api';
 
 // toast
 import Toast from './content/dynamic/toast/toast';
@@ -319,9 +320,9 @@ function App() {
               <Route exact path="/components/orion/toast/toaster"><ToastToaster /></Route>
 
               {/* inputText */}
-              <Route exact path="/components/orion/inputText/"><InputText /></Route>
-              <Route exact path="/components/orion/inputText/install"><InputTextInstall /></Route>
-
+              <Route exact path="/components/orion/inputtext/"><InputText /></Route>
+              <Route exact path="/components/orion/inputtext/install"><InputTextInstall /></Route>
+              <Route exact path="/components/orion/inputtext/api"><InputTextApi /></Route>
 
               {/* Dev resources */}
               <Route exact path="/support/a11y"><A11yDocs /></Route> {/* not used */} {/* reevaluate content */}
