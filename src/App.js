@@ -174,7 +174,7 @@ import {
   ComplianceDocs,
   ContributingDocs,
   ShadyCSS,
-  UserSupport
+  AuroSupport
 
 } from './content/docsExport';
 
@@ -211,7 +211,8 @@ function App() {
               <Route exact path='/' component={Philosophy} />
               <Route exact path="/philosophy"><Philosophy /></Route>
               <Route exact path="/component-status"><ComponentsDocs /></Route>
-              <Route exact path="/user-support"><UserSupport /></Route>
+              <Route exact path="/user-support"><AuroSupport /></Route> {/* redirect old url */}
+              <Route exact path="/auro-support"><AuroSupport /></Route>
 
               <Route exact path="/epics/"><VersionZero /></Route>
               <Route exact path="/epics/version-zero"><VersionZero /></Route>
