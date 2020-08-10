@@ -173,7 +173,8 @@ import {
   GettingStartedDevsOverview,
   ComplianceDocs,
   ContributingDocs,
-  ShadyCSS
+  ShadyCSS,
+  UserSupport
 
 } from './content/docsExport';
 
@@ -210,6 +211,7 @@ function App() {
               <Route exact path='/' component={Philosophy} />
               <Route exact path="/philosophy"><Philosophy /></Route>
               <Route exact path="/component-status"><ComponentsDocs /></Route>
+              <Route exact path="/user-support"><UserSupport /></Route>
 
               <Route exact path="/epics/"><VersionZero /></Route>
               <Route exact path="/epics/version-zero"><VersionZero /></Route>
