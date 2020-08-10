@@ -27,7 +27,7 @@ When mouse and keyboard are the primary input methods—or when icons are paired
 
 ### Color
 
-Icon colors change depending on their background, their importance on a page (e.g., primary, emphasis, accent, etc.) and the color theme being used. Refer to the Color page for guidelines on color usage.
+Icon colors change depending on their background, their importance on a page (e.g., primary, emphasis, accent, etc.) and the color theme being used. Refer to the [Color overview](/color/overview) for guidelines on color usage.
 
 ![](/images/content/iconsDesign/icons_color.png)
 

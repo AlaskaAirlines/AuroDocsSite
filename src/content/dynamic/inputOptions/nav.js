@@ -7,7 +7,6 @@ export class Nav extends Component {
     return (
       <div role="tablist" className="ods-tablist tabList">
         <NavLink role="tab" exact className="tab link" to={`/components/orion/inputOptions`} activeClassName="is-active">Legacy</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/components/orion/inputOptions/install`} activeClassName="is-active">Install</NavLink>
       </div>
     )
   }

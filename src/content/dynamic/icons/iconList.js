@@ -91,6 +91,8 @@ import Heartfilled from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interf
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Heartstroke from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/heart-stroke.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
+import Hidepassword from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/hide-password.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
 import Homefilled from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/home-filled.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Homestroke from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/home-stroke.svg'; 
@@ -136,6 +138,8 @@ import Search from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/s
 import Starfilled from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/star-filled.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Starstroke from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/star-stroke.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import Viewpassword from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/view-password.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Xlg from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/x-lg.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
@@ -493,6 +497,11 @@ import Roundtriparrows from '-!svg-react-loader!@alaskaairux/icons/dist/icons/te
               <span>heart-stroke.svg</span>
             </div>
           
+            <div title="hide-password.svg">
+              <Hidepassword />
+              <span>hide-password.svg</span>
+            </div>
+          
             <div title="home-filled.svg">
               <Homefilled />
               <span>home-filled.svg</span>
@@ -606,6 +615,11 @@ import Roundtriparrows from '-!svg-react-loader!@alaskaairux/icons/dist/icons/te
             <div title="star-stroke.svg">
               <Starstroke />
               <span>star-stroke.svg</span>
+            </div>
+          
+            <div title="view-password.svg">
+              <Viewpassword />
+              <span>view-password.svg</span>
             </div>
           
             <div title="x-lg.svg">
