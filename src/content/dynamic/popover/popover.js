@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
 import 'highlight.js/styles/github.css';
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import LogoAS from '-!svg-react-loader!@alaskaairux/icons/dist/icons/logos/logo-AS.svg'; 
 
 class AuroPopover extends Component {
 
@@ -56,14 +58,14 @@ class AuroPopover extends Component {
         </Highlight>
 
         <div className="demo--inline exampleWrapper">
-          <auro-button id="button2">Test</auro-button>
-          <auro-popover for="button2" placement="bottom">Other test content!</auro-popover>
+          <LogoAS id="logo">Test</LogoAS>
+          <auro-popover for="logo" placement="bottom">Other test content!</auro-popover>
         </div>
 
         <Highlight className='html afterCode'>
           {`
-            <auro-button id="button2">Test</auro-button>
-            <auro-popover for="button2" placement="bottom"></auro-popover>
+          <LogoEK id="logo">Test</LogoEK>
+          <auro-popover for="logo" placement="bottom"></auro-popover>
           `}
         </Highlight>
       </section>
