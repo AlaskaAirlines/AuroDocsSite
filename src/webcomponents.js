@@ -5,6 +5,9 @@
 import "@alaskaairux/auro-hyperlink";
 import "@alaskaairux/ods-hyperlink";
 
+// alerts
+import "@alaskaairux/auro-alerts";
+
 // button
 import "@alaskaairux/ods-button";
 import "@alaskaairux/ods-button/dist/auro-button";

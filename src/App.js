@@ -72,6 +72,10 @@ import IconsInstall from './content/dynamic/icons/install.js';
 import LayoutGrid from './content/dynamic/layout/grid';
 import LayoutSpacing from './content/dynamic/layout/spacing';
 
+// Alerts
+import AuroAlerts from './content/dynamic/alerts/alerts';
+import AuroAlertsApi from './content/dynamic/alerts/api';
+import AuroAlertsInstall from './content/dynamic/alerts/install';
 
 // button
 import AuroButton from './content/dynamic/button/button';
@@ -277,6 +281,11 @@ function App() {
 
               {/* Voice */}
               <Route path="/core/voice-and-tone"><VoiceTone /></Route>
+
+              {/* Auro Alerts */}
+              <Route exact path="/components/auro/alerts"><AuroAlerts /></Route>
+              <Route exact path="/components/auro/alerts/install"><AuroAlertsInstall /></Route>
+              <Route exact path="/components/auro/alerts/api"><AuroAlertsApi /></Route>
 
               {/* Auro Button */}
               <Route exact path="/components/auro/button"><AuroButton /></Route>
