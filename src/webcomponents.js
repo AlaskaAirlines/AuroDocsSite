@@ -30,5 +30,8 @@ import "@alaskaairux/auro-checkbox/dist/auro-checkbox-group";
 import "@alaskaairux/auro-radio";
 import "@alaskaairux/auro-radio/dist/auro-radio-group";
 
+import "@alaskaairux/auro-popover";
+
+
 // toast
 import "@alaskaairux/ods-toast";

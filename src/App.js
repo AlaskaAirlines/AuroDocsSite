@@ -127,6 +127,11 @@ import AuroHeader from './content/dynamic/header/header';
 import AuroHeaderApi from './content/dynamic/header/api';
 import AuroHeaderInstall from './content/dynamic/header/install';
 
+// popover
+import AuroPopover from './content/dynamic/radio/radio';
+import AuroPopoverApi from './content/dynamic/radio/api';
+import AuroPopoverInstall from './content/dynamic/radio/install';
+
 // polyfills
 import FocusVisible from './content/dynamic/polyfills/focusVisible';
 import Webcomponentsjs from './content/dynamic/polyfills/webcomponentsjs';
@@ -290,6 +295,11 @@ function App() {
               <Route exact path="/components/auro/checkbox/install"><AuroCheckboxInstall /></Route>
               <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route>
               {/* <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route> */}
+
+              {/* Auro Popover */}
+              <Route exact path="/components/auro/popover"><AuroPopover /></Route>
+              <Route exact path="/components/auro/popover/install"><AuroPopoverInstall /></Route>
+              <Route exact path="/components/auro/popover/api"><AuroPopoverApi /></Route>
 
               {/* Auro Radio button */}
               <Route exact path="/components/auro/radio"><AuroRadio /></Route>
