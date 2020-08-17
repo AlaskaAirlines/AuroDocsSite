@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
-import buildStatus from '@alaskaairux/auro-popover/docs/BUILD_STATUS.md'
 
 class AuroPopover extends Component {
 
@@ -13,14 +11,6 @@ class AuroPopover extends Component {
       docsBuildStatus: null
     }
   };
-
-  componentWillMount() {
-    fetch(buildStatus).then((response) => response.text()).then((text) => {
-      this.setState({
-        docsBuildStatus: text
-      })
-    })
-  }
 
   showVersion() {
     const pjson = require('../../../../package.json');
@@ -67,7 +57,7 @@ class AuroPopover extends Component {
 
         <div className="demo--inline exampleWrapper">
           <auro-button id="button2">Test</auro-button>
-          <auro-popover for="button2" placement="bottom"></auro-popover>
+          <auro-popover for="button2" placement="bottom">Other test content!</auro-popover>
         </div>
 
         <Highlight className='html afterCode'>
@@ -76,6 +66,7 @@ class AuroPopover extends Component {
             <auro-popover for="button2" placement="bottom"></auro-popover>
           `}
         </Highlight>
+      </section>
     );
   }
 }

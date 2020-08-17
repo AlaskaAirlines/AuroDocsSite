@@ -128,9 +128,9 @@ import AuroHeaderApi from './content/dynamic/header/api';
 import AuroHeaderInstall from './content/dynamic/header/install';
 
 // popover
-import AuroPopover from './content/dynamic/radio/radio';
-import AuroPopoverApi from './content/dynamic/radio/api';
-import AuroPopoverInstall from './content/dynamic/radio/install';
+import AuroPopover from './content/dynamic/popover/popover';
+import AuroPopoverApi from './content/dynamic/popover/api';
+import AuroPopoverInstall from './content/dynamic/popover/install';
 
 // polyfills
 import FocusVisible from './content/dynamic/polyfills/focusVisible';
