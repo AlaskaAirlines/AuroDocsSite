@@ -27,11 +27,11 @@ class AuroAlerts extends Component {
 
         <Nav />
 
-        <h2 className="auro_heading auro_heading--display">Alerts</h2>
+        <auro-header level="2" display="display">Alerts</auro-header>
 
         <p>The <code>auro-alerts</code> component is a simple component for rendering notifications for errors, warnings, and information without having to worry about styling. Simply add the attribute for the type of alert you want and use <code>p</code> tags for each line if you need multiple lines in the alert. </p>
 
-        <h2 className="auro_heading auro_heading--700">Alerts use cases</h2>
+        <auro-header level="2" display="700">Alerts use cases</auro-header>
 
         <p>The <code>auro-alerts</code> element should be used in situations where users may:</p>
         <ul>
@@ -40,9 +40,15 @@ class AuroAlerts extends Component {
           <li>Show informational messages</li>
         </ul>
 
-        <h2 className="auro_heading auro_heading--700">Single Line Alerts</h2>
+        <auro-header level="2" display="700">Default Alert</auro-header>
+        <div className="demo--inline exampleWrapper">
+          <auro-alerts >Default error with no error type</auro-alerts>
+        </div>
 
-        <h3 className="auro_heading auro_heading--500">Error</h3>
+        <auro-header level="2" display="700">Single Line Alerts</auro-header>
+
+        <auro-header level="3" display="500">Error</auro-header>
+
         <div className="demo--inline exampleWrapper">
           <auro-alerts error>There is an error ... check that out</auro-alerts>
         </div>
@@ -51,27 +57,27 @@ class AuroAlerts extends Component {
           {`<auro-alerts error>There is an error ... check that out</auro-alerts>`}
         </Highlight>
 
-        <h3 className="auro_heading auro_heading--500">Warning</h3>
+        <auro-header level="3" display="500">Warning</auro-header>
         <div className="demo--inline exampleWrapper">
-          <auro-alerts warning>Hey, there is something wrong, but it's ok</auro-alerts>
+          <auro-alerts warning>This is a warning, something is wrong, but it's ok</auro-alerts>
         </div>
 
         <Highlight className='html afterCode'>
           {`<auro-alerts warning>Hey, there is something wrong, but it's ok</auro-alerts>`}
         </Highlight>
 
-        <h3 className="auro_heading auro_heading--500">Information</h3>
+        <auro-header level="3" display="500">Information</auro-header>
         <div className="demo--inline exampleWrapper">
-          <auro-alerts information>Just letting you know, don't look in your closet.</auro-alerts>
+          <auro-alerts information>Some helpful information, don't look in your closet.</auro-alerts>
         </div>
 
         <Highlight className='html afterCode'>
           {`<auro-alerts information>Just letting you know, don't look in your closet.</auro-alerts>`}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--700">Multi Line Alerts</h2>
+        <auro-header level="2" display="700">Multiline Alerts</auro-header>
 
-        <h3 className="auro_heading auro_heading--500">Error</h3>
+        <auro-header level="3" display="500">Error</auro-header>
         <div className="demo--inline exampleWrapper">
           <auro-alerts error>
             <p>This is error message 1</p>
@@ -86,7 +92,8 @@ class AuroAlerts extends Component {
 </auro-alerts>`}
         </Highlight>
 
-        <h3 className="auro_heading auro_heading--500">Warning</h3>
+        <auro-header level="3" display="500">Warning</auro-header>
+
         <div className="demo--inline exampleWrapper">
           <auro-alerts warning>
             <p>This is warning message 1</p>
@@ -101,7 +108,8 @@ class AuroAlerts extends Component {
 </auro-alerts>`}
         </Highlight>
 
-        <h3 className="auro_heading auro_heading--500">Information</h3>
+        <auro-header level="3" display="500">Information</auro-header>
+
         <div className="demo--inline exampleWrapper">
           <auro-alerts information>
             <p>This is information message 1</p>
@@ -116,7 +124,7 @@ class AuroAlerts extends Component {
 </auro-alerts>`}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--700">a11y Alerts</h2>
+        <auro-header level="3" display="500">a11y Alerts</auro-header>
 
         <h3 className="auro_heading auro_heading--500">Hidden Visually and From Screen Readers</h3>
         <div className="demo--inline exampleWrapper">
@@ -127,7 +135,7 @@ class AuroAlerts extends Component {
           {`<auro-alerts error hidden>This content will be hidden visually and from screen readers</auro-alerts>`}
         </Highlight>
 
-        <h3 className="auro_heading auro_heading--500">Hidden Visually</h3>
+        <auro-header level="3" display="500">Hidden Visually</auro-header>
         <div className="demo--inline exampleWrapper">
           <auro-alerts warning hiddenVisually>This content will be hidden visually, but screen readers will pick it up..</auro-alerts>
         </div>
@@ -136,7 +144,7 @@ class AuroAlerts extends Component {
           {`<auro-alerts warning hiddenVisually>This content will be hidden visually, but screen readers will pick it up..</auro-alerts>`}
         </Highlight>
 
-        <h3 className="auro_heading auro_heading--500">Hidden From Screen Readers</h3>
+        <auro-header level="3" display="500">Hidden From Screen Readers</auro-header>
         <div className="demo--inline exampleWrapper">
           <auro-alerts information hiddenAudible>This content will be hidden from screen readers.</auro-alerts>
         </div>
