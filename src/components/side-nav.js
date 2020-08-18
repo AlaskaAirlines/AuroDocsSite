@@ -50,6 +50,7 @@ export default function SideNav(props) {
         { linkTitle: "Button", route: '/components/auro/button', parent: true },
         { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
         { linkTitle: "Checkbox", route: '/components/auro/checkbox', parent: true },
+        { linkTitle: "Popover", route: '/components/auro/popover', parent: true },
         { linkTitle: "Radio Button", route: '/components/auro/radio', parent: true },
         { linkTitle: "InputText", route: "/components/orion/inputtext/", parent: true },
         { linkTitle: "Table", route: '/components/auro/table', parent: true },
