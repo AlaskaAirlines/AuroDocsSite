@@ -7,7 +7,7 @@
     "@alaskaairux/auro-checkbox": "^1.1.1",
     "@alaskaairux/auro-header": "^1.2.1",
     "@alaskaairux/auro-hyperlink": "^2.0.1",
-    "@alaskaairux/auro-popover": "^1.0.0",
+    "@alaskaairux/auro-popover": "^1.0.1",
     "@alaskaairux/auro-radio": "^1.0.1",
     "@alaskaairux/auro-swatch": "^2.0.4",
     "@alaskaairux/auro-table": "^1.0.0",
@@ -23,7 +23,7 @@
     "@apollo/react-components": "^3.1.5",
     "@apollo/react-hooks": "^3.1.5",
     "@commitlint/cli": "^9.1.2",
-    "@commitlint/config-conventional": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.2",
     "apollo-boost": "^0.4.9",
     "axios": "^0.19.2",
     "focus-visible": "^5.1.0",
@@ -36,7 +36,7 @@
     "react-markdown": "^4.3.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
-    "react-scroll": "^1.8.0",
+    "react-scroll": "^1.8.1",
     "react-syntax-highlighter": "^12.2.1"
   },
   "scripts": {

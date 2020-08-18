@@ -28,7 +28,7 @@ export default function SideNav(props) {
     {
       title: "Developers",
       items: [
-        { linkTitle: "Generator", route: "/getting-started/developers/generator/install", parent: true  },
+        { linkTitle: "WC Generator", route: "/getting-started/developers/generator/install", parent: true  },
         { linkTitle: "Contributing", route: "/getting-started/developers/contributing", parent: true },
       ]
     },
@@ -45,14 +45,14 @@ export default function SideNav(props) {
     {
       header: "Components",
       items: [
-        { linkTitle: "Header", route: '/components/auro/header', parent: true },
         { linkTitle: "Alerts", route: '/components/auro/alerts', parent: true },
         { linkTitle: "Button", route: '/components/auro/button', parent: true },
-        { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
         { linkTitle: "Checkbox", route: '/components/auro/checkbox', parent: true },
+        { linkTitle: "Header", route: '/components/auro/header', parent: true },
+        { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
+        { linkTitle: "InputText", route: "/components/orion/inputtext/", parent: true },
         { linkTitle: "Popover", route: '/components/auro/popover', parent: true },
         { linkTitle: "Radio Button", route: '/components/auro/radio', parent: true },
-        { linkTitle: "InputText", route: "/components/orion/inputtext/", parent: true },
         { linkTitle: "Table", route: '/components/auro/table', parent: true },
         { linkTitle: "Toast", route: '/components/orion/toast', parent: true }
       ]
