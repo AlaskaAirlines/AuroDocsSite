@@ -29,50 +29,50 @@ class AuroAlerts extends Component {
 
         <auro-header level="2" display="display">Alerts</auro-header>
 
-        <p>The <code>auro-alerts</code> component is a simple component for rendering notifications for errors, warnings, and information without having to worry about styling. Simply add the attribute for the type of alert you want and use <code>p</code> tags for each line if you need multiple lines in the alert. </p>
+        <p>The <code>auro-alerts</code> component renders errors, warnings, and other inline notifications with automated styling elements. Simply add the attribute for the alert type. If you need to present multiple lines in the same alert wrapper, use <code>p</code> tags for each line. </p>
 
         <auro-header level="2" display="700">Alerts use cases</auro-header>
 
-        <p>The <code>auro-alerts</code> element should be used in situations where users may:</p>
+        <p>Use the <code>auro-alerts</code> element to render:</p>
         <ul>
-          <li>Show error messages</li>
-          <li>Show warning messages</li>
-          <li>Show informational messages</li>
+          <li>Error messages</li>
+          <li>Warning messages</li>
+          <li>Informational messages</li>
         </ul>
 
-        <auro-header level="2" display="700">Default Alert</auro-header>
+        <auro-header level="2" display="700">Default alert</auro-header>
         <div className="demo--inline exampleWrapper">
-          <auro-alerts >Default error with no error type</auro-alerts>
+          <auro-alerts >This is a default error with no error type specified.</auro-alerts>
         </div>
 
-        <auro-header level="2" display="700">Single Line Alerts</auro-header>
+        <auro-header level="2" display="700">Single-line alerts</auro-header>
 
         <auro-header level="3" display="500">Error</auro-header>
 
         <div className="demo--inline exampleWrapper">
-          <auro-alerts error>There is an error ... check that out</auro-alerts>
+          <auro-alerts error>Transaction failed.</auro-alerts>
         </div>
 
         <Highlight className='html afterCode'>
-          {`<auro-alerts error>There is an error ... check that out</auro-alerts>`}
+          {`<auro-alerts error>Transaction failed.</auro-alerts>`}
         </Highlight>
 
         <auro-header level="3" display="500">Warning</auro-header>
         <div className="demo--inline exampleWrapper">
-          <auro-alerts warning>This is a warning, something is wrong, but it's ok</auro-alerts>
+          <auro-alerts warning>Session timed out. Look for a confirmation email to verify your transaction.</auro-alerts>
         </div>
 
         <Highlight className='html afterCode'>
-          {`<auro-alerts warning>Hey, there is something wrong, but it's ok</auro-alerts>`}
+          {`<auro-alerts warning>Session timed out. Look for a confirmation email to verify your transaction.</auro-alerts>`}
         </Highlight>
 
         <auro-header level="3" display="500">Information</auro-header>
         <div className="demo--inline exampleWrapper">
-          <auro-alerts information>Some helpful information, don't look in your closet.</auro-alerts>
+          <auro-alerts information>You are confirmed on Flight 20 to Aruba.</auro-alerts>
         </div>
 
         <Highlight className='html afterCode'>
-          {`<auro-alerts information>Just letting you know, don't look in your closet.</auro-alerts>`}
+          {`<auro-alerts information>You are confirmed on Flight 20 to Aruba.</auro-alerts>`}
         </Highlight>
 
         <auro-header level="2" display="700">Multiline Alerts</auro-header>
@@ -80,15 +80,15 @@ class AuroAlerts extends Component {
         <auro-header level="3" display="500">Error</auro-header>
         <div className="demo--inline exampleWrapper">
           <auro-alerts error>
-            <p>This is error message 1</p>
-            <p>This is error message 2</p>
+            <p>This is error message 1.</p>
+            <p>This is error message 2.</p>
           </auro-alerts>
         </div>
 
         <Highlight className='html afterCode'>
           {`<auro-alerts error>
-  <p>This is error message 1</p>
-  <p>This is error message 2</p>
+  <p>This is error message 1.</p>
+  <p>This is error message 2.</p>
 </auro-alerts>`}
         </Highlight>
 
@@ -96,15 +96,15 @@ class AuroAlerts extends Component {
 
         <div className="demo--inline exampleWrapper">
           <auro-alerts warning>
-            <p>This is warning message 1</p>
-            <p>This is warning message 2</p>
+            <p>This is warning message 1.</p>
+            <p>This is warning message 2.</p>
           </auro-alerts>
         </div>
 
         <Highlight className='html afterCode'>
           {`<auro-alerts warning>
-  <p>This is warning message 1</p>
-  <p>This is warning message 2</p>
+  <p>This is warning message 1.</p>
+  <p>This is warning message 2.</p>
 </auro-alerts>`}
         </Highlight>
 
@@ -112,39 +112,39 @@ class AuroAlerts extends Component {
 
         <div className="demo--inline exampleWrapper">
           <auro-alerts information>
-            <p>This is information message 1</p>
-            <p>This is information message 2</p>
+            <p>This is information message 1.</p>
+            <p>This is information message 2.</p>
           </auro-alerts>
         </div>
 
         <Highlight className='html afterCode'>
           {`<auro-alerts information>
-  <p>This is information message 1</p>
-  <p>This is information message 2</p>
+  <p>This is information message 1.</p>
+  <p>This is information message 2.</p>
 </auro-alerts>`}
         </Highlight>
 
         <auro-header level="3" display="500">a11y Alerts</auro-header>
 
-        <h3 className="auro_heading auro_heading--500">Hidden Visually and From Screen Readers</h3>
+        <h3 className="auro_heading auro_heading--500">Hidden visually and from screen readers</h3>
         <div className="demo--inline exampleWrapper">
-          <auro-alerts error hidden>This content will be hidden visually and from screen readers</auro-alerts>
+          <auro-alerts error hidden>This content will be hidden visually and from screen readers.</auro-alerts>
         </div>
 
         <Highlight className='html afterCode'>
-          {`<auro-alerts error hidden>This content will be hidden visually and from screen readers</auro-alerts>`}
+          {`<auro-alerts error hidden>This content will be hidden visually and from screen readers.</auro-alerts>`}
         </Highlight>
 
-        <auro-header level="3" display="500">Hidden Visually</auro-header>
+        <auro-header level="3" display="500">Hidden visually</auro-header>
         <div className="demo--inline exampleWrapper">
-          <auro-alerts warning hiddenVisually>This content will be hidden visually, but screen readers will pick it up..</auro-alerts>
+          <auro-alerts warning hiddenVisually>This content will be hidden visually, but screen readers will still pick it up.</auro-alerts>
         </div>
 
         <Highlight className='html afterCode'>
-          {`<auro-alerts warning hiddenVisually>This content will be hidden visually, but screen readers will pick it up..</auro-alerts>`}
+          {`<auro-alerts warning hiddenVisually>This content will be hidden visually, but screen readers will still pick it up.</auro-alerts>`}
         </Highlight>
 
-        <auro-header level="3" display="500">Hidden From Screen Readers</auro-header>
+        <auro-header level="3" display="500">Hidden from screen readers</auro-header>
         <div className="demo--inline exampleWrapper">
           <auro-alerts information hiddenAudible>This content will be hidden from screen readers.</auro-alerts>
         </div>
