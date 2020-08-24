@@ -155,7 +155,7 @@ import SideNav from './components/side-nav';
 
 // import resources for markdown docs from ./src/content/markdown
 // export classes from ./src/content/docsExport.js
-// then add the appropiate Route below
+// then add the appropriate Route below
 import {
   A11yDocs,
   AngularDemoDocs,

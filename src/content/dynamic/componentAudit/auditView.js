@@ -14,7 +14,6 @@ const Actions = gql`
             nodes {
               title
               url
-              state
               labels(last: 10) {
                 nodes {
                   name
@@ -46,7 +45,6 @@ const Informational = gql`
             nodes {
               title
               url
-              state
               labels(last: 10) {
                 nodes {
                   name
@@ -78,7 +76,6 @@ const Structural = gql`
             nodes {
               title
               url
-              state
               labels(last: 10) {
                 nodes {
                   name
@@ -110,7 +107,6 @@ const Inputs = gql`
             nodes {
               title
               url
-              state
               labels(last: 10) {
                 nodes {
                   name
@@ -142,7 +138,6 @@ const Navigation = gql`
             nodes {
               title
               url
-              state
               labels(last: 10) {
                 nodes {
                   name
@@ -174,7 +169,6 @@ const Contextual = gql`
             nodes {
               title
               url
-              state
               labels(last: 10) {
                 nodes {
                   name
@@ -206,7 +200,6 @@ const Content = gql`
             nodes {
               title
               url
-              state
               labels(last: 10) {
                 nodes {
                   name
@@ -238,7 +231,6 @@ const ContentLayout = gql`
             nodes {
               title
               url
-              state
               labels(last: 10) {
                 nodes {
                   name
@@ -270,7 +262,6 @@ const PriorityAudit = gql`
             nodes {
               title
               url
-              state
               labels(last: 10) {
                 nodes {
                   name

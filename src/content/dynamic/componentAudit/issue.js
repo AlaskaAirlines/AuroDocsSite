@@ -10,18 +10,17 @@ class Issue extends Component {
         <table className="auro_table auro_table--audit">
           <thead>
             <tr>
-              <th>Component</th>
+              <th className="util_nowrap">Component</th>
               <th>Artwork</th>
               <th>UI Kit</th>
               <th>Code</th>
               <th>Docs</th>
-              <th className="auro_table--notes">Notes</th>
-              <th>State</th>
+              <th className="auro_table--notesXXX">Notes</th>
             </tr>
           </thead>
           {this.props.issues.map(({title, url, state, labels, comments}) => (
             <tr>
-              <td>
+              <td className="util_nowrap">
                 <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
               </td>
               <td>
@@ -74,9 +73,6 @@ class Issue extends Component {
                     <ReactMarkdown source={body} />
                   </div>
                 ))}
-              </td>
-              <td>
-                <span className={state}>{state}</span>
               </td>
             </tr>
           ))}

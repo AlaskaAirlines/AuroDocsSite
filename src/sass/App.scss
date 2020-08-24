@@ -21,6 +21,10 @@ $focus: true;
   outline: 2px solid red;
 }
 
+.util_nowrap {
+  white-space: nowrap
+}
+
 .util_capitalize {
   text-transform: capitalize;
 }
