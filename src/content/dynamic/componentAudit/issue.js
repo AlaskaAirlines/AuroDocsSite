@@ -10,7 +10,7 @@ class Issue extends Component {
         <table className="auro_table auro_table--audit">
           <thead>
             <tr>
-              <th className="util_nowrap">Component</th>
+              <th className="auro_util_nowrap">Component</th>
               <th>Artwork</th>
               <th>UI Kit</th>
               <th>Code</th>
@@ -20,7 +20,7 @@ class Issue extends Component {
           </thead>
           {this.props.issues.map(({title, url, state, labels, comments}) => (
             <tr>
-              <td className="util_nowrap">
+              <td className="auro_util_nowrap">
                 <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
               </td>
               <td>

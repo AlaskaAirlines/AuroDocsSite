@@ -10,23 +10,17 @@
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/anchor-roleTab";
 
 
+
 $prefix: true;
 $paragraph: true;
 $focus: true;
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/essentials";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/typeProperties";
 
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SassCustomPropertiesColorRGB";
 
 %see {
   outline: 2px solid red;
-}
-
-.util_nowrap {
-  white-space: nowrap
-}
-
-.util_capitalize {
-  text-transform: capitalize;
 }
 
 body {
