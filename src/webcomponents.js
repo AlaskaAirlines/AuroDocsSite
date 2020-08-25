@@ -10,7 +10,7 @@ import "@alaskaairux/auro-alerts";
 
 // button
 import "@alaskaairux/ods-button";
-import "@alaskaairux/ods-button/dist/auro-button";
+import "@alaskaairux/auro-button";
 
 // table
 import "@alaskaairux/auro-table/dist/auro-table";

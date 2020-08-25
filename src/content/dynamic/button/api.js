@@ -4,8 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/ods-button/master/docs/auro/api.md';
-const secondaryMarkdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/ods-button/master/docs/ods/api.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-button/master/docs/api.md';
 
 class AuroButtonApi extends MarkdownPageWrapper {
 
@@ -13,12 +12,6 @@ class AuroButtonApi extends MarkdownPageWrapper {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
       this.setState({
         contentBuild: text
-      })
-    })
-
-    fetch(secondaryMarkdownContent).then((response) => response.text()).then((text) => {
-      this.setState({
-        secondaryContentBuild: text
       })
     })
   }
@@ -32,18 +25,6 @@ class AuroButtonApi extends MarkdownPageWrapper {
         <section className="auro-markdown">
           <ReactMarkdown
             source={this.state.contentBuild}
-            escapeHtml={false}
-            renderers={{
-              code: CodeBlock,
-              heading: this.headingRenderer
-            }}/>
-        </section>
-
-        <hr />
-
-        <section className="auro-markdown">
-          <ReactMarkdown
-            source={this.state.secondaryContentBuild}
             escapeHtml={false}
             renderers={{
               code: CodeBlock,
