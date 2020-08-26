@@ -26,6 +26,7 @@ const workInProgress = gql`
               comments(last: 1) {
                 nodes {
                   body
+                  createdAt
                 }
               }
               projectCards {

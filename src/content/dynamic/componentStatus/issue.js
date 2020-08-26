@@ -11,6 +11,20 @@ class Issue extends Component {
     return (yiq >= 128) ? '#000' : '#fff';
   };
 
+  humanDate(dateData) {
+    const standardOptions = {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      timeZone: "UTC"
+    };
+
+    const then = new Date(dateData);
+
+    return then.toLocaleString('en-us', standardOptions);
+  }
+
   render() {
     return (
       <table key={this.props.name} className="auro_table epicIssues">
@@ -19,7 +33,6 @@ class Issue extends Component {
             <th>Issues for: {this.props.name}</th>
             <th>Labels</th>
             <th>Comments</th>
-            {/* <th>Release Status</th> */}
           </tr>
         </thead>
         <tbody>
@@ -47,19 +60,13 @@ class Issue extends Component {
                 </div>
               </td>
               <td>
-                {comments.nodes.map(({body}) => (
+                {comments.nodes.map(({body, createdAt}) => (
                   <div className="auro-markdown">
                     <ReactMarkdown source={body} />
+                    <small>{this.humanDate(createdAt)}</small>
                   </div>
                 ))}
               </td>
-              {/* <td>
-                {projectCards.nodes.map(({column}) => (
-                  <div key={column.name}>
-                    {column.name}
-                  </div>
-                ))}
-              </td> */}
             </tr>
           ))}
         </tbody>
