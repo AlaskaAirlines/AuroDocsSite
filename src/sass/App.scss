@@ -51,8 +51,8 @@ footer,
     margin: var(--auro-size-md) auto 0 25%;
   }
 
-  @include auro_breakpoint($min: 1800px) {
-    max-width: 40%;
+  @include auro_breakpoint($min: 2400px) {
+    max-width: 45%;
   }
 }
 

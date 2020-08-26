@@ -3,20 +3,6 @@ import ReactMarkdown from 'react-markdown';
 
 class Issue extends Component {
 
-  humanDate(dateData) {
-    const standardOptions = {
-      weekday: "short",
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-      timeZone: "UTC"
-    };
-
-    const then = new Date(dateData);
-
-    return then.toLocaleString('en-us', standardOptions);
-  }
-
   render() {
     return (
       <div key={this.props.name}>
@@ -41,7 +27,7 @@ class Issue extends Component {
                 <div className="labelWrapper">
                   {labels.nodes.map(({name, color}) => (
                     name.includes("Artwork")
-                      ? <div key={name} data-name={name} title={name} className="issueLabel auditLabel"
+                      ? <div ke2y={name} data-name={name} title={name} className="issueLabel auditLabel"
                           style={{backgroundColor: '#' + color, color: '#' + color}}>
                         </div>
                     : ''
@@ -85,7 +71,7 @@ class Issue extends Component {
                 {comments.nodes.map(({body, createdAt}) => (
                   <div className="auro-markdown">
                     <ReactMarkdown source={body} />
-                    <small>{this.humanDate(createdAt)}</small>
+                    {createdAt}
                   </div>
                 ))}
               </td>

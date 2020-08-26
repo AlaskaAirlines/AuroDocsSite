@@ -23,6 +23,7 @@ const Actions = gql`
               comments(last: 1) {
                 nodes {
                   body
+                  createdAt
                 }
               }
             }
@@ -54,6 +55,7 @@ const Informational = gql`
               comments(last: 1) {
                 nodes {
                   body
+                  createdAt
                 }
               }
             }
@@ -85,6 +87,7 @@ const Structural = gql`
               comments(last: 1) {
                 nodes {
                   body
+                  createdAt
                 }
               }
             }
@@ -116,6 +119,7 @@ const Inputs = gql`
               comments(last: 1) {
                 nodes {
                   body
+                  createdAt
                 }
               }
             }
@@ -147,6 +151,7 @@ const Navigation = gql`
               comments(last: 1) {
                 nodes {
                   body
+                  createdAt
                 }
               }
             }
@@ -178,6 +183,7 @@ const Contextual = gql`
               comments(last: 1) {
                 nodes {
                   body
+                  createdAt
                 }
               }
             }
@@ -209,6 +215,7 @@ const Content = gql`
               comments(last: 1) {
                 nodes {
                   body
+                  createdAt
                 }
               }
             }
@@ -240,6 +247,7 @@ const ContentLayout = gql`
               comments(last: 1) {
                 nodes {
                   body
+                  createdAt
                 }
               }
             }
@@ -271,6 +279,7 @@ const PriorityAudit = gql`
               comments(last: 1) {
                 nodes {
                   body
+                  createdAt
                 }
               }
             }
