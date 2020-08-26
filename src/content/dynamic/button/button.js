@@ -5,6 +5,13 @@ import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
 
+import wifi from '@alaskaairux/icons/dist/icons/in-flight/wifi_es6.js';
+import heartFilled from '@alaskaairux/icons/dist/icons/interface/heart-filled_es6.js';
+import arrowLeft from '@alaskaairux/icons/dist/icons/interface/arrow-left_es6.js';
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import Seat from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/seat.svg';
+
 class AuroButtons extends Component {
 
   constructor(props) {
@@ -24,9 +31,9 @@ class AuroButtons extends Component {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/ods-button'];
+    const dependencies = pjson.dependencies['@alaskaairux/auro-button'];
 
-    return `@alaskaairux/ods-button: ${dependencies}`;
+    return `@alaskaairux/auro-button: ${dependencies}`;
   };
 
   helloThere = () => {
@@ -58,7 +65,7 @@ class AuroButtons extends Component {
         <h3 className="auro_heading auro_heading--800">Buttons are not Hyperlinks</h3>
         <p>In cases were the action of the button would not fit the criteria above, it is most likely a Hyperlink. In that situation it is recommended that the <auro-hyperlink href="/components/auro/hyperlink" relative>auro-hyperlink</auro-hyperlink> element be used.</p>
 
-        <h2 className="auro_heading auro_heading--700">Default types</h2>
+        <auro-header level="2" display="700">Default types</auro-header>
 
         <div className="demo--inline exampleWrapper">
           <auro-button>Primary</auro-button>
@@ -103,6 +110,41 @@ class AuroButtons extends Component {
     <auro-button secondary>Secondary</auro-button>
     <auro-button tertiary>Tertiary</auro-button>
 </div>`}
+        </Highlight>
+
+        <auro-header level="2" display="700">Icon support</auro-header>
+
+        <p>The auro button has a very simple interface for using icons from the <auro-hyperlink href="/icons/overview" relative>Auro Icons</auro-hyperlink> library. Using this API requires no additional SVG support in your development framework.</p>
+
+        <div className="demo--inline exampleWrapper auro_containedButtons">
+          <auro-button svgIconRight={wifi.svg}>Activate WiFi</auro-button>
+          <auro-button secondary svgIconLeft={arrowLeft.svg}>Previous action</auro-button>
+          <auro-button tertiary svgIconRight={heartFilled.svg}>Love this</auro-button>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`import wifi from '@alaskaairux/icons/dist/icons/in-flight/wifi_es6.js';
+import heartFilled from '@alaskaairux/icons/dist/icons/interface/heart-filled_es6.js';
+import arrowLeft from '@alaskaairux/icons/dist/icons/interface/arrow-left_es6.js';
+
+<auro-button svgIconRight={wifi.svg}>Activate WiFi</auro-button>
+<auro-button secondary svgIconLeft={arrowLeft.svg}>Previous action</auro-button>
+<auro-button tertiary svgIconRight={heartFilled.svg}>Love this</auro-button>`}
+        </Highlight>
+
+        <auro-header level="2" display="700">Icon support in slots with React</auro-header>
+
+        <p>In the use case that the icon is preferred to be added to the <code>slot</code> element, this is fully supported as well. This example illustrated this using the <code>svg-react-loader</code> npm.</p>
+
+        <div className="demo--inline exampleWrapper auro_containedButtons">
+          <auro-button><Seat /> Choose your new seat assignment</auro-button>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`// eslint-disable-next-line import/no-webpack-loader-syntax
+import Seat from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/seat.svg';
+
+<auro-button><Seat /> Choose your new seat assignment</auro-button>`}
         </Highlight>
 
         <h2 className="auro_heading auro_heading--700">Auro Button - fluid</h2>
@@ -173,7 +215,7 @@ class AuroButtons extends Component {
 
         <h2 className="auro_heading auro_heading--700">Auro Button - pass function to button</h2>
 
-        <p>The following is an example of a click event function being passed into the web componment.</p>
+        <p>The following is an example of a click event function being passed into the web component.</p>
 
         <div className="demo--inline exampleWrapper">
           <auro-button onClick={this.helloThere}>Primary</auro-button>
@@ -191,9 +233,9 @@ helloThere = () => {
         </Highlight>
 
         <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
-          npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
-          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/auro-button.js"
+          github="https://github.com/AlaskaAirlines/auro-button"
+          npm="https://www.npmjs.com/package/@alaskaairux/auro-button"
+          code="https://github.com/AlaskaAirlines/auro-button/blob/master/src/auro-button.js"
           version={this.showVersion()}
         />
       </section>
