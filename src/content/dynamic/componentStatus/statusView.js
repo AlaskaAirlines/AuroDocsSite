@@ -27,6 +27,10 @@ const workInProgress = gql`
                 nodes {
                   body
                   createdAt
+                  author {
+                    avatarUrl(size: 50)
+                    login
+                  }
                 }
               }
               projectCards {
@@ -50,6 +54,7 @@ const workInProgress = gql`
     }
   }
 }
+
 
 `
 

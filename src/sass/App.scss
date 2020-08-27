@@ -651,13 +651,6 @@ img[src*='shields.io'] {
     color: white;
     background-color: var(--auro-color-brand-flamingo-500);
   }
-
-  @include auro_breakpoint--sm {
-    th,
-    td {
-      width: 40%;
-    }
-  }
 }
 
 // status issues
@@ -740,6 +733,8 @@ img[src*='shields.io'] {
   width: var(--auro-size-lg);
   border-radius: 50%;
   padding: 0 var(--auro-size-xxxs);
+  vertical-align: middle;
+  margin-right: var(--auro-size-xs);
 
   &--wrapper {
     padding-top: var(--auro-size-xxs);

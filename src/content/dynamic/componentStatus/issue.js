@@ -30,7 +30,7 @@ class Issue extends Component {
       <table key={this.props.name} className="auro_table epicIssues">
         <thead>
           <tr>
-            <th>Issues for: {this.props.name}</th>
+            <th className="auro_util_nowrap">Issues for: {this.props.name}</th>
             <th>Labels</th>
             <th>Comments</th>
           </tr>
@@ -38,12 +38,12 @@ class Issue extends Component {
         <tbody>
           {this.props.issues.map(({title, url, number, labels, projectCards, assignees, comments}) => (
             <tr key={title}>
-              <td>
+              <td className="auro_util_nowrap">
                 <div>
                   <auro-hyperlink href={url} target="_blank">{title} #{number}</auro-hyperlink>
                 </div>
                 <div className="githubAvatar--wrapper">
-                  {assignees.nodes.map(({avatarUrl, name, id}) => (
+                  <small>Assigned: </small>{assignees.nodes.map(({avatarUrl, name, id}) => (
                     assignees.nodes.length > 0
                     ? <img key={id} src={avatarUrl} className="githubAvatar" alt={name} title={name} />
                     : ''
@@ -63,7 +63,10 @@ class Issue extends Component {
                 {comments.nodes.map(({body, createdAt}) => (
                   <div className="auro-markdown">
                     <ReactMarkdown source={body} />
-                    <small>{this.humanDate(createdAt)}</small>
+
+                    {comments.nodes.map(({author}) => (
+                      <img key={createdAt} src={author.avatarUrl} className="githubAvatar" alt="avatar" title={author.login} />
+                    ))}<small>{this.humanDate(createdAt)}</small>
                   </div>
                 ))}
               </td>
