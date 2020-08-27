@@ -5,10 +5,16 @@ import axios from 'axios';
 
 class UseDashboard extends Component {
   state = {
+    isLoading: true,
     Projects: []
   }
 
   componentDidMount() {
+    this.loadingAPI();
+  }
+
+  loadingAPI = () => {
+    this.setState({isLoading: true});
     axios.post('/', {
       ProjectNamePattern: '(E_\\w*_\\w*|AlaskaAirCom|CustomerMobile|LCC)',
       FileNamePattern: 'package.json',
@@ -25,6 +31,7 @@ class UseDashboard extends Component {
       .then(res => {
           const projects = res.data;
           this.setState(projects);
+          this.setState({isLoading: false});
       })
       .catch(function(error){
           console.log(error);
@@ -36,7 +43,7 @@ class UseDashboard extends Component {
       <section id="releases-by-sprint">
         <h1 className="auro_heading auro_heading--display">Auro use dashboard</h1>
         <p>The following summary data is a list of all the projects in ADO that are currently using Orion/Auro Design System resources. Be sure to review the <auro-hyperlink href="https://auro.alaskaair.com/component-status" target="_blank">current component status</auro-hyperlink> for applicable updates.</p>
-        {this.state.Projects.map(({Name, Repositories}) => (
+        {this.state.isLoading ? <p className="isLoading">Loading...</p> : this.state.Projects.map(({Name, Repositories}) => (
           <Project key={Name} name={Name} repos={Repositories} />
         ))}
       </section>
