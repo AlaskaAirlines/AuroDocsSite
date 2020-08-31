@@ -26,9 +26,9 @@ class Issue extends Component {
             <tr>
               <th className="auro_util_nowrap">Component</th>
               <th>Artwork</th>
-              <th>UI Kit</th>
               <th>Code</th>
               <th>Docs</th>
+              <th>UI Kit</th>
               <th className="auro_table--notesXXX">Notes</th>
             </tr>
           </thead>
@@ -51,17 +51,6 @@ class Issue extends Component {
               <td>
                 <div className="labelWrapper">
                   {labels.nodes.map(({name, color}) => (
-                    name.includes("UI Kit")
-                      ? <div key={name} data-name={name} title={name} className="issueLabel auditLabel"
-                          style={{backgroundColor: '#' + color, color: '#' + color}}>
-                        </div>
-                    : ''
-                  ))}
-                </div>
-              </td>
-              <td>
-                <div className="labelWrapper">
-                  {labels.nodes.map(({name, color}) => (
                     name.includes("Code")
                       ? <div key={name} data-name={name} title={name} className="issueLabel auditLabel"
                           style={{backgroundColor: '#' + color, color: '#' + color}}>
@@ -74,6 +63,17 @@ class Issue extends Component {
                 <div className="labelWrapper">
                   {labels.nodes.map(({name, color}) => (
                     name.includes("Docs")
+                      ? <div key={name} data-name={name} title={name} className="issueLabel auditLabel"
+                          style={{backgroundColor: '#' + color, color: '#' + color}}>
+                        </div>
+                    : ''
+                  ))}
+                </div>
+              </td>
+              <td>
+                <div className="labelWrapper">
+                  {labels.nodes.map(({name, color}) => (
+                    name.includes("UI Kit")
                       ? <div key={name} data-name={name} title={name} className="issueLabel auditLabel"
                           style={{backgroundColor: '#' + color, color: '#' + color}}>
                         </div>
