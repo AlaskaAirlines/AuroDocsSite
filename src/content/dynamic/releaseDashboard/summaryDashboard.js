@@ -11,7 +11,7 @@ const milestones = gql`
       repositories(first: 20, orderBy: {field: CREATED_AT, direction: ASC}) {
         nodes {
           name
-          milestones(first: 8, orderBy: {field: DUE_DATE, direction: DESC}) {
+          milestones(first: 12, orderBy: {field: DUE_DATE, direction: DESC}) {
             nodes {
               title
               description
@@ -35,7 +35,6 @@ class Milestones extends Component {
         <Nav />
 
         <h1 className="auro_heading auro_heading--display">Auro release summaries</h1>
-        <p>The following are summaries from the last four sprint release cycles.</p>
 
         <Query query={milestones}>
           {({ loading, error, data }) => {
