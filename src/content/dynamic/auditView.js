@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Nav } from '../componentStatus/nav';
+import { Nav } from '../componentAudit/nav';
 import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
 import Issue from './issue';

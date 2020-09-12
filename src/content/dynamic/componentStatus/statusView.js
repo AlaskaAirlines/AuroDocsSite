@@ -1,101 +1,28 @@
 import React, { Component } from "react";
+import { Nav } from './nav';
 import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
-import Issue from './issue';
-import IssueNoComments from './issue--noComments';
+import Repo from './repo';
 
-const workInProgress = gql`
+const componentStatus = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 30, orderBy: {field: NAME, direction: ASC}) {
+      repositories(query: "auro-", orderBy: {field: NAME, direction: ASC}) {
         nodes {
           name
-          issues(last: 20, orderBy: {field: CREATED_AT, direction: ASC}, states: OPEN, filterBy: {labels: "Status: Work In Progress"}) {
-            nodes {
-              title
-              url
-              number
-              labels(last: 10, orderBy: {field: NAME, direction: ASC}) {
-                nodes {
-                  name
-                  color
-                  description
-                }
-              }
-              comments(last: 1) {
-                nodes {
-                  body
-                  createdAt
-                  author {
-                    avatarUrl(size: 50)
-                    login
-                  }
-                }
-              }
-              projectCards {
-                nodes {
-                  column {
-                    name
-                  }
-                }
-              }
-              assignees(last: 5) {
-                nodes {
-                  avatarUrl(size: 50)
-                  name
-                  id
-                }
-              }
-            }
+          description
+          url
+          homepageUrl
+          id
+          issues(states: OPEN) {
+            totalCount
           }
-        }
-      }
-    }
-  }
-}
-
-
-`
-
-const prioritizedForWork = gql`
-{
-  organization(login: "AlaskaAirlines") {
-    team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}) {
-        nodes {
-          name
-          issues(last: 20, orderBy: {field: CREATED_AT, direction: ASC}, states: OPEN, filterBy: {labels: "Status: Prioritized for work"}) {
+          releases(last: 1) {
             nodes {
-              title
-              url
-              number
-              labels(last: 10, orderBy: {field: NAME, direction: ASC}) {
-                nodes {
-                  name
-                  color
-                  description
-                }
-              }
-              comments(last: 1) {
-                nodes {
-                  body
-                }
-              }
-              projectCards {
-                nodes {
-                  column {
-                    name
-                  }
-                }
-              }
-              assignees(last: 5) {
-                nodes {
-                  avatarUrl(size: 50)
-                  name
-                  id
-                }
-              }
+              tagName
+              createdAt
+              id
             }
           }
         }
@@ -105,44 +32,25 @@ const prioritizedForWork = gql`
 }
 `
 
-const backlogged = gql`
+const odsComponentStatus = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}) {
+      repositories(query: "ods-", orderBy: {field: NAME, direction: ASC}) {
         nodes {
           name
-          issues(last: 20, orderBy: {field: CREATED_AT, direction: ASC}, states: OPEN, filterBy: {labels: "Status: Backlogged"}) {
+          description
+          url
+          homepageUrl
+          id
+          issues(states: OPEN) {
+            totalCount
+          }
+          releases(last: 1) {
             nodes {
-              title
+              tagName
+              createdAt
               url
-              number
-              labels(last: 10, orderBy: {field: NAME, direction: ASC}) {
-                nodes {
-                  name
-                  color
-                  description
-                }
-              }
-              comments(last: 1) {
-                nodes {
-                  body
-                }
-              }
-              projectCards {
-                nodes {
-                  column {
-                    name
-                  }
-                }
-              }
-              assignees(last: 5) {
-                nodes {
-                  avatarUrl(size: 50)
-                  name
-                  id
-                }
-              }
             }
           }
         }
@@ -152,60 +60,274 @@ const backlogged = gql`
 }
 `
 
-class PlannedWork extends Component {
+const generator = gql`
+{
+  organization(login: "AlaskaAirlines") {
+    team(slug: "auro-team") {
+      repositories(query: "generator", orderBy: {field: NAME, direction: ASC}) {
+        nodes {
+          name
+          description
+          url
+          homepageUrl
+          id
+          issues(states: OPEN) {
+            totalCount
+          }
+          releases(last: 1) {
+            nodes {
+              tagName
+              createdAt
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
+const tokens = gql`
+{
+  organization(login: "AlaskaAirlines") {
+    team(slug: "auro-team") {
+      repositories(query: "tokens", orderBy: {field: NAME, direction: ASC}) {
+        nodes {
+          name
+          description
+          url
+          homepageUrl
+          id
+          issues(states: OPEN) {
+            totalCount
+          }
+          releases(last: 1) {
+            nodes {
+              tagName
+              createdAt
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
+const WebCoreStyleSheets = gql`
+{
+  organization(login: "AlaskaAirlines") {
+    team(slug: "auro-team") {
+      repositories(query: "WebCoreStyleSheets", orderBy: {field: NAME, direction: ASC}) {
+        nodes {
+          name
+          description
+          url
+          homepageUrl
+          id
+          issues(states: OPEN) {
+            totalCount
+          }
+          releases(last: 1) {
+            nodes {
+              tagName
+              createdAt
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
+const Icons = gql`
+{
+  organization(login: "AlaskaAirlines") {
+    team(slug: "auro-team") {
+      repositories(query: "icons", orderBy: {field: NAME, direction: ASC}) {
+        nodes {
+          name
+          description
+          url
+          homepageUrl
+          id
+          issues(states: OPEN) {
+            totalCount
+          }
+          releases(last: 1) {
+            nodes {
+              tagName
+              createdAt
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
+class ComponentStatus extends Component {
   render() {
     return (
-      <section id="projectZero">
+      <section>
 
-        <h1 className="auro_heading auro_heading--display">Planned work</h1>
-        <p>The following lists are of tools and components currently queued up on the Auro roadmap.</p>
+        <Nav />
 
-        <h2 className="auro_heading auro_heading--700">Work In Progress</h2>
-        <p>WIP limit of 1.5 per individual assignee.</p>
-        <Query query={workInProgress}>
-          {({ loading, error, data }) => {
-            if (loading) return <p className="isLoading">Loading...</p>;
-            if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
+        <auro-header level="1" display="display">Auro Status</auro-header>
+        <p>IMPORTANT: The Auro Web Components are a work in progress and releases are subject to major changes.</p>
 
-            return data.organization.team.repositories.nodes.map(({ name, issues }) => (
-              issues.nodes.length > 0
-                ? <Issue key={name} name={name} issues={issues.nodes} />
-                : ''
-            ));
-          }}
-        </Query>
+        <auro-header level="2" display="700">Auro Design System tools in active use and development</auro-header>
+        <p>Auro Web Components are a collection of Web Components maintained by Alaska Airlines that implement the Auro Design System.</p>
 
-        <h2 className="auro_heading auro_heading--700">Prioritized backlog of Work</h2>
-        <p>The following items are not in sorted rank but are items prioritized for work by their respected assignees. </p>
-        <Query query={prioritizedForWork}>
-          {({ loading, error, data }) => {
-            if (loading) return <p>Loading...</p>;
-            if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
+        <auro-header level="3" display="500">Design System support tools</auro-header>
 
-            return data.organization.team.repositories.nodes.map(({ name, issues }) => (
-              issues.nodes.length > 0
-                ? <IssueNoComments key={name} name={name} issues={issues.nodes} />
-                : ''
-            ));
-          }}
-        </Query>
+        <table className="auro_table">
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Package</th>
+              <th>Issues</th>
+              <th className="short">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <Query query={generator}>
+              {({ loading, error, data }) => {
+                if (loading) return <tr><td>Loading...</td></tr>;
+                if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
-        <h2 className="auro_heading auro_heading--700">Backlogged</h2>
-        <Query query={backlogged}>
-          {({ loading, error, data }) => {
-            if (loading) return <p>Loading...</p>;
-            if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>
+                return data.organization.team.repositories.nodes.map(({ name, description, url, homepageUrl, issues, releases }) => (
+                  <Repo key={name}
+                    name={name}
+                    description={description}
+                    url={url}
+                    homepageUrl={homepageUrl}
+                    issues={issues}
+                    releases={releases}/>
+                ));
+              }}
+            </Query>
+            <Query query={tokens}>
+              {({ loading, error, data }) => {
+                if (loading) return <tr><td></td></tr>;
+                if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
-            return data.organization.team.repositories.nodes.map(({ name, issues }) => (
-              issues.nodes.length > 0
-                ? <IssueNoComments key={name} name={name} issues={issues.nodes} />
-                : ''
-            ));
-          }}
-        </Query>
+                return data.organization.team.repositories.nodes.map(({ id, name, description, url, homepageUrl, issues, releases }) => (
+                  <Repo key={id}
+                    name={name}
+                    description={description}
+                    url={url}
+                    homepageUrl={homepageUrl}
+                    issues={issues}
+                    releases={releases}/>
+                ));
+              }}
+            </Query>
+            <Query query={WebCoreStyleSheets}>
+              {({ loading, error, data }) => {
+                if (loading) return <tr><td></td></tr>;
+                if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
+
+                return data.organization.team.repositories.nodes.map(({ id, name, description, url, homepageUrl, issues, releases }) => (
+                  <Repo key={id}
+                    name={name}
+                    description={description}
+                    url={url}
+                    homepageUrl={homepageUrl}
+                    issues={issues}
+                    releases={releases}/>
+                ));
+              }}
+            </Query>
+            <Query query={Icons}>
+              {({ loading, error, data }) => {
+                if (loading) return <tr><td></td></tr>;
+                if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
+
+                return data.organization.team.repositories.nodes.map(({ id, name, description, url, homepageUrl, issues, releases }) => (
+                  <Repo key={id}
+                    name={name}
+                    description={description}
+                    url={url}
+                    homepageUrl={homepageUrl}
+                    issues={issues}
+                    releases={releases}/>
+                ));
+              }}
+            </Query>
+          </tbody>
+        </table>
+
+        <auro-header level="3" display="500">Auro components</auro-header>
+
+        <table className="auro_table">
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Package</th>
+              <th>Issues</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <Query query={componentStatus}>
+              {({ loading, error, data }) => {
+                if (loading) return <tr><td></td></tr>;
+                if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
+
+                return data.organization.team.repositories.nodes.map(({ id, name, description, url, homepageUrl, issues, releases }) => (
+                  <Repo key={id}
+                    name={name}
+                    description={description}
+                    url={url}
+                    homepageUrl={homepageUrl}
+                    issues={issues}
+                    releases={releases}/>
+                ));
+              }}
+            </Query>
+          </tbody>
+        </table>
+
+        <auro-header level="3" display="500">Legacy Orion components</auro-header>
+
+        <table className="auro_table">
+        <thead>
+            <tr>
+              <th>Project</th>
+              <th>Package</th>
+              <th>Issues</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <Query query={odsComponentStatus}>
+              {({ loading, error, data }) => {
+                if (loading) return <tr><td></td></tr>;
+                if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
+
+                return data.organization.team.repositories.nodes.map(({ id, name, description, url, homepageUrl, issues, releases }) => (
+                  <Repo key={id}
+                    name={name}
+                    description={description}
+                    url={url}
+                    homepageUrl={homepageUrl}
+                    issues={issues}
+                    releases={releases}/>
+                ));
+              }}
+            </Query>
+          </tbody>
+        </table>
       </section>
     )
   }
 }
 
-export default PlannedWork;
+export default ComponentStatus;

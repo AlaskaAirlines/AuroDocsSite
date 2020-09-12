@@ -97,10 +97,6 @@ export class TestsDocs extends ExternalDocs {
   readme = "src/TESTS.md"
 }
 
-export class ComponentsDocs extends ExternalDocs {
-  readme = "src/COMPONENTS.md"
-}
-
 export class GovernanceDocs extends ExternalDocs {
   readme = "src/GOVERNANCE.md"
 }

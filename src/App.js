@@ -28,7 +28,8 @@ import NotFound from './content/notFound.js';
 import VersionZero from './content/dynamic/epics/projectVersionZero';
 import UserResearch  from './content/dynamic/epics/projectUserResearch';
 import DocSiteStrategy from './content/dynamic/epics/projectDocSite';
-import PlannedWork from './content/dynamic/componentStatus/statusView';
+import PlannedWork from './content/dynamic/componentStatus/plannedWork';
+import ComponentStatus from './content/dynamic/componentStatus/statusView';
 import ComponentAudit from './content/dynamic/componentAudit/auditView';
 
 // Design to dev handoff process
@@ -161,7 +162,6 @@ import {
   AngularDemoDocs,
   BabelSupportDocs,
   BrowsersSupportDocs,
-  ComponentsDocs,
   CssConventionsDocs,
   CustomPropertiesDocs,
   GovernanceDocs,
@@ -219,7 +219,6 @@ function App() {
               {/* Home */}
               <Route exact path='/' component={Philosophy} />
               <Route exact path="/philosophy"><Philosophy /></Route>
-              <Route exact path="/component-status"><ComponentsDocs /></Route>
               <Route exact path="/user-support"><AuroSupport /></Route> {/* redirect old url */}
               <Route exact path="/auro-support"><AuroSupport /></Route>
 
@@ -229,7 +228,8 @@ function App() {
               <Route exact path="/epics/doc-site-strategy"><DocSiteStrategy /></Route>
 
               <Route exact path="/planned-work"><PlannedWork /></Route>
-              <Route exact path="/audit/"><ComponentAudit /></Route>
+              <Route exact path="/component-status"><ComponentStatus /></Route>
+              <Route exact path="/audit"><ComponentAudit /></Route>
               <Route exact path="/ado-use"><UseDashboard /></Route>
 
               {/* Getting Started/developers */}

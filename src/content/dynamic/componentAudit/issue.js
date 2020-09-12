@@ -32,6 +32,7 @@ class Issue extends Component {
               <th className="auro_table--notesXXX">Notes</th>
             </tr>
           </thead>
+          <tbody>
           {this.props.issues.map(({title, url, labels, comments}) => (
             <tr>
               <td className="auro_util_nowrap">
@@ -91,6 +92,7 @@ class Issue extends Component {
               </td>
             </tr>
           ))}
+          </tbody>
         </table>
       </div>
     )

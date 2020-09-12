@@ -766,3 +766,49 @@ img[src*='shields.io'] {
     border-width: 0;
   }
 }
+
+
+// Badges
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+.noLinkUi {
+  text-decoration: none;
+}
+
+.badge {
+  display: flex;
+  background-color: var(--auro-color-base-gray-500);
+  line-height: 1;
+  letter-spacing: 1px;
+  color: var(--auro-color-base-white);
+  font-size: var(--auro-size-sm);
+}
+
+.title {
+  padding: var(--auro-size-xs);
+  text-transform: uppercase;
+  text-align: center;
+  flex-grow: 4;
+}
+
+.data {
+  color: var(--auro-color-base-white);
+  padding: var(--auro-size-xs);
+  font-weight: 500;
+
+  &--release {
+    background-color: var(--auro-color-brand-breeze-300);
+  }
+
+  &--issues {
+    background-color: var(--auro-color-brand-tropical-400);
+  }
+
+  &--null {
+    background-color: var(--auro-color-base-gray-300);
+  }
+}
+
+.short {
+  width: 45%;
+}
