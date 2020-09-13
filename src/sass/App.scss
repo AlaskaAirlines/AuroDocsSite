@@ -621,7 +621,7 @@ img[src*='shields.io'] {
     @include auro_breakpoint--md {
       box-shadow: inset 0px -1px 0px 0px var(--auro-color-border-primary-on-light);
       position: sticky;
-      top: 192px;
+      top: 271px;
       background-color: #fff;
     }
   }
@@ -697,7 +697,7 @@ img[src*='shields.io'] {
 .auditLegend {
   position: sticky;
   z-index: 1;
-  top: 80px;
+  top: 160px;
   background-color: var(--auro-color-background-lighter);
   border-bottom: 1px solid var(--auro-color-border-primary-on-light);
   padding: 0.5rem 1rem 1rem;
