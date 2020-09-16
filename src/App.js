@@ -362,6 +362,9 @@ function App() {
               {/* icon */}
               <Route exact path="/components/auro/icon/"><WipPage /></Route>
 
+              {/* modal */}
+              <Route exact path="/components/auro/modal/"><WipPage /></Route>
+
               {/* menu */}
               <Route exact path="/components/auro/menu/"><WipPage /></Route>
 
