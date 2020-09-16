@@ -106,7 +106,7 @@ class AuroHeader extends Component {
         </Highlight>
 
         <auro-header level="3" display="600">Adjust margins</auro-header>
-        <p>In some cases the margin between elements may need to be adjusted. To do this, the <code>auro-header</code> component supports adjusting either the <code>top</code> or <code>bottom</code> margins. This coupled with the <code>size</code> prop, developers have a <auro-hyperlink href="/components/auro/header/api" relative>full range of options.</auro-hyperlink></p>
+        <p>In some cases the margin between elements may need to be adjusted. To do this, the <code>auro-header</code> component supports adjusting either the <code>top</code>, <code>bottom</code> or <code>both</code> margins. This coupled with the <code>size</code> prop, developers have a <auro-hyperlink href="/components/auro/header/api" relative>full range of options.</auro-hyperlink></p>
 
         <p>The following example shows how you can update the <code>bottom</code> margin to use the <code>xs</code> size setting.</p>
 
@@ -122,6 +122,24 @@ class AuroHeader extends Component {
 
         <Highlight className='html afterCode'>
           {`<auro-header level="2" display="500" margin="bottom" size="xs">Hello World!</auro-header>
+<ol className="util_stackMarginNone--top">
+  <li>... thing</li>
+  <li>thing ...</li>
+</ol>`}
+        </Highlight>
+
+        <p>The following example shows how you can update <code>both</code> margins to use the <code>xl</code> size setting.</p>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-header level="2" display="500" margin="both" size="xl">Hello World!</auro-header>
+          <ol className="util_stackMarginNone--top">
+            <li>... thing</li>
+            <li>thing ...</li>
+          </ol>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<auro-header level="2" display="500" margin="both" size="xl">Hello World!</auro-header>
 <ol className="util_stackMarginNone--top">
   <li>... thing</li>
   <li>thing ...</li>
