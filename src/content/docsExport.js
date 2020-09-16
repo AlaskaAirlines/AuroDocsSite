@@ -8,15 +8,22 @@ import GettingStartedDevsOverviewPage from './markdown/developerOverview.md';
 import WhatIsWhatPage from './markdown/whatIsWhat.md';
 import LayoutPage from './markdown/layout.md';
 import VoiceTonePage from './markdown/voiceTone.md';
-import ShadyCSSPage from './markdown/shadyCSS.md'
-import AuroSupportPage from './markdown/auroSupport.md'
-import AuroHomePage from './markdown/home.md'
+import ShadyCSSPage from './markdown/shadyCSS.md';
+import AuroSupportPage from './markdown/auroSupport.md';
+import AuroHomePage from './markdown/home.md';
+
+// Temp pages for new work
+import Wip from './markdown/wip.md';
 
 // Markdown classes
 // wrapper for general docs section
 class ExternalDocs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/auro"
   codeURL = "https://github.com/AlaskaAirlines/auro/tree/master/src"
+}
+
+export class WipPage extends InternalMarkdownWrapper {
+  readme = Wip
 }
 
 export class Philosophy extends InternalMarkdownWrapper {

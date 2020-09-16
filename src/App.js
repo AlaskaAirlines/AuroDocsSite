@@ -184,7 +184,10 @@ import {
   ComplianceDocs,
   ContributingDocs,
   ShadyCSS,
-  AuroSupport
+  AuroSupport,
+
+  // temp home for components in progress
+  WipPage
 
 } from './content/docsExport';
 
@@ -346,6 +349,24 @@ function App() {
               <Route exact path="/components/orion/inputtext/"><InputText /></Route>
               <Route exact path="/components/orion/inputtext/install"><InputTextInstall /></Route>
               <Route exact path="/components/orion/inputtext/api"><InputTextApi /></Route>
+
+              {/* carousel */}
+              <Route exact path="/components/auro/carousel/"><WipPage /></Route>
+
+              {/* accordion */}
+              <Route exact path="/components/auro/accordion/"><WipPage /></Route>
+
+              {/* flight-details */}
+              <Route exact path="/components/auro/flight-details/"><WipPage /></Route>
+
+              {/* icon */}
+              <Route exact path="/components/auro/icon/"><WipPage /></Route>
+
+              {/* menu */}
+              <Route exact path="/components/auro/menu/"><WipPage /></Route>
+
+              {/* pane */}
+              <Route exact path="/components/auro/pane/"><WipPage /></Route>
 
               {/* Dev resources */}
               <Route exact path="/support/a11y"><A11yDocs /></Route> {/* not used */} {/* reevaluate content */}
