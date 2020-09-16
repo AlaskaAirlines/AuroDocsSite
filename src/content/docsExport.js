@@ -10,6 +10,7 @@ import LayoutPage from './markdown/layout.md';
 import VoiceTonePage from './markdown/voiceTone.md';
 import ShadyCSSPage from './markdown/shadyCSS.md'
 import AuroSupportPage from './markdown/auroSupport.md'
+import AuroHomePage from './markdown/home.md'
 
 // Markdown classes
 // wrapper for general docs section
@@ -44,6 +45,10 @@ export class ShadyCSS extends InternalMarkdownWrapper {
 
 export class AuroSupport extends InternalMarkdownWrapper {
   readme = AuroSupportPage
+}
+
+export class AuroHome extends InternalMarkdownWrapper {
+  readme = AuroHomePage
 }
 
 export class WCGenerator extends ExternalMarkdownWrapper {

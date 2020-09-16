@@ -177,6 +177,7 @@ import {
   WhyCustomelementsDocs,
 
   // cleaned up markdown docs
+  AuroHome,
   Philosophy,
   WhatIsWhat,
   GettingStartedDevsOverview,
@@ -217,7 +218,7 @@ function App() {
             <Switch>
 
               {/* Home */}
-              <Route exact path='/' component={Philosophy} />
+              <Route exact path='/' component={AuroHome} />
               <Route exact path="/philosophy"><Philosophy /></Route>
               <Route exact path="/user-support"><AuroSupport /></Route> {/* redirect old url */}
               <Route exact path="/auro-support"><AuroSupport /></Route>

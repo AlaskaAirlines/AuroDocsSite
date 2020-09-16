@@ -21,7 +21,7 @@ export default function SideNav(props) {
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "Compliance", route: "/getting-started/developers/compliance", parent: true },
         { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
-        { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
+        // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
       ]
     },
     {

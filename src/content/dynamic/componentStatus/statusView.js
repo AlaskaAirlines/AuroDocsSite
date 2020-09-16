@@ -183,7 +183,7 @@ class ComponentStatus extends Component {
         <p>IMPORTANT: The Auro Web Components are a work in progress and releases are subject to major changes.</p>
 
         <auro-header level="2" display="700">Auro Design System tools in active use and development</auro-header>
-        <p>Auro Web Components are a collection of Web Components maintained by Alaska Airlines that implement the Auro Design System.</p>
+        <p>Auro Web Components are a collection of Web Components maintained by Alaska Airlines that implement the Auro Design System. Tools and developed components that are universally useable in almost any development environment including <auro-hyperlink href="/reactSetup" relative>React,</auro-hyperlink><auro-hyperlink href="/svelteSetup" relative>Svelte,</auro-hyperlink> or simply standard <auro-hyperlink href="/javascriptSetup" relative>JavaScript.</auro-hyperlink></p>
 
         <auro-header level="3" display="500">Design System support tools</auro-header>
 

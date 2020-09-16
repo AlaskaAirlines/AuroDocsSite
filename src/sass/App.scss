@@ -18,6 +18,7 @@ $focus: true;
 @import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/typeProperties";
 
 @import "~@alaskaairux/orion-design-tokens/dist/tokens/SassCustomPropertiesColorRGB";
+@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/displayProperties";
 
 %see {
   outline: 2px solid red;
@@ -811,4 +812,33 @@ img[src*='shields.io'] {
 
 .short {
   width: 45%;
+}
+
+.columns {
+ flex-direction: column;
+
+ @include auro_breakpoint--lg {
+  flex-direction: row;
+  justify-content: space-between;
+ }
+
+  > div {
+    &:nth-child(1) {
+      padding-left: 0;
+    }
+    &:nth-child(3) {
+      padding-right: 0;
+    }
+
+    @include auro_breakpoint--lg {
+      padding: 0 var(--auro-size-lg);
+      flex-basis: 33.3333%;
+      max-width: 33.333%;
+    }
+  }
+}
+
+.imageBox {
+  background-color: #01426c;
+  justify-content: center;
 }
