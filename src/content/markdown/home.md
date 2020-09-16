@@ -2,7 +2,7 @@
 
 Auro provides components and tools to help product teams work more efficiently. Designed and developed to support all Alaska Airlines digital experiences.
 
-<div class="auro_util_displayFlex imageBox">
+<div class="imageBox">
   <img alt="homepage hero image" src="/images/content/home.jpg" />
 </div>
 

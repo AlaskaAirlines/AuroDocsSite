@@ -841,4 +841,8 @@ img[src*='shields.io'] {
 .imageBox {
   background-color: #01426c;
   justify-content: center;
+
+  @include auro_breakpoint--lg {
+    display: flex;
+  }
 }
