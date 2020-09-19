@@ -73,6 +73,21 @@ import IconsInstall from './content/dynamic/icons/install.js';
 import LayoutGrid from './content/dynamic/layout/grid';
 import LayoutSpacing from './content/dynamic/layout/spacing';
 
+// Accordion
+import AuroAccordion from './content/dynamic/accordion/component';
+import AuroAccordionApi from './content/dynamic/accordion/api';
+import AuroAccordionInstall from './content/dynamic/accordion/install';
+
+// Modal
+import AuroModal from './content/dynamic/modal/component';
+import AuroModalApi from './content/dynamic/modal/api';
+import AuroModalInstall from './content/dynamic/modal/install';
+
+// Icon
+import AuroIcon from './content/dynamic/icon/component';
+import AuroIconApi from './content/dynamic/icon/api';
+import AuroIconInstall from './content/dynamic/icon/install';
+
 // Alerts
 import AuroAlerts from './content/dynamic/alerts/alerts';
 import AuroAlertsApi from './content/dynamic/alerts/api';
@@ -354,7 +369,19 @@ function App() {
               <Route exact path="/components/auro/carousel/"><WipPage /></Route>
 
               {/* accordion */}
-              <Route exact path="/components/auro/accordion/"><WipPage /></Route>
+              <Route exact path="/components/auro/accordion/"><AuroAccordion /></Route>
+              <Route exact path="/components/auro/accordion/install"><AuroAccordionApi /></Route>
+              <Route exact path="/components/auro/accordion/api"><AuroAccordionInstall /></Route>
+
+              {/* icon */}
+              <Route exact path="/components/auro/icon/"><AuroIcon /></Route>
+              <Route exact path="/components/auro/icon/install"><AuroIconInstall /></Route>
+              <Route exact path="/components/auro/icon/api"><AuroIconApi /></Route>
+
+              {/* modal */}
+              <Route exact path="/components/auro/modal/"><AuroModal /></Route>
+              <Route exact path="/components/auro/modal/install"><AuroModalInstall/></Route>
+              <Route exact path="/components/auro/modal/api"><AuroModalApi /></Route>
 
               {/* flight-details */}
               <Route exact path="/components/auro/flight-details/"><WipPage /></Route>

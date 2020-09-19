@@ -3,7 +3,6 @@ import { Nav } from './nav';
 import Highlight from 'react-highlight';
 import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
-// import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
 
 class AuroAlerts extends Component {
 
@@ -44,6 +43,9 @@ class AuroAlerts extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-alerts >This is a default error with no error type specified.</auro-alerts>
         </div>
+        <Highlight className='html afterCode'>
+          {`<auro-alerts >This is a default error with no error type specified.</auro-alerts>`}
+        </Highlight>
 
         <auro-header level="2" display="700">Single-line alerts</auro-header>
 

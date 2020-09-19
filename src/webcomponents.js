@@ -12,6 +12,16 @@ import "@alaskaairux/auro-alerts";
 import "@alaskaairux/ods-button";
 import "@alaskaairux/auro-button";
 
+// icon
+import "@alaskaairux/auro-icon";
+
+// modal
+import "@alaskaairux/auro-modal";
+
+// accordion
+import "@alaskaairux/auro-accordion";
+import "@alaskaairux/auro-accordion/dist/auro-accordion-group";
+
 // table
 import "@alaskaairux/auro-table/dist/auro-table";
 
