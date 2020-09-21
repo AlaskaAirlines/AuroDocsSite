@@ -78,10 +78,10 @@ import AuroAccordion from './content/dynamic/accordion/component';
 import AuroAccordionApi from './content/dynamic/accordion/api';
 import AuroAccordionInstall from './content/dynamic/accordion/install';
 
-// Modal
-import AuroModal from './content/dynamic/modal/component';
-import AuroModalApi from './content/dynamic/modal/api';
-import AuroModalInstall from './content/dynamic/modal/install';
+// Dialog
+import AuroDialog from './content/dynamic/dialog/component';
+import AuroDialogApi from './content/dynamic/dialog/api';
+import AuroDialogInstall from './content/dynamic/dialog/install';
 
 // Icon
 import AuroIcon from './content/dynamic/icon/component';
@@ -379,9 +379,9 @@ function App() {
               <Route exact path="/components/auro/icon/api"><AuroIconApi /></Route>
 
               {/* modal */}
-              <Route exact path="/components/auro/modal/"><AuroModal /></Route>
-              <Route exact path="/components/auro/modal/install"><AuroModalInstall/></Route>
-              <Route exact path="/components/auro/modal/api"><AuroModalApi /></Route>
+              <Route exact path="/components/auro/dialog/"><AuroDialog /></Route>
+              <Route exact path="/components/auro/dialog/install"><AuroDialogInstall/></Route>
+              <Route exact path="/components/auro/dialog/api"><AuroDialogApi /></Route>
 
               {/* flight-details */}
               <Route exact path="/components/auro/flight-details/"><WipPage /></Route>

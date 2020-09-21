@@ -15,8 +15,8 @@ import "@alaskaairux/auro-button";
 // icon
 import "@alaskaairux/auro-icon";
 
-// modal
-import "@alaskaairux/auro-modal";
+// dialog
+import "@alaskaairux/auro-dialog";
 
 // accordion
 import "@alaskaairux/auro-accordion";
