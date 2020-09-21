@@ -5,8 +5,6 @@ import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import WiFi from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/wifi.svg';
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import Plug from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/plug.svg';
 
 class AuroPopover extends Component {
 
@@ -51,7 +49,7 @@ class AuroPopover extends Component {
         <auro-header level="3" display="700">Using slots, internal to component</auro-header>
         <p>In these examples the structure of the HTML uses the <code>slot</code> element to pull the trigger HTML into the scope of the outer shadow DOM element.</p>
 
-        <div className="demo--inline exampleWrapper">
+        <div className="demo--inline exampleWrapper auro_containedButtons">
           <auro-popover for="button1">
             Top popover content!
             <auro-button id="button1" slot="trigger">Popover Test</auro-button>
@@ -69,7 +67,7 @@ class AuroPopover extends Component {
 
           <auro-popover for="plugIcon" placement="bottom">
             This flight offers seat power service
-            <Plug id="plugIcon" slot="trigger"/>
+            <auro-icon id="plugIcon" category="in-flight" name="plug" slot="trigger"></auro-icon>
           </auro-popover>
 
           <auro-popover for="hyperlink">
@@ -90,14 +88,16 @@ class AuroPopover extends Component {
   <auro-button id="button2" slot="trigger">Popover Test</auro-button>
 </auro-popover>
 
+// Using React component
 <auro-popover for="wifiIcon">
   This flight offers WiFi service
   <WiFi id="wifiIcon" slot="trigger"/>
 </auro-popover>
 
+// Using auro-icon
 <auro-popover for="plugIcon" placement="bottom">
   This flight offers seat power service
-  <Plug id="plugIcon" slot="trigger"/>
+  <auro-icon id="plugIcon" category="in-flight" name="plug" slot="trigger"></auro-icon>
 </auro-popover>
 
 <auro-popover for="hyperlink">
@@ -107,24 +107,29 @@ class AuroPopover extends Component {
           `}
         </Highlight>
 
+
         <auro-header level="2" display="700">Using disconnected elements</auro-header>
-        <p>In these examples the trigger can be external to the scope of the popover component allowing for a disconnected HTML structure. </p>
+        <p>In these examples the trigger can be external to the scope of the popover component allowing for a disconnected HTML structure.</p>
 
-        <div className="demo--inline exampleWrapper">
-          <auro-popover for="button3">Top popover content!</auro-popover>
+        <p>NOTE: The popover element is hidden visually, but not set ot <code>display: none</code> for accessibility reasons. This is important to know in this setup because the <code>auro-popover</code> element may take up physical space depending on your layout solution.</p>
+
+        <div className="demo--inline exampleWrapper auro_containedButtons">
+
           <auro-button id="button3">Popover Test</auro-button>
+          <auro-popover for="button3">Top popover content!</auro-popover>
 
-          <auro-popover for="button4" placement="bottom">bottom popover content!</auro-popover>
           <auro-button id="button4">Popover Test</auro-button>
+          <auro-popover for="button4" placement="bottom">bottom popover content!</auro-popover>
 
           <WiFi id="wifiIcon2" />
           <auro-popover for="wifiIcon2">This flight offers WiFi service</auro-popover>
 
-          <Plug id="plugIcon2" />
+          <auro-icon id="plugIcon2" category="in-flight" name="plug"></auro-icon>
           <auro-popover for="plugIcon2" placement="bottom">This flight offers seat power service</auro-popover>
 
-          <auro-popover for="hyperlink2">This is a link, but I think you already knew that.</auro-popover>
+
           <auro-hyperlink id="hyperlink2" href="#">Hello world!</auro-hyperlink>
+          <auro-popover for="hyperlink2">This is a link, but I think you already knew that.</auro-popover>
 
         </div>
 
@@ -136,10 +141,12 @@ class AuroPopover extends Component {
 <auro-popover for="button4" placement="bottom">bottom popover content!</auro-popover>
 <auro-button id="button4">Popover Test</auro-button>
 
+// Using React component
 <WiFi id="wifiIcon2" />
 <auro-popover for="wifiIcon2">This flight offers WiFi service</auro-popover>
 
-<Plug id="plugIcon2" />
+// Using auro-icon
+<auro-icon id="plugIcon2" category="in-flight" name="plug"></auro-icon>
 <auro-popover for="plugIcon2" placement="bottom">This flight offers seat power service</auro-popover>
 
 <auro-popover for="hyperlink2">This is a link, but I think you already knew that.</auro-popover>

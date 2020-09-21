@@ -186,12 +186,12 @@ class AuroDialog extends Component {
 
         <auro-header level="2" display="700">Modal Dialog (blocking)</auro-header>
 
-        <p>A modal dialog is used with the intent is to restrict the actions of the user to the scope of the dialog. These scenarios are to be used with caution as this will trap the user within the experience. A <code>button</code> with a close action must be provided to allow the user to dismiss the modal dialog.</p>
+        <p>A modal dialog is used with the intent to restrict the actions of the user to the scope of the dialog. These scenarios are to be used with caution as this will trap the user within the experience. A <code>button</code>, or other element with a close action must be provided to allow the user to dismiss the modal dialog.</p>
 
-        <p>To create a Blocking Dialog, use the <code>blocking</code> attribute on the modal component.</p>
+        <p>To create a modal dialog, use the <code>modal</code> attribute on the dialog component.</p>
 
         <div className="demo--inline exampleWrapper auro_containedButtons">
-          <auro-button onClick={() => this.toggleDialog('#demo3')}>Open Modal  Dialog</auro-button>
+          <auro-button onClick={() => this.toggleDialog('#demo3')}>Open Modal Dialog</auro-button>
         </div>
 
         <auro-dialog id="demo3" modal>
