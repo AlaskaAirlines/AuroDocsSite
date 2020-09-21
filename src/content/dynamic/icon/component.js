@@ -46,8 +46,10 @@ class AuroIcon extends Component {
         </Highlight>
 
         <auro-header level="2" display="700">Icons illustrating visual state</auro-header>
-        <p>Mono-color icons support the following attributes to illustrate visual state. Emphasis, accent, disabled, error, success, and advisory</p>
+        <p>Mono-color icons support the following attributes to illustrate visual state. Primary, emphasis, accent, disabled, error, success, and advisory.</p>
+        <p>See the <auro-hyperlink href="/components/auro/icon/api" relative>API</auro-hyperlink>for details and use cases.</p>
         <div className="demo--inline exampleWrapper">
+          <auro-icon category="terminal" name="plane-diag-fill" primary></auro-icon>
           <auro-icon category="terminal" name="plane-diag-fill" emphasis></auro-icon>
           <auro-icon category="terminal" name="plane-diag-fill" accent></auro-icon>
           <auro-icon category="terminal" name="plane-diag-fill" disabled></auro-icon>
@@ -56,12 +58,45 @@ class AuroIcon extends Component {
           <auro-icon category="terminal" name="plane-diag-fill" advisory></auro-icon>
         </div>
         <Highlight className='html afterCode'>
-          {`<auro-icon category="terminal" name="plane-diag-fill" emphasis></auro-icon>
+          {`<auro-icon category="terminal" name="plane-diag-fill" primary></auro-icon>
+<auro-icon category="terminal" name="plane-diag-fill" emphasis></auro-icon>
 <auro-icon category="terminal" name="plane-diag-fill" accent></auro-icon>
 <auro-icon category="terminal" name="plane-diag-fill" disabled></auro-icon>
 <auro-icon category="terminal" name="plane-diag-fill" error></auro-icon>
 <auro-icon category="terminal" name="plane-diag-fill" success></auro-icon>
 <auro-icon category="terminal" name="plane-diag-fill" advisory></auro-icon>`}
+        </Highlight>
+
+        <auro-header level="2" display="700">Custom color</auro-header>
+        <p>Auro icon's by default inherit their color from the parent element. The auro-icon web component is no different. If there is a need to color an icon other than the pre-defined uses, simply address the <code>color</code> CSS property in a parent element.</p>
+
+        <div className="demo--inline exampleWrapper">
+          <span className="orange">
+            <auro-icon category="terminal" name="plane-diag-fill"></auro-icon>
+          </span>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<span className="orange">
+  <auro-icon category="terminal" name="plane-diag-fill"></auro-icon>
+</span>`}
+        </Highlight>
+
+        <auro-header level="2" display="700">Custom size</auro-header>
+        <p>Auro icon's by default are set to the value of the <code>--auro-size-lg</code> token. To customize your icon's size if needed, simply create a new CSS selector for the parent element and redefine its value. </p>
+
+        <div className="demo--inline exampleWrapper">
+          <span className="customIconSize">
+            <auro-icon category="terminal" name="plane-diag-fill" success></auro-icon>
+          </span>
+        </div>
+        <Highlight className='html afterCode'>
+          {`.customIconSize {
+  --auro-size-lg: 10rem;
+}
+
+<span className="customIconSize">
+  <auro-icon category="terminal" name="plane-diag-fill" success></auro-icon>
+</span>`}
         </Highlight>
 
 
