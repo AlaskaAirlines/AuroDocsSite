@@ -60,6 +60,16 @@ export default function SideNav(props) {
       ]
     },
     {
+      header: "CSS",
+      items: [
+        { linkTitle: "CSS Conventions", route: "/support/css-conventions", parent: true},
+        { linkTitle: "ShadyCSS", route: "/support/shadycss", parent: true },
+        { linkTitle: "CSS Custom Properties", route: "/support/custom-properties", parent: true },
+        { linkTitle: "WC Style Sheets", route: "/webcorestylesheets", parent: true },
+        // { linkTitle: "Touch support", route: "/support/isTouching", parent: true },
+      ]
+    },
+    {
       header: "Dev resources",
       items: [
         { linkTitle: "Release Dashboard", route: "/support/releases-summary", parent: true },
@@ -71,16 +81,6 @@ export default function SideNav(props) {
         // { linkTitle: "Babel Support", route: "/support/babelSupport" },
         // { linkTitle: "Tech overview", route: "/support/techDetails" },
         // { linkTitle: "why?", route: "/support/why" }
-      ]
-    },
-    {
-      title: "CSS",
-      items: [
-        { linkTitle: "CSS Conventions", route: "/support/css-conventions", parent: true},
-        { linkTitle: "ShadyCSS", route: "/support/shadycss", parent: true },
-        { linkTitle: "CSS Custom Properties", route: "/support/custom-properties", parent: true },
-        { linkTitle: "WC Style Sheets", route: "/webcorestylesheets", parent: true },
-        // { linkTitle: "Touch support", route: "/support/isTouching", parent: true },
       ]
     },
     {
