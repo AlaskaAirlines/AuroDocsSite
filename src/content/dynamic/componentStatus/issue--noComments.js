@@ -17,7 +17,7 @@ class IssueNoComments extends Component {
           <tr>
             <th>Issues for: {this.props.name}</th>
             <th>Labels</th>
-            <th>Release Status</th>
+            <th>Project column</th>
           </tr>
         </thead>
         <tbody>
