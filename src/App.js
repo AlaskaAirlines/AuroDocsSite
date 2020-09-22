@@ -370,8 +370,8 @@ function App() {
 
               {/* accordion */}
               <Route exact path="/components/auro/accordion/"><AuroAccordion /></Route>
-              <Route exact path="/components/auro/accordion/install"><AuroAccordionApi /></Route>
-              <Route exact path="/components/auro/accordion/api"><AuroAccordionInstall /></Route>
+              <Route exact path="/components/auro/accordion/api"><AuroAccordionApi /></Route>
+              <Route exact path="/components/auro/accordion/install"><AuroAccordionInstall /></Route>
 
               {/* icon */}
               <Route exact path="/components/auro/icon/"><AuroIcon /></Route>
