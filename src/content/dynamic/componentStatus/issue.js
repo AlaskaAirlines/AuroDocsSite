@@ -16,8 +16,7 @@ class Issue extends Component {
       weekday: "short",
       year: "numeric",
       month: "short",
-      day: "numeric",
-      timeZone: "UTC"
+      day: "numeric"
     };
 
     const then = new Date(dateData);

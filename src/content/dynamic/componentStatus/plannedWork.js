@@ -63,10 +63,10 @@ const backlogged = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}) {
+      repositories(first: 50) {
         nodes {
           name
-          issues(last: 20, orderBy: {field: CREATED_AT, direction: ASC}, states: OPEN, filterBy: {labels: "Status: Backlogged"}) {
+          issues(last: 50, orderBy: {field: COMMENTS, direction: DESC}, states: OPEN, filterBy: {labels: "Status: Backlogged"}) {
             nodes {
               title
               url
@@ -81,6 +81,11 @@ const backlogged = gql`
               comments(last: 1) {
                 nodes {
                   body
+                  createdAt
+                  author {
+                    avatarUrl(size: 50)
+                    login
+                  }
                 }
               }
               projectCards {
@@ -138,7 +143,7 @@ class PlannedWork extends Component {
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (
               issues.nodes.length > 0
-                ? <IssueNoComments key={name} name={name} issues={issues.nodes} />
+                ? <Issue key={name} name={name} issues={issues.nodes} />
                 : ''
             ));
           }}
