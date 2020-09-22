@@ -22,6 +22,12 @@ import "@alaskaairux/auro-dialog";
 import "@alaskaairux/auro-accordion";
 import "@alaskaairux/auro-accordion/dist/auro-accordion-group";
 
+// carousel
+import "@alaskaairux/auro-carousel";
+
+// pane
+import "@alaskaairux/auro-pane";
+
 // table
 import "@alaskaairux/auro-table/dist/auro-table";
 

@@ -99,6 +99,16 @@ import AuroButtonApi from './content/dynamic/button/api';
 import AuroButtonInstall from './content/dynamic/button/install';
 import Button from './content/dynamic/button/legacy'; // legacy
 
+// carousel
+import AuroCarousel from './content/dynamic/carousel/component';
+import AuroCarouselApi from './content/dynamic/carousel/api';
+import AuroCarouselInstall from './content/dynamic/carousel/install';
+
+// pane
+import AuroPane from './content/dynamic/pane/component';
+import AuroPaneApi from './content/dynamic/pane/api';
+import AuroPaneInstall from './content/dynamic/pane/install';
+
 // checkbox
 import AuroCheckbox from './content/dynamic/checkbox/checkbox';
 import AuroCheckboxApi from './content/dynamic/checkbox/api';
@@ -367,7 +377,9 @@ function App() {
               <Route exact path="/components/orion/inputtext/api"><InputTextApi /></Route>
 
               {/* carousel */}
-              <Route exact path="/components/auro/carousel/"><WipPage /></Route>
+              <Route exact path="/components/auro/carousel/"><AuroCarousel /></Route>
+              <Route exact path="/components/auro/carousel/api"><AuroCarouselApi /></Route>
+              <Route exact path="/components/auro/carousel/install"><AuroCarouselInstall /></Route>
 
               {/* accordion */}
               <Route exact path="/components/auro/accordion/"><AuroAccordion /></Route>
@@ -397,7 +409,9 @@ function App() {
               <Route exact path="/components/auro/menu/"><WipPage /></Route>
 
               {/* pane */}
-              <Route exact path="/components/auro/pane/"><WipPage /></Route>
+              <Route exact path="/components/auro/pane/"><AuroPane /></Route>
+              <Route exact path="/components/auro/pane/api"><AuroPaneApi /></Route>
+              <Route exact path="/components/auro/pane/install"><AuroPaneInstall /></Route>
 
               {/* Dev resources */}
               <Route exact path="/support/a11y"><A11yDocs /></Route> {/* not used */} {/* reevaluate content */}
