@@ -3,16 +3,15 @@ import { Nav } from './nav';
 import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
 import Issue from './issue';
-import IssueNoComments from './issue--noComments';
 
 const workInProgress = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 30) {
+      repositories(first: 50) {
         nodes {
           name
-          issues(last: 20, orderBy: {field: COMMENTS, direction: DESC}, states: OPEN, filterBy: {labels: "Status: Work In Progress"}) {
+          issues(first: 50, orderBy: {field: COMMENTS, direction: DESC}, states: OPEN, filterBy: {labels: "Status: Work In Progress"}) {
             nodes {
               title
               url
