@@ -44,6 +44,7 @@ class AuroCarousel extends Component {
           <auro-carousel label="Flight options">
             {days.map((day, idx) => (
               <auro-pane 
+                key={day}
                 date={`2020-10-${(day + 1).toString().padStart(2, 0)}`}
                 selected={this.state.selectedDay === idx ? true : undefined}
                 onClick={() => {this.setState({selectedDay: idx})}}>
