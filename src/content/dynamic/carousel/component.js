@@ -10,7 +10,7 @@ class AuroCarousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedDay: undefined
+      selectedDay: 3
     };
   }
 
@@ -53,21 +53,31 @@ class AuroCarousel extends Component {
         </div>
         <Highlight className='html afterCode'>
           {`<auro-carousel label="Flight options">
-  <auro-pane date="2020-10-01" onClick={() => {this.setState({selectedDay: 0})}}></auro-pane>
-  <auro-pane date="2020-10-02" onClick={() => {this.setState({selectedDay: 1})}}></auro-pane>
-  <auro-pane date="2020-10-03" onClick={() => {this.setState({selectedDay: 2})}}></auro-pane>
-  <auro-pane date="2020-10-04" onClick={() => {this.setState({selectedDay: 3})}}></auro-pane>
-  <auro-pane date="2020-10-05" onClick={() => {this.setState({selectedDay: 4})}}></auro-pane>
-  <auro-pane date="2020-10-06" onClick={() => {this.setState({selectedDay: 5})}}></auro-pane>
-  <auro-pane date="2020-10-07" onClick={() => {this.setState({selectedDay: 6})}}></auro-pane>
-  <auro-pane date="2020-10-08" onClick={() => {this.setState({selectedDay: 7})}}></auro-pane>
-  <auro-pane date="2020-10-09" onClick={() => {this.setState({selectedDay: 8})}}></auro-pane>
-  <auro-pane date="2020-10-10" onClick={() => {this.setState({selectedDay: 9})}}></auro-pane>
-  <auro-pane date="2020-10-11" onClick={() => {this.setState({selectedDay: 10})}}></auro-pane>
-  <auro-pane date="2020-10-12" onClick={() => {this.setState({selectedDay: 11})}}></auro-pane>
-  <auro-pane date="2020-10-13" onClick={() => {this.setState({selectedDay: 12})}}></auro-pane>
-  <auro-pane date="2020-10-14" onClick={() => {this.setState({selectedDay: 13)}}></auro-pane>
-</auro-carousel>`}
+  <auro-pane date="2020-10-01"></auro-pane>
+  <auro-pane date="2020-10-02"></auro-pane>
+  <auro-pane date="2020-10-03"></auro-pane>
+  <auro-pane date="2020-10-04" selected></auro-pane>
+  <auro-pane date="2020-10-05"></auro-pane>
+  <auro-pane date="2020-10-06"></auro-pane>
+  <auro-pane date="2020-10-07"></auro-pane>
+  <auro-pane date="2020-10-08"></auro-pane>
+  <auro-pane date="2020-10-09"></auro-pane>
+  <auro-pane date="2020-10-10"></auro-pane>
+  <auro-pane date="2020-10-11"></auro-pane>
+  <auro-pane date="2020-10-12"></auro-pane>
+  <auro-pane date="2020-10-13"></auro-pane>
+  <auro-pane date="2020-10-14"></auro-pane>
+</auro-carousel>
+
+<script>
+  const panes = document.querySelectorAll('auro-pane');
+  let selectedPane = document.querySelector('auro-pane[selected]');
+  panes.forEach(pane => pane.addEventListener('click', () => {
+    selectedPane.selected = false;
+    pane.selected = true;
+    selectedPane = pane;
+  }));
+</script>`}
         </Highlight>
 
         <auro-header level="2" display="700">Carousel of images</auro-header>
