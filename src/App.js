@@ -282,6 +282,7 @@ function App() {
               <Route exact path="/color/overview_legacy"><ColorOverviewLegacy /></Route>
 
               {/* Generator */}
+              <Route exact path="/generator"><GeneratorInstall /></Route>
               <Route exact path="/getting-started/developers/generator/install"><GeneratorInstall /></Route>
               <Route exact path="/getting-started/developers/generator/generator/api"><GeneratorApi /></Route>
               <Route exact path="/getting-started/developers/generator/getting-started"><GeneratorGettngStarted /></Route>
