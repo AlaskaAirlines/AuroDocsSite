@@ -8,6 +8,9 @@ import "@alaskaairux/ods-hyperlink";
 // alerts
 import "@alaskaairux/auro-alerts";
 
+// avatar
+import "@alaskaairux/auro-avatar";
+
 // button
 import "@alaskaairux/ods-button";
 import "@alaskaairux/auro-button";

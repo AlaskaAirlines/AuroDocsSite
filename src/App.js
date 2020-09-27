@@ -78,6 +78,11 @@ import AuroAccordion from './content/dynamic/accordion/component';
 import AuroAccordionApi from './content/dynamic/accordion/api';
 import AuroAccordionInstall from './content/dynamic/accordion/install';
 
+// Avatar
+import AuroAvatar from './content/dynamic/avatar/component';
+import AuroAvatarApi from './content/dynamic/avatar/api';
+import AuroAvatarInstall from './content/dynamic/avatar/install';
+
 // Dialog
 import AuroDialog from './content/dynamic/dialog/component';
 import AuroDialogApi from './content/dynamic/dialog/api';
@@ -385,6 +390,11 @@ function App() {
               <Route exact path="/components/auro/accordion/"><AuroAccordion /></Route>
               <Route exact path="/components/auro/accordion/api"><AuroAccordionApi /></Route>
               <Route exact path="/components/auro/accordion/install"><AuroAccordionInstall /></Route>
+
+              {/* avatar */}
+              <Route exact path="/components/auro/avatar/"><AuroAvatar /></Route>
+              <Route exact path="/components/auro/avatar/api"><AuroAvatarApi /></Route>
+              <Route exact path="/components/auro/avatar/install"><AuroAvatarInstall /></Route>
 
               {/* icon */}
               <Route exact path="/components/auro/icon/"><AuroIcon /></Route>
