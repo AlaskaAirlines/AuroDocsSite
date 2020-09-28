@@ -771,18 +771,17 @@ img[src*='shields.io'] {
 }
 
 
-// Avatar
+// Simple grid utility
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-.avatarDemo {
+.grid {
   display: inline-grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 1rem;
   width: 100%;
 }
 
-.avatarOndark {
-  color: white;
+.grid--4col {
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1rem;
 }
 
 // Badges
