@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
 import LinkIcons from 'components/linkIcons';
+import ContentExample from './contentExample.js';
+import LegalExample from './legal.js';
 import 'highlight.js/styles/github.css';
 
 class AuroDialog extends Component {
@@ -97,138 +99,280 @@ class AuroDialog extends Component {
 
         <p>It should be noted that the <code>footer</code> slot is reserved for the placement of action buttons.</p>
 
-        <auro-header level="2" display="700">Dialog (non-blocking)</auro-header>
 
-        <p>The following example illustrates a non-blocking dialog experience. This dialog will allow the user to click outside the dialog itself to close it. Click in the X icon and there are two buttons that close the dialog as well.</p>
+        {/* Standard Dialog examples */}
+        {/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */}
+
+        <auro-header level="2" display="700">Dialog size options (sm, md, default)</auro-header>
+
+        <p>The auro-dialog supports three different sizes. A default dialog is equal to the large size dialog. Using the <code>sm</code> and <code>md</code> attributes, the component supports these sizes for both mobile and desktop. </p>
+
+        <p>The size attribute effects the <code>width</code> of the desktop dialog. Its <code>height</code> is dictated by the content. On mobile, the <code>size</code> attribute effects the <code>maximum height</code> the dialog will use of the device screen. Its width will be 100%.</p>
 
         <div className="demo--inline exampleWrapper auro_containedButtons">
-          <auro-button onClick={() => this.toggleDialog('#demo1')}>Open Dialog</auro-button>
+          <auro-button onClick={() => this.toggleDialog('#defaultDialog')}>Open default dialog</auro-button>
+          <auro-button onClick={() => this.toggleDialog('#mediumDialog')}>Open medium dialog</auro-button>
+          <auro-button onClick={() => this.toggleDialog('#smallDialog')}>Open small dialog</auro-button>
         </div>
 
-        <auro-dialog id="demo1">
-          <span slot="header">Dialog (non-blocking)</span>
+        <auro-dialog id="defaultDialog">
+          <span slot="header">Default Dialog</span>
           <span slot="content">
-            <p>Cheesecake cheeseburger roquefort. Squirty cheese pepper jack caerphilly blue castello macaroni cheese rubber cheese melted cheese brie. Squirty cheese pecorino st. agur blue cheese rubber cheese cut the cheese melted cheese when the cheese comes out everybody's happy fromage. Babybel hard cheese cheeseburger cow lancashire swiss.</p>
-            <ul>
-              <li>Caerphilly croque monsieur fondue</li>
-              <li>Taleggio goat mascarpone cow manchego cheese and wine emmental cheese strings</li>
-              <li>Cheddar cheese and biscuits chalk and cheese</li>
-            </ul>
+            <ContentExample />
 
           </span>
           <span slot="footer">
             <div className="auro_containedButtons">
-              <auro-button onClick={() => this.toggleDialogClose('#demo1')}>Save</auro-button>
-              <auro-button secondary onClick={() => this.toggleDialogClose('#demo1')}>Cancel</auro-button>
+              <auro-button secondary onClick={() => this.toggleDialogClose('#defaultDialog')}>Close</auro-button>
+            </div>
+          </span>
+        </auro-dialog>
+
+        <auro-dialog id="mediumDialog" md>
+          <span slot="header">Medium Dialog</span>
+          <span slot="content">
+            <ContentExample />
+
+          </span>
+          <span slot="footer">
+            <div className="auro_containedButtons">
+              <auro-button secondary onClick={() => this.toggleDialogClose('#mediumDialog')}>Close</auro-button>
+            </div>
+          </span>
+        </auro-dialog>
+
+        <auro-dialog id="smallDialog" sm>
+          <span slot="header">Small Dialog</span>
+          <span slot="content">
+            <ContentExample />
+
+          </span>
+          <span slot="footer">
+            <div className="auro_containedButtons">
+              <auro-button secondary onClick={() => this.toggleDialogClose('#smallDialog')}>Close</auro-button>
             </div>
           </span>
         </auro-dialog>
 
         <Highlight className='html afterCode'>
           {`
-<auro-button onClick={() => this.toggleDialog('#demo1')}>Open Dialog</auro-button>
+<div className="demo--inline exampleWrapper auro_containedButtons">
+  <auro-button onClick={() => this.toggleDialog('#defaultDialog')}>Open default dialog</auro-button>
+  <auro-button onClick={() => this.toggleDialog('#mediumDialog')}>Open medium dialog</auro-button>
+  <auro-button onClick={() => this.toggleDialog('#smallDialog')}>Open small dialog</auro-button>
+</div>
 
-<auro-dialog id="demo1">
-  <span slot="header">Dialog (non-blocking)</span>
+<auro-dialog id="defaultDialog">
+  <span slot="header">Default Dialog</span>
   <span slot="content">
-    <p>Cheesecake cheeseburger roquefort. Squirty cheese pepper jack caerphilly blue castello macaroni cheese rubber cheese melted cheese brie. Squirty cheese pecorino st. agur blue cheese rubber cheese cut the cheese melted cheese when the cheese comes out everybody's happy fromage. Babybel hard cheese cheeseburger cow lancashire swiss.</p>
-    <ul>
-      <li>Caerphilly croque monsieur fondue</li>
-      <li>Taleggio goat mascarpone cow manchego cheese and wine emmental cheese strings</li>
-      <li>Cheddar cheese and biscuits chalk and cheese</li>
-    </ul>
+    <ContentExample />
+  </span>
+</auro-dialog>
 
+<auro-dialog id="mediumDialog" md>
+  <span slot="header">Medium Dialog</span>
+  <span slot="content">
+    <ContentExample />
+  </span>
+</auro-dialog>
+
+<auro-dialog id="smallDialog" sm>
+  <span slot="header">Small Dialog</span>
+  <span slot="content">
+    <ContentExample />
+  </span>
+</auro-dialog>`}
+        </Highlight>
+
+
+
+        {/* Modal Dialog examples */}
+        {/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */}
+
+        <auro-header level="2" display="700">Modal Dialog and size options (sm, md, default)</auro-header>
+
+        <p>The auro-dialog supports a modal dialog state that will lock a user into interacting with the modal dialog. To activate, use the <code>modal</code> attribute.</p>
+        <p>When using this state, the modal dialog must include a button action to dismiss the modal dialog as the closing icon will not be available and the user will not be able to click outside the modal dialog to dismiss. </p>
+
+        <div className="demo--inline exampleWrapper auro_containedButtons">
+          <auro-button onClick={() => this.toggleDialog('#defaultModalDialog')}>Open default modal</auro-button>
+          <auro-button onClick={() => this.toggleDialog('#mediumModalDialog')}>Open medium modal</auro-button>
+          <auro-button onClick={() => this.toggleDialog('#smallModalDialog')}>Open small modal</auro-button>
+        </div>
+
+        <auro-dialog id="defaultModalDialog" modal>
+          <span slot="header">Default Modal Dialog</span>
+          <span slot="content">
+            <ContentExample />
+          </span>
+          <span slot="footer">
+            <div className="auro_containedButtons">
+              <auro-button onClick={() => this.toggleDialogClose('#defaultModalDialog')}>OK
+                <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
+              </auro-button>
+            </div>
+          </span>
+        </auro-dialog>
+
+        <auro-dialog id="mediumModalDialog" md modal>
+          <span slot="header">Medium Dialog</span>
+          <span slot="content">
+            <ContentExample />
+          </span>
+          <span slot="footer">
+            <div className="auro_containedButtons">
+              <auro-button onClick={() => this.toggleDialogClose('#mediumModalDialog')}>OK
+                <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
+              </auro-button>
+            </div>
+          </span>
+        </auro-dialog>
+
+        <auro-dialog id="smallModalDialog" sm modal>
+          <span slot="header">Small Dialog</span>
+          <span slot="content">
+            <ContentExample />
+          </span>
+          <span slot="footer">
+            <div className="auro_containedButtons">
+              <auro-button onClick={() => this.toggleDialogClose('#smallModalDialog')}>OK
+                <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
+              </auro-button>
+            </div>
+          </span>
+        </auro-dialog>
+
+        <Highlight className='html afterCode'>
+          {`<div className="demo--inline exampleWrapper auro_containedButtons">
+  <auro-button onClick={() => this.toggleDialog('#defaultModalDialog')}>Open default modal</auro-button>
+  <auro-button onClick={() => this.toggleDialog('#mediumModalDialog')}>Open medium modal</auro-button>
+  <auro-button onClick={() => this.toggleDialog('#smallModalDialog')}>Open small modal</auro-button>
+</div>
+
+<auro-dialog id="defaultModalDialog" modal>
+  <span slot="header">Default Modal Dialog</span>
+  <span slot="content">
+    <ContentExample />
   </span>
   <span slot="footer">
     <div className="auro_containedButtons">
-      <auro-button onClick={() => this.toggleDialogClose('#demo1')}>Save</auro-button>
-      <auro-button secondary onClick={() => this.toggleDialogClose('#demo1')}>Cancel</auro-button>
+      <auro-button onClick={() => this.toggleDialogClose('#defaultModalDialog')}>Next
+        <auro-icon category="interface" name="chevron-right" emphasis onDark></auro-icon>
+      </auro-button>
+    </div>
+  </span>
+</auro-dialog>
+
+<auro-dialog id="mediumModalDialog" md modal>
+  <span slot="header">Medium Dialog</span>
+  <span slot="content">
+    <ContentExample />
+  </span>
+  <span slot="footer">
+    <div className="auro_containedButtons">
+      <auro-button onClick={() => this.toggleDialogClose('#mediumModalDialog')}>Next
+        <auro-icon category="interface" name="chevron-right" emphasis onDark></auro-icon>
+      </auro-button>
+    </div>
+  </span>
+</auro-dialog>
+
+<auro-dialog id="smallModalDialog" sm modal>
+  <span slot="header">Small Dialog</span>
+  <span slot="content">
+    <ContentExample />
+  </span>
+  <span slot="footer">
+    <div className="auro_containedButtons">
+      <auro-button onClick={() => this.toggleDialogClose('#smallModalDialog')}>Next
+        <auro-icon category="interface" name="chevron-right" emphasis onDark></auro-icon>
+      </auro-button>
     </div>
   </span>
 </auro-dialog>`}
         </Highlight>
 
-        <p>The following example illustrates a non-blocking dialog experience. This dialog will allow the user to click outside the dialog itself or click in the X icon to close.</p>
+
+
+
+
+
+        {/* Full Scale Dialog examples */}
+        {/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */}
+
+        <auro-header level="2" display="700">Full scale dialog</auro-header>
+
+        <p>The auro-dialog supports a <code>fullscale</code> attribute that will open the dialog window at full height of the screen allowing for easy reading and scrolling of large content.</p>
+        <p>the <code>fullscale</code> attribute also works with all other parts of the API to include <code>modal</code>, <code>sm</code>, and <code>md</code>.</p>
+
+        <p>Note: When attributes <code>sm</code> and <code>md</code> are used with <code>fullscale</code>,  these size constraints are over-written on mobile.</p>
 
         <div className="demo--inline exampleWrapper auro_containedButtons">
-          <auro-button onClick={() => this.toggleDialog('#demo2')}>Open Dialog</auro-button>
+          <auro-button onClick={() => this.toggleDialog('#defaultFullScaleDialog')}>Open fullscale dialog</auro-button>
+          <auro-button onClick={() => this.toggleDialog('#defaultFullScaleModal')}>Open fullscale  medium modal dialog</auro-button>
+          <auro-button onClick={() => this.toggleDialog('#defaultSmallFullScaleDialog')}>Open small fullscale dialog</auro-button>
         </div>
 
-        <auro-dialog id="demo2">
-          <span slot="header">Dialog (non-blocking)</span>
+        <auro-dialog id="defaultFullScaleDialog" fullscale>
+          <span slot="header">Default Full Scale Dialog</span>
           <span slot="content">
-            <p>Mozzarella gouda stinking bishop. Squirty cheese croque monsieur who moved my cheese fromage frais monterey jack fromage pepper jack mascarpone.</p>
-            <ul>
-              <li>Danish fontina when the cheese comes out everybody's happy fromage</li>
-              <li>Croque monsieur camembert de normandie cauliflower cheese cheese on toast</li>
-            </ul>
+            <LegalExample />
           </span>
         </auro-dialog>
 
-        <Highlight className='html afterCode'>
-          {`
-  <auro-button onClick={() => this.toggleDialog('#demo1')}>Open Dialog</auro-button>
-
-  <auro-dialog id="demo1">
-    <span slot="header">Dialog (non-blocking)</span>
-    <span slot="content">
-      <p>Mozzarella gouda stinking bishop. Squirty cheese croque monsieur who moved my cheese fromage frais monterey jack fromage pepper jack mascarpone.</p>
-      <ul>
-        <li>Danish fontina when the cheese comes out everybody's happy fromage</li>
-        <li>Croque monsieur camembert de normandie cauliflower cheese cheese on toast</li>
-      </ul>
-    </span>
-  </auro-dialog>`}
-        </Highlight>
-
-
-
-
-        <auro-header level="2" display="700">Modal Dialog (blocking)</auro-header>
-
-        <p>A modal dialog is used with the intent to restrict the actions of the user to the scope of the dialog. These scenarios are to be used with caution as this will trap the user within the experience. A <code>button</code>, or other element with a close action must be provided to allow the user to dismiss the modal dialog.</p>
-
-        <p>To create a modal dialog, use the <code>modal</code> attribute on the dialog component.</p>
-
-        <div className="demo--inline exampleWrapper auro_containedButtons">
-          <auro-button onClick={() => this.toggleDialog('#demo3')}>Open Modal Dialog</auro-button>
-        </div>
-
-        <auro-dialog id="demo3" modal>
-          <span slot="header">Modal Dialog (blocking)</span>
+        <auro-dialog id="defaultFullScaleModal" fullscale modal md>
+          <span slot="header">Default Full Scale Medium Modal Dialog</span>
           <span slot="content">
-            <p>Cheddar cheese and biscuits chalk and cheese. Boursin cauliflower cheese bocconcini goat blue castello bocconcini fromage frais croque monsieur. Cheeseburger bavarian bergkase croque monsieur the big cheese monterey jack manchego halloumi lancashire. Cow airedale cheese on toast gouda.</p>
-            <ul>
-              <li>St. agur blue cheese cottage cheese mozzarella</li>
-              <li>Who moved my cheese cheesecake cheese triangles</li>
-              <li>Cheese strings lancashire halloumi</li>
-            </ul>
+            <LegalExample />
           </span>
           <span slot="footer">
-            <auro-button onClick={() => this.toggleDialogClose('#demo3')}>Next
-              <auro-icon category="interface" name="chevron-right" emphasis onDark></auro-icon>
-            </auro-button>
+            <div className="auro_containedButtons">
+              <auro-button onClick={() => this.toggleDialogClose('#defaultFullScaleModal')}>Agree
+                <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
+              </auro-button>
+            </div>
+          </span>
+        </auro-dialog>
+
+        <auro-dialog id="defaultSmallFullScaleDialog" fullscale sm>
+          <span slot="header">Small Full Scale Dialog</span>
+          <span slot="content">
+            <LegalExample />
           </span>
         </auro-dialog>
 
         <Highlight className='html afterCode'>
-          {`
-  <auro-button onClick={() => this.toggleDialog('#demo3')}>Blocking Diualog</auro-button>
+          {`<div className="demo--inline exampleWrapper auro_containedButtons">
+  <auro-button onClick={() => this.toggleDialog('#defaultFullScaleDialog')}>Open fullscale dialog</auro-button>
+  <auro-button onClick={() => this.toggleDialog('#defaultFullScaleModal')}>Open fullscale  medium modal dialog</auro-button>
+  <auro-button onClick={() => this.toggleDialog('#defaultSmallFullScaleDialog')}>Open small fullscale dialog</auro-button>
+</div>
 
-  <auro-dialog id="demo3" blocking>
-  <span slot="header">Blocking Dialog</span>
+<auro-dialog id="defaultFullScaleDialog" fullscale>
+  <span slot="header">Default Full Scale Dialog</span>
   <span slot="content">
-    <p>Cheddar cheese and biscuits chalk and cheese. Boursin cauliflower cheese bocconcini goat blue castello bocconcini fromage frais croque monsieur. Cheeseburger bavarian bergkase croque monsieur the big cheese monterey jack manchego halloumi lancashire. Cow airedale cheese on toast gouda.</p>
-    <ul>
-      <li>St. agur blue cheese cottage cheese mozzarella</li>
-      <li>Who moved my cheese cheesecake cheese triangles</li>
-      <li>Cheese strings lancashire halloumi</li>
-    </ul>
+    <LegalExample />
+  </span>
+</auro-dialog>
+
+<auro-dialog id="defaultFullScaleModal" fullscale modal md>
+  <span slot="header">Default Full Scale Medium Modal Dialog</span>
+  <span slot="content">
+    <LegalExample />
   </span>
   <span slot="footer">
-    <auro-button onClick={() => this.toggleDialogClose('#demo3')}>Next
-      <auro-icon category="interface" name="chevron-right" emphasis onDark></auro-icon>
-    </auro-button>
+    <div className="auro_containedButtons">
+      <auro-button onClick={() => this.toggleDialogClose('#defaultFullScaleModal')}>Agree
+        <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
+      </auro-button>
+    </div>
+  </span>
+</auro-dialog>
+
+<auro-dialog id="defaultSmallFullScaleDialog" fullscale sm>
+  <span slot="header">Small Full Scale Dialog</span>
+  <span slot="content">
+    <LegalExample />
   </span>
 </auro-dialog>`}
         </Highlight>
