@@ -5,6 +5,7 @@
   "dependencies": {
     "@alaskaairux/auro-accordion": "^1.0.0",
     "@alaskaairux/auro-alerts": "^1.1.0",
+    "@alaskaairux/auro-avatar": "^1.0.0",
     "@alaskaairux/auro-button": "^5.1.2",
     "@alaskaairux/auro-carousel": "^1.0.0",
     "@alaskaairux/auro-checkbox": "^1.1.1",
