@@ -36,17 +36,6 @@ class AuroAvatar extends Component {
           {`<auro-avatar></auro-avatar>`}
         </Highlight>
 
-        {/* <auro-header level="2" display="700">Component shapes</auro-header>
-        <p>Choose the <code>circle</code> attribute for shape options.</p>
-        <div className="demo--inline exampleWrapper avatarDemo">
-          <auro-avatar></auro-avatar>
-          <auro-avatar circle></auro-avatar>
-        </div>
-        <Highlight className='html afterCode'>
-          {`<auro-avatar></auro-avatar>
-<auro-avatar circle></auro-avatar>`}
-        </Highlight> */}
-
         <auro-header level="2" display="700">Component size option</auro-header>
         <p>The auro-avatar component supports a <code>sm</code> avatar size.</p>
         <div className="demo--inline exampleWrapper avatarDemo">
@@ -56,52 +45,6 @@ class AuroAvatar extends Component {
           {`<auro-avatar sm></auro-avatar>`}
         </Highlight>
 
-        {/* <auro-header level="2" display="700">Custom icon avatars</auro-header>
-        <p>Using the <code>slot</code> element, the auro-avatar supports inserting a custom icon with the auro-icon component.</p>
-        <div className="demo--inline exampleWrapper avatarDemo">
-          <auro-avatar circle>
-            <auro-icon category="in-flight" name="wifi"></auro-icon>
-          </auro-avatar>
-          <auro-avatar circle sm>
-            <auro-icon category="interface" name="accessibility"></auro-icon>
-          </auro-avatar>
-        </div>
-        <Highlight className='html afterCode'>
-          {`<auro-avatar circle>
-  <auro-icon category="in-flight" name="wifi"></auro-icon>
-</auro-avatar>
-<auro-avatar circle sm>
-  <auro-icon category="interface" name="accessibility"></auro-icon>
-</auro-avatar>`}
-        </Highlight> */}
-
-        {/* <auro-header level="2" display="700">Initials</auro-header>
-        <p>For users to display personalization with their initials, use the <code>slot</code> to enter the characters.</p>
-        <div className="demo--inline exampleWrapper avatarDemo">
-          <auro-avatar circle>SJ</auro-avatar>
-          <auro-avatar circle sm>JS</auro-avatar>
-        </div>
-        <Highlight className='html afterCode'>
-          {`<auro-avatar circle>SJ</auro-avatar>
-<auro-avatar circle sm>JS</auro-avatar>`}
-        </Highlight> */}
-
-        {/* <auro-header level="2" display="700">Initials and icons on dark</auro-header>
-        <p>The auro-avatar component will inherit the color style from a parent element.</p>
-        <div className="demo--inline exampleWrapper--ondark avatarDemo avatarOndark">
-          <auro-avatar circle>
-            <auro-icon category="interface" name="location-stroke"></auro-icon>
-          </auro-avatar>
-          <auro-avatar circle sm>VH</auro-avatar>
-        </div>
-        <Highlight className='html afterCode'>
-          {`<div style="color: white">
-  <auro-avatar circle>
-    <auro-icon category="interface" name="location-stroke"></auro-icon>
-  </auro-avatar>
-  <auro-avatar circle sm>VH</auro-avatar>
-</div>`}
-        </Highlight> */}
 
         <auro-header level="2" display="700">Airport Codes</auro-header>
         <p>The auro-avatar supports auto generation of pre-defined images using the <code>code</code> attribute.</p>
@@ -123,6 +66,17 @@ class AuroAvatar extends Component {
         <Highlight className='html afterCode'>
           {`<auro-avatar img="https://bit.ly/3jaGMoE"></auro-avatar>
 <auro-avatar img="https://bit.ly/3jaGMoE" sm></auro-avatar>`}
+        </Highlight>
+
+        <auro-header level="2" display="700">Accessibility options</auro-header>
+        <p>The auro-avatar component is hidden from screen readers by default. The placement of altText using the  <code>alt</code> attribute in conjunction with the <code>ariaVisible</code> attribute will make the avatar visible to screen readers. </p>
+
+        <div className="demo--inline exampleWrapper avatarDemo">
+          <auro-avatar code="psp" ariaVisible alt="iconic image of Palm Springs, CA"></auro-avatar>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<auro-avatar code="psp" ariaVisible alt="iconic image of Palm Springs, CA"></auro-avatar>`}
         </Highlight>
 
 

@@ -3,7 +3,6 @@ import { Nav } from './nav';
 import Highlight from 'react-highlight';
 import LinkIcons from 'components/linkIcons';
 import ContentExample from './contentExample.js';
-import LegalExample from './legal.js';
 import 'highlight.js/styles/github.css';
 
 class AuroDialog extends Component {
@@ -24,12 +23,18 @@ class AuroDialog extends Component {
 
   toggleDialog = (elName) => {
     let dialog = document.querySelector(elName);
+    const html = document.querySelector('html');
+
+    html.style.overflow = 'hidden';
     dialog.removeAttribute("open");
     dialog.setAttribute("open", true);
   }
 
   toggleDialogClose = (elName) => {
     let dialog = document.querySelector(elName);
+    const html = document.querySelector('html');
+
+    html.style.overflow = '';
     dialog.removeAttribute("open");
   }
 
@@ -57,19 +62,28 @@ class AuroDialog extends Component {
 
         <p>Triggering the dialog relies on functions being installed. See the following example code that is installed into this demo.</p>
 
+        <p>Notice the use of <code>body.style.overflow = 'hidden';</code>. This is an a11y feature that will lock the background scroll when the dialog is open. These events need to be triggered for this to work. The auro-dialog component's built-in close feature for modal dialogs is also pre-configured to address this. </p>
+
+        <p>If for any reason this feature is unwanted, simple remove this reference and the dialog will scroll as expected. NOTE: This comes highly unrecommended.</p>
+
         <Highlight className='js afterCode'>
           {`
-  toggleDialog = (elName) => {
-    let dialog = document.querySelector(elName);
-    dialog.removeAttribute("open");
-    dialog.setAttribute("open", true);
-  }
+toggleDialog = (elName) => {
+  let dialog = document.querySelector(elName);
+  const html = document.querySelector('html');
 
-  toggleDialogClose = (elName) => {
-    let dialog = document.querySelector(elName);
-    dialog.removeAttribute("open");
-  }
+  html.style.overflow = 'hidden';
+  dialog.removeAttribute("open");
+  dialog.setAttribute("open", true);
+}
 
+toggleDialogClose = (elName) => {
+  let dialog = document.querySelector(elName);
+  const html = document.querySelector('html');
+
+  html.style.overflow = '';
+  dialog.removeAttribute("open");
+}
 `}
         </Highlight>
 
@@ -215,7 +229,7 @@ class AuroDialog extends Component {
         </auro-dialog>
 
         <auro-dialog id="mediumModalDialog" md modal>
-          <span slot="header">Medium Dialog</span>
+          <span slot="header">Medium Modal Dialog</span>
           <span slot="content">
             <ContentExample />
           </span>
@@ -229,7 +243,7 @@ class AuroDialog extends Component {
         </auro-dialog>
 
         <auro-dialog id="smallModalDialog" sm modal>
-          <span slot="header">Small Dialog</span>
+          <span slot="header">Small Modal Dialog</span>
           <span slot="content">
             <ContentExample />
           </span>
@@ -288,91 +302,6 @@ class AuroDialog extends Component {
         <auro-icon category="interface" name="chevron-right" emphasis onDark></auro-icon>
       </auro-button>
     </div>
-  </span>
-</auro-dialog>`}
-        </Highlight>
-
-
-
-
-
-
-        {/* Full Scale Dialog examples */}
-        {/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */}
-
-        <auro-header level="2" display="700">Full scale dialog</auro-header>
-
-        <p>The auro-dialog supports a <code>fullscale</code> attribute that will open the dialog window at full height of the screen allowing for easy reading and scrolling of large content.</p>
-        <p>the <code>fullscale</code> attribute also works with all other parts of the API to include <code>modal</code>, <code>sm</code>, and <code>md</code>.</p>
-
-        <p>Note: When attributes <code>sm</code> and <code>md</code> are used with <code>fullscale</code>,  these size constraints are over-written on mobile.</p>
-
-        <div className="demo--inline exampleWrapper auro_containedButtons">
-          <auro-button onClick={() => this.toggleDialog('#defaultFullScaleDialog')}>Open fullscale dialog</auro-button>
-          <auro-button onClick={() => this.toggleDialog('#defaultFullScaleModal')}>Open fullscale  medium modal dialog</auro-button>
-          <auro-button onClick={() => this.toggleDialog('#defaultSmallFullScaleDialog')}>Open small fullscale dialog</auro-button>
-        </div>
-
-        <auro-dialog id="defaultFullScaleDialog" fullscale>
-          <span slot="header">Default Full Scale Dialog</span>
-          <span slot="content">
-            <LegalExample />
-          </span>
-        </auro-dialog>
-
-        <auro-dialog id="defaultFullScaleModal" fullscale modal md>
-          <span slot="header">Default Full Scale Medium Modal Dialog</span>
-          <span slot="content">
-            <LegalExample />
-          </span>
-          <span slot="footer">
-            <div className="auro_containedButtons">
-              <auro-button onClick={() => this.toggleDialogClose('#defaultFullScaleModal')}>Agree
-                <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
-              </auro-button>
-            </div>
-          </span>
-        </auro-dialog>
-
-        <auro-dialog id="defaultSmallFullScaleDialog" fullscale sm>
-          <span slot="header">Small Full Scale Dialog</span>
-          <span slot="content">
-            <LegalExample />
-          </span>
-        </auro-dialog>
-
-        <Highlight className='html afterCode'>
-          {`<div className="demo--inline exampleWrapper auro_containedButtons">
-  <auro-button onClick={() => this.toggleDialog('#defaultFullScaleDialog')}>Open fullscale dialog</auro-button>
-  <auro-button onClick={() => this.toggleDialog('#defaultFullScaleModal')}>Open fullscale  medium modal dialog</auro-button>
-  <auro-button onClick={() => this.toggleDialog('#defaultSmallFullScaleDialog')}>Open small fullscale dialog</auro-button>
-</div>
-
-<auro-dialog id="defaultFullScaleDialog" fullscale>
-  <span slot="header">Default Full Scale Dialog</span>
-  <span slot="content">
-    <LegalExample />
-  </span>
-</auro-dialog>
-
-<auro-dialog id="defaultFullScaleModal" fullscale modal md>
-  <span slot="header">Default Full Scale Medium Modal Dialog</span>
-  <span slot="content">
-    <LegalExample />
-  </span>
-  <span slot="footer">
-    <div className="auro_containedButtons">
-      <auro-button onClick={() => this.toggleDialogClose('#defaultFullScaleModal')}>Agree
-        <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
-      </auro-button>
-    </div>
-  </span>
-</auro-dialog>
-
-<auro-dialog id="defaultSmallFullScaleDialog" fullscale sm>
-  <span slot="header">Small Full Scale Dialog</span>
-  <span slot="content">
-    <LegalExample />
   </span>
 </auro-dialog>`}
         </Highlight>
