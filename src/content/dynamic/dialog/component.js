@@ -221,7 +221,7 @@ toggleDialogClose = (elName) => {
           </span>
           <span slot="footer">
             <div className="auro_containedButtons">
-              <auro-button onClick={() => this.toggleDialogClose('#defaultModalDialog')}>OK
+              <auro-button onClick={() => this.toggleDialogClose('#defaultModalDialog')}>I understand
                 <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
               </auro-button>
             </div>
@@ -235,7 +235,7 @@ toggleDialogClose = (elName) => {
           </span>
           <span slot="footer">
             <div className="auro_containedButtons">
-              <auro-button onClick={() => this.toggleDialogClose('#mediumModalDialog')}>OK
+              <auro-button onClick={() => this.toggleDialogClose('#mediumModalDialog')}>I understand
                 <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
               </auro-button>
             </div>
@@ -249,7 +249,7 @@ toggleDialogClose = (elName) => {
           </span>
           <span slot="footer">
             <div className="auro_containedButtons">
-              <auro-button onClick={() => this.toggleDialogClose('#smallModalDialog')}>OK
+              <auro-button onClick={() => this.toggleDialogClose('#smallModalDialog')}>I understand
                 <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
               </auro-button>
             </div>
@@ -270,7 +270,7 @@ toggleDialogClose = (elName) => {
   </span>
   <span slot="footer">
     <div className="auro_containedButtons">
-      <auro-button onClick={() => this.toggleDialogClose('#defaultModalDialog')}>Next
+      <auro-button onClick={() => this.toggleDialogClose('#defaultModalDialog')}>I understand
         <auro-icon category="interface" name="chevron-right" emphasis onDark></auro-icon>
       </auro-button>
     </div>
@@ -284,7 +284,7 @@ toggleDialogClose = (elName) => {
   </span>
   <span slot="footer">
     <div className="auro_containedButtons">
-      <auro-button onClick={() => this.toggleDialogClose('#mediumModalDialog')}>Next
+      <auro-button onClick={() => this.toggleDialogClose('#mediumModalDialog')}>I understand
         <auro-icon category="interface" name="chevron-right" emphasis onDark></auro-icon>
       </auro-button>
     </div>
@@ -298,7 +298,7 @@ toggleDialogClose = (elName) => {
   </span>
   <span slot="footer">
     <div className="auro_containedButtons">
-      <auro-button onClick={() => this.toggleDialogClose('#smallModalDialog')}>Next
+      <auro-button onClick={() => this.toggleDialogClose('#smallModalDialog')}>I understand
         <auro-icon category="interface" name="chevron-right" emphasis onDark></auro-icon>
       </auro-button>
     </div>

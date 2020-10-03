@@ -60,12 +60,12 @@ class AuroAvatar extends Component {
         <auro-header level="2" display="700">Custom images</auro-header>
         <p>The auro-avatar supports placement of custom images using the <code>img</code> attribute.</p>
         <div className="demo--inline exampleWrapper avatarDemo">
-          <auro-avatar img="https://bit.ly/3jaGMoE"></auro-avatar>
-          <auro-avatar img="https://bit.ly/3jaGMoE" sm></auro-avatar>
+          <auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
+          <auro-avatar img="https://picsum.photos/200?random=1" sm></auro-avatar>
         </div>
         <Highlight className='html afterCode'>
-          {`<auro-avatar img="https://bit.ly/3jaGMoE"></auro-avatar>
-<auro-avatar img="https://bit.ly/3jaGMoE" sm></auro-avatar>`}
+          {`<auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
+<auro-avatar img="https://picsum.photos/200?random=1" sm></auro-avatar>`}
         </Highlight>
 
         <auro-header level="2" display="700">Accessibility options</auro-header>
