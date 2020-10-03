@@ -11,7 +11,8 @@ class AuroCarousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedDay: 3
+      selectedDay: 3,
+      anotherSelectedDay: 4
     };
   }
 
@@ -90,9 +91,9 @@ class AuroCarousel extends Component {
             {days.map((day, idx) => (
               <auro-pane
                 key={day}
-                date={`2020-01-${(day + 1).toString().padStart(2, 0)}`}
-                selected={this.state.selectedDay === idx ? true : undefined}
-                onClick={() => {this.setState({selectedDay: idx})}}>
+                date={`2021-10-${(day + 1).toString().padStart(2, 0)}`}
+                selected={this.state.anotherSelectedDay === idx ? true : undefined}
+                onClick={() => {this.setState({anotherSelectedDay: idx})}}>
               </auro-pane>
             ))}
           </auro-carousel>
