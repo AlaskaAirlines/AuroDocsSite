@@ -116,27 +116,27 @@ class AuroCarousel extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-carousel label="Images" scrollDistance="600">
             {images.map((image) => (
-              <img src={`https://picsum.photos/200?random=${image}`} alt={`Random image ${image}`} />
+              <img src={`https://picsum.photos/200?random=${image}`} alt={`Random insert ${image}`} />
             ))}
           </auro-carousel>
         </div>
         <Highlight className='html afterCode'>
           {`<auro-carousel label="Images" scrollDistance="600">
-  <img src="https://picsum.photos/200?random=0" alt="Random 0" />
-  <img src="https://picsum.photos/200?random=1" alt="Random 1" />
-  <img src="https://picsum.photos/200?random=2" alt="Random 2" />
-  <img src="https://picsum.photos/200?random=3" alt="Random 3" />
-  <img src="https://picsum.photos/200?random=4" alt="Random 4" />
-  <img src="https://picsum.photos/200?random=5" alt="Random 5" />
-  <img src="https://picsum.photos/200?random=6" alt="Random 6" />
-  <img src="https://picsum.photos/200?random=7" alt="Random 7" />
-  <img src="https://picsum.photos/200?random=8" alt="Random 8" />
-  <img src="https://picsum.photos/200?random=9" alt="Random 9" />
-  <img src="https://picsum.photos/200?random=10" alt="Random 10" />
+  <img src="https://picsum.photos/200?random=0" alt="Random insert 0" />
+  <img src="https://picsum.photos/200?random=1" alt="Random insert 1" />
+  <img src="https://picsum.photos/200?random=2" alt="Random insert 2" />
+  <img src="https://picsum.photos/200?random=3" alt="Random insert 3" />
+  <img src="https://picsum.photos/200?random=4" alt="Random insert 4" />
+  <img src="https://picsum.photos/200?random=5" alt="Random insert 5" />
+  <img src="https://picsum.photos/200?random=6" alt="Random insert 6" />
+  <img src="https://picsum.photos/200?random=7" alt="Random insert 7" />
+  <img src="https://picsum.photos/200?random=8" alt="Random insert 8" />
+  <img src="https://picsum.photos/200?random=9" alt="Random insert 9" />
+  <img src="https://picsum.photos/200?random=10" alt="Random insert 10" />
 
   ...
 
-  <img src="https://picsum.photos/200?random=99" alt="Random 99" />
+  <img src="https://picsum.photos/200?random=99" alt="Random insert 99" />
 </auro-carousel>`}
         </Highlight>
 
