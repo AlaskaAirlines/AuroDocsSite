@@ -46,9 +46,9 @@ class AuroDialog extends Component {
 
         <auro-header level="2" display="display">Dialog</auro-header>
 
-        <p>The auro-dialog component is an interactive component. The component is best used when there is a requirement that the user must be made aware of the content being shown..</p>
-        <p>The auro-dialog component also supports a modal (blocking) state where the user must interact with the content of the dialog in order to continue.</p>
-        <p>Auro holds the opinions of the <auro-hyperlink href="https://www.nngroup.com/articles/modal-nonmodal-dialog/" target="_blank">Nielsen Norman Group</auro-hyperlink> on dialogs and modal use to be true.</p>
+        <p>The auro-dialog component is an intrusive interactive component, not passive. The component is best used when there is a requirement the user be made aware of the content being shown, moving focus from the main content to the dialog content.</p>
+        <p>The auro-dialog component also supports a modal (blocking) state where the user must interact with the content of the dialog in order to continue. Passive dismissal of the content is not allowed. Users of this state must add a trigger for the user to move beyond this content.</p>
+        <p>Auro holds the opinions of the <auro-hyperlink href="https://www.nngroup.com/articles/modal-nonmodal-dialog/" target="_blank">Nielsen Norman Group</auro-hyperlink> on dialog and modal use to be true.</p>
 
         <auro-header level="2" display="700">Component use cases</auro-header>
 

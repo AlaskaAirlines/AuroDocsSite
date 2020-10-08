@@ -33,8 +33,7 @@ class AuroPopover extends Component {
 
         <p>The Auro Design System fully supports top and bottom-placement popovers. The following examples illustrate common popover uses followed up by code examples.</p>
         <p>The auro-popover element is meant to be used when the interaction and it's content is passive. A popover is not to be used for cases where the user must adjust their focus and acknowledge the presented content. For these cases, please see the <auro-hyperlink href="/components/auro/dialog" relative>auro-dialog</auro-hyperlink> element.</p>
-        <p>See <auro-hyperlink relative inline href="/components/auro/popover/install">install instructions</auro-hyperlink> for more information as how to install and full API for the <code>auro-popover</code> Auro base element.</p>
-        <p>Illustrated in this example is a stand-alone use of <code>auro-popover</code>.</p>
+        <p>See <auro-hyperlink relative inline href="/components/auro/popover/install">install instructions</auro-hyperlink> for more information as how to install and full API for the <code>auro-popover</code> element.</p>
 
         <auro-header level="3" display="800">Popover use cases</auro-header>
 
