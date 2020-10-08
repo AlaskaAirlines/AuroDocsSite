@@ -31,7 +31,8 @@ class AuroPopover extends Component {
 
         <auro-header level="2" display="display">Popovers</auro-header>
 
-        <p>The Auro Design System fully supports top and bottom-placement tooltips. The following examples illustrate common popover uses followed up by code examples.</p>
+        <p>The Auro Design System fully supports top and bottom-placement popovers. The following examples illustrate common popover uses followed up by code examples.</p>
+        <p>The auro-popover element is meant to be used when the interaction and it's content is passive. A popover is not to be used for cases where the user must adjust their focus and acknowledge the presented content. For these cases, please see the <auro-hyperlink href="/components/auro/dialog" relative>auro-dialog</auro-hyperlink> element.</p>
         <p>See <auro-hyperlink relative inline href="/components/auro/popover/install">install instructions</auro-hyperlink> for more information as how to install and full API for the <code>auro-popover</code> Auro base element.</p>
         <p>Illustrated in this example is a stand-alone use of <code>auro-popover</code>.</p>
 
@@ -39,9 +40,9 @@ class AuroPopover extends Component {
 
         <p>The <code>auro-popover</code> element should be used in situations where users may:</p>
         <ul>
-          <li>hover over an element to get clarification</li>
-          <li>provide definition to icons on hover</li>
-          <li>when helper text is required for only desktop users</li>
+          <li>interact with an element to get clarification on content offering</li>
+          <li>provide definition to iconic imagery</li>
+          <li>when helper text is required</li>
         </ul>
 
         <p>Auro popover allows two ways to layout the HTML. Please see the following examples. </p>
