@@ -46,10 +46,10 @@ class AuroIcon extends Component {
         </Highlight>
 
         <auro-header level="2" display="700">Icons illustrating visual state</auro-header>
-        <p>Mono-color icons support the following attributes to illustrate visual state. Primary, emphasis, accent, disabled, error, success, and advisory.</p>
+        <p>Mono-color icons support the following attributes to illustrate visual state. The <code>primary</code> attribute is assigned by default. Other attributes, <code>emphasis</code>, <code>accent</code>, <code>disabled</code>, <code>error</code>, <code>success</code>, and <code>advisory</code> are available.</p>
         <p>See the <auro-hyperlink href="/components/auro/icon/api" relative>API</auro-hyperlink>for details and use cases.</p>
         <div className="demo--inline exampleWrapper">
-          <auro-icon category="terminal" name="plane-diag-fill" primary></auro-icon>
+          <auro-icon category="terminal" name="plane-diag-fill"></auro-icon>
           <auro-icon category="terminal" name="plane-diag-fill" emphasis></auro-icon>
           <auro-icon category="terminal" name="plane-diag-fill" accent></auro-icon>
           <auro-icon category="terminal" name="plane-diag-fill" disabled></auro-icon>
@@ -58,7 +58,7 @@ class AuroIcon extends Component {
           <auro-icon category="terminal" name="plane-diag-fill" advisory></auro-icon>
         </div>
         <Highlight className='html afterCode'>
-          {`<auro-icon category="terminal" name="plane-diag-fill" primary></auro-icon>
+          {`<auro-icon category="terminal" name="plane-diag-fill"></auro-icon>
 <auro-icon category="terminal" name="plane-diag-fill" emphasis></auro-icon>
 <auro-icon category="terminal" name="plane-diag-fill" accent></auro-icon>
 <auro-icon category="terminal" name="plane-diag-fill" disabled></auro-icon>
@@ -66,38 +66,115 @@ class AuroIcon extends Component {
 <auro-icon category="terminal" name="plane-diag-fill" success></auro-icon>
 <auro-icon category="terminal" name="plane-diag-fill" advisory></auro-icon>`}
         </Highlight>
+        <p>All compatible with <code>ondark</code> attribute.</p>
+        <div className="demo--inline exampleWrapper--ondark">
+          <auro-icon category="terminal" name="plane-diag-fill" ondark></auro-icon>
+          <auro-icon category="terminal" name="plane-diag-fill" emphasis ondark></auro-icon>
+          <auro-icon category="terminal" name="plane-diag-fill" accent ondark></auro-icon>
+          <auro-icon category="terminal" name="plane-diag-fill" disabled ondark></auro-icon>
+          <auro-icon category="terminal" name="plane-diag-fill" error ondark></auro-icon>
+          <auro-icon category="terminal" name="plane-diag-fill" success ondark></auro-icon>
+          <auro-icon category="terminal" name="plane-diag-fill" advisory ondark></auro-icon>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<auro-icon category="terminal" name="plane-diag-fill" ondark></auro-icon>
+<auro-icon category="terminal" name="plane-diag-fill" emphasis ondark></auro-icon>
+<auro-icon category="terminal" name="plane-diag-fill" accent ondark></auro-icon>
+<auro-icon category="terminal" name="plane-diag-fill" disabled ondark></auro-icon>
+<auro-icon category="terminal" name="plane-diag-fill" error ondark></auro-icon>
+<auro-icon category="terminal" name="plane-diag-fill" success ondark></auro-icon>
+<auro-icon category="terminal" name="plane-diag-fill" advisory ondark></auro-icon>`}
+        </Highlight>
 
         <auro-header level="2" display="700">Custom color</auro-header>
-        <p>Auro icon's by default inherit their color from the parent element. The auro-icon web component is no different. If there is a need to color an icon other than the pre-defined uses, simply address the <code>color</code> CSS property in a parent element.</p>
+        <p>The auro-icon by default apply the <code>primary</code> selector for color application. This can be over written using the defined API listed above. Custom colors are also allowed when using the <code>customColor</code> attribute and a parent element with a color setting.</p>
 
         <div className="demo--inline exampleWrapper">
           <span className="orange">
-            <auro-icon category="terminal" name="plane-diag-fill"></auro-icon>
+            <auro-icon category="terminal" name="plane-diag-fill" customColor></auro-icon>
           </span>
         </div>
         <Highlight className='html afterCode'>
-          {`<span className="orange">
-  <auro-icon category="terminal" name="plane-diag-fill"></auro-icon>
+          {`<span style="color:: orange;">
+  <auro-icon category="terminal" name="plane-diag-fill" customColor></auro-icon>
 </span>`}
         </Highlight>
 
         <auro-header level="2" display="700">Custom size</auro-header>
-        <p>Auro icon's by default are set to the value of the <code>--auro-size-lg</code> token. To customize your icon's size if needed, simply create a new CSS selector for the parent element and redefine its value. </p>
+        <p>Auro icon's by default are set to the value of the <code>--auro-size-lg</code> token. To customize the icon size, add the <code>customSize</code> attribute and adjust the <code>width</code> of the parent element. </p>
 
         <div className="demo--inline exampleWrapper">
-          <span className="customIconSize">
-            <auro-icon category="terminal" name="plane-diag-fill" success></auro-icon>
-          </span>
+          <div className="largeIcon">
+            <auro-icon category="terminal" name="plane-diag-fill" success customSize></auro-icon>
+          </div>
         </div>
         <Highlight className='html afterCode'>
-          {`.customIconSize {
-  --auro-size-lg: 10rem;
-}
-
-<span className="customIconSize">
-  <auro-icon category="terminal" name="plane-diag-fill" success></auro-icon>
-</span>`}
+          {`<div style="{width: 30rem;}">
+  <auro-icon category="terminal" name="plane-diag-fill" success customSize></auro-icon>
+</div>`}
         </Highlight>
+
+        <auro-header level="2" display="700">Alaska Airlines Logo</auro-header>
+
+        <p>The <code>auro-icon</code> component supports the auto placement of the Alaska Airlines logo without any additional setup. This feature supports two versions of the Alaska Logo, <code>alaska</code> and <code>alaskaTagline</code>.</p>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-icon alaska></auro-icon>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<auro-icon alaska></auro-icon>`}
+        </Highlight>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-icon alaskaTagline></auro-icon>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<auro-icon alaskaTagline></auro-icon>`}
+        </Highlight>
+
+        <p>Both logos support the <code>onDark</code> modifier.</p>
+
+        <div className="demo--inline exampleWrapper--ondark">
+          <auro-icon alaska onDark></auro-icon>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<auro-icon alaska onDark></auro-icon>`}
+        </Highlight>
+
+        <div className="demo--inline exampleWrapper--ondark">
+          <auro-icon alaskaTagline onDark></auro-icon>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<auro-icon alaskaTagline onDark></auro-icon>`}
+        </Highlight>
+
+        <p>The Alaska logos are fully scalable to support any design specification needed. Add the <code>customSize</code> attribute and adjust the <code>width</code> of the parent element. </p>
+
+        <div className="demo--inline exampleWrapper">
+          <div className="smallLogo">
+            <auro-icon alaskaTagline customSize></auro-icon>
+          </div>
+
+          <div className="largeLogo">
+            <auro-icon alaskaTagline customSize></auro-icon>
+          </div>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<div style="{width: 10rem;}">
+  <auro-icon alaskaTagline customSize></auro-icon>
+</div>
+
+<div style="{width: 30rem;}">
+  <auro-icon alaskaTagline customSize></auro-icon>
+</div>`}
+        </Highlight>
+
+
 
 
         <LinkIcons

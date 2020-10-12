@@ -867,6 +867,14 @@ img[src*='shields.io'] {
   color: orange;
 }
 
-.customIconSize {
-  --auro-size-lg: 10rem;
+.largeLogo {
+  width: 30rem;
+}
+
+.largeIcon {
+  width: 30rem;
+}
+
+.smallLogo {
+  width: 10rem;
 }
