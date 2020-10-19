@@ -104,6 +104,11 @@ import AuroButtonApi from './content/dynamic/button/api';
 import AuroButtonInstall from './content/dynamic/button/install';
 import Button from './content/dynamic/button/legacy'; // legacy
 
+// input
+import AuroInput from './content/dynamic/input/component';
+import AuroInputApi from './content/dynamic/input/api';
+import AuroInputInstall from './content/dynamic/input/install';
+
 // carousel
 import AuroCarousel from './content/dynamic/carousel/component';
 import AuroCarouselApi from './content/dynamic/carousel/api';
@@ -333,6 +338,11 @@ function App() {
               <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
               {/* Legacy */}
               <Route exact path="/components/orion/button"><Button /></Route>
+
+              {/* Auro Input */}
+              <Route exact path="/components/auro/input"><AuroInput /></Route>
+              <Route exact path="/components/auro/input/install"><AuroInputInstall /></Route>
+              <Route exact path="/components/auro/input/api"><AuroInputApi /></Route>
 
               {/* Auro Checkbox */}
               <Route exact path="/components/auro/checkbox"><AuroCheckbox /></Route>

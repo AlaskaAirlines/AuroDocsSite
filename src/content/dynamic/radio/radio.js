@@ -91,7 +91,7 @@ class AuroRadioButton extends Component {
         </Highlight>
 
         <h3 className="auro_heading auro_heading--500">Disabled Radio Group</h3>
-        <p>The auro-checkbox component is designed to work in concert with the auro-checkbox-group component. </p>
+        <p>The auro-checkbox component is designed to work in concert with the auro-checkbox-group component and supports a whole-group <code>disabled</code> mode.</p>
         <div className="demo--inline exampleWrapper">
           <auro-radio-group disabled>
             <span slot="legend">Form label goes here</span>
@@ -105,6 +105,25 @@ class AuroRadioButton extends Component {
   <span slot="legend">Form label goes here</span>
   <auro-radio id="radio10" label="Yes" name="radioDemoA" value="yes"></auro-radio>
   <auro-radio id="radio11" label="No" name="radioDemoA" value="no" checked></auro-radio>
+  <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
+</auro-radio-group>`}
+        </Highlight>
+
+        <h3 className="auro_heading auro_heading--500">Disabled Radio inputs </h3>
+        <p>The auro-checkbox supports individual <code>disabled</code> inputs. </p>
+        <div className="demo--inline exampleWrapper">
+          <auro-radio-group required>
+            <span slot="legend">Form label goes here</span>
+            <auro-radio id="radio10" label="Yes" name="radioDemoA" value="yes"></auro-radio>
+            <auro-radio id="radio11" label="No" name="radioDemoA" value="no" disabled></auro-radio>
+            <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
+          </auro-radio-group>
+        </div>
+        <Highlight className='html afterCode'>
+          {`<auro-radio-group required>
+  <span slot="legend">Form label goes here</span>
+  <auro-radio id="radio10" label="Yes" name="radioDemoA" value="yes"></auro-radio>
+  <auro-radio id="radio11" label="No" name="radioDemoA" value="no" disabled></auro-radio>
   <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
 </auro-radio-group>`}
         </Highlight>
