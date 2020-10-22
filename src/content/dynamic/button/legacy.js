@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 import closelg from '@alaskaairux/orion-icons/dist/icons/close-lg_es6.js';
 import chevronright from '@alaskaairux/orion-icons/dist/icons/interface/chevron-right_es6.js';
@@ -23,15 +22,8 @@ class Buttons extends Component {
         <Nav />
 
         <h1 className="auro_heading auro_heading--display">Orion Button</h1>
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button"
-          npm="https://www.npmjs.com/package/@alaskaairux/ods-button"
-          code="https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-button/blob/master/src/ods-button.js"
-          version={this.showVersion()}
-        />
-        <p>The Orion Design System fully supports a wide range of buttons styles and use cases. The following examples illustrate common button uses followed up by code examples.</p>
-        <p>See <auro-hyperlink relative inline href="/components/auro/button/install">install instructions</auro-hyperlink> for more information as how to install and the full API for the <code>ods-button</code> Orion base element.</p>
-        <p>Illustrated in this example is a stand-alone use of <code>ods-button</code>.</p>
+
+        <p class="content--deprecated">Deprecated: See <auro-hyperlink href="/components/auro/button" relative>auro-button</auro-hyperlink> for updated element use. </p>
 
         <h2 className="auro_heading auro_heading--800">Button use cases</h2>
 

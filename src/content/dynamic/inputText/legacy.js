@@ -17,19 +17,8 @@ class InputText extends Component {
       <section id="inputtext">
         <Nav />
 
+        <p class="content--deprecated">Deprecated: See <auro-hyperlink href="/components/auro/input" relative>auro-input</auro-hyperlink> for updated element use. </p>
         <h1 className="auro_heading auro_heading--display">ODS InputText</h1>
-
-        <div className="indention util_fontWeightLight util_type--secondary">
-          <p>InputText provides users a way to enter data into a form. The following examples illustrate common inputtext uses followed up by code examples.</p>
-          <p>See <ods-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-inputtext" target="_blank">instructions</ods-hyperlink> for more information as how to install and full API for the <code>ods-inputtext</code> Orion base element.</p>
-          <p>Illustrated in this example is a stand-alone use of <code>ods-inputtext</code>.</p>
-        </div>
-
-        <h2 className="auro_heading auro_heading--700">Install</h2>
-
-        <Highlight className='install'>
-          {`$npm i @alaskaairux/ods-inputtext`}
-        </Highlight>
 
         <h2 className="auro_heading auro_heading--500">Basic use, required by default</h2>
         <div className="exampleWrapper">

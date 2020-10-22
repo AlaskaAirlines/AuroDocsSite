@@ -50,11 +50,6 @@ class Options extends Component {
           <p>Illustrated in this example is a stand-alone use of <code>ods-ods-inputoptions</code>.</p>
         </div>
 
-        <h2 className="auro_heading auro_heading--700">Install</h2>
-        <Highlight className='install'>
-          {`$npm i @alaskaairux/ods-inputoptions`}
-        </Highlight>
-
         <p>Default radio buttons</p>
         <p className="dataSelected">You selected: <span>{this.state.radios}</span></p>
         <div className="exampleWrapper">
