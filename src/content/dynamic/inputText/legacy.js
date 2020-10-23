@@ -16,9 +16,11 @@ class InputText extends Component {
     return (
       <section id="inputtext">
         <Nav />
-
-        <p class="content--deprecated">Deprecated: See <auro-hyperlink href="/components/auro/input" relative>auro-input</auro-hyperlink> for updated element use. </p>
         <h1 className="auro_heading auro_heading--display">ODS InputText</h1>
+
+        <auro-alerts warning>
+          <p>Deprecated: See <auro-hyperlink href="/components/auro/input" relative>auro-input</auro-hyperlink> for updated element use. </p>
+        </auro-alerts>
 
         <h2 className="auro_heading auro_heading--500">Basic use, required by default</h2>
         <div className="exampleWrapper">

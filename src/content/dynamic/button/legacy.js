@@ -23,7 +23,10 @@ class Buttons extends Component {
 
         <h1 className="auro_heading auro_heading--display">Orion Button</h1>
 
-        <p class="content--deprecated">Deprecated: See <auro-hyperlink href="/components/auro/button" relative>auro-button</auro-hyperlink> for updated element use. </p>
+        <auro-alerts warning>
+          <p>Deprecated: See <auro-hyperlink href="/components/auro/button" relative>auro-button</auro-hyperlink> for updated element use. </p>
+        </auro-alerts>
+
 
         <h2 className="auro_heading auro_heading--800">Button use cases</h2>
 
