@@ -15,6 +15,10 @@ import Warningfilled from '-!svg-react-loader!@alaskaairux/icons/dist/icons/aler
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Warningstroke from '-!svg-react-loader!@alaskaairux/icons/dist/icons/alert/warning-stroke.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
+import Boarding from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/boarding.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import Elite from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/elite.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
 import Entertainment from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/entertainment.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Flightcancelled from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/flight-cancelled.svg'; 
@@ -246,6 +250,16 @@ import Roundtriparrows from '-!svg-react-loader!@alaskaairux/icons/dist/icons/te
           <h2 className="icon-category">in-flight</h2>
           <div className="iconsWrapper">
             
+            <div title="boarding.svg">
+              <Boarding />
+              <span>boarding.svg</span>
+            </div>
+          
+            <div title="elite.svg">
+              <Elite />
+              <span>elite.svg</span>
+            </div>
+          
             <div title="entertainment.svg">
               <Entertainment />
               <span>entertainment.svg</span>

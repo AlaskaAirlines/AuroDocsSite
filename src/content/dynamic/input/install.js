@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-input/master/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-input/main/README.md';
 
 class AuroAlertsInstall extends MarkdownPageWrapper {
 
