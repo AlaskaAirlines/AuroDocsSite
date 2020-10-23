@@ -54,17 +54,16 @@ class Repo extends Component {
         </td>
         <td className="auro_util_nowrap">
           {
-            this.props.issues.totalCount > 0
-              ? <a href={`https://github.com/AlaskaAirlines/${this.props.name}/issues`} target="_blank" className="noLinkUi" rel="noopener noreferrer">
-                  <div className="badge">
-                    <div className="title">Open Issues</div>
-                    <div className="data data--issues">{this.props.issues.totalCount}</div>
-                  </div>
-                </a>
-              : <div className="badge">
-                  <div className="title">Open Issues</div>
-                  <div className="data data--null">{this.props.issues.totalCount}</div>
-                </div>
+            <a href={`https://github.com/AlaskaAirlines/${this.props.name}/issues`} target="_blank" className="noLinkUi" rel="noopener noreferrer">
+              <div className="badge">
+                <div className="title">Open Issues</div>
+                {
+                  this.props.issues.totalCount > 0
+                  ? <div className="data data--issues">{this.props.issues.totalCount}</div>
+                  : <div className="data data--null">{this.props.issues.totalCount}</div>
+                }
+              </div>
+            </a>
           }
         </td>
         <td className="short">{this.props.description}</td>
