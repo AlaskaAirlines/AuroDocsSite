@@ -39,7 +39,7 @@ class AuroIcon extends Component {
         <auro-header level="2" display="700">Default component with a11y description</auro-header>
         <p>If assistive technologies are needed to read back a description of the icon, simply add content within the element that will be hidden from view, but read back by screen readers.</p>
         <div className="demo--inline exampleWrapper">
-          <auro-icon category="terminal" name="plane-diag-fill"></auro-icon>
+        <auro-icon category="terminal" name="plane-diag-fill">Icon: plane-diag-fill</auro-icon>
         </div>
         <Highlight className='html afterCode'>
           {`<auro-icon category="terminal" name="plane-diag-fill">Icon: plane-diag-fill</auro-icon>`}
