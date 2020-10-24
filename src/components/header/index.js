@@ -1,12 +1,17 @@
 import React from 'react';
 import './style.scss';
-import logo from '../../assets/logo.png';
 
 function Header() {
   return (
     <header className="siteHeader">
-      <a href="/">
-        <img src={logo} alt="Alaska | Auro Design System logo" />
+      <a href="/" className="headerLinkBox">
+        <div className="logoIcon">
+          <auro-icon alaskaTagline></auro-icon>
+        </div>
+        <div className="headerTitle">
+          <span className="headerTitle-title">Auro</span>
+          <span className="headerTitle-tagline">Design System</span>
+        </div>
       </a>
 
     </header>
