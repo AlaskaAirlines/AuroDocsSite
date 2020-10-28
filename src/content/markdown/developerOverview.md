@@ -49,10 +49,4 @@ See [WC Style Sheets](/webcorestylesheets) for all information related to use. A
 
 ### Icon Library
 
-The Icons package contains standard set of SVG icons that can be used with any web project.
-
-```
-$ npm i @alaskaairux/orion-icons -D
-```
-
-Further information can be found in the [icons](/icons/install) section.
+The [icons package](/icons/usage) contains standard set of SVG icons that can be used with any web project. For even easier use of Auro Icons, be sure to take a look at the [auro-icon](/components/auro/icon) web component.

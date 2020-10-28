@@ -1,4 +1,4 @@
-# Common definitions 
+# Common definitions
 
 In a design system there are many words that can be very confusing, such as _component_ and _element_ as they have broad understanding. Here we will define a few core phrases that you will see throughout this project.
 
@@ -49,14 +49,14 @@ Patterns are commonly used interfaces where the makeup is entirely of primitives
 
 A crucial property of a pattern is only the existence of design documentation to support a common use UI pattern.
 
-## Auro Experiences 
+## Auro Experiences
 
-So what happens when a pattern is used to create a thing? With a combination of Auro tooling and custom code, a pattern is used to create an experience. 
+So what happens when a pattern is used to create a thing? With a combination of Auro tooling and custom code, a pattern is used to create an experience. These experiences are commonly distributed via the Alaska Component Hanger project.
 
-An Auro experience can mean many different things and can be engineered in many different ways, e.g. web components, React or Svelte. What makes an experience specific to Auro is the use of the Auro Design System and its baseline tooling. Tokens, primitive components, components, web core styles, icons, and patterns all integrated with the Alaska Airline customer experience in mind. 
+An Auro experience can mean many different things and can be engineered in many different ways, e.g. web components, React or Svelte. What makes an experience specific to Auro is the use of the Auro Design System and its baseline tooling. Tokens, primitive components, components, web core styles, icons, and patterns all integrated with the Alaska Airline customer experience in mind.
 
-## CMS Modules 
+## CMS Modules
 
-CMS modules are one of the few design/development patterns that have a very specific use case and implementation. Modules, much like components, are a collection of data and design, but are coupled with the functionality specific to that of the CMS. 
+CMS modules are one of the few design/development patterns that have a very specific use case and implementation. Modules, much like components, are a collection of data and design, but are coupled with the functionality specific to that of the CMS.
 
-A module may be 100% specific to a content use case in the CMS, or it may be a wrapper for another Auro component or experience. 
+A module may be 100% specific to a content use case in the CMS, or it may be a wrapper for another Auro component or experience.

@@ -28,6 +28,11 @@ class Repo extends Component {
       <tr>
         <td className="auro_util_nowrap">
           <auro-hyperlink href={this.props.homepageUrl}>{this.props.name}</auro-hyperlink>
+          <div>
+            <small>
+              <auro-hyperlink href={`https://github.com/AlaskaAirlines/${this.props.name}/pulse`} target="_blank">Insights</auro-hyperlink>
+            </small>
+          </div>
         </td>
         <td className="auro_util_nowrap">
           { this.charGenerate() }
@@ -66,7 +71,9 @@ class Repo extends Component {
             </a>
           }
         </td>
-        <td className="short">{this.props.description}</td>
+        <td className="short">
+          {this.props.description}
+        </td>
       </tr>
     )
   }
