@@ -126,9 +126,21 @@ class AuroAlerts extends Component {
 </auro-alerts>`}
         </Highlight>
 
-        <auro-header level="3" display="500">a11y Alerts</auro-header>
+        <auro-header level="3" display="700">Fixed pixels</auro-header>
 
-        <h3 className="auro_heading auro_heading--500">Hidden visually and from screen readers</h3>
+        <p>There are scenarios where the styles of a component do not appear as intended due to a dependency on <code>16px</code> root font size. In order to address this, use the <code>fixed</code> feature to update the default <code>REM</code> values with fixed <code>px</code> values.</p>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-alerts warning fixed>This is warning message</auro-alerts>
+        </div>
+
+        <Highlight className='html afterCode'>
+          {`<auro-alerts warning fixed>This is warning message</auro-alerts>`}
+        </Highlight>
+
+        <auro-header level="3" display="700">a11y Alerts</auro-header>
+
+        <auro-header level="3" display="500">Hidden visually and from screen readers</auro-header>
         <div className="demo--inline exampleWrapper">
           <auro-alerts error hidden>This content will be hidden visually and from screen readers.</auro-alerts>
         </div>

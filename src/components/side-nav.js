@@ -9,6 +9,7 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Philosophy", route: "/philosophy", parent: true },
         { linkTitle: "Component status", route: "/component-status", parent: true },
+        { linkTitle: "Release Dashboard", route: "/support/releases-summary", parent: true },
         { linkTitle: "Auro Support", route: "/auro-support", parent: true },
       ]
     },
@@ -75,7 +76,6 @@ export default function SideNav(props) {
     {
       header: "Dev resources",
       items: [
-        { linkTitle: "Release Dashboard", route: "/support/releases-summary", parent: true },
         { linkTitle: "Automated testing", route: "/support/tests", parent: true },
         { linkTitle: "Browser Support", route: "/support/browsersSupport", parent: true },
         { linkTitle: "Polyfills", route: "/support/polyfills/focusvisible", parent: true},
