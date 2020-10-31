@@ -5,13 +5,6 @@ import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
 
-import wifi from '@alaskaairux/icons/dist/icons/in-flight/wifi_es6.js';
-import heartFilled from '@alaskaairux/icons/dist/icons/interface/heart-filled_es6.js';
-import arrowLeft from '@alaskaairux/icons/dist/icons/interface/arrow-left_es6.js';
-
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import Seat from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/seat.svg';
-
 class AuroButtons extends Component {
 
   constructor(props) {
@@ -114,37 +107,41 @@ class AuroButtons extends Component {
 
         <auro-header level="2" display="700">Icon support</auro-header>
 
-        <p>The auro button has a very simple interface for using icons from the <auro-hyperlink href="/icons/overview" relative>Auro Icons</auro-hyperlink> library. Using this API requires no additional SVG support in your development framework.</p>
+        <p>Adding icons to the auro-button component is as easy as nesting any other HTML. The <auro-hyperlink href="/components/auro/icon">auro-icon component</auro-hyperlink> has access to all the icons listed in the <auro-hyperlink href="/icons/usage">Auro Icons library</auro-hyperlink> for quick and easy use. </p>
+
+        <p>Be sure to use the <code>customcolor</code> attribute on the auro-icon component to allow colors set in your parent element to pass through to the icon.</p>
 
         <div className="demo--inline exampleWrapper auro_containedButtons">
-          <auro-button svgIconRight={wifi.svg}>Activate WiFi</auro-button>
-          <auro-button secondary svgIconLeft={arrowLeft.svg}>Previous action</auro-button>
-          <auro-button tertiary svgIconRight={heartFilled.svg}>Love this</auro-button>
+          <auro-button>
+            Activate WiFi
+            <auro-icon customcolor category="in-flight" name="wifi"></auro-icon>
+          </auro-button>
+          <auro-button secondary>
+            <auro-icon customcolor category="interface" name="arrow-left"></auro-icon>
+            Previous action
+          </auro-button>
+          <auro-button tertiary>
+            Love this ...
+            <auro-icon customcolor category="interface" name="heart-filled"></auro-icon>
+          </auro-button>
         </div>
 
         <Highlight className='html afterCode'>
-          {`import wifi from '@alaskaairux/icons/dist/icons/in-flight/wifi_es6.js';
-import heartFilled from '@alaskaairux/icons/dist/icons/interface/heart-filled_es6.js';
-import arrowLeft from '@alaskaairux/icons/dist/icons/interface/arrow-left_es6.js';
+          {`
+<auro-button>
+  Activate WiFi
+  <auro-icon customcolor category="in-flight" name="wifi"></auro-icon>
+</auro-button>
 
-<auro-button svgIconRight={wifi.svg}>Activate WiFi</auro-button>
-<auro-button secondary svgIconLeft={arrowLeft.svg}>Previous action</auro-button>
-<auro-button tertiary svgIconRight={heartFilled.svg}>Love this</auro-button>`}
-        </Highlight>
+<auro-button secondary>
+  <auro-icon customcolor category="interface" name="arrow-left"></auro-icon>
+  Previous action
+</auro-button>
 
-        <auro-header level="2" display="700">Icon support in slots with React</auro-header>
-
-        <p>In the use case that the icon is preferred to be added to the <code>slot</code> element, this is fully supported as well. This example illustrated this using the <code>svg-react-loader</code> npm.</p>
-
-        <div className="demo--inline exampleWrapper auro_containedButtons">
-          <auro-button><Seat /> Choose your new seat assignment</auro-button>
-        </div>
-
-        <Highlight className='html afterCode'>
-          {`// eslint-disable-next-line import/no-webpack-loader-syntax
-import Seat from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/seat.svg';
-
-<auro-button><Seat /> Choose your new seat assignment</auro-button>`}
+<auro-button tertiary>
+  Love this ...
+  <auro-icon customcolor category="interface" name="heart-filled"></auro-icon>
+</auro-button>`}
         </Highlight>
 
         <h2 className="auro_heading auro_heading--700">Auro Button - fluid</h2>
