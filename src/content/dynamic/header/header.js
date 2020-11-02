@@ -172,17 +172,17 @@ class AuroHeader extends Component {
           {`<auro-header level="3" display="700" color="var(--auro-color-border-active-on-light)">On the journey together</auro-header>`}
         </Highlight>
 
-        <auro-header level="3" display="600">Classic environment suport</auro-header>
-        <p>One of the challenges of using a design system is coping with legacy CSS that surrounds the new component. While web components are encapsulated, things like <code>font-size</code> will pierce the shadow DOM. To help combat this, the <code>auro-header</code> component supports a <code>type</code> feature. Setting <code>type=&quot;px&quot;</code> will over-ride the component&#39;s dependency on REM values and use pixel values instead. </p>
+        <auro-header level="3" display="600">Classic environment support</auro-header>
+        <p>One of the challenges of using a design system is coping with legacy CSS that surrounds the new component. While web components are encapsulated, things like <code>font-size</code> will pierce the shadow DOM. To help combat this, the <code>auro-header</code> component supports a <code>fixed</code> attribute. Setting <code>fixed</code> will over-ride the component&#39;s dependency on REM values and use pixel values instead. </p>
 
         <p>This feature should only to be used within environments where the REM values cannot be used. </p>
 
         <div className="demo--inline exampleWrapper">
-          <auro-header level="3" display="700" type="px">On the journey together</auro-header>
+          <auro-header level="3" display="700" fixed>On the journey together</auro-header>
         </div>
 
         <Highlight className='html afterCode'>
-          {`<auro-header level="3" display="700" type="px">On the journey together</auro-header>`}
+          {`<auro-header level="3" display="700" fixed>On the journey together</auro-header>`}
         </Highlight>
 
         <LinkIcons
