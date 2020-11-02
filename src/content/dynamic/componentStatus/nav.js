@@ -8,7 +8,8 @@ export class Nav extends Component {
       <div role="tablist" className="ods-tablist tabList">
         <NavLink role="tab" exact className="tab link" to={`/component-status`} activeClassName="is-active">Component Status</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/audit`} activeClassName="is-active">Audit</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/planned-work`} activeClassName="is-active">Planned Work</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/wip`} activeClassName="is-active">Work in Progress</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/help-wanted`} activeClassName="is-active">Help Wanted</NavLink>
       </div>
     )
   }

@@ -35,11 +35,14 @@ class Issue extends Component {
           </tr>
         </thead>
         <tbody>
-          {this.props.issues.map(({title, url, number, labels, projectCards, assignees, comments}) => (
+          {this.props.issues.map(({title, url, number, labels, assignees, comments}) => (
             <tr key={title}>
               <td className="auro_util_nowrap">
                 <div>
-                  <auro-hyperlink href={url} target="_blank">{title} #{number}</auro-hyperlink>
+                  <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                </div>
+                <div>
+                  <small> #{number}</small>
                 </div>
                 <div className="githubAvatar--wrapper">
                   <small>Assigned: </small>{assignees.nodes.map(({avatarUrl, name, id}) => (

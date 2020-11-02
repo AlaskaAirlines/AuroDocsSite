@@ -29,17 +29,18 @@ import VersionZero from './content/dynamic/epics/projectVersionZero';
 import UserResearch  from './content/dynamic/epics/projectUserResearch';
 import DocSiteStrategy from './content/dynamic/epics/projectDocSite';
 import PlannedWork from './content/dynamic/componentStatus/plannedWork';
+import HelpWanted from './content/dynamic/componentStatus/helpWanted';
 import ComponentStatus from './content/dynamic/componentStatus/statusView';
 import ComponentAudit from './content/dynamic/componentAudit/auditView';
 
 // Design to dev handoff process
-import DesignHandoffIndex from './content/dynamic/designHandoff/index';
-import DesignHandoffParent from './content/dynamic/designHandoff/parent';
-import DesignHandoffDev from './content/dynamic/designHandoff/development';
-import DesignHandoffSym from './content/dynamic/designHandoff/symbolize';
-import DesignHandoffReview from './content/dynamic/designHandoff/review';
-import DesignHandoffLabels from './content/dynamic/designHandoff/labels';
-import DesignHandoffClose from './content/dynamic/designHandoff/close';
+// import DesignHandoffIndex from './content/dynamic/designHandoff/index';
+// import DesignHandoffParent from './content/dynamic/designHandoff/parent';
+// import DesignHandoffDev from './content/dynamic/designHandoff/development';
+// import DesignHandoffSym from './content/dynamic/designHandoff/symbolize';
+// import DesignHandoffReview from './content/dynamic/designHandoff/review';
+// import DesignHandoffLabels from './content/dynamic/designHandoff/labels';
+// import DesignHandoffClose from './content/dynamic/designHandoff/close';
 
 // WC-Generator
 import GeneratorInstall from './content/dynamic/generator/install';
@@ -266,10 +267,32 @@ function App() {
               <Route exact path="/epics/user-research"><UserResearch /></Route>
               <Route exact path="/epics/doc-site-strategy"><DocSiteStrategy /></Route>
 
-              <Route exact path="/planned-work"><PlannedWork /></Route>
+              <Route exact path="/wip"><PlannedWork /></Route>
+              <Route exact path="/help-wanted"><HelpWanted /></Route>
               <Route exact path="/component-status"><ComponentStatus /></Route>
+              <Route exact path="/status"><ComponentStatus /></Route>
               <Route exact path="/audit"><ComponentAudit /></Route>
               <Route exact path="/ado-use"><UseDashboard /></Route>
+
+              {/* Direct links */}
+              <Route exact path="/status"><ComponentStatus /></Route>
+              <Route exact path="/accordion/"><AuroAccordion /></Route>
+              <Route exact path="/alerts"><AuroAlerts /></Route>
+              <Route exact path="/avatar/"><AuroAvatar /></Route>
+              <Route exact path="/button"><AuroButton /></Route>
+              <Route exact path="/carousel/"><AuroCarousel /></Route>
+              <Route exact path="/checkbox"><AuroCheckbox /></Route>
+              <Route exact path="/dialog/"><AuroDialog /></Route>
+              <Route exact path="/header"><AuroHeader /></Route>
+              <Route exact path="/hyperlink"><AuroHyperlink /></Route>
+              <Route exact path="/icon/"><AuroIcon /></Route>
+              <Route exact path="/input"><AuroInput /></Route>
+              <Route exact path="/pane/"><AuroPane /></Route>
+              <Route exact path="/popover"><AuroPopover /></Route>
+              <Route exact path="/radio"><AuroRadio /></Route>
+              <Route exact path="/table"><AuroTable /></Route>
+              <Route exact path="/toast/"><Toast /></Route>
+
 
               {/* Getting Started/developers */}
               <Route exact path="/getting-started/developers/overview"><GettingStartedDevsOverview /></Route>
@@ -285,13 +308,13 @@ function App() {
               <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
 
               {/* Desing to dev handoff process */}
-              <Route exact path="/getting-started/handoff"><DesignHandoffIndex /></Route>
+              {/* <Route exact path="/getting-started/handoff"><DesignHandoffIndex /></Route>
               <Route exact path="/getting-started/handoff/parent"><DesignHandoffParent /></Route>
               <Route exact path="/getting-started/handoff/development"><DesignHandoffDev /></Route>
               <Route exact path="/getting-started/handoff/symbolize"><DesignHandoffSym /></Route>
               <Route exact path="/getting-started/handoff/review"><DesignHandoffReview /></Route>
               <Route exact path="/getting-started/handoff/labels"><DesignHandoffLabels /></Route>
-              <Route exact path="/getting-started/handoff/close"><DesignHandoffClose /></Route>
+              <Route exact path="/getting-started/handoff/close"><DesignHandoffClose /></Route> */}
 
               {/* Color */}
               <Route exact path="/color/overview"><ColorOverview /></Route>
