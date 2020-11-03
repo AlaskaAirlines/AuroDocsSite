@@ -48,6 +48,12 @@ hr {
   }
 }
 
+.util_flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 footer,
 .wrapper > section {
   margin: var(--auro-size-md);
@@ -644,6 +650,20 @@ img[src*='shields.io'] {
 .auro_table--notes {
   @include auro_breakpoint--md {
     width: 40%;
+  }
+}
+
+.auro_table--spread {
+  @include auro_breakpoint--md {
+    width: 15%;
+
+    &:first-child {
+      width: 30%;
+    }
+
+    &:last-child {
+      width: 50%;
+    }
   }
 }
 

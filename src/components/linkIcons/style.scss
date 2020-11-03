@@ -1,5 +1,28 @@
 @import '../../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
 
+button.imgIcon {
+  all: unset;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: $color-brand-blue-atlas-base;
+    cursor: pointer;
+  }
+
+  &.focus-visible {
+    background-color: $color-brand-blue-atlas-base;
+
+    svg {
+      fill: $color-base-white;
+    }
+  }
+}
+
 .imgIcon {
   font-size: 0;
   display: flex;
