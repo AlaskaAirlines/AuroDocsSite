@@ -37,6 +37,17 @@ hr {
   margin: var(--auro-size-xxl) 0;
 }
 
+.util_wrap {
+  white-space: normal;
+}
+
+.util_hover {
+  &:hover {
+    cursor: pointer;
+    color: var(--auro-color-ui-hover-on-light);
+  }
+}
+
 footer,
 .wrapper > section {
   margin: var(--auro-size-md);

@@ -31,7 +31,7 @@ class Issue extends Component {
           <tr>
             <th className="auro_util_nowrap">Issues for: {this.props.name}</th>
             <th>Labels</th>
-            <th>Comments</th>
+            <th className="auro_table--notes">Comments</th>
           </tr>
         </thead>
         <tbody>
@@ -61,7 +61,7 @@ class Issue extends Component {
                   ))}
                 </div>
               </td>
-              <td>
+              <td className="auro_table--notes">
                 {comments.nodes.map(({body, createdAt}) => (
                   <div className="auro-markdown">
                     <ReactMarkdown source={body} />

@@ -14,6 +14,7 @@ const helpWanted = gql`
           issues(first: 50, orderBy: {field: COMMENTS, direction: DESC}, states: OPEN, filterBy: {labels: "help wanted"}) {
             nodes {
               title
+              body
               url
               number
               comments(last: 1) {
