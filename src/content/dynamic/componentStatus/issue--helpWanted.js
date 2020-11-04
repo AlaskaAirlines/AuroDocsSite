@@ -32,18 +32,18 @@ class HelpWanted extends Component {
     dialog.removeAttribute("open");
   }
 
-  humanDate(dateData) {
-    const standardOptions = {
-      weekday: "short",
-      year: "numeric",
-      month: "short",
-      day: "numeric"
-    };
+  // humanDate(dateData) {
+  //   const standardOptions = {
+  //     weekday: "short",
+  //     year: "numeric",
+  //     month: "short",
+  //     day: "numeric"
+  //   };
 
-    const then = new Date(dateData);
+  //   const then = new Date(dateData);
 
-    return then.toLocaleString('en-us', standardOptions);
-  }
+  //   return then.toLocaleString('en-us', standardOptions);
+  // }
 
   render() {
     return (
@@ -106,7 +106,9 @@ class HelpWanted extends Component {
 
                     {comments.nodes.map(({author}) => (
                       <img key={createdAt} src={author.avatarUrl} className="githubAvatar" alt="avatar" title={author.login} />
-                    ))}<small>{this.humanDate(createdAt)}</small>
+                    ))}<small>
+                      <auro-datetime utc={createdAt} weekday="long"></auro-datetime>
+                    </small>
                   </div>
                 ))}
               </td>

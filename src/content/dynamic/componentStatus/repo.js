@@ -4,19 +4,19 @@ let randomNumber = ''
 
 class Repo extends Component {
 
-  humanDate(dateData) {
-    const standardOptions = {
-      weekday: "short",
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-      timeZone: "UTC"
-    };
+  // humanDate(dateData) {
+  //   const standardOptions = {
+  //     weekday: "short",
+  //     year: "numeric",
+  //     month: "short",
+  //     day: "numeric",
+  //     timeZone: "UTC"
+  //   };
 
-    const then = new Date(dateData);
+  //   const then = new Date(dateData);
 
-    return then.toLocaleString('en-us', standardOptions);
-  }
+  //   return then.toLocaleString('en-us', standardOptions);
+  // }
 
   charGenerate() {
     const chars = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
@@ -47,7 +47,7 @@ class Repo extends Component {
                       </div>
                     </a>
                     <auro-popover for={randomNumber}>
-                      { this.humanDate(createdAt) }
+                      <auro-datetime utc={createdAt} weekday="long"></auro-datetime>
                     </auro-popover>
                   </div>
                 ))

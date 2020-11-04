@@ -3,20 +3,6 @@ import ReactMarkdown from 'react-markdown';
 
 class Issue extends Component {
 
-  humanDate(dateData) {
-    const standardOptions = {
-      weekday: "short",
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-      timeZone: "UTC"
-    };
-
-    const then = new Date(dateData);
-
-    return then.toLocaleString('en-us', standardOptions);
-  }
-
   render() {
     return (
       <div key={this.props.name}>
@@ -86,7 +72,9 @@ class Issue extends Component {
                 {comments.nodes.map(({body, createdAt}) => (
                   <div className="auro-markdown">
                     <ReactMarkdown source={body} />
-                    <small>{this.humanDate(createdAt)}</small>
+                    <small>
+                      <auro-datetime utc={createdAt} weekday="long"></auro-datetime>
+                    </small>
                   </div>
                 ))}
               </td>

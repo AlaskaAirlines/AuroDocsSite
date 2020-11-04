@@ -10,12 +10,12 @@ class Issue extends Component {
         <table className="auro_table auro_table--audit">
           <thead>
             <tr>
-              <th className="auro_util_nowrap">Component</th>
+              <th className="auro_util_nowrap">ComponentXXX</th>
               <th>Artwork</th>
               <th>UI Kit</th>
               <th>Code</th>
               <th>Docs</th>
-              <th className="auro_table--notesXXX">Notes</th>
+              <th>Notes</th>
             </tr>
           </thead>
           {this.props.issues.map(({title, url, labels, comments}) => (

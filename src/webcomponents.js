@@ -1,6 +1,9 @@
 
 // All Auro web components need to be listed here to be packaged properly for IE11 support
 
+// date/time
+import "@alaskaairux/auro-datetime";
+
 // hyperlink
 import "@alaskaairux/auro-hyperlink";
 import "@alaskaairux/ods-hyperlink";
