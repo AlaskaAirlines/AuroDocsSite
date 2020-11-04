@@ -51,6 +51,7 @@ export default function SideNav(props) {
         { linkTitle: "Button", route: '/components/auro/button', parent: true },
         { linkTitle: "Carousel", route: '/components/auro/carousel', parent: true },
         { linkTitle: "Checkbox", route: '/components/auro/checkbox', parent: true },
+        { linkTitle: "Date/Time", route: '/components/auro/datetime', parent: true },
         { linkTitle: "Dialog", route: '/components/auro/dialog', parent: true },
         { linkTitle: "Header", route: '/components/auro/header', parent: true },
         { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
