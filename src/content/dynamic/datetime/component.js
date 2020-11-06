@@ -25,7 +25,7 @@ class AuroDateTime extends Component {
 
         <auro-header level="2" display="display">Date/Time</auro-header>
 
-        <p>The new auro-datetime web components makes is really easy to add dates to your web app with a simple HTML API.  </p>
+        <p>The new auro-datetime web components makes it really easy to add dates to your web app with a simple HTML API.  </p>
 
         <auro-header level="2" display="700">Basic date</auro-header>
         <div className="demo--inline exampleWrapper">
