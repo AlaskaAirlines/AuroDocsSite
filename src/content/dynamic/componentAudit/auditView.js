@@ -11,7 +11,7 @@ const Actions = gql`
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
-          issues(filterBy: {labels: "Audit: Actions"}, first: 10) {
+          issues(filterBy: {labels: "Audit: Actions"}, first: 20) {
             nodes {
               title
               url
@@ -40,10 +40,10 @@ const Informational = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+      repositories(first: 30, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
-          issues(filterBy: {labels: "Audit: Informational"}, first: 10) {
+          issues(filterBy: {labels: "Audit: Informational"}, first: 20) {
             nodes {
               title
               url
@@ -75,7 +75,7 @@ const Structural = gql`
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
-          issues(filterBy: {labels: "Audit: Structural"}, first: 10) {
+          issues(filterBy: {labels: "Audit: Structural"}, first: 20) {
             nodes {
               title
               url
@@ -107,7 +107,7 @@ const Inputs = gql`
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
-          issues(filterBy: {labels: "Audit: Inputs"}, first: 10) {
+          issues(filterBy: {labels: "Audit: Inputs"}, first: 20) {
             nodes {
               title
               url
@@ -139,7 +139,7 @@ const Navigation = gql`
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
-          issues(filterBy: {labels: "Audit: Navigation"}, first: 10) {
+          issues(filterBy: {labels: "Audit: Navigation"}, first: 20) {
             nodes {
               title
               url
@@ -171,7 +171,7 @@ const Contextual = gql`
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
-          issues(filterBy: {labels: "Audit: Contextual"}, first: 10) {
+          issues(filterBy: {labels: "Audit: Contextual"}, first: 20) {
             nodes {
               title
               url
@@ -203,7 +203,7 @@ const Content = gql`
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
-          issues(filterBy: {labels: "Audit: Content"}, first: 10) {
+          issues(filterBy: {labels: "Audit: Content"}, first: 20) {
             nodes {
               title
               url
@@ -235,7 +235,7 @@ const ContentLayout = gql`
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
-          issues(filterBy: {labels: "Audit: Content Layouts"}, first: 10) {
+          issues(filterBy: {labels: "Audit: Content Layouts"}, first: 20) {
             nodes {
               title
               url
@@ -267,7 +267,7 @@ const PriorityAudit = gql`
       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
         nodes {
           name
-          issues(filterBy: {labels: "Priority: Audit"}, first: 10) {
+          issues(filterBy: {labels: "Priority: Audit"}, first: 20) {
             nodes {
               title
               url
