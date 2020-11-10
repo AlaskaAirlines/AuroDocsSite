@@ -773,6 +773,10 @@ img[src*='shields.io'] {
   &--wrapper {
     padding-top: var(--auro-size-xxs);
   }
+
+  &--xl {
+    width: var(--auro-size-xl);
+  }
 }
 
 // header color example

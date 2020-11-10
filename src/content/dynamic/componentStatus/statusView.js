@@ -15,6 +15,16 @@ const componentStatus = gql`
           url
           homepageUrl
           id
+          pullRequests(last: 1) {
+            nodes {
+              title
+              id
+              author {
+                login
+                avatarUrl(size: 30)
+              }
+            }
+          }
           issues(states: OPEN) {
             totalCount
           }
@@ -23,34 +33,6 @@ const componentStatus = gql`
               tagName
               createdAt
               id
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`
-
-const odsComponentStatus = gql`
-{
-  organization(login: "AlaskaAirlines") {
-    team(slug: "auro-team") {
-      repositories(query: "ods-", orderBy: {field: NAME, direction: ASC}) {
-        nodes {
-          name
-          description
-          url
-          homepageUrl
-          id
-          issues(states: OPEN) {
-            totalCount
-          }
-          releases(last: 1) {
-            nodes {
-              tagName
-              createdAt
-              url
             }
           }
         }
@@ -71,6 +53,16 @@ const generator = gql`
           url
           homepageUrl
           id
+          pullRequests(last: 1) {
+            nodes {
+              title
+              id
+              author {
+                login
+                avatarUrl(size: 30)
+              }
+            }
+          }
           issues(states: OPEN) {
             totalCount
           }
@@ -99,6 +91,16 @@ const tokens = gql`
           url
           homepageUrl
           id
+          pullRequests(last: 1) {
+            nodes {
+              title
+              id
+              author {
+                login
+                avatarUrl(size: 30)
+              }
+            }
+          }
           issues(states: OPEN) {
             totalCount
           }
@@ -127,6 +129,16 @@ const WebCoreStyleSheets = gql`
           url
           homepageUrl
           id
+          pullRequests(last: 1) {
+            nodes {
+              title
+              id
+              author {
+                login
+                avatarUrl(size: 30)
+              }
+            }
+          }
           issues(states: OPEN) {
             totalCount
           }
@@ -155,6 +167,16 @@ const Icons = gql`
           url
           homepageUrl
           id
+          pullRequests(last: 1) {
+            nodes {
+              title
+              id
+              author {
+                login
+                avatarUrl(size: 30)
+              }
+            }
+          }
           issues(states: OPEN) {
             totalCount
           }
@@ -195,6 +217,7 @@ class ComponentStatus extends Component {
               <th>Project</th>
               <th>Package</th>
               <th>Issues</th>
+              {/* <th>Contributor</th> */}
               <th className="short">Description</th>
             </tr>
           </thead>
@@ -204,8 +227,9 @@ class ComponentStatus extends Component {
                 if (loading) return <tr><td>Loading...</td></tr>;
                 if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
-                return data.organization.team.repositories.nodes.map(({ name, description, url, homepageUrl, issues, releases }) => (
-                  <Repo key={name}
+                return data.organization.team.repositories.nodes.map(({name, description, url, homepageUrl, id, issues, releases, pullRequests}) => (
+                  <Repo key={id}
+                    pullRequests={pullRequests}
                     name={name}
                     description={description}
                     url={url}
@@ -220,8 +244,9 @@ class ComponentStatus extends Component {
                 if (loading) return <tr><td></td></tr>;
                 if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
-                return data.organization.team.repositories.nodes.map(({ id, name, description, url, homepageUrl, issues, releases }) => (
+                return data.organization.team.repositories.nodes.map(({name, description, url, homepageUrl, id, issues, releases, pullRequests}) => (
                   <Repo key={id}
+                    pullRequests={pullRequests}
                     name={name}
                     description={description}
                     url={url}
@@ -236,8 +261,9 @@ class ComponentStatus extends Component {
                 if (loading) return <tr><td></td></tr>;
                 if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
-                return data.organization.team.repositories.nodes.map(({ id, name, description, url, homepageUrl, issues, releases }) => (
+                return data.organization.team.repositories.nodes.map(({name, description, url, homepageUrl, id, issues, releases, pullRequests}) => (
                   <Repo key={id}
+                    pullRequests={pullRequests}
                     name={name}
                     description={description}
                     url={url}
@@ -252,8 +278,9 @@ class ComponentStatus extends Component {
                 if (loading) return <tr><td></td></tr>;
                 if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
-                return data.organization.team.repositories.nodes.map(({ id, name, description, url, homepageUrl, issues, releases }) => (
+                return data.organization.team.repositories.nodes.map(({name, description, url, homepageUrl, id, issues, releases, pullRequests}) => (
                   <Repo key={id}
+                    pullRequests={pullRequests}
                     name={name}
                     description={description}
                     url={url}
@@ -274,6 +301,7 @@ class ComponentStatus extends Component {
               <th>Project</th>
               <th>Package</th>
               <th>Issues</th>
+              {/* <th>Contributor</th> */}
               <th>Description</th>
             </tr>
           </thead>
@@ -283,8 +311,9 @@ class ComponentStatus extends Component {
                 if (loading) return <tr><td></td></tr>;
                 if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
-                return data.organization.team.repositories.nodes.map(({ id, name, description, url, homepageUrl, issues, releases }) => (
+                return data.organization.team.repositories.nodes.map(({name, description, url, homepageUrl, id, issues, releases, pullRequests}) => (
                   <Repo key={id}
+                    pullRequests={pullRequests}
                     name={name}
                     description={description}
                     url={url}
@@ -297,9 +326,9 @@ class ComponentStatus extends Component {
           </tbody>
         </table>
 
-        <auro-header level="3" display="500">Legacy Orion components</auro-header>
+        {/* <auro-header level="3" display="500">Legacy Orion components</auro-header> */}
 
-        <table className="auro_table">
+        {/* <table className="auro_table">
         <thead>
             <tr>
               <th>Project</th>
@@ -314,8 +343,9 @@ class ComponentStatus extends Component {
                 if (loading) return <tr><td></td></tr>;
                 if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
-                return data.organization.team.repositories.nodes.map(({ id, name, description, url, homepageUrl, issues, releases }) => (
+                return data.organization.team.repositories.nodes.map(({name, description, url, homepageUrl, id, issues, releases, pullRequests}) => (
                   <Repo key={id}
+                    pullRequests={pullRequests}
                     name={name}
                     description={description}
                     url={url}
@@ -326,7 +356,7 @@ class ComponentStatus extends Component {
               }}
             </Query>
           </tbody>
-        </table>
+        </table> */}
       </section>
     )
   }

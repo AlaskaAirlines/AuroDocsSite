@@ -4,20 +4,6 @@ let randomNumber = ''
 
 class Repo extends Component {
 
-  // humanDate(dateData) {
-  //   const standardOptions = {
-  //     weekday: "short",
-  //     year: "numeric",
-  //     month: "short",
-  //     day: "numeric",
-  //     timeZone: "UTC"
-  //   };
-
-  //   const then = new Date(dateData);
-
-  //   return then.toLocaleString('en-us', standardOptions);
-  // }
-
   charGenerate() {
     const chars = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
     randomNumber = [...Array(10)].map(i=>chars[Math.random()*chars.length|0]).join``
@@ -47,7 +33,17 @@ class Repo extends Component {
                       </div>
                     </a>
                     <auro-popover for={randomNumber}>
-                      <auro-datetime utc={createdAt} weekday="long"></auro-datetime>
+                      <strong>Last release: </strong><auro-datetime utc={createdAt} weekday="long"></auro-datetime>
+                      {
+                        this.props.pullRequests.nodes.length !== 0
+                          ? this.props.pullRequests.nodes.map(({title, id, author}) => (
+                              <div>
+                                <strong>Last PR:</strong> {title}<br/>
+                                <strong>Author:</strong> <img className="githubAvatar" src={author.avatarUrl} alt={author.login} />{author.login}
+                              </div>
+                            ))
+                          : ''
+                      }
                     </auro-popover>
                   </div>
                 ))
@@ -72,7 +68,7 @@ class Repo extends Component {
           }
         </td>
         <td className="short">
-          {this.props.description}
+          <div>{this.props.description}</div>
         </td>
       </tr>
     )
