@@ -3,14 +3,12 @@ import { Nav } from './nav';
 import Highlight from 'react-highlight';
 import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
-// import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
 
 class AuroCheckbox extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      // docsBuildStatus: null,
       errorText: null
     }
   };
@@ -20,14 +18,6 @@ class AuroCheckbox extends Component {
     document.getElementById('unchecked').addEventListener('change', function() { console.log('change event fired') });
     document.getElementById('unchecked').addEventListener('input', function() { console.log('input event fired') });
   }
-
-  // componentWillMount() {
-  //   fetch(buildStatus).then((response) => response.text()).then((text) => {
-  //     this.setState({
-  //       docsBuildStatus: text
-  //     })
-  //   })
-  // }
 
   showVersion() {
     const pjson = require('../../../../package.json');

@@ -1,4 +1,4 @@
-@import '../../../node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
+@import "~@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
 
 button.imgIcon {
   all: unset;
@@ -10,15 +10,15 @@ button.imgIcon {
   align-items: center;
 
   &:hover {
-    background-color: $color-brand-blue-atlas-base;
+    background-color: var(--auro-color-brand-atlas-400);
     cursor: pointer;
   }
 
   &.focus-visible {
-    background-color: $color-brand-blue-atlas-base;
+    background-color: var(--auro-color-brand-atlas-400);
 
     svg {
-      fill: $color-base-white;
+      fill: var(--auro-color-base-white);
     }
   }
 }
@@ -35,30 +35,30 @@ button.imgIcon {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin-right: $size-scale-micro;
+    margin-right: var(--auro-size-xxs);
     transition: background-color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 
     &:hover {
-      background-color: $color-brand-blue-atlas-base;
+      background-color: var(--auro-color-brand-atlas-400);
     }
   }
 
   .focus-visible {
-    background-color: $color-brand-blue-atlas-base;
+    background-color: var(--auro-color-brand-atlas-400);
     outline: none;
 
     svg {
-      fill: $color-base-white;
+      fill: var(--auro-color-base-white);
     }
   }
 
   svg {
     width: 22px;
     height: 22px;
-    fill: $color-brand-blue-atlas-base;
+    fill: var(--auro-color-brand-atlas-400);
 
     &:hover {
-      fill: $color-base-white;
+      fill: var(--auro-color-base-white);
     }
   }
 

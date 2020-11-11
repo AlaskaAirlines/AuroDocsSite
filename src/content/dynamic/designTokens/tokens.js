@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Nav } from './nav';
 import LinkIcons from '../../../components/linkIcons';
 import _getTokens from "../../../functions/getTokens";
-import allTokens from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--allTokens.js';
+import allTokens from '@alaskaairux/design-tokens/dist/tokens/JSObject--allTokens.js';
 
 const animation = allTokens.animation;
 const breakpoint = allTokens.breakpoint;
@@ -36,11 +35,11 @@ class DeprecatedTokens extends Component {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/orion-design-tokens'];
+    const dependencies = pjson.dependencies['@alaskaairux/design-tokens'];
 
     console.log(allTokens)
 
-    return `@alaskaairux/orion-design-tokens: ${dependencies}`;
+    return `@alaskaairux/design-tokens: ${dependencies}`;
   };
 
   render() {
@@ -56,7 +55,7 @@ class DeprecatedTokens extends Component {
 
         <p>Tokens are stored as JSON data and can be output as CSS custom properties, Sass, native iOS and Android, among many others. Tokens are represented here as <auro-hyperlink target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">CSS custom properties</auro-hyperlink>.
 
-        See <Link className="link" to={`/getting-started/developers/design-tokens/install`}>Design Tokens API</Link> for a full listing currently supported output types.</p>
+        See <auro-hyperlink href="/getting-started/developers/design-tokens/install">Design Tokens API</auro-hyperlink> for a full listing currently supported output types.</p>
 
         <h3 className="auro_heading auro_heading--600">Animation</h3>
         <auro-tokens-list componentData={_getTokens(animation, [])}></auro-tokens-list>
@@ -136,9 +135,9 @@ class DeprecatedTokens extends Component {
         <auro-tokens-list componentData={_getTokens(unitless, [])}></auro-tokens-list>
 
         <LinkIcons
-          github="https://github.com/AlaskaAirlines/OrionDesignTokens"
-          npm="https://www.npmjs.com/package/@alaskaairux/orion-design-tokens"
-          code="https://github.com/AlaskaAirlines/OrionDesignTokens/tree/master/src"
+          github="https://github.com/AlaskaAirlines/AuroDesignTokens"
+          npm="https://www.npmjs.com/package/@alaskaairux/design-tokens"
+          code="https://github.com/AlaskaAirlines/AuroDesignTokens/tree/master/src"
           version={this.showVersion()}
         />
       </section>

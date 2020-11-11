@@ -5,7 +5,7 @@ export class Nav extends Component {
 
   render() {
     return (
-      <div role="tablist" className="ods-tablist tabList">
+      <div role="tablist" className="tabList">
         <NavLink role="tab" exact className="tab link" to={`/getting-started/developers/generator/install`} activeClassName="is-active">Install</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/getting-started/developers/generator/generator/api`} activeClassName="is-active">API</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/getting-started/developers/generator/getting-started`} activeClassName="is-active">Getting started</NavLink>

@@ -3,7 +3,6 @@ import { Nav } from './nav';
 import Highlight from 'react-highlight';
 import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
-// import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
 
 class AuroRadioButton extends Component {
 

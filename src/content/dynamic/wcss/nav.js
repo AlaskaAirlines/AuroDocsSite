@@ -5,7 +5,7 @@ export class Nav extends Component {
 
   render() {
     return (
-      <div role="tablist" className="ods-tablist tabList">
+      <div role="tablist" className="tabList">
         <NavLink role="tab" exact className="tab link" to={`/webcorestylesheets`} activeClassName="is-active">WCSS</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/webcorestylesheets/conventions`} activeClassName="is-active">Conventions</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/webcorestylesheets/features`} activeClassName="is-active">Features</NavLink>

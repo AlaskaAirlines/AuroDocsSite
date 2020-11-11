@@ -4,8 +4,8 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/ods-hyperlink/master/docs/auro-api.md';
-const secondaryContent = 'https://raw.githubusercontent.com/AlaskaAirlines/ods-hyperlink/master/docs/ods-api.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-hyperlink/master/docs/auro-api.md';
+const secondaryContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-hyperlink/master/docs/ods-api.md';
 
 class AuroButtonApi extends MarkdownPageWrapper {
 

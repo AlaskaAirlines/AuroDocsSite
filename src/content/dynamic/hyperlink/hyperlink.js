@@ -35,7 +35,7 @@ class Hyperlink extends Component {
         <auro-header>Auro Hyperlink</auro-header>
 
         <p>Hyperlinks form the backbone of how users navigate through a site or app. The following example illustrates how the <code>auro-hyperlink</code> Auro component can be used.</p>
-        <p>See <auro-hyperlink href="https://www.npmjs.com/package/@alaskaairux/ods-hyperlink" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>ods-hyperlink</code> Auro base element.</p>
+        <p>See <auro-hyperlink href="https://www.npmjs.com/package/@alaskaairux/auro-hyperlink" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>auro-hyperlink</code> Auro base element.</p>
         <p>The current state of <code>auro-hyperlink</code> is engineered to deprecate the ods- namespace and assist engineers to transition to Auro. </p>
 
         <auro-header level="2" display="700">Default States</auro-header>

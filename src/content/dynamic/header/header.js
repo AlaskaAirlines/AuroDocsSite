@@ -3,7 +3,6 @@ import { Nav } from './nav';
 import Highlight from 'react-highlight';
 import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
-import buildStatus from '@alaskaairux/ods-button/docs/BUILD_STATUS.md'
 
 class AuroHeader extends Component {
 
@@ -13,14 +12,6 @@ class AuroHeader extends Component {
       docsBuildStatus: null
     }
   };
-
-  componentWillMount() {
-    fetch(buildStatus).then((response) => response.text()).then((text) => {
-      this.setState({
-        docsBuildStatus: text
-      })
-    })
-  }
 
   showVersion() {
     const pjson = require('../../../../package.json');

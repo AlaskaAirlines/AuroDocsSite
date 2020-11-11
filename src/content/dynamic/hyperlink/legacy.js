@@ -20,7 +20,7 @@ class Hyperlink extends Component {
 
         <h1 className="auro_heading auro_heading--display">ODS Hyperlink</h1>
 
-        <div className="indention util_fontWeightLight util_type--secondary">
+        <div className="indention">
           <p>Hyperlinks form the backbone of how users navigate through a site or app. The following example illustrates how the <code>ods-hyperlink</code> Orion component can be used.</p>
           <p>See <ods-hyperlink inline href="https://www.npmjs.com/package/@alaskaairux/ods-hyperlink" target="_blank">instructions</ods-hyperlink> for more information as how to install and full API for the <code>ods-hyperlink</code> Orion base element.</p>
         </div>
@@ -48,7 +48,7 @@ class Hyperlink extends Component {
           }
         </Highlight>
 
-        <div className="indention util_fontWeightLight util_type--secondary">
+        <div className="indention">
           <p>Aside from the standard hyperlink use-case, the <code>ods-hyperlink</code> element is intended to be used for <code>button</code> situations as illustrated below where the 'link' UI is desired.</p>
           <p>In this scenario an <code>href</code> no longer can be applied to the element. But a click-event must be passed to the element. In this example clicking on the 'link' will produce a default dialog box.</p>
         </div>
@@ -63,7 +63,7 @@ class Hyperlink extends Component {
           }
         </Highlight>
 
-        <div className="indention util_fontWeightLight util_type--secondary">
+        <div className="indention">
           <p>In special cases, the <code>ods-hyperlink</code> element can be used for a CTA 'button' look when the button UI is desired, but the semantic use is an anchor tag.</p>
           <p>In this scenario, by passing in the <code>cta</code> flag, the hyperlink presents itself as a button. As illustrated, this will also work with the <code>target="_blank"</code> feature.</p>
         </div>
@@ -134,7 +134,7 @@ class Hyperlink extends Component {
           }
         </Highlight>
 
-        <div className="indention util_fontWeightLight util_type--secondary">
+        <div className="indention">
           <p>Aside from the standard hyperlink use-case, the <code>ods-hyperlink</code> element is intended to be used for <code>tab</code> situations as illustrated below where the 'tab' ui is desired.</p>
           <p>In this scenario an <code>href</code> no longer can be applied to the element. But a click-event must be passed to the element. In this example clicking on the 'link' will produce a default dialog box.</p>
           <p>When using the <code>role="tab"</code> style, it is required to wrap the tabs in a parent container with <code>role="tablist"</code> for a11y compliance. For Orion Design, you are required to apply the CSS class of <code>ods-tablist</code>. See <ods-hyperlink inline href="https://alaskaairlines.github.io/OrionWebCoreStyleSheets/#ods-utility-css-.ods-tablist" target="_blank">Orion Web Core Style Sheets</ods-hyperlink> docs for more information.</p>

@@ -5,7 +5,7 @@ import { Nav} from './nav.js';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
 
-import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSData--color.js'
+import data from '@alaskaairux/design-tokens/dist/tokens/JSData--color.js'
 import windows from 'assets/color/windows.png';
 import transparentColors from './transparent.md';
 

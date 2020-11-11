@@ -61,7 +61,7 @@ export default function SideNav(props) {
         { linkTitle: "Popover", route: '/components/auro/popover', parent: true },
         { linkTitle: "Radio Button", route: '/components/auro/radio', parent: true },
         { linkTitle: "Table", route: '/components/auro/table', parent: true },
-        { linkTitle: "Toast", route: '/components/orion/toast', parent: true }
+        // { linkTitle: "Toast", route: '/components/orion/toast', parent: true }
       ]
     },
     {

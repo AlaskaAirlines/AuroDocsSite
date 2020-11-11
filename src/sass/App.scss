@@ -1,24 +1,19 @@
 // Auro Support
 /* ------------------------ Auro Support ------------------------ */
-@import "~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
-
-// Orion support
-/* ------------------------ Orion Support ------------------------ */
-@import '~@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables';
-@import "~@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
-@import "~@alaskaairux/orion-web-core-style-sheets/dist/animation";
-@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/anchor-roleTab";
+@import "~@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
+@import "~@alaskaairux/webcorestylesheets/dist/breakpoints";
+@import "~@alaskaairux/webcorestylesheets/dist/animation";
+@import "~@alaskaairux/webcorestylesheets/dist/utilityMixins/anchor-roleTab";
 
 
+@import "~@alaskaairux/webcorestylesheets/dist/essentials";
 
 $prefix: true;
 $paragraph: true;
 $focus: true;
-@import "~@alaskaairux/orion-web-core-style-sheets/dist/essentials";
-@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/typeProperties";
-
-@import "~@alaskaairux/orion-design-tokens/dist/tokens/SassCustomPropertiesColorRGB";
-@import "~@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/displayProperties";
+@import "~@alaskaairux/webcorestylesheets/dist/utilityClasses/typeProperties";
+@import "~@alaskaairux/design-tokens/dist/tokens/SassCustomPropertiesColorRGB";
+@import "~@alaskaairux/webcorestylesheets/dist/utilityClasses/displayProperties";
 
 %see {
   outline: 2px solid red;
@@ -35,6 +30,10 @@ body {
 
 hr {
   margin: var(--auro-size-xxl) 0;
+}
+
+img {
+  max-width: 100%;
 }
 
 .util_wrap {
@@ -110,9 +109,9 @@ code {
 
 // ------ component demo UI -----------
 .html {
-  padding: $size-scale-med !important;
+  padding: $auro-size-md !important;
 
-  @include breakpoint-narrow {
+  @include auro-breakpoint--sm {
     padding: var(--auro-size-lg) var(--auro-size-xs) var(--auro-size-lg) var(--auro-size-lg) !important;
   }
 }
@@ -208,7 +207,7 @@ pre {
     width: calc(50% - var(--auro-size-xxs));
     height: 125px;
 
-    @include breakpoint-narrow {
+    @include auro-breakpoint--sm {
       width: 150px;
       height: 150px;
       padding: 1rem 1.5rem;
@@ -262,7 +261,7 @@ pre {
   padding-left: 0;
 
   li {
-    @include transition;
+    @include auro_transition;
   }
 }
 
@@ -403,7 +402,7 @@ pre {
 }
 
 
-// ----------- color transparancy view ------------------------
+// ----------- color transparency view ------------------------
 .transparencyBlock {
   line-height: 100px;
   text-align: center;
@@ -631,7 +630,7 @@ img[src*='shields.io'] {
   }
 }
 
-// Stickey headers
+// Sticky headers
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // Something to support in Auro table?
 .auro_table--audit {

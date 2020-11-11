@@ -108,7 +108,6 @@ import AuroAlertsInstall from './content/dynamic/alerts/install';
 import AuroButton from './content/dynamic/button/button';
 import AuroButtonApi from './content/dynamic/button/api';
 import AuroButtonInstall from './content/dynamic/button/install';
-import Button from './content/dynamic/button/legacy'; // legacy
 
 // input
 import AuroInput from './content/dynamic/input/component';
@@ -148,15 +147,6 @@ import AuroHyperlinkInstall from './content/dynamic/hyperlink/install';
 import AuroHyperlinkApi from './content/dynamic/hyperlink/api';
 import AuroHyperlinkA11y from './content/dynamic/hyperlink/a11y';
 import Hyperlink from './content/dynamic/hyperlink/legacy'; // legacy
-
-// input options
-import Options from './content/dynamic/inputOptions/legacy'; // legacy
-import OdsOptionsInstall from './content/dynamic/inputOptions/install';
-
-// input text
-import InputText from './content/dynamic/inputText/legacy';
-import InputTextInstall from './content/dynamic/inputText/install';
-import InputTextApi from './content/dynamic/inputText/api';
 
 // toast
 import Toast from './content/dynamic/toast/toast';
@@ -367,8 +357,6 @@ function App() {
               <Route exact path="/components/auro/button"><AuroButton /></Route>
               <Route exact path="/components/auro/button/install"><AuroButtonInstall /></Route>
               <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
-              {/* Legacy */}
-              <Route exact path="/components/orion/button"><Button /></Route>
 
               {/* Auro Input */}
               <Route exact path="/components/auro/input"><AuroInput /></Route>
@@ -413,19 +401,10 @@ function App() {
               <Route exact path="/components/auro/hyperlink/a11y"><AuroHyperlinkA11y /></Route>
               <Route exact path="/components/orion/hyperlink"><Hyperlink /></Route>
 
-              {/* inputOptions */}
-              <Route exact path="/components/orion/inputOptions/"><Options /></Route>
-              <Route exact path="/components/orion/inputOptions/install"><OdsOptionsInstall /></Route>
-
               {/* toast */}
               <Route exact path="/components/orion/toast/"><Toast /></Route>
               <Route exact path="/components/orion/toast/install"><ToastInstall /></Route>
               <Route exact path="/components/orion/toast/toaster"><ToastToaster /></Route>
-
-              {/* inputText */}
-              <Route exact path="/components/orion/inputtext/"><InputText /></Route>
-              <Route exact path="/components/orion/inputtext/install"><InputTextInstall /></Route>
-              <Route exact path="/components/orion/inputtext/api"><InputTextApi /></Route>
 
               {/* carousel */}
               <Route exact path="/components/auro/carousel/"><AuroCarousel /></Route>

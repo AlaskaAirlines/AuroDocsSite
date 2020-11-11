@@ -66,7 +66,7 @@ class Typography extends Component {
         <p>See <auro-hyperlink href="/components/auro/header" relative>auro-header component</auro-hyperlink> for an easy to use web componet.</p>
 
         <auro-header level="2" display="800">Headings</auro-header>
-        <div className="indention util_fontWeightLight util_type--secondary">
+        <div className="indention util_type--secondary">
           <p>Due to the combination of Orion selectors with Auro selectors, this demo is using the <code>$prefix</code> option to name-space the Auro selectors.</p>
           <p>See the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#scope-prefix-variable-prefix" target="_blank">WCSS docs for more info</auro-hyperlink>.</p>
         </div>

@@ -4,7 +4,7 @@ import CodeBlock from 'components/CodeBlock';
 import getTokens from "functions/getTokens"
 import overview from './personalityUsage.md'
 import { Nav} from './nav.js';
-import data from '@alaskaairux/orion-design-tokens/dist/tokens/JSData--color.js'
+import data from '@alaskaairux/design-tokens/dist/tokens/JSData--color.js'
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
 

@@ -260,7 +260,7 @@ class Colors extends Component {
 
 
         <h2 className="auro_heading auro_heading--600">Digital Personality</h2>
-        <p className="util_fontWeightLight">These digital personality tokens should be used within the <auro-hyperlink relative href="/color/digitalPersonality">Digital personality</auro-hyperlink> guidelines.</p>
+        <p>These digital personality tokens should be used within the <auro-hyperlink relative href="/color/digitalPersonality">Digital personality</auro-hyperlink> guidelines.</p>
 
         <h3 className="auro_heading auro_heading--400">Midnight</h3>
         <auro-swatch-list componentData={this._getColors(midnight, 'neutral', [])}></auro-swatch-list>
