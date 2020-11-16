@@ -17,6 +17,7 @@ const helpWanted = gql`
               body
               url
               number
+              createdAt
               labels(last: 10, orderBy: {field: NAME, direction: ASC}) {
                 nodes {
                   name
@@ -70,6 +71,7 @@ const typeBug = gql`
               body
               url
               number
+              createdAt
               labels(last: 10, orderBy: {field: NAME, direction: ASC}) {
                 nodes {
                   name

@@ -32,19 +32,6 @@ class HelpWanted extends Component {
     dialog.removeAttribute("open");
   }
 
-  // humanDate(dateData) {
-  //   const standardOptions = {
-  //     weekday: "short",
-  //     year: "numeric",
-  //     month: "short",
-  //     day: "numeric"
-  //   };
-
-  //   const then = new Date(dateData);
-
-  //   return then.toLocaleString('en-us', standardOptions);
-  // }
-
   render() {
     return (
       <table key={this.props.name} className="auro_table epicIssues">
@@ -56,7 +43,7 @@ class HelpWanted extends Component {
           </tr>
         </thead>
         <tbody>
-          {this.props.issues.map(({title, body, url, labels, number, assignees, comments}) => (
+          {this.props.issues.map(({title, body, url, labels, number, createdAt, assignees, comments}) => (
             <tr key={title}>
               <td>
                 <div>
@@ -70,6 +57,7 @@ class HelpWanted extends Component {
                   ))}
                 </div>
                 <div className="githubAvatar--wrapper">
+                  <small>Created at: <auro-datetime utc={createdAt} type="numeric"></auro-datetime></small><br/>
                   <small>Assigned: </small>{assignees.nodes.map(({avatarUrl, name, id}) => (
                     assignees.nodes.length > 0
                     ? <img key={id} src={avatarUrl} className="githubAvatar" alt={name} title={name} />
