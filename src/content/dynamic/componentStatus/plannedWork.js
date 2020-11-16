@@ -56,6 +56,58 @@ const workInProgress = gql`
 }
 `
 
+const priority = gql`
+{
+  organization(login: "AlaskaAirlines") {
+    team(slug: "auro-team") {
+      repositories(first: 50) {
+        nodes {
+          name
+          issues(first: 50, orderBy: {field: COMMENTS, direction: DESC}, states: OPEN, filterBy: {labels: "Status: Prioritized for work"}) {
+            nodes {
+              title
+              url
+              number
+              labels(last: 10, orderBy: {field: NAME, direction: ASC}) {
+                nodes {
+                  name
+                  color
+                  description
+                }
+              }
+              comments(last: 1) {
+                nodes {
+                  body
+                  createdAt
+                  author {
+                    avatarUrl(size: 50)
+                    login
+                  }
+                }
+              }
+              projectCards {
+                nodes {
+                  column {
+                    name
+                  }
+                }
+              }
+              assignees(last: 5) {
+                nodes {
+                  avatarUrl(size: 50)
+                  name
+                  id
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
 class PlannedWork extends Component {
   render() {
     return (
@@ -64,9 +116,25 @@ class PlannedWork extends Component {
         <Nav />
 
         <h1 className="auro_heading auro_heading--display">Work In Progress</h1>
-        <p>The following lists are of tools and components currently queued up on the Auro roadmap.</p>
+        <p>The following are issues that are currently being worked on.</p>
 
         <Query query={workInProgress}>
+          {({ loading, error, data }) => {
+            if (loading) return <p className="isLoading">Loading...</p>;
+            if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
+
+            return data.organization.team.repositories.nodes.map(({ name, issues }) => (
+              issues.nodes.length > 0
+                ? <Issue key={name} name={name} issues={issues.nodes} />
+                : ''
+            ));
+          }}
+        </Query>
+
+        <h2 className="auro_heading auro_heading--700">Prioritized for work</h2>
+        <p>The following are issues that are prioritized for work.</p>
+
+        <Query query={priority}>
           {({ loading, error, data }) => {
             if (loading) return <p className="isLoading">Loading...</p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
