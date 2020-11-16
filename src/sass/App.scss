@@ -91,6 +91,14 @@ code {
   color: var(--auro-color-brand-flamingo-500);
 }
 
+blockquote {
+  padding: var(--auro-size-xs) var(--auro-size-sm);
+  border-left: 2px solid var(--auro-color-base-neutral-500);
+  color: var(--auro-color-text-secondary-on-light);
+  margin: var(--auro-size-lg) var(--auro-size-xxs);
+  font-weight: 200;
+}
+
 .indention {
   padding-left: var(--auro-size-md);
   border-left: 1px solid var(--auro-color-base-neutral-500);

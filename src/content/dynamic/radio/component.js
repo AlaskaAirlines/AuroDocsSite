@@ -34,6 +34,10 @@ class AuroRadioButton extends Component {
 
         <p>The auro-radio component is designed to be a single component for the use of creating an input type radio with an associated label that meets all use case and accessibility standards.</p>
 
+        <blockquote>
+          Note: The examples below illustrate a single placed radio button, but any use of a radio button does require the <code>auro-radio-group</code> tags.
+        </blockquote>
+
         <h3 className="auro_heading auro_heading--500">Default radio button</h3>
         <div className="demo--inline exampleWrapper">
           <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
@@ -72,6 +76,11 @@ class AuroRadioButton extends Component {
 
         <h3 className="auro_heading auro_heading--500">Radio button Group</h3>
         <p>The auro-radio component is designed to work in concert with the auro-radio-group component. </p>
+
+        <blockquote>
+          Note: the use of the <code>slot="legend"</code> is required. This slot will populate the <code>fieldset</code>'s <code>legend</code> element. Ignoring this part of the API will break necessary accessibility features.
+        </blockquote>
+
         <div className="demo--inline exampleWrapper">
           <auro-radio-group required>
             <span slot="legend">Form label goes here</span>
@@ -91,6 +100,7 @@ class AuroRadioButton extends Component {
 
         <h3 className="auro_heading auro_heading--500">Disabled Radio Group</h3>
         <p>The auro-checkbox component is designed to work in concert with the auro-checkbox-group component and supports a whole-group <code>disabled</code> mode.</p>
+
         <div className="demo--inline exampleWrapper">
           <auro-radio-group disabled>
             <span slot="legend">Form label goes here</span>

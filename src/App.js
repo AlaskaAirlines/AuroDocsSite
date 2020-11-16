@@ -100,12 +100,12 @@ import AuroIconApi from './content/dynamic/icon/api';
 import AuroIconInstall from './content/dynamic/icon/install';
 
 // Alerts
-import AuroAlerts from './content/dynamic/alerts/alerts';
+import AuroAlerts from './content/dynamic/alerts/component';
 import AuroAlertsApi from './content/dynamic/alerts/api';
 import AuroAlertsInstall from './content/dynamic/alerts/install';
 
 // button
-import AuroButton from './content/dynamic/button/button';
+import AuroButton from './content/dynamic/button/component';
 import AuroButtonApi from './content/dynamic/button/api';
 import AuroButtonInstall from './content/dynamic/button/install';
 
@@ -125,12 +125,12 @@ import AuroPaneApi from './content/dynamic/pane/api';
 import AuroPaneInstall from './content/dynamic/pane/install';
 
 // checkbox
-import AuroCheckbox from './content/dynamic/checkbox/checkbox';
+import AuroCheckbox from './content/dynamic/checkbox/component';
 import AuroCheckboxApi from './content/dynamic/checkbox/api';
 import AuroCheckboxInstall from './content/dynamic/checkbox/install';
 
 // radio button
-import AuroRadio from './content/dynamic/radio/radio';
+import AuroRadio from './content/dynamic/radio/component';
 import AuroRadioApi from './content/dynamic/radio/api';
 import AuroRadioInstall from './content/dynamic/radio/install';
 
@@ -154,17 +154,17 @@ import ToastInstall from './content/dynamic/toast/install';
 import ToastToaster from './content/dynamic/toast/toaster';
 
 // Table
-import AuroTable from './content/dynamic/table/table';
+import AuroTable from './content/dynamic/table/component';
 import AuroTableApi from './content/dynamic/table/api';
 import AuroTableInstall from './content/dynamic/table/install';
 
 // Header
-import AuroHeader from './content/dynamic/header/header';
+import AuroHeader from './content/dynamic/header/component';
 import AuroHeaderApi from './content/dynamic/header/api';
 import AuroHeaderInstall from './content/dynamic/header/install';
 
 // popover
-import AuroPopover from './content/dynamic/popover/popover';
+import AuroPopover from './content/dynamic/popover/component';
 import AuroPopoverApi from './content/dynamic/popover/api';
 import AuroPopoverInstall from './content/dynamic/popover/install';
 
