@@ -114,6 +114,11 @@ import AuroInput from './content/dynamic/input/component';
 import AuroInputApi from './content/dynamic/input/api';
 import AuroInputInstall from './content/dynamic/input/install';
 
+// loader
+import AuroLoader from './content/dynamic/loader/component';
+import AuroLoaderApi from './content/dynamic/loader/api';
+import AuroLoaderInstall from './content/dynamic/loader/install';
+
 // carousel
 import AuroCarousel from './content/dynamic/carousel/component';
 import AuroCarouselApi from './content/dynamic/carousel/api';
@@ -362,6 +367,11 @@ function App() {
               <Route exact path="/components/auro/input"><AuroInput /></Route>
               <Route exact path="/components/auro/input/install"><AuroInputInstall /></Route>
               <Route exact path="/components/auro/input/api"><AuroInputApi /></Route>
+
+              {/* Auro Loader */}
+              <Route exact path="/components/auro/loader"><AuroLoader /></Route>
+              <Route exact path="/components/auro/loader/install"><AuroLoaderInstall /></Route>
+              <Route exact path="/components/auro/loader/api"><AuroLoaderApi /></Route>
 
               {/* Auro Checkbox */}
               <Route exact path="/components/auro/checkbox"><AuroCheckbox /></Route>

@@ -95,7 +95,7 @@ class AuroIcon extends Component {
           </span>
         </div>
         <Highlight className='html afterCode'>
-          {`<span style="color:: orange;">
+          {`<span style="color: orange;">
   <auro-icon category="terminal" name="plane-diag-fill" customColor></auro-icon>
 </span>`}
         </Highlight>

@@ -21,6 +21,9 @@ import "@alaskaairux/auro-button";
 // icon
 import "@alaskaairux/auro-icon";
 
+// loader
+import "@alaskaairux/auro-loader";
+
 // dialog
 import "@alaskaairux/auro-dialog";
 

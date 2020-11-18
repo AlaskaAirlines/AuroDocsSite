@@ -39,7 +39,7 @@ class ReleasesBySprint extends Component {
 
         <Query query={RELEASES}>
           {({ loading, error, data }) => {
-            if (loading) return <p className="isLoading">Loading...</p>;
+            if (loading) return <auro-loader laser onlight></auro-loader>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             const sprintsDataset = createSprintReleaseDataset(sprints, data.organization.team.repositories.nodes);

@@ -87,8 +87,9 @@ auro-swatch-list {
   display: block;
 }
 
-code {
+code:not(.html):not(.css):not(.js) {
   color: var(--auro-color-brand-flamingo-500);
+  font-size: 1.15rem;
 }
 
 blockquote {
@@ -113,6 +114,19 @@ blockquote {
 .install {
   padding: var(--auro-size-lg) 0 var(--auro-size-xl) var(--auro-size-lg) !important;
   margin-bottom: var(--auro-size-xxl);
+}
+
+// animation speed for auro-loader //
+.slow::part(element) {
+  animation-duration: 8s;
+}
+
+.med::part(element) {
+  animation-duration: 5s;
+}
+
+.fast::part(element) {
+  animation-duration: 3s;
 }
 
 // ------ component demo UI -----------
@@ -485,23 +499,44 @@ pre {
   height: auto;
   line-height: calc(3rem - 1px);
   margin-bottom: 2rem;
-
   position: sticky;
   top: 80px;
   background: linear-gradient(180deg, rgba(255,255,255,.99) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,.9) 100%);
   z-index: 10;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .tab {
-  @include auro_anchorTab(sass, noncomponent);
+  color: var(--auro-color-text-link-on-light);
+  border-color: var(--auro-color-border-primary-on-light);
+  padding: var(--auro-size-md);
+  border-width: 0 0 1px 0;
+  border-style: solid;
 
-  display: inline-block;
+  @media (hover: hover) {
+    &:hover {
+      border-width: 0 0 2px 0;
+      text-decoration: none;
+      cursor: pointer;
+      color: var(--auro-color-text-link-on-light-hover);
+      border-color: currentColor;
+      padding-bottom: calc(1rem - 1px);
+    }
+  }
+
+  &.is-active {
+    border-width: 0 0 2px 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--auro-color-text-primary-on-light);
+    border-color: currentColor;
+  }
+
   border-color: transparent;
   text-decoration: none;
-
-  &:hover {
-    padding-bottom: calc(1rem - 1px);
-  }
+  white-space: nowrap;
 }
 
 .tab.focus-visible {

@@ -125,7 +125,7 @@ class HelpWanted extends Component {
         <h2 className="auro_heading auro_heading--700">Design and Dev Support Issues</h2>
         <Query query={helpWanted}>
           {({ loading, error, data }) => {
-            if (loading) return <p className="isLoading">Loading...</p>;
+            if (loading) return <auro-loader laser onlight></auro-loader>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (
@@ -140,7 +140,7 @@ class HelpWanted extends Component {
         <p>With all code, there are issues to be addressed. The following are reported bugs that if you can help with, we would love the support! </p>
         <Query query={typeBug}>
           {({ loading, error, data }) => {
-            if (loading) return <p className="isLoading">Loading...</p>;
+            if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (

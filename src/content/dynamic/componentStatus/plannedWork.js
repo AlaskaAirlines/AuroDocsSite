@@ -120,7 +120,7 @@ class PlannedWork extends Component {
 
         <Query query={workInProgress}>
           {({ loading, error, data }) => {
-            if (loading) return <p className="isLoading">Loading...</p>;
+            if (loading) return <auro-loader laser onlight></auro-loader>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (
@@ -136,7 +136,7 @@ class PlannedWork extends Component {
 
         <Query query={priority}>
           {({ loading, error, data }) => {
-            if (loading) return <p className="isLoading">Loading...</p>;
+            if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (
