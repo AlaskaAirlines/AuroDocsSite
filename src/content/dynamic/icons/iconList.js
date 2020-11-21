@@ -21,6 +21,8 @@ import Elite from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/el
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Entertainment from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/entertainment.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
+import Firstclasslegroom from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/first-class-legroom.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
 import Flightcancelled from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/flight-cancelled.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Flightdelayed from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/flight-delayed.svg'; 
@@ -33,11 +35,15 @@ import Luggage from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Plug from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/plug.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
+import Premiumclasslegroom from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/premium-class-legroom.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
 import Seat from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/seat.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Wifidisabled from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/wifi-disabled.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Wifi from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/wifi.svg'; 
+// eslint-disable-next-line import/no-webpack-loader-syntax 
+import Wineandspirits from '-!svg-react-loader!@alaskaairux/icons/dist/icons/in-flight/wine-and-spirits.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
 import Accessibility from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/accessibility.svg'; 
 // eslint-disable-next-line import/no-webpack-loader-syntax 
@@ -265,6 +271,11 @@ import Roundtriparrows from '-!svg-react-loader!@alaskaairux/icons/dist/icons/te
               <span>entertainment.svg</span>
             </div>
           
+            <div title="first-class-legroom.svg">
+              <Firstclasslegroom />
+              <span>first-class-legroom.svg</span>
+            </div>
+          
             <div title="flight-cancelled.svg">
               <Flightcancelled />
               <span>flight-cancelled.svg</span>
@@ -295,6 +306,11 @@ import Roundtriparrows from '-!svg-react-loader!@alaskaairux/icons/dist/icons/te
               <span>plug.svg</span>
             </div>
           
+            <div title="premium-class-legroom.svg">
+              <Premiumclasslegroom />
+              <span>premium-class-legroom.svg</span>
+            </div>
+          
             <div title="seat.svg">
               <Seat />
               <span>seat.svg</span>
@@ -308,6 +324,11 @@ import Roundtriparrows from '-!svg-react-loader!@alaskaairux/icons/dist/icons/te
             <div title="wifi.svg">
               <Wifi />
               <span>wifi.svg</span>
+            </div>
+          
+            <div title="wine-and-spirits.svg">
+              <Wineandspirits />
+              <span>wine-and-spirits.svg</span>
             </div>
           
           </div>
