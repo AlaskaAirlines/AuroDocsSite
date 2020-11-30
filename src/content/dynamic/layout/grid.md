@@ -6,6 +6,8 @@ The grid is a responsive, mobile first, fluid system that scales 12 columns acro
 
 ## Breakpoints
 
+See [breakpoint support in Web Core Style Sheets](https://alaskaairlines.github.io/WebCoreStyleSheets/#responsive)
+
 Columns, gutters, and margins scale as the device and viewport increases or decreases.  Different breakpoints require either a fixed or fluid responsive grid.
 
 * **Fluid grid:** A grid built using columns that are considered flexible.  When the screen size is changed, the widths of these columns will adjust proportionally.
@@ -20,13 +22,12 @@ Columns, gutters, and margins scale as the device and viewport increases or decr
 |MD (Medium)|≥ 1024px|Tablet (landscape)|32px|32px|Fluid|
 |LG (Large)|≥ 1232px|Desktop|32px|32px|Fixed|
 
-See [breakpoint support in Web Core Style Sheets](https://alaskaairlines.github.io/WebCoreStyleSheets/#responsive)
-
 ## Guidlines
 
-* Two grid sizes are available within the toolkit. Both grids are based on a 12 column structure, but have different gutter and margin sizes.
-  * For viewports larger than 1024 pixels, use the 32 pixel grid
-  * For viewports smaller than 1024 pixels, use the 16 pixel grid
+Two grid sizes are available within the toolkit. Both grids are based on a 12 column structure, but have different gutter and margin sizes.
+
+* For viewports larger than 1024 pixels, use the 32 pixel grid
+* For viewports smaller than 1024 pixels, use the 16 pixel grid
 
 ![](/images/content/grid/Img_grid_sizes.png)
 

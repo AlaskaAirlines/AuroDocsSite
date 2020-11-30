@@ -10,6 +10,8 @@ All HTML elements can be considered boxes. Based off of the HTML foundational bo
 
 ## Margin
 
+See [Web Core Style Sheets support](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_spacing)
+
 Vertical - The vertical space between items
 
 ![](/images/content/spacing/space_horizontal.png)
@@ -31,10 +33,9 @@ Horizontal - The horizontal space between items
 |48px|xxl|var(--auro-size-xxl)|
 |64px|xxxl|var(--auro-size-xxxl)|
 
-See [Web Core Style Sheets support](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_spacing)
-
-
 ## Inset Padding
+
+See [Web Core Style Sheets support](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_inset)
 
 Default – The padding around an element where all sides are equal
 
@@ -82,6 +83,3 @@ Squish – Increased padding to left and right of an element; the left and right
 |16px / 32px|.util_insetXl--squish|
 |24px / 48px|.util_insetXxl--squish|
 |32px / 64px|.util_insetXxxl--squish|
-
-
-See [Web Core Style Sheets support](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_inset)

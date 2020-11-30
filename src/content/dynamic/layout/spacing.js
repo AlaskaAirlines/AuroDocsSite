@@ -5,6 +5,8 @@ import content from './spacing.md'
 import { Nav} from './nav.js';
 import header from './spacing_header.png';
 
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
 
 class Colors extends Component {
 
@@ -16,6 +18,7 @@ class Colors extends Component {
 
     this.flatten = this.flatten.bind(this);
     this.headingRenderer = this.headingRenderer.bind(this);
+    this.linkRenderer = this.linkRenderer.bind(this);
   };
 
   componentWillMount() {
@@ -37,6 +40,33 @@ class Colors extends Component {
     var text = children.reduce(this.flatten, '')
     var slug = text.toLowerCase().replace(/\W/g, '-')
     return React.createElement('h' + props.level, {id: slug}, props.children)
+  }
+
+  // function to re-write anchor element based on type of URL
+  linkRenderer(props) {
+    let pattern = /^((http|https|ftp):\/\/)/;
+
+    if(pattern.test(props.href)) {
+
+      // filter out links that are set to internal URLs
+      if (props.href.includes("auro.alaskaair.com")) {
+
+        let url = props.href
+        url = url.replace(/^.*\/\/[^/]+/, '')
+        return <a href={url}>{props.children}</a>
+      }
+
+      else {
+        return <a href={props.href} target="_blank" className="externalLink" rel="noopener noreferrer">
+          {props.children}
+          <ExternalLink />
+        </a>
+      }
+    }
+
+    else if (!pattern.test(props.href)) {
+      return <a href={props.href}>{props.children}</a>
+    }
   }
 
   render() {
