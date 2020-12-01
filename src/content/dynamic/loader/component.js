@@ -68,7 +68,7 @@ class AuroLoader extends Component {
           <auro-loader ringworm xl></auro-loader>
         </div>
         <Highlight className='html afterCode'>
-          {`          <auro-loader ringworm></auro-loader>
+          {`<auro-loader ringworm></auro-loader>
 <auro-loader ringworm sm></auro-loader>
 <auro-loader ringworm md></auro-loader>
 <auro-loader ringworm lg></auro-loader>
@@ -84,12 +84,12 @@ class AuroLoader extends Component {
         </Highlight>
 
         <div className="demo--inline exampleWrapper--ondark">
-          <auro-loader pulse ondark md></auro-loader>
+          <auro-loader pulse ondark md></auro-loader><br/>
           <auro-loader pulse white md></auro-loader>
         </div>
         <Highlight className='html afterCode'>
-          {`<auro-loader pulse ondark md></auro-loader>
-<auro-loader pulse white md></auro-loader>`}
+          {`<auro-loader pulse ondark sm></auro-loader>
+<auro-loader pulse white sm></auro-loader>`}
         </Highlight>
 
         <auro-header level="2" display="700">Custom color support</auro-header>
@@ -115,7 +115,7 @@ class AuroLoader extends Component {
 }
 
 .fast::part(element) {
-  animation-duration: 3s;
+  animation-duration: 1s;
 }`}
         </Highlight>
         <Highlight className='html afterCode'>
