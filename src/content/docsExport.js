@@ -11,6 +11,7 @@ import VoiceTonePage from './markdown/voiceTone.md';
 import ShadyCSSPage from './markdown/shadyCSS.md';
 import AuroSupportPage from './markdown/auroSupport.md';
 import AuroHomePage from './markdown/home.md';
+import A11yStatementPage from './markdown/a11yStatement.md';
 
 // Temp pages for new work
 import Wip from './markdown/wip.md';
@@ -56,6 +57,10 @@ export class AuroSupport extends InternalMarkdownWrapper {
 
 export class AuroHome extends InternalMarkdownWrapper {
   readme = AuroHomePage
+}
+
+export class A11yStatement extends InternalMarkdownWrapper {
+  readme = A11yStatementPage
 }
 
 export class WCGenerator extends ExternalMarkdownWrapper {

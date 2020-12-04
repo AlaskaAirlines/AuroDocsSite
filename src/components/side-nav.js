@@ -11,6 +11,7 @@ export default function SideNav(props) {
         { linkTitle: "Component status", route: "/component-status", parent: true },
         { linkTitle: "Release Dashboard", route: "/support/releases-summary", parent: true },
         { linkTitle: "Auro Support", route: "/auro-support", parent: true },
+        { linkTitle: "a11y Statement", route: "/a11y-statement", parent: true },
       ]
     },
     {

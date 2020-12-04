@@ -221,6 +221,7 @@ import {
   ContributingDocs,
   ShadyCSS,
   AuroSupport,
+  A11yStatement,
 
   // temp home for components in progress
   WipPage
@@ -261,6 +262,7 @@ function App() {
               <Route exact path="/philosophy"><Philosophy /></Route>
               <Route exact path="/user-support"><AuroSupport /></Route> {/* redirect old url */}
               <Route exact path="/auro-support"><AuroSupport /></Route>
+              <Route exact path="/a11y-statement"><A11yStatement /></Route>
 
               <Route exact path="/epics/"><VersionZero /></Route>
               <Route exact path="/epics/version-zero"><VersionZero /></Route>
