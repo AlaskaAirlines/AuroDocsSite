@@ -2,7 +2,26 @@
 
 Looking for help with Auro? F.A.Q.s, how to contact, it's all here.
 
+## 1:1 support with Auro
+
+Do you have a question about Auro, a custom element, part of the support architecture or how to get support for your team? First we'd suggest reviewing the F.A.Q.s listed below for common questions.
+
+If you have a question, an issue or are simply curious about a specific part of the Auro Design System, we suggest submitting a [Github support ticket](/component-status) with the specific repo your issues relates.
+
+For internal Alaska users, there is a [Teams channel for Auro](https://teams.microsoft.com/l/channel/19%3a5df2ca021a6548c4af54256bbc737129%40thread.skype/Auro%2520(public)?groupId=3a6a4783-59c6-496a-a20c-ab306461a894&tenantId=0f44c5d4-42b0-45c2-bf55-d0fea8430d33), but it is recommended that this is for general support where other users may respond. The Teams channel is not recommended for larger architectural discussions or platform issues where the attention of an Auro team member is required.
+
+For in-depth issues, platform discussions, things where there is a need for the dedicated attention from an Auro team member, we ask that you please [schedule](https://calendly.com/dalesande) a meeting so that we can give your discussion the attention it deserves.
+
+Thanks!<br>
+-- The Auro Team
+
 ## F.A.Q.
+
+<!-- >
+  <auro-accordion id="">
+    <span slot="trigger"></span>
+  </auro-accordion>
+-->
 
 Please see the items below for commonly asked questions regarding development and instillation of the Auro Design System.
 
@@ -14,6 +33,28 @@ Please see the items below for commonly asked questions regarding development an
     <p>Next it's suggested to get familiar with <auro-hyperlink href="/webcorestylesheets" relative>Web Core Style Sheets</auro-hyperlink>, or WCSS for short. WCSS is a foundational CSS library to assist in the quick and easy setup of Auro styles. Also, don't forget to review the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/" target="_blank">WCSS API</auro-hyperlink> for an inside look at this supporting library.</p>
     <p>No UI would be complete without the use of <auro-hyperlink href="/icons/overview" relative>icons</auro-hyperlink>. Auro has a vast array of predefined SVG icons to be used. Please see the documentation for all the ways you can make use of this library, or make use of Auro's easy to use  <auro-hyperlink href="/components/auro/icon" relative>icon web component</auro-hyperlink>.</p>
     <p>Last, please see the list of available pre-developed <auro-hyperlink href="/component-status" relative>HTML native web components</auro-hyperlink>. These components can be used in virtually any development stack. Be sure you checkout the <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink>, <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink> and <auro-hyperlink href="/javascriptSetup" relative>standard JS</auro-hyperlink>example projects.</p>
+  </auro-accordion>
+  <auro-accordion id="primary">
+    <span slot="trigger">What is Auro's primary objective?</span>
+    <p><strong>The primary objective of the Auro Design System team is to enable work</strong></p>
+    <p>Whether that enablement is provided in a form of a design or a web component that a product team can take direct advantage of, or if that enablement is in the form of support for the product team to design and engineer the web component, the objective is the same.</p>
+  </auro-accordion>
+  <auro-accordion id="newWork">
+    <span slot="trigger">How do teams bring work into Auro's backlog?</span>
+    <p>In our Propose new work section we discuss the the overall <auro-hyperlink href="/getting-started/developers/governance">Auro Governance Working Agreement</auro-hyperlink>. This assumes that new work as been identified and explains the process we will go through to get your work completed. </p>
+  </auro-accordion>
+  <auro-accordion id="sla">
+    <span slot="trigger">What is Auro's SLA?</span>
+    <p>When it comes to servicing our customers we hold ourselves to a high level of support. Once a ticket is submitted for support, you have our promise that you will receive a response within 24hours. </p>
+    <p>That is not to say that we will address the issue within that time, but someone from our team will respond to your issue with the information we have and what our plan will be to prioritize the issue.</p>
+    <p>Prioritization of work will take a few things into consideration, but the overall process will follow the MoSCoW approach. </p>
+    <ul>
+      <li><strong>Must</strong> -  The work is a MUST HAVE for the health and continued value of the Auro Design System. This criteria specifies that the work needs to happen in order to deliver on the goals of the Auro team and to ensure the success of any product team that is dependent on Auro's resources. </li>
+      <li><strong>Should</strong> - The work is high-priority and should be included in the sprint plan if it is possible. This is often critical work but one which can be satisfied in other ways if absolutely necessary.</li>
+      <li><strong>Could</strong> - Work that is considered desirable, but not necessary. This work will be included if time and resources permit or up for consideration for a sprint plan further down the road.</li>
+      <li><strong>Won't</strong> - Represents work that the team has decided is not necessary for the success of the Auro Design System or has agreed that this is work to be done, but not considered the responsibility of the Auro Design System.</li>
+    </ul>
+    <p>Following these guidelines, every new request, and even bug reports, can be judged fairly and prioritized appropriately.</p>
   </auro-accordion>
   <auro-accordion id="ie11">
     <span slot="trigger">How does Auro support IE11?</span>
@@ -59,6 +100,10 @@ Please see the items below for commonly asked questions regarding development an
         <auro-hyperlink href="/audit" relative>Project audit:</auro-hyperlink> The Auro team is always reviewing, always auditing the list of components and tools we have in the system. This dashboard reflects the work in progress and where the team is placing their priorities.
       </li>
     </ul>
+  </auro-accordion>
+  <auro-accordion id="wip">
+    <span slot="trigger">What is the Auro team currently working on?</span>
+    <p>Our <auro-hyperlink href="https://auro.alaskaair.com/wip">project board</auro-hyperlink> is open to the public. As we plan future releases, there are identified issues in the <strong>Prioritized for work</strong> section that illustrates what is queued up for work. </p>
   </auro-accordion>
 </auro-accordion-group>
 
