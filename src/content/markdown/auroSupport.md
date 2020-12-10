@@ -120,3 +120,4 @@ Sometimes documentation or setup instructions simply aren't enough. Please see t
 | Name | Title | Contact preferences |
 | --- | --- | --- |
 | Dale Sande | Sr. Design Technologist | Please [schedule](https://calendly.com/dalesande) |
+| Gus Naughton | Software Engineer | Please [schedule](https://calendly.com/gusn) |
