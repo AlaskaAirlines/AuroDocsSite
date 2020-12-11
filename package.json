@@ -54,7 +54,8 @@
     "eject": "react-scripts eject",
     "rebuildSass": "npm rebuild node-sass",
     "buildIcons": "node ./scripts/build-icon-lib.js",
-    "dev": "npm-run-all rebuildSass buildIcons start"
+    "buildPages": "node ./scripts/build-page-imports.js",
+    "dev": "npm-run-all rebuildSass buildPages buildIcons start"
   },
   "husky": {
     "hooks": {

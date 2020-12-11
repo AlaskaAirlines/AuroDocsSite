@@ -204,27 +204,27 @@ import {
   IsTouchingDocs,
   JavascriptDemoDocs,
   SvelteDemoDocs,
-  Layout,
   ReactDemoDocs,
   SlotsDocs,
   TechDetailsDocs,
   TestsDocs,
-  VoiceTone,
   WhyCustomelementsDocs,
-
-  // cleaned up markdown docs
-  AuroHome,
-  Philosophy,
-  WhatIsWhat,
-  GettingStartedDevsOverview,
   ComplianceDocs,
   ContributingDocs,
-  ShadyCSS,
-  AuroSupport,
+
+  // Markdown Pages from docsExport(automated)
   A11yStatement,
+  AuroSupport,
+  DeveloperOverview,
+  Home,
+  Layout,
+  Philosophy,
+  ShadyCSS,
+  VoiceTone,
+  WhatIsWhat,
 
   // temp home for components in progress
-  WipPage
+  Wip
 
 } from './content/docsExport';
 
@@ -257,13 +257,19 @@ function App() {
             <SideNav />
             <Switch>
 
-              {/* Home */}
-              <Route exact path='/' component={AuroHome} />
-              <Route exact path="/philosophy"><Philosophy /></Route>
+              {/* Automated links from internal docs */}
+              <Route exact path='/' component={Home} />
+              <Route exact path="/a11y-statement"><A11yStatement /></Route>
               <Route exact path="/user-support"><AuroSupport /></Route> {/* redirect old url */}
               <Route exact path="/auro-support"><AuroSupport /></Route>
-              <Route exact path="/a11y-statement"><A11yStatement /></Route>
+              <Route exact path="/getting-started/developers/overview"><DeveloperOverview /></Route>
+              <Route exact path="/core/layout"><Layout /></Route> {/* not used */} {/* reevaluate content */}
+              <Route exact path="/philosophy"><Philosophy /></Route>
+              <Route exact path="/support/shadycss"><ShadyCSS /></Route>
+              <Route path="/core/voice-and-tone"><VoiceTone /></Route>
+              <Route exact path="/getting-started/developers/common-definitions"><WhatIsWhat /></Route>
 
+              {/* Home */}
               <Route exact path="/epics/"><VersionZero /></Route>
               <Route exact path="/epics/version-zero"><VersionZero /></Route>
               <Route exact path="/epics/user-research"><UserResearch /></Route>
@@ -300,8 +306,6 @@ function App() {
 
 
               {/* Getting Started/developers */}
-              <Route exact path="/getting-started/developers/overview"><GettingStartedDevsOverview /></Route>
-              <Route exact path="/getting-started/developers/common-definitions"><WhatIsWhat /></Route>
               <Route exact path="/getting-started/developers/what-is-what"><WhatIsWhat /></Route>
               {/* <Route exact path="/getting-started/developers/generator"><WCGenerator /></Route> */}
               <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
@@ -348,12 +352,8 @@ function App() {
 
 
               {/* Layout */}
-              <Route exact path="/core/layout"><Layout /></Route> {/* not used */} {/* reevaluate content */}
               <Route exact path="/layout/grid"><LayoutGrid /></Route>
               <Route exact path="/layout/spacing"><LayoutSpacing /></Route>
-
-              {/* Voice */}
-              <Route path="/core/voice-and-tone"><VoiceTone /></Route>
 
               {/* Auro Alerts */}
               <Route exact path="/components/auro/alerts"><AuroAlerts /></Route>
@@ -444,16 +444,16 @@ function App() {
               <Route exact path="/components/auro/dialog/api"><AuroDialogApi /></Route>
 
               {/* flight-details */}
-              <Route exact path="/components/auro/flight-details/"><WipPage /></Route>
+              <Route exact path="/components/auro/flight-details/"><Wip /></Route>
 
               {/* icon */}
-              <Route exact path="/components/auro/icon/"><WipPage /></Route>
+              <Route exact path="/components/auro/icon/"><Wip /></Route>
 
               {/* modal */}
-              <Route exact path="/components/auro/modal/"><WipPage /></Route>
+              <Route exact path="/components/auro/modal/"><Wip /></Route>
 
               {/* menu */}
-              <Route exact path="/components/auro/menu/"><WipPage /></Route>
+              <Route exact path="/components/auro/menu/"><Wip /></Route>
 
               {/* pane */}
               <Route exact path="/components/auro/pane/"><AuroPane /></Route>
@@ -480,7 +480,7 @@ function App() {
 
               {/* CSS */}
               <Route exact path="/support/css-conventions"><CssConventionsDocs /></Route>
-              <Route exact path="/support/shadycss"><ShadyCSS /></Route>
+
 
               <Route exact path="/support/custom-properties"><CustomPropertiesDocs /></Route>
               <Route exact path="/support/isTouching"><IsTouchingDocs /></Route> {/* not used */} {/* reevaluate content */}
