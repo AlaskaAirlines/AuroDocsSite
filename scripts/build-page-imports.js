@@ -38,8 +38,6 @@ const buildImports = (iconPaths) => {
 
   iconPaths.forEach(i => {
     importText += `import ${getImportName(i)}Page from '.${i}'; \n`;
-    // importText += `export class ${getImportName(i)} extends InternalMarkdownWrapper {
-  //readme = ${getImportName(i)}Page\n}\n\n`
   })
 
   return importText
@@ -49,7 +47,6 @@ const buildExports = (iconPaths) => {
   let importText = "";
 
   iconPaths.forEach(i => {
-    // importText += `import ${getImportName(i)}Page from '.${i}'; \n`;
     importText += `export class ${getImportName(i)} extends InternalMarkdownWrapper {
   readme = ${getImportName(i)}Page\n}\n\n`
   })
@@ -57,43 +54,12 @@ const buildExports = (iconPaths) => {
   return importText
 }
 
-const buildElements = (sortedIcons) => {
-  let allCategories = '';
-
-  for(let category in sortedIcons) {
-    let iconPaths = sortedIcons[category];
-    let elements = "";
-
-    iconPaths.forEach(i => {
-      const file = getFile(i);
-      const tag = getImportName(i);
-        elements += `
-          <div title="${file}">
-            <${tag} />
-              <span>${file}</span>
-            </div>
-          `
-      });
-
-      allCategories += `
-        <section>
-          <h2 className="icon-category">${category}</h2>
-          <div className="iconsWrapper">
-            ${elements}
-          </div>
-        </section>
-      `;
-    }
-
-    return allCategories;
-}
-
 (async () => {
-    const icons = [];
+    const docs = [];
     for await (const file of getFiles('./src/content/markdown')) {
       const currentPath = path.join(__dirname, '../src/content')
 
-      if(file.includes('.md')) icons.push(file.split(currentPath)[1]);
+      if(file.includes('.md')) docs.push(file.split(currentPath)[1]);
     }
 
     const externalRepoReadmeDocs = `
@@ -191,17 +157,17 @@ export class SvelteDemoDocs extends ExternalMarkdownWrapper {
 }
     `;
 
-    const iconListComponentText = `// DO NOT EDIT! \n// This doc was auto generated from ./src/scripts/build-page-imports.js \n// ${new Date()}
+    const docsText = `// DO NOT EDIT! \n// This doc was auto generated from ./src/scripts/build-page-imports.js \n// ${new Date()}
       \n// Import primary markdown tools\nimport {ExternalMarkdownWrapper, InternalMarkdownWrapper} from '../components/rawMarkdownWrapper';
-      \n// internal markdown docs\n${buildImports(icons)}
-      \n// internal markdown docs\n${buildExports(icons)}
+      \n// internal markdown docs\n${buildImports(docs)}
+      \n// internal markdown docs\n${buildExports(docs)}
 
       \n${ExternalMarkdownWrapperDocs}
       \n${externalRepoReadmeDocs}
     `;
 
     // this function creates the output file needed
-    fs.writeFile("./src//content/docsExport.js", iconListComponentText, (err) => {
+    fs.writeFile("./src/content/docsExport.js", docsText, (err) => {
 
         if(err) return console.log(err);
 
