@@ -103,13 +103,13 @@ Please see the items below for commonly asked questions regarding development an
   </auro-accordion>
   <auro-accordion id="wip">
     <span slot="trigger">What is the Auro team currently working on?</span>
-    <p>Our <auro-hyperlink href="https://auro.alaskaair.com/wip">project board</auro-hyperlink> is open to the public. As we plan future releases, there are identified issues in the <strong>Prioritized for work</strong> section that illustrates what is queued up for work. </p>
+    <p>Our <auro-hyperlink href="/wip" relative>project board</auro-hyperlink> is open to the public. As we plan future releases, there are identified issues in the <strong>Prioritized for work</strong> section that illustrates what is queued up for work. </p>
   </auro-accordion>
   <auro-accordion id="help">
     <span slot="trigger">How can I help?</span>
-    <p>Are you interested in helping with Auro, we can help with that. There are multiple ways anyone can contribute to Auro. If you are using any one of the many Auro tools and you find a bug or want to propose an enhancement, we recommend that you submit an issue with any of the <auro-hyperlink href="/component-status">Auro individual repos.</auro-hyperlink></p>
+    <p>Are you interested in helping with Auro, we can help with that. There are multiple ways anyone can contribute to Auro. If you are using any one of the many Auro tools and you find a bug or want to propose an enhancement, we recommend that you submit an issue with any of the <auro-hyperlink href="/component-status" relative>Auro individual repos.</auro-hyperlink></p>
     <p>While you can go straight to PR, we still recommend that you submit an issue to be reviewed before starting the work. While we try to work with everyone as much as possible, we can't guarantee that all PRs will be accepted and merged into the main branch. So to ensure that you are committing code that will be accepted, an issue first really helps.</p>
-    <p>If you are simply looking for something to do but don't know where to start? We have you covered there too. See our list of <auro-hyperlink href="/help-wanted">help wanted</auro-hyperlink> issues.</p>
+    <p>If you are simply looking for something to do but don't know where to start? We have you covered there too. See our list of <auro-hyperlink href="/help-wanted" relative>help wanted</auro-hyperlink> issues.</p>
   </auro-accordion>
 </auro-accordion-group>
 
