@@ -55,7 +55,7 @@
     "rebuildSass": "npm rebuild node-sass",
     "buildIconsScript": "node ./scripts/build-icon-lib.js",
     "buildPages": "node ./scripts/build-page-imports.js",
-    "buildIcons": "npm-run-all buildPages buildIcons",
+    "buildIcons": "npm-run-all buildPages buildIconsScript",
     "dev": "npm-run-all rebuildSass buildPages buildIconsScript start"
   },
   "husky": {
