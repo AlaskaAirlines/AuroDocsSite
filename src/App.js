@@ -90,9 +90,9 @@ import AuroAvatarApi from './content/dynamic/avatar/api';
 import AuroAvatarInstall from './content/dynamic/avatar/install';
 
 // Dialog
-import AuroDialog from './content/dynamic/dialog/component';
-import AuroDialogApi from './content/dynamic/dialog/api';
-import AuroDialogInstall from './content/dynamic/dialog/install';
+import AuroInterruption from './content/dynamic/interruption/component';
+import AuroInterruptionApi from './content/dynamic/interruption/api';
+import AuroInterruptionInstall from './content/dynamic/interruption/install';
 
 // Icon
 import AuroIcon from './content/dynamic/icon/component';
@@ -291,7 +291,7 @@ function App() {
               <Route exact path="/carousel/"><AuroCarousel /></Route>
               <Route exact path="/checkbox"><AuroCheckbox /></Route>
               <Route exact path="/datetime/"><AuroDateTime /></Route>
-              <Route exact path="/dialog/"><AuroDialog /></Route>
+              <Route exact path="/interruption/"><AuroInterruption /></Route>
               <Route exact path="/header"><AuroHeader /></Route>
               <Route exact path="/hyperlink"><AuroHyperlink /></Route>
               <Route exact path="/icon/"><AuroIcon /></Route>
@@ -439,9 +439,9 @@ function App() {
               <Route exact path="/components/auro/icon/api"><AuroIconApi /></Route>
 
               {/* modal */}
-              <Route exact path="/components/auro/dialog/"><AuroDialog /></Route>
-              <Route exact path="/components/auro/dialog/install"><AuroDialogInstall/></Route>
-              <Route exact path="/components/auro/dialog/api"><AuroDialogApi /></Route>
+              <Route exact path="/components/auro/interruption/"><AuroInterruption /></Route>
+              <Route exact path="/components/auro/interruption/install"><AuroInterruptionInstall/></Route>
+              <Route exact path="/components/auro/interruption/api"><AuroInterruptionApi /></Route>
 
               {/* flight-details */}
               <Route exact path="/components/auro/flight-details/"><Wip /></Route>

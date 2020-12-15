@@ -4,6 +4,7 @@ import Highlight from 'react-highlight';
 import LinkIcons from 'components/linkIcons';
 import ContentExample from './contentExample.js';
 import 'highlight.js/styles/github.css';
+import '@alaskaairux/auro-interruption/dist/style-unformatted.css'
 
 class AuroDialog extends Component {
 
@@ -16,9 +17,9 @@ class AuroDialog extends Component {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-dialog'];
+    const dependencies = pjson.dependencies['@alaskaairux/auro-interruption'];
 
-    return `@alaskaairux/auro-dialog: ${dependencies}`;
+    return `@alaskaairux/auro-interruption: ${dependencies}`;
   };
 
   toggleDialog = (elName) => {
@@ -306,10 +307,144 @@ toggleDialogClose = (elName) => {
 </auro-dialog>`}
         </Highlight>
 
+
+
+        {/* Decoupled dialog experiences */}
+        {/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */}
+
+        <auro-header level="2" display="700">Dialog with decoupled experiences</auro-header>
+
+        <p>For use case where the size of the dialog on desktop should not influence the size of the dialog on mobile, the combination API of <code>sm lg</code> and <code>md lg</code> can be used.</p>
+
+        <p>The use of these combinations will set the first value to the dialog for a desktop experience. The second value will set the mobile experience to be up to 90% of the screen depending on the length of the conent.</p>
+
+        <p>See the following examples.</p>
+
+        <div className="demo--inline exampleWrapper auro_containedButtons">
+          <auro-button onClick={() => this.toggleDialog('#smLgDialog')}>Open [sm lg] dialog</auro-button>
+          <auro-button onClick={() => this.toggleDialog('#smMdDialog')}>Open [md lg] dialog</auro-button>
+        </div>
+
+        <auro-dialog id="smLgDialog" sm lg>
+          <span slot="header">Small Modal Dialog</span>
+          <span slot="content">
+            <ContentExample />
+          </span>
+          <span slot="footer">
+            <div className="auro_containedButtons">
+              <auro-button onClick={() => this.toggleDialogClose('#smLgDialog')}>I understand
+                <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
+              </auro-button>
+            </div>
+          </span>
+        </auro-dialog>
+
+        <auro-dialog id="smMdDialog" md lg>
+          <span slot="header">Medium Modal Dialog</span>
+          <span slot="content">
+            <ContentExample />
+          </span>
+          <span slot="footer">
+            <div className="auro_containedButtons">
+              <auro-button onClick={() => this.toggleDialogClose('#smMdDialog')}>I understand
+                <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
+              </auro-button>
+            </div>
+          </span>
+        </auro-dialog>
+
+        <Highlight className='html afterCode'>
+          {`<div className="demo--inline exampleWrapper auro_containedButtons">
+  <auro-button onClick={() => this.toggleDialog('#smLgDialog')}>Open [sm lg] dialog</auro-button>
+  <auro-button onClick={() => this.toggleDialog('#smMdDialog')}>Open [md lg] dialog</auro-button>
+</div>
+
+<auro-dialog id="smLgDialog" sm lg>
+  <span slot="header">Small Modal Dialog</span>
+  <span slot="content">
+    <ContentExample />
+  </span>
+  <span slot="footer">
+    <div className="auro_containedButtons">
+      <auro-button onClick={() => this.toggleDialogClose('#smLgDialog')}>I understand
+        <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
+      </auro-button>
+    </div>
+  </span>
+</auro-dialog>
+
+<auro-dialog id="smMdDialog" md lg>
+  <span slot="header">Medium Modal Dialog</span>
+  <span slot="content">
+    <ContentExample />
+  </span>
+  <span slot="footer">
+    <div className="auro_containedButtons">
+      <auro-button onClick={() => this.toggleDialogClose('#smMdDialog')}>I understand
+        <auro-icon category="interface" name="check-lg" emphasis onDark></auro-icon>
+      </auro-button>
+    </div>
+  </span>
+</auro-dialog>`}
+        </Highlight>
+
+
+
+        {/* Unformatted dialog experiences */}
+        {/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */}
+
+        <auro-header level="2" display="700">Unformatted dialog</auro-header>
+
+        <p>For use case where the use of a dialog is to be more freeform, but the experience and base tooling for the dialog are still requested, there is the <code>unformatted</code> property.</p>
+
+        <p>This property can be used in combination of any other use case of the dialog, but it will render a unformatted dialog window allowing for full customization of content within the scope of the window. </p>
+
+        <auro-header level="3" display="500">Responsive padding</auro-header>
+        <p>Part of the dialog design spec is its responsive padding. To take advantage of this for your content within the scope of the dialog, be sure to use the selector <code>unformattedWrapper</code> that can be imported from the package here;</p>
+
+        <pre>
+          <code className="html afterCode hljs">
+            import '@alaskaairux/auro-interruption/dist/style-blank.css'
+          </code>
+        </pre>
+
+        <auro-header level="3" display="500">Accessibility</auro-header>
+        <p>Within the scope of the auro-dialog there is <code>aria-labelledby="dialog-header"</code>. To make proper use of this, in an unformatted dialog, the developer is required to add <code>id="dialog-header"</code> to the content header within the dialog content.</p>
+
+        <div className="demo--inline exampleWrapper auro_containedButtons">
+          <auro-button onClick={() => this.toggleDialog('#unformattedMdDialog')}>Unformatted Medium Dialog</auro-button>
+        </div>
+
+        <auro-dialog id="unformattedMdDialog" unformatted md lg ondark>
+          <span slot="content">
+            <img style={{display: "block", width: "100%"}} src="https://blog.alaskaair.com/wp-content/uploads/2020/11/111-psp-blog-img-guide.jpg" alt="alaska airlines pride lights" />
+            <div class="unformattedWrapper">
+              <h1 id="dialog-header">This is a header</h1>
+              These are words that are slotted into the scope of the custom element.
+            </div>
+          </span>
+        </auro-dialog>
+
+        <Highlight className='html afterCode'>
+          {`import '@alaskaairux/auro-interruption/dist/style-blank.css'
+
+<auro-button onClick={() => this.toggleDialog('#unformattedMdDialog')}>Unformatted Medium Dialog</auro-button>
+
+<auro-dialog id="unformattedMdDialog" unformatted md lg ondark>
+  <span slot="content">
+    <img style={{display: "block", width: "100%"}} src="https://blog.alaskaair.com/wp-content/uploads/2020/11/111-psp-blog-img-guide.jpg" alt="alaska airlines pride lights" />
+    <div class="unformattedWrapper">
+      <h1 id="dialog-header">This is a header</h1>
+      These are words that are slotted into the scope of the custom element.
+    </div>
+  </span>
+</auro-dialog>`}
+        </Highlight>
+
         <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-dialog"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-dialog"
-          code="https://github.com/AlaskaAirlines/auro-dialog/blob/master/src/auro-dialog.js"
+          github="https://github.com/AlaskaAirlines/auro-interruption"
+          npm="https://www.npmjs.com/package/@alaskaairux/auro-interruption"
+          code="https://github.com/AlaskaAirlines/auro-interruption/blob/master/src/auro-dialog.js"
           version={this.showVersion()}
         />
       </section>
