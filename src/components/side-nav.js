@@ -9,28 +9,8 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Philosophy", route: "/philosophy", parent: true },
         { linkTitle: "Component status", route: "/component-status", parent: true },
-        { linkTitle: "Release Dashboard", route: "/support/releases-summary", parent: true },
+        { linkTitle: "Release Info", route: "/support/releases-summary", parent: true },
         { linkTitle: "Auro Support", route: "/auro-support", parent: true },
-        { linkTitle: "a11y Statement", route: "/a11y-statement", parent: true },
-      ]
-    },
-    {
-      header: 'Getting Started',
-      title: "General",
-      items: [
-        { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
-        { linkTitle: "Common defs", route: "/getting-started/developers/common-definitions", parent: true },
-        { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
-        { linkTitle: "Compliance", route: "/getting-started/developers/compliance", parent: true },
-        { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
-        // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
-      ]
-    },
-    {
-      title: "Developers",
-      items: [
-        { linkTitle: "WC Generator", route: "/getting-started/developers/generator/install", parent: true  },
-        { linkTitle: "Contributing", route: "/getting-started/developers/contributing", parent: true },
       ]
     },
     {
@@ -41,6 +21,25 @@ export default function SideNav(props) {
         { linkTitle: "Icons", route: "/icons/overview", parent: true },
         { linkTitle: "Layout", route: "/layout/grid", parent: true },
         { linkTitle: "Voice and Tone", route: "/core/voice-and-tone", parent: true }
+      ]
+    },
+    {
+      header: 'Getting Started',
+      title: "- General",
+      items: [
+        { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
+        { linkTitle: "Common defs", route: "/getting-started/developers/common-definitions", parent: true },
+        { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
+        { linkTitle: "Compliance", route: "/getting-started/developers/compliance", parent: true },
+        { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
+        // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
+      ]
+    },
+    {
+      title: "- Developers",
+      items: [
+        { linkTitle: "WC Generator", route: "/getting-started/developers/generator/install", parent: true  },
+        { linkTitle: "Contributing", route: "/getting-started/developers/contributing", parent: true },
       ]
     },
     {
@@ -83,14 +82,14 @@ export default function SideNav(props) {
         { linkTitle: "Browser Support", route: "/support/browsersSupport", parent: true },
         { linkTitle: "Polyfills", route: "/support/polyfills/focusvisible", parent: true},
         { linkTitle: "The <slot> element", route: "/support/slots", parent: true },
-        // { linkTitle: "A11y", route: "/support/a11y" },
+        { linkTitle: "a11y Statement", route: "/a11y-statement", parent: true },
         // { linkTitle: "Babel Support", route: "/support/babelSupport" },
         // { linkTitle: "Tech overview", route: "/support/techDetails" },
         // { linkTitle: "why?", route: "/support/why" }
       ]
     },
     {
-      title: "Example projects",
+      title: "- Example projects",
       items: [
         { linkTitle: "React Setup", route: "/reactSetup", parent: true},
         // { linkTitle: "Angular Setup", route: "/angularSetup" },

@@ -61,7 +61,7 @@ footer,
 
   @include auro_breakpoint--sm {
     max-width: 40rem;
-    margin: var(--auro-size-md) auto 0 280px;
+    margin: var(--auro-size-md) auto 0 300px;
     padding-right: 1.5rem;
   }
 
@@ -314,17 +314,12 @@ pre {
     }
   }
 
-  @include auro_breakpoint--lg {
-    width: 245px;
-    margin: 0;
-  }
-
   @include auro_breakpoint--sm {
     left: 0;
     display: block;
     opacity: 1;
     left: auto;
-    width: 248px;
+    width: 270px;
     top: 80px;
     padding-bottom: 100px;
   }

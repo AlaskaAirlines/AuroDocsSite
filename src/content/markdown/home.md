@@ -4,7 +4,11 @@ Auro provides components and tools to help product teams work more efficiently. 
 
 <div class="imageBox">
   <img alt="homepage hero image" src="/images/content/home.jpg" />
-</div>
+</div><br>
+
+<p><auro-alerts information>
+  NOTICE: auro-dialog has been deprecated, see the new <auro-hyperlink href="/components/auro/interruption" relative>auro-interruption</auro-hyperlink> custom element for more information related to auro-dialog.
+</auro-alerts></p>
 
 <div class="auro_util_displayFlex columns">
   <div>
