@@ -20,7 +20,7 @@ class AuroPane extends Component {
     return `@alaskaairux/auro-pane: ${dependencies}`;
   };
 
-  
+
 
   render() {
     return (
@@ -28,7 +28,7 @@ class AuroPane extends Component {
 
         <Nav />
 
-        <auro-header level="2" display="display">Carousel</auro-header>
+        <auro-header level="2" display="display">Pane</auro-header>
 
         <p>Use auro-pane to display selectable shoulder dates and associated prices. </p>
 
