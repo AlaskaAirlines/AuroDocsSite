@@ -13,7 +13,7 @@
     "@alaskaairux/auro-datetime": "^1.1.0",
     "@alaskaairux/auro-header": "^1.4.0",
     "@alaskaairux/auro-hyperlink": "^2.0.1",
-    "@alaskaairux/auro-icon": "^2.0.3",
+    "@alaskaairux/auro-icon": "^3.0.0",
     "@alaskaairux/auro-input": "^1.1.1",
     "@alaskaairux/auro-interruption": "^1.0.0",
     "@alaskaairux/auro-loader": "^1.0.0",

@@ -98,6 +98,7 @@ import AuroInterruptionInstall from './content/dynamic/interruption/install';
 import AuroIcon from './content/dynamic/icon/component';
 import AuroIconApi from './content/dynamic/icon/api';
 import AuroIconInstall from './content/dynamic/icon/install';
+import AuroAlaska from './content/dynamic/icon/alaska';
 
 // Alerts
 import AuroAlerts from './content/dynamic/alerts/component';
@@ -447,6 +448,7 @@ function App() {
               <Route exact path="/components/auro/icon/"><AuroIcon /></Route>
               <Route exact path="/components/auro/icon/install"><AuroIconInstall /></Route>
               <Route exact path="/components/auro/icon/api"><AuroIconApi /></Route>
+              <Route exact path="/components/auro/icon/alaska"><AuroAlaska/></Route>
 
               {/* modal */}
               <Route exact path="/components/auro/interruption/"><AuroInterruption /></Route>

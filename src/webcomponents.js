@@ -21,6 +21,7 @@ import "@alaskaairux/auro-button";
 
 // icon
 import "@alaskaairux/auro-icon";
+import "@alaskaairux/auro-icon/dist/auro-alaska";
 
 // loader
 import "@alaskaairux/auro-loader";

@@ -7,6 +7,10 @@ Auro provides components and tools to help product teams work more efficiently. 
 </div><br>
 
 <p><auro-alerts information>
+  NOTICE: auro-icon v3.0 has been released, see the new <auro-hyperlink href="/components/auro/icon/alaska" relative>auro-alaska</auro-hyperlink> custom element for more information. Support for the Alaska logo with auro-icon has been removed.
+</auro-alerts></p><br/>
+
+<p><auro-alerts information>
   NOTICE: auro-dialog has been deprecated, see the new <auro-hyperlink href="/components/auro/interruption" relative>auro-interruption</auro-hyperlink> custom element for more information related to auro-dialog.
 </auro-alerts></p>
 
@@ -39,6 +43,7 @@ Auro provides components and tools to help product teams work more efficiently. 
 
 Every cycle the Auro team releases something new. Here is a list of the new things recently added to the Auro Library!
 
-* [auro-badge v1.0](/components/auro/badge): A new HTML custom element for the use of drawing attention to additional interface information.
-* [auro-interruption v1.0](/components/auro/interruption): Re-introducing auro-dialog, the first of a family of users experiences designed to seamlessly introduce additional content into an existing flow.
-* [auro-loader v1.0](/components/auro/loader): Quickly, easily and consistently add loader experiences to your web views in those times when we just need to wait
+* [auro-alaska](/components/auro/icon/alaska): Released with auro-icon v3.0, auro-alaska is a new custom element dedicated for use with the Alaska Airlines logo.
+* [auro-badge](/components/auro/badge): A new HTML custom element for the use of drawing attention to additional interface information.
+* [auro-interruption](/components/auro/interruption): Re-introducing auro-dialog, the first of a family of users experiences designed to seamlessly introduce additional content into an existing flow.
+* [auro-loader](/components/auro/loader): Quickly, easily and consistently add loader experiences to your web views in those times when we just need to wait
