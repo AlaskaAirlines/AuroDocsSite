@@ -109,6 +109,11 @@ import AuroButton from './content/dynamic/button/component';
 import AuroButtonApi from './content/dynamic/button/api';
 import AuroButtonInstall from './content/dynamic/button/install';
 
+// badge
+import AuroBadge from './content/dynamic/badge/component';
+import AuroBadgeApi from './content/dynamic/badge/api';
+import AuroBadgeInstall from './content/dynamic/badge/install';
+
 // input
 import AuroInput from './content/dynamic/input/component';
 import AuroInputApi from './content/dynamic/input/api';
@@ -364,6 +369,11 @@ function App() {
               <Route exact path="/components/auro/button"><AuroButton /></Route>
               <Route exact path="/components/auro/button/install"><AuroButtonInstall /></Route>
               <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
+
+              {/* Auro Badge */}
+              <Route exact path="/components/auro/badge"><AuroBadge /></Route>
+              <Route exact path="/components/auro/badge/install"><AuroBadgeInstall /></Route>
+              <Route exact path="/components/auro/badge/api"><AuroBadgeApi /></Route>
 
               {/* Auro Input */}
               <Route exact path="/components/auro/input"><AuroInput /></Route>

@@ -34,3 +34,11 @@ Auro provides components and tools to help product teams work more efficiently. 
     ... and a growing list of pre-built <auro-hyperlink href="/component-status" relative>universally useable Web Components.</auro-hyperlink>
   </div>
 </div>
+
+## New Releases!
+
+Every cycle the Auro team releases something new. Here is a list of the new things recently added to the Auro Library!
+
+* [auro-badge v1.0](/components/auro/badge): A new HTML custom element for the use of drawing attention to additional interface information.
+* [auro-interruption v1.0](/components/auro/interruption): Re-introducing auro-dialog, the first of a family of users experiences designed to seamlessly introduce additional content into an existing flow.
+* [auro-loader v1.0](/components/auro/loader): Quickly, easily and consistently add loader experiences to your web views in those times when we just need to wait
