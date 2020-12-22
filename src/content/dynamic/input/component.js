@@ -34,36 +34,48 @@ class AuroInput extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-input ></auro-input>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-input></auro-input>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-input></auro-input>`}
+          </Highlight>
+        </auro-accordion>
 
         <p>Use the <code>label</code> attribute to add content to the input label. Use the <code>helptext</code> attribute to add content under the input to assist the user with the type of input required. </p>
 
         <div className="demo--inline exampleWrapper">
           <auro-input label="Name" helptext="Please enter your full name"></auro-input>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-input label="Name" helptext="Please enter your full name"></auro-input>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-input label="Name" helptext="Please enter your full name"></auro-input>`}
+          </Highlight>
+        </auro-accordion>
 
         <p>Use the <code>required</code> attribute to enable input validation.</p>
 
         <div className="demo--inline exampleWrapper">
           <auro-input required label="Name" helptext="Please enter your full name"></auro-input>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-input required label="Name" helptext="Please enter your full name"></auro-input>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-input required label="Name" helptext="Please enter your full name"></auro-input>`}
+          </Highlight>
+        </auro-accordion>
 
         <p>The default error return of <code>Please fill out this field</code> will be used if a custom <code>error</code> message is not added to the element on blur.</p>
 
         <div className="demo--inline exampleWrapper">
           <auro-input required label="Name" helptext="Please enter your full name" error="Please provide your full name."></auro-input>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-input required label="Name" helptext="Please enter your full name" error="Please provide your full name"></auro-input>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-input required label="Name" helptext="Please enter your full name" error="Please provide your full name"></auro-input>`}
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Password</auro-header>
 
@@ -72,9 +84,12 @@ class AuroInput extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-input required type="password" label="Password" helptext="Please enter a secure password."></auro-input>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-input required type="password" label="Password" helptext="Please enter a secure password."></auro-input>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-input required type="password" label="Password" helptext="Please enter a secure password."></auro-input>`}
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Email</auro-header>
 
@@ -83,9 +98,12 @@ class AuroInput extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-input required type="email" label="Email address" helptext="Please enter your email address"></auro-input>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-input required type="email" label="Email address" helptext="Please enter your email address"></auro-input>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-input required type="email" label="Email address" helptext="Please enter your email address"></auro-input>`}
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Disabled</auro-header>
 
@@ -96,11 +114,14 @@ class AuroInput extends Component {
           <auro-input disabled required type="email" label="Email address" helptext="Please enter your email address"></auro-input>
           <auro-input disabled required type="password" label="Password" helptext="Please enter a secure password"></auro-input>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-input disabled required label="Address" helptext="Please enter your home address"></auro-input>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-input disabled required label="Address" helptext="Please enter your home address"></auro-input>
 <auro-input disabled required type="email" label="Email address" helptext="Please enter your email address"></auro-input>
 <auro-input disabled required type="password" label="Password" helptext="Please enter a secure password"></auro-input>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Disable auto validation</auro-header>
 
@@ -110,10 +131,13 @@ class AuroInput extends Component {
           <auro-input noValidate required label="Address" helptext="Please enter your home address"></auro-input>
           <auro-input noValidate required type="email" label="Email address" helptext="Please enter your email address"></auro-input>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-input noValidate required label="Address" helptext="Please enter your home address"></auro-input>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-input noValidate required label="Address" helptext="Please enter your home address"></auro-input>
 <auro-input noValidate required type="email" label="Email address" helptext="Please enter your email address"></auro-input>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
 
         <LinkIcons

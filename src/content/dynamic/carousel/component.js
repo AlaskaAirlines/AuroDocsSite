@@ -44,7 +44,7 @@ class AuroCarousel extends Component {
         <auro-header level="2" display="700">The setup</auro-header>
         <p>The following is an example script to scroll through the Carousel</p>
 
-        <Highlight className='javascript afterCode'>
+        <Highlight className='javascript afterCode openCode'>
           {`
   const panes = document.querySelectorAll('auro-pane');
   let selectedPane = document.querySelector('auro-pane[selected]');
@@ -71,8 +71,10 @@ class AuroCarousel extends Component {
             ))}
           </auro-carousel>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-carousel label="Flight options">
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-carousel label="Flight options">
   <auro-pane date="2020-01-01"></auro-pane>
   <auro-pane date="2020-01-02"></auro-pane>
   <auro-pane date="2020-01-03"></auro-pane>
@@ -83,7 +85,8 @@ class AuroCarousel extends Component {
   ...
 
 </auro-carousel>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Carousel with static toggles</auro-header>
         <div className="demo--inline exampleWrapper">
@@ -98,8 +101,10 @@ class AuroCarousel extends Component {
             ))}
           </auro-carousel>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-carousel label="Flight options" displayArrows>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-carousel label="Flight options" displayArrows>
   <auro-pane date="2020-01-01"></auro-pane>
   <auro-pane date="2020-01-02"></auro-pane>
   <auro-pane date="2020-01-03"></auro-pane>
@@ -110,7 +115,8 @@ class AuroCarousel extends Component {
   ...
 
 </auro-carousel>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Carousel of images w/custom scroll distance</auro-header>
         <div className="demo--inline exampleWrapper">
@@ -120,8 +126,10 @@ class AuroCarousel extends Component {
             ))}
           </auro-carousel>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-carousel label="Images" scrollDistance="600">
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-carousel label="Images" scrollDistance="600">
   <img src="https://picsum.photos/200?random=0" alt="Random insert 0" />
   <img src="https://picsum.photos/200?random=1" alt="Random insert 1" />
   <img src="https://picsum.photos/200?random=2" alt="Random insert 2" />
@@ -138,7 +146,8 @@ class AuroCarousel extends Component {
 
   <img src="https://picsum.photos/200?random=99" alt="Random insert 99" />
 </auro-carousel>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
 
         <LinkIcons

@@ -75,9 +75,10 @@ class AuroPopover extends Component {
             <auro-hyperlink id="hyperlink" href="#" slot="trigger">Hello world!</auro-hyperlink>
           </auro-popover>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`
 <auro-popover for="button1">
   Top popover content!
   <auro-button id="button1" slot="trigger">Popover Test</auro-button>
@@ -105,7 +106,8 @@ class AuroPopover extends Component {
   <auro-hyperlink id="hyperlink" href="#" slot="trigger">Hello world!</auro-hyperlink>
 </auro-popover>
           `}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
 
         <auro-header level="2" display="700">Using disconnected elements</auro-header>
@@ -132,9 +134,10 @@ class AuroPopover extends Component {
           <auro-popover for="hyperlink2">This is a link, but I think you already knew that.</auro-popover>
 
         </div>
-
-        <Highlight className='html afterCode'>
-          {`
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`
 <auro-popover for="button3">Top popover content!</auro-popover>
 <auro-button id="button3">Popover Test</auro-button>
 
@@ -152,7 +155,8 @@ class AuroPopover extends Component {
 <auro-popover for="hyperlink2">This is a link, but I think you already knew that.</auro-popover>
 <auro-hyperlink id="hyperlink2" href="#">Hello world!</auro-hyperlink>
           `}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <p>Please reference <auro-hyperlink relative href="/icons/install">Auro Icons install instructions</auro-hyperlink>for more info on using icons.</p>
 

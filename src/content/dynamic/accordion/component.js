@@ -40,12 +40,16 @@ class AuroAccordion extends Component {
             <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
           </auro-accordion>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-accordion id="cookiePolicy">
+
+        <auro-accordion id="cookiePolicyCode" lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-accordion id="cookiePolicy">
   <span slot="trigger">Cookie Policy</span>
   <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
 </auro-accordion>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Multi-content accordion</auro-header>
         <p>The auro-accordion multi-content use case requires the use of the <code>auro-accordion-group</code> component.</p>
@@ -77,8 +81,11 @@ class AuroAccordion extends Component {
             </auro-accordion>
           </auro-accordion-group>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-accordion-group>
+
+        <auro-accordion id="cookiePolicyCode" lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-accordion-group>
 <auro-accordion id="flightNotice">
   <span slot="trigger">Flight notifications</span>
 
@@ -104,7 +111,8 @@ class AuroAccordion extends Component {
   </auro-checkbox-group>
 </auro-accordion>
 </auro-accordion-group>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
 
         <LinkIcons

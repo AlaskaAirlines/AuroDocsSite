@@ -67,48 +67,55 @@ class AuroDialog extends Component {
 
         <p>If for any reason this feature is unwanted, simple remove this reference and the dialog will scroll as expected. NOTE: This comes highly unrecommended.</p>
 
-        <Highlight className='js afterCode'>
+        <Highlight className='js afterCode openCode'>
           {`
-toggleDialog = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
+  toggleDialog = (elName) => {
+    let dialog = document.querySelector(elName);
+    const html = document.querySelector('html');
 
-  html.style.overflow = 'hidden';
-  dialog.removeAttribute("open");
-  dialog.setAttribute("open", true);
-}
+    html.style.overflow = 'hidden';
+    dialog.removeAttribute("open");
+    dialog.setAttribute("open", true);
+  }
 
-toggleDialogClose = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
+  toggleDialogClose = (elName) => {
+    let dialog = document.querySelector(elName);
+    const html = document.querySelector('html');
 
-  html.style.overflow = '';
-  dialog.removeAttribute("open");
-}
+    html.style.overflow = '';
+    dialog.removeAttribute("open");
+  }
+
 `}
         </Highlight>
 
         <p>Once the JavaScript is added to the scope of the experience, the next part is adding a trigger. In this example, the button component will toggle a dialog with the ID of <code>#demo1</code>.</p>
 
-        <Highlight className='html afterCode'>
-          {`<auro-button onClick={() => this.toggleDialog('#demo1')}>Open Dialog</auro-button>`}
+        <Highlight className='html afterCode openCode'>
+          {`
+  <auro-button onClick={() => this.toggleDialog('#demo1')}>
+    Open Dialog
+  </auro-button>
+
+`}
         </Highlight>
 
         <auro-header level="2" display="700">The structure</auro-header>
 
         <p>The structure of the dialog itself consists of three slots. The <code>header</code>, <code>content</code> and <code>footer</code> slots. See the scaffolding example below for adding content to the component.</p>
 
-        <Highlight className='html afterCode'>
+        <Highlight className='html afterCode openCode'>
           {`
-<auro-dialog id="[unique ID]">
-  <span slot="header">[header content]</span>
-  <span slot="content">
-    [body content]
-  </span>
-  <span slot="footer">
-    [footer content]
-  </span>
-</auro-dialog>
+  <auro-dialog id="[unique ID]">
+    <span slot="header">[header content]</span>
+    <span slot="content">
+      [body content]
+    </span>
+    <span slot="footer">
+      [footer content]
+    </span>
+  </auro-dialog>
+
 `}
         </Highlight>
 
@@ -168,10 +175,10 @@ toggleDialogClose = (elName) => {
             </div>
           </span>
         </auro-dialog>
-
-        <Highlight className='html afterCode'>
-          {`
-<div className="demo--inline exampleWrapper auro_containedButtons">
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<div className="demo--inline exampleWrapper auro_containedButtons">
   <auro-button onClick={() => this.toggleDialog('#defaultDialog')}>Open default dialog</auro-button>
   <auro-button onClick={() => this.toggleDialog('#mediumDialog')}>Open medium dialog</auro-button>
   <auro-button onClick={() => this.toggleDialog('#smallDialog')}>Open small dialog</auro-button>
@@ -197,7 +204,8 @@ toggleDialogClose = (elName) => {
     <ContentExample />
   </span>
 </auro-dialog>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
 
 
@@ -256,9 +264,10 @@ toggleDialogClose = (elName) => {
             </div>
           </span>
         </auro-dialog>
-
-        <Highlight className='html afterCode'>
-          {`<div className="demo--inline exampleWrapper auro_containedButtons">
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<div className="demo--inline exampleWrapper auro_containedButtons">
   <auro-button onClick={() => this.toggleDialog('#defaultModalDialog')}>Open default modal</auro-button>
   <auro-button onClick={() => this.toggleDialog('#mediumModalDialog')}>Open medium modal</auro-button>
   <auro-button onClick={() => this.toggleDialog('#smallModalDialog')}>Open small modal</auro-button>
@@ -305,7 +314,8 @@ toggleDialogClose = (elName) => {
     </div>
   </span>
 </auro-dialog>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
 
 
@@ -352,9 +362,10 @@ toggleDialogClose = (elName) => {
             </div>
           </span>
         </auro-dialog>
-
-        <Highlight className='html afterCode'>
-          {`<div className="demo--inline exampleWrapper auro_containedButtons">
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<div className="demo--inline exampleWrapper auro_containedButtons">
   <auro-button onClick={() => this.toggleDialog('#smLgDialog')}>Open [sm lg] dialog</auro-button>
   <auro-button onClick={() => this.toggleDialog('#smMdDialog')}>Open [md lg] dialog</auro-button>
 </div>
@@ -386,7 +397,8 @@ toggleDialogClose = (elName) => {
     </div>
   </span>
 </auro-dialog>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
 
 
@@ -403,7 +415,7 @@ toggleDialogClose = (elName) => {
         <p>Part of the dialog design spec is its responsive padding. To take advantage of this for your content within the scope of the dialog, be sure to use the selector <code>unformattedWrapper</code> that can be imported from the package here;</p>
 
         <pre>
-          <code className="html afterCode hljs">
+          <code className="html afterCode hljs openCode">
             import '@alaskaairux/auro-interruption/dist/style-blank.css'
           </code>
         </pre>
@@ -424,9 +436,10 @@ toggleDialogClose = (elName) => {
             </div>
           </span>
         </auro-dialog>
-
-        <Highlight className='html afterCode'>
-          {`import '@alaskaairux/auro-interruption/dist/style-blank.css'
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`import '@alaskaairux/auro-interruption/dist/style-blank.css'
 
 <auro-button onClick={() => this.toggleDialog('#unformattedMdDialog')}>Unformatted Medium Dialog</auro-button>
 
@@ -439,7 +452,8 @@ toggleDialogClose = (elName) => {
     </div>
   </span>
 </auro-dialog>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-interruption"

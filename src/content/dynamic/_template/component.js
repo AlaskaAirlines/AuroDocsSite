@@ -38,10 +38,12 @@ class Auro[Component] extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-component >Words ...</auro-component>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-component >Words ...</auro-component>`}
-        </Highlight>
-
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-component >Words ...</auro-component>`}
+          </Highlight>
+        </auro-accordion>
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-component"

@@ -45,56 +45,68 @@ class AuroHeader extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-header>Hello World!</auro-header>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-header>Hello World!</auro-header>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-header>Hello World!</auro-header>`}
+          </Highlight>
+        </auro-accordion>
 
         <p>Changing the header level does not change the header style. This example will output an <code>h3</code> header element with the default <code>header--display</code> style.</p>
 
         <div className="demo--inline exampleWrapper">
           <auro-header level="3">Hello World!</auro-header>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-header level="3">Hello World!</auro-header>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-header level="3">Hello World!</auro-header>`}
+          </Highlight>
+        </auro-accordion>
 
         <p>Or vice-versa. This example will output an <code>h1</code> header element with the <code>header--800</code> style.</p>
 
         <div className="demo--inline exampleWrapper">
           <auro-header display="800">Hello World!</auro-header>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-header display="800">Hello World!</auro-header>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-header display="800">Hello World!</auro-header>`}
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Header examples</auro-header>
 
         <div className="demo--inline exampleWrapper">
           <auro-header level="2" display="600">Hello World!</auro-header>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-header level="2" display="600">Hello World!</auro-header>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight class="spaceAfterCode">
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-header level="2" display="600">Hello World!</auro-header>`}
+          </Highlight>
+        </auro-accordion>
 
         <div className="demo--inline exampleWrapper">
           <auro-header level="3" display="500">Hello World!</auro-header>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-header level="3" display="500">Hello World!</auro-header>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight class="spaceAfterCode">
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-header level="3" display="500">Hello World!</auro-header>`}
+          </Highlight>
+        </auro-accordion>
 
         <div className="demo--inline exampleWrapper">
           <auro-header level="5" display="400">Hello World!</auro-header>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-header level="5" display="400">Hello World!</auro-header>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-header level="5" display="400">Hello World!</auro-header>`}
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="3" display="600">Adjust margins</auro-header>
         <p>In some cases the margin between elements may need to be adjusted. To do this, the <code>auro-header</code> component supports adjusting either the <code>top</code>, <code>bottom</code> or <code>both</code> margins. This coupled with the <code>size</code> prop, developers have a <auro-hyperlink href="/components/auro/header/api" relative>full range of options.</auro-hyperlink></p>
@@ -110,14 +122,16 @@ class AuroHeader extends Component {
             <li>thing ...</li>
           </ol>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-header level="2" display="500" margin="bottom" size="xs">Hello World!</auro-header>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-header level="2" display="500" margin="bottom" size="xs">Hello World!</auro-header>
 <ol className="util_stackMarginNone--top">
   <li>... thing</li>
   <li>thing ...</li>
 </ol>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <p>The following example shows how you can update <code>both</code> margins to use the <code>xl</code> size setting.</p>
 
@@ -128,14 +142,16 @@ class AuroHeader extends Component {
             <li>thing ...</li>
           </ol>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-header level="2" display="500" margin="both" size="xl">Hello World!</auro-header>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-header level="2" display="500" margin="both" size="xl">Hello World!</auro-header>
 <ol className="util_stackMarginNone--top">
   <li>... thing</li>
   <li>thing ...</li>
 </ol>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="3" display="600">Color inheritance</auro-header>
         <p>If there is a CSS selector that has the color definition you want to use with the header, simply wrap the header in a <code>div</code> or <code>span</code> and the auro-header component will inherit the color. </p>
@@ -145,23 +161,29 @@ class AuroHeader extends Component {
             <auro-header level="3" display="700">There has been an error</auro-header>
           </div>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<div className="error--on-light">
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<div className="error--on-light">
   <auro-header level="3" display="700">There has been an error</auro-header>
 </div>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="3" display="600">Direct color use</auro-header>
-        <p>If it's prefered not to wrap the header component in another element, use the <code>color</code> property to set the color value directly on the header element.</p>
+        <p>If it's preferred not to wrap the header component in another element, use the <code>color</code> property to set the color value directly on the header element.</p>
 
         <div className="demo--inline exampleWrapper">
           <auro-header level="3" display="700" color="var(--auro-color-border-active-on-light)">On the journey together</auro-header>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-header level="3" display="700" color="var(--auro-color-border-active-on-light)">On the journey together</auro-header>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-header level="3" display="700" color="var(--auro-color-border-active-on-light)">
+  On the journey together
+</auro-header>`}
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="3" display="600">Classic environment support</auro-header>
         <p>One of the challenges of using a design system is coping with legacy CSS that surrounds the new component. While web components are encapsulated, things like <code>font-size</code> will pierce the shadow DOM. To help combat this, the <code>auro-header</code> component supports a <code>fixed</code> attribute. Setting <code>fixed</code> will over-ride the component&#39;s dependency on REM values and use pixel values instead. </p>
@@ -171,10 +193,14 @@ class AuroHeader extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-header level="3" display="700" fixed>On the journey together</auro-header>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-header level="3" display="700" fixed>On the journey together</auro-header>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-header level="3" display="700" fixed>
+  On the journey together
+</auro-header>`}
+          </Highlight>
+        </auro-accordion>
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-header"

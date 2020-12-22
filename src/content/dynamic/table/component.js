@@ -50,35 +50,37 @@ class AuroTable extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-table nowrap columnHeaders={headers} componentData={data}>Default text</auro-table>
         </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`
+  <auro-table
+    nowrap
+    columnHeaders='["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]'
+    componentData='[
+      {"": "Dance class", "Monday": "5:00pm","Wednesday": "5:00pm" },
+      {"": "Night classes", "Thursday": "7:00pm","Friday": "7:00pm" },
+      {"": "Team meeting", "Wednesday": "10:00am" },
+      {"": "Morning workout", "Monday": "8:00am", "Tuesday": "8:00am", "Wednesday": "8:00am", "Thursday": "8:00am", "Friday": "8:00am" }
+    ]'>
+  </auro-table>
+`}
+          </Highlight>
+        </auro-accordion>
+        <h2 className="auro_heading auro_heading--700">React and Svelte support</h2>
 
-        <Highlight className='html afterCode'>
+        <Highlight className='html afterCode openCode'>
           {`
-<auro-table
-  nowrap
-  columnHeaders='["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]'
-  componentData='[
+  const headers=JSON.stringify(["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]);
+  const data=JSON.stringify([
     {"": "Dance class", "Monday": "5:00pm","Wednesday": "5:00pm" },
     {"": "Night classes", "Thursday": "7:00pm","Friday": "7:00pm" },
     {"": "Team meeting", "Wednesday": "10:00am" },
     {"": "Morning workout", "Monday": "8:00am", "Tuesday": "8:00am", "Wednesday": "8:00am", "Thursday": "8:00am", "Friday": "8:00am" }
-  ]'>
-</auro-table>
-`}
-        </Highlight>
+  ])
 
-        <h2 className="auro_heading auro_heading--700">React and Svelte support</h2>
+  <auro-table nowrap columnHeaders={headers} componentData={data}>Default text</auro-table>
 
-        <Highlight className='html afterCode'>
-          {`
-const headers=JSON.stringify(["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]);
-const data=JSON.stringify([
-  {"": "Dance class", "Monday": "5:00pm","Wednesday": "5:00pm" },
-  {"": "Night classes", "Thursday": "7:00pm","Friday": "7:00pm" },
-  {"": "Team meeting", "Wednesday": "10:00am" },
-  {"": "Morning workout", "Monday": "8:00am", "Tuesday": "8:00am", "Wednesday": "8:00am", "Thursday": "8:00am", "Friday": "8:00am" }
-])
-
-<auro-table nowrap columnHeaders={headers} componentData={data}>Default text</auro-table>
 `}
         </Highlight>
 
@@ -86,30 +88,31 @@ const data=JSON.stringify([
 
         <p>For use cases where the general design of the Auro Table is needed, but the component is unseable, please use the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-auro-css-#{$scope}.auro_table" target="_blank">.auro_table</auro-hyperlink> styles from the Web Core Style Sheets library.</p>
 
-        <Highlight className='html afterCode'>
+        <Highlight className='html afterCode openCode'>
           {`
-<table class="auro_table">
-  <thead>
-    <tr>
-      <th>The table header</th>
-      <th>The table header</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>The table body</td>
-      <td>with two columns</td>
-    </tr>
-    <tr>
-      <td>The table body</td>
-      <td>with two columns</td>
-    </tr>
-    <tr>
-      <td>The table body</td>
-      <td>with two columns</td>
-    </tr>
-  </tbody>
-</table>
+  <table class="auro_table">
+    <thead>
+      <tr>
+        <th>The table header</th>
+        <th>The table header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>The table body</td>
+        <td>with two columns</td>
+      </tr>
+      <tr>
+        <td>The table body</td>
+        <td>with two columns</td>
+      </tr>
+      <tr>
+        <td>The table body</td>
+        <td>with two columns</td>
+      </tr>
+    </tbody>
+  </table>
+
 `}
         </Highlight>
 

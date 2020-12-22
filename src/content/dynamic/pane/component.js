@@ -46,11 +46,14 @@ class AuroPane extends Component {
           <auro-pane date="2020-09-21" selected></auro-pane>
           <auro-pane date="2020-09-22" disabled></auro-pane>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-pane date="2020-09-20"></auro-pane>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-pane date="2020-09-20"></auro-pane>
 <auro-pane date="2020-09-21" selected></auro-pane>
 <auro-pane date="2020-09-22" disabled></auro-pane>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Display date and price</auro-header>
         <div className="demo--inline exampleWrapper paneContainer">
@@ -58,11 +61,14 @@ class AuroPane extends Component {
           <auro-pane date="2020-09-21" price="$501" selected></auro-pane>
           <auro-pane date="2020-09-22" price="" disabled></auro-pane>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-pane date="2020-09-10" price="$500"></auro-pane>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-pane date="2020-09-10" price="$500"></auro-pane>
 <auro-pane date="2020-09-21" price="$501" selected></auro-pane>
 <auro-pane date="2020-09-22" price="" disabled></auro-pane>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-pane"

@@ -34,34 +34,50 @@ class AuroIcon extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-alaska style={{width: '192px'}}></auro-alaska>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-alaska style={{width: '192px'}}></auro-alaska>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-alaska style={{width: '192px'}}></auro-alaska>`}
+          </Highlight>
+        </auro-accordion>
+
 
         <p>Example with the <code>onDark</code> property.</p>
         <div className="demo--inline exampleWrapper--ondark">
           <auro-alaska style={{width: '192px'}} onDark></auro-alaska>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-alaska style={{width: '192px'}} onDark></auro-alaska>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-alaska style={{width: '192px'}} onDark></auro-alaska>`}
+          </Highlight>
+        </auro-accordion>
+
 
         <auro-header level="2" display="700">Official logo with tagline</auro-header>
         <p>Using the <code>official</code> property will display the Alaska Airlines logo with the official tagline.</p>
         <div className="demo--inline exampleWrapper">
           <auro-alaska style={{width: '192px'}} official></auro-alaska>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-alaska style={{width: '192px'}} official></auro-alaska>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-alaska style={{width: '192px'}} official></auro-alaska>`}
+          </Highlight>
+        </auro-accordion>
+
 
         <p>Example with the <code>onDark</code> property.</p>
         <div className="demo--inline exampleWrapper--ondark">
           <auro-alaska style={{width: '192px'}} onDark official></auro-alaska>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-alaska style={{width: '192px'}} onDark official></auro-alaska>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-alaska style={{width: '192px'}} onDark official></auro-alaska>`}
+          </Highlight>
+        </auro-accordion>
+
 
         <auro-header level="2" display="700">Auto scale support</auro-header>
         <p>The Alaska Airline logo has a preferred version of the logo depending in the size of the rendering. The auro-alaska custom element is auto-aware and will display the proper version of the logo depending on the size of the container automatically.</p>
@@ -71,12 +87,16 @@ class AuroIcon extends Component {
           <auro-alaska style={{width: '192px'}}></auro-alaska><br/>
           <auro-alaska style={{width: '528px'}}></auro-alaska>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-alaska style={{width: '72px'}}></auro-alaska>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-alaska style={{width: '72px'}}></auro-alaska>
 <auro-alaska style={{width: '108px'}}></auro-alaska>
 <auro-alaska style={{width: '192px'}}></auro-alaska>
 <auro-alaska style={{width: '528px'}}></auro-alaska>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
+
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-icon"

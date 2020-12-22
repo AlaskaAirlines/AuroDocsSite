@@ -130,16 +130,13 @@ blockquote {
 }
 
 // ------ component demo UI -----------
-.html {
-  padding: $auro-size-md !important;
-
-  @include auro-breakpoint--sm {
-    padding: var(--auro-size-lg) var(--auro-size-xs) var(--auro-size-lg) var(--auro-size-lg) !important;
-  }
-}
-
 pre {
   margin-top: 0;
+  margin-bottom: 0;
+}
+
+.afterCode.hljs.openCode {
+  background-color: #f8f8f8 !important;
 }
 
 .exampleWrapper {
@@ -148,6 +145,11 @@ pre {
 
   background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
   overflow: auto;
+}
+
+.spaceAfterCode {
+  display: block;
+  margin-bottom: 1rem;
 }
 
 .exampleWrapper--ondark {
@@ -180,8 +182,10 @@ pre {
 }
 
 .afterCode {
-  margin-bottom: var(--auro-size-xxl);
-  border-width: 0 1px 1px;
+ &.hljs {
+   padding-top: 0 !important;
+   background-color: unset !important;
+ }
 }
 
 .dataSelected {

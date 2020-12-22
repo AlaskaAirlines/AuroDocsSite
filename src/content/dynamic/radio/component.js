@@ -42,37 +42,49 @@ class AuroRadioButton extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>
         </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>`}
+          </Highlight>
+        </auro-accordion>
 
-        <Highlight className='html afterCode'>
-          {`<auro-radio id="radio1" label="Yes" name="radioDemo" value="yes"></auro-radio>`}
-        </Highlight>
 
         <h3 className="auro_heading auro_heading--500">Checked</h3>
         <div className="demo--inline exampleWrapper">
           <auro-radio id="radio2" label="No" name="radioDemo" value="no" checked="true"></auro-radio>
         </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-radio id="radio2" label="No" name="radioDemo" value="no" checked="true"></auro-radio>`}
+          </Highlight>
+        </auro-accordion>
 
-        <Highlight className='html afterCode'>
-          {`<auro-radio id="radio2" label="No" name="radioDemo" value="no" checked="true"></auro-radio>`}
-        </Highlight>
 
         <h3 className="auro_heading auro_heading--500">Error</h3>
         <div className="demo--inline exampleWrapper">
           <auro-radio id="radio3" label="Oops" name="radioDemo" value="oops" error></auro-radio>
         </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-radio id="radio3" label="Oops" name="radioDemo" value="oops" error></auro-radio>`}
+          </Highlight>
+        </auro-accordion>
 
-        <Highlight className='html afterCode'>
-          {`<auro-radio id="radio3" label="Oops" name="radioDemo" value="oops" error></auro-radio>`}
-        </Highlight>
 
         <h3 className="auro_heading auro_heading--500">Disabled</h3>
         <div className="demo--inline exampleWrapper">
           <auro-radio id="radio3" label="Nope" name="radioDemo" value="nope" disabled></auro-radio>
         </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-radio id="radio3" label="Nope" name="radioDemo" value="nope" disabled></auro-radio>`}
+          </Highlight>
+        </auro-accordion>
 
-        <Highlight className='html afterCode'>
-          {`<auro-radio id="radio3" label="Nope" name="radioDemo" value="nope" disabled></auro-radio>`}
-        </Highlight>
 
         <h3 className="auro_heading auro_heading--500">Radio button Group</h3>
         <p>The auro-radio component is designed to work in concert with the auro-radio-group component. </p>
@@ -89,14 +101,18 @@ class AuroRadioButton extends Component {
             <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
           </auro-radio-group>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-radio-group required>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-radio-group required>
   <span slot="legend">Form label goes here</span>
   <auro-radio id="radio10" label="Yes" name="radioDemoA" value="yes"></auro-radio>
   <auro-radio id="radio11" label="No" name="radioDemoA" value="no"></auro-radio>
   <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
 </auro-radio-group>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
+
 
         <h3 className="auro_heading auro_heading--500">Disabled Radio Group</h3>
         <p>The auro-checkbox component is designed to work in concert with the auro-checkbox-group component and supports a whole-group <code>disabled</code> mode.</p>
@@ -109,14 +125,18 @@ class AuroRadioButton extends Component {
             <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
           </auro-radio-group>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-radio-group disabled>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-radio-group disabled>
   <span slot="legend">Form label goes here</span>
   <auro-radio id="radio10" label="Yes" name="radioDemoA" value="yes"></auro-radio>
   <auro-radio id="radio11" label="No" name="radioDemoA" value="no" checked></auro-radio>
   <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
 </auro-radio-group>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
+
 
         <h3 className="auro_heading auro_heading--500">Disabled Radio inputs </h3>
         <p>The auro-checkbox supports individual <code>disabled</code> inputs. </p>
@@ -128,14 +148,18 @@ class AuroRadioButton extends Component {
             <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
           </auro-radio-group>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-radio-group required>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-radio-group required>
   <span slot="legend">Form label goes here</span>
   <auro-radio id="radio10" label="Yes" name="radioDemoA" value="yes"></auro-radio>
   <auro-radio id="radio11" label="No" name="radioDemoA" value="no" disabled></auro-radio>
   <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
 </auro-radio-group>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
+
 
         <h3 className="auro_heading auro_heading--500">Radio Group with error</h3>
         <p>The auro-radio component is designed to work in concert with the auro-radio-group component. </p>
@@ -147,14 +171,18 @@ class AuroRadioButton extends Component {
             <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
           </auro-radio-group>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-radio-group required error="This is an error message">
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-radio-group required error="This is an error message">
   <span slot="legend">Form label goes here</span>
   <auro-radio id="radio10" label="Yes" name="radioDemoA" value="yes"></auro-radio>
   <auro-radio id="radio11" label="No" name="radioDemoA" value="no" checked></auro-radio>
   <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
 </auro-radio-group>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
+
 
         <h3 className="auro_heading auro_heading--500">Horizontal Radio Group</h3>
         <p>Using the <code>horizontal</code> attribute will render the checkbox options on a horizontal line.</p>
@@ -166,14 +194,18 @@ class AuroRadioButton extends Component {
           <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
         </auro-radio-group>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-radio-group horizontal required>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-radio-group horizontal required>
   <span slot="legend">Form label goes here</span>
   <auro-radio id="radio10" label="Yes" name="radioDemoA" value="yes"></auro-radio>
   <auro-radio id="radio11" label="No" name="radioDemoA" value="no"></auro-radio>
   <auro-radio id="radio12" label="Maybe" name="radioDemoA" value="maybe"></auro-radio>
 </auro-radio-group>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
+
 
         <h3 className="auro_heading auro_heading--500">Horizontal Radio Group limitation</h3>
         <p>Using the <code>horizontal</code> attribute has a limit of 3 options. Beyond three, options will be listed in vertically. </p>
@@ -187,15 +219,19 @@ class AuroRadioButton extends Component {
             <auro-radio id="radio14" label="Is this a test?" name="radioDemoA" value="is this a test"></auro-radio>
           </auro-radio-group>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-checkbox-group horizontal>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-checkbox-group horizontal>
   <span slot="legend">Example group</span>
   <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option One</auro-checkbox>
   <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option Two</auro-checkbox>
   <auro-checkbox id="optionThree" name="exampleOptions" value="option two">Option Three</auro-checkbox>
   <auro-checkbox id="optionFour" name="exampleOptions" value="option Four">Option Three</auro-checkbox>
 </auro-checkbox-group>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
+
 
 
         <LinkIcons

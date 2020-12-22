@@ -48,46 +48,53 @@ class AuroButtons extends Component {
           <auro-button>Primary</auro-button>
           <auro-button disabled>Primary</auro-button>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-button>Primary</auro-button>
+        <auro-accordion lowProfile justifyRight class="spaceAfterCode">
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-button>Primary</auro-button>
 <auro-button disabled>Primary</auro-button>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <div className="demo--inline exampleWrapper">
           <auro-button secondary>Secondary</auro-button>
           <auro-button secondary disabled>Secondary</auro-button>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-button secondary>Secondary</auro-button>
+        <auro-accordion lowProfile justifyRight class="spaceAfterCode">
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-button secondary>Secondary</auro-button>
 <auro-button secondary disabled>Secondary</auro-button>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <div className="demo--inline exampleWrapper">
           <auro-button tertiary>Tertiary</auro-button>
           <auro-button tertiary disabled>Tertiary</auro-button>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-button tertiary>Tertiary</auro-button>
+        <auro-accordion lowProfile justifyRight class="spaceAfterCode">
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-button tertiary>Tertiary</auro-button>
 <auro-button tertiary disabled>Tertiary</auro-button>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <div className="demo--inline exampleWrapper auro_containedButtons">
           <auro-button>Primary</auro-button>
           <auro-button secondary>Secondary</auro-button>
           <auro-button tertiary>Tertiary</auro-button>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`
-<div class="exampleWrapper auro_containedButtons">
-    <auro-button>Primary</auro-button>
-    <auro-button secondary>Secondary</auro-button>
-    <auro-button tertiary>Tertiary</auro-button>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<div class="exampleWrapper auro_containedButtons">
+  <auro-button>Primary</auro-button>
+  <auro-button secondary>Secondary</auro-button>
+  <auro-button tertiary>Tertiary</auro-button>
 </div>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Icon support</auro-header>
 
@@ -109,10 +116,10 @@ class AuroButtons extends Component {
             <auro-icon customcolor category="interface" name="heart-filled"></auro-icon>
           </auro-button>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`
-<auro-button>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-button>
   Activate WiFi
   <auro-icon customcolor category="in-flight" name="wifi"></auro-icon>
 </auro-button>
@@ -126,7 +133,8 @@ class AuroButtons extends Component {
   Love this ...
   <auro-icon customcolor category="interface" name="heart-filled"></auro-icon>
 </auro-button>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <h2 className="auro_heading auro_heading--700">Auro Button - fluid</h2>
 
@@ -135,15 +143,16 @@ class AuroButtons extends Component {
           <auro-button secondary fluid>Secondary</auro-button>
           <auro-button tertiary fluid>Tertiary</auro-button>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`
-<div className="demo--inline exampleWrapper">
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<div className="demo--inline exampleWrapper">
   <auro-button fluid>Primary</auro-button>
   <auro-button secondary fluid>Secondary</auro-button>
   <auro-button tertiary fluid>Tertiary</auro-button>
 </div>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <h2 className="auro_heading auro_heading--700">Auro Button - onDark</h2>
 
@@ -151,48 +160,55 @@ class AuroButtons extends Component {
           <auro-button ondark>Primary</auro-button>
           <auro-button ondark disabled>Primary</auro-button>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-button ondark>Primary</auro-button>
+        <auro-accordion lowProfile justifyRight class="spaceAfterCode">
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-button ondark>Primary</auro-button>
 <auro-button ondark disabled>Primary</auro-button>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <div className="demo--inline exampleWrapper--ondark">
           <auro-button secondary ondark>Secondary</auro-button>
           <auro-button secondary ondark disabled>Secondary</auro-button>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-button secondary ondark>Secondary</auro-button>
+        <auro-accordion lowProfile justifyRight class="spaceAfterCode">
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-button secondary ondark>Secondary</auro-button>
 <auro-button secondary ondark disabled>Secondary</auro-button>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <div className="demo--inline exampleWrapper--ondark">
           <auro-button tertiary ondark>Tertiary</auro-button>
           <auro-button tertiary ondark disabled>Tertiary</auro-button>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-button tertiary ondark>Tertiary</auro-button>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-button tertiary ondark>Tertiary</auro-button>
 <auro-button tertiary ondark disabled>Tertiary</auro-button>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <h2 className="auro_heading auro_heading--700">Auro Button - fluid</h2>
 
-<div className="demo--inline exampleWrapper--ondark">
-  <auro-button fluid ondark>Primary</auro-button>
-  <auro-button secondary fluid ondark>Secondary</auro-button>
-  <auro-button tertiary fluid ondark>Tertiary</auro-button>
-</div>
-
-<Highlight className='html afterCode'>
-  {`
-<div className="demo--inline exampleWrapper--ondark">
+        <div className="demo--inline exampleWrapper--ondark">
+          <auro-button fluid ondark>Primary</auro-button>
+          <auro-button secondary fluid ondark>Secondary</auro-button>
+          <auro-button tertiary fluid ondark>Tertiary</auro-button>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<div className="demo--inline exampleWrapper--ondark">
   <auro-button fluid ondark>Primary</auro-button>
   <auro-button secondary fluid ondark>Secondary</auro-button>
   <auro-button tertiary fluid ondark>Tertiary</auro-button>
 </div>`}
-</Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <h2 className="auro_heading auro_heading--700">Auro Button - pass function to button</h2>
 
@@ -202,16 +218,18 @@ class AuroButtons extends Component {
           <auro-button onClick={this.helloThere}>Primary</auro-button>
           <auro-button onClick={this.helloThere} disabled>Primary</auro-button>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`
 helloThere = () => {
   alert('Hello There!')
 }
 
 <auro-button onClick={this.helloThere}>Primary</auro-button>
 <auro-button onClick={this.helloThere} disabled>Primary</auro-button>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-button"

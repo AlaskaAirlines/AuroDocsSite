@@ -51,12 +51,15 @@ class AuroLoader extends Component {
           <auro-loader pulse md></auro-loader>
           <auro-loader laser></auro-loader>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-loader ringworm md></auro-loader>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-loader ringworm md></auro-loader>
 <auro-loader orbit md></auro-loader>
 <auro-loader pulse md></auro-loader>
 <auro-loader laser></auro-loader>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Loader sizes</auro-header>
         <p>The auro-loader element supports a scale of sizes.</p>
@@ -67,61 +70,75 @@ class AuroLoader extends Component {
           <auro-loader ringworm lg></auro-loader>
           <auro-loader ringworm xl></auro-loader>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-loader ringworm></auro-loader>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-loader ringworm></auro-loader>
 <auro-loader ringworm sm></auro-loader>
 <auro-loader ringworm md></auro-loader>
 <auro-loader ringworm lg></auro-loader>
 <auro-loader ringworm xl></auro-loader>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Color support</auro-header>
         <div className="demo--inline exampleWrapper">
           <auro-loader pulse onlight md></auro-loader>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-loader orbit onlight md></auro-loader>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-loader orbit onlight md></auro-loader>`}
+          </Highlight>
+        </auro-accordion>
 
         <div className="demo--inline exampleWrapper--ondark">
           <auro-loader pulse ondark md></auro-loader><br/>
           <auro-loader pulse white md></auro-loader>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-loader pulse ondark sm></auro-loader>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-loader pulse ondark sm></auro-loader>
 <auro-loader pulse white sm></auro-loader>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Custom color support</auro-header>
         <div className="demo--inline exampleWrapper">
-          <auro-loader class="orange" ringworm md></auro-loader>
+          <auro-loader style={{color: 'pink'}} ringworm md></auro-loader>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-loader class="orange" ringworm md></auro-loader>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-loader style={{color: 'pink'}} ringworm md></auro-loader>`}
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Custom animation speed</auro-header>
         <p>
           The <code>auro-loader</code> custom element has a CSS shadow part included in it's API. Create a custom selector using <code>::part(element)</code> and easily adjust the <code>animation-duration</code> as seen in the examples below.
         </p>
         <div className="demo--inline exampleWrapper--ondark">
-          {/* <auro-loader class="slow" white orbit sm></auro-loader> */}
           <auro-loader class="slow" ondark orbit lg></auro-loader>
           <auro-loader class="fast" white orbit xl></auro-loader>
         </div>
-        <Highlight className='css'>
-          {`.slow::part(element) {
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='css afterCode'>
+            {`.slow::part(element) {
   animation-duration: 8s;
 }
 
 .fast::part(element) {
   animation-duration: 1s;
 }`}
-        </Highlight>
-        <Highlight className='html afterCode'>
-          {`<auro-loader class="slow" ondark orbit lg></auro-loader>
+          </Highlight>
+          <Highlight className='html afterCode'>
+            {`<auro-loader class="slow" ondark orbit lg></auro-loader>
 <auro-loader class="fast" white orbit xl></auro-loader>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
 
         <LinkIcons

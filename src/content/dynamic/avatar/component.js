@@ -32,18 +32,24 @@ class AuroAvatar extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-avatar></auro-avatar>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-avatar></auro-avatar>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-avatar></auro-avatar>`}
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Component size option</auro-header>
         <p>The auro-avatar component supports a <code>sm</code> avatar size.</p>
         <div className="demo--inline exampleWrapper avatarDemo">
           <auro-avatar sm></auro-avatar>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-avatar sm></auro-avatar>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-avatar sm></auro-avatar>`}
+          </Highlight>
+        </auro-accordion>
 
 
         <auro-header level="2" display="700">Airport Codes</auro-header>
@@ -52,10 +58,13 @@ class AuroAvatar extends Component {
           <auro-avatar code="psp"></auro-avatar>
           <auro-avatar code="psp" sm></auro-avatar>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-avatar code="psp"></auro-avatar>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-avatar code="psp"></auro-avatar>
 <auro-avatar code="psp" sm></auro-avatar>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Custom images</auro-header>
         <p>The auro-avatar supports placement of custom images using the <code>img</code> attribute.</p>
@@ -63,10 +72,13 @@ class AuroAvatar extends Component {
           <auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
           <auro-avatar img="https://picsum.photos/200?random=1" sm></auro-avatar>
         </div>
-        <Highlight className='html afterCode'>
-          {`<auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-avatar img="https://picsum.photos/200?random=0"></auro-avatar>
 <auro-avatar img="https://picsum.photos/200?random=1" sm></auro-avatar>`}
-        </Highlight>
+          </Highlight>
+        </auro-accordion>
 
         <auro-header level="2" display="700">Accessibility options</auro-header>
         <p>The auro-avatar component is hidden from screen readers by default. The placement of altText using the  <code>alt</code> attribute in conjunction with the <code>ariaVisible</code> attribute will make the avatar visible to screen readers. </p>
@@ -74,10 +86,12 @@ class AuroAvatar extends Component {
         <div className="demo--inline exampleWrapper avatarDemo">
           <auro-avatar code="psp" ariaVisible alt="iconic image of Palm Springs, CA"></auro-avatar>
         </div>
-
-        <Highlight className='html afterCode'>
-          {`<auro-avatar code="psp" ariaVisible alt="iconic image of Palm Springs, CA"></auro-avatar>`}
-        </Highlight>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-avatar code="psp" ariaVisible alt="iconic image of Palm Springs, CA"></auro-avatar>`}
+          </Highlight>
+        </auro-accordion>
 
 
         <LinkIcons
