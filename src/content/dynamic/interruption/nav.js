@@ -7,6 +7,7 @@ export class Nav extends Component {
     return (
       <div role="tablist" className="tabList">
         <NavLink role="tab" exact className="tab link" to={`/components/auro/interruption`} activeClassName="is-active">Dialog</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/components/auro/interruption/drawer`} activeClassName="is-active">Drawer</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/interruption/install`} activeClassName="is-active">Install</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/interruption/api`} activeClassName="is-active">API</NavLink>
       </div>

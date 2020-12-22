@@ -89,8 +89,9 @@ import AuroAvatar from './content/dynamic/avatar/component';
 import AuroAvatarApi from './content/dynamic/avatar/api';
 import AuroAvatarInstall from './content/dynamic/avatar/install';
 
-// Dialog
+// Interruption [dialog, drawer]
 import AuroInterruption from './content/dynamic/interruption/component';
+import AuroInterruptionDrawer from './content/dynamic/interruption/drawer';
 import AuroInterruptionApi from './content/dynamic/interruption/api';
 import AuroInterruptionInstall from './content/dynamic/interruption/install';
 
@@ -452,6 +453,7 @@ function App() {
 
               {/* modal */}
               <Route exact path="/components/auro/interruption/"><AuroInterruption /></Route>
+              <Route exact path="/components/auro/interruption/drawer"><AuroInterruptionDrawer /></Route>
               <Route exact path="/components/auro/interruption/install"><AuroInterruptionInstall/></Route>
               <Route exact path="/components/auro/interruption/api"><AuroInterruptionApi /></Route>
 

@@ -43,6 +43,7 @@ Auro provides components and tools to help product teams work more efficiently. 
 
 Every cycle the Auro team releases something new. Here is a list of the new things recently added to the Auro Library!
 
+* [auro-drawer](/components/auro/interruption/drawer): The new auro-drawer has been added to the family of auro-interruptions.
 * [auro-alaska](/components/auro/icon/alaska): Released with auro-icon v3.0, auro-alaska is a new custom element dedicated for use with the Alaska Airlines logo.
 * [auro-badge](/components/auro/badge): A new HTML custom element for the use of drawing attention to additional interface information.
 * [auro-interruption](/components/auro/interruption): Re-introducing auro-dialog, the first of a family of users experiences designed to seamlessly introduce additional content into an existing flow.
