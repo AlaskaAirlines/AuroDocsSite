@@ -55,14 +55,14 @@ class AuroAvatar extends Component {
         <auro-header level="2" display="700">Airport Codes</auro-header>
         <p>The auro-avatar supports auto generation of pre-defined images using the <code>code</code> attribute.</p>
         <div className="demo--inline exampleWrapper avatarDemo">
-          <auro-avatar code="psp"></auro-avatar>
-          <auro-avatar code="psp" sm></auro-avatar>
+          <auro-avatar code="anc"></auro-avatar>
+          <auro-avatar code="mke" sm></auro-avatar>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
-            {`<auro-avatar code="psp"></auro-avatar>
-<auro-avatar code="psp" sm></auro-avatar>`}
+            {`<auro-avatar code="anc"></auro-avatar>
+<auro-avatar code="mke" sm></auro-avatar>`}
           </Highlight>
         </auro-accordion>
 
@@ -84,12 +84,12 @@ class AuroAvatar extends Component {
         <p>The auro-avatar component is hidden from screen readers by default. The placement of altText using the  <code>alt</code> attribute in conjunction with the <code>ariaVisible</code> attribute will make the avatar visible to screen readers. </p>
 
         <div className="demo--inline exampleWrapper avatarDemo">
-          <auro-avatar code="psp" ariaVisible alt="iconic image of Palm Springs, CA"></auro-avatar>
+          <auro-avatar code="pdx" ariaVisible alt="iconic image of Portland, OR"></auro-avatar>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
-            {`<auro-avatar code="psp" ariaVisible alt="iconic image of Palm Springs, CA"></auro-avatar>`}
+            {`<auro-avatar code="pdx" ariaVisible alt="iconic image of Portland, OR"></auro-avatar>`}
           </Highlight>
         </auro-accordion>
 
