@@ -35,7 +35,7 @@ class ReleasesBySprint extends Component {
         <Nav />
 
         <h1 className="auro_heading auro_heading--display">Auro release dashboard</h1>
-        <p>The following is a list of Auro product releases and changelog notes for the last four sprint relesae cycles.</p>
+        <p>The following is a list of Auro product releases and changelog notes for the last four sprint release cycles.</p>
 
         <Query query={RELEASES}>
           {({ loading, error, data }) => {
