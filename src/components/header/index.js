@@ -10,7 +10,7 @@ function Header() {
         </div>
         <div className="headerTitle">
           <span className="headerTitle-title">Auro</span>
-          <span className="headerTitle-tagline">Design System</span>
+          <span className="headerTitle-tagline">DESIGN SYSTEM</span>
         </div>
       </a>
 
