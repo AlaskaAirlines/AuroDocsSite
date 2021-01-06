@@ -35,7 +35,7 @@ class AuroAccordion extends Component {
         <auro-header level="2" display="700">Single accordion</auro-header>
         <p>The auro-accordion can be used as an individual element to hide/show content.</p>
         <div className="demo--inline exampleWrapper">
-          <auro-accordion id="cookiePolicy">
+          <auro-accordion>
             <span slot="trigger">Cookie Policy</span>
             <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
           </auro-accordion>
@@ -44,8 +44,82 @@ class AuroAccordion extends Component {
         <auro-accordion id="cookiePolicyCode" lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
-            {`<auro-accordion id="cookiePolicy">
+            {`<auro-accordion>
   <span slot="trigger">Cookie Policy</span>
+  <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+</auro-accordion>`}
+          </Highlight>
+        </auro-accordion>
+
+        <auro-header level="2" display="700">Accordion w/trigger sub-title</auro-header>
+        <p>Using the <code>subTrigger</code> slot users can add a sub-title to the trigger part of the component. </p>
+        <div className="demo--inline exampleWrapper">
+          <auro-accordion>
+            <span slot="trigger">Cookie Policy</span>
+            <span slot="subTrigger">Your privacy information</span>
+            <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+          </auro-accordion>
+        </div>
+
+        <auro-accordion id="cookiePolicyCode" lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-accordion>
+  <span slot="trigger">Cookie Policy</span>
+  <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+</auro-accordion>`}
+          </Highlight>
+        </auro-accordion>
+
+        <auro-header level="2" display="700">Accordion w/secondary type option</auro-header>
+        <p>Using the <code>secondaryType</code> property, the exposed content will use the <code>secondary</code> type style.</p>
+        <div className="demo--inline exampleWrapper">
+          <auro-accordion secondaryType>
+            <span slot="trigger">Cookie Policy</span>
+            <span slot="subTrigger">Your privacy information</span>
+            <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+          </auro-accordion>
+        </div>
+
+        <auro-accordion id="cookiePolicyCode" lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-accordion secondaryType>
+  <span slot="trigger">Cookie Policy</span>
+  <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+</auro-accordion>`}
+          </Highlight>
+        </auro-accordion>
+
+        <auro-header level="2" display="700">Accordion w/chromeless option</auro-header>
+        <p>Using the <code>chromeless</code> property, the accordion will remove the default border chrome for a more streamline look.n This can be paired with the <code>noProfile</code> option to remove outer padding of the accordion.</p>
+        <div className="demo--inline exampleWrapper">
+          <auro-accordion-group>
+            <auro-accordion chromeless>
+              <span slot="trigger">Cookie Policy</span>
+              <span slot="subTrigger">Your privacy information</span>
+              <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+            </auro-accordion>
+            <auro-accordion chromeless noProfile>
+              <span slot="trigger">Cookie Policy</span>
+              <span slot="subTrigger">Your privacy information</span>
+              <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+            </auro-accordion>
+          </auro-accordion-group>
+        </div>
+
+        <auro-accordion id="cookiePolicyCode" lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-accordion chromeless>
+  <span slot="trigger">Cookie Policy</span>
+  <span slot="subTrigger">Your privacy information</span>
+  <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+</auro-accordion>
+
+<auro-accordion chromeless noProfile>
+  <span slot="trigger">Cookie Policy</span>
+  <span slot="subTrigger">Your privacy information</span>
   <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
 </auro-accordion>`}
           </Highlight>
@@ -111,6 +185,86 @@ class AuroAccordion extends Component {
   </auro-checkbox-group>
 </auro-accordion>
 </auro-accordion-group>`}
+          </Highlight>
+        </auro-accordion>
+
+        <auro-header level="2" display="700">Low profile accordion</auro-header>
+        <p>Options for alternate style accordions. Using alternate properties like <code>lowProfile</code> for a thinner look then <code>justifyLeft</code> or <code>justifyRight</code> to reposition the accordion trigger. </p>
+        <p>The <code>subTrigger</code> slot is NOT supported with the <code>lowProfile</code> property.</p>
+        <div className="demo--inline exampleWrapper">
+          <auro-accordion-group>
+            <auro-accordion lowProfile>
+              <span slot="trigger">Cookie Policy</span>
+              <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+            </auro-accordion>
+            <auro-accordion lowProfile justifyRight>
+              <span slot="trigger">Cookie Policy</span>
+              <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+            </auro-accordion>
+            <auro-accordion lowProfile justifyLeft>
+              <span slot="trigger">Cookie Policy</span>
+              <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+            </auro-accordion>
+          </auro-accordion-group>
+        </div>
+
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-accordion lowProfile>
+  <span slot="trigger">Cookie Policy</span>
+  <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+</auro-accordion>
+
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">Cookie Policy</span>
+  <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+</auro-accordion>
+
+<auro-accordion lowProfile justifyLeft>
+  <span slot="trigger">Cookie Policy</span>
+  <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+</auro-accordion>`}
+          </Highlight>
+        </auro-accordion>
+
+        <auro-header level="2" display="700">No profile accordion</auro-header>
+        <p>The <code>noProfile</code> option is an extension of the <code>lowProfile</code> property. Additionally this  works with the <code>justifyLeft</code> or <code>justifyRight</code> properties. The main difference is that this accordion version removes the outer padding. </p>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-accordion-group>
+            <auro-accordion lowProfile noProfile>
+              <span slot="trigger">Cookie Policy</span>
+              <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+            </auro-accordion>
+            <auro-accordion lowProfile noProfile justifyRight>
+              <span slot="trigger">Cookie Policy</span>
+              <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+            </auro-accordion>
+            <auro-accordion lowProfile noProfile justifyLeft>
+              <span slot="trigger">Cookie Policy</span>
+              <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+            </auro-accordion>
+          </auro-accordion-group>
+        </div>
+
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-accordion lowProfile noProfile>
+  <span slot="trigger">Cookie Policy</span>
+  <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+</auro-accordion>
+
+<auro-accordion lowProfile noProfile justifyRight>
+  <span slot="trigger">Cookie Policy</span>
+  <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+</auro-accordion>
+
+<auro-accordion lowProfile noProfile justifyRight>
+  <span slot="trigger">Cookie Policy</span>
+  <p><auro-hyperlink href="/content/legal/privacy-policy">Review cookie policy</auro-hyperlink> to learn or withdraw your consent to all or some of the cookies our website uses.</p>
+</auro-accordion>`}
           </Highlight>
         </auro-accordion>
 
