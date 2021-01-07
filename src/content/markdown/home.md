@@ -43,6 +43,7 @@ Auro provides components and tools to help product teams work more efficiently. 
 
 Every cycle the Auro team releases something new. Here is a list of the new things recently added to the Auro Library!
 
+* [auro-accordion](/components/auro/accordion): New features to support lowProfile accordion headers.
 * [auro-avatar](/components/auro/avatar): MAJOR release. New images and updated bundle process.
 * [auro-drawer](/components/auro/interruption/drawer): The new auro-drawer has been added to the family of auro-interruptions.
 * [auro-alaska](/components/auro/icon/alaska): Released with auro-icon v3.0, auro-alaska is a new custom element dedicated for use with the Alaska Airlines logo.
