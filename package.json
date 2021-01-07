@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@alaskaairux/auro-accordion": "^1.2.0",
+    "@alaskaairux/auro-accordion": "^1.2.1",
     "@alaskaairux/auro-alerts": "^1.2.1",
     "@alaskaairux/auro-avatar": "^2.0.0",
     "@alaskaairux/auro-badge": "^1.1.0",
