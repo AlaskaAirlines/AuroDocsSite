@@ -6,14 +6,6 @@ Auro provides components and tools to help product teams work more efficiently. 
   <img alt="homepage hero image" src="/images/content/home.jpg" />
 </div><br>
 
-<p><auro-alerts information>
-  NOTICE: auro-icon v3.0 has been released, see the new <auro-hyperlink href="/components/auro/icon/alaska" relative>auro-alaska</auro-hyperlink> custom element for more information. Support for the Alaska logo with auro-icon has been removed.
-</auro-alerts></p><br/>
-
-<p><auro-alerts information>
-  NOTICE: auro-dialog has been deprecated, see the new <auro-hyperlink href="/components/auro/interruption" relative>auro-interruption</auro-hyperlink> custom element for more information related to auro-dialog.
-</auro-alerts></p>
-
 <div class="auro_util_displayFlex columns">
   <div>
     <auro-header display="700">Philosophy</auro-header>
@@ -37,7 +29,12 @@ Auro provides components and tools to help product teams work more efficiently. 
     <auro-hyperlink href="/icons/install" relative>Auro Icons</auro-hyperlink><br/>
     ... and a growing list of pre-built <auro-hyperlink href="/component-status" relative>universally useable Web Components.</auro-hyperlink>
   </div>
-</div>
+</div><br>
+
+<p><auro-alerts information>
+  auro-icon v3.0 has been released, see the new <auro-hyperlink href="/components/auro/icon/alaska" relative>auro-alaska</auro-hyperlink> custom element for more information. Support for the Alaska logo with auro-icon has been removed.<br><br>
+  auro-dialog has been deprecated, see the new <auro-hyperlink href="/components/auro/interruption" relative>auro-interruption</auro-hyperlink> custom element for more information related to auro-dialog.
+</auro-alerts></p>
 
 ## New Releases!
 
