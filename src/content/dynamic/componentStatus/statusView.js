@@ -217,7 +217,6 @@ class ComponentStatus extends Component {
               <th>Project</th>
               <th>Package</th>
               <th>Issues</th>
-              {/* <th>Contributor</th> */}
               <th className="short">Description</th>
             </tr>
           </thead>
@@ -301,7 +300,6 @@ class ComponentStatus extends Component {
               <th>Project</th>
               <th>Package</th>
               <th>Issues</th>
-              {/* <th>Contributor</th> */}
               <th>Description</th>
             </tr>
           </thead>
@@ -325,38 +323,6 @@ class ComponentStatus extends Component {
             </Query>
           </tbody>
         </table>
-
-        {/* <auro-header level="3" display="500">Legacy Orion components</auro-header> */}
-
-        {/* <table className="auro_table">
-        <thead>
-            <tr>
-              <th>Project</th>
-              <th>Package</th>
-              <th>Issues</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <Query query={odsComponentStatus}>
-              {({ loading, error, data }) => {
-                if (loading) return <tr><td></td></tr>;
-                if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
-
-                return data.organization.team.repositories.nodes.map(({name, description, url, homepageUrl, id, issues, releases, pullRequests}) => (
-                  <Repo key={id}
-                    pullRequests={pullRequests}
-                    name={name}
-                    description={description}
-                    url={url}
-                    homepageUrl={homepageUrl}
-                    issues={issues}
-                    releases={releases}/>
-                ));
-              }}
-            </Query>
-          </tbody>
-        </table> */}
       </section>
     )
   }
