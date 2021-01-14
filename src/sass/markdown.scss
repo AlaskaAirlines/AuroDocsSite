@@ -183,3 +183,22 @@ $prefix: null;
     color: var(--auro-color-base-gray-100);
   }
 }
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: #f8f8f8;
+}
+
+auro-accordion {
+  pre[class*="language-"] {
+    background: none;
+    margin-bottom: 0;
+  }
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  font-family: monospace;
+}
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

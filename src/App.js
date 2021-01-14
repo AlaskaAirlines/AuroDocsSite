@@ -106,6 +106,11 @@ import AuroAlerts from './content/dynamic/alerts/component';
 import AuroAlertsApi from './content/dynamic/alerts/api';
 import AuroAlertsInstall from './content/dynamic/alerts/install';
 
+// lockup
+import AuroLockup from './content/dynamic/lockup/component';
+import AuroLockupApi from './content/dynamic/lockup/api';
+import AuroLockupInstall from './content/dynamic/lockup/install';
+
 // button
 import AuroButton from './content/dynamic/button/component';
 import AuroButtonApi from './content/dynamic/button/api';
@@ -295,6 +300,7 @@ function App() {
               <Route exact path="/alerts"><AuroAlerts /></Route>
               <Route exact path="/avatar/"><AuroAvatar /></Route>
               <Route exact path="/button"><AuroButton /></Route>
+              <Route exact path="/lockup"><AuroLockup /></Route>
               <Route exact path="/carousel/"><AuroCarousel /></Route>
               <Route exact path="/checkbox"><AuroCheckbox /></Route>
               <Route exact path="/datetime/"><AuroDateTime /></Route>
@@ -366,6 +372,11 @@ function App() {
               <Route exact path="/components/auro/alerts"><AuroAlerts /></Route>
               <Route exact path="/components/auro/alerts/install"><AuroAlertsInstall /></Route>
               <Route exact path="/components/auro/alerts/api"><AuroAlertsApi /></Route>
+
+              {/* Auro Lockup */}
+              <Route exact path="/components/auro/lockup"><AuroLockup /></Route>
+              <Route exact path="/components/auro/lockup/install"><AuroLockupInstall /></Route>
+              <Route exact path="/components/auro/lockup/api"><AuroLockupApi /></Route>
 
               {/* Auro Button */}
               <Route exact path="/components/auro/button"><AuroButton /></Route>

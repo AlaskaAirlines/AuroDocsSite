@@ -1,6 +1,9 @@
 
 // All Auro web components need to be listed here to be packaged properly for IE11 support
 
+// lockup
+import "@alaskaairux/auro-lockup";
+
 // badge
 import "@alaskaairux/auro-badge";
 
