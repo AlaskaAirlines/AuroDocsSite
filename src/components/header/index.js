@@ -4,15 +4,10 @@ import './style.scss';
 function Header() {
   return (
     <header className="siteHeader">
-      <a href="/" className="headerLinkBox">
-        <div className="logoIcon">
-          <auro-alaska official></auro-alaska>
-        </div>
-        <div className="headerTitle">
-          <span className="headerTitle-title">Auro</span>
-          <span className="headerTitle-tagline">DESIGN SYSTEM</span>
-        </div>
-      </a>
+      <auro-lockup>
+        <span slot="title">Auro</span>
+        <span slot="subtitle">design system</span>
+      </auro-lockup>
 
     </header>
   );
