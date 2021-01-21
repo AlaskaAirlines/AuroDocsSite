@@ -1,10 +1,10 @@
 # Say hello to Auro!
 
-Auro provides components and tools to help product teams work more efficiently. Designed and developed to support all Alaska Airlines digital experiences.
-
 <div class="imageBox">
   <img alt="homepage hero image" src="/images/content/home.jpg" />
 </div><br>
+
+Auro provides components and tools to help product teams work more efficiently. Designed and developed to support all Alaska Airlines digital experiences.
 
 <div class="auro_util_displayFlex columns">
   <div>
@@ -32,17 +32,15 @@ Auro provides components and tools to help product teams work more efficiently. 
 </div><br>
 
 <p><auro-alerts information>
-  auro-icon v3.0 has been released, see the new <auro-hyperlink href="/components/auro/icon/alaska" relative>auro-alaska</auro-hyperlink> custom element for more information. Support for the Alaska logo with auro-icon has been removed.<br><br>
-  auro-dialog has been deprecated, see the new <auro-hyperlink href="/components/auro/interruption" relative>auro-interruption</auro-hyperlink> custom element for more information related to auro-dialog.
+  <strong>auro-popover v1.2</strong> has been released. Main feature update is the bundled CDN version support.<br>If you are using the bundled version, make sure NOT to use <code>@latest</code> in your code. If you are interested in upgrading, this version no longer supports the <code>polyfill.js</code> and be sure to see the updates link code in the <auro-hyperlink href="/components/auro/popover/install" relative>install</auro-hyperlink> page.
 </auro-alerts></p>
 
 ## New Releases!
 
 Every cycle the Auro team releases something new. Here is a list of the new things recently added to the Auro Library!
 
+* [auro-popover](/components/auro/popover): Updated bundle feature.
 * [auro-accordion](/components/auro/accordion): New features to support lowProfile accordion headers.
 * [auro-avatar](/components/auro/avatar): MAJOR release. New images and updated bundle process.
 * [auro-drawer](/components/auro/interruption/drawer): The new auro-drawer has been added to the family of auro-interruptions.
 * [auro-alaska](/components/auro/icon/alaska): Released with auro-icon v3.0, auro-alaska is a new custom element dedicated for use with the Alaska Airlines logo.
-* [auro-badge](/components/auro/badge): A new HTML custom element for the use of drawing attention to additional interface information.
-* [auro-interruption](/components/auro/interruption): Re-introducing auro-dialog, the first of a family of users experiences designed to seamlessly introduce additional content into an existing flow.

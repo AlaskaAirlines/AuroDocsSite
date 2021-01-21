@@ -131,7 +131,6 @@ $prefix: null;
   pre  {
     overflow: auto;
     background-color: var(--auro-color-base-gray-100);
-    padding: var(--auro-size-lg) !important;
     margin-bottom: var(--auro-size-xxl);
 
     code {
@@ -194,6 +193,7 @@ auro-accordion {
   pre[class*="language-"] {
     background: none;
     margin-bottom: 0;
+    padding: 0;
   }
 }
 

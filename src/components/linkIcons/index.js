@@ -44,7 +44,7 @@ function LinkIcons(props) {
   }
 
   return (
-    <div className="imgIcon util_stackMarginXl--bottom">
+    <div className="imgIcon util_stackMarginXl--bottom util_stackMarginXl--top">
       <a href={props.github} target="_blank" rel="noopener noreferrer" aria-label="Go to Github Site">
         <Github role="img" aria-hidden="false" />
       </a>
