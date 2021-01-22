@@ -234,6 +234,7 @@ import {
   ShadyCSS,
   VoiceTone,
   WhatIsWhat,
+  Codetest,
 
   // temp home for components in progress
   Wip
@@ -280,6 +281,7 @@ function App() {
               <Route exact path="/support/shadycss"><ShadyCSS /></Route>
               <Route path="/core/voice-and-tone"><VoiceTone /></Route>
               <Route exact path="/getting-started/developers/common-definitions"><WhatIsWhat /></Route>
+              <Route exact path="/take-home"><Codetest /></Route>
 
               {/* Home */}
               <Route exact path="/epics/"><VersionZero /></Route>
