@@ -1,5 +1,12 @@
 # Say hello to Auro!
 
+<auro-alerts error>
+  NOTE: The following Custom Elements have been updated with a new bundled CDN build process:<br><br>
+  <auro-hyperlink href="/components/auro/popover/install" relative>auro-popover v1.2</auro-hyperlink>, <auro-hyperlink href="/components/auro/header/install" relative>auro-header v1.5.1</auro-hyperlink>
+  <br><br>If you are using these bundled versions, make sure NOT to use <code>@latest</code> in your code.
+  These versions no longer support the <code>polyfill.js</code>. Be sure to see the updated link code in the individual component install page.
+</auro-alerts><br>
+
 <div class="imageBox">
   <img alt="homepage hero image" src="/images/content/home.jpg" />
 </div><br>
@@ -31,14 +38,11 @@ Auro provides components and tools to help product teams work more efficiently. 
   </div>
 </div><br>
 
-<p><auro-alerts information>
-  <strong>auro-popover v1.2</strong> has been released. Main feature update is the bundled CDN version support.<br>If you are using the bundled version, make sure NOT to use <code>@latest</code> in your code. If you are interested in upgrading, this version no longer supports the <code>polyfill.js</code> and be sure to see the updates link code in the <auro-hyperlink href="/components/auro/popover/install" relative>install</auro-hyperlink> page.
-</auro-alerts></p>
-
 ## New Releases!
 
 Every cycle the Auro team releases something new. Here is a list of the new things recently added to the Auro Library!
 
+* [auro-header](/components/auro/header): Updated bundle feature.
 * [auro-popover](/components/auro/popover): Updated bundle feature.
 * [auro-accordion](/components/auro/accordion): New features to support lowProfile accordion headers.
 * [auro-avatar](/components/auro/avatar): MAJOR release. New images and updated bundle process.
