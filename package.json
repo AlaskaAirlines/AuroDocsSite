@@ -5,7 +5,7 @@
   "dependencies": {
     "@alaskaairux/auro-accordion": "^1.2.2",
     "@alaskaairux/auro-alerts": "^1.2.1",
-    "@alaskaairux/auro-avatar": "^2.0.0",
+    "@alaskaairux/auro-avatar": "^2.1.0",
     "@alaskaairux/auro-badge": "^1.2.1",
     "@alaskaairux/auro-button": "^6.0.1",
     "@alaskaairux/auro-carousel": "^1.2.4",
@@ -24,7 +24,7 @@
     "@alaskaairux/auro-radio": "^1.2.0",
     "@alaskaairux/auro-swatch": "^2.1.0",
     "@alaskaairux/auro-table": "^1.0.0",
-    "@alaskaairux/design-tokens": "^3.0.0",
+    "@alaskaairux/design-tokens": "^3.1.0",
     "@alaskaairux/icons": "^4.4.3",
     "@alaskaairux/orion-design-tokens": "^2.12.3",
     "@alaskaairux/orion-icons": "^2.1.5",
