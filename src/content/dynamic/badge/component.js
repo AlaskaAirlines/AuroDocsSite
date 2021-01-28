@@ -139,6 +139,18 @@ class AuroBadge extends Component {
           </Highlight>
         </auro-accordion>
 
+        <auro-header level="2" display="700">Label option</auro-header>
+        <p>Use the <code>label</code> for a text label implementation.. </p>
+        <div className="demo--inline exampleWrapper">
+          <auro-badge label>Hello World</auro-badge>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-badge label>Hello World</auro-badge>`}
+          </Highlight>
+        </auro-accordion>
+
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-badge"
