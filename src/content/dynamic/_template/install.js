@@ -1,5 +1,6 @@
 import React from "react";
 import { Nav } from './nav';
+import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import markdownContent from '@alaskaairux/auro-[Component]/README.md'
@@ -8,6 +9,13 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 // const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-[component]/master/README.md';
 
 class Auro[Component]Install extends MarkdownPageWrapper {
+
+  showVersion() {
+    const pjson = require('../../../../package.json');
+    const dependencies = pjson.dependencies['@alaskaairux/auro-[component]'];
+
+    return `@alaskaairux/auro-[component]: ${dependencies}`;
+  };
 
   // function to get text from MD document
   componentWillMount() {
@@ -34,6 +42,12 @@ class Auro[Component]Install extends MarkdownPageWrapper {
               link: this.linkRenderer
             }}/>
         </section>
+
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/auro-[component]"
+          npm="https://www.npmjs.com/package/@alaskaairux/auro-[component]"
+          code="https://github.com/AlaskaAirlines/auro-[component]/blob/master/src/auro-[component].js"
+        />
       </section>
     );
   }

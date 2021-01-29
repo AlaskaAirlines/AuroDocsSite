@@ -1,5 +1,6 @@
 import React from "react";
 import { Nav } from './nav';
+import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
@@ -7,6 +8,13 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-checkbox/master/README.md';
 
 class AuroButtonInstall extends MarkdownPageWrapper {
+
+  showVersion() {
+    const pjson = require('../../../../package.json');
+    const dependencies = pjson.dependencies['@alaskaairux/auro-checkbox'];
+
+    return `@alaskaairux/auro-checkbox: ${dependencies}`;
+  };
 
   // function to get text from MD document
   componentWillMount() {
@@ -33,6 +41,12 @@ class AuroButtonInstall extends MarkdownPageWrapper {
               link: this.linkRenderer
             }}/>
         </section>
+
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/auro-checkbox"
+          npm="https://www.npmjs.com/package/@alaskaairux/auro-checkbox"
+          code="https://github.com/AlaskaAirlines/auro-checkbox/blob/master/src/auro-checkbox.js"
+        />
       </section>
     );
   }

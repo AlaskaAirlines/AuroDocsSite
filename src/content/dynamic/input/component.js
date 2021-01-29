@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 
 class AuroInput extends Component {
@@ -9,13 +8,6 @@ class AuroInput extends Component {
   // constructor(props) {
   //   super(props);
   // };
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-input'];
-
-    return `@alaskaairux/auro-input: ${dependencies}`;
-  };
 
   render() {
     return (
@@ -138,14 +130,6 @@ class AuroInput extends Component {
 <auro-input noValidate required type="email" label="Email address" helptext="Please enter your email address"></auro-input>`}
           </Highlight>
         </auro-accordion>
-
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-input"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-input"
-          code="https://github.com/AlaskaAirlines/auro-input/blob/master/src/auro-input.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 
 class AuroDateTime extends Component {
@@ -9,13 +8,6 @@ class AuroDateTime extends Component {
   // constructor(props) {
   //   super(props);
   // };
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-datetime'];
-
-    return `@alaskaairux/auro-datetime: ${dependencies}`;
-  };
 
   render() {
     return (
@@ -138,15 +130,6 @@ class AuroDateTime extends Component {
 </auro-datetime>`}
           </Highlight>
         </auro-accordion>
-
-
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-datetime"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-datetime"
-          code="https://github.com/AlaskaAirlines/auro-datetime/blob/master/src/auro-datetime.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

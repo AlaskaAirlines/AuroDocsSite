@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 
 const days = [...Array(28).keys()];
@@ -15,13 +14,6 @@ class AuroCarousel extends Component {
       anotherSelectedDay: 4
     };
   }
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-carousel'];
-
-    return `@alaskaairux/auro-carousel: ${dependencies}`;
-  };
 
   render() {
     return (
@@ -148,14 +140,6 @@ class AuroCarousel extends Component {
 </auro-carousel>`}
           </Highlight>
         </auro-accordion>
-
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-carousel"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-carousel"
-          code="https://github.com/AlaskaAirlines/auro-carousel/blob/master/src/auro-carousel.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 
 class AuroCheckbox extends Component {
@@ -18,13 +17,6 @@ class AuroCheckbox extends Component {
     document.getElementById('unchecked').addEventListener('change', function() { console.log('change event fired') });
     document.getElementById('unchecked').addEventListener('input', function() { console.log('input event fired') });
   }
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-checkbox'];
-
-    return `@alaskaairux/auro-checkbox: ${dependencies}`;
-  };
 
   test = () => {
     const requiredGroup = document.getElementById('required');
@@ -282,14 +274,6 @@ test = () => {
 <auro-button onClick={this.test}>Submit your answer!</auro-button>`}
           </Highlight>
         </auro-accordion>
-
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-checkbox"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-checkbox"
-          code="https://github.com/AlaskaAirlines/auro-checkbox/blob/master/src/auro-checkbox.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

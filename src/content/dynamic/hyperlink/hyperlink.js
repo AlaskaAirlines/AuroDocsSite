@@ -1,17 +1,9 @@
 import React, { Component } from "react";
 import 'highlight.js/styles/github.css';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import { Nav } from './nav';
 
 class Hyperlink extends Component {
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-hyperlink'];
-
-    return `@alaskaairux/auro-hyperlink: ${dependencies}`;
-  };
 
   sayHello() {
     alert('Hello, you clicked the button!');
@@ -250,13 +242,6 @@ handleKeyPress = (event) => {
 }`}
           </Highlight>
         </auro-accordion>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-hyperlink"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-hyperlink"
-          code="https://github.com/AlaskaAirlines/auro-hyperlink/blob/master/src/auro-hyperlink.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 import './style.scss';
 
@@ -12,15 +11,6 @@ class AuroPane extends Component {
       selectedDay: undefined
     };
   }
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-pane'];
-
-    return `@alaskaairux/auro-pane: ${dependencies}`;
-  };
-
-
 
   render() {
     return (
@@ -69,13 +59,6 @@ class AuroPane extends Component {
 <auro-pane date="2020-09-22" price="" disabled></auro-pane>`}
           </Highlight>
         </auro-accordion>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-pane"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-pane"
-          code="https://github.com/AlaskaAirlines/auro-pane/blob/master/src/auro-pane.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

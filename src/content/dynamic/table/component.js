@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 
 const headers=JSON.stringify(["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]);
@@ -19,13 +18,6 @@ class AuroTable extends Component {
     this.state = {
       docsBuildStatus: null
     }
-  };
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-table'];
-
-    return `@alaskaairux/auro-table: ${dependencies}`;
   };
 
   render() {
@@ -115,13 +107,6 @@ class AuroTable extends Component {
 
 `}
         </Highlight>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-table"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-table"
-          code="https://github.com/AlaskaAirlines/auro-table/blob/master/src/auro-table.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

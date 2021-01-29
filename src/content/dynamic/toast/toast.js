@@ -2,15 +2,9 @@ import React, { Component } from "react";
 import { Nav } from './nav';
 import 'highlight.js/styles/github.css';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
+
 
 class Toast extends Component {
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/ods-toast'];
-    return `@alaskaairux/ods-toast: ${dependencies}`;
-  };
 
   render() {
     return (
@@ -45,14 +39,6 @@ class Toast extends Component {
 </ods-toast>`
           }
         </Highlight>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/ods-toast"
-          npm="https://www.npmjs.com/package/@alaskaairux/ods-toast"
-          code="https://github.com/AlaskaAirlines/ods-toast/blob/master/src/ods-toast.js"
-          version={this.showVersion()}
-        />
-
       </section>
     );
   }

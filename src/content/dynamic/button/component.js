@@ -1,17 +1,9 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 
 class AuroButtons extends Component {
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-button'];
-
-    return `@alaskaairux/auro-button: ${dependencies}`;
-  };
 
   helloThere = () => {
     alert('Hello There!')
@@ -230,13 +222,6 @@ helloThere = () => {
 <auro-button onClick={this.helloThere} disabled>Primary</auro-button>`}
           </Highlight>
         </auro-accordion>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-button"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-button"
-          code="https://github.com/AlaskaAirlines/auro-button/blob/master/src/auro-button.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

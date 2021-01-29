@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';

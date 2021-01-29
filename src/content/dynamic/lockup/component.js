@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
@@ -10,13 +9,6 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 // const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-lockup/master/demo/demo.md';
 
 class AuroLockup extends MarkdownPageWrapper {
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-lockup'];
-
-    return `@alaskaairux/auro-lockup: ${dependencies}`;
-  };
 
   // function to get text from MD document
   getMarkdownText() {
@@ -61,13 +53,6 @@ class AuroLockup extends MarkdownPageWrapper {
         <section
           className="auro-markdown"
           dangerouslySetInnerHTML={this.getMarkdownText()}
-        />
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-lockup"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-lockup"
-          code="https://github.com/AlaskaAirlines/auro-lockup/blob/master/src/auro-lockup.js"
-          version={this.showVersion()}
         />
       </section>
     );

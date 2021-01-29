@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import ContentExample from './contentExample.js';
 import 'highlight.js/styles/github.css';
 import '@alaskaairux/auro-interruption/dist/style-unformatted.css'
@@ -13,13 +12,6 @@ class AuroDialog extends Component {
 
     this.toggleDrawer = this.toggleDrawer.bind(this);
     this.toggleDrawerClose = this.toggleDrawerClose.bind(this);
-  };
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-interruption'];
-
-    return `@alaskaairux/auro-interruption: ${dependencies}`;
   };
 
   toggleDrawer = (elName) => {
@@ -518,14 +510,6 @@ class AuroDialog extends Component {
 </auro-drawer>`}
           </Highlight>
         </auro-accordion>
-
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-interruption"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-interruption"
-          code="https://github.com/AlaskaAirlines/auro-interruption/blob/master/src/auro-drawer.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

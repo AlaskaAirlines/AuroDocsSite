@@ -1,5 +1,6 @@
 import React from "react";
 import { Nav } from './nav';
+import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
@@ -7,6 +8,13 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-popover/master/README.md';
 
 class AuroPopoverInstall extends MarkdownPageWrapper {
+
+  showVersion() {
+    const pjson = require('../../../../package.json');
+    const dependencies = pjson.dependencies['@alaskaairux/auro-popover'];
+
+    return `@alaskaairux/auro-popover: ${dependencies}`;
+  };
 
   // function to get text from MD document
   componentWillMount() {
@@ -33,6 +41,12 @@ class AuroPopoverInstall extends MarkdownPageWrapper {
               link: this.linkRenderer
             }}/>
         </section>
+
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/auro-datetime"
+          npm="https://www.npmjs.com/package/@alaskaairux/auro-datetime"
+          code="https://github.com/AlaskaAirlines/auro-datetime/blob/master/src/auro-datetime.js"
+        />
       </section>
     );
   }

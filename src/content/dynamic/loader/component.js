@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 
 class AuroLoader extends Component {
@@ -9,13 +8,6 @@ class AuroLoader extends Component {
   // constructor(props) {
   //   super(props);
   // };
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-loader'];
-
-    return `@alaskaairux/auro-loader: ${dependencies}`;
-  };
 
   render() {
     return (
@@ -139,14 +131,6 @@ class AuroLoader extends Component {
 <auro-loader class="fast" white orbit xl></auro-loader>`}
           </Highlight>
         </auro-accordion>
-
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-loader"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-loader"
-          code="https://github.com/AlaskaAirlines/auro-loader/blob/master/src/auro-loader.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

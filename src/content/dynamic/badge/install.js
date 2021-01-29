@@ -46,7 +46,6 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
           github="https://github.com/AlaskaAirlines/auro-badge"
           npm="https://www.npmjs.com/package/@alaskaairux/auro-badge"
           code="https://github.com/AlaskaAirlines/auro-badge/blob/master/src/auro-badge.js"
-          version={this.showVersion()}
         />
       </section>
     );

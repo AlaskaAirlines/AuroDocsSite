@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 
 class AuroRadioButton extends Component {
@@ -11,13 +10,6 @@ class AuroRadioButton extends Component {
     this.state = {
       errorText: null
     }
-  };
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-radio'];
-
-    return `@alaskaairux/auro-radio: ${dependencies}`;
   };
 
   render() {
@@ -231,15 +223,6 @@ class AuroRadioButton extends Component {
 </auro-checkbox-group>`}
           </Highlight>
         </auro-accordion>
-
-
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-radio"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-radio"
-          code="https://github.com/AlaskaAirlines/auro-radio/blob/master/src/auro-radio.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }
