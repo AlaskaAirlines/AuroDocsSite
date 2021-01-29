@@ -6,13 +6,6 @@ import 'highlight.js/styles/github.css';
 
 class AuroAccordion extends Component {
 
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-accordion'];
-
-    return `@alaskaairux/auro-accordion: ${dependencies}`;
-  };
-
   render() {
     return (
       <section id="accordion">
@@ -267,14 +260,6 @@ class AuroAccordion extends Component {
 </auro-accordion>`}
           </Highlight>
         </auro-accordion>
-
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-accordion"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-accordion"
-          code="https://github.com/AlaskaAirlines/auro-accordion/blob/master/src/auro-accordion.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

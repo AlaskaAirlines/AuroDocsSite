@@ -1,150 +1,59 @@
-import React, { Component } from "react";
+import React from "react";
 import { Nav } from './nav';
-import Highlight from 'react-highlight';
 import LinkIcons from 'components/linkIcons';
-import 'highlight.js/styles/github.css';
+import marked from 'marked';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism.css';
+// import markdownContent from '@alaskaairux/auro-badge/demo/demo.md'
+import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-class AuroBadge extends Component {
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-badge/master/demo/demo.md';
 
-  // constructor(props) {
-  //   super(props);
-  // };
+class AuroBadge extends MarkdownPageWrapper {
 
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-badge'];
+  // function to get text from MD document
+  getMarkdownText() {
+    fetch(markdownContent)
+        .then((response) => response.text())
+        .then((text) => {
+          const rawHtml = marked(text);
+          document.querySelector('.auro-markdown').innerHTML = rawHtml;
+          Prism.highlightAll();
+        });
 
-    return `@alaskaairux/auro-badge: ${dependencies}`;
-  };
+    const renderer = new marked.Renderer();
+    renderer.link = function(href, title, text) {
+      const link = marked.Renderer.prototype.link.call(this, href, title, text);
+      let url = href
+      url = url.replace(/^.*\/\/[^/]+/, '')
+
+      if (href.includes("auro.alaskaair.com")) {
+
+        return link.replace("href",`href="${url}"`);
+      } else {
+
+        const newLink = `<a href="${href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
+
+        return newLink;
+      }
+    };
+
+    marked.setOptions({
+        renderer: renderer
+    });
+  }
+
+
 
   render() {
     return (
-      <section id="component">
+      <section className="auro_baseType">
 
         <Nav />
 
-        <auro-header level="2" display="display">Badge</auro-header>
-
-        <p>HTML custom element for the use of drawing attention to additional interface information</p>
-
-        <auro-header level="2" display="700">Default component</auro-header>
-        <p>Default non-actionable badge element to display data.</p>
-        <div className="demo--inline exampleWrapper">
-          <auro-badge>Nonstop</auro-badge>
-        </div>
-        <auro-accordion lowProfile justifyRight class="spaceAfterCode">
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-badge>Nonstop</auro-badge>`}
-          </Highlight>
-        </auro-accordion>
-
-        <div className="demo--inline exampleWrapper--ondark">
-          <auro-badge ondark>Nonstop</auro-badge>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-badge ondark>Nonstop</auro-badge>`}
-          </Highlight>
-        </auro-accordion>
-
-        <auro-header level="2" display="700">Element with target property</auro-header>
-        <p>Use the <code>target</code> property to convert the badge to a functional button. This this property will convert the badge to a clickable button element and the value of the button will be copied to the element's <code>value</code> attribute and a custom event will be fired when clicked.</p>
-        <div className="demo--inline exampleWrapper">
-          <auro-badge target>Nonstop</auro-badge>
-          <auro-badge target disabled>1 stop</auro-badge>
-        </div>
-        <auro-accordion lowProfile justifyRight class="spaceAfterCode">
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-badge target disabled>Nonstop</auro-badge>
-<auro-badge target disabled>1 stop</auro-badge>`}
-          </Highlight>
-        </auro-accordion>
-
-        <div className="demo--inline exampleWrapper--ondark">
-          <auro-badge ondark target>Nonstop</auro-badge>
-          <auro-badge ondark target disabled>1 stop</auro-badge>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-badge ondark target>Nonstop</auro-badge>
-<auro-badge ondark target disabled>1 stop</auro-badge>`}
-          </Highlight>
-        </auro-accordion>
-
-        <auro-header level="2" display="700">Elements with spacing property</auro-header>
-        <p>Use the <code>space</code> property to allow for default spacing between elements.</p>
-        <div className="demo--inline exampleWrapper">
-          <auro-badge space>Nonstop</auro-badge>
-          <auro-badge space>1 stop</auro-badge>
-          <auro-badge space>2+ stops</auro-badge>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-badge space>Nonstop</auro-badge>
-<auro-badge space>1 stop</auro-badge>
-<auro-badge space>2+ stops</auro-badge>`}
-          </Highlight>
-        </auro-accordion>
-
-        <auro-header level="2" display="700">Alert color options</auro-header>
-        <p>Use the <code>error</code>, <code>success</code>, or <code>advisory</code> attributes for alternate alert experiences. </p>
-        <div className="demo--inline exampleWrapper">
-          <auro-badge space error>Nonstop</auro-badge>
-          <auro-badge space success>1 stop</auro-badge>
-          <auro-badge space advisory>2+ stops</auro-badge>
-        </div>
-        <auro-accordion lowProfile justifyRight class="spaceAfterCode">
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-badge space error>Nonstop</auro-badge>
-<auro-badge space success>1 stop</auro-badge>
-<auro-badge space advisory>2+ stops</auro-badge>`}
-          </Highlight>
-        </auro-accordion>
-
-        <div className="demo--inline exampleWrapper--ondark">
-          <auro-badge space error ondark>Nonstop</auro-badge>
-          <auro-badge space success ondark>1 stop</auro-badge>
-          <auro-badge space advisory ondark>2+ stops</auro-badge>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-badge space error ondark>Nonstop</auro-badge>
-<auro-badge space success ondark>1 stop</auro-badge>
-<auro-badge space advisory ondark>2+ stops</auro-badge>`}
-          </Highlight>
-        </auro-accordion>
-
-        <auro-header level="2" display="700">Pill option</auro-header>
-        <p>Use the <code>pill</code> property in combination with <code>error</code>, <code>success</code>, or <code>advisory</code> attributes for alternate badge experiences. </p>
-        <div className="demo--inline exampleWrapper">
-          <auro-badge space pill>12</auro-badge>
-          <auro-badge space error pill>184</auro-badge>
-          <auro-badge space success pill>34</auro-badge>
-          <auro-badge space advisory pill>99</auro-badge>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-badge space pill>12</auro-badge>
-<auro-badge space error pill>184</auro-badge>
-<auro-badge space success pill>34</auro-badge>
-<auro-badge space advisory pill>99</auro-badge>`}
-          </Highlight>
-        </auro-accordion>
-
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-badge"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-badge"
-          code="https://github.com/AlaskaAirlines/auro-badge/blob/master/src/auro-badge.js"
-          version={this.showVersion()}
+        <section
+          className="auro-markdown"
+          dangerouslySetInnerHTML={this.getMarkdownText()}
         />
       </section>
     );

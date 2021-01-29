@@ -1,5 +1,6 @@
 import React from "react";
 import { Nav } from './nav';
+import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
@@ -7,6 +8,12 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-accordion/master/README.md';
 
 class AuroAlertsInstall extends MarkdownPageWrapper {
+  showVersion() {
+    const pjson = require('../../../../package.json');
+    const dependencies = pjson.dependencies['@alaskaairux/auro-accordion'];
+
+    return `@alaskaairux/auro-accordion: ${dependencies}`;
+  };
 
   // function to get text from MD document
   componentWillMount() {
@@ -33,6 +40,12 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
               link: this.linkRenderer
             }}/>
         </section>
+
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/auro-accordion"
+          npm="https://www.npmjs.com/package/@alaskaairux/auro-accordion"
+          code="https://github.com/AlaskaAirlines/auro-accordion/blob/master/src/auro-accordion.js"
+        />
       </section>
     );
   }

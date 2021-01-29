@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
 import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
 import 'highlight.js/styles/github.css';
 
 class AuroAlerts extends Component {
@@ -11,13 +10,6 @@ class AuroAlerts extends Component {
     this.state = {
       errorText: null
     }
-  };
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-alerts'];
-
-    return `@alaskaairux/auro-alerts: ${dependencies}`;
   };
 
   render() {
@@ -189,13 +181,6 @@ class AuroAlerts extends Component {
             {`<auro-alerts information hiddenAudible>This content will be hidden from screen readers.</auro-alerts>`}
           </Highlight>
         </auro-accordion>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-alerts"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-alerts"
-          code="https://github.com/AlaskaAirlines/auro-alerts/blob/initialBuild/src/auro-alerts.js"
-          version={this.showVersion()}
-        />
       </section>
     );
   }

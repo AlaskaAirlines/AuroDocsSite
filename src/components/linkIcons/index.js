@@ -31,18 +31,6 @@ function LinkIcons(props) {
     }
   }
 
-  function version() {
-    if (props.version) {
-      return (
-        <small>{props.version}</small>
-      )
-    } else {
-      return (
-        <small>npm not available</small>
-      )
-    }
-  }
-
   return (
     <div className="imgIcon util_stackMarginXl--bottom util_stackMarginXl--top">
       <a href={props.github} target="_blank" rel="noopener noreferrer" aria-label="Go to Github Site">
@@ -53,7 +41,6 @@ function LinkIcons(props) {
         <GetCode role="img" aria-hidden="false" />
       </a>
       {docsSite()}
-      {version()}
     </div>
   );
 }

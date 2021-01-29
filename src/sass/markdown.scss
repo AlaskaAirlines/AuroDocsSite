@@ -132,6 +132,7 @@ $prefix: null;
     overflow: auto;
     background-color: var(--auro-color-base-gray-100);
     margin-bottom: var(--auro-size-xxl);
+    padding-bottom: var(--auro-size-md) !important;
 
     code {
       font-size: .9rem;
