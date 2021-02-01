@@ -1,108 +1,58 @@
-import React, { Component } from "react";
+import React from "react";
 import { Nav } from './nav';
-import Highlight from 'react-highlight';
-import LinkIcons from 'components/linkIcons';
-import 'highlight.js/styles/github.css';
+import marked from 'marked';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism.css';
+// import markdownContent from '@alaskaairux/auro-icon/demo/alaska.md'
+import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-class AuroIcon extends Component {
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-icon/master/demo/alaska.md';
 
-  // constructor(props) {
-  //   super(props);
-  // };
+class AuroIcon extends MarkdownPageWrapper {
 
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-icon'];
+  // function to get text from MD document
+  getMarkdownText() {
+    fetch(markdownContent)
+        .then((response) => response.text())
+        .then((text) => {
+          const rawHtml = marked(text);
+          document.querySelector('.auro-markdown').innerHTML = rawHtml;
+          Prism.highlightAll();
+        });
 
-    return `@alaskaairux/auro-icon: ${dependencies}`;
-  };
+    const renderer = new marked.Renderer();
+    renderer.link = function(href, title, text) {
+      const link = marked.Renderer.prototype.link.call(this, href, title, text);
+      let url = href
+      url = url.replace(/^.*\/\/[^/]+/, '')
+
+      if (href.includes("auro.alaskaair.com")) {
+
+        return link.replace("href",`href="${url}"`);
+      } else {
+
+        const newLink = `<a href="${href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
+
+        return newLink;
+      }
+    };
+
+    marked.setOptions({
+        renderer: renderer
+    });
+  }
+
+
 
   render() {
     return (
-      <section id="component">
+      <section className="auro_baseType">
 
         <Nav />
 
-        <auro-header level="2" display="display">Alaska</auro-header>
-
-        <p>The auro-alaska custom element is more than just an easy-to-use placement of the official logo, but it also comes with automation that will produce the proper version of the logo depending on the size of the parent container. </p>
-
-        <auro-header level="3" display="500">Install</auro-header>
-        <pre><code className="html hljs">import "@alaskaairux/auro-icon/dist/auro-alaska";</code></pre>
-
-        <auro-header level="2" display="700">Default component</auro-header>
-        <div className="demo--inline exampleWrapper">
-          <auro-alaska style={{width: '192px'}}></auro-alaska>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-alaska style={{width: '192px'}}></auro-alaska>`}
-          </Highlight>
-        </auro-accordion>
-
-
-        <p>Example with the <code>onDark</code> property.</p>
-        <div className="demo--inline exampleWrapper--ondark">
-          <auro-alaska style={{width: '192px'}} onDark></auro-alaska>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-alaska style={{width: '192px'}} onDark></auro-alaska>`}
-          </Highlight>
-        </auro-accordion>
-
-
-        <auro-header level="2" display="700">Official logo with tagline</auro-header>
-        <p>Using the <code>official</code> property will display the Alaska Airlines logo with the official tagline.</p>
-        <div className="demo--inline exampleWrapper">
-          <auro-alaska style={{width: '192px'}} official></auro-alaska>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-alaska style={{width: '192px'}} official></auro-alaska>`}
-          </Highlight>
-        </auro-accordion>
-
-
-        <p>Example with the <code>onDark</code> property.</p>
-        <div className="demo--inline exampleWrapper--ondark">
-          <auro-alaska style={{width: '192px'}} onDark official></auro-alaska>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-alaska style={{width: '192px'}} onDark official></auro-alaska>`}
-          </Highlight>
-        </auro-accordion>
-
-
-        <auro-header level="2" display="700">Auto scale support</auro-header>
-        <p>The Alaska Airline logo has a preferred version of the logo depending in the size of the rendering. The auro-alaska custom element is auto-aware and will display the proper version of the logo depending on the size of the container automatically.</p>
-        <div className="demo--inline exampleWrapper">
-          <auro-alaska style={{width: '72px'}}></auro-alaska><br/>
-          <auro-alaska style={{width: '108px'}}></auro-alaska><br/>
-          <auro-alaska style={{width: '192px'}}></auro-alaska><br/>
-          <auro-alaska style={{width: '528px'}}></auro-alaska>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-alaska style={{width: '72px'}}></auro-alaska>
-<auro-alaska style={{width: '108px'}}></auro-alaska>
-<auro-alaska style={{width: '192px'}}></auro-alaska>
-<auro-alaska style={{width: '528px'}}></auro-alaska>`}
-          </Highlight>
-        </auro-accordion>
-
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-icon"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-icon"
-          code="https://github.com/AlaskaAirlines/auro-icon/blob/master/src/auro-icon.js"
-          version={this.showVersion()}
+        <section
+          className="auro-markdown"
+          dangerouslySetInnerHTML={this.getMarkdownText()}
         />
       </section>
     );
