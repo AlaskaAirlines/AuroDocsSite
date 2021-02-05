@@ -47,6 +47,10 @@ import GeneratorInstall from './content/dynamic/generator/install';
 import GeneratorApi from './content/dynamic/generator/api';
 import GeneratorGettngStarted from './content/dynamic/generator/gettingStarted';
 
+// Contributing
+import Contributing from './content/dynamic/contributing/contributing';
+import ContributingUpstream from './content/dynamic/contributing/upstream';
+
 // design tokens
 import DesignTokens from './content/dynamic/designTokens/tokens';
 import DeprecatedTokens from './content/dynamic/designTokens/deprecated';
@@ -222,7 +226,7 @@ import {
   TestsDocs,
   WhyCustomelementsDocs,
   ComplianceDocs,
-  ContributingDocs,
+  // ContributingDocs,
 
   // Markdown Pages from docsExport(automated)
   A11yStatement,
@@ -324,7 +328,7 @@ function App() {
               <Route exact path="/getting-started/developers/what-is-what"><WhatIsWhat /></Route>
               {/* <Route exact path="/getting-started/developers/generator"><WCGenerator /></Route> */}
               <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
-              <Route exact path="/getting-started/developers/contributing"><ContributingDocs /></Route>
+              {/* <Route exact path="/getting-started/developers/contributing"><ContributingDocs /></Route> */}
               <Route exact path="/getting-started/developers/governance"><GovernanceDocs /></Route>
               {/* Design Tokens */}
               <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
@@ -353,6 +357,10 @@ function App() {
               <Route exact path="/getting-started/developers/generator/install"><GeneratorInstall /></Route>
               <Route exact path="/getting-started/developers/generator/generator/api"><GeneratorApi /></Route>
               <Route exact path="/getting-started/developers/generator/getting-started"><GeneratorGettngStarted /></Route>
+
+              {/* Generator */}
+              <Route exact path="/contributing"><Contributing /></Route>
+              <Route exact path="/contributing/upstream"><ContributingUpstream /></Route>
 
               {/* Typography */}
               <Route exact path="/typography/overview"><TypographyOverview /></Route>

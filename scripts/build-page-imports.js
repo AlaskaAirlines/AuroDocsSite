@@ -63,12 +63,12 @@ const buildExports = (iconPaths) => {
     }
 
     const externalRepoReadmeDocs = `
+// this section needs to be refactored to remove
+// dependency on the Auro repo.
+// See updates to Contributing section.
+
 export class ComplianceDocs extends ExternalDocs {
   readme = "src/COMPLIANCE.md"
-}
-
-export class ContributingDocs extends ExternalDocs {
-  readme = "src/CONTRIBUTING.md"
 }
 
 export class A11yDocs extends ExternalDocs {
@@ -157,7 +157,7 @@ export class SvelteDemoDocs extends ExternalMarkdownWrapper {
 }
     `;
 
-    const docsText = `// DO NOT EDIT! \n// This doc was auto generated from ./src/scripts/build-page-imports.js \n// ${new Date()}
+    const docsText = `// DO NOT EDIT! \n// This doc was auto generated from ./scripts/build-page-imports.js \n// ${new Date()}
       \n// Import primary markdown tools\nimport {ExternalMarkdownWrapper, InternalMarkdownWrapper} from '../components/rawMarkdownWrapper';
       \n// internal markdown docs\n${buildImports(docs)}
       \n// internal markdown docs\n${buildExports(docs)}
