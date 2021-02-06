@@ -2,20 +2,7 @@
 
 Looking for help with Auro? F.A.Q.s, how to contact, it's all here.
 
-## 1:1 support with Auro
-
-Do you have a question about Auro, a custom element, part of the support architecture or how to get support for your team? First we'd suggest reviewing the F.A.Q.s listed below for common questions.
-
-If you have a question, an issue or are simply curious about a specific part of the Auro Design System, we suggest submitting a [Github support ticket](/component-status) with the specific repo your issues relates.
-
-For internal Alaska users, there is a [Teams channel for Auro](https://teams.microsoft.com/l/channel/19%3a5df2ca021a6548c4af54256bbc737129%40thread.skype/Auro%2520(public)?groupId=3a6a4783-59c6-496a-a20c-ab306461a894&tenantId=0f44c5d4-42b0-45c2-bf55-d0fea8430d33), but it is recommended that this is for general support where other users may respond. The Teams channel is not recommended for larger architectural discussions or platform issues where the attention of an Auro team member is required.
-
-For in-depth issues, platform discussions, things where there is a need for the dedicated attention from an Auro team member, we ask that you please [schedule](https://calendly.com/dalesande) a meeting so that we can give your discussion the attention it deserves.
-
-Thanks!<br>
--- The Auro Team
-
-## F.A.Q.
+## Frequently asked questions
 
 <!-- >
   <auro-accordion id="">
@@ -42,6 +29,16 @@ Please see the items below for commonly asked questions regarding development an
   <auro-accordion id="newWork">
     <span slot="trigger">How do teams bring work into Auro's backlog?</span>
     <p>In our Propose new work section we discuss the the overall <auro-hyperlink href="/getting-started/developers/governance">Auro Governance Working Agreement</auro-hyperlink>. This assumes that new work as been identified and explains the process we will go through to get your work completed. </p>
+  </auro-accordion>
+  <auro-accordion id="github">
+    <span slot="trigger">I can't push to the repo?</span>
+    <p>Not everyone will have push rights to the repo. All of Auro is in the open source space, so anyone has the ability to <auro-hyperlink href="https://docs.github.com/en/github/getting-started-with-github/fork-a-repo" target="_blank">fork</auro-hyperlink>, <auro-hyperlink href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository" target="_blank">clone</auro-hyperlink> and <auro-hyperlink href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request" target="_blank">submit</auro-hyperlink>.</p>
+    <p>When contributing to Auro, be sure to read over the <auro-hyperlink href="/contributing" relative> contributing guidelines</auro-hyperlink> to ensure that your pull request will be compliant with the standard set forth. Please be sure to read the sections regarding Conventional Commits and Git commit messages. </p>
+  </auro-accordion>
+  <auro-accordion id="upstream">
+    <span slot="trigger">How does my fork stay in sync?</span>
+    <p>When forking a repository, you have created an alternate version of the repository. It is up to you to maintain synchronization with the upstream repository in order for you to commit a pull request. </p>
+    <p>No worries, there is a very simple process <auro-hyperlink href="/contributing/upstream" relative>maintaining your fork's upstream relationship.<auro-hyperlink></p>
   </auro-accordion>
   <auro-accordion id="sla">
     <span slot="trigger">What is Auro's SLA?</span>
@@ -112,6 +109,19 @@ Please see the items below for commonly asked questions regarding development an
     <p>If you are simply looking for something to do but don't know where to start? We have you covered there too. See our list of <auro-hyperlink href="/help-wanted" relative>help wanted</auro-hyperlink> issues.</p>
   </auro-accordion>
 </auro-accordion-group>
+
+## 1:1 support with Auro
+
+Do you have a question about Auro, a custom element, part of the support architecture or how to get support for your team? First we'd suggest reviewing the F.A.Q.s listed below for common questions.
+
+If you have a question, an issue or are simply curious about a specific part of the Auro Design System, we suggest submitting a [Github support ticket](/component-status) with the specific repo your issues relates.
+
+For internal Alaska users, there is a [Teams channel for Auro](https://teams.microsoft.com/l/channel/19%3a5df2ca021a6548c4af54256bbc737129%40thread.skype/Auro%2520(public)?groupId=3a6a4783-59c6-496a-a20c-ab306461a894&tenantId=0f44c5d4-42b0-45c2-bf55-d0fea8430d33), but it is recommended that this is for general support where other users may respond. The Teams channel is not recommended for larger architectural discussions or platform issues where the attention of an Auro team member is required.
+
+For in-depth issues, platform discussions, things where there is a need for the dedicated attention from an Auro team member, we ask that you please [schedule](https://calendly.com/dalesande) a meeting so that we can give your discussion the attention it deserves.
+
+Thanks!<br>
+-- The Auro Team
 
 ## Schedule a time to talk
 
