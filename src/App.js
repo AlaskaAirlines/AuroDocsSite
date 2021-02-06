@@ -247,6 +247,7 @@ import {
 
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
+import ReactGA from 'react-ga';
 
 const API_KEY = process.env.REACT_APP_GITHUB_API_KEY;
 
@@ -256,6 +257,15 @@ const client = new ApolloClient({
     authorization: `Bearer ${API_KEY}`
   }
 });
+
+const trackingId = "G-2DWJBEKY61"; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
+ReactGA.pageview(window.location.pathname + window.location.search);
+// ReactGA.set({
+//   userId: auth.currentUserId(),
+//   // any data that is relevant to the user session
+//   // that you would like to track with google analytics
+// })
 
 function App() {
   return (
