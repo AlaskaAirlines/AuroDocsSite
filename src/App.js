@@ -258,7 +258,7 @@ const client = new ApolloClient({
   }
 });
 
-const trackingId = "G-2DWJBEKY61"; // Replace with your Google Analytics tracking ID
+const trackingId = "G-KLC8YFTLNW"; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);
 ReactGA.pageview(window.location.pathname + window.location.search);
 // ReactGA.set({
