@@ -1,6 +1,10 @@
 
 // All Auro web components need to be listed here to be packaged properly for IE11 support
 
+// flightline
+import "@alaskaairux/auro-flightline";
+import "@alaskaairux/auro-flightline/dist/auro-flight-segment";
+
 // lockup
 import "@alaskaairux/auro-lockup";
 

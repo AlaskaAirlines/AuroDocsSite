@@ -110,6 +110,12 @@ import AuroAlerts from './content/dynamic/alerts/component';
 import AuroAlertsApi from './content/dynamic/alerts/api';
 import AuroAlertsInstall from './content/dynamic/alerts/install';
 
+// Flightline
+import AuroFlightline from './content/dynamic/flightline/component';
+import AuroFlightlineApi from './content/dynamic/flightline/api';
+import AuroFlightlineInstall from './content/dynamic/flightline/install';
+import AuroFlightlineDot from './content/dynamic/flightline/dot';
+
 // lockup
 import AuroLockup from './content/dynamic/lockup/component';
 import AuroLockupApi from './content/dynamic/lockup/api';
@@ -392,6 +398,12 @@ function App() {
               <Route exact path="/components/auro/alerts"><AuroAlerts /></Route>
               <Route exact path="/components/auro/alerts/install"><AuroAlertsInstall /></Route>
               <Route exact path="/components/auro/alerts/api"><AuroAlertsApi /></Route>
+
+              {/* Auro Flightline */}
+              <Route exact path="/components/auro/flightline"><AuroFlightline /></Route>
+              <Route exact path="/components/auro/flightline/install"><AuroFlightlineInstall /></Route>
+              <Route exact path="/components/auro/flightline/api"><AuroFlightlineApi /></Route>
+              <Route exact path="/components/auro/flightline/dot"><AuroFlightlineDot /></Route>
 
               {/* Auro Lockup */}
               <Route exact path="/components/auro/lockup"><AuroLockup /></Route>
