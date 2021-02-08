@@ -13,7 +13,7 @@ const calculateSprints = (date) => {
   const numberOfSprints = Math.ceil(sprintDays / sprintDurationInDays);
   const sprints = [];
 
-  for (let i = numberOfSprints - 1; i <= numberOfSprints; i++) {
+  for (let i = numberOfSprints - 3; i <= numberOfSprints; i++) {
     const startDateModifier = sprintDurationInDays * (i - 1);
     const endDateModifier = sprintDurationInDays * i;
     const startDate = addDays(firstSprintStartDate, startDateModifier);
