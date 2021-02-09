@@ -57,6 +57,10 @@ class DeprecatedTokens extends Component {
 
         See <auro-hyperlink href="/getting-started/developers/design-tokens/install">Design Tokens API</auro-hyperlink> for a full listing currently supported output types.</p>
 
+        <auro-alerts warning>
+          Be sure to review <auro-hyperlink relative href="/getting-started/developers/design-tokens/deprecated">updates to deprecated tokens</auro-hyperlink> for changes in use.
+        </auro-alerts>
+
         <h3 className="auro_heading auro_heading--600">Animation</h3>
         <auro-tokens-list componentData={_getTokens(animation, [])}></auro-tokens-list>
 

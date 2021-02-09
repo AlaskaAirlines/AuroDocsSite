@@ -4,7 +4,7 @@ Complementary colors provide us with greater range and flexibility to scale our 
 
 ## Color in action
 
-Following are examples of how our digital personality palette might be used across products and devices. A cohesive balance of transactional and conversational tones ensures impactful and intentional usage.
+Following are examples of how our digital personality brand palette might be used across products and devices. A cohesive balance of transactional and conversational tones ensures impactful and intentional usage.
 
 ## Interface accents
 

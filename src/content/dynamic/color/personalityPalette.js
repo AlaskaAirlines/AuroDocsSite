@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import getTokens from "functions/getTokens"
-import overview from './personalityUsage.md'
+import overview from './personalityPalette.md'
 import { Nav} from './nav.js';
 import data from '@alaskaairux/design-tokens/dist/tokens/JSData--color.js'
 // eslint-disable-next-line import/no-webpack-loader-syntax
@@ -16,6 +16,8 @@ const alpine = data.color.brand.alpine;
 const flamingo = data.color.brand.flamingo;
 const canyon = data.color.brand.canyon;
 const goldcoast = data.color.brand.goldcoast;
+const neutral = data.color.brand.neutral;
+const gray = data.color.brand.gray;
 
 class ColorsOverview extends Component {
 
@@ -98,7 +100,7 @@ class ColorsOverview extends Component {
       <section className="auro_baseType">
         <Nav />
 
-        <h1 className="auro_heading auro_heading--display">Digital Personality Palette Usage</h1>
+        <h1 className="auro_heading auro_heading--display">Digital Personality Brand Palette</h1>
 
         <section className="auro-markdown">
           <ReactMarkdown
@@ -134,6 +136,12 @@ class ColorsOverview extends Component {
 
         <h3 className="auro_heading auro_heading--400">Goldcoast</h3>
         <auro-tokens-list swatch circle componentData={getTokens(goldcoast, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--400">Neutral</h3>
+        <auro-tokens-list swatch circle componentData={getTokens(neutral, [])}></auro-tokens-list>
+
+        <h3 className="auro_heading auro_heading--400">Gray</h3>
+        <auro-tokens-list swatch circle componentData={getTokens(gray, [])}></auro-tokens-list>
       </section>
     );
   }

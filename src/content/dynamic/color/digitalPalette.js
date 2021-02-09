@@ -15,7 +15,6 @@ const border = data.color.border;
 const text = data.color.text;
 const icon = data.color.icon;
 const alert = data.color.alert;
-const gray = data.color.base.gray;
 
 class ColorsOverview extends Component {
 
@@ -130,7 +129,7 @@ class ColorsOverview extends Component {
       <section className="auro_baseType">
         <Nav />
 
-        <h1 className="auro_heading auro_heading--display">Core Digital Brand Palette Usage</h1>
+        <h1 className="auro_heading auro_heading--display">Digital Brand Palette</h1>
 
         <h2 className="auro_heading auro_heading--600">Background</h2>
         <img className="util_marginBottom--xl" src={windows} alt="page header" />
@@ -196,9 +195,6 @@ class ColorsOverview extends Component {
           {this.getAvatars(alert, 'alert', 'onDark', [])}
         </div>
         <auro-swatch-list onDark componentData={this.getColors(alert, 'onDark', [])}></auro-swatch-list>
-
-        <h2 className="auro_heading auro_heading--600">Gray</h2>
-        <auro-swatch-list componentData={this.getColors(gray, 'neutral', [])}></auro-swatch-list>
 
         <section className="auro-markdown">
           <ReactMarkdown

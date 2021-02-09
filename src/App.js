@@ -9,14 +9,16 @@ import {
 import './sass/index.scss';
 import './sass/App.scss';
 
+// -=-=-=-=-=-=-=-=-=-=- LEGACY =-=-=-=-=-=-=-=-=-=-=-=-=
+// Only needed for deprecated resources still in the site
+import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
+// -=-=-=-=-=-=-=-=-=-=- LEGACY =-=-=-=-=-=-=-=-=-=-=-=-=
+
+// =-=-=-=-=-=-=-=-=- New Hotness =-=-=-=-=-=-=-=-=-=-=-=
+import '@alaskaairux/design-tokens/dist/tokens/CSSCustomProperties.css';
+
 // Logo to appear in console
 import './scripts/auro-consoleLogo';
-
-// This import is only needed to support legacy Orion Web Components
-import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
-
-// Required for Auro Web Components
-import '@alaskaairux/orion-design-tokens/dist/tokens/CSSCustomProperties.css';
 
 // Feature to scroll UI to top on click event
 import ScrollToTop from './components/ScrollToTop';
@@ -58,11 +60,11 @@ import DesignTokensInstall from './content/dynamic/designTokens/install';
 
 // color
 import ColorOverview from './content/dynamic/color/overview';
-import CoreDigitalPaletteUsage from './content/dynamic/color/coreUsage';
-import PersonalityPaletteUsage from './content/dynamic/color/personalityUsage';
+import CoreDigitalPalette from './content/dynamic/color/digitalPalette';
+import PersonalityPalette from './content/dynamic/color/personalityPalette';
 
-import ColorUsageLegacy from './content/dynamic/color/usage_legacy';
-import ColorOverviewLegacy from './content/dynamic/color/overview_legacy';
+// import ColorUsageLegacy from './content/dynamic/color/usage_legacy';
+// import ColorOverviewLegacy from './content/dynamic/color/overview_legacy';
 
 // typography
 import TypographyOverview from './content/dynamic/typography/overview';
@@ -354,8 +356,10 @@ function App() {
               <Route exact path="/getting-started/developers/governance"><GovernanceDocs /></Route>
               {/* Design Tokens */}
               <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
+              <Route exact path="//design-tokens"><DesignTokens /></Route>
               <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensInstall /></Route>
               <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
+              <Route exact path="/design-tokens/deprecated"><DeprecatedTokens /></Route>
 
               {/* Desing to dev handoff process */}
               {/* <Route exact path="/getting-started/handoff"><DesignHandoffIndex /></Route>
@@ -368,11 +372,11 @@ function App() {
 
               {/* Color */}
               <Route exact path="/color/overview"><ColorOverview /></Route>
-              <Route exact path="/color/core-digital-palette-usage"><CoreDigitalPaletteUsage /></Route>
-              <Route exact path="/color/personality-palette-usage"><PersonalityPaletteUsage /></Route>
-
-              <Route exact path="/color/usage_legacy"><ColorUsageLegacy /></Route>
-              <Route exact path="/color/overview_legacy"><ColorOverviewLegacy /></Route>
+              <Route exact path="/color/digital-palette"><CoreDigitalPalette /></Route>
+              <Route exact path="/color/personality-palette"><PersonalityPalette /></Route>
+              {/* legacy redirects */}
+              <Route exact path="/color/core-digital-palette-usage"><CoreDigitalPalette /></Route>
+              <Route exact path="/color/personality-palette-usage"><PersonalityPalette /></Route>
 
               {/* Generator */}
               <Route exact path="/generator"><GeneratorInstall /></Route>
