@@ -18,7 +18,7 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Color", route: "/color/overview", parent: true },
         { linkTitle: "Typography", route: "/typography/overview", parent: true },
-        { linkTitle: "Icons", route: "/icons/overview", parent: true },
+        { linkTitle: "Icons", route: "/icons", parent: true },
         { linkTitle: "Layout", route: "/layout/grid", parent: true },
         { linkTitle: "Voice and Tone", route: "/core/voice-and-tone", parent: true }
       ]

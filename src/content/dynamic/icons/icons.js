@@ -19,7 +19,7 @@ class Icons extends Component {
         <Nav />
         <img className="util_stackMarginXl--bottom" src={icons} alt="page header" />
 
-        <auro-header level="1" display="display">Icon use</auro-header>
+        <auro-header level="1" display="display">Icons</auro-header>
 
         <auro-header level="2" display="600">Overview</auro-header>
 

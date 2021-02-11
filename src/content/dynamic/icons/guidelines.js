@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
-import guidelines from './overview.md'
+import guidelines from './guidelines.md'
 import { Nav} from './nav.js';
 
 
