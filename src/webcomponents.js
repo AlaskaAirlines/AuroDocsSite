@@ -5,6 +5,9 @@
 import "@alaskaairux/auro-flightline";
 import "@alaskaairux/auro-flightline/dist/auro-flight-segment";
 
+// flight
+import "@alaskaairux/auro-flight";
+
 // lockup
 import "@alaskaairux/auro-lockup";
 

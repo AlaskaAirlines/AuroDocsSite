@@ -72,7 +72,7 @@ import TypographyDeprecated from './content/dynamic/typography/deprecated';
 // icons
 import IconsGuidelines from './content/dynamic/icons/guidelines';
 import Icons from './content/dynamic/icons/icons.js';
-import IconsInstall from './content/dynamic/icons/install.js';
+import IconsInstall from './content/dynamic/icons/install';
 
 // layout
 import LayoutGrid from './content/dynamic/layout/grid';
@@ -109,6 +109,12 @@ import AuroAlaska from './content/dynamic/icon/alaska';
 import AuroAlerts from './content/dynamic/alerts/component';
 import AuroAlertsApi from './content/dynamic/alerts/api';
 import AuroAlertsInstall from './content/dynamic/alerts/install';
+
+// Flight
+import AuroFlight from './content/dynamic/flight/component';
+import AuroFlightApi from './content/dynamic/flight/api';
+import AuroFlightInstall from './content/dynamic/flight/install';
+import AuroFlightDot from './content/dynamic/flight/dot';
 
 // Flightline
 import AuroFlightline from './content/dynamic/flightline/component';
@@ -398,6 +404,12 @@ function App() {
               <Route exact path="/components/auro/alerts"><AuroAlerts /></Route>
               <Route exact path="/components/auro/alerts/install"><AuroAlertsInstall /></Route>
               <Route exact path="/components/auro/alerts/api"><AuroAlertsApi /></Route>
+
+              {/* Auro Flight */}
+              <Route exact path="/components/auro/flight"><AuroFlight /></Route>
+              <Route exact path="/components/auro/flight/install"><AuroFlightInstall /></Route>
+              <Route exact path="/components/auro/flight/api"><AuroFlightApi /></Route>
+              <Route exact path="/components/auro/flight/dot"><AuroFlightDot /></Route>
 
               {/* Auro Flightline */}
               <Route exact path="/components/auro/flightline"><AuroFlightline /></Route>
