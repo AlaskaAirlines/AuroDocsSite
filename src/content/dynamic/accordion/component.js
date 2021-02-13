@@ -259,6 +259,114 @@ class AuroAccordion extends Component {
 </auro-accordion>`}
           </Highlight>
         </auro-accordion>
+
+        <auro-header level="2" display="700">Shade accordion</auro-header>
+        <p>The <code>shade</code> feature allows for an alternate accordion experience that allows for full width placement and the content restricts at <code>768px</code>. Clicking or tapping the trigger exposes the content within the shade. Alternatively from the standard accordion, the <code>shade</code> displays over any content beneath. </p>
+
+        The following example illustrates a baseline <code>shade</code> accordion.
+
+        <div className="demo--inline exampleWrapper" style={{"overflow": "unset"}}>
+          <auro-accordion id="shade01" shade>
+            <span slot="trigger">
+              Elite benefits extension
+            </span>
+            <p>We're extending your elite status! Whatever your status is at the end of 2020 – we'll give it to you for 2021. That means you’ll get the chance to unlock even more benefits as we move closer to our oneworld® launch in summer 2021.*</p>
+            <small>*Alaska Airlines has announced its intention to join oneworld® alliance in 2021.</small>
+          </auro-accordion>
+        </div>
+
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-accordion id="shade01" shade>
+  <span slot="trigger">
+    Elite benefits extension
+  </span>
+  <p>We're extending your elite status! Whatever your status is at the end of 2020 – we'll give it to you for 2021. That means you’ll get the chance to unlock even more benefits as we move closer to our oneworld® launch in summer 2021.*</p>
+  <small>*Alaska Airlines has announced its intention to join oneworld® alliance in 2021.</small>
+</auro-accordion>`}
+          </Highlight>
+        </auro-accordion>
+
+
+        <p>The following example illustrates the <code>informational</code> accent styling. Additional styles include <code>warning</code> and <code>error</code>. Also notice the use of the <code>justifyLeft</code> attribute to align the toggle carrot to the left. Conversely, <code>justifyRight</code> is also supported.</p>
+
+        <p>The <code>trigger</code> slot allows for the placement of HTML content, for example the <code>auro-icon</code> and the use of the <code>h3</code>. Headings <code>h1</code> through <code>h4</code> are supported for the <code>trigger</code> slot for semantic use. The style of the trigger will remain consistent.</p>
+
+        <div className="demo--inline exampleWrapper" style={{"overflow": "unset"}}>
+          <auro-accordion id="shade01" shade information justifyLeft>
+            <h3 slot="trigger">
+              <auro-icon category="alert" name="information-filled" customColor style={{"color": "var(--auro-color-alert-notification-on-light)", "margin": "0 var(--auro-size-xxs) 0 0"}}></auro-icon>
+              Elite benefits extension
+            </h3>
+            <p>We're extending your elite status! Whatever your status is at the end of 2020 – we'll give it to you for 2021. That means you’ll get the chance to unlock even more benefits as we move closer to our oneworld® launch in summer 2021.*</p>
+            <small>*Alaska Airlines has announced its intention to join oneworld® alliance in 2021.</small>
+          </auro-accordion>
+        </div>
+
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-accordion id="shade01" shade information justifyLeft>
+  <h3 slot="trigger">
+    <auro-icon category="alert" name="information-filled" customColor style={{"color": "var(--auro-color-alert-notification-on-light)", "margin": "0 var(--auro-size-xxs) 0 0"}}></auro-icon>
+    Elite benefits extension
+  </h3>
+  <p>We're extending your elite status! Whatever your status is at the end of 2020 – we'll give it to you for 2021. That means you’ll get the chance to unlock even more benefits as we move closer to our oneworld® launch in summer 2021.*</p>
+  <small>*Alaska Airlines has announced its intention to join oneworld® alliance in 2021.</small>
+</auro-accordion>`}
+          </Highlight>
+        </auro-accordion>
+
+        <div className="demo--inline exampleWrapper" style={{"overflow": "unset"}}>
+          <auro-accordion id="shade01" shade warning>
+            <h3 slot="trigger">
+              <auro-icon category="alert" name="warning-filled" customColor style={{"color": "var(--auro-color-alert-warning-on-light)", "margin": "0 var(--auro-size-xxs) 0 0"}}></auro-icon>
+              Elite benefits extension
+            </h3>
+            <p>We're extending your elite status! Whatever your status is at the end of 2020 – we'll give it to you for 2021. That means you’ll get the chance to unlock even more benefits as we move closer to our oneworld® launch in summer 2021.*</p>
+            <small>*Alaska Airlines has announced its intention to join oneworld® alliance in 2021.</small>
+          </auro-accordion>
+        </div>
+
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-accordion id="shade01" shade warning>
+  <h3 slot="trigger">
+    <auro-icon category="alert" name="warning-filled" customColor style={{"color": "var(--auro-color-alert-warning-on-light)", "margin": "0 var(--auro-size-xxs) 0 0"}}></auro-icon>
+    Elite benefits extension
+  </h3>
+  <p>We're extending your elite status! Whatever your status is at the end of 2020 – we'll give it to you for 2021. That means you’ll get the chance to unlock even more benefits as we move closer to our oneworld® launch in summer 2021.*</p>
+  <small>*Alaska Airlines has announced its intention to join oneworld® alliance in 2021.</small>
+</auro-accordion>`}
+          </Highlight>
+        </auro-accordion>
+
+        <div className="demo--inline exampleWrapper" style={{"overflow": "unset"}}>
+          <auro-accordion id="shade01" shade error justifyRight>
+            <h3 slot="trigger">
+              <auro-icon category="alert" name="error" customColor style={{"color": "var(--auro-color-alert-error-on-light)", "margin": "0 var(--auro-size-xxs) 0 0"}}></auro-icon>
+              Elite benefits extension
+            </h3>
+            <p>We're extending your elite status! Whatever your status is at the end of 2020 – we'll give it to you for 2021. That means you’ll get the chance to unlock even more benefits as we move closer to our oneworld® launch in summer 2021.*</p>
+            <small>*Alaska Airlines has announced its intention to join oneworld® alliance in 2021.</small>
+          </auro-accordion>
+        </div>
+
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-accordion id="shade01" shade error justifyRight>
+  <h3 slot="trigger">
+    <auro-icon category="alert" name="error" customColor style={{"color": "var(--auro-color-alert-error-on-light)", "margin": "0 var(--auro-size-xxs) 0 0"}}></auro-icon>
+    Elite benefits extension
+  </h3>
+  <p>We're extending your elite status! Whatever your status is at the end of 2020 – we'll give it to you for 2021. That means you’ll get the chance to unlock even more benefits as we move closer to our oneworld® launch in summer 2021.*</p>
+  <small>*Alaska Airlines has announced its intention to join oneworld® alliance in 2021.</small>
+</auro-accordion>`}
+          </Highlight>
+        </auro-accordion>
       </section>
     );
   }
