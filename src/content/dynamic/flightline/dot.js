@@ -6,7 +6,7 @@ import 'prismjs/themes/prism.css';
 // import markdownContent from '@alaskaairux/auro-flightline/docs/usecases.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-flightline/main/docs/usecases.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-flight/master/demo/dotCompliance.md';
 
 class AuroFlightline extends MarkdownPageWrapper {
 
