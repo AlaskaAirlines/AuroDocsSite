@@ -45,7 +45,6 @@ class AuroAlerts extends Component {
         <auro-header level="2" display="700">Single-line alerts</auro-header>
 
         <auro-header level="3" display="500">Error</auro-header>
-
         <div className="demo--inline exampleWrapper">
           <auro-alerts error>Transaction failed.</auro-alerts>
         </div>
@@ -75,6 +74,17 @@ class AuroAlerts extends Component {
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
             {`<auro-alerts information>You are confirmed on Flight 20 to Aruba.</auro-alerts>`}
+          </Highlight>
+        </auro-accordion>
+
+        <auro-header level="3" display="500">Success</auro-header>
+        <div className="demo--inline exampleWrapper">
+          <auro-alerts success>Your status with Flight 20 to Aruba had been updated.</auro-alerts>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-alerts success>Your status with Flight 20 to Aruba had been updated.</auro-alerts>`}
           </Highlight>
         </auro-accordion>
 
@@ -130,6 +140,70 @@ class AuroAlerts extends Component {
   <p>This is information message 1.</p>
   <p>This is information message 2.</p>
 </auro-alerts>`}
+          </Highlight>
+        </auro-accordion>
+
+        <auro-header level="3" display="500">Success</auro-header>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-alerts success>
+            <p>This is success message 1.</p>
+            <p>This is success message 2.</p>
+          </auro-alerts>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-alerts success>
+  <p>This is success message 1.</p>
+  <p>This is success message 2.</p>
+</auro-alerts>`}
+          </Highlight>
+        </auro-accordion>
+
+        <auro-header level="2" display="700">No icon alerts</auro-header>
+
+        <auro-header level="3" display="500">Error</auro-header>
+        <div className="demo--inline exampleWrapper">
+          <auro-alerts noIcon error>Transaction failed.</auro-alerts>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-alerts noIcon error>Transaction failed.</auro-alerts>`}
+          </Highlight>
+        </auro-accordion>
+
+        <auro-header level="3" display="500">Warning</auro-header>
+        <div className="demo--inline exampleWrapper">
+          <auro-alerts noIcon warning>Session timed out. Look for a confirmation email to verify your transaction.</auro-alerts>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-alerts noIcon warning>Session timed out. Look for a confirmation email to verify your transaction.</auro-alerts>`}
+          </Highlight>
+        </auro-accordion>
+
+        <auro-header level="3" display="500">Information</auro-header>
+        <div className="demo--inline exampleWrapper">
+          <auro-alerts noIcon information>You are confirmed on Flight 20 to Aruba.</auro-alerts>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-alerts noIcon information>You are confirmed on Flight 20 to Aruba.</auro-alerts>`}
+          </Highlight>
+        </auro-accordion>
+
+        <auro-header level="3" display="500">Success</auro-header>
+        <div className="demo--inline exampleWrapper">
+          <auro-alerts noIcon success>Your status with Flight 20 to Aruba had been updated.</auro-alerts>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-alerts noIcon success>Your status with Flight 20 to Aruba had been updated.</auro-alerts>`}
           </Highlight>
         </auro-accordion>
 
