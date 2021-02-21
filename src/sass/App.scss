@@ -40,6 +40,22 @@ ul {
   padding-left: 1rem;
 }
 
+.util_mobileNowrap {
+  white-space: nowrap;
+
+  @include auro_breakpoint--md {
+    white-space: normal;
+  }
+}
+
+.shortWrap {
+  width: 300px;
+
+  @include auro_breakpoint--md {
+    width: auto;
+  }
+}
+
 .util_wrap {
   white-space: normal;
 }
@@ -48,6 +64,12 @@ ul {
   &:hover {
     cursor: pointer;
     color: var(--auro-color-ui-hover-on-light);
+  }
+}
+
+.util_pointer {
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -144,13 +166,7 @@ auro-swatch-list {
   }
 
   @include auro_breakpoint--md {
-    // left: 0;
-    // display: block;
-    // opacity: 1;
-    // left: auto;
     width: 270px;
-    // top: 80px;
-    // padding-bottom: 100px;
   }
 }
 

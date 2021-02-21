@@ -19,6 +19,7 @@ const componentStatus = gql`
             nodes {
               title
               id
+              url
               author {
                 login
                 avatarUrl(size: 30)
@@ -33,6 +34,7 @@ const componentStatus = gql`
               tagName
               createdAt
               id
+              url
             }
           }
         }

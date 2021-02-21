@@ -20,25 +20,28 @@ class Repo extends Component {
             </small>
           </div>
         </td>
-        <td className="auro_util_nowrap">
+        <td className="">
           { this.charGenerate() }
           {
             this.props.releases.nodes.length !== 0
-              ? this.props.releases.nodes.map(({tagName, createdAt, id}) => (
+              ? this.props.releases.nodes.map(({tagName, createdAt, id, url}) => (
                   <div>
-                    <a key={id} id={randomNumber} href={this.props.url} target="_blank" className="noLinkUi" rel="noopener noreferrer">
-                      <div className="badge">
-                        <div className="title">Release</div>
-                        <div className="data data--release">{tagName}</div>
-                      </div>
-                    </a>
-                    <auro-popover for={randomNumber}>
-                      <strong>Last release: </strong><auro-datetime utc={createdAt} weekday="long"></auro-datetime>
+                    <div className="badge util_pointer" id={randomNumber}>
+                      <div className="title">Release</div>
+                      <div className="data data--release">{tagName}</div>
+                    </div>
+                    <auro-popover for={randomNumber} sticky>
+                      <strong>Last release: </strong>
+                      <a key={id} href={url} target="_blank" className="hyperlink" rel="noopener noreferrer">
+                        <auro-datetime utc={createdAt} weekday="long"> <auro-icon category="interface" name="external-link-md" customcolor></auro-icon></auro-datetime>
+                      </a>
                       {
                         this.props.pullRequests.nodes.length !== 0
-                          ? this.props.pullRequests.nodes.map(({title, id, author}) => (
+                          ? this.props.pullRequests.nodes.map(({title, author, id, url}) => (
                               <div>
-                                <strong>Last PR:</strong> {title}<br/>
+                                <strong>Latest PR:</strong> <a key={id} href={url} target="_blank" className="hyperlink" rel="noopener noreferrer">
+                                  {title} <auro-icon category="interface" name="external-link-md" customcolor></auro-icon>
+                                </a><br/>
                                 <strong>Author:</strong> <img className="githubAvatar" src={author.avatarUrl} alt={author.login} />{author.login}
                               </div>
                             ))
@@ -67,8 +70,8 @@ class Repo extends Component {
             </a>
           }
         </td>
-        <td className="short">
-          <div>{this.props.description}</div>
+        <td>
+          <div className="shortWrap">{this.props.description}</div>
         </td>
       </tr>
     )
