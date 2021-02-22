@@ -202,6 +202,7 @@ import AuroHeaderInstall from './content/dynamic/header/install';
 import AuroPopover from './content/dynamic/popover/component';
 import AuroPopoverApi from './content/dynamic/popover/api';
 import AuroPopoverInstall from './content/dynamic/popover/install';
+import AuroPopoverReleases from './content/dynamic/popover/releases';
 
 // polyfills
 import FocusVisible from './content/dynamic/polyfills/focusVisible';
@@ -456,6 +457,7 @@ function App() {
               <Route exact path="/components/auro/popover"><AuroPopover /></Route>
               <Route exact path="/components/auro/popover/install"><AuroPopoverInstall /></Route>
               <Route exact path="/components/auro/popover/api"><AuroPopoverApi /></Route>
+              <Route exact path="/components/auro/popover/releases"><AuroPopoverReleases/></Route>
 
               {/* Auro Radio button */}
               <Route exact path="/components/auro/radio"><AuroRadio /></Route>

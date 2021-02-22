@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
-import Release from './release';
+import Release from '../releaseDashboard/release';
 import { Nav } from './nav';
 
 const RELEASES = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first:50, orderBy:{field: NAME, direction: ASC }) {
+      repositories(first: 1, orderBy: {field: NAME, direction: ASC}, query: "auro-popover") {
         nodes {
-          name,
-          releases(first:4, orderBy: {field: CREATED_AT, direction:DESC }) {
+          name
+          releases(first: 20, orderBy: {field: CREATED_AT, direction: DESC}) {
             nodes {
-              name,
-              updatedAt,
+              name
+              updatedAt
               description
             }
           }
@@ -32,8 +32,8 @@ class AllReleases extends Component {
 
         <Nav />
 
-        <h1 className="auro_heading auro_heading--display">Auro release dashboard</h1>
-        <p>The following is a list of all Auro Products and their most recent releases.</p>
+        <h1 className="auro_heading auro_heading--display">Releases</h1>
+        <p>The following is a list of all Auro Popover releases.</p>
 
         <Query query={RELEASES}>
           {({ loading, error, data }) => {

@@ -9,6 +9,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/popover`} activeClassName="is-active">Popover</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/popover/install`} activeClassName="is-active">Install</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/popover/api`} activeClassName="is-active">API</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/components/auro/popover/releases`} activeClassName="is-active">Releases</NavLink>
       </div>
     )
   }
