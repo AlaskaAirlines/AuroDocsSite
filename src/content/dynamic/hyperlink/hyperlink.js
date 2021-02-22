@@ -242,6 +242,49 @@ handleKeyPress = (event) => {
 }`}
           </Highlight>
         </auro-accordion>
+
+        <auro-header level="2" display="700">Do's and don'ts</auro-header>
+
+        <auro-header level="3" display="600">Free space nav hyperlink</auro-header>
+
+        <p>When using the Auro Hyperlink custom element, make sure to understand context of placement. When using the hyperlink element in an open space for the purpose of navigation use the <code>nav</code> property. This will ensure that the hyperlink does not have an underline.</p>
+
+        <p>
+          <auro-alerts noIcon error>
+            <div className="demo--inline exampleWrapper">
+              <auro-hyperlink href="/">Free space navigation style hyperlink</auro-hyperlink>
+            </div>
+          </auro-alerts>
+        </p>
+
+        <p>
+          <auro-alerts noIcon success>
+            <div className="demo--inline exampleWrapper">
+              <auro-hyperlink href="/" nav>Free space navigation style hyperlink</auro-hyperlink>
+            </div>
+          </auro-alerts>
+        </p>
+
+        <auro-header level="3" display="600">Hyperlink in content</auro-header>
+
+        <p>When using the Auro Hyperlink custom element in context with other content, for accessibility purposes, the hyperlink is to appear with an underline. This is the default experience with <code>auro-hyperlink</code></p>
+
+        <p>
+          <auro-alerts noIcon error>
+            <div className="demo--inline exampleWrapper">
+              This is a paragraph with an inline <auro-hyperlink style={{"display": "inline-block"}}href="/" nav>anchor tag</auro-hyperlink> for navigation.
+            </div>
+          </auro-alerts>
+        </p>
+
+        <p>
+          <auro-alerts noIcon success>
+            <div className="demo--inline exampleWrapper">
+              This is a paragraph with an inline <auro-hyperlink href="/">anchor tag</auro-hyperlink> for navigation.
+            </div>
+          </auro-alerts>
+        </p>
+
       </section>
     );
   }
