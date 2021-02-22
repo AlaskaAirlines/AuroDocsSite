@@ -4,8 +4,9 @@
   <img alt="homepage hero image" src="/images/content/home.jpg" />
 </div><br>
 
-<auro-alerts information>
+<auro-alerts information noicon>
   NOTE: The following Custom Elements have been updated with a new bundled CDN build process:<br><br>
+  <auro-hyperlink href="/components/auro/hyperlink/install" relative>auro-hyperlink v2.1</auro-hyperlink>,
   <auro-hyperlink href="/components/auro/alerts/install" relative>auro-alerts v1.3</auro-hyperlink>, and
   <auro-hyperlink href="/components/auro/radio/install" relative>auro-radio v1.3</auro-hyperlink>
   <br><br>If you are using this bundled version, make sure NOT to use <code>@latest</code> in your code.
