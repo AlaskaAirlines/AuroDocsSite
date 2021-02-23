@@ -139,8 +139,9 @@ class Hyperlink extends Component {
           </Highlight>
         </auro-accordion>
 
-        <auro-header level="2" display="700">Call To Action (cta) Buttons</auro-header>
 
+
+        <auro-header level="2" display="700">Call To Action (cta) Buttons</auro-header>
         <div className="demo--inline exampleWrapper">
           <auro-hyperlink cta href="#">Default</auro-hyperlink> <auro-hyperlink cta href="" target="_blank" >Default</auro-hyperlink>
         </div>
@@ -163,12 +164,12 @@ class Hyperlink extends Component {
           </Highlight>
         </auro-accordion>
 
-        <auro-header level="2" display="700">On Dark</auro-header>
 
-        <div className="demo--inline exampleWrapper">
-          <div className="ondark">
-            <auro-hyperlink ondark href="/">On dark href</auro-hyperlink>
-          </div>
+
+
+        <auro-header level="2" display="700">On Dark</auro-header>
+        <div className="demo--inline exampleWrapper--ondark">
+          <auro-hyperlink ondark href="/">On dark href</auro-hyperlink>
         </div>
         <auro-accordion lowProfile justifyRight class="spaceAfterCode">
           <span slot="trigger">See code</span>
@@ -177,10 +178,8 @@ class Hyperlink extends Component {
           </Highlight>
         </auro-accordion>
 
-        <div className="demo--inline exampleWrapper">
-          <div className="ondark">
-            <auro-hyperlink ondark nav href="/">On dark nav href</auro-hyperlink>
-          </div>
+        <div className="demo--inline exampleWrapper--ondark">
+          <auro-hyperlink ondark nav href="/">On dark nav href</auro-hyperlink>
         </div>
         <auro-accordion lowProfile justifyRight class="spaceAfterCode">
           <span slot="trigger">See code</span>
@@ -189,10 +188,8 @@ class Hyperlink extends Component {
           </Highlight>
         </auro-accordion>
 
-        <div className="demo--inline exampleWrapper">
-          <div className="ondark">
-            <auro-hyperlink ondark target="_blank" href="/">External on dark href</auro-hyperlink>
-          </div>
+        <div className="demo--inline exampleWrapper--ondark">
+          <auro-hyperlink ondark target="_blank" href="/">External on dark href</auro-hyperlink>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
@@ -201,8 +198,22 @@ class Hyperlink extends Component {
           </Highlight>
         </auro-accordion>
 
-        <auro-header level="2" display="700">Role: button</auro-header>
+        <div className="demo--inline exampleWrapper--ondark">
+          <auro-hyperlink cta ondark href="#" relative>Default onDark</auro-hyperlink>
+          <auro-hyperlink cta ondark href="#" relative target="_blank">Default onDark</auro-hyperlink>
+        </div>
+        <auro-accordion lowProfile justifyRight class="spaceAfterCode">
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-hyperlink cta ondark href="#" relative>Default onDark</auro-hyperlink>
+<auro-hyperlink cta ondark href="#" relative target="_blank">Default onDark</auro-hyperlink>`}
+          </Highlight>
+        </auro-accordion>
 
+
+
+
+        <auro-header level="2" display="700">Role: button</auro-header>
         <p>Aside from the standard hyperlink use-case, the <code>auro-hyperlink</code> element is intended to be used for <code>button</code> situations as illustrated below.</p>
 
         <p>Assuming the role of button, auro-hyperlink also will track the <code>aria-pressed</code> state.</p>
