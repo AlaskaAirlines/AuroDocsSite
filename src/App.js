@@ -284,6 +284,7 @@ import {
   WhatIsWhat,
   Codetest,
   AuroLabs,
+  CustomElements101,
 
   // temp home for components in progress
   Wip
@@ -342,6 +343,7 @@ function App() {
               <Route exact path="/getting-started/developers/common-definitions"><WhatIsWhat /></Route>
               <Route exact path="/take-home"><Codetest /></Route>
               <Route exact path="/aurolabs"><AuroLabs /></Route>
+              <Route exact path="/custom-element-101"><CustomElements101 /></Route>
 
               {/* Home */}
               <Route exact path="/epics/"><VersionZero /></Route>

@@ -37,6 +37,7 @@ export default function SideNav(props) {
         // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
         { linkTitle: "WC Generator", route: "/getting-started/developers/generator/install", parent: true  },
         { linkTitle: "Contributing", route: "/contributing", parent: true },
+        { linkTitle: "Custom Element 101", route: "/custom-element-101", parent: true },
       ]
     },
     {
