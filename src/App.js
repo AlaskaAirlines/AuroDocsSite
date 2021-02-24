@@ -283,6 +283,7 @@ import {
   VoiceTone,
   WhatIsWhat,
   Codetest,
+  AuroLabs,
 
   // temp home for components in progress
   Wip
@@ -340,6 +341,7 @@ function App() {
               <Route path="/core/voice-and-tone"><VoiceTone /></Route>
               <Route exact path="/getting-started/developers/common-definitions"><WhatIsWhat /></Route>
               <Route exact path="/take-home"><Codetest /></Route>
+              <Route exact path="/aurolabs"><AuroLabs /></Route>
 
               {/* Home */}
               <Route exact path="/epics/"><VersionZero /></Route>
