@@ -10,6 +10,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/flight/install`} activeClassName="is-active">Install</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/flight/api`} activeClassName="is-active">API</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/flight/dot`} activeClassName="is-active">DoT compliance</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/components/auro/flight/releases`} activeClassName="is-active">Releases</NavLink>
       </div>
     )
   }

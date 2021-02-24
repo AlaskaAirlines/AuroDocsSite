@@ -84,90 +84,107 @@ import LayoutSpacing from './content/dynamic/layout/spacing';
 import AuroDateTime from './content/dynamic/datetime/component';
 import AuroDateTimeApi from './content/dynamic/datetime/api';
 import AuroDateTimeInstall from './content/dynamic/datetime/install';
+import AuroDateTimeReleases from './content/dynamic/datetime/releases';
 
 // Accordion
 import AuroAccordion from './content/dynamic/accordion/component';
 import AuroAccordionApi from './content/dynamic/accordion/api';
 import AuroAccordionInstall from './content/dynamic/accordion/install';
+import AuroAccordionReleases from './content/dynamic/accordion/releases';
 
 // Avatar
 import AuroAvatar from './content/dynamic/avatar/component';
 import AuroAvatarApi from './content/dynamic/avatar/api';
 import AuroAvatarInstall from './content/dynamic/avatar/install';
+import AuroAvatarReleases from './content/dynamic/avatar/releases';
 
 // Interruption [dialog, drawer]
 import AuroInterruption from './content/dynamic/interruption/component';
 import AuroInterruptionDrawer from './content/dynamic/interruption/drawer';
 import AuroInterruptionApi from './content/dynamic/interruption/api';
 import AuroInterruptionInstall from './content/dynamic/interruption/install';
+import AuroInterruptionReleases from './content/dynamic/interruption/releases';
 
 // Icon
 import AuroIcon from './content/dynamic/icon/component';
 import AuroIconApi from './content/dynamic/icon/api';
 import AuroIconInstall from './content/dynamic/icon/install';
+import AuroIconReleases from './content/dynamic/icon/releases';
 import AuroAlaska from './content/dynamic/icon/alaska';
 
 // Alerts
 import AuroAlerts from './content/dynamic/alerts/component';
 import AuroAlertsApi from './content/dynamic/alerts/api';
 import AuroAlertsInstall from './content/dynamic/alerts/install';
+import AuroAlertsReleases from './content/dynamic/alerts/releases';
 
 // Flight
 import AuroFlight from './content/dynamic/flight/component';
 import AuroFlightApi from './content/dynamic/flight/api';
 import AuroFlightInstall from './content/dynamic/flight/install';
 import AuroFlightDot from './content/dynamic/flight/dot';
+import AuroFlightReleases from './content/dynamic/flight/releases';
 
 // Flightline
 import AuroFlightline from './content/dynamic/flightline/component';
 import AuroFlightlineApi from './content/dynamic/flightline/api';
 import AuroFlightlineInstall from './content/dynamic/flightline/install';
 import AuroFlightlineDot from './content/dynamic/flightline/dot';
+import AuroFlightlineReleases from './content/dynamic/flightline/releases';
 
 // lockup
 import AuroLockup from './content/dynamic/lockup/component';
 import AuroLockupApi from './content/dynamic/lockup/api';
 import AuroLockupInstall from './content/dynamic/lockup/install';
+import AuroLockupReleases from './content/dynamic/lockup/releases';
 
 // button
 import AuroButton from './content/dynamic/button/component';
 import AuroButtonApi from './content/dynamic/button/api';
 import AuroButtonInstall from './content/dynamic/button/install';
+import AuroButtonReleases from './content/dynamic/button/releases';
 
 // badge
 import AuroBadge from './content/dynamic/badge/component';
 import AuroBadgeApi from './content/dynamic/badge/api';
 import AuroBadgeInstall from './content/dynamic/badge/install';
+import AuroBadgeReleases from './content/dynamic/badge/releases';
 
 // input
 import AuroInput from './content/dynamic/input/component';
 import AuroInputApi from './content/dynamic/input/api';
 import AuroInputInstall from './content/dynamic/input/install';
+import AuroInputReleases from './content/dynamic/input/releases';
 
 // loader
 import AuroLoader from './content/dynamic/loader/component';
 import AuroLoaderApi from './content/dynamic/loader/api';
 import AuroLoaderInstall from './content/dynamic/loader/install';
+import AuroLoaderReleases from './content/dynamic/loader/releases';
 
 // carousel
 import AuroCarousel from './content/dynamic/carousel/component';
 import AuroCarouselApi from './content/dynamic/carousel/api';
 import AuroCarouselInstall from './content/dynamic/carousel/install';
+import AuroCarouselReleases from './content/dynamic/carousel/releases';
 
 // pane
 import AuroPane from './content/dynamic/pane/component';
 import AuroPaneApi from './content/dynamic/pane/api';
 import AuroPaneInstall from './content/dynamic/pane/install';
+import AuroPaneReleases from './content/dynamic/pane/releases';
 
 // checkbox
 import AuroCheckbox from './content/dynamic/checkbox/component';
 import AuroCheckboxApi from './content/dynamic/checkbox/api';
 import AuroCheckboxInstall from './content/dynamic/checkbox/install';
+import AuroCheckboxReleases from './content/dynamic/checkbox/releases';
 
 // radio button
 import AuroRadio from './content/dynamic/radio/component';
 import AuroRadioApi from './content/dynamic/radio/api';
 import AuroRadioInstall from './content/dynamic/radio/install';
+import AuroRadioReleases from './content/dynamic/radio/releases';
 
 // wcss
 import WebCoreStyleSheets from './content/dynamic/wcss/wcss';
@@ -181,6 +198,7 @@ import AuroHyperlink from './content/dynamic/hyperlink/hyperlink';
 import AuroHyperlinkInstall from './content/dynamic/hyperlink/install';
 import AuroHyperlinkApi from './content/dynamic/hyperlink/api';
 import AuroHyperlinkA11y from './content/dynamic/hyperlink/a11y';
+import AuroHyperlinkReleases from './content/dynamic/hyperlink/releases';
 import Hyperlink from './content/dynamic/hyperlink/legacy'; // legacy
 
 // toast
@@ -192,11 +210,13 @@ import ToastToaster from './content/dynamic/toast/toaster';
 import AuroTable from './content/dynamic/table/component';
 import AuroTableApi from './content/dynamic/table/api';
 import AuroTableInstall from './content/dynamic/table/install';
+import AuroTableReleases from './content/dynamic/table/releases';
 
 // Header
 import AuroHeader from './content/dynamic/header/component';
 import AuroHeaderApi from './content/dynamic/header/api';
 import AuroHeaderInstall from './content/dynamic/header/install';
+import AuroHeaderReleases from './content/dynamic/header/releases';
 
 // popover
 import AuroPopover from './content/dynamic/popover/component';
@@ -394,12 +414,10 @@ function App() {
               <Route exact path="/typography/usage"><TypographyUsage /></Route>
               <Route exact path="/typography/deprecated"><TypographyDeprecated /></Route>
 
-
               {/* Icons */}
               <Route exact path="/icons/guidelines"><IconsGuidelines /></Route>
               <Route exact path="/icons"><Icons /></Route>
               <Route exact path="/icons/install"><IconsInstall /></Route>
-
 
               {/* Layout */}
               <Route exact path="/layout/grid"><LayoutGrid /></Route>
@@ -409,48 +427,57 @@ function App() {
               <Route exact path="/components/auro/alerts"><AuroAlerts /></Route>
               <Route exact path="/components/auro/alerts/install"><AuroAlertsInstall /></Route>
               <Route exact path="/components/auro/alerts/api"><AuroAlertsApi /></Route>
+              <Route exact path="/components/auro/alerts/releases"><AuroAlertsReleases /></Route>
 
               {/* Auro Flight */}
               <Route exact path="/components/auro/flight"><AuroFlight /></Route>
               <Route exact path="/components/auro/flight/install"><AuroFlightInstall /></Route>
               <Route exact path="/components/auro/flight/api"><AuroFlightApi /></Route>
               <Route exact path="/components/auro/flight/dot"><AuroFlightDot /></Route>
+              <Route exact path="/components/auro/flight/releases"><AuroFlightReleases /></Route>
 
               {/* Auro Flightline */}
               <Route exact path="/components/auro/flightline"><AuroFlightline /></Route>
               <Route exact path="/components/auro/flightline/install"><AuroFlightlineInstall /></Route>
               <Route exact path="/components/auro/flightline/api"><AuroFlightlineApi /></Route>
               <Route exact path="/components/auro/flightline/dot"><AuroFlightlineDot /></Route>
+              <Route exact path="/components/auro/flightline/releases"><AuroFlightlineReleases /></Route>
 
               {/* Auro Lockup */}
               <Route exact path="/components/auro/lockup"><AuroLockup /></Route>
               <Route exact path="/components/auro/lockup/install"><AuroLockupInstall /></Route>
               <Route exact path="/components/auro/lockup/api"><AuroLockupApi /></Route>
+              <Route exact path="/components/auro/lockup/releases"><AuroLockupReleases /></Route>
 
               {/* Auro Button */}
               <Route exact path="/components/auro/button"><AuroButton /></Route>
               <Route exact path="/components/auro/button/install"><AuroButtonInstall /></Route>
               <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
+              <Route exact path="/components/auro/button/releases"><AuroButtonReleases /></Route>
 
               {/* Auro Badge */}
               <Route exact path="/components/auro/badge"><AuroBadge /></Route>
               <Route exact path="/components/auro/badge/install"><AuroBadgeInstall /></Route>
               <Route exact path="/components/auro/badge/api"><AuroBadgeApi /></Route>
+              <Route exact path="/components/auro/badge/releases"><AuroBadgeReleases /></Route>
 
               {/* Auro Input */}
               <Route exact path="/components/auro/input"><AuroInput /></Route>
               <Route exact path="/components/auro/input/install"><AuroInputInstall /></Route>
               <Route exact path="/components/auro/input/api"><AuroInputApi /></Route>
+              <Route exact path="/components/auro/input/releases"><AuroInputReleases /></Route>
 
               {/* Auro Loader */}
               <Route exact path="/components/auro/loader"><AuroLoader /></Route>
               <Route exact path="/components/auro/loader/install"><AuroLoaderInstall /></Route>
               <Route exact path="/components/auro/loader/api"><AuroLoaderApi /></Route>
+              <Route exact path="/components/auro/loader/releases"><AuroLoaderReleases /></Route>
 
               {/* Auro Checkbox */}
               <Route exact path="/components/auro/checkbox"><AuroCheckbox /></Route>
               <Route exact path="/components/auro/checkbox/install"><AuroCheckboxInstall /></Route>
               <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route>
+              <Route exact path="/components/auro/checkbox/releases"><AuroCheckboxReleases /></Route>
               {/* <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route> */}
 
               {/* Auro Popover */}
@@ -463,27 +490,32 @@ function App() {
               <Route exact path="/components/auro/radio"><AuroRadio /></Route>
               <Route exact path="/components/auro/radio/install"><AuroRadioInstall /></Route>
               <Route exact path="/components/auro/radio/api"><AuroRadioApi /></Route>
+              <Route exact path="/components/auro/radio/releases"><AuroRadioReleases /></Route>
 
               {/* Auro Table */}
               <Route exact path="/components/auro/table"><AuroTable /></Route>
               <Route exact path="/components/auro/table/install"><AuroTableInstall /></Route>
               <Route exact path="/components/auro/table/api"><AuroTableApi /></Route>
+              <Route exact path="/components/auro/table/releases"><AuroTableReleases /></Route>
 
               {/* Auro Date/Time */}
               <Route exact path="/components/auro/datetime"><AuroDateTime /></Route>
               <Route exact path="/components/auro/datetime/install"><AuroDateTimeInstall /></Route>
               <Route exact path="/components/auro/datetime/api"><AuroDateTimeApi /></Route>
+              <Route exact path="/components/auro/datetime/releases"><AuroDateTimeReleases /></Route>
 
               {/* Auro Header */}
               <Route exact path="/components/auro/header"><AuroHeader /></Route>
               <Route exact path="/components/auro/header/install"><AuroHeaderInstall /></Route>
               <Route exact path="/components/auro/header/api"><AuroHeaderApi /></Route>
+              <Route exact path="/components/auro/header/releases"><AuroHeaderReleases /></Route>
 
               {/* Auro Hyperlink */}
               <Route exact path="/components/auro/hyperlink"><AuroHyperlink /></Route>
               <Route exact path="/components/auro/hyperlink/install"><AuroHyperlinkInstall /></Route>
               <Route exact path="/components/auro/hyperlink/api"><AuroHyperlinkApi /></Route>
               <Route exact path="/components/auro/hyperlink/a11y"><AuroHyperlinkA11y /></Route>
+              <Route exact path="/components/auro/hyperlink/releases"><AuroHyperlinkReleases /></Route>
               <Route exact path="/components/orion/hyperlink"><Hyperlink /></Route>
 
               {/* toast */}
@@ -495,21 +527,25 @@ function App() {
               <Route exact path="/components/auro/carousel/"><AuroCarousel /></Route>
               <Route exact path="/components/auro/carousel/api"><AuroCarouselApi /></Route>
               <Route exact path="/components/auro/carousel/install"><AuroCarouselInstall /></Route>
+              <Route exact path="/components/auro/carousel/releases"><AuroCarouselReleases /></Route>
 
               {/* accordion */}
               <Route exact path="/components/auro/accordion/"><AuroAccordion /></Route>
               <Route exact path="/components/auro/accordion/api"><AuroAccordionApi /></Route>
               <Route exact path="/components/auro/accordion/install"><AuroAccordionInstall /></Route>
+              <Route exact path="/components/auro/accordion/releases"><AuroAccordionReleases /></Route>
 
               {/* avatar */}
               <Route exact path="/components/auro/avatar/"><AuroAvatar /></Route>
               <Route exact path="/components/auro/avatar/api"><AuroAvatarApi /></Route>
               <Route exact path="/components/auro/avatar/install"><AuroAvatarInstall /></Route>
+              <Route exact path="/components/auro/avatar/releases"><AuroAvatarReleases /></Route>
 
               {/* icon */}
               <Route exact path="/components/auro/icon/"><AuroIcon /></Route>
               <Route exact path="/components/auro/icon/install"><AuroIconInstall /></Route>
               <Route exact path="/components/auro/icon/api"><AuroIconApi /></Route>
+              <Route exact path="/components/auro/icon/releases"><AuroIconReleases /></Route>
               <Route exact path="/components/auro/icon/alaska"><AuroAlaska/></Route>
 
               {/* modal */}
@@ -517,6 +553,7 @@ function App() {
               <Route exact path="/components/auro/interruption/drawer"><AuroInterruptionDrawer /></Route>
               <Route exact path="/components/auro/interruption/install"><AuroInterruptionInstall/></Route>
               <Route exact path="/components/auro/interruption/api"><AuroInterruptionApi /></Route>
+              <Route exact path="/components/auro/interruption/releases"><AuroInterruptionReleases /></Route>
 
               {/* flight-details */}
               <Route exact path="/components/auro/flight-details/"><Wip /></Route>
@@ -534,6 +571,7 @@ function App() {
               <Route exact path="/components/auro/pane/"><AuroPane /></Route>
               <Route exact path="/components/auro/pane/api"><AuroPaneApi /></Route>
               <Route exact path="/components/auro/pane/install"><AuroPaneInstall /></Route>
+              <Route exact path="/components/auro/pane/releases"><AuroPaneReleases /></Route>
 
               {/* Dev resources */}
               <Route exact path="/support/a11y"><A11yDocs /></Route> {/* not used */} {/* reevaluate content */}
