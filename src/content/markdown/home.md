@@ -39,3 +39,14 @@ Auro provides components and tools to help product teams work more efficiently. 
     ... and a growing list of pre-built <auro-hyperlink href="/component-status" relative>universally useable Web Components.</auro-hyperlink>
   </div>
 </div><br>
+
+## What people are saying about Auro
+
+> I must say, you do really good work.  I'm impressed!  Let me just say, I'm an Auro fan!
+
+-- Scott Flesher, Principal Software Engineer
+
+> Been working on some new tools for the team and decided to use the auro stuff to get rolling quickly and its so easy to use. Love the work you've been doing - keep it up!
+
+-- Josh Benard, Sr Product Mgr
+
