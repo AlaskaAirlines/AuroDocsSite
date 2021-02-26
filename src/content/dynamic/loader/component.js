@@ -85,8 +85,8 @@ class AuroLoader extends Component {
         </auro-accordion>
 
         <div className="demo--inline exampleWrapper--ondark">
-          <auro-loader pulse ondark md></auro-loader><br/>
-          <auro-loader pulse white md></auro-loader>
+          <auro-loader pulse ondark sm></auro-loader><br/>
+          <auro-loader pulse white sm></auro-loader>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
