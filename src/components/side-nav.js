@@ -31,8 +31,11 @@ export default function SideNav(props) {
         { linkTitle: "Common defs", route: "/getting-started/developers/common-definitions", parent: true },
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "Compliance", route: "/getting-started/developers/compliance", parent: true },
+
+        // revise document to speak to AuroLabs
         { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
-        // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
+
+        // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true }, -- REMOVE files from repo
       ]
     },
     {
@@ -40,6 +43,12 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "WC Generator", route: "/getting-started/developers/generator/install", parent: true  },
         { linkTitle: "Contributing", route: "/contributing", parent: true },
+
+        // current document lives in Auro repo
+        // Revise content; "component element variant/modifier"
+        { linkTitle: "CSS Conventions", route: "/support/css-conventions", parent: true},
+
+        { linkTitle: "WC Style Sheets", route: "/webcorestylesheets", parent: true },
       ]
     },
     {
@@ -67,17 +76,7 @@ export default function SideNav(props) {
         { linkTitle: "Popover", route: '/components/auro/popover', parent: true },
         { linkTitle: "Radio Button", route: '/components/auro/radio', parent: true },
         { linkTitle: "Table", route: '/components/auro/table', parent: true },
-        // { linkTitle: "Toast", route: '/components/orion/toast', parent: true }
-      ]
-    },
-    {
-      header: "CSS",
-      items: [
-        { linkTitle: "CSS Conventions", route: "/support/css-conventions", parent: true},
-        { linkTitle: "ShadyCSS", route: "/support/shadycss", parent: true },
-        { linkTitle: "CSS Custom Properties", route: "/support/custom-properties", parent: true },
-        { linkTitle: "WC Style Sheets", route: "/webcorestylesheets", parent: true },
-        // { linkTitle: "Touch support", route: "/support/isTouching", parent: true },
+        // { linkTitle: "Toast", route: '/components/orion/toast', parent: true } -- REMOVE files from repo
       ]
     },
     {
@@ -85,19 +84,21 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Automated testing", route: "/support/tests", parent: true },
         { linkTitle: "Browser Support", route: "/support/browsersSupport", parent: true },
+        { linkTitle: "CSS Custom Properties", route: "/support/custom-properties", parent: true },
+        { linkTitle: "ShadyCSS", route: "/support/shadycss", parent: true },
         { linkTitle: "Polyfills", route: "/support/polyfills/focusvisible", parent: true},
         { linkTitle: "The <slot> element", route: "/support/slots", parent: true },
         { linkTitle: "a11y Statement", route: "/a11y-statement", parent: true },
-        // { linkTitle: "Babel Support", route: "/support/babelSupport" },
-        // { linkTitle: "Tech overview", route: "/support/techDetails" },
-        // { linkTitle: "why?", route: "/support/why" }
+        // { linkTitle: "Babel Support", route: "/support/babelSupport" }, -- REMOVE files from repo
+        // { linkTitle: "Tech overview", route: "/support/techDetails" }, -- REMOVE files from repo
+        // { linkTitle: "why?", route: "/support/why" } -- REMOVE files from repo
       ]
     },
     {
       title: "- Example projects",
       items: [
         { linkTitle: "React Setup", route: "/reactSetup", parent: true},
-        // { linkTitle: "Angular Setup", route: "/angularSetup" },
+        // { linkTitle: "Angular Setup", route: "/angularSetup" }, -- REVISE demo
         { linkTitle: "Javascript Setup", route: "/javascriptSetup", parent: true},
         { linkTitle: "Svelte Setup", route: "/svelteSetup", parent: true}
 
