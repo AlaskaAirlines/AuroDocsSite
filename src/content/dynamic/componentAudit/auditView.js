@@ -4,261 +4,261 @@ import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
 import Issue from './issue';
 
-const Actions = gql`
-{
-  organization(login: "AlaskaAirlines") {
-    team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
-        nodes {
-          name
-          issues(filterBy: {labels: "Audit: Actions"}, first: 20) {
-            nodes {
-              title
-              url
-              labels(last: 10) {
-                nodes {
-                  name
-                  color
-                }
-              }
-              comments(last: 1) {
-                nodes {
-                  body
-                  createdAt
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`
+// const Actions = gql`
+// {
+//   organization(login: "AlaskaAirlines") {
+//     team(slug: "auro-team") {
+//       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+//         nodes {
+//           name
+//           issues(filterBy: {labels: "Audit: Actions"}, first: 0) {
+//             nodes {
+//               title
+//               url
+//               labels(last: 10) {
+//                 nodes {
+//                   name
+//                   color
+//                 }
+//               }
+//               comments(last: 1) {
+//                 nodes {
+//                   body
+//                   createdAt
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `
 
-const Informational = gql`
-{
-  organization(login: "AlaskaAirlines") {
-    team(slug: "auro-team") {
-      repositories(first: 30, orderBy: {field: NAME, direction: ASC}, query: "auro") {
-        nodes {
-          name
-          issues(filterBy: {labels: "Audit: Informational"}, first: 20) {
-            nodes {
-              title
-              url
-              labels(last: 10) {
-                nodes {
-                  name
-                  color
-                }
-              }
-              comments(last: 1) {
-                nodes {
-                  body
-                  createdAt
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`
+// const Informational = gql`
+// {
+//   organization(login: "AlaskaAirlines") {
+//     team(slug: "auro-team") {
+//       repositories(first: 30, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+//         nodes {
+//           name
+//           issues(filterBy: {labels: "Audit: Informational"}, first: 20) {
+//             nodes {
+//               title
+//               url
+//               labels(last: 10) {
+//                 nodes {
+//                   name
+//                   color
+//                 }
+//               }
+//               comments(last: 1) {
+//                 nodes {
+//                   body
+//                   createdAt
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `
 
-const Structural = gql`
-{
-  organization(login: "AlaskaAirlines") {
-    team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
-        nodes {
-          name
-          issues(filterBy: {labels: "Audit: Structural"}, first: 20) {
-            nodes {
-              title
-              url
-              labels(last: 10) {
-                nodes {
-                  name
-                  color
-                }
-              }
-              comments(last: 1) {
-                nodes {
-                  body
-                  createdAt
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`
+// const Structural = gql`
+// {
+//   organization(login: "AlaskaAirlines") {
+//     team(slug: "auro-team") {
+//       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+//         nodes {
+//           name
+//           issues(filterBy: {labels: "Audit: Structural"}, first: 20) {
+//             nodes {
+//               title
+//               url
+//               labels(last: 10) {
+//                 nodes {
+//                   name
+//                   color
+//                 }
+//               }
+//               comments(last: 1) {
+//                 nodes {
+//                   body
+//                   createdAt
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `
 
-const Inputs = gql`
-{
-  organization(login: "AlaskaAirlines") {
-    team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
-        nodes {
-          name
-          issues(filterBy: {labels: "Audit: Inputs"}, first: 20) {
-            nodes {
-              title
-              url
-              labels(last: 10) {
-                nodes {
-                  name
-                  color
-                }
-              }
-              comments(last: 1) {
-                nodes {
-                  body
-                  createdAt
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`
+// const Inputs = gql`
+// {
+//   organization(login: "AlaskaAirlines") {
+//     team(slug: "auro-team") {
+//       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+//         nodes {
+//           name
+//           issues(filterBy: {labels: "Audit: Inputs"}, first: 20) {
+//             nodes {
+//               title
+//               url
+//               labels(last: 10) {
+//                 nodes {
+//                   name
+//                   color
+//                 }
+//               }
+//               comments(last: 1) {
+//                 nodes {
+//                   body
+//                   createdAt
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `
 
-const Navigation = gql`
-{
-  organization(login: "AlaskaAirlines") {
-    team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
-        nodes {
-          name
-          issues(filterBy: {labels: "Audit: Navigation"}, first: 20) {
-            nodes {
-              title
-              url
-              labels(last: 10) {
-                nodes {
-                  name
-                  color
-                }
-              }
-              comments(last: 1) {
-                nodes {
-                  body
-                  createdAt
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`
+// const Navigation = gql`
+// {
+//   organization(login: "AlaskaAirlines") {
+//     team(slug: "auro-team") {
+//       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+//         nodes {
+//           name
+//           issues(filterBy: {labels: "Audit: Navigation"}, first: 20) {
+//             nodes {
+//               title
+//               url
+//               labels(last: 10) {
+//                 nodes {
+//                   name
+//                   color
+//                 }
+//               }
+//               comments(last: 1) {
+//                 nodes {
+//                   body
+//                   createdAt
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `
 
-const Contextual = gql`
-{
-  organization(login: "AlaskaAirlines") {
-    team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
-        nodes {
-          name
-          issues(filterBy: {labels: "Audit: Contextual"}, first: 20) {
-            nodes {
-              title
-              url
-              labels(last: 10) {
-                nodes {
-                  name
-                  color
-                }
-              }
-              comments(last: 1) {
-                nodes {
-                  body
-                  createdAt
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`
+// const Contextual = gql`
+// {
+//   organization(login: "AlaskaAirlines") {
+//     team(slug: "auro-team") {
+//       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+//         nodes {
+//           name
+//           issues(filterBy: {labels: "Audit: Contextual"}, first: 20) {
+//             nodes {
+//               title
+//               url
+//               labels(last: 10) {
+//                 nodes {
+//                   name
+//                   color
+//                 }
+//               }
+//               comments(last: 1) {
+//                 nodes {
+//                   body
+//                   createdAt
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `
 
-const Content = gql`
-{
-  organization(login: "AlaskaAirlines") {
-    team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
-        nodes {
-          name
-          issues(filterBy: {labels: "Audit: Content"}, first: 20) {
-            nodes {
-              title
-              url
-              labels(last: 10) {
-                nodes {
-                  name
-                  color
-                }
-              }
-              comments(last: 1) {
-                nodes {
-                  body
-                  createdAt
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`
+// const Content = gql`
+// {
+//   organization(login: "AlaskaAirlines") {
+//     team(slug: "auro-team") {
+//       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+//         nodes {
+//           name
+//           issues(filterBy: {labels: "Audit: Content"}, first: 20) {
+//             nodes {
+//               title
+//               url
+//               labels(last: 10) {
+//                 nodes {
+//                   name
+//                   color
+//                 }
+//               }
+//               comments(last: 1) {
+//                 nodes {
+//                   body
+//                   createdAt
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `
 
-const ContentLayout = gql`
-{
-  organization(login: "AlaskaAirlines") {
-    team(slug: "auro-team") {
-      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
-        nodes {
-          name
-          issues(filterBy: {labels: "Audit: Content Layouts"}, first: 20) {
-            nodes {
-              title
-              url
-              labels(last: 10) {
-                nodes {
-                  name
-                  color
-                }
-              }
-              comments(last: 1) {
-                nodes {
-                  body
-                  createdAt
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`
+// const ContentLayout = gql`
+// {
+//   organization(login: "AlaskaAirlines") {
+//     team(slug: "auro-team") {
+//       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+//         nodes {
+//           name
+//           issues(filterBy: {labels: "Audit: Content Layouts"}, first: 20) {
+//             nodes {
+//               title
+//               url
+//               labels(last: 10) {
+//                 nodes {
+//                   name
+//                   color
+//                 }
+//               }
+//               comments(last: 1) {
+//                 nodes {
+//                   body
+//                   createdAt
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `
 
 const PriorityAudit = gql`
 {
@@ -312,6 +312,38 @@ const AuditLabels = gql`
 }
 `
 
+const AuroLabs = gql`
+{
+  organization(login: "AlaskaAirlines") {
+    team(slug: "auro-team") {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+        nodes {
+          name
+          issues(filterBy: {labels: "AuroLabs"}, first: 50) {
+            nodes {
+              title
+              url
+              labels(last: 10) {
+                nodes {
+                  name
+                  color
+                }
+              }
+              comments(last: 1) {
+                nodes {
+                  body
+                  createdAt
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
 class AllEpics extends Component {
   render() {
     return (
@@ -319,9 +351,9 @@ class AllEpics extends Component {
 
         <Nav />
 
-        <h1 className="auro_heading auro_heading--display">Auro Design System: Project audit</h1>
+        <h1 className="auro_heading auro_heading--display">Project audit</h1>
 
-        <p>This resource is provided as a way to track the progress of all components identified within the Auro Design System as either Auro or Orion compliant, or in progress.</p>
+        <p>This resource is provided as a way to track the progress of new work in progress.</p>
 
         <div className="auditLegend">
           <h3 className="auro_heading auro_heading--500">Legend</h3>
@@ -364,6 +396,14 @@ class AllEpics extends Component {
                         </div><span>=</span><span>{name.substring(name.search("Backlogged"))}</span></div>
                     : ''
                   ))}
+
+                  {labels.nodes.map(({name, color}) => (
+                    name.includes("AuroLabs")
+                      ? <div className="auditLegend--labelWrapper"><div key={name} data-name={name} title={name} className="issueLabel auditLabel auditLabel--legend"
+                          style={{backgroundColor: '#' + color, color: '#' + color}}>
+                        </div><span>=</span><span>{name.substring(name.search("AuroLabs"))}</span></div>
+                    : ''
+                  ))}
                 </div>
               ));
             }}
@@ -376,13 +416,26 @@ class AllEpics extends Component {
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (
               issues.nodes.length > 0
-                ? <Issue tableName={'Priority items'} key={name} name={name} issues={issues.nodes} />
+                ? <Issue tableName={'New element priorities'} key={name} name={name} issues={issues.nodes} />
                 : ''
             ));
           }}
         </Query>
 
-        <Query query={Actions}>
+        <Query query={AuroLabs}>
+          {({ loading, error, data }) => {
+            if (loading) return <p></p>;
+            if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
+
+            return data.organization.team.repositories.nodes.map(({ name, issues }) => (
+              issues.nodes.length > 0
+                ? <Issue tableName={'AuroLabs'} key={name} name={name} issues={issues.nodes} />
+                : ''
+            ));
+          }}
+        </Query>
+
+        {/* <Query query={Actions}>
           {({ loading, error, data }) => {
             if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
@@ -393,9 +446,9 @@ class AllEpics extends Component {
                 : ''
             ));
           }}
-        </Query>
+        </Query> */}
 
-        <Query query={Informational}>
+        {/* <Query query={Informational}>
           {({ loading, error, data }) => {
             if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
@@ -406,9 +459,9 @@ class AllEpics extends Component {
                 : ''
             ));
           }}
-        </Query>
+        </Query> */}
 
-        <Query query={Structural}>
+        {/* <Query query={Structural}>
           {({ loading, error, data }) => {
             if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
@@ -419,9 +472,9 @@ class AllEpics extends Component {
                 : ''
             ));
           }}
-        </Query>
+        </Query> */}
 
-        <Query query={Inputs}>
+        {/* <Query query={Inputs}>
           {({ loading, error, data }) => {
             if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
@@ -432,9 +485,9 @@ class AllEpics extends Component {
                 : ''
             ));
           }}
-        </Query>
+        </Query> */}
 
-        <Query query={Navigation}>
+        {/* <Query query={Navigation}>
           {({ loading, error, data }) => {
             if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
@@ -445,9 +498,9 @@ class AllEpics extends Component {
                 : ''
             ));
           }}
-        </Query>
+        </Query> */}
 
-        <Query query={Contextual}>
+        {/* <Query query={Contextual}>
           {({ loading, error, data }) => {
             if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
@@ -458,9 +511,9 @@ class AllEpics extends Component {
                 : ''
             ));
           }}
-        </Query>
+        </Query> */}
 
-        <Query query={Content}>
+        {/* <Query query={Content}>
           {({ loading, error, data }) => {
             if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
@@ -471,9 +524,9 @@ class AllEpics extends Component {
                 : ''
             ));
           }}
-        </Query>
+        </Query> */}
 
-        <Query query={ContentLayout}>
+        {/* <Query query={ContentLayout}>
           {({ loading, error, data }) => {
             if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
@@ -484,7 +537,7 @@ class AllEpics extends Component {
                 : ''
             ));
           }}
-        </Query>
+        </Query> */}
 
       </section>
     )

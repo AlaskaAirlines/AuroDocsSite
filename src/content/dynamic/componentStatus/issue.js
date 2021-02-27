@@ -11,25 +11,12 @@ class Issue extends Component {
     return (yiq >= 128) ? '#000' : '#fff';
   };
 
-  // humanDate(dateData) {
-  //   const standardOptions = {
-  //     weekday: "short",
-  //     year: "numeric",
-  //     month: "short",
-  //     day: "numeric"
-  //   };
-
-  //   const then = new Date(dateData);
-
-  //   return then.toLocaleString('en-us', standardOptions);
-  // }
-
   render() {
     return (
       <table key={this.props.name} className="auro_table epicIssues">
         <thead>
           <tr>
-            <th className="auro_util_nowrap">Issues for: {this.props.name}</th>
+            <th className="auro_util_nowrap">{this.props.name}</th>
             <th>Labels</th>
             <th className="auro_table--notes">Comments</th>
           </tr>
@@ -37,7 +24,7 @@ class Issue extends Component {
         <tbody>
           {this.props.issues.map(({title, url, number, labels, assignees, comments}) => (
             <tr key={title}>
-              <td className="auro_util_nowrap">
+              <td className="auro_table--issue">
                 <div>
                   <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
                 </div>
@@ -52,7 +39,7 @@ class Issue extends Component {
                   ))}
                 </div>
               </td>
-              <td>
+              <td className="auro_table--labels">
                 <div className="labelWrapper">
                   {labels.nodes.map(({name, color, description}) => (
                     <div key={name} title={description} className="issueLabel" style={{backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>

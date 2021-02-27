@@ -122,7 +122,6 @@ class HelpWanted extends Component {
         <h1 className="auro_heading auro_heading--display">Help Wanted</h1>
         <p>The following issues are open tickets with the Auro Design System and help is greatly appreciated. If you see an issue here that you feel you can help with, design, a11y, or feature, please reach out and we would be excited to work with you!</p>
 
-        <h2 className="auro_heading auro_heading--700">Design and Dev Support Issues</h2>
         <Query query={helpWanted}>
           {({ loading, error, data }) => {
             if (loading) return <auro-loader laser onlight></auro-loader>;

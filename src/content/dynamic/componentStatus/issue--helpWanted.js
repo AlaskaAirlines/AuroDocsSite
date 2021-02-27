@@ -45,7 +45,7 @@ class HelpWanted extends Component {
         <tbody>
           {this.props.issues.map(({title, body, url, labels, number, createdAt, assignees, comments}) => (
             <tr key={title}>
-              <td>
+              <td className="auro_table--issue">
                 <div>
                   <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>(<small>#{number}</small>)
                 </div>
@@ -65,7 +65,7 @@ class HelpWanted extends Component {
                   ))}
                 </div>
               </td>
-              <td>
+              <td className="auro_table--labels">
                 <button className="imgIcon" onClick={() => this.toggleDialog(`#dialog-${number}`)} aria-label="Go to Github Site">
                   <Readme role="img" aria-hidden="false" />
                 </button>
@@ -87,7 +87,7 @@ class HelpWanted extends Component {
                   </span>
                 </auro-dialog>
               </td>
-              <td>
+              <td className="auro_table--notes">
                 {comments.nodes.map(({body, createdAt}) => (
                   <div className="auro-markdown">
                     <ReactMarkdown source={body} />

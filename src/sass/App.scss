@@ -743,9 +743,17 @@ img[src*='shields.io'] {
   }
 }
 
+.auro_table--issue {
+  width: 25%;
+}
+
+.auro_table--labels {
+  width: 20%;
+}
+
 .auro_table--notes {
   @include auro_breakpoint--md {
-    width: 40%;
+    width: 55%;
   }
 }
 

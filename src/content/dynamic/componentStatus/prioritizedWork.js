@@ -4,14 +4,14 @@ import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
 import Issue from './issue';
 
-const workInProgress = gql`
+const priority = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
       repositories(first: 50) {
         nodes {
           name
-          issues(first: 50, orderBy: {field: COMMENTS, direction: DESC}, states: OPEN, filterBy: {labels: "Status: Work In Progress"}) {
+          issues(first: 50, orderBy: {field: COMMENTS, direction: DESC}, states: OPEN, filterBy: {labels: "Status: Prioritized for work"}) {
             nodes {
               title
               url
@@ -63,12 +63,12 @@ class PlannedWork extends Component {
 
         <Nav />
 
-        <h1 className="auro_heading auro_heading--display">Work In Progress</h1>
-        <p>The following are issues that are currently being worked on.</p>
+        <h1 className="auro_heading auro_heading--display">Prioritized for work</h1>
+        <p>The following are issues that are prioritized for work.</p>
 
-        <Query query={workInProgress}>
+        <Query query={priority}>
           {({ loading, error, data }) => {
-            if (loading) return <auro-loader laser onlight></auro-loader>;
+            if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (

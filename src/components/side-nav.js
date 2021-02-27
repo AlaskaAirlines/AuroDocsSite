@@ -8,9 +8,9 @@ export default function SideNav(props) {
       header: "Welcome to Auro",
       items: [
         { linkTitle: "Philosophy", route: "/philosophy", parent: true },
-        { linkTitle: "Component status", route: "/component-status", parent: true },
-        { linkTitle: "Release Info", route: "/support/releases-summary", parent: true },
-        { linkTitle: "Auro Support", route: "/auro-support", parent: true },
+        { linkTitle: "Status", route: "/component-status", parent: true },
+        { linkTitle: "Releases", route: "/support/releases-summary", parent: true },
+        { linkTitle: "Support", route: "/auro-support", parent: true },
       ]
     },
     {
