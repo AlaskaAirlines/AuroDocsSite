@@ -11,7 +11,7 @@ export default function SideNav(props) {
         { linkTitle: "Status", route: "/component-status", parent: true },
         { linkTitle: "Releases", route: "/support/releases-summary", parent: true },
         { linkTitle: "Support", route: "/auro-support", parent: true },
-        { linkTitle: "Auro Labs", route: "/aurolabs", parent: true },
+        { linkTitle: "AuroLabs", route: "/aurolabs", parent: true },
       ]
     },
     {
@@ -29,15 +29,14 @@ export default function SideNav(props) {
       items: [
         // { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
-        { linkTitle: "CSS Conventions", route: "/getting-started/developers/css-conventions", parent: true},
-        { linkTitle: "WC Style Sheets", route: "/getting-started/developers/webcorestylesheets", parent: true },
-        { linkTitle: "Common defs", route: "/getting-started/developers/common-definitions", parent: true },
-        { linkTitle: "Compliance", route: "/getting-started/developers/compliance", parent: true },
+        { linkTitle: "CSS guidelines", route: "/getting-started/developers/webcorestylesheets", parent: true },
+        { linkTitle: "Definitions", route: "/getting-started/developers/common-definitions", parent: true },
+        { linkTitle: "Auro Compliance", route: "/getting-started/developers/compliance", parent: true },
         // { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
         // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
-        { linkTitle: "WC Generator", route: "/getting-started/developers/generator/install", parent: true  },
+        { linkTitle: "WC-Generator", route: "/getting-started/developers/generator/install", parent: true  },
         { linkTitle: "Contributing", route: "/contributing", parent: true },
-        { linkTitle: "Custom Element 101", route: "/custom-element-101", parent: true },
+        // { linkTitle: "*Custom Element 101", route: "/custom-element-101", parent: true },
       ]
     },
     {

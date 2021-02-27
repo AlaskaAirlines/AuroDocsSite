@@ -4,9 +4,10 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WebCoreStyleSheets/master/CONVENTIONS.md';
+// This doc should be relocated to WCSS
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro/master/src/CSSCONVENTIONS.md';
 
-class AuroButtonInstall extends MarkdownPageWrapper {
+class AuroCssConventions extends MarkdownPageWrapper {
 
   // function to get text from MD document
   componentWillMount() {
@@ -38,4 +39,4 @@ class AuroButtonInstall extends MarkdownPageWrapper {
   }
 }
 
-export default AuroButtonInstall;
+export default AuroCssConventions;

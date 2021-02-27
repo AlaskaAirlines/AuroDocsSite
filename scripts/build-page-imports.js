@@ -87,10 +87,6 @@ export class CustomPropertiesDocs extends ExternalDocs {
   readme = "src/CUSTOM_PROPERTIES.md"
 }
 
-export class CssConventionsDocs extends ExternalDocs {
-  readme = "src/CSSCONVENTIONS.md"
-}
-
 export class IsTouchingDocs extends ExternalDocs {
   readme = "src/IS_TOUCHING.md"
 }

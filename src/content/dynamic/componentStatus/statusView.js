@@ -298,9 +298,10 @@ class ComponentStatus extends Component {
         <p>IMPORTANT: The Auro custom element are a work in progress and releases are subject to major changes.</p>
         <p>Auro custom element are a collection of custom element maintained by Alaska Airlines that implement the Auro Design System. Tools and developed elements that are universally useable in almost any development environment including <auro-hyperlink href="/reactSetup" relative>React,</auro-hyperlink><auro-hyperlink href="/svelteSetup" relative>Svelte,</auro-hyperlink> or simply standard <auro-hyperlink href="/javascriptSetup" relative>JavaScript.</auro-hyperlink></p>
 
-        <p>Are you working on something that you feel should be a part of the Auro Design System? Then feel free to <auro-hyperlink href="https://github.com/AlaskaAirlines/auro/issues/new?assignees=blackfalcon&labels=Status%3A+In+discovery&template=new_wc.md&title=" target="_blank">propose new work</auro-hyperlink>and the Auro team will be sure you reach out to you as soon as possible.</p>
+        <auro-header level="2" display="600">Auro Labs</auro-header>
+        <p>Are you working on something that you feel should be a part of the Auro Design System? Consider contributing to <auro-hyperlink href="/aurolabs" relative>AuroLabs</auro-hyperlink>(for internal Alaska Airlines staff only) and the Auro team will be sure you reach out to you as soon as possible.</p>
 
-        <auro-header level="3" display="500">Design System support tools</auro-header>
+        <auro-header level="3" display="600">Design System support tools</auro-header>
 
         <table className="auro_table">
           <thead>
@@ -384,7 +385,7 @@ class ComponentStatus extends Component {
           </tbody>
         </table>
 
-        <auro-header level="3" display="500">Auro components</auro-header>
+        <auro-header level="3" display="600">Auro custom elements</auro-header>
 
         <table className="auro_table">
           <thead>

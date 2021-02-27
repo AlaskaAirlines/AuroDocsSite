@@ -201,6 +201,7 @@ import WcssFeatures from './content/dynamic/wcss/features';
 import WcssConventions from './content/dynamic/wcss/conventions';
 import WcssFaq from './content/dynamic/wcss/faq';
 import WcssTests from './content/dynamic/wcss/tests';
+import WcssLinter from './content/dynamic/wcss/lint';
 
 // hyperlink
 import AuroHyperlink from './content/dynamic/hyperlink/hyperlink';
@@ -258,7 +259,6 @@ import {
   AngularDemoDocs,
   BabelSupportDocs,
   BrowsersSupportDocs,
-  CssConventionsDocs,
   CustomPropertiesDocs,
   GovernanceDocs,
   IsTouchingDocs,
@@ -270,7 +270,6 @@ import {
   TestsDocs,
   WhyCustomelementsDocs,
   ComplianceDocs,
-  // ContributingDocs,
 
   // Markdown Pages from docsExport(automated)
   A11yStatement,
@@ -611,14 +610,6 @@ function App() {
               <Route exact path="/support/releases-by-sprint"><ReleasesBySprint /></Route>
               <Route exact path="/support/releases-summary"><ReleaseSummary /></Route>
 
-              {/* Pollyfills */}
-              {/* <Route exact path="./support/polyfills/focusvisible"><PolyfillDocs /></Route> */}
-
-              {/* CSS */}
-              <Route exact path="/getting-started/developers/css-conventions"><CssConventionsDocs /></Route>
-              <Route exact path="/support/css-conventions"><CssConventionsDocs /></Route>
-
-
               <Route exact path="/support/custom-properties"><CustomPropertiesDocs /></Route>
               <Route exact path="/support/isTouching"><IsTouchingDocs /></Route> {/* not used */} {/* reevaluate content */}
               <Route exact path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
@@ -627,6 +618,7 @@ function App() {
               <Route exact path="/webcorestylesheets/conventions"><WcssConventions /></Route>
               <Route exact path="/webcorestylesheets/faq"><WcssFaq /></Route>
               <Route exact path="/webcorestylesheets/tests"><WcssTests /></Route>
+              <Route exact path="/webcorestylesheets/linter"><WcssLinter /></Route>
               <Route exact path="/webcorestylesheets/features"><WcssFeatures /></Route>
 
               {/* Process */}
