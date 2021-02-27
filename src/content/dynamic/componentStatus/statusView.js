@@ -11,6 +11,7 @@ const componentStatus = gql`
       repositories(query: "auro-", orderBy: {field: NAME, direction: ASC}) {
         nodes {
           name
+          isPrivate
           description
           url
           homepageUrl
@@ -311,8 +312,9 @@ class ComponentStatus extends Component {
                 if (loading) return <tr><td></td></tr>;
                 if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
-                return data.organization.team.repositories.nodes.map(({name, description, url, homepageUrl, id, issues, releases, pullRequests}) => (
+                return data.organization.team.repositories.nodes.map(({name, isPrivate, description, url, homepageUrl, id, issues, releases, pullRequests}) => (
                   <Repo key={id}
+                    isPrivate={isPrivate}
                     pullRequests={pullRequests}
                     name={name}
                     description={description}
