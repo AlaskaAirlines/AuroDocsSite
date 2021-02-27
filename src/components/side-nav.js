@@ -50,6 +50,7 @@ export default function SideNav(props) {
         { linkTitle: "Avatar", route: '/components/auro/avatar', parent: true },
         { linkTitle: "Badge", route: '/components/auro/badge', parent: true },
         { linkTitle: "Button", route: '/components/auro/button', parent: true },
+        { linkTitle: "Card", route: '/components/auro/card', parent: true },
         { linkTitle: "Carousel", route: '/components/auro/carousel', parent: true },
         { linkTitle: "Checkbox", route: '/components/auro/checkbox', parent: true },
         { linkTitle: "Date/Time", route: '/components/auro/datetime', parent: true },

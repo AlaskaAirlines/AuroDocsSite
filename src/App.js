@@ -80,6 +80,13 @@ import IconsInstall from './content/dynamic/icons/install';
 import LayoutGrid from './content/dynamic/layout/grid';
 import LayoutSpacing from './content/dynamic/layout/spacing';
 
+// card
+import AuroCard from './content/dynamic/card/component';
+import AuroBanner from './content/dynamic/card/banner';
+import AuroCardApi from './content/dynamic/card/api';
+import AuroCardInstall from './content/dynamic/card/install';
+import AuroCardReleases from './content/dynamic/card/releases';
+
 // datetime
 import AuroDateTime from './content/dynamic/datetime/component';
 import AuroDateTimeApi from './content/dynamic/datetime/api';
@@ -353,6 +360,7 @@ function App() {
               <Route exact path="/button"><AuroButton /></Route>
               <Route exact path="/lockup"><AuroLockup /></Route>
               <Route exact path="/carousel/"><AuroCarousel /></Route>
+              <Route exact path="/card/"><AuroCard /></Route>
               <Route exact path="/checkbox"><AuroCheckbox /></Route>
               <Route exact path="/datetime/"><AuroDateTime /></Route>
               <Route exact path="/interruption/"><AuroInterruption /></Route>
@@ -522,6 +530,13 @@ function App() {
               <Route exact path="/components/orion/toast/"><Toast /></Route>
               <Route exact path="/components/orion/toast/install"><ToastInstall /></Route>
               <Route exact path="/components/orion/toast/toaster"><ToastToaster /></Route>
+
+              {/* card */}
+              <Route exact path="/components/auro/card/"><AuroCard /></Route>
+              <Route exact path="/components/auro/banner/"><AuroBanner /></Route>
+              <Route exact path="/components/auro/card/api"><AuroCardApi /></Route>
+              <Route exact path="/components/auro/card/install"><AuroCardInstall /></Route>
+              <Route exact path="/components/auro/card/releases"><AuroCardReleases /></Route>
 
               {/* carousel */}
               <Route exact path="/components/auro/carousel/"><AuroCarousel /></Route>
