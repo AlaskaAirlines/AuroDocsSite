@@ -2,8 +2,8 @@
 // All Auro web components need to be listed here to be packaged properly for IE11 support
 
 // card
-import "@alaskaairux/auro-card";
-import "@alaskaairux/auro-card/dist/auro-banner";
+// import "@alaskaairux/auro-card";
+// import "@alaskaairux/auro-card/dist/auro-banner";
 
 // flightline
 import "@alaskaairux/auro-flightline";
