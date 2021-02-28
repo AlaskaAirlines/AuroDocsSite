@@ -16,15 +16,30 @@ const componentStatus = gql`
           url
           homepageUrl
           id
-          pullRequests(last: 1, states: OPEN) {
+          pullRequests(last: 10, states: OPEN) {
             totalCount
             nodes {
               title
-              id
               url
+              mergeable
+              changedFiles
+              isDraft
+              state
+              reviewDecision
+              suggestedReviewers {
+                reviewer {
+                  name
+                }
+              }
               author {
                 login
                 avatarUrl(size: 30)
+              }
+              commits {
+                totalCount
+              }
+              files {
+                totalCount
               }
             }
           }
@@ -44,6 +59,7 @@ const componentStatus = gql`
     }
   }
 }
+
 `
 
 const generator = gql`
@@ -57,14 +73,30 @@ const generator = gql`
           url
           homepageUrl
           id
-          pullRequests(last: 1, states: OPEN) {
+          pullRequests(last: 10, states: OPEN) {
             totalCount
             nodes {
               title
-              id
+              url
+              mergeable
+              changedFiles
+              isDraft
+              state
+              reviewDecision
+              suggestedReviewers {
+                reviewer {
+                  name
+                }
+              }
               author {
                 login
                 avatarUrl(size: 30)
+              }
+              commits {
+                totalCount
+              }
+              files {
+                totalCount
               }
             }
           }
@@ -96,14 +128,30 @@ const tokens = gql`
           url
           homepageUrl
           id
-          pullRequests(last: 1, states: OPEN) {
+          pullRequests(last: 10, states: OPEN) {
             totalCount
             nodes {
               title
-              id
+              url
+              mergeable
+              changedFiles
+              isDraft
+              state
+              reviewDecision
+              suggestedReviewers {
+                reviewer {
+                  name
+                }
+              }
               author {
                 login
                 avatarUrl(size: 30)
+              }
+              commits {
+                totalCount
+              }
+              files {
+                totalCount
               }
             }
           }
@@ -135,14 +183,30 @@ const WebCoreStyleSheets = gql`
           url
           homepageUrl
           id
-          pullRequests(last: 1, states: OPEN) {
+          pullRequests(last: 10, states: OPEN) {
             totalCount
             nodes {
               title
-              id
+              url
+              mergeable
+              changedFiles
+              isDraft
+              state
+              reviewDecision
+              suggestedReviewers {
+                reviewer {
+                  name
+                }
+              }
               author {
                 login
                 avatarUrl(size: 30)
+              }
+              commits {
+                totalCount
+              }
+              files {
+                totalCount
               }
             }
           }
@@ -174,14 +238,30 @@ const Icons = gql`
           url
           homepageUrl
           id
-          pullRequests(last: 1, states: OPEN) {
+          pullRequests(last: 10, states: OPEN) {
             totalCount
             nodes {
               title
-              id
+              url
+              mergeable
+              changedFiles
+              isDraft
+              state
+              reviewDecision
+              suggestedReviewers {
+                reviewer {
+                  name
+                }
+              }
               author {
                 login
                 avatarUrl(size: 30)
+              }
+              commits {
+                totalCount
+              }
+              files {
+                totalCount
               }
             }
           }

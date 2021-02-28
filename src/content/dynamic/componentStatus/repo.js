@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 
 let randomNumber = ''
+// let randomNumberTwo = ''
 
 class Repo extends Component {
 
   charGenerate() {
     const chars = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
     randomNumber = [...Array(10)].map(i=>chars[Math.random()*chars.length|0]).join``
+    // randomNumberTwo = [...Array(10)].map(i=>chars[Math.random()*chars.length|0]).join``
   }
 
   render() {
@@ -24,7 +26,7 @@ class Repo extends Component {
             </td>
             <td className="">
               { this.charGenerate() }
-              {
+              { // loop over releases for URL to last release
                 this.props.releases.nodes.length !== 0
                   ? this.props.releases.nodes.map(({tagName, createdAt, id, url}) => (
                       <div>
@@ -37,18 +39,6 @@ class Repo extends Component {
                           <a key={id} href={url} target="_blank" className="hyperlink" rel="noopener noreferrer">
                             <auro-datetime utc={createdAt} weekday="long"> <auro-icon category="interface" name="external-link-md" customcolor></auro-icon></auro-datetime>
                           </a>
-                          {
-                            this.props.pullRequests.nodes.length !== 0
-                              ? this.props.pullRequests.nodes.map(({title, author, id, url}) => (
-                                  <div>
-                                    <strong>Latest PR:</strong> <a key={id} href={url} target="_blank" className="hyperlink" rel="noopener noreferrer">
-                                      {title} <auro-icon category="interface" name="external-link-md" customcolor></auro-icon>
-                                    </a><br/>
-                                    <strong>Author:</strong> <img className="githubAvatar" src={author.avatarUrl} alt={author.login} />{author.login}
-                                  </div>
-                                ))
-                              : ''
-                          }
                         </auro-popover>
                       </div>
                     ))
@@ -88,6 +78,79 @@ class Repo extends Component {
             </td>
             <td>
               <div className="shortWrap">{this.props.description}</div>
+
+              {
+                this.props.pullRequests.totalCount > 0
+                ? <auro-accordion lowProfile noProfile justifyLeft>
+                    <strong slot="trigger">Pull request details</strong>
+                    <div className="statusPrLayout">
+                      {this.props.pullRequests.nodes.map(({title, mergeable, changedFiles, commits, url, isDraft, reviewDecision, author}) => (
+                        <span>
+                          {
+                            isDraft
+                            ? <auro-alerts noIcon>
+                                <div>
+                                  Draft:<br/><auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                                </div>
+                                <div style={{"display": "flex"}}>
+                                  <div style={{"marginRight": "1rem"}}><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
+                                  <div><auro-badge pill advisory>{commits.totalCount}</auro-badge> Commit{commits.totalCount > 1 ? 's' : ''}</div>
+                                </div>
+                                <div>
+                                  <small>Author: </small>
+                                  <img
+                                    className="githubAvatar"
+                                    src={author.avatarUrl}
+                                    alt={author.login}
+                                    title={author.login}></img>
+                                </div>
+                              </auro-alerts>
+                            : (mergeable && !isDraft && reviewDecision==='APPROVED'
+                              ? <auro-alerts noIcon success>
+                                  <div>
+                                    Approved:<br/><auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                                  </div>
+                                  <div style={{"display": "flex"}}>
+                                    <div style={{"marginRight": "1rem"}}><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
+                                    <div><auro-badge pill advisory>{commits.totalCount}</auro-badge> Commit{commits.totalCount > 1 ? 's' : ''}</div>
+                                  </div>
+                                  <div>
+                                    <small>Author: </small>
+                                    <img
+                                      className="githubAvatar"
+                                      src={author.avatarUrl}
+                                      alt={author.login}
+                                      title={author.login}></img>
+                                  </div>
+                                </auro-alerts>
+                              : <auro-alerts noIcon warning style={{"marginBottom": "1rem"}}>
+                                  <div>
+                                  { reviewDecision === "REVIEW_REQUIRED" ? "Review required: " : (reviewDecision === "CHANGES_REQUESTED" ? "Changes requested:": '')}<br/><auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                                  </div>
+                                  <div style={{"display": "flex"}}>
+                                    <div style={{"marginRight": "1rem"}}><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
+                                    <div><auro-badge pill advisory>{commits.totalCount}</auro-badge> Commit{commits.totalCount > 1 ? 's' : ''}</div>
+                                  </div>
+                                  <div>
+                                    { isDraft ? 'Draft PR, not ready for review!' : ''}
+                                  </div>
+                                  <div>
+                                    <small>Author: </small>
+                                    <img
+                                      className="githubAvatar"
+                                      src={author.avatarUrl}
+                                      alt={author.login}
+                                      title={author.login}></img>
+                                  </div>
+                                </auro-alerts>
+                            )
+                          }
+                        </span>
+                      ))}
+                    </div>
+                  </auro-accordion>
+                : ''
+              }
             </td>
           </tr>
         )
