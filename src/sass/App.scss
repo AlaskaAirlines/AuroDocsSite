@@ -959,6 +959,10 @@ img[src*='shields.io'] {
     background-color: var(--auro-color-brand-tropical-400);
   }
 
+  &--prs {
+    background-color: var(--auro-color-brand-goldcoast-400);
+  }
+
   &--null {
     background-color: var(--auro-color-base-gray-300);
   }

@@ -16,7 +16,8 @@ const componentStatus = gql`
           url
           homepageUrl
           id
-          pullRequests(last: 1) {
+          pullRequests(last: 1, states: OPEN) {
+            totalCount
             nodes {
               title
               id
@@ -56,7 +57,8 @@ const generator = gql`
           url
           homepageUrl
           id
-          pullRequests(last: 1) {
+          pullRequests(last: 1, states: OPEN) {
+            totalCount
             nodes {
               title
               id
@@ -94,7 +96,8 @@ const tokens = gql`
           url
           homepageUrl
           id
-          pullRequests(last: 1) {
+          pullRequests(last: 1, states: OPEN) {
+            totalCount
             nodes {
               title
               id
@@ -132,7 +135,8 @@ const WebCoreStyleSheets = gql`
           url
           homepageUrl
           id
-          pullRequests(last: 1) {
+          pullRequests(last: 1, states: OPEN) {
+            totalCount
             nodes {
               title
               id
@@ -170,7 +174,8 @@ const Icons = gql`
           url
           homepageUrl
           id
-          pullRequests(last: 1) {
+          pullRequests(last: 1, states: OPEN) {
+            totalCount
             nodes {
               title
               id
@@ -218,6 +223,7 @@ class ComponentStatus extends Component {
               <th>Project</th>
               <th>Package</th>
               <th>Issues</th>
+              <th>PRs</th>
               <th className="short">Description</th>
             </tr>
           </thead>
@@ -301,7 +307,8 @@ class ComponentStatus extends Component {
               <th>Project</th>
               <th>Package</th>
               <th>Issues</th>
-              <th>Description</th>
+              <th>PRs</th>
+              <th className="short">Description</th>
             </tr>
           </thead>
           <tbody>
