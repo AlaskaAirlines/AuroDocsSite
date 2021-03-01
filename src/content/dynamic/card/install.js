@@ -3,19 +3,12 @@ import { Nav } from './nav';
 import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
-import markdownContent from '@alaskaairux/auro-card/README.md'
+// import markdownContent from '@alaskaairux/auro-card/README.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-// const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-card/master/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-card/master/README.md';
 
 class AuroCardInstall extends MarkdownPageWrapper {
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-card'];
-
-    return `@alaskaairux/auro-card: ${dependencies}`;
-  };
 
   // function to get text from MD document
   componentWillMount() {
