@@ -1025,7 +1025,20 @@ img[src*='shields.io'] {
 // =-=-=-=-=-=- status page -=-=-=-=-=-=
 
 .statusPrLayout {
-  div {
-    margin: 0.5rem 0;
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cardStats {
+    display: flex;
+  }
+
+  .statsBadge {
+    margin-right: 1rem;
+  }
+
+  auro-alerts {
+    margin-bottom: 1rem;
   }
 }

@@ -26,6 +26,7 @@ const componentStatus = gql`
               isDraft
               state
               reviewDecision
+              createdAt
               suggestedReviewers {
                 reviewer {
                   name
@@ -83,6 +84,7 @@ const generator = gql`
               isDraft
               state
               reviewDecision
+              createdAt
               suggestedReviewers {
                 reviewer {
                   name
@@ -138,6 +140,7 @@ const tokens = gql`
               isDraft
               state
               reviewDecision
+              createdAt
               suggestedReviewers {
                 reviewer {
                   name
@@ -193,6 +196,7 @@ const WebCoreStyleSheets = gql`
               isDraft
               state
               reviewDecision
+              createdAt
               suggestedReviewers {
                 reviewer {
                   name
@@ -248,6 +252,7 @@ const Icons = gql`
               isDraft
               state
               reviewDecision
+              createdAt
               suggestedReviewers {
                 reviewer {
                   name

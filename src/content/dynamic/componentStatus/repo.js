@@ -84,16 +84,21 @@ class Repo extends Component {
                 ? <auro-accordion lowProfile noProfile justifyLeft>
                     <strong slot="trigger">Pull request details</strong>
                     <div className="statusPrLayout">
-                      {this.props.pullRequests.nodes.map(({title, mergeable, changedFiles, commits, url, isDraft, reviewDecision, author}) => (
+                      {this.props.pullRequests.nodes.map(({title, mergeable, changedFiles, commits, url, isDraft, reviewDecision, author, createdAt}) => (
                         <span>
                           {
                             isDraft
-                            ? <auro-alerts noIcon>
-                                <div>
-                                  Draft:<br/><auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                            ? <auro-alerts noIcon className="alert">
+                                <div className="cardHeader">
+                                  <div>
+                                    Draft:<br/><auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                                  </div>
+                                  <div>
+                                    <auro-datetime utc={createdAt}></auro-datetime>
+                                  </div>
                                 </div>
-                                <div style={{"display": "flex"}}>
-                                  <div style={{"marginRight": "1rem"}}><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
+                                <div className="cardStats">
+                                  <div className="statsBadge"><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
                                   <div><auro-badge pill advisory>{commits.totalCount}</auro-badge> Commit{commits.totalCount > 1 ? 's' : ''}</div>
                                 </div>
                                 <div>
@@ -107,11 +112,16 @@ class Repo extends Component {
                               </auro-alerts>
                             : (mergeable && !isDraft && reviewDecision==='APPROVED'
                               ? <auro-alerts noIcon success>
-                                  <div>
-                                    Approved:<br/><auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                                  <div className="cardHeader">
+                                    <div>
+                                      Draft:<br/><auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                                    </div>
+                                    <div>
+                                      <auro-datetime utc={createdAt}></auro-datetime>
+                                    </div>
                                   </div>
-                                  <div style={{"display": "flex"}}>
-                                    <div style={{"marginRight": "1rem"}}><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
+                                  <div className="cardStats">
+                                    <div className="statsBadge"><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
                                     <div><auro-badge pill advisory>{commits.totalCount}</auro-badge> Commit{commits.totalCount > 1 ? 's' : ''}</div>
                                   </div>
                                   <div>
@@ -123,12 +133,18 @@ class Repo extends Component {
                                       title={author.login}></img>
                                   </div>
                                 </auro-alerts>
-                              : <auro-alerts noIcon warning style={{"marginBottom": "1rem"}}>
-                                  <div>
-                                  { reviewDecision === "REVIEW_REQUIRED" ? "Review required: " : (reviewDecision === "CHANGES_REQUESTED" ? "Changes requested:": '')}<br/><auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                              : <auro-alerts noIcon warning className="alert">
+                                  <div className="cardHeader">
+                                    <div>
+                                      { reviewDecision === "REVIEW_REQUIRED" ? "Review required " : (reviewDecision === "CHANGES_REQUESTED" ? "Changes requested": '')}
+                                    </div>
+                                    <div>
+                                      <auro-datetime utc={createdAt}></auro-datetime>
+                                    </div>
                                   </div>
-                                  <div style={{"display": "flex"}}>
-                                    <div style={{"marginRight": "1rem"}}><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
+                                  <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                                  <div className="cardStats">
+                                    <div className="statsBadge"><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
                                     <div><auro-badge pill advisory>{commits.totalCount}</auro-badge> Commit{commits.totalCount > 1 ? 's' : ''}</div>
                                   </div>
                                   <div>
