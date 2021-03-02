@@ -26,9 +26,6 @@ import "@alaskaairux/auro-alerts";
 // avatar
 import "@alaskaairux/auro-avatar";
 
-// button
-import "@alaskaairux/auro-button";
-
 // icon
 import "@alaskaairux/auro-icon";
 import "@alaskaairux/auro-icon/dist/auro-alaska";
