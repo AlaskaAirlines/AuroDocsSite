@@ -91,12 +91,13 @@ class Repo extends Component {
                             ? <auro-alerts noIcon className="alert">
                                 <div className="cardHeader">
                                   <div>
-                                    Draft:<br/><auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                                    Draft
                                   </div>
                                   <div>
                                     <auro-datetime utc={createdAt}></auro-datetime>
                                   </div>
                                 </div>
+                                <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
                                 <div className="cardStats">
                                   <div className="statsBadge"><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
                                   <div><auro-badge pill advisory>{commits.totalCount}</auro-badge> Commit{commits.totalCount > 1 ? 's' : ''}</div>
@@ -114,12 +115,13 @@ class Repo extends Component {
                               ? <auro-alerts noIcon success>
                                   <div className="cardHeader">
                                     <div>
-                                      Draft:<br/><auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                                      Approved
                                     </div>
                                     <div>
                                       <auro-datetime utc={createdAt}></auro-datetime>
                                     </div>
                                   </div>
+                                  <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
                                   <div className="cardStats">
                                     <div className="statsBadge"><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
                                     <div><auro-badge pill advisory>{commits.totalCount}</auro-badge> Commit{commits.totalCount > 1 ? 's' : ''}</div>
