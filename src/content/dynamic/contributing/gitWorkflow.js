@@ -5,9 +5,9 @@ import CodeBlock from 'components/CodeBlock';
 // import markdownContent from '@alaskaairux/auro-[Component]/README.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/template/docs/upstream.md';
+const markdownContent = 'https://gist.githubusercontent.com/blackfalcon/8428401/raw/153a8e8b7cf58d0d862690e9565e024ef9a292ec/git-feature-workflow.md';
 
-class AuroContributingUpstream extends MarkdownPageWrapper {
+class AuroContributingGitWorkflow extends MarkdownPageWrapper {
 
   // function to get text from MD document
   componentWillMount() {
@@ -39,4 +39,4 @@ class AuroContributingUpstream extends MarkdownPageWrapper {
   }
 }
 
-export default AuroContributingUpstream;
+export default AuroContributingGitWorkflow;

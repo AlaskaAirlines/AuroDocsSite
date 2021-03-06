@@ -53,6 +53,7 @@ import GeneratorGettngStarted from './content/dynamic/generator/gettingStarted';
 // Contributing
 import Contributing from './content/dynamic/contributing/contributing';
 import ContributingUpstream from './content/dynamic/contributing/upstream';
+import ContribGitWorkflow from './content/dynamic/contributing/gitWorkflow';
 
 // design tokens
 import DesignTokens from './content/dynamic/designTokens/tokens';
@@ -418,6 +419,7 @@ function App() {
               {/* Generator */}
               <Route exact path="/contributing"><Contributing /></Route>
               <Route exact path="/contributing/upstream"><ContributingUpstream /></Route>
+              <Route exact path="/contributing/git-workflow"><ContribGitWorkflow /></Route>
 
               {/* Typography */}
               <Route exact path="/typography/overview"><TypographyOverview /></Route>

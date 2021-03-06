@@ -8,6 +8,7 @@ export class Nav extends Component {
       <div role="tablist" className="tabList">
         <NavLink role="tab" exact className="tab link" to={`/contributing`} activeClassName="is-active">Contributing</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/contributing/upstream`} activeClassName="is-active">Upstream management</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/contributing/git-workflow`} activeClassName="is-active">Git workflow</NavLink>
       </div>
     )
   }
