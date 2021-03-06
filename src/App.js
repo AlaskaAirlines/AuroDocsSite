@@ -611,12 +611,14 @@ function App() {
               {/* <Route exact path="./support/polyfills/focusvisible"><PolyfillDocs /></Route> */}
 
               {/* CSS */}
+              <Route exact path="/getting-started/developers/css-conventions"><CssConventionsDocs /></Route>
               <Route exact path="/support/css-conventions"><CssConventionsDocs /></Route>
 
 
               <Route exact path="/support/custom-properties"><CustomPropertiesDocs /></Route>
               <Route exact path="/support/isTouching"><IsTouchingDocs /></Route> {/* not used */} {/* reevaluate content */}
               <Route exact path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
+              <Route exact path="/getting-started/developers/webcorestylesheets"><WebCoreStyleSheets /></Route>
 
               <Route exact path="/webcorestylesheets/conventions"><WcssConventions /></Route>
               <Route exact path="/webcorestylesheets/faq"><WcssFaq /></Route>

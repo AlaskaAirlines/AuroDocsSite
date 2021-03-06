@@ -4,6 +4,38 @@ import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
 import Issue from './issue';
 
+const Complete = gql`
+{
+  organization(login: "AlaskaAirlines") {
+    team(slug: "auro-team") {
+      repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
+        nodes {
+          name
+          issues(filterBy: {labels: "Audit: Complete"}, first: 20) {
+            nodes {
+              title
+              url
+              labels(last: 10) {
+                nodes {
+                  name
+                  color
+                }
+              }
+              comments(last: 1) {
+                nodes {
+                  body
+                  createdAt
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
 // const Actions = gql`
 // {
 //   organization(login: "AlaskaAirlines") {
@@ -11,7 +43,7 @@ import Issue from './issue';
 //       repositories(first: 20, orderBy: {field: NAME, direction: ASC}, query: "auro") {
 //         nodes {
 //           name
-//           issues(filterBy: {labels: "Audit: Actions"}, first: 0) {
+//           issues(filterBy: {labels: "Audit: Actions"}, first: 20) {
 //             nodes {
 //               title
 //               url
@@ -430,6 +462,19 @@ class AllEpics extends Component {
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (
               issues.nodes.length > 0
                 ? <Issue tableName={'AuroLabs'} key={name} name={name} issues={issues.nodes} />
+                : ''
+            ));
+          }}
+        </Query>
+
+        <Query query={Complete}>
+          {({ loading, error, data }) => {
+            if (loading) return <p></p>;
+            if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
+
+            return data.organization.team.repositories.nodes.map(({ name, issues }) => (
+              issues.nodes.length > 0
+                ? <Issue tableName={'Complete'} key={name} name={name} issues={issues.nodes} />
                 : ''
             ));
           }}

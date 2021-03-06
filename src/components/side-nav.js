@@ -25,19 +25,15 @@ export default function SideNav(props) {
     },
     {
       header: 'Getting Started',
-      title: "- General",
       items: [
-        { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
-        { linkTitle: "Common defs", route: "/getting-started/developers/common-definitions", parent: true },
+        // { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
+        { linkTitle: "CSS Conventions", route: "/getting-started/developers/css-conventions", parent: true},
+        { linkTitle: "WC Style Sheets", route: "/getting-started/developers/webcorestylesheets", parent: true },
+        { linkTitle: "Common defs", route: "/getting-started/developers/common-definitions", parent: true },
         { linkTitle: "Compliance", route: "/getting-started/developers/compliance", parent: true },
-        { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
+        // { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
         // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
-      ]
-    },
-    {
-      title: "- Developers",
-      items: [
         { linkTitle: "WC Generator", route: "/getting-started/developers/generator/install", parent: true  },
         { linkTitle: "Contributing", route: "/contributing", parent: true },
       ]
@@ -73,10 +69,8 @@ export default function SideNav(props) {
     {
       header: "CSS",
       items: [
-        { linkTitle: "CSS Conventions", route: "/support/css-conventions", parent: true},
         { linkTitle: "ShadyCSS", route: "/support/shadycss", parent: true },
         { linkTitle: "CSS Custom Properties", route: "/support/custom-properties", parent: true },
-        { linkTitle: "WC Style Sheets", route: "/webcorestylesheets", parent: true },
         // { linkTitle: "Touch support", route: "/support/isTouching", parent: true },
       ]
     },
