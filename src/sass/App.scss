@@ -101,7 +101,7 @@ footer,
   }
 
   @include auro_breakpoint($min: 1700px) {
-    max-width: 45%;
+    margin: var(--auro-size-md) auto 0 25%;
   }
 }
 // -=-=-=-=-=-=-=-=-= body wrapper -=-=-=-=-=-=-=-=-=-=-=
