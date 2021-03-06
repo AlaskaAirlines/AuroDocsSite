@@ -210,6 +210,18 @@ class Hyperlink extends Component {
           </Highlight>
         </auro-accordion>
 
+        <div className="demo--inline exampleWrapper--ondark">
+          <auro-hyperlink cta ondark secondary href="#" relative>Default onDark</auro-hyperlink>
+          <auro-hyperlink cta ondark secondary href="#" relative target="_blank">Default onDark</auro-hyperlink>
+        </div>
+        <auro-accordion lowProfile justifyRight class="spaceAfterCode">
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-hyperlink cta ondark secondary href="#" relative>Default onDark</auro-hyperlink>
+<auro-hyperlink cta ondark secondary href="#" relative target="_blank">Default onDark</auro-hyperlink>`}
+          </Highlight>
+        </auro-accordion>
+
 
 
 
