@@ -26,7 +26,9 @@ Once the generator is installed, be sure to use the `--npm` flag to set the npm 
 $ wc-generate --npm @aurolabs --name myelement
 ```
 
-Next, create a repo. For internal Alaska Airline employees, it is recommended that you create a new **private** repo in the [Alaska Airlines OSS org](https://github.com/AlaskaAirlines/). Be sure to name it with **auro** to properly follow our open source repository guidelines. **Randos will be deleted!**
+Next, create a repo. For internal Alaska Airline employees, it is recommended that you create a new **private** repo in the [Alaska Airlines OSS org](https://github.com/AlaskaAirlines/). Please be sure to name the repo with **auro** to properly follow our open source repository guidelines. E.g. auro-\[your component name\].
+
+**Randos will be deleted!**
 
 ## Deploy your new custom element
 
