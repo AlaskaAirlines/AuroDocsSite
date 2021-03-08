@@ -485,7 +485,7 @@ class AuroDialog extends Component {
         <auro-drawer id="unformattedMdDrawer" unformatted md lg ondark>
           <span slot="content">
             <img style={{display: "block", width: "100%"}} src="https://blog.alaskaair.com/wp-content/uploads/2020/11/111-psp-blog-img-guide.jpg" alt="alaska airlines pride lights" />
-            <div class="unformattedWrapper">
+            <div className="unformattedWrapper">
               <h1 id="dialog-header">This is a header</h1>
               These are words that are slotted into the scope of the custom element.
             </div>
@@ -502,7 +502,7 @@ class AuroDialog extends Component {
 <auro-drawer id="unformattedMdDrawer" unformatted md lg ondark>
   <span slot="content">
     <img style={{display: "block", width: "100%"}} src="https://blog.alaskaair.com/wp-content/uploads/2020/11/111-psp-blog-img-guide.jpg" alt="alaska airlines pride lights" />
-    <div class="unformattedWrapper">
+    <div className="unformattedWrapper">
       <h1 id="dialog-header">This is a header</h1>
       These are words that are slotted into the scope of the custom element.
     </div>
