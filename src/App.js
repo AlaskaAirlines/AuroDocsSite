@@ -49,6 +49,7 @@ import ComponentAudit from './content/dynamic/componentAudit/auditView';
 import GeneratorInstall from './content/dynamic/generator/install';
 import GeneratorApi from './content/dynamic/generator/api';
 import GeneratorGettngStarted from './content/dynamic/generator/gettingStarted';
+import GeneratorUpgrade from './content/dynamic/generator/upgrade';
 
 // Contributing
 import Contributing from './content/dynamic/contributing/contributing';
@@ -419,6 +420,7 @@ function App() {
               <Route exact path="/getting-started/developers/generator/install"><GeneratorInstall /></Route>
               <Route exact path="/getting-started/developers/generator/generator/api"><GeneratorApi /></Route>
               <Route exact path="/getting-started/developers/generator/getting-started"><GeneratorGettngStarted /></Route>
+              <Route exact path="/getting-started/developers/generator/upgrade"><GeneratorUpgrade /></Route>
 
               {/* Generator */}
               <Route exact path="/contributing"><Contributing /></Route>
