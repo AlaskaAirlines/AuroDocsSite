@@ -2,11 +2,10 @@ import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
+import markdownContent from '@alaskaairux/auro-interruption/docs/api.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-interruption/master/docs/api.md';
-
-class AuroAlertsApi extends MarkdownPageWrapper {
+class AuroInterruptionApi extends MarkdownPageWrapper {
 
   componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
@@ -36,4 +35,4 @@ class AuroAlertsApi extends MarkdownPageWrapper {
   }
 }
 
-export default AuroAlertsApi;
+export default AuroInterruptionApi;

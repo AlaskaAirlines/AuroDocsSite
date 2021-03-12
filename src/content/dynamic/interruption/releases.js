@@ -8,7 +8,7 @@ const RELEASES = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 1, orderBy: {field: NAME, direction: ASC}, query: "auro-interruption") {
+      repositories(first: 1, orderBy: {field: NAME, direction: ASC}, query: "auro-[component]") {
         nodes {
           name
           releases(first: 20, orderBy: {field: CREATED_AT, direction: DESC}) {
@@ -33,7 +33,7 @@ class AllReleases extends Component {
         <Nav />
 
         <h1 className="auro_heading auro_heading--display">Releases</h1>
-        <p>The following is a list of all Auro Popover releases.</p>
+        <p>The following is a list of all Auro Interruption releases.</p>
 
         <Query query={RELEASES}>
           {({ loading, error, data }) => {

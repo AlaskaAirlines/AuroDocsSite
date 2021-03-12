@@ -3,11 +3,9 @@ import { Nav } from './nav';
 import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
+import markdownContent from '@alaskaairux/auro-interruption/README.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
-
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-interruption/master/README.md';
-
-class AuroAlertsInstall extends MarkdownPageWrapper {
+class AuroInterruptionInstall extends MarkdownPageWrapper {
 
   showVersion() {
     const pjson = require('../../../../package.json');
@@ -45,11 +43,11 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-interruption"
           npm="https://www.npmjs.com/package/@alaskaairux/auro-interruption"
-          code="https://github.com/AlaskaAirlines/auro-interruption/blob/master/src/auro-dialog.js"
+          code="https://github.com/AlaskaAirlines/auro-interruption/blob/master/src/auro-interruption.js"
         />
       </section>
     );
   }
 }
 
-export default AuroAlertsInstall;
+export default AuroInterruptionInstall;
