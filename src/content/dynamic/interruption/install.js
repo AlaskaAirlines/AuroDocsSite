@@ -3,17 +3,18 @@ import { Nav } from './nav';
 import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
+import markdownContent from '@alaskaairux/auro-Interruption/README.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-interruption/master/README.md';
+// const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-Interruption/master/README.md';
 
-class AuroAlertsInstall extends MarkdownPageWrapper {
+class AuroInterruptionInstall extends MarkdownPageWrapper {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-interruption'];
+    const dependencies = pjson.dependencies['@alaskaairux/auro-Interruption'];
 
-    return `@alaskaairux/auro-interruption: ${dependencies}`;
+    return `@alaskaairux/auro-Interruption: ${dependencies}`;
   };
 
   // function to get text from MD document
@@ -43,13 +44,13 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
         </section>
 
         <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-interruption"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-interruption"
-          code="https://github.com/AlaskaAirlines/auro-interruption/blob/master/src/auro-dialog.js"
+          github="https://github.com/AlaskaAirlines/auro-Interruption"
+          npm="https://www.npmjs.com/package/@alaskaairux/auro-Interruption"
+          code="https://github.com/AlaskaAirlines/auro-Interruption/blob/master/src/auro-Interruption.js"
         />
       </section>
     );
   }
 }
 
-export default AuroAlertsInstall;
+export default AuroInterruptionInstall;

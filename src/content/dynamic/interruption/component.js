@@ -1,166 +1,61 @@
-import React, { Component } from "react";
+import React from "react";
 import { Nav } from './nav';
-import Highlight from 'react-highlight';
-import ContentExample from './contentExample.js';
-import 'highlight.js/styles/github.css';
-import '@alaskaairux/auro-interruption/dist/style-unformatted.css'
+import marked from 'marked';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism.css';
+import markdownContent from '@alaskaairux/auro-Interruption/demo/demo.md'
+import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-class AuroDialog extends Component {
+// const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-Interruption/master/demo/demo.md';
 
-  constructor(props) {
-    super(props);
+class AuroInterruption extends MarkdownPageWrapper {
+  // function to get text from MD document
+  getMarkdownText() {
+    fetch(markdownContent)
+        .then((response) => response.text())
+        .then((text) => {
+          const rawHtml = marked(text);
+          document.querySelector('.auro-markdown').innerHTML = rawHtml;
+          Prism.highlightAll();
+        });
 
-    this.toggleDialog = this.toggleDialog.bind(this);
-    this.toggleDialogClose = this.toggleDialogClose.bind(this);
+    const renderer = new marked.Renderer();
+    renderer.link = function(href, title, text) {
+      const link = marked.Renderer.prototype.link.call(this, href, title, text);
+      let url = href
+      url = url.replace(/^.*\/\/[^/]+/, '')
 
-    this.toggleDrawer = this.toggleDrawer.bind(this);
-    this.toggleDrawerClose = this.toggleDrawerClose.bind(this);
-  };
+      if (href.includes("auro.alaskaair.com")) {
 
-  toggleDialog = (elName) => {
-    let dialog = document.querySelector(elName);
-    const html = document.querySelector('html');
+        return link.replace("href",`href="${url}"`);
+      } else {
 
-    html.style.overflow = 'hidden';
-    dialog.removeAttribute("open");
-    dialog.setAttribute("open", true);
+        const newLink = `<a href="${href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
+
+        return newLink;
+      }
+    };
+
+    marked.setOptions({
+        renderer: renderer
+    });
   }
 
-  toggleDialogClose = (elName) => {
-    let dialog = document.querySelector(elName);
-    const html = document.querySelector('html');
 
-    html.style.overflow = '';
-    dialog.removeAttribute("open");
-  }
-
-  toggleDrawer = (elName) => {
-    let dialog = document.querySelector(elName);
-    const html = document.querySelector('html');
-
-    html.style.overflow = 'hidden';
-    dialog.removeAttribute("open");
-    dialog.setAttribute("open", true);
-  }
-
-  toggleDrawerClose = (elName) => {
-    let dialog = document.querySelector(elName);
-    const html = document.querySelector('html');
-
-    html.style.overflow = '';
-    dialog.removeAttribute("open");
-  }
 
   render() {
     return (
-      <section id="dialog">
+      <section className="auro_baseType">
 
         <Nav />
 
-        <auro-header level="2" display="display">Interruption</auro-header>
-
-        <p>Auro supports two interruptive components - <code>auro-dialog</code> and <code>auro-drawer</code>. Both are intrusive interactive components, not passive. The components are best used when there is a requirement the user be made aware of the content being shown, moving focus from the main content to the dialog content.</p>
-
-        <p>Both components also support a modal (blocking) state where the user must interact with the content of the component in order to continue. Passive dismissal of the content is not allowed. Users of this state must add a trigger for the user to move beyond this content.</p>
-
-
-        <p>Auro holds the opinions of the <auro-hyperlink href="https://www.nngroup.com/articles/modal-nonmodal-dialog/" target="_blank">Nielsen Norman Group</auro-hyperlink> on dialog and modal use to be true.</p>
-
-        <auro-header level="2" display="700">Component use cases</auro-header>
-
-        <p>The <code>auro-dialog</code> and <code>auro-drawer</code> components should be used in situations where users may:</p>
-        <ul>
-          <li>Be prompted to take an action before doing anything else or going back</li>
-          <li>Be prompted to view content with the option of closing it</li>
-        </ul>
-
-
-        {/* Standard Dialog example */}
-        {/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */}
-
-        <auro-header level="2" display="700">Dialog example</auro-header>
-
-        <div className="demo--inline exampleWrapper auro_containedButtons">
-          <auro-button onClick={() => this.toggleDialog('#defaultDialog')}>Open default dialog</auro-button>
-        </div>
-
-        <auro-dialog id="defaultDialog">
-          <span slot="header">Default Dialog</span>
-          <span slot="content">
-            <ContentExample />
-
-          </span>
-          <span slot="footer">
-            <div className="auro_containedButtons">
-              <auro-button secondary onClick={() => this.toggleDialogClose('#defaultDialog')}>Close</auro-button>
-            </div>
-          </span>
-        </auro-dialog>
-
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`
-<div className="demo--inline exampleWrapper auro_containedButtons">
-  <auro-button onClick={() => this.toggleDialog('#defaultDialog')}>Open default dialog</auro-button>
-</div>
-
-<auro-dialog id="defaultDialog">
-  <span slot="header">Default Dialog</span>
-  <span slot="content">
-    <ContentExample />
-  </span>
-</auro-dialog>
-            `}
-          </Highlight>
-        </auro-accordion>
-
-        <p>Read the <auro-hyperlink href="http://auro.alaskaair.com/components/auro/interruption/dialog">auro-dialog</auro-hyperlink> documentation for detailed instructions on implementations.</p>
-
-        {/* Standard Drawer example */}
-        {/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */}
-
-        <auro-header level="2" display="700">Drawer example</auro-header>
-
-        <div className="demo--inline exampleWrapper auro_containedButtons">
-        <auro-button onClick={() => this.toggleDrawer('#defaultDrawer')}>Open default drawer</auro-button>
-        </div>
-
-        <auro-drawer id="defaultDrawer">
-          <span slot="header">Default Drawer</span>
-          <span slot="content">
-            <ContentExample />
-
-          </span>
-          <span slot="footer">
-            <div className="auro_containedButtons">
-              <auro-button secondary onClick={() => this.toggleDrawerClose('#defaultDrawer')}>Close</auro-button>
-            </div>
-          </span>
-        </auro-drawer>
-
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`
-<div className="demo--inline exampleWrapper auro_containedButtons">
-  <auro-button onClick={() => this.toggleDrawer('#defaultDrawer')}>Open default drawer</auro-button>
-</div>
-
-<auro-drawer id="defaultDrawer">
-  <span slot="header">Default Drawer</span>
-  <span slot="content">
-    <ContentExample />
-  </span>
-</auro-drawer>
-            `}
-          </Highlight>
-        </auro-accordion>
-
-        <p>Read the <auro-hyperlink href="http://auro.alaskaair.com/components/auro/interruption/drawer">auro-drawer</auro-hyperlink> documentation for detailed instructions on implementations.</p>
+        <section
+          className="auro-markdown"
+          dangerouslySetInnerHTML={this.getMarkdownText()}
+        />
       </section>
     );
   }
 }
 
-export default AuroDialog;
+export default AuroInterruption;
