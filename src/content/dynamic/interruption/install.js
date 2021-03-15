@@ -9,9 +9,9 @@ class AuroInterruptionInstall extends MarkdownPageWrapper {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-interruption'];
+    const dependencies = pjson.dependencies['@alaskaairux/auro-Interruption'];
 
-    return `@alaskaairux/auro-interruption: ${dependencies}`;
+    return `@alaskaairux/auro-Interruption: ${dependencies}`;
   };
 
   // function to get text from MD document
