@@ -1,12 +1,13 @@
 import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
+// import markdownContent from '@alaskaairux/icons/docs/ways-to-use.md'
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/Icons/master/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/Icons/master/docs/ways-to-use.md';
 
-class AuroIconsInstall extends MarkdownPageWrapper {
+class AuroIconsUse extends MarkdownPageWrapper {
 
   // function to get text from MD document
   componentWillMount() {
@@ -38,4 +39,4 @@ class AuroIconsInstall extends MarkdownPageWrapper {
   }
 }
 
-export default AuroIconsInstall;
+export default AuroIconsUse;

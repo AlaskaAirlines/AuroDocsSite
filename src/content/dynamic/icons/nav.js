@@ -9,6 +9,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/icons`} activeClassName="is-active">Icons</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/icons/guidelines`} activeClassName="is-active">Design guidelines</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/icons/install`} activeClassName="is-active">Install</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/icons/ways-to-use`} activeClassName="is-active">Ways to use</NavLink>
       </div>
     )
   }

@@ -4,16 +4,18 @@
   <img alt="homepage hero image" src="/images/content/home.jpg" />
 </div><br>
 
-<auro-alerts information noicon>
+<!-- <auro-alerts information noicon>
   NOTE: The following Custom Elements have been updated with a new bundled CDN build process:<br><br>
   <auro-hyperlink href="/components/auro/hyperlink/install" relative>auro-hyperlink v2.1</auro-hyperlink>,
   <auro-hyperlink href="/components/auro/alerts/install" relative>auro-alerts v1.3</auro-hyperlink>, and
   <auro-hyperlink href="/components/auro/radio/install" relative>auro-radio v1.3</auro-hyperlink>
   <br><br>If you are using this bundled version, make sure NOT to use <code>@latest</code> in your code.
   These versions no longer support the <code>polyfill.js</code>. Be sure to see the updated link code in the individual component install page.
-</auro-alerts><br>
+</auro-alerts><br> -->
 
-Auro provides components and tools to help product teams work more efficiently. Designed and developed to support all Alaska Airlines digital experiences.
+**Auro is enablement**. Enabling design and enabling development to innovate on ideas and collaborate on the future.
+
+<!-- Auro provides components and tools to help product teams work more efficiently. Designed and developed to support all Alaska Airlines digital experiences. -->
 
 <div class="auro_util_displayFlex columns">
   <div>
@@ -27,15 +29,15 @@ Auro provides components and tools to help product teams work more efficiently. 
     <p>
       <auro-hyperlink href="/typography/overview" relative>Typography</auro-hyperlink> and <auro-hyperlink href="/color/overview" relative>Color</auro-hyperlink>,<br/>
       a vast array of <auro-hyperlink href="/getting-started/developers/design-tokens" relative>Design Tokens,</auro-hyperlink><br/>
-      pixel-perfect<auro-hyperlink href="/icons/overview" relative>Icons,</auro-hyperlink><br/>
-      and a <auro-hyperlink href="/getting-started/developers/generator/install" relative>Web Component Generator</auro-hyperlink> for a unique developer experience.<br/>
+      pixel-perfect<auro-hyperlink href="/icons" relative>Icons,</auro-hyperlink><br/>
+      and a <auro-hyperlink href="/generator" relative>Web Component Generator</auro-hyperlink> for a unique developer experience.<br/>
     </p>
   </div>
   <div>
     <auro-header display="700">Implementations</auro-header>
     <p>Universally applicable, and easy to use. The implementation of the Auro Design System allows for highly flexible use in almost any development environment.</p>
     <auro-hyperlink href="/webcorestylesheets" relative>Web Core Style Sheets, </auro-hyperlink>
-    <auro-hyperlink href="/icons/install" relative>Auro Icons</auro-hyperlink><br/>
+    <auro-hyperlink href="/icons" relative>Auro Icons</auro-hyperlink><br/>
     ... and a growing list of pre-built <auro-hyperlink href="/component-status" relative>universally useable Web Components.</auro-hyperlink>
   </div>
 </div><br>
