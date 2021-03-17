@@ -23,10 +23,6 @@ import "@alaskaairux/auro-alerts";
 // avatar
 import "@alaskaairux/auro-avatar";
 
-// icon
-import "@alaskaairux/auro-icon";
-import "@alaskaairux/auro-icon/dist/auro-alaska";
-
 // loader
 import "@alaskaairux/auro-loader";
 
