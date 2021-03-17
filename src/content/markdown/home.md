@@ -44,11 +44,14 @@
 
 ## What people are saying about Auro
 
-> I must say, you do really good work.  I'm impressed!  Let me just say, I'm an Auro fan!
+> Needing to move away from a legacy lightbox dialog solution, I spent the better part of a day weeding out the old code, and only 10 minutes adding in auro-dialog and was up and running.
 
--- Scott Flesher, Principal Software Engineer
+-- Caleb Wells, Software Engineer
 
 > Been working on some new tools for the team and decided to use the auro stuff to get rolling quickly and its so easy to use. Love the work you've been doing - keep it up!
 
 -- Josh Benard, Sr Product Mgr
 
+> I must say, you do really good work.  I'm impressed!  Let me just say, I'm an Auro fan!
+
+-- Scott Flesher, Principal Software Engineer
