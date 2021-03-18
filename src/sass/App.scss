@@ -996,16 +996,6 @@ img[src*='shields.io'] {
   }
 }
 
-.imageBox {
-  background-color: #01426c;
-  justify-content: center;
-
-  @include auro_breakpoint--lg {
-    display: flex;
-  }
-}
-
-
 .orange {
   color: orange;
 }
@@ -1040,5 +1030,31 @@ img[src*='shields.io'] {
 
   auro-alerts {
     margin-bottom: 1rem;
+  }
+}
+
+// =-=-=-=-=-=- home page -=-=-=-=-=-=
+
+.imageBox {
+  background-color: #01426c;
+  justify-content: center;
+  position: relative;
+
+  @include auro_breakpoint--lg {
+    display: flex;
+  }
+}
+
+.quoteBox {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  color: white;
+  width: 25%;
+  text-align: right;
+
+  @include auro_breakpoint--lg {
+    display: block;
   }
 }

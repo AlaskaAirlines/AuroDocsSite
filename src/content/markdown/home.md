@@ -1,6 +1,10 @@
 # Say hello to Auro!
 
 <div class="imageBox">
+  <div class="quoteBox">
+    <auro-header margin="bottom" size="none" display="700">Auro is enablement</auro-header>
+    <p>Enabling design and enabling development to innovate on ideas and collaborate on the future.</p>
+  </div>
   <img alt="homepage hero image" src="/images/content/home.jpg" />
 </div><br>
 
@@ -13,7 +17,7 @@
   These versions no longer support the <code>polyfill.js</code>. Be sure to see the updated link code in the individual component install page.
 </auro-alerts><br> -->
 
-**Auro is enablement**. Enabling design and enabling development to innovate on ideas and collaborate on the future.
+
 
 <!-- Auro provides components and tools to help product teams work more efficiently. Designed and developed to support all Alaska Airlines digital experiences. -->
 
