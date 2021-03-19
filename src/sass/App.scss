@@ -12,6 +12,7 @@ $prefix: true;
 $paragraph: true;
 $focus: true;
 @import "~@alaskaairux/webcorestylesheets/dist/utilityClasses/typeProperties";
+@import "~@alaskaairux/webcorestylesheets/dist/utilityClasses/fontStyles";
 @import "~@alaskaairux/design-tokens/dist/tokens/SassCustomPropertiesColorRGB";
 @import "~@alaskaairux/webcorestylesheets/dist/utilityClasses/displayProperties";
 
