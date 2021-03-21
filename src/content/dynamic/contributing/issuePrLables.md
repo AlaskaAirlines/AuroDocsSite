@@ -2,7 +2,7 @@
 
 Working in a large project like Auro, clear communication and correct labeling of issues and pull requests helps to keep everyone on the same page. Here are some helpful tips.
 
-With both issues and pull requests, the use of labels serves multiple purposes. First they provide a way to filter through the noise. In a project as large as Auro, there are long lists of issues to address and new work to be completed. Next they communicate information like type of work and status of work. This is important so that managers and other developers and quickly review the [kanban board]() and have an understanding of project status.
+With both issues and pull requests, the use of labels serves multiple purposes. First they provide a way to filter through the noise. Next they communicate information like type of work and status of work. This is important so that managers and other developers and quickly review the [kanban board](https://github.com/orgs/AlaskaAirlines/projects/1) and have an understanding of project status.
 
 ## Issues
 

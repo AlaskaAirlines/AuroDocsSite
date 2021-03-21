@@ -101,9 +101,9 @@ Please see the items below for commonly asked questions regarding development an
 
 <auro-accordion-group>
   <auro-accordion id="newWork" chromeless noProfile>
-    <span slot="trigger">Q: How do teams bring work into Auro's backlog?</span>
+    <span slot="trigger">Q: How do teams bring work to Auro?</span>
     <div class="lightText">
-      <p>New work comes from everywhere. Brining new ideas to Auro is as simple as submitting an issue, scheduling a meeting with the Auro team or even creating a new project with <auro-hyperlink relative href="https://auro.alaskaair.com/aurolabs">AuroLabs</auro-hyperlink>.</p>
+      <p>New work comes from everywhere. Bringing new ideas to Auro is as simple as submitting a new issue or scheduling a meeting with the Auro team. Please see the <auro-hyperlink relative href="https://auro.alaskaair.com/aurolabs">AuroLabs</auro-hyperlink> page for more details about this specific process.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="sla" chromeless noProfile>
@@ -116,19 +116,19 @@ Please see the items below for commonly asked questions regarding development an
       <ul>
         <li><strong>Must</strong> -  The work is a MUST HAVE for the health and continued value of the Auro Design System. This criteria specifies that the work needs to happen in order to deliver on the goals of the Auro team and to ensure the success of any product team that is dependent on Auro's resources. </li>
         <li><strong>Should</strong> - The work is high-priority and should be included in the sprint plan if it is possible. This is often critical work but one which can be satisfied in other ways if absolutely necessary.</li>
-        <li><strong>Could</strong> - Work that is considered desirable, but not necessary. This work will be included if time and resources permit or up for consideration for a sprint plan further down the road.</li>
+        <li><strong>Could</strong> - Work that is considered desirable, but not necessary. This work can be included if time and resources permit in a sprint plan further down the road.</li>
         <li><strong>Won't</strong> - Represents work that the team has decided is not necessary for the success of the Auro Design System or has agreed that this is work to be done, but not considered the responsibility of the Auro Design System.</li>
       </ul>
       <p>Following these guidelines, every new request, and even bug reports, can be judged fairly and prioritized appropriately.</p>
       <auro-header level="3" display="500">Pull Requests</auro-header>
-      <p>For pull requests, our SLA is the same. Please allow up to 24 hours for solicited code changes that are associated with an approved issue. If the pull request is unsolicited and not associated with an approved issue, please allow up to 72 hours for a response. The help expedite this process, please submit an issue for review prior to submitting a pull request. </p>
+      <p>For pull requests, our SLA is the same. Please allow up to 24 hours for solicited code changes that are associated with an approved issue. If the pull request is unsolicited and not associated with an approved issue, please allow up to 72 hours for a response. To help expedite this process, please submit an issue for review prior to submitting a pull request. </p>
       <p>Please see our <auro-hyperlink href="/contributing" relative>Auro Design System Contributing Guidelines</auro-hyperlink> for more information.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="sla" chromeless noProfile>
     <span slot="trigger">Q: Issues, draft PRs and labels?</span>
     <div class="lightText">
-      <p>Seeing the <auro-hyperlink href="https://github.com/orgs/AlaskaAirlines/projects/1" target="_blank">volume of work</auro-hyperlink>, it's easy to see how thing can get lost and requests can fall through the cracks. Well, we have a plan for that. Labeling, comments, and draft PRs are all tools that we can use to signal the correct people as to the state of work.</p>
+      <p>Seeing the <auro-hyperlink href="https://github.com/orgs/AlaskaAirlines/projects/1" target="_blank">volume of work</auro-hyperlink>, it's easy to see how things can get lost and issues can fall through the cracks. Well, we have a plan for that. Labeling, comments, and draft PRs are all tools that we can use to signal the correct people as to the state of work.</p>
       <p>Please be sure to review the <auro-hyperlink relative href="/contributing/issues-prs-labels">Issues, pull requests and labels</auro-hyperlink> section if our site for a full descriptions of this process.</p>
     </div>
   </auro-accordion>
@@ -154,8 +154,6 @@ Please see the items below for commonly asked questions regarding development an
 </auro-accordion-group>
 
 ## 1:1 support with Auro
-
-Do you have a question about Auro, a custom element, part of the support architecture or how to get support for your team? First we'd suggest reviewing the F.A.Q.s listed below for common questions.
 
 If you have a question, an issue or are simply curious about a specific part of the Auro Design System, we suggest submitting a [Github support ticket](/component-status) with the specific repo your issues relates.
 

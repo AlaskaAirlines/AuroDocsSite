@@ -18,7 +18,7 @@ This is where AuroLabs comes in. It's the basic idea that developers will have a
 
 ## A straight forward process
 
-Building a new component in AuroLabs is direct and easy. It is highly recommended that a developer start with the [WC-Generator](https://auro.alaskaair.com/getting-started/developers/generator/install) as this generator comes packed with all of Auro's awesome that will make the final review process a breeze.
+When building a new component in AuroLabs it is highly recommended that a developer start with the [WC-Generator](https://auro.alaskaair.com/getting-started/developers/generator/install) as this generator comes packed with all of Auro's awesome that will make the final review process a breeze.
 
 Once the generator is installed, be sure to use the `--npm` flag to set the npm namespace to `@aurolabs`.
 
@@ -26,9 +26,43 @@ Once the generator is installed, be sure to use the `--npm` flag to set the npm 
 $ wc-generate --npm @aurolabs --name myelement
 ```
 
-Next, create a repo. For internal Alaska Airline employees, it is recommended that you create a new **private** repo in the [Alaska Airlines OSS org](https://github.com/AlaskaAirlines/). Please be sure to name the repo with **auro** to properly follow our open source repository guidelines. E.g. auro-\[your component name\].
+### Getting started
+
+1. Install the [WC-Generator](https://auro.alaskaair.com/getting-started/developers/generator/install), if not already installed
+1. Create your new custom element repository locally
+1. `$ cd` into the new directory and confirm that all dependencies have been installed
+1. Run `$ npm run test` to see that tests are operational
+1. Run `$ npm run server` to validate that the server is set up correctly for the demo
+1. Once repo is validated, if you have access, create a new `internal` repository with [https://github.com/AlaskaAirlines](https://github.com/AlaskaAirlines).
+1. Push your codes to the new repo
+
+Tt is recommended that you create a new **private** repo in the [Alaska Airlines OSS org](https://github.com/AlaskaAirlines/). Please be sure to name the repo with **auro** to properly follow our open source repository guidelines. E.g. auro-\[your component name\].
 
 **Randos will be deleted!**
+
+### Getting to work
+
+1. In your local repo, create a new working branch called `initial-build`, this will be the branch you will compare to `main` for the pull request later.
+1. When you are ready to make your first commit, please see [Auro Design System Contributing Guidelines](https://auro.alaskaair.com/contributing) and specifically the section on **Conventional Commits**.
+1. When committing code, you should see a series of pre-commit hooks confirming the stability of the code you are creating. If you do not see these hooks, then there is an issue with your install and you should consult with an Auro team member.
+
+
+### Ongoing work
+
+When in rapid development of a new element, most of the history really is of no consequence as everything is changing. It is recommended that you create your first commit something like the following:
+
+```bash
+$ git commit -m "feat: build new custom element"
+```
+
+Then every commit post that, you can easily amend that commit and force push your feature branch to Github.
+
+```bash
+$ git push origin initial-build --force
+```
+
+Regardless of history, the first release of this element that creates a npm package will be `v1.0.0`.
+
 
 ## Deploy your new custom element
 
