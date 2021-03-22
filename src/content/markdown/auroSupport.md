@@ -172,3 +172,4 @@ Sometimes documentation or setup instructions simply aren't enough. Please see t
 | --- | --- | --- |
 | Dale Sande | Principal Engineer | Please [schedule](https://calendly.com/dalesande) |
 | Gus Naughton | Software Engineer | Please [schedule](https://calendly.com/gusn) |
+| Geoff Rich | Software Engineer | Please [schedule](https://calendly.com/geoff-rich-alaska) |
