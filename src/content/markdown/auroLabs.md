@@ -1,3 +1,22 @@
+<style>
+  .lightText {
+    color: var(--auro-color-text-secondary-on-light);
+    margin-bottom: 2rem;
+  }
+
+  .pre {
+    color: var(--auro-color-brand-flamingo-500);
+    font-size: 0.8rem;
+    font-family: monaco;
+    padding-top: .5rem;
+    margin-bottom: 0;
+  }
+
+  .trigger {
+    font-size: 1.2rem;
+  }
+</style>
+
 # AuroLabs: BETA
 
 Building a design system is dependent on the contribution of others. From the very beginning Auro positioned itself to be open and welcome to contributions by making it open source.
@@ -28,41 +47,90 @@ $ wc-generate --npm @aurolabs --name myelement
 
 ### Getting started
 
-1. Install the [WC-Generator](https://auro.alaskaair.com/getting-started/developers/generator/install), if not already installed
-1. Create your new custom element repository locally
-1. `$ cd` into the new directory and confirm that all dependencies have been installed
-1. Run `$ npm run test` to see that tests are operational
-1. Run `$ npm run server` to validate that the server is set up correctly for the demo
-1. Once repo is validated, if you have access, create a new `internal` repository with [https://github.com/AlaskaAirlines](https://github.com/AlaskaAirlines).
-1. Push your codes to the new repo
-
-Tt is recommended that you create a new **private** repo in the [Alaska Airlines OSS org](https://github.com/AlaskaAirlines/). Please be sure to name the repo with **auro** to properly follow our open source repository guidelines. E.g. auro-\[your component name\].
-
-**Randos will be deleted!**
+<auro-accordion-group>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">1. Install WC-Generator</span>
+    <div class="lightText">
+      <p>Install the <auro-hyperlink href="https://auro.alaskaair.com/getting-started/developers/generator/install">WC-Generator</auro-hyperlink>, if not already installed</p>
+      <pre class="pre">  $ npm i @alaskaairux/wc-generator -g</pre>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">2. Create your new custom element repository locally</span>
+    <div class="lightText">
+      <p>Once the generator is installed, run the generator command to create a new custom element repository.</p>
+      <pre class="pre">  $ wc-generate --npm @aurolabs --name [element name]</pre>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">3. Change into new directory</span>
+    <div class="lightText">
+      <p>You need to be inside the newly created directory in order to complete the following steps.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">4. Run tests</span>
+    <div class="lightText">
+      <p>Run the tests to ensure that all things are working as expected.</p>
+      <pre class="pre">  $ npm run test</pre>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">5. Start the server</span>
+    <div class="lightText">
+      <p>Start the server to make sure that all dependencies are set up correctly.</p>
+      <pre class="pre">  $ npm run serve</pre>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">6. Create an internal Github repo</span>
+    <div class="lightText">
+      <p>For Alaska employees only. Create a new <code>internal</code> repository with <auro-hyperlink target="_blank" href="https://github.com/AlaskaAirlines">github.com/AlaskaAirlines</auro-hyperlink>. Once completed, push your <code>main</code> branch to the remote repository.</p>
+      <p>Please be sure to name the repo with <strong>auro</strong> to properly follow our open source repository guidelines. E.g. auro-[your component name].
+      <p><strong>Randos will be deleted!</strong></p>
+    </div>
+  </auro-accordion>
+</auro-accordion-group>
 
 ### Getting to work
 
-1. In your local repo, create a new working branch called `initial-build`, this will be the branch you will compare to `main` for the pull request later.
-1. When you are ready to make your first commit, please see [Auro Design System Contributing Guidelines](https://auro.alaskaair.com/contributing) and specifically the section on **Conventional Commits**.
-1. When committing code, you should see a series of pre-commit hooks confirming the stability of the code you are creating. If you do not see these hooks, then there is an issue with your install and you should consult with an Auro team member.
-
-
-### Ongoing work
-
-When in rapid development of a new element, most of the history really is of no consequence as everything is changing. It is recommended that you create your first commit something like the following:
-
-```bash
-$ git commit -m "feat: build new custom element"
-```
-
-Then every commit post that, you can easily amend that commit and force push your feature branch to Github.
-
-```bash
-$ git push origin initial-build --force
-```
-
-Regardless of history, the first release of this element that creates a npm package will be `v1.0.0`.
-
+<auro-accordion-group>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">1. Create your new feature branch</span>
+    <div class="lightText">
+      <p>In your local repo, create a new working branch called <code>initial-build</code>, this will be the branch you will compare to <code>main</code> for the pull request later.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">2. Conventional commits</span>
+    <div class="lightText">
+      <p>Prior to making your first commit, please review <auro-hyperlink relative href="/contributing">Auro Design System Contributing Guidelines</auro-hyperlink>, specifically the section on <strong>Conventional Commits</strong>.</p>
+      <p>Conventional Commits play a critical role in determining the next version release. The following template will help you construct the proper commit message.</p>
+      <pre class="pre">  [type]([optional scope]): [description]</pre>
+      <p>For example, let's say that you are working on a new feature supporting accessibility. Commit messages could be like the following. It is important to note that the <code>fix</code> commit is the only commit that will trigger a PATCH version release. The <code>docs</code> and <code>test</code> commits will not.</p>
+      <pre class="pre">
+  fix(a11y): update acronym to read out full word, e.g. SEA reads Seattle
+  docs(a11y): address API changes in readme and automated docs
+  test(a11y): add new test for screenreader feature</pre>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">3. Pre-commit hooks</span>
+    <div class="lightText">
+      <p>When committing code, you should see a series of pre-commit hooks confirming the stability of the code you are creating. If you do not see these hooks, then there is an issue with your install and you should consult with an Auro team member.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">4. Amend commits to maintain a readable history</span>
+    <div class="lightText">
+      <p>While Git history is helpful, in the early stages of a project not all history is helpful. It is considered best practice to <code>amend</code> previous commits if the work is closely related. Especially if it is a refactor of the previous commit. The following will add the updates recently completed and amend them to the previous commit without asking for a change in the commit message. Lastly, this is a change in history, so a force push to the remote is required.</p>
+      <pre class="pre">
+  $ git add --all
+  $ git commit --amend --no-edit
+  $ git push origin [feature-branch-name] --force</pre>
+    </div>
+  </auro-accordion>
+</auro-accordion-group>
 
 ## Deploy your new custom element
 
@@ -78,13 +146,9 @@ Once a new component is released for use, this will trigger a review process wit
 
 The first step is to get the new component added to the [Auro Labs](https://auro.alaskaair.com/audit) priority board. This is the review process. Once all these steps are considered `ADS Compliant` then it is eligible for inclusion into the Auro Design System.
 
-#### Artwork
+#### Artwork / UI Kit
 
-The design for the new element. Does it meet all Auro specifications?
-
-#### UI Kit
-
-The approved artwork, has that been included into the Auro UI Kit for all designers?
+The design for the new element. Does it meet all Auro specifications? Has the new work been included into the Auro UI Kit for all designers?
 
 #### Code
 
