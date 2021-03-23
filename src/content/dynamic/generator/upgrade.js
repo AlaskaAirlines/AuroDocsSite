@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/util/auroUpgrade.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/util/auroMigrate.md';
 
 class AuroGeneratorUpgrade extends MarkdownPageWrapper {
 
