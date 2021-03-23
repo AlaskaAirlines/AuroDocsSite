@@ -29,12 +29,12 @@ class AuroCarousel extends Component {
 
         <p>The <code>auro-carousel</code> element could be used in situations where users may:</p>
         <ul>
-          <li>Scroll through multiple flight date options or "shoulder dates"</li>
+          <li>Scroll through multiple flight date options or shoulder dates</li>
           <li>Scroll through multiple images</li>
         </ul>
 
         <auro-header level="2" display="700">The setup</auro-header>
-        <p>The following is an example script to scroll through the Carousel</p>
+        <p>The following is an example script to scroll through the carousel</p>
 
         <Highlight className='javascript afterCode openCode'>
           {`

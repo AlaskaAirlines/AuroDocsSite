@@ -28,7 +28,7 @@ class AuroTable extends Component {
 
         <h1 className="auro_heading auro_heading--display">Table</h1>
 
-        <p>When needing to illusrtate non-dynamic tabular data, the Auro Table component serves a simple need.  Flexible layout. Simple to use JSON API. Responsive. </p>
+        <p>Use the Auro table component to illustrate non-dynamic tabular data. The Auro table element is responsive, with a flexible layout and an easy-to-use JSON API.</p>
 
         <h2 className="auro_heading auro_heading--700">Table use cases</h2>
 
@@ -76,7 +76,7 @@ class AuroTable extends Component {
 `}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--700">WCSS Support</h2>
+        <h2 className="auro_heading auro_heading--700">WCSS support</h2>
 
         <p>For use cases where the general design of the Auro Table is needed, but the component is unseable, please use the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-auro-css-#{$scope}.auro_table" target="_blank">.auro_table</auro-hyperlink> styles from the Web Core Style Sheets library.</p>
 

@@ -14,12 +14,12 @@ Our design pillars gives us a shared vocabulary that guides the creation of our 
 
 ### Simple
 
-Just as our guests appreciate a straight-forward and simplified airport experience, a clear and concise digital experience eliminates confusion and ensures confidence. Less fluff means enabling guests to achieve their goals with ease.
+Just as our guests appreciate a straight-forward and simplified airport experience, a clear and concise digital experience eliminates confusion and ensures confidence. Less fluff helps guests achieve their goals with ease.
 
 We leverage alignment, hierarchy, contrast, proximity, and space to clearly present content and functionality.
 
 ### Consistent
-We give our guests and employees confidence by designing experiences that are predictable and familiar within and across our platforms.  The same solution to the same problem is applied across our experiences to strengthen user recognition and speed delivery.
+We give our guests and employees confidence by designing experiences that are predictable and familiar within and across our platforms. The same solution to the same problem is applied across our experiences to strengthen user recognition and speed delivery.
 
 We balance evolution and consistency by reflecting, iterating and constantly improving.
 
@@ -29,6 +29,6 @@ We achieve relevance through intentionality. From micro-interactions to the ways
 We focus on the journey and meet people where they are, providing value in the right way, at the right time, on the right device.
 
 ### Engaging
-Like that of a trusted flight attendant, our digital experiences create smile-inducing moments through connections that feel human and genuine. We inspire connection, curiosity, and discovery each day as we guide guests through otherwise complex tasks creating moments of ease and delight.
+Like a trusted flight attendant, our digital experience inspires smile-inducing moments with connections that feel human and genuine. We inspire curiosity, discovery, and delight each day as guests work through otherwise complex tasks with ease and confidence.
 
-Our personality stands out, elevating the brand and exciting people to further interact.
+Our personality stands out, elevating the brand and exciting people to interact further.

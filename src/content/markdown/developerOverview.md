@@ -12,20 +12,20 @@
 
 -- [Building web components](https://developers.google.com/web/fundamentals/web-components) at developers.google.com
 
-### Custom Elements Everywhere
+### Custom elements everywhere
 
 > Custom Elements are the lynchpin in the Web Components specifications. They give developers the ability to define their own HTML elements. When coupled with Shadow DOM, Custom Elements should be able to work in any application. But things don't always work seamlessly.
 
 -- [Custom Elements Everywhere](https://custom-elements-everywhere.com/)
 
-## Auro Web Component Generator
+## Auro web component generator
 
-The [Design System Web Component Generator](/getting-started/developers/generator) is a project tool intended to assist developers with an easy to configure and execute Web Component development environment for the purpose of building custom elements for the Design System.
+The [Design system web component generator](/getting-started/developers/generator) is a project tool intended to assist developers with an easy-to-configure and -execute web component development environment for the purpose of building custom elements for the Auro design system.
 
 
-## Making your project Auro Ready
+## Making your project Auro-ready
 
-When starting a new project and using Auro with web components, while there are many differences between the various frameworks, this setup is constant.
+When starting a new project and using Auro with web components, this setup is the same regardless of the differences among the various frameworks.
 
 The following steps address the basic [compliance](/getting-started/developers/compliance) model.
 
@@ -41,12 +41,12 @@ The design tokens are the **absolute base of the system** and at bare minimum th
 
 For more information, be sure to see the full [design token API info](/getting-started/developers/design-tokens/install)
 
-### Web Core Style Sheets
+### Web core style sheets
 
-WC Style Sheets (WCSS) is a responsive, mobile-first collection of styles and tools designed to make it quick and simple for developers to create web experiences using the Auro Design Language.
+WC style sheets (WCSS) are a responsive, mobile-first collection of styles and tools designed to make it quick and simple for developers to create web experiences using the Auro design language.
 
-See [WC Style Sheets](/webcorestylesheets) for all information related to use. Also see the [automated documentation site](https://alaskaairlines.github.io/WebCoreStyleSheets/) for all information related to the features and API of WC Style Sheets.
+See [WC style sheets](/webcorestylesheets) for all information related to use. Also see the [automated documentation site](https://alaskaairlines.github.io/WebCoreStyleSheets/) for all information related to the features and API of WC style sheets.
 
-### Icon Library
+### Icon library
 
-The [icons package](/icons/usage) contains standard set of SVG icons that can be used with any web project. For even easier use of Auro Icons, be sure to take a look at the [auro-icon](/components/auro/icon) web component.
+The [icons package](/icons/usage) contains standard set of SVG icons that can be used with any web project. For an even easier use of Auro icons, be sure to take a look at the [auro-icon](/components/auro/icon) web component.

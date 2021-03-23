@@ -5,7 +5,7 @@
   }
 </style>
 
-# Auro Support
+# Auro support
 
 Looking for help with Auro? F.A.Q.s, how to contact, it's all here. Also be sure to check out our [office hours](/officehours) for how to best contact the Auro team.
 

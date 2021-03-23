@@ -48,14 +48,14 @@ class DeprecatedTokens extends Component {
 
         <Nav />
 
-        <h1 className="auro_heading auro_heading--display">Auro Design Tokens</h1>
+        <h1 className="auro_heading auro_heading--display">Auro design tokens</h1>
 
-        <p>Auro Design Tokens. Named values that store visual design data. Spacing, color, typography, animation, layering, etc. Tokens may represent anything that can be defined by design. Color as a Hex or RGB value. Space defined by pixels or REMs. Indexes illustrated as a number and an animation as a curve. Used in the place of hard-coded values within a project, Design Tokens ensure consistency across all of Alaska's digital products. </p>
-        <p>Auro Design Tokens define a single source of truth. When included in any digital product, web app, native app, design file, they define a platform from which any project may spring from with the confidence that it always be in sync at scale across the enterprise. </p>
+        <p>Auro design tokens. Named values that store visual design data. Spacing, color, typography, animation, layering, etc. Tokens may represent anything that can be defined by design. Color as a Hex or RGB value. Space defined by pixels or REMs. Indexes illustrated as a number and an animation as a curve. Used in the place of hard-coded values within a project, Design Tokens ensure consistency across all of Alaska's digital products. </p>
+        <p>Auro design tokens define a single source of truth. When included in any digital product, web app, native app, design file, they define a platform from which any project may spring from with the confidence that it always be in sync at scale across the enterprise. </p>
 
         <p>Tokens are stored as JSON data and can be output as CSS custom properties, Sass, native iOS and Android, among many others. Tokens are represented here as <auro-hyperlink target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">CSS custom properties</auro-hyperlink>.
 
-        See <auro-hyperlink href="/getting-started/developers/design-tokens/install">Design Tokens API</auro-hyperlink> for a full listing currently supported output types.</p>
+        See <auro-hyperlink href="/getting-started/developers/design-tokens/install">Design tokens API</auro-hyperlink> for a full listing currently supported output types.</p>
 
         <auro-alerts warning>
           Be sure to review <auro-hyperlink relative href="/getting-started/developers/design-tokens/deprecated">updates to deprecated tokens</auro-hyperlink> for changes in use.

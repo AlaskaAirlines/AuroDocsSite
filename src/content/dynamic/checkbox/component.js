@@ -109,8 +109,8 @@ class AuroCheckbox extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-checkbox-group>
             <span slot="legend">Example group</span>
-            <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option One</auro-checkbox>
-            <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option Two</auro-checkbox>
+            <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
+            <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option two</auro-checkbox>
           </auro-checkbox-group>
         </div>
         <auro-accordion lowProfile justifyRight>
@@ -118,8 +118,8 @@ class AuroCheckbox extends Component {
           <Highlight className='html afterCode'>
             {`<auro-checkbox-group>
   <span slot="legend">Example group</span>
-  <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option One</auro-checkbox>
-  <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option Two</auro-checkbox>
+  <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
+  <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option two</auro-checkbox>
 </auro-checkbox-group>`}
           </Highlight>
         </auro-accordion>
@@ -130,8 +130,8 @@ class AuroCheckbox extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-checkbox-group disabled>
             <span slot="legend">Example group</span>
-            <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option One</auro-checkbox>
-            <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option Two</auro-checkbox>
+            <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
+            <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option two</auro-checkbox>
           </auro-checkbox-group>
         </div>
         <auro-accordion lowProfile justifyRight>
@@ -139,8 +139,8 @@ class AuroCheckbox extends Component {
           <Highlight className='html afterCode'>
             {`<auro-checkbox-group disabled>
   <span slot="legend">Example group</span>
-  <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option One</auro-checkbox>
-  <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option Two</auro-checkbox>
+  <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
+  <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option two</auro-checkbox>
 </auro-checkbox-group>`}
           </Highlight>
         </auro-accordion>
@@ -151,8 +151,8 @@ class AuroCheckbox extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-checkbox-group error="this is an error message">
             <span slot="legend">Example group</span>
-            <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option One</auro-checkbox>
-            <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option Two</auro-checkbox>
+            <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
+            <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option two</auro-checkbox>
           </auro-checkbox-group>
         </div>
         <auro-accordion lowProfile justifyRight>
@@ -160,8 +160,8 @@ class AuroCheckbox extends Component {
           <Highlight className='html afterCode'>
             {`<auro-checkbox-group error="this is an error message">
   <span slot="legend">Example group</span>
-  <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option One</auro-checkbox>
-  <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option Two</auro-checkbox>
+  <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
+  <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option two</auro-checkbox>
 </auro-checkbox-group>`}
           </Highlight>
         </auro-accordion>
@@ -172,9 +172,9 @@ class AuroCheckbox extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-checkbox-group horizontal>
             <span slot="legend">Example group</span>
-            <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option One</auro-checkbox>
-            <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option Two</auro-checkbox>
-            <auro-checkbox id="optionThree" name="exampleOptions" value="option two">Option Three</auro-checkbox>
+            <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
+            <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option two</auro-checkbox>
+            <auro-checkbox id="optionThree" name="exampleOptions" value="option two">Option three</auro-checkbox>
           </auro-checkbox-group>
         </div>
         <auro-accordion lowProfile justifyRight>
@@ -182,9 +182,9 @@ class AuroCheckbox extends Component {
           <Highlight className='html afterCode'>
             {`<auro-checkbox-group horizontal>
   <span slot="legend">Example group</span>
-  <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option One</auro-checkbox>
-  <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option Two</auro-checkbox>
-  <auro-checkbox id="optionThree" name="exampleOptions" value="option two">Option Three</auro-checkbox>
+  <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
+  <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option two</auro-checkbox>
+  <auro-checkbox id="optionThree" name="exampleOptions" value="option three">Option three</auro-checkbox>
 </auro-checkbox-group>`}
           </Highlight>
         </auro-accordion>
@@ -195,10 +195,10 @@ class AuroCheckbox extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-checkbox-group horizontal>
             <span slot="legend">Example group</span>
-            <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option One</auro-checkbox>
-            <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option Two</auro-checkbox>
-            <auro-checkbox id="optionThree" name="exampleOptions" value="option two">Option Three</auro-checkbox>
-            <auro-checkbox id="optionFour" name="exampleOptions" value="option Four">Option Three</auro-checkbox>
+            <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
+            <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option two</auro-checkbox>
+            <auro-checkbox id="optionThree" name="exampleOptions" value="option three">Option three</auro-checkbox>
+            <auro-checkbox id="optionFour" name="exampleOptions" value="option four">Option four</auro-checkbox>
           </auro-checkbox-group>
         </div>
         <auro-accordion lowProfile justifyRight>
@@ -206,10 +206,10 @@ class AuroCheckbox extends Component {
           <Highlight className='html afterCode'>
             {`<auro-checkbox-group horizontal>
   <span slot="legend">Example group</span>
-  <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option One</auro-checkbox>
-  <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option Two</auro-checkbox>
-  <auro-checkbox id="optionThree" name="exampleOptions" value="option two">Option Three</auro-checkbox>
-  <auro-checkbox id="optionFour" name="exampleOptions" value="option Four">Option Three</auro-checkbox>
+  <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
+  <auro-checkbox id="optionTwo" name="exampleOptions" value="option two">Option two</auro-checkbox>
+  <auro-checkbox id="optionThree" name="exampleOptions" value="option three">Option three</auro-checkbox>
+  <auro-checkbox id="optionFour" name="exampleOptions" value="option four">Option four</auro-checkbox>
 </auro-checkbox-group>`}
           </Highlight>
         </auro-accordion>

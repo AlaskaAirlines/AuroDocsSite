@@ -1,14 +1,16 @@
-The colors within our digital experiences differs from the physical materials of our brand. What may appear vibrant on paper may seem dull and uninspired on a glowing screen. As a result, the colors we use within our digital experiences are adjusted to create a more vibrant and inspirational experiences for our guests. In addition to our core digital brand colors, an extended palette has been created for more personality expression within our experiences by adding warmth, deeper connection, and more human characteristics to our digital brand.
+# Digital-ready color
+
+The colors within our digital experiences differ from the physical materials of our brand. What may appear vibrant on paper may seem dull and uninspired on a glowing screen. As a result, the colors we use within our digital experiences are adjusted to create a more vibrant and inspirational experiences for our guests. In addition to our core digital brand colors, an extended palette has been created for more personality expression within our experiences by adding warmth, deeper connection, and more human characteristics to our digital brand.
 
 ## Accessibility
 
 We've chosen these colors to be accessed, understood, and used by all people regardless of their age, background, or ability. These colors meet or exceed color contrast [WCAG AA accessibility standards](https://www.w3.org/WAI/standards-guidelines/wcag/).
 
-## Design Tokens
+## Design tokens
 
 We use design tokens to represent the design decisions of our visual language. Color specifications are stored using specific variable names, instead of hard-coded hex or RGBa values.
 
-Please review [Core Digital Brand Palette Usage](/color/core-digital-palette-usage) and [Digital Personality Palette Usage](/color/personality-palette-usage) for a full listing of all the color tokens.
+Please review [Core digital brand palette usage](/color/core-digital-palette-usage) and [Digital personality palette usage](/color/personality-palette-usage) for a full listing of all the color tokens.
 
 ## Reserve the use of blue
 
