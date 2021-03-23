@@ -51,7 +51,7 @@ class AuroDialog extends Component {
           <li>Be prompted to view content with the option of closing it</li>
         </ul>
 
-        <auro-header level="2" display="700">The setup</auro-header>
+        <auro-header level="2" display="700">Setup</auro-header>
 
         <p>Triggering the dialog relies on functions being installed. See the following example code that is installed into this demo.</p>
 

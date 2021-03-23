@@ -79,16 +79,16 @@ class AuroAlerts extends Component {
 
         <auro-header level="3" display="500">Success</auro-header>
         <div className="demo--inline exampleWrapper">
-          <auro-alerts success>Your status with Flight 20 to Aruba had been updated.</auro-alerts>
+          <auro-alerts success>Your status with flight 20 to Aruba had been updated.</auro-alerts>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
-            {`<auro-alerts success>Your status with Flight 20 to Aruba had been updated.</auro-alerts>`}
+            {`<auro-alerts success>Your status with flight 20 to Aruba had been updated.</auro-alerts>`}
           </Highlight>
         </auro-accordion>
 
-        <auro-header level="2" display="700">Multiline Alerts</auro-header>
+        <auro-header level="2" display="700">Multiline alerts</auro-header>
 
         <auro-header level="3" display="500">Error</auro-header>
         <div className="demo--inline exampleWrapper">
@@ -187,23 +187,23 @@ class AuroAlerts extends Component {
 
         <auro-header level="3" display="500">Information</auro-header>
         <div className="demo--inline exampleWrapper">
-          <auro-alerts noIcon information>You are confirmed on Flight 20 to Aruba.</auro-alerts>
+          <auro-alerts noIcon information>You are confirmed on flight 20 to Aruba.</auro-alerts>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
-            {`<auro-alerts noIcon information>You are confirmed on Flight 20 to Aruba.</auro-alerts>`}
+            {`<auro-alerts noIcon information>You are confirmed on flight 20 to Aruba.</auro-alerts>`}
           </Highlight>
         </auro-accordion>
 
         <auro-header level="3" display="500">Success</auro-header>
         <div className="demo--inline exampleWrapper">
-          <auro-alerts noIcon success>Your status with Flight 20 to Aruba had been updated.</auro-alerts>
+          <auro-alerts noIcon success>Your status with flight 20 to Aruba had been updated.</auro-alerts>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
-            {`<auro-alerts noIcon success>Your status with Flight 20 to Aruba had been updated.</auro-alerts>`}
+            {`<auro-alerts noIcon success>Your status with flight 20 to Aruba had been updated.</auro-alerts>`}
           </Highlight>
         </auro-accordion>
 

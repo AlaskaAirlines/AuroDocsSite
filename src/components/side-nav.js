@@ -15,7 +15,7 @@ export default function SideNav(props) {
       ]
     },
     {
-      header: 'Getting Started',
+      header: 'Getting started',
       items: [
         // { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
         { linkTitle: "Common definitions", route: "/getting-started/developers/common-definitions", parent: true },
@@ -23,12 +23,12 @@ export default function SideNav(props) {
         { linkTitle: "WC-Generator", route: "/getting-started/developers/generator/install", parent: true  },
         { linkTitle: "CSS guidelines", route: "/getting-started/developers/webcorestylesheets", parent: true },
 
-        { linkTitle: "Auro Compliance", route: "/getting-started/developers/compliance", parent: true },
+        { linkTitle: "Auro compliance", route: "/getting-started/developers/compliance", parent: true },
         // { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
         // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
 
         { linkTitle: "Contributing", route: "/contributing", parent: true },
-        // { linkTitle: "*Custom Element 101", route: "/custom-element-101", parent: true },
+        // { linkTitle: "*Custom element 101", route: "/custom-element-101", parent: true },
       ]
     },
     {
@@ -38,7 +38,7 @@ export default function SideNav(props) {
         { linkTitle: "Typography", route: "/typography/overview", parent: true },
         { linkTitle: "Icons", route: "/icons", parent: true },
         { linkTitle: "Layout", route: "/layout/grid", parent: true },
-        { linkTitle: "Voice and Tone", route: "/core/voice-and-tone", parent: true }
+        { linkTitle: "Voice and tone", route: "/core/voice-and-tone", parent: true }
       ]
     },
     {
@@ -53,7 +53,7 @@ export default function SideNav(props) {
         { linkTitle: "Card", route: '/components/auro/card', parent: true },
         { linkTitle: "Carousel", route: '/components/auro/carousel', parent: true },
         { linkTitle: "Checkbox", route: '/components/auro/checkbox', parent: true },
-        { linkTitle: "Date/Time", route: '/components/auro/datetime', parent: true },
+        { linkTitle: "Date/time", route: '/components/auro/datetime', parent: true },
         { linkTitle: "Flight", route: '/components/auro/flight', parent: true },
         { linkTitle: "Flightline", route: '/components/auro/flightline', parent: true },
         { linkTitle: "Header", route: '/components/auro/header', parent: true },
@@ -65,7 +65,7 @@ export default function SideNav(props) {
         { linkTitle: "Lockup", route: '/components/auro/lockup', parent: true },
         { linkTitle: "Pane", route: "/components/auro/pane/", parent: true },
         { linkTitle: "Popover", route: '/components/auro/popover', parent: true },
-        { linkTitle: "Radio Button", route: '/components/auro/radio', parent: true },
+        { linkTitle: "Radio button", route: '/components/auro/radio', parent: true },
         { linkTitle: "Table", route: '/components/auro/table', parent: true },
         // { linkTitle: "Toast", route: '/components/orion/toast', parent: true }
       ]
@@ -74,7 +74,7 @@ export default function SideNav(props) {
       header: "CSS",
       items: [
         { linkTitle: "ShadyCSS", route: "/support/shadycss", parent: true },
-        { linkTitle: "CSS Custom Properties", route: "/support/custom-properties", parent: true },
+        { linkTitle: "CSS custom properties", route: "/support/custom-properties", parent: true },
         // { linkTitle: "Touch support", route: "/support/isTouching", parent: true },
       ]
     },
@@ -82,10 +82,10 @@ export default function SideNav(props) {
       header: "Dev resources",
       items: [
         { linkTitle: "Automated testing", route: "/support/tests", parent: true },
-        { linkTitle: "Browser Support", route: "/support/browsersSupport", parent: true },
+        { linkTitle: "Browser support", route: "/support/browsersSupport", parent: true },
         { linkTitle: "Polyfills", route: "/support/polyfills/focusvisible", parent: true},
         { linkTitle: "The <slot> element", route: "/support/slots", parent: true },
-        { linkTitle: "a11y Statement", route: "/a11y-statement", parent: true },
+        { linkTitle: "Accessibility statement", route: "/a11y-statement", parent: true },
         // { linkTitle: "Babel Support", route: "/support/babelSupport" },
         // { linkTitle: "Tech overview", route: "/support/techDetails" },
         // { linkTitle: "why?", route: "/support/why" }
@@ -94,10 +94,10 @@ export default function SideNav(props) {
     {
       title: "- Example projects",
       items: [
-        { linkTitle: "React Setup", route: "/reactSetup", parent: true},
-        // { linkTitle: "Angular Setup", route: "/angularSetup" },
-        { linkTitle: "Javascript Setup", route: "/javascriptSetup", parent: true},
-        { linkTitle: "Svelte Setup", route: "/svelteSetup", parent: true}
+        { linkTitle: "React setup", route: "/reactSetup", parent: true},
+        // { linkTitle: "Angular setup", route: "/angularSetup" },
+        { linkTitle: "Javascript setup", route: "/javascriptSetup", parent: true},
+        { linkTitle: "Svelte setup", route: "/svelteSetup", parent: true}
 
       ]
     }

@@ -17,7 +17,7 @@ class AuroLoader extends Component {
 
         <auro-header level="2" display="display">auro-loader</auro-header>
 
-        <p>Things take time. Some times we just need to take a second for some data to show up. For this Auro supports the <code>auro-loader</code> custom element. This powerful element supports multiple modes for use. </p>
+        <p>Things take time. Sometimes we just need to take a second for some data to show up. For this Auro supports the <code>auro-loader</code> custom element. This powerful element supports multiple modes for use. </p>
 
         <p>
           <code>Ringworm</code>, <code>Orbit</code>, <code>Pulse</code>, and <code>Laser</code>.

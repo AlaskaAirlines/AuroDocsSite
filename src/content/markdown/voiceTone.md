@@ -1,4 +1,4 @@
-# Voice, tone, and language
+# Voice and tone guidelines
 
 Alaska's voice is consistent throughout the experience; adapt the tone as needed to fit the situation and context.
 
@@ -75,13 +75,13 @@ These aren’t “ooh” or “aah” moments; these are potentially “oh shit�
 
 Make sure push notifications are distinct from each other. For example, a flight delay notification should say it's a flight delay notification; a back-on-time notification should explicitly say a flight is back on time.
 
-### Use sentence case in headings
+### Use sentence case in headings.
 
 * Where: Headlines, CTA’s (Fab, button, text link, etc)
 * Use Title Case for proper nouns only
 
 ### Use ending punctuation for full sentences only.
 
-### Avoid use of idioms
+### Avoid use of idioms.
 
-Idioms don't work so well for non-native speakers, and might even be insulting for folks with a different cultural background.
+Idioms don't work so well for non-native speakers, and might even be insulting for folks with a different cultural background. Try to avoid them.

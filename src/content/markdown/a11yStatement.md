@@ -1,6 +1,6 @@
-# Accessibility Statement for <span class="basic-information website-name">The Auro Design System</span>
+# Accessibility statement for <span class="basic-information website-name">The Auro Design System</span>
 
-<span class="basic-information organization-name">Auro</span> is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
+<span class="basic-information organization-name">Alaska Airlines</span> is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
 
 ### Measures to support accessibility
 

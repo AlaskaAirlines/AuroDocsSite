@@ -18,9 +18,9 @@ class AuroRadioButton extends Component {
 
         <Nav />
 
-        <h2 className="auro_heading auro_heading--display">Radio Button</h2>
+        <h2 className="auro_heading auro_heading--display">Radio button</h2>
 
-        <p>The auro-radio component is rendered as a small circle, which are filled or highlighted when selected. Only one auro-radio component in a given radio-button-group can be selected at the same time.</p>
+        <p>The auro-radio component is rendered as a small circle, which is filled or highlighted when selected. Only one auro-radio component in a given radio-button-group can be selected at the same time.</p>
 
         <h2 className="auro_heading auro_heading--700">Radio button with label</h2>
 
@@ -78,7 +78,7 @@ class AuroRadioButton extends Component {
         </auro-accordion>
 
 
-        <h3 className="auro_heading auro_heading--500">Radio button Group</h3>
+        <h3 className="auro_heading auro_heading--500">Radio button group</h3>
         <p>The auro-radio component is designed to work in concert with the auro-radio-group component. </p>
 
         <blockquote>
@@ -106,7 +106,7 @@ class AuroRadioButton extends Component {
         </auro-accordion>
 
 
-        <h3 className="auro_heading auro_heading--500">Disabled Radio Group</h3>
+        <h3 className="auro_heading auro_heading--500">Disabled radio group</h3>
         <p>The auro-checkbox component is designed to work in concert with the auro-checkbox-group component and supports a whole-group <code>disabled</code> mode.</p>
 
         <div className="demo--inline exampleWrapper">
@@ -130,7 +130,7 @@ class AuroRadioButton extends Component {
         </auro-accordion>
 
 
-        <h3 className="auro_heading auro_heading--500">Disabled Radio inputs </h3>
+        <h3 className="auro_heading auro_heading--500">Disabled radio inputs </h3>
         <p>The auro-checkbox supports individual <code>disabled</code> inputs. </p>
         <div className="demo--inline exampleWrapper">
           <auro-radio-group required>
@@ -153,7 +153,7 @@ class AuroRadioButton extends Component {
         </auro-accordion>
 
 
-        <h3 className="auro_heading auro_heading--500">Radio Group with error</h3>
+        <h3 className="auro_heading auro_heading--500">Radio group with error</h3>
         <p>The auro-radio component is designed to work in concert with the auro-radio-group component. </p>
         <div className="demo--inline exampleWrapper">
           <auro-radio-group required error="This is an error message">
@@ -176,7 +176,7 @@ class AuroRadioButton extends Component {
         </auro-accordion>
 
 
-        <h3 className="auro_heading auro_heading--500">Horizontal Radio Group</h3>
+        <h3 className="auro_heading auro_heading--500">Horizontal radio group</h3>
         <p>Using the <code>horizontal</code> attribute will render the checkbox options on a horizontal line.</p>
         <div className="demo--inline exampleWrapper">
         <auro-radio-group horizontal required>
@@ -199,7 +199,7 @@ class AuroRadioButton extends Component {
         </auro-accordion>
 
 
-        <h3 className="auro_heading auro_heading--500">Horizontal Radio Group limitation</h3>
+        <h3 className="auro_heading auro_heading--500">Horizontal radio group limitation</h3>
         <p>Using the <code>horizontal</code> attribute has a limit of 3 options. Beyond three, options will be listed in vertically. </p>
         <div className="demo--inline exampleWrapper">
           <auro-radio-group horizontal required>

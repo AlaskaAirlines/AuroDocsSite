@@ -1,6 +1,6 @@
 ## Using transparent colors
 
-While there are many color tokens to be used, there are none that specifically address different levels of transparency. The solution best recommend is to use either Sass or CSS to generate the opacity levels you are looking for in the UIs you are creating.
+While there are many color tokens available, there are none that specifically address levels of transparency. The best recommendation is to use either Sass or CSS to generate the opacity levels required in your UIs.
 
 This table below illustrates the the use of `color-brand-alpine-400` and the different opacity types.
 
@@ -44,9 +44,9 @@ Using CSS to create different opacity levels:
 
 Using CSS to create opacity levels will not be compatible with browsers that do not [support custom properties](https://caniuse.com/#feat=css-variables).
 
-In this example use `var(--auro-rgb-color-brand-alpine-400)` to create some opacity examples. Notice the use of a modifier in the [naming convention](/support/css-conventions).
+In this example we use `var(--auro-rgb-color-brand-alpine-400)` to create some opacity examples. Notice the use of a modifier in the [naming convention](/support/css-conventions).
 
-Creating opacities from standard CSS is much like using Sass. There is a dependency on this CSS file from Design Tokens, `CSSCustomPropertiesColorRGB.css`. This file contains color token output with only the R,G,B values. E.g. `205, 230, 255`. Notice the custom prefix to the token name, `auro-rgb-...`
+Creating opacities from standard CSS is much like using Sass. There is a dependency on this CSS file from design tokens, `CSSCustomPropertiesColorRGB.css`. This file contains color token output with only the R,G,B values. E.g. `205, 230, 255`. Notice the custom prefix to the token name, `auro-rgb-...`
 
 The examples below illustrate using these RGB tokens with the [RGBA CSS function](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#RGB_colors).
 

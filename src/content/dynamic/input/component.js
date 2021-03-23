@@ -17,7 +17,7 @@ class AuroInput extends Component {
 
         <auro-header level="2" display="display">Input</auro-header>
 
-        <p>The <code>auro-input</code> custom element tot create basic single-line text fields. Supports type <code>text</code>, <code>password</code>, and <code>email</code> with validation, required input and error states.</p>
+        <p>Use the <code>auro-input</code> custom element to create basic single-line text fields. Supports type <code>text</code>, <code>password</code>, and <code>email</code> with validation, required input and error states.</p>
 
         <auro-header level="2" display="700">Default component</auro-header>
 

@@ -19,9 +19,9 @@
 
 # AuroLabs: BETA
 
-Building a design system is dependent on the contribution of others. From the very beginning Auro positioned itself to be open and welcome to contributions by making it open source.
+Building a successful design system requires sustained community contribution. Since the very beginning we've been committed an open-source development model. We encourage your participation and input.
 
-But making a project open source isn't enough when it comes to growing a community based tool. Welcome to AuroLabs!
+But making a project open-source isn't enough when it comes to growing a community-based tool. So welcome to AuroLabs!
 
 ## Please don't mind the mess
 
@@ -35,7 +35,7 @@ Next there is discovery. These are unplanned components that when discovered the
 
 This is where AuroLabs comes in. It's the basic idea that developers will have an opportunity to create a new component that meets their specifications, works in their timeline and meets their goals, all the while being setup for success for inclusion into the Auro Design System.
 
-## A straight forward process
+## A straightforward process
 
 When building a new component in AuroLabs it is highly recommended that a developer start with the [WC-Generator](https://auro.alaskaair.com/getting-started/developers/generator/install) as this generator comes packed with all of Auro's awesome that will make the final review process a breeze.
 
@@ -138,7 +138,7 @@ There are a lot of nooks and crannies when working with Auro's web component gen
 
 ## Deploy your new custom element
 
-Once the repository is setup and the work for the initial release of the new custom element is complete, all that is left is to contact an Auro admin to add the repo secrets. These are required for semantic-versioning and publishing to npm. Once published, your new element will be accessible from the `@aurolabs` namespace.
+Once the repository is set up and the work for the initial release of the new custom element is complete, all that is left is to contact an Auro admin to add the repo secrets. These are required for semantic-versioning and publishing to npm. Once published, your new element will be accessible from the `@aurolabs` namespace.
 
 ## Deploy a demo
 

@@ -24,13 +24,13 @@ class Hyperlink extends Component {
 
         <Nav />
 
-        <auro-header>Auro Hyperlink</auro-header>
+        <auro-header>Auro hyperlink</auro-header>
 
-        <p>Hyperlinks form the backbone of how users navigate through a site or app. The following example illustrates how the <code>auro-hyperlink</code> Auro component can be used.</p>
+        <p>Hyperlinks form the backbone of how users navigate through a site or app. The following example illustrates how the <code>auro-hyperlink</code> component can be used.</p>
         <p>See <auro-hyperlink href="https://www.npmjs.com/package/@alaskaairux/auro-hyperlink" target="_blank">instructions</auro-hyperlink> for more information as how to install and full API for the <code>auro-hyperlink</code> Auro base element.</p>
         <p>The current state of <code>auro-hyperlink</code> is engineered to deprecate the ods- namespace and assist engineers to transition to Auro. </p>
 
-        <auro-header level="2" display="700">Default States</auro-header>
+        <auro-header level="2" display="700">Default states</auro-header>
 
         <div className="demo--inline exampleWrapper">
           <auro-hyperlink>No href</auro-hyperlink>
@@ -91,7 +91,7 @@ class Hyperlink extends Component {
           </Highlight>
         </auro-accordion>
 
-        <p>Defining the absolute URL will render the same results regardless of protocol.</p>
+        <p>Defining the absolute URL will render the same results, regardless of protocol.</p>
 
         <div className="demo--inline exampleWrapper">
           <auro-hyperlink href="http://www.alaskaair.com/route-map">http absolute URL to route map</auro-hyperlink> or
@@ -141,7 +141,7 @@ class Hyperlink extends Component {
 
 
 
-        <auro-header level="2" display="700">Call To Action (cta) Buttons</auro-header>
+        <auro-header level="2" display="700">Call to action (cta) buttons</auro-header>
         <div className="demo--inline exampleWrapper">
           <auro-hyperlink cta href="#">Default</auro-hyperlink> <auro-hyperlink cta href="" target="_blank" >Default</auro-hyperlink>
         </div>
@@ -167,7 +167,7 @@ class Hyperlink extends Component {
 
 
 
-        <auro-header level="2" display="700">On Dark</auro-header>
+        <auro-header level="2" display="700">On dark</auro-header>
         <div className="demo--inline exampleWrapper--ondark">
           <auro-hyperlink ondark href="/">On dark href</auro-hyperlink>
         </div>
@@ -266,11 +266,11 @@ handleKeyPress = (event) => {
           </Highlight>
         </auro-accordion>
 
-        <auro-header level="2" display="700">Do's and don'ts</auro-header>
+        <auro-header level="2" display="700">Do's and don't's</auro-header>
 
         <auro-header level="3" display="600">Free space nav hyperlink</auro-header>
 
-        <p>When using the Auro Hyperlink custom element, make sure to understand context of placement. When using the hyperlink element in an open space for the purpose of navigation use the <code>nav</code> property. This will ensure that the hyperlink does not have an underline.</p>
+        <p>When using the Auro hyperlink custom element, make sure to understand context of placement. When using the hyperlink element in an open space for the purpose of navigation use the <code>nav</code> property. This will ensure that the hyperlink does not have an underline.</p>
 
         <p>
           <auro-alerts noIcon error>
@@ -290,7 +290,7 @@ handleKeyPress = (event) => {
 
         <auro-header level="3" display="600">Hyperlink in content</auro-header>
 
-        <p>When using the Auro Hyperlink custom element in context with other content, for accessibility purposes, the hyperlink is to appear with an underline. This is the default experience with <code>auro-hyperlink</code></p>
+        <p>When using the Auro hyperlink custom element in context with other content, for accessibility purposes, the hyperlink is to appear with an underline. This is the default experience with <code>auro-hyperlink</code></p>
 
         <p>
           <auro-alerts noIcon error>
