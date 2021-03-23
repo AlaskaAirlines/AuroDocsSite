@@ -22,6 +22,12 @@
     ]
   },
   {
+    "name": "AuroLabs",
+    "cat": "default",
+    "color": "000000",
+    "description": "Project work is associated with AuroLabs release"
+  },
+  {
     "name": "help wanted",
     "cat": "default",
     "color": "2492eb",
