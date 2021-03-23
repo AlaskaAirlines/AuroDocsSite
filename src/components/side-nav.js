@@ -15,6 +15,23 @@ export default function SideNav(props) {
       ]
     },
     {
+      header: 'Getting Started',
+      items: [
+        // { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
+        { linkTitle: "Common definitions", route: "/getting-started/developers/common-definitions", parent: true },
+        { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
+        { linkTitle: "WC-Generator", route: "/getting-started/developers/generator/install", parent: true  },
+        { linkTitle: "CSS guidelines", route: "/getting-started/developers/webcorestylesheets", parent: true },
+
+        { linkTitle: "Auro Compliance", route: "/getting-started/developers/compliance", parent: true },
+        // { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
+        // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
+
+        { linkTitle: "Contributing", route: "/contributing", parent: true },
+        // { linkTitle: "*Custom Element 101", route: "/custom-element-101", parent: true },
+      ]
+    },
+    {
       header: 'Guide',
       items: [
         { linkTitle: "Color", route: "/color/overview", parent: true },
@@ -22,21 +39,6 @@ export default function SideNav(props) {
         { linkTitle: "Icons", route: "/icons", parent: true },
         { linkTitle: "Layout", route: "/layout/grid", parent: true },
         { linkTitle: "Voice and Tone", route: "/core/voice-and-tone", parent: true }
-      ]
-    },
-    {
-      header: 'Getting Started',
-      items: [
-        // { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
-        { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
-        { linkTitle: "CSS guidelines", route: "/getting-started/developers/webcorestylesheets", parent: true },
-        { linkTitle: "Definitions", route: "/getting-started/developers/common-definitions", parent: true },
-        { linkTitle: "Auro Compliance", route: "/getting-started/developers/compliance", parent: true },
-        // { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
-        // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
-        { linkTitle: "WC-Generator", route: "/getting-started/developers/generator/install", parent: true  },
-        { linkTitle: "Contributing", route: "/contributing", parent: true },
-        // { linkTitle: "*Custom Element 101", route: "/custom-element-101", parent: true },
       ]
     },
     {
