@@ -132,6 +132,10 @@ $ wc-generate --npm @aurolabs --name myelement
   </auro-accordion>
 </auro-accordion-group>
 
+## Getting started
+
+There are a lot of nooks and crannies when working with Auro's web component generator, it is highly recommended that you review our [Getting Started](/getting-started/developers/generator/getting-started) guide.
+
 ## Deploy your new custom element
 
 Once the repository is setup and the work for the initial release of the new custom element is complete, all that is left is to contact an Auro admin to add the repo secrets. These are required for semantic-versioning and publishing to npm. Once published, your new element will be accessible from the `@aurolabs` namespace.

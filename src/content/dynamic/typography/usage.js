@@ -74,51 +74,84 @@ class Typography extends Component {
         <div className="exampleWrapper">
           <h1 className="auro_heading auro_heading--display">.auro_heading--display</h1>
         </div>
-        <Highlight className='html afterCode'>
-          {`<h1 class="auro_heading auro_heading--display">.auro_heading--display</h1>`}
-        </Highlight>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<h1 class="auro_heading auro_heading--display">.auro_heading--display</h1>`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
+
 
         <div className="exampleWrapper">
           <h1 className="auro_heading auro_heading--800">.auro_heading--800</h1>
         </div>
-        <Highlight className='html afterCode'>
-          {`<h1 class="auro_heading auro_heading--800">.auro_heading--800</h1>`}
-        </Highlight>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<h1 class="auro_heading auro_heading--800">.auro_heading--800</h1>`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
+
 
         <div className="exampleWrapper">
           <h1 className="auro_heading auro_heading--700">.auro_heading--700</h1>
         </div>
-        <Highlight className='html afterCode'>
-          {`<h1 class="auro_heading auro_heading--700">.auro_heading--700</h1>`}
-        </Highlight>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<h1 class="auro_heading auro_heading--700">.auro_heading--700</h1>`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
+
 
         <div className="exampleWrapper">
           <h1 className="auro_heading auro_heading--600">.auro_heading--600</h1>
         </div>
-        <Highlight className='html afterCode'>
-          {`<h1 class="auro_heading auro_heading--600">.auro_heading--600</h1>`}
-        </Highlight>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<h1 class="auro_heading auro_heading--600">.auro_heading--600</h1>`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
+
 
         <div className="exampleWrapper">
           <h1 className="auro_heading auro_heading--500 util_stackMarginXxxs--bottom">.auro_heading--500</h1>
         </div>
-        <Highlight className='html afterCode'>
-          {`<h1 class="auro_heading auro_heading--500">.auro_heading--500</h1>`}
-        </Highlight>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<h1 class="auro_heading auro_heading--500">.auro_heading--500</h1>`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
+
 
         <div className="exampleWrapper">
           <h1 className="auro_heading auro_heading--400">.auro_heading--400</h1>
         </div>
-        <Highlight className='html afterCode'>
-          {`<h1 class="auro_heading auro_heading--400">.auro_heading--400</h1>`}
-        </Highlight>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<h1 class="auro_heading auro_heading--400">.auro_heading--400</h1>`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
 
         <div className="exampleWrapper">
           <h1 className="auro_heading auro_heading--300">.auro_heading--300</h1>
         </div>
-        <Highlight className='html afterCode'>
-          {`<h1 class="auro_heading auro_heading--300">.auro_heading--300</h1>`}
-        </Highlight>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<h1 class="auro_heading auro_heading--300">.auro_heading--300</h1>`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
 
         <auro-header level="2" display="800">Paragraph style</auro-header>
         <p>Paragraph styles can be added to a project via the <auro-hyperlink href="/webcorestylesheets" relative>Auro Web Core Style Sheet package</auro-hyperlink>. Be sure to review the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#essentials-css-#{$sym}#{$prefix}html#{$scope}" target="_blank">type essentials API docs.</auro-hyperlink></p>
@@ -126,9 +159,13 @@ class Typography extends Component {
         <div className="exampleWrapper auro_baseType">
           <p className="auro_baseParagraph">Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <Highlight className='html afterCode'>
-          {`<p class="auro_baseParagraph">Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>`}
-        </Highlight>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<p class="auro_baseParagraph">Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
 
         <auro-header level="2" display="800">Utility type selectors</auro-header>
         <p>Utility type styles can be added to a project via the <auro-hyperlink href="/webcorestylesheets" relative>Auro Web Core Style Sheet package</auro-hyperlink>. Plase be sure to review the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-font" target="_blank"> utility-font API documentation.</auro-hyperlink></p>
@@ -136,23 +173,38 @@ class Typography extends Component {
         <div className="exampleWrapper auro_baseType">
           <p className="auro_util_body--lg">.auro_util_body--lg</p>
         </div>
-        <Highlight className='html afterCode'>
-          {`<p class="auro_util_body--lg">.auro_util_body--lg`}
-        </Highlight>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<p class="auro_util_body--lg">.auro_util_body--lg`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
+
 
         <div className="exampleWrapper auro_baseType">
           <p className="auro_util_body--sm">.auro_util_body--sm</p>
         </div>
-        <Highlight className='html afterCode'>
-          {`<p class="auro_util_body--sm">.auro_util_body--sm`}
-        </Highlight>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<p class="auro_util_body--sm">.auro_util_body--sm`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
+
 
         <div className="exampleWrapper auro_baseType">
           <p className="auro_util_body--xs">.auro_util_body--xs</p>
         </div>
-        <Highlight className='html afterCode'>
-          {`<p class="auro_util_body--xs">.auro_util_body--xs`}
-        </Highlight>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<p class="auro_util_body--xs">.auro_util_body--xs`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
+
 
         <auro-header level="2" display="800">Custom spacing</auro-header>
         <p>The Header styles come with spacing baked in. This is to help auto stack content and components without additional effort. But there are times where customizing this spacing is required. To help with this, please refer to the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#mixin-auro_spacing" target="_blank">Auro spacing utility</auro-hyperlink> section of Web Core Style Sheets. </p>
@@ -163,9 +215,14 @@ class Typography extends Component {
         <div className="exampleWrapper">
           <h1 className="auro_heading auro_heading--500 util_stackMarginXxxs--bottom util_stackMarginXxxs--top">.auro_heading--500</h1>
         </div>
-        <Highlight className='html afterCode'>
-          {`<h1 className="auro_heading auro_heading--500 util_stackMarginXxxs--bottom util_stackMarginXxxs--top">.auro_heading--500</h1>`}
-        </Highlight>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<h1 className="auro_heading auro_heading--500 util_stackMarginXxxs--bottom util_stackMarginXxxs--top">.auro_heading--500</h1>`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
+
 
         <auro-header level="2" display="800">Design tokens</auro-header>
         <p>Please see <auro-hyperlink href="/getting-started/developers/design-tokens/install" relative>install docs</auro-hyperlink> for more information.</p>
