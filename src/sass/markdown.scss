@@ -133,6 +133,8 @@ $prefix: null;
     overflow: auto;
     background-color: var(--auro-color-base-gray-100);
     margin-bottom: var(--auro-size-xxl);
+    padding-left: var(--auro-size-sm) !important;
+    padding-top: var(--auro-size-md) !important;
     padding-bottom: var(--auro-size-md) !important;
 
     code {
