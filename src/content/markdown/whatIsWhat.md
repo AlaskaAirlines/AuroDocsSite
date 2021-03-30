@@ -2,7 +2,7 @@
 
 In a design system there are many words that can be very confusing, such as _component_ and _element_ as they have broad understanding. Here we will define a few core terms that you will see throughout this project.
 
-It needs to be pointed out that we are choosing NOT to use the term _element_ as this may be confused with [native HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) already supported by the browser. While HTML custom elements are in essence elements and they are used in HTML as tags, using _primitive_ and _component_ helps us to better communicate the intent.
+It needs to be pointed out that we are choosing NOT to use the term _element_ alone as this may be confused with [native HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) already supported by the browser. While HTML custom elements are elements and they are used in HTML as tags, always referring to them as _custom elements_ helps us to better communicate the intent.
 
 ## Token
 
