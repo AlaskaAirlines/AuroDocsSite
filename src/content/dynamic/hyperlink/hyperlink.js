@@ -266,7 +266,7 @@ handleKeyPress = (event) => {
           </Highlight>
         </auro-accordion>
 
-        <auro-header level="2" display="700">Do's and don't's</auro-header>
+        <auro-header level="2" display="700">Usage guidelines</auro-header>
 
         <auro-header level="3" display="600">Free space nav hyperlink</auro-header>
 
