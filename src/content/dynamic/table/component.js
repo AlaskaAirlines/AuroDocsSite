@@ -28,7 +28,7 @@ class AuroTable extends Component {
 
         <h1 className="auro_heading auro_heading--display">Table</h1>
 
-        <p>Use the Auro table component to illustrate non-dynamic tabular data. The Auro table element is responsive, with a flexible layout and an easy-to-use JSON API.</p>
+        <p>Use the auro-table custom element to illustrate non-dynamic tabular data. The auro-table element is responsive, with a flexible layout and an easy-to-use JSON API.</p>
 
         <h2 className="auro_heading auro_heading--700">Table use cases</h2>
 
