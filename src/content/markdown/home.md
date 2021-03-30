@@ -17,7 +17,6 @@
   These versions no longer support the <code>polyfill.js</code>. Be sure to see the updated link code in the individual component install page.
 </auro-alerts><br> -->
 
-**Auro is empowerment**. Empowering design and empowering development to innovate on ideas and collaborate on the future.
 
 <!-- Auro provides components and tools to help product teams work more efficiently. Designed and developed to support all Alaska Airlines digital experiences. -->
 
