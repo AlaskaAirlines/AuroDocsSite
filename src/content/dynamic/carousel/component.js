@@ -34,7 +34,7 @@ class AuroCarousel extends Component {
         </ul>
 
         <auro-header level="2" display="700">The setup</auro-header>
-        <p>The following is an example script to scroll through the carousel</p>
+        <p>The following is an example script to scroll through the auro-carousel</p>
 
         <Highlight className='javascript afterCode openCode'>
           {`
