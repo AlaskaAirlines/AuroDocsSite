@@ -76,7 +76,7 @@ class AuroTable extends Component {
 `}
         </Highlight>
 
-        <h2 className="auro_heading auro_heading--700">WCSS support</h2>
+        <h2 className="auro_heading auro_heading--700">WC Style Sheets support</h2>
 
         <p>For use cases where the general design of the Auro Table is needed, but the component is unseable, please use the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-auro-css-#{$scope}.auro_table" target="_blank">.auro_table</auro-hyperlink> styles from the Web Core Style Sheets library.</p>
 
