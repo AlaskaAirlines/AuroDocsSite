@@ -50,7 +50,6 @@ A crucial property of a pattern is only the existence of design documentation to
 
 ## Auro experience
 
-So what happens when a pattern is used to create a thing? With a combination of Auro tooling and custom code, a pattern is used to create an _experience_. These experiences are commonly distributed via the Alaska Component Hanger project.
 
 
 ## CMS module
