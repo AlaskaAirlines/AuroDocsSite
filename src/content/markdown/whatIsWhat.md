@@ -52,7 +52,6 @@ A crucial property of a pattern is only the existence of design documentation to
 
 So what happens when a pattern is used to create a thing? With a combination of Auro tooling and custom code, a pattern is used to create an _experience_. These experiences are commonly distributed via the Alaska Component Hanger project.
 
-An Auro experience can mean many different things and can be engineered in many different ways, e.g. web components, React or Svelte. What makes an experience specific to Auro is the use of the Auro Design System and its baseline tooling. Tokens, primitive components, components, web core styles, icons, and patterns are all integrated with the Alaska Airlines guest experience in mind.
 
 ## CMS module
 
