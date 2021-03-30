@@ -21,7 +21,7 @@ Token output can be exported as data or variables for various platforms includin
 
 ## HTML custom element
 
-The term _web component_ is a broad term referring to a specific type of technology used in web development, [HTML custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements), or more commonly known as web components.
+The term _web component_ is a broad term referring to a type of technology used in web development. [HTML custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements), commonly referred to as web components, is an HTML specification referring to the use of the shadow DOM, templates and slots.
 
 Web components can be pre-styled, fully functional HTML custom elements for commonly-used UIs. They can be very low-level input types, all the way up to complex interactions and content delivery. You can browse the list of all released [components and related design system resources](/component-status).
 
