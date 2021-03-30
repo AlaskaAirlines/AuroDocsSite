@@ -270,7 +270,7 @@ handleKeyPress = (event) => {
 
         <auro-header level="3" display="600">Free space nav hyperlink</auro-header>
 
-        <p>When using the Auro hyperlink custom element, make sure to understand context of placement. When using the hyperlink element in an open space for the purpose of navigation use the <code>nav</code> property. This will ensure that the hyperlink does not have an underline.</p>
+        <p>When using the auro-hyperlink custom element, make sure to understand the context of placement. When using the hyperlink element in an open space for the purpose of navigation use the <code>nav</code> property. This will ensure that the hyperlink does not have an underline.</p>
 
         <p>
           <auro-alerts noIcon error>
