@@ -19,7 +19,7 @@ A _token_ is a common reference to a static value. A token is not a variable, bu
 
 Token output can be exported as data or variables for various platforms including Sass, CSS, iOS and Android.
 
-## Web component
+## HTML custom element
 
 The term _web component_ is a broad term referring to a specific type of technology used in web development, [HTML custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements), or more commonly known as web components.
 
