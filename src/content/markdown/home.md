@@ -33,7 +33,7 @@
       <auro-hyperlink href="/typography/overview" relative>Typography</auro-hyperlink> and <auro-hyperlink href="/color/overview" relative>Color</auro-hyperlink>,<br/>
       a vast array of <auro-hyperlink href="/getting-started/developers/design-tokens" relative>Design Tokens,</auro-hyperlink><br/>
       pixel-perfect<auro-hyperlink href="/icons" relative>Icons,</auro-hyperlink><br/>
-      and a <auro-hyperlink href="/generator" relative>web component generator</auro-hyperlink> for a unique developer experience.<br/>
+      and the <auro-hyperlink href="/generator" relative>WC-Generator</auro-hyperlink> for a unique developer experience.<br/>
     </p>
   </div>
   <div>
