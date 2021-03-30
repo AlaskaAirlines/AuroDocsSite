@@ -18,7 +18,7 @@
 
 -- [Custom Elements Everywhere](https://custom-elements-everywhere.com/)
 
-## Auro web component generator
+## Auro's WC-Generator
 
 The [Design system web component generator](/getting-started/developers/generator) is a project tool intended to assist developers with an easy-to-configure and -execute web component development environment for the purpose of building custom elements for the Auro design system.
 
