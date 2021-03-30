@@ -25,7 +25,7 @@ Auro's [WC-Generator](/getting-started/developers/generator) is a tool intended 
 
 ## Making your project Auro-ready
 
-When starting a new project and using Auro with web components, this setup is the same regardless of the differences among the various frameworks.
+When starting a new project and using Auro with custom elements, this setup is the same regardless of the differences among the various frameworks.
 
 The following steps address the basic [compliance](/getting-started/developers/compliance) model.
 
