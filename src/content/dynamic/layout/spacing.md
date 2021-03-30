@@ -10,7 +10,7 @@ All HTML elements can be considered boxes. Based off of the HTML foundational bo
 
 ## Margin
 
-See [web core style sheets support](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_spacing)
+See [WC Style Sheets support](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_spacing)
 
 Vertical - The vertical space between items
 
