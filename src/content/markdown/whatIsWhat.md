@@ -48,7 +48,6 @@ Patterns are commonly-used interfaces where the makeup is entirely of primitives
 
 A crucial property of a pattern is only the existence of design documentation to support a common use UI pattern.
 
-## Auro experience
 
 
 
