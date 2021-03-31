@@ -46,7 +46,6 @@ Components may have a dependency on primitives, but they may also have dependenc
 
 Patterns are commonly-used interfaces where the makeup is entirely of primitives and other components, but due to their complexity the pattern is "suggested use" to allow the engineer to address individual use cases directly, versus having to work with an overly complex API.
 
-A crucial property of a pattern is only the existence of design documentation to support a common use UI pattern.
 
 
 
