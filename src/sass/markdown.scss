@@ -129,9 +129,11 @@ $prefix: null;
     }
   }
 
+  // !important because that libraries that inline CSS SUCK!
   pre  {
     overflow: auto;
-    background-color: var(--auro-color-base-gray-100);
+    background: var(--auro-color-base-gray-100) !important;
+    border: unset !important;
     margin-bottom: var(--auro-size-xxl);
     padding-left: var(--auro-size-sm) !important;
     padding-top: var(--auro-size-md) !important;
