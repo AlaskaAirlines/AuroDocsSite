@@ -159,8 +159,7 @@ export class SvelteDemoDocs extends ExternalMarkdownWrapper {
       \n// internal markdown docs\n${buildExports(docs)}
 
       \n${ExternalMarkdownWrapperDocs}
-      \n${externalRepoReadmeDocs}
-    `;
+      \n${externalRepoReadmeDocs}`;
 
     // this function creates the output file needed
     fs.writeFile("./src/content/docsExport.js", docsText, (err) => {

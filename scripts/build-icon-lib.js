@@ -53,22 +53,10 @@ const buildElements = (sortedIcons) => {
       iconPaths.forEach(i => {
           const file = getFile(i);
           const tag = getImportName(i);
-          elements += `
-            <div title="${file}">
-              <${tag} />
-              <span>${file}</span>
-            </div>
-          `
+          elements += `<div title="${file}"><${tag} /><span>${file}</span></div>`
       });
 
-      allCategories += `
-        <section>
-          <h2 className="icon-category">${category}</h2>
-          <div className="iconsWrapper">
-            ${elements}
-          </div>
-        </section>
-      `;
+      allCategories += `<section><h2 className="icon-category">${category}</h2><div className="iconsWrapper">${elements}</div></section>`;
     }
 
     return allCategories;
@@ -100,18 +88,18 @@ const getCategory = (iconPath) => {
 
     });
 
-    const iconListComponentText = `
-      import React from "react";
-      ${buildImports(icons)}
+    const iconListComponentText = `// DO NOT EDIT! \n// This doc was auto generated from ./scripts/build-icon-lib.js \n// ${new Date()}';
 
-      export default function () {
-        return (
-          <div id="icon-list">
-            ${buildElements(sortedIcons)}
-          </div>
-        )
-      }
-    `;
+import React from "react";
+${buildImports(icons)}
+
+export default function iconList() {
+  return (
+    <div id="icon-list">
+      ${buildElements(sortedIcons)}
+    </div>
+  )
+}`;
 
     fs.writeFile("src/content/dynamic/icons/iconList.js", iconListComponentText, (err) => {
 
