@@ -32,10 +32,6 @@ import "@alaskaairux/auro-interruption/dist/auro-dialog";
 // drawer
 import "@alaskaairux/auro-interruption/dist/auro-drawer";
 
-// accordion
-import "@alaskaairux/auro-accordion";
-import "@alaskaairux/auro-accordion/dist/auro-accordion-group";
-
 // carousel
 import "@alaskaairux/auro-carousel";
 
