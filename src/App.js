@@ -282,6 +282,7 @@ import {
   Home,
   Layout,
   Philosophy,
+  Officehours,
   ShadyCSS,
   VoiceTone,
   WhatIsWhat,
@@ -399,6 +400,7 @@ function App() {
               <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensInstall /></Route>
               <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
               <Route exact path="/design-tokens/deprecated"><DeprecatedTokens /></Route>
+              <Route exact path="/officehours"><Officehours /></Route>
 
               {/* Desing to dev handoff process */}
               {/* <Route exact path="/getting-started/handoff"><DesignHandoffIndex /></Route>

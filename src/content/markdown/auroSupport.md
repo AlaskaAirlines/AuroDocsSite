@@ -7,7 +7,7 @@
 
 # Auro Support
 
-Looking for help with Auro? F.A.Q.s, how to contact, it's all here.
+Looking for help with Auro? F.A.Q.s, how to contact, it's all here. Also be sure to check out our [office hours](/officehours) for how to best contact the Auro team.
 
 ## Frequently asked questions
 
@@ -28,6 +28,13 @@ Please see the items below for commonly asked questions regarding development an
       <p>Next it's suggested to get familiar with <auro-hyperlink href="/webcorestylesheets" relative>Web Core Style Sheets</auro-hyperlink>, or WCSS for short. WCSS is a foundational CSS library to assist in the quick and easy setup of Auro styles. Also, don't forget to review the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/" target="_blank">WCSS API</auro-hyperlink> for an inside look at this supporting library.</p>
       <p>No UI would be complete without the use of <auro-hyperlink href="/icons/overview" relative>icons</auro-hyperlink>. Auro has a vast array of predefined SVG icons to be used. Please see the documentation for all the ways you can make use of this library, or make use of Auro's easy to use  <auro-hyperlink href="/components/auro/icon" relative>icon custom element</auro-hyperlink>.</p>
       <p>Last, please see the list of available pre-developed <auro-hyperlink href="/component-status" relative>HTML native custom elements</auro-hyperlink>. These components can be used in virtually any development stack. Be sure you checkout the <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink>, <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink> and <auro-hyperlink href="/javascriptSetup" relative>standard JS</auro-hyperlink>example projects.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="getStarted" chromeless noProfile>
+    <span slot="trigger">Q: How do I contact the Auro Team?</span>
+    <div class="lightText">
+      <p>There are a lot of ways to get questions and support issues to the team. If there is an issue you are seeing with any of the parts of the Auro ecosystem, we highly recommend that you send a support issue. Select any of the ISSUE buttons on our <auro-hyperlink relative href="/component-status">status</auro-hyperlink> page and submit an issue from the repository.</p>
+      <p>When sending an issue is not enough, take a look at our <auro-hyperlink href="/officehours" relative>Office Hours</auro-hyperlink> for the best time to contact us.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="primary" chromeless noProfile>
@@ -151,25 +158,11 @@ Please see the items below for commonly asked questions regarding development an
       <p>No worries, there is a very simple process for <auro-hyperlink href="/contributing/upstream" relative>maintaining your fork's upstream relationship.<auro-hyperlink></p>
     </div>
   </auro-accordion>
+  <auro-accordion id="upstream" chromeless noProfile>
+    <span slot="trigger">Q: My app does not have the feature(s) I see in the doc site?</span>
+    <div class="lightText">
+      <p>If you are trying to access an icon or try a feature with your installed version of a library or element from Auro and it's not working, be sure to look at the latest published version compared to your version.</p>
+      <p>Every element or library has an <i>install</i> page. That page will list the published version. Or run <code>$ npm outdated</code> from the command line in your project's repo.</p>
+    </div>
+  </auro-accordion>
 </auro-accordion-group>
-
-## 1:1 support with Auro
-
-If you have a question, an issue or are simply curious about a specific part of the Auro Design System, we suggest submitting a [Github support ticket](/component-status) with the specific repo your issues relates.
-
-For internal Alaska users, there is a [Teams channel for Auro](https://teams.microsoft.com/l/channel/19%3a5df2ca021a6548c4af54256bbc737129%40thread.skype/Auro%2520(public)?groupId=3a6a4783-59c6-496a-a20c-ab306461a894&tenantId=0f44c5d4-42b0-45c2-bf55-d0fea8430d33), but it is recommended that this is for general support where other users may respond. The Teams channel is not recommended for larger architectural discussions or platform issues where the attention of an Auro team member is required.
-
-For in-depth issues, platform discussions, things where there is a need for the dedicated attention from an Auro team member, we ask that you please [schedule](https://calendly.com/dalesande) a meeting so that we can give your discussion the attention it deserves.
-
-Thanks!<br>
--- The Auro Team
-
-## Schedule a time to talk
-
-Sometimes documentation or setup instructions simply aren't enough. Please see the list of Auro team members with instructions as how to best schedule time with them.
-
-| Name | Title | Contact preferences |
-| --- | --- | --- |
-| Dale Sande | Principal Engineer | Please [schedule](https://calendly.com/dalesande) |
-| Gus Naughton | Software Engineer | Please [schedule](https://calendly.com/gusn) |
-| Geoff Rich | Software Engineer | Please [schedule](https://calendly.com/geoff-rich-alaska) |
