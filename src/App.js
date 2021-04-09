@@ -45,6 +45,11 @@ import ComponentAudit from './content/dynamic/componentAudit/auditView';
 // import DesignHandoffLabels from './content/dynamic/designHandoff/labels';
 // import DesignHandoffClose from './content/dynamic/designHandoff/close';
 
+// Aurio Labs
+import AuroLabs from './content/dynamic/labs/aurolabs';
+import AuroLabsMinors from './content/dynamic/labs/aurolabsMinors';
+import AuroLabsMajors from './content/dynamic/labs/aurolabsMajors';
+
 // WC-Generator
 import GeneratorInstall from './content/dynamic/generator/install';
 import GeneratorApi from './content/dynamic/generator/api';
@@ -206,6 +211,7 @@ import WcssConventions from './content/dynamic/wcss/conventions';
 import WcssFaq from './content/dynamic/wcss/faq';
 import WcssTests from './content/dynamic/wcss/tests';
 import WcssLinter from './content/dynamic/wcss/lint';
+import CustomElementCss from './content/dynamic/wcss/customElementCss';
 
 // hyperlink
 import AuroHyperlink from './content/dynamic/hyperlink/hyperlink';
@@ -287,7 +293,6 @@ import {
   VoiceTone,
   WhatIsWhat,
   Codetest,
-  AuroLabs,
   CustomElements101,
 
   // temp home for components in progress
@@ -347,6 +352,8 @@ function App() {
               <Route exact path="/getting-started/developers/common-definitions"><WhatIsWhat /></Route>
               <Route exact path="/take-home"><Codetest /></Route>
               <Route exact path="/aurolabs"><AuroLabs /></Route>
+              <Route exact path="/aurolabs/minors"><AuroLabsMinors /></Route>
+              <Route exact path="/aurolabs/majors"><AuroLabsMajors /></Route>
               <Route exact path="/custom-element-101"><CustomElements101 /></Route>
 
               {/* Home */}
@@ -629,6 +636,7 @@ function App() {
               <Route exact path="/webcorestylesheets/faq"><WcssFaq /></Route>
               <Route exact path="/webcorestylesheets/tests"><WcssTests /></Route>
               <Route exact path="/webcorestylesheets/linter"><WcssLinter /></Route>
+              <Route exact path="/webcorestylesheets/custom-element-css"><CustomElementCss /></Route>
               <Route exact path="/webcorestylesheets/features"><WcssFeatures /></Route>
 
               {/* Process */}

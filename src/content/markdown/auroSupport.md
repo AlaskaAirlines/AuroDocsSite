@@ -58,7 +58,7 @@ Please see the items below for commonly asked questions regarding development an
     <span slot="trigger">Q: Does Auro have a standard for CSS?</span>
     <div class="lightText">
       <p>CSS in Auro is no different than in any other project. The better CSS is organized, the easier it is to follow and maintain. Regardless of scope.</p>
-      <p><auro-hyperlink href="/webcorestylesheets/conventions" relative>Auro's opinions on CSS</auro-hyperlink> are simple and easy to follow. Single responsibility, tokens and utilities, it's all covered. In addition to these conventions, Auro has a full <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/" target="_blank">CSS library</auro-hyperlink>to help with daily development.</p>
+      <p><auro-hyperlink href="/webcorestylesheets/conventions" relative>Auro's opinions on CSS</auro-hyperlink> are simple and easy to follow. Single responsibility, tokens and utilities, it's all covered. In addition to these conventions, Auro has a full <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/" target="_blank">CSS library</auro-hyperlink>to help with daily development. You may also want to review <auro-hyperlink relative href="/webcorestylesheets/custom-element-css">CSS styles and custom elements</auro-hyperlink> for helpful information and background for writing CSS for custom elements.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="generator" chromeless noProfile>
