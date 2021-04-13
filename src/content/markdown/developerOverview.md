@@ -41,7 +41,7 @@ The design tokens are the **absolute base of the system** and at bare minimum th
 
 For more information, be sure to see the full [design token API info](/getting-started/developers/design-tokens/install)
 
-### Web core style sheets
+### WC Style Sheets
 
 WC style sheets (WCSS) are a responsive, mobile-first collection of styles and tools designed to make it quick and simple for developers to create web experiences using the Auro design language.
 
