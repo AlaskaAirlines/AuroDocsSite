@@ -75,7 +75,7 @@ These aren’t “ooh” or “aah” moments; these are potentially “oh shit�
 
 Make sure push notifications are distinct from each other. For example, a flight delay notification should say it's a flight delay notification; a back-on-time notification should explicitly say a flight is back on time.
 
-### Use sentence case in headings.
+### Use sentence case in headings
 
 * Where: Headlines, CTA’s (Fab, button, text link, etc)
 * Use Title Case for proper nouns only
