@@ -82,6 +82,6 @@ Make sure push notifications are distinct from each other. For example, a flight
 
 ### Use ending punctuation for full sentences only.
 
-### Avoid use of idioms.
+### Avoid use of idioms
 
 Idioms don't work so well for non-native speakers, and might even be insulting for folks with a different cultural background. Try to avoid them.
