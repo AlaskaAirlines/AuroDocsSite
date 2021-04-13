@@ -43,7 +43,7 @@ For more information, be sure to see the full [design token API info](/getting-s
 
 ### WC Style Sheets
 
-WC style sheets (WCSS) are a responsive, mobile-first collection of styles and tools designed to make it quick and simple for developers to create web experiences using the Auro design language.
+WC Style Sheets (WCSS) are a responsive, mobile-first collection of styles and tools designed to make it quick and simple for developers to create web experiences using the Auro design language.
 
 See [WC style sheets](/webcorestylesheets) for all information related to use. Also see the [automated documentation site](https://alaskaairlines.github.io/WebCoreStyleSheets/) for all information related to the features and API of WC style sheets.
 
