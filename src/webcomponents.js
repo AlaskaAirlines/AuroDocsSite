@@ -11,9 +11,6 @@ import "@alaskaairux/auro-flight";
 // badge
 import "@alaskaairux/auro-badge";
 
-// date/time
-import "@alaskaairux/auro-datetime";
-
 // hyperlink
 import "@alaskaairux/auro-hyperlink";
 
