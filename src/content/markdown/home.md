@@ -39,7 +39,7 @@
   <div>
     <auro-header display="700">Implementations</auro-header>
     <p>Universally applicable and easy to use. The implementation of the Auro Design System allows for highly flexible use in almost any development environment.</p>
-    <auro-hyperlink href="/webcorestylesheets" relative>Web core style sheets, </auro-hyperlink>
+    <auro-hyperlink href="/webcorestylesheets" relative>WC Style Sheets, </auro-hyperlink>
     <auro-hyperlink href="/icons" relative>Auro icons</auro-hyperlink><br/>
     ... and a growing list of pre-built <auro-hyperlink href="/component-status" relative>universally useable web components.</auro-hyperlink>
   </div>
