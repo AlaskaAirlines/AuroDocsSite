@@ -5,7 +5,6 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 // import markdownContent from '@alaskaairux/auro-interruption/demo/demo.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
-// import 'https://unpkg.com/@alaskaairux/auro-interruption@latest/dist/toggleInterruption.js';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-interruption/master/demo/demo.md';
 
