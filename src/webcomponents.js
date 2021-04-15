@@ -23,12 +23,6 @@ import "@alaskaairux/auro-avatar";
 // loader
 import "@alaskaairux/auro-loader";
 
-// dialog
-import "@alaskaairux/auro-interruption/dist/auro-dialog";
-
-// drawer
-import "@alaskaairux/auro-interruption/dist/auro-drawer";
-
 // carousel
 import "@alaskaairux/auro-carousel";
 
