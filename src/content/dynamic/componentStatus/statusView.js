@@ -412,7 +412,8 @@ class ComponentStatus extends Component {
                     url={url}
                     homepageUrl={homepageUrl}
                     issues={issues}
-                    releases={releases}/>
+                    releases={releases}
+                    negativeCount/>
                 ));
               }}
             </Query>
