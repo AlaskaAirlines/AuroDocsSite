@@ -113,6 +113,16 @@ Please see the items below for commonly asked questions regarding development an
       <p>New work comes from everywhere. Bringing new ideas to Auro is as simple as submitting a new issue or scheduling a meeting with the Auro team. Please see the <auro-hyperlink relative href="https://auro.alaskaair.com/aurolabs">AuroLabs</auro-hyperlink> page for more details about this specific process.</p>
     </div>
   </auro-accordion>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger">Q: A new element variant is discovered?</span>
+    <div class="lightText">
+      <p>What is a new variant when it comes to Auro custom elements? It's basically the same as with any variant in a design, but in this context it requires new feature support.</p>
+      <p>How a variant is discovered will vary. The discovery consists of reviewing an existing Auro custom element, presented in this doc site or the UI kit design documentation, and the new variant is the difference between what is presented and what is wanted.</p>
+      <p>To request that this new feature be developed, the best way forward is to submit an issue to the Auro team via <auro-hyperlink href="https://auro.alaskaair.com/component-status" relative>the Auro status page.</auro-hyperlink>Click on the <b>ISSUES</b> button associated to the custom element you want to update, this will take you to the issues page of the repository. Click the <b>NEW ISSUE</b> and choose <b>Feature request</b>.</p>
+      <p>In the feature request, please be sure to include all the information you have to describe the new feature. Attach a design proposal if that is helpful. Please indicate how you would like this feature to work. And include a description as to why this variant is needed. That is always helpful. </p>
+      <p>Please, do not submit a pull request without first submitting an issue. Without submitting an issue first, we would hate for anyone on your team to lose time because the variant was decided not to be included into the custom element.</p>
+    </div>
+  </auro-accordion>
   <auro-accordion id="sla" chromeless noProfile>
     <span slot="trigger">Q: What is Auro's SLA?</span>
     <div class="lightText">
