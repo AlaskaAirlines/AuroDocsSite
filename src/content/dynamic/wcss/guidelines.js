@@ -26,10 +26,7 @@ class LintRules extends MarkdownPageWrapper {
 
         <p>
           <small>
-            The following is a baseline list of guidelines from <auro-hyperlink href="https://raw.githubusercontent.com/KittyGiraudel/sass-guidelines/main/pages/en/_tldr.md" target="_blank">KittyGiraudel</auro-hyperlink> that Auro supports.
-            In addition linting rules follow example from a handful of CSS styleguides, including: <auro-hyperlink href="https://github.com/necolas/idiomatic-css" target="_blank">The Idiomatic CSS Principles</auro-hyperlink>,
-            <auro-hyperlink href="https://google.github.io/styleguide/htmlcssguide.html#CSS_Formatting_Rules" target="_blank">Google's CSS Style Guide</auro-hyperlink>,
-            <auro-hyperlink href="https://github.com/airbnb/css#css" target="_blank">Airbnb's Styleguide</auro-hyperlink>, and <auro-hyperlink href="https://codeguide.co/#css" target="_blank">@mdo's Code Guide</auro-hyperlink>.
+            Auro supports the following <auro-hyperlink href="https://sass-guidelin.es/" target="_blank">Sass Guidelines</auro-hyperlink>.
           </small>
         </p>
 
