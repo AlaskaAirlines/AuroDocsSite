@@ -119,6 +119,62 @@ const generator = gql`
 }
 `
 
+const eslint = gql`
+{
+  organization(login: "AlaskaAirlines") {
+    team(slug: "auro-team") {
+      repositories(query: "eslint-config-auro", orderBy: {field: NAME, direction: ASC}) {
+        nodes {
+          name
+          description
+          url
+          homepageUrl
+          id
+          pullRequests(last: 10, states: OPEN) {
+            totalCount
+            nodes {
+              title
+              url
+              mergeable
+              changedFiles
+              isDraft
+              state
+              reviewDecision
+              createdAt
+              suggestedReviewers {
+                reviewer {
+                  name
+                }
+              }
+              author {
+                login
+                avatarUrl(size: 30)
+              }
+              commits {
+                totalCount
+              }
+              files {
+                totalCount
+              }
+            }
+          }
+          issues(states: OPEN) {
+            totalCount
+          }
+          releases(last: 1) {
+            nodes {
+              tagName
+              createdAt
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
 const tokens = gql`
 {
   organization(login: "AlaskaAirlines") {
@@ -366,6 +422,23 @@ class ComponentStatus extends Component {
               }}
             </Query>
             <Query query={Icons}>
+              {({ loading, error, data }) => {
+                if (loading) return <tr><td></td></tr>;
+                if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
+
+                return data.organization.team.repositories.nodes.map(({name, description, url, homepageUrl, id, issues, releases, pullRequests}) => (
+                  <Repo key={id}
+                    pullRequests={pullRequests}
+                    name={name}
+                    description={description}
+                    url={url}
+                    homepageUrl={homepageUrl}
+                    issues={issues}
+                    releases={releases}/>
+                ));
+              }}
+            </Query>
+            <Query query={eslint}>
               {({ loading, error, data }) => {
                 if (loading) return <tr><td></td></tr>;
                 if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
