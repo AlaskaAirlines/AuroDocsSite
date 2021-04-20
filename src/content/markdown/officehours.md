@@ -29,3 +29,4 @@ Sometimes documentation or setup instructions simply aren't enough. Please see t
 | Jason Baker | Software Engineer | Team member | Please [schedule](https://calendly.com/jason-baker-alaskaair) |
 | Gus Naughton | Software Engineer | Contributor | Please [schedule](https://calendly.com/gusn) |
 | Geoff Rich | Software Engineer | Contributor | Please [schedule](https://calendly.com/geoff-rich-alaska) |
+| Dayna Anderson | Software Engineer | Contributor | Please [schedule](https://calendly.com/dayna-a) |
