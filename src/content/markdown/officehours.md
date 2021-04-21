@@ -6,9 +6,11 @@ This is where Office Hours come in. During these hours Auro team members will be
 
 ## What are Auro's office hours?
 
-Simply put, Monday, Tuesday, Thursday and Friday, 1pm - 4pm Pacific time. Wednesday's are reserved for team planning days.
+<!-- Simply put, Monday, Tuesday, Thursday and Friday, 1pm - 4pm Pacific time. Wednesday's are reserved for team planning days. -->
 
-It is at these times that all Auro team members will not schedule team meetings nor block their calendars. These slots are available on a 1st come, 1st serve basis.
+Office hours will vary between team members and contributors. Be sure to see the table below for hours per person.
+
+During office hours, Auro team members will not schedule team meetings nor block their calendars. These slots are available on a 1st come, 1st serve basis.
 
 
 ## 1:1 support with Auro
@@ -23,10 +25,10 @@ Auro team members may not engage in conversation in Teams outside the designated
 
 Sometimes documentation or setup instructions simply aren't enough. Please see the list of Auro team members with instructions as how to best schedule time with them.
 
-| Name | Title | Support type | Contact preferences |
-| --- | --- | --- |
-| Dale Sande | Principal Engineer | Team lead | Please [schedule](https://calendly.com/dalesande) |
-| Jason Baker | Software Engineer | Team member | Please [schedule](https://calendly.com/jason-baker-alaskaair) |
-| Gus Naughton | Software Engineer | Contributor | Please [schedule](https://calendly.com/gusn) |
-| Geoff Rich | Software Engineer | Contributor | Please [schedule](https://calendly.com/geoff-rich-alaska) |
-| Dayna Anderson | Software Engineer | Contributor | Please [schedule](https://calendly.com/dayna-a) |
+| Name | Title | Support type | Contact preferences | Office hours |
+| --- | --- | --- | --- |
+| Dale Sande | Principal Engineer | Team lead | Please [schedule](https://calendly.com/dalesande) | 1-4pm / M-W |
+| Jason Baker | Software Engineer | Team member | Please [schedule](https://calendly.com/jason-baker-alaskaair) | 1-4pm / M-F |
+| Gus Naughton | Software Engineer | Contributor | Please [schedule](https://calendly.com/gusn) ||
+| Geoff Rich | Software Engineer | Contributor | Please [schedule](https://calendly.com/geoff-rich-alaska) ||
+| Dayna Anderson | Software Engineer | Contributor | Please [schedule](https://calendly.com/dayna-a) ||
