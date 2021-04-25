@@ -1,6 +1,6 @@
 # Build a counter
 
-For this project the goal is to make a counter web component using the [Auro WC-Generator](/getting-started/developers/generator/install), [litElement](https://lit-element.polymer-project.org/) and the Auro Design System. We understand that you may have little or no experience with using litElement, so it is our intention to make this as easy as possible.
+For this project the goal is to make a counter web component using the [Auro WC-Generator](/getting-started/developers/generator/install) with [litElement](https://lit-element.polymer-project.org/) and the Auro Design System. We understand that you may have little or no experience with using litElement, so it is our intention to make this as easy as possible.
 
 The Auro WC-Generator is a ready-to-build development environment where all the dependencies are installed and a skeleton component has been created. There is nothing asked in this exercise that is not readily available.
 
@@ -44,6 +44,6 @@ The expectations for this project are the following:
 
 ## Support
 
-If you are in need of examples, please do not hesitate to review all the existing [Auro Web Components](http://localhost:3000/component-status).
+If you are in need of examples, please do not hesitate to review all the existing [Auro Web Components](https://auro.alaskaair.com/component-status).
 
 If you find yourself completely stuck, please do not hesitate to reach out to either Dale Sande or Geoff Rich. Your success in completing this exercise if our primary goal.

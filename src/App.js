@@ -431,7 +431,7 @@ function App() {
               <Route exact path="/generator"><GeneratorInstall /></Route>
               <Route exact path="/getting-started/developers/generator/install"><GeneratorInstall /></Route>
               <Route exact path="/getting-started/developers/generator/generator/api"><GeneratorApi /></Route>
-              <Route exact path="/getting-started/developers/generator/getting-started"><GeneratorGettngStarted /></Route>
+              <Route exact path="/getting-started/developers/generator/getting-started"><AuroLabsMinors /></Route>
               <Route exact path="/getting-started/developers/generator/upgrade"><GeneratorUpgrade /></Route>
 
               {/* Generator */}
