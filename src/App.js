@@ -213,6 +213,7 @@ import WcssTests from './content/dynamic/wcss/tests';
 import WcssLinter from './content/dynamic/wcss/lint';
 import WcssGuidelines from './content/dynamic/wcss/guidelines';
 import CustomElementCss from './content/dynamic/wcss/customElementCss';
+import IdiomaticCss from './content/dynamic/wcss/idiomatic';
 
 // hyperlink
 import AuroHyperlink from './content/dynamic/hyperlink/hyperlink';
@@ -640,6 +641,7 @@ function App() {
               <Route exact path="/webcorestylesheets/linter"><WcssLinter /></Route>
               <Route exact path="/webcorestylesheets/guidelines"><WcssGuidelines /></Route>
               <Route exact path="/webcorestylesheets/custom-element-css"><CustomElementCss /></Route>
+              <Route exact path="/webcorestylesheets/idiomatic-css"><IdiomaticCss /></Route>
               <Route exact path="/webcorestylesheets/features"><WcssFeatures /></Route>
 
               {/* Process */}
