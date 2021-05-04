@@ -45,7 +45,7 @@ import ComponentAudit from './content/dynamic/componentAudit/auditView';
 // import DesignHandoffLabels from './content/dynamic/designHandoff/labels';
 // import DesignHandoffClose from './content/dynamic/designHandoff/close';
 
-// Aurio Labs
+// Auro Labs
 import AuroLabs from './content/dynamic/labs/aurolabs';
 import AuroLabsMinors from './content/dynamic/labs/aurolabsMinors';
 import AuroLabsMajors from './content/dynamic/labs/aurolabsMajors';
@@ -53,8 +53,8 @@ import AuroLabsMajors from './content/dynamic/labs/aurolabsMajors';
 // WC-Generator
 import GeneratorInstall from './content/dynamic/generator/install';
 import GeneratorApi from './content/dynamic/generator/api';
-import GeneratorGettngStarted from './content/dynamic/generator/gettingStarted';
 import GeneratorUpgrade from './content/dynamic/generator/upgrade';
+import DevelopmentSetup from './content/dynamic/generator/developmentSetup';
 
 // Contributing
 import Contributing from './content/dynamic/contributing/contributing';
@@ -433,6 +433,7 @@ function App() {
               <Route exact path="/getting-started/developers/generator/generator/api"><GeneratorApi /></Route>
               <Route exact path="/getting-started/developers/generator/getting-started"><AuroLabsMinors /></Route>
               <Route exact path="/getting-started/developers/generator/upgrade"><GeneratorUpgrade /></Route>
+              <Route exact path="/getting-started/developers/generator/development-setup"><DevelopmentSetup /></Route>
 
               {/* Generator */}
               <Route exact path="/contributing"><Contributing /></Route>
