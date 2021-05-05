@@ -111,7 +111,7 @@ class AuroInput extends Component {
           </Highlight>
         </auro-accordion>
 
-        <p>Use the <code>type="credit-card"</code> and <code>icon</code>attributes for a credit card formatted input with credit card icon support.</p>
+        <p>Use the <code>type="credit-card"</code> and <code>icon</code> attributes for a credit card formatted input with credit card icon support.</p>
 
         <div className="demo--inline exampleWrapper">
           <auro-input type="credit-card" label="Card number" helptext="Please enter your credit card number" required icon></auro-input>
