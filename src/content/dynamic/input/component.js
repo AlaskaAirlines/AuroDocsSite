@@ -97,6 +97,33 @@ class AuroInput extends Component {
           </Highlight>
         </auro-accordion>
 
+        <auro-header level="2" display="700">Credit Card</auro-header>
+
+        <p>Use the <code>type="credit-card"</code> attribute for a credit card formatted input.</p>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-input type="credit-card" label="Card number" helptext="Please enter your credit card number" required></auro-input>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-input type="credit-card" label="Card number" helptext="Please enter your credit card number" required></auro-input>`}
+          </Highlight>
+        </auro-accordion>
+
+        <p>Use the <code>type="credit-card"</code> and <code>icon</code>attributes for a credit card formatted input with credit card icon support.</p>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-input type="credit-card" label="Card number" helptext="Please enter your credit card number" required icon></auro-input>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`// Use 4147 3411 1111 1111 to see the Alaska Airline's credit card!
+<auro-input type="credit-card" label="Card number" helptext="Please enter your credit card number" required icon></auro-input>`}
+          </Highlight>
+        </auro-accordion>
+
         <auro-header level="2" display="700">Disabled</auro-header>
 
         <p>All use cases for auro-input support the <code>disabled</code> attribute.</p>
@@ -105,13 +132,15 @@ class AuroInput extends Component {
           <auro-input disabled required label="Address" helptext="Please enter your home address"></auro-input>
           <auro-input disabled required type="email" label="Email address" helptext="Please enter your email address"></auro-input>
           <auro-input disabled required type="password" label="Password" helptext="Please enter a secure password"></auro-input>
+          <auro-input disabled required type="credit-card" label="Card number" helptext="Please enter your credit card number"></auro-input>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
             {`<auro-input disabled required label="Address" helptext="Please enter your home address"></auro-input>
 <auro-input disabled required type="email" label="Email address" helptext="Please enter your email address"></auro-input>
-<auro-input disabled required type="password" label="Password" helptext="Please enter a secure password"></auro-input>`}
+<auro-input disabled required type="password" label="Password" helptext="Please enter a secure password"></auro-input>
+<auro-input disabled required type="credit-card" label="Card number" helptext="Please enter your credit card number"></auro-input>`}
           </Highlight>
         </auro-accordion>
 
@@ -122,12 +151,14 @@ class AuroInput extends Component {
         <div className="demo--inline exampleWrapper">
           <auro-input noValidate required label="Address" helptext="Please enter your home address"></auro-input>
           <auro-input noValidate required type="email" label="Email address" helptext="Please enter your email address"></auro-input>
+          <auro-input noValidate required type="credit-card" label="Card number" helptext="Please enter your credit card number"></auro-input>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
             {`<auro-input noValidate required label="Address" helptext="Please enter your home address"></auro-input>
-<auro-input noValidate required type="email" label="Email address" helptext="Please enter your email address"></auro-input>`}
+<auro-input noValidate required type="email" label="Email address" helptext="Please enter your email address"></auro-input>
+<auro-input noValidate required type="credit-card" label="Card number" helptext="Please enter your credit card number"></auro-input>`}
           </Highlight>
         </auro-accordion>
       </section>
