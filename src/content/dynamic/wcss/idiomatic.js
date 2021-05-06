@@ -46,7 +46,7 @@ class AuroIdiomaticCss extends MarkdownPageWrapper {
 
   render() {
     return (
-      <section className="auro_baseType" id="top" tabindex="-1">
+      <section className="auro_baseType" id="top">
 
         <Nav />
 

@@ -25,7 +25,7 @@ class AuroCssConventions extends MarkdownPageWrapper {
 
         <Nav />
 
-        <section className="auro-markdown" id="top" tabindex="-1">
+        <section className="auro-markdown" id="top">
           <ReactMarkdown
             source={this.state.contentBuild}
             escapeHtml={false}
