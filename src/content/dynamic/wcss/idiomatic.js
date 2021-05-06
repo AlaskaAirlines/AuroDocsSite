@@ -3,7 +3,7 @@ import { Nav } from './nav';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
-// import markdownContent from '@alaskaairux/webcorestylesheets/IDIOMATICCSS.md' // use github reference once new content is merged into master
+// import markdownContent from '@alaskaairux/webcorestylesheets/IDIOMATICCSS.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WebCoreStyleSheets/master/IDIOMATICCSS.md';
@@ -46,7 +46,7 @@ class AuroIdiomaticCss extends MarkdownPageWrapper {
 
   render() {
     return (
-      <section className="auro_baseType">
+      <section className="auro_baseType" id="top" tabindex="-1">
 
         <Nav />
 

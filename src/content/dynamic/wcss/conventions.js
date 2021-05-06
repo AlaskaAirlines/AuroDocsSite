@@ -2,10 +2,11 @@ import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
+// import markdownContent from '@alaskaairux/webcorestylesheets/CONVENTIONS.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 // This doc should be relocated to WCSS
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro/master/src/CSSCONVENTIONS.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WebCoreStyleSheets/master/CONVENTIONS.md';
 
 class AuroCssConventions extends MarkdownPageWrapper {
 
@@ -24,7 +25,7 @@ class AuroCssConventions extends MarkdownPageWrapper {
 
         <Nav />
 
-        <section className="auro-markdown">
+        <section className="auro-markdown" id="top" tabindex="-1">
           <ReactMarkdown
             source={this.state.contentBuild}
             escapeHtml={false}
