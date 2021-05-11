@@ -17,18 +17,12 @@ export default function SideNav(props) {
     {
       header: 'Getting started',
       items: [
-        // { linkTitle: "Overview", route: "/getting-started/developers/overview", parent: true },
-        { linkTitle: "Common definitions", route: "/getting-started/developers/common-definitions", parent: true },
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "WC-Generator", route: "/getting-started/developers/generator/install", parent: true  },
         { linkTitle: "Developer setup", route: "/developer-setup/windows", parent: true  },
         { linkTitle: "CSS guidelines", route: "/getting-started/developers/webcorestylesheets", parent: true },
-
         { linkTitle: "Auro compliance", route: "/getting-started/developers/compliance", parent: true },
-        // { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
-        // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
         { linkTitle: "Contributing", route: "/contributing", parent: true },
-        // { linkTitle: "*Custom element 101", route: "/custom-element-101", parent: true },
       ]
     },
     {
@@ -75,7 +69,6 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "ShadyCSS", route: "/support/shadycss", parent: true },
         { linkTitle: "CSS custom properties", route: "/support/custom-properties", parent: true },
-        // { linkTitle: "Touch support", route: "/support/isTouching", parent: true },
       ]
     },
     {
@@ -86,16 +79,12 @@ export default function SideNav(props) {
         { linkTitle: "Polyfills", route: "/support/polyfills/focusvisible", parent: true},
         { linkTitle: "The <slot> element", route: "/support/slots", parent: true },
         { linkTitle: "Accessibility statement", route: "/a11y-statement", parent: true },
-        // { linkTitle: "Babel Support", route: "/support/babelSupport" },
-        // { linkTitle: "Tech overview", route: "/support/techDetails" },
-        // { linkTitle: "why?", route: "/support/why" }
       ]
     },
     {
       title: "- Example projects",
       items: [
         { linkTitle: "React setup", route: "/reactSetup", parent: true},
-        // { linkTitle: "Angular setup", route: "/angularSetup" },
         { linkTitle: "Javascript setup", route: "/javascriptSetup", parent: true},
         { linkTitle: "Svelte setup", route: "/svelteSetup", parent: true}
 

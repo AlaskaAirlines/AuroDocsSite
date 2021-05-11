@@ -62,93 +62,72 @@ const buildExports = (iconPaths) => {
       if(file.includes('.md')) docs.push(file.split(currentPath)[1]);
     }
 
-    const externalRepoReadmeDocs = `
-// this section needs to be refactored to remove
-// dependency on the Auro repo.
-// See updates to Contributing section.
-
-export class ComplianceDocs extends ExternalDocs {
-  readme = "src/COMPLIANCE.md"
-}
-
-export class A11yDocs extends ExternalDocs {
-  readme = "src/A11Y.md"
-}
-
-export class BabelSupportDocs extends ExternalDocs {
-  readme = "src/BABEL_SUPPORT.md"
-}
-
-export class BrowsersSupportDocs extends ExternalDocs {
-  readme = "src/BROWSER_SUPPORT.md"
-}
-
-export class CustomPropertiesDocs extends ExternalDocs {
-  readme = "src/CUSTOM_PROPERTIES.md"
-}
-
-export class IsTouchingDocs extends ExternalDocs {
-  readme = "src/IS_TOUCHING.md"
-}
-
-export class TechDetailsDocs extends ExternalDocs {
-  readme = "src/TECH_DETAILS.md"
-}
-
-export class SlotsDocs extends ExternalDocs {
-  readme = "src/SLOTS.md"
-}
-
-export class TestsDocs extends ExternalDocs {
-  readme = "src/TESTS.md"
-}
-
-export class GovernanceDocs extends ExternalDocs {
-  readme = "src/GOVERNANCE.md"
-}
-
-export class WhyCustomelementsDocs extends ExternalDocs {
-  readme = "src/WHY_CUSTOMELEMENT.md"
-}
-    `;
-
     const ExternalMarkdownWrapperDocs = `
-// Markdown classes
-// wrapper for general docs section
-class ExternalDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/auro"
-  codeURL = "https://github.com/AlaskaAirlines/auro/tree/master/src"
+// @aurodesignsystem/wc-generator
+export class BrowserSupport extends ExternalMarkdownWrapper {
+  module = "@aurodesignsystem/wc-generator"
+  githubURL = "https://github.com/AlaskaAirlines/wc-generator/"
+  codeURL = "https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator"
+  readme = "docs/browserSupport.md"
+}
+export class Slots extends ExternalMarkdownWrapper {
+  module = "@aurodesignsystem/wc-generator"
+  githubURL = "https://github.com/AlaskaAirlines/wc-generator/"
+  codeURL = "https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator"
+  readme = "docs/slots.md"
+}
+export class Tests extends ExternalMarkdownWrapper {
+  module = "@aurodesignsystem/wc-generator"
+  githubURL = "https://github.com/AlaskaAirlines/wc-generator/"
+  codeURL = "https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator"
+  readme = "docs/tests.md"
+}
+export class Compliance extends ExternalMarkdownWrapper {
+  module = "@aurodesignsystem/wc-generator"
+  githubURL = "https://github.com/AlaskaAirlines/wc-generator/"
+  codeURL = "https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator"
+  readme = "docs/compliance.md"
 }
 
+// @alaskaairux/webcorestylesheets
+export class CustomProperties extends ExternalMarkdownWrapper {
+  module = "@alaskaairux/webcorestylesheets"
+  githubURL = "https://github.com/AlaskaAirlines/WebCoreStyleSheets/"
+  codeURL = "https://raw.githubusercontent.com/AlaskaAirlines/WebCoreStyleSheets"
+  readme = "documents/customProperties.md"
+}
+export class ShadyCSS extends ExternalMarkdownWrapper {
+  module = "@alaskaairux/webcorestylesheets"
+  githubURL = "https://github.com/AlaskaAirlines/WebCoreStyleSheets/"
+  codeURL = "https://raw.githubusercontent.com/AlaskaAirlines/WebCoreStyleSheets"
+  readme = "documents/shadyCSS.md"
+}
+
+// repo readme files
 export class WCGenerator extends ExternalMarkdownWrapper {
-  module = "@alaskaairux/wc-generator"
+  module = "@aurodesignsystem/wc-generator"
   githubURL = "https://github.com/AlaskaAirlines/wc-generator"
   codeURL = "https://github.com/AlaskaAirlines/WC-Generator/tree/master/template"
   readme = "README.md"
 }
-
-// docs from demo repos
-export class ReactDemoDocs extends ExternalMarkdownWrapper {
-  githubURL = "https://github.com/AlaskaAirlines/AuroReactDemo"
-  codeURL = "https://github.com/AlaskaAirlines/AuroReactDemo/tree/master/src"
-  readme = "README.md"
-}
-
 export class AngularDemoDocs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/OrionAngularDemo"
   codeURL = "https://github.com/AlaskaAirlines/OrionAngularDemo/tree/master/src"
   readme = "README.md"
 }
-
 export class JavascriptDemoDocs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/AuroJavascriptDemo"
   codeURL = "https://github.com/AlaskaAirlines/AuroJavascriptDemo/tree/master/src"
   readme = "README.md"
 }
-
 export class SvelteDemoDocs extends ExternalMarkdownWrapper {
   githubURL = "https://github.com/AlaskaAirlines/AuroSvelteDemo"
   codeURL = "https://github.com/AlaskaAirlines/AuroSvelteDemo/tree/master/src"
+  readme = "README.md"
+}
+export class ReactDemoDocs extends ExternalMarkdownWrapper {
+  githubURL = "https://github.com/AlaskaAirlines/AuroReactDemo"
+  codeURL = "https://github.com/AlaskaAirlines/AuroReactDemo/tree/master/src"
   readme = "README.md"
 }
     `;
@@ -158,8 +137,7 @@ export class SvelteDemoDocs extends ExternalMarkdownWrapper {
       \n// internal markdown docs\n${buildImports(docs)}
       \n// internal markdown docs\n${buildExports(docs)}
 
-      \n${ExternalMarkdownWrapperDocs}
-      \n${externalRepoReadmeDocs}`;
+      \n${ExternalMarkdownWrapperDocs}`;
 
     // this function creates the output file needed
     fs.writeFile("./src/content/docsExport.js", docsText, (err) => {

@@ -260,35 +260,27 @@ import SideNav from './components/side-nav';
 // export classes from ./src/content/docsExport.js
 // then add the appropriate Route below
 import {
-  A11yDocs,
   AngularDemoDocs,
-  BabelSupportDocs,
-  BrowsersSupportDocs,
-  CustomPropertiesDocs,
-  GovernanceDocs,
-  IsTouchingDocs,
+  BrowserSupport,
+  Compliance,
+  CustomProperties,
   JavascriptDemoDocs,
-  SvelteDemoDocs,
   ReactDemoDocs,
-  SlotsDocs,
-  TechDetailsDocs,
-  TestsDocs,
-  WhyCustomelementsDocs,
-  ComplianceDocs,
+  ShadyCSS,
+  Slots,
+  SvelteDemoDocs,
+  Tests,
 
   // Markdown Pages from docsExport(automated)
+  // ./scripts/build-page-imports.js
+  // content located in ./src/content/markdown
   A11yStatement,
-  AuroSupport,
-  DeveloperOverview,
-  Home,
-  Layout,
+  AuroSupport, // FAQ page
+  Codetest, // interview test
+  Home, /// home page
+  Officehours, // linked from FAQ page
   Philosophy,
-  Officehours,
-  ShadyCSS,
-  VoiceTone,
-  WhatIsWhat,
-  Codetest,
-  CustomElements101,
+  VoiceTone, // owned by UX writers
 
   // temp home for components in progress
   Wip
@@ -297,7 +289,6 @@ import {
 
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
-import ReactGA from 'react-ga';
 
 const API_KEY = process.env.REACT_APP_GITHUB_API_KEY;
 
@@ -307,15 +298,6 @@ const client = new ApolloClient({
     authorization: `Bearer ${API_KEY}`
   }
 });
-
-const trackingId = "G-KLC8YFTLNW"; // Replace with your Google Analytics tracking ID
-ReactGA.initialize(trackingId);
-ReactGA.pageview(window.location.pathname + window.location.search);
-// ReactGA.set({
-//   userId: auth.currentUserId(),
-//   // any data that is relevant to the user session
-//   // that you would like to track with google analytics
-// })
 
 function App() {
   return (
@@ -339,17 +321,13 @@ function App() {
               <Route exact path="/a11y-statement"><A11yStatement /></Route>
               <Route exact path="/user-support"><AuroSupport /></Route> {/* redirect old url */}
               <Route exact path="/auro-support"><AuroSupport /></Route>
-              <Route exact path="/getting-started/developers/overview"><DeveloperOverview /></Route>
-              <Route exact path="/core/layout"><Layout /></Route> {/* not used */} {/* reevaluate content */}
               <Route exact path="/philosophy"><Philosophy /></Route>
               <Route exact path="/support/shadycss"><ShadyCSS /></Route>
               <Route path="/core/voice-and-tone"><VoiceTone /></Route>
-              <Route exact path="/getting-started/developers/common-definitions"><WhatIsWhat /></Route>
               <Route exact path="/take-home"><Codetest /></Route>
               <Route exact path="/aurolabs"><AuroLabs /></Route>
               <Route exact path="/aurolabs/minors"><AuroLabsMinors /></Route>
               <Route exact path="/aurolabs/majors"><AuroLabsMajors /></Route>
-              <Route exact path="/custom-element-101"><CustomElements101 /></Route>
 
               {/* Home */}
               <Route exact path="/epics/"><VersionZero /></Route>
@@ -394,16 +372,10 @@ function App() {
               <Route exact path="/toast/"><Toast /></Route>
 
 
-
-
               {/* Getting Started/developers */}
-              <Route exact path="/getting-started/developers/what-is-what"><WhatIsWhat /></Route>
-              <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
-              <Route exact path="/getting-started/developers/governance"><GovernanceDocs /></Route>
-
-              {/* Design Tokens */}
+              <Route exact path="/getting-started/developers/compliance"><Compliance /></Route>
               <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
-              <Route exact path="//design-tokens"><DesignTokens /></Route>
+              <Route exact path="/design-tokens"><DesignTokens /></Route>
               <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensInstall /></Route>
               <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
               <Route exact path="/design-tokens/deprecated"><DeprecatedTokens /></Route>
@@ -601,22 +573,16 @@ function App() {
               <Route exact path="/components/auro/pane/releases"><AuroPaneReleases /></Route>
 
               {/* Dev resources */}
-              <Route exact path="/support/a11y"><A11yDocs /></Route> {/* not used */} {/* reevaluate content */}
-              <Route exact path="/support/babelSupport"><BabelSupportDocs /></Route> {/* not used */} {/* reevaluate content */}
-              <Route exact path="/support/browsersSupport"><BrowsersSupportDocs /></Route>
-              <Route exact path="/support/slots"><SlotsDocs /></Route>
-              <Route exact path="/support/techDetails"><TechDetailsDocs /></Route> {/* not used */} {/* reevaluate content */}
-              <Route exact path="/support/tests"><TestsDocs /></Route>
-              <Route exact path="/support/why"><WhyCustomelementsDocs /></Route> {/* not used */} {/* reevaluate content */}
-
+              <Route exact path="/support/browsersSupport"><BrowserSupport /></Route>
+              <Route exact path="/support/slots"><Slots /></Route>
+              <Route exact path="/support/tests"><Tests /></Route>
               <Route exact path="/support/polyfills/focusvisible"><FocusVisible /></Route>
               <Route exact path="/support/polyfills/webcomponentsjs"><Webcomponentsjs /></Route>
               <Route exact path="/support/all-releases"><AllReleases /></Route>
               <Route exact path="/support/releases-by-sprint"><ReleasesBySprint /></Route>
               <Route exact path="/support/releases-summary"><ReleaseSummary /></Route>
 
-              <Route exact path="/support/custom-properties"><CustomPropertiesDocs /></Route>
-              <Route exact path="/support/isTouching"><IsTouchingDocs /></Route> {/* not used */} {/* reevaluate content */}
+              <Route exact path="/support/custom-properties"><CustomProperties /></Route>
               <Route exact path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
               <Route exact path="/getting-started/developers/webcorestylesheets"><WebCoreStyleSheets /></Route>
 
