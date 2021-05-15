@@ -136,32 +136,60 @@ class Repo extends Component {
                                       title={author.login}></img>
                                   </div>
                                 </auro-alerts>
-                              : <auro-alerts noIcon warning className="alert">
-                                  <div className="cardHeader">
-                                    <div>
-                                      { reviewDecision === "REVIEW_REQUIRED" ? "Review required " : (reviewDecision === "CHANGES_REQUESTED" ? "Changes requested": '')}
-                                    </div>
-                                    <div>
-                                      <auro-datetime utc={createdAt}></auro-datetime>
-                                    </div>
-                                  </div>
-                                  <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
-                                  <div className="cardStats">
-                                    <div className="statsBadge"><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
-                                    <div><auro-badge pill advisory>{commits.totalCount}</auro-badge> Commit{commits.totalCount > 1 ? 's' : ''}</div>
-                                  </div>
-                                  <div>
-                                    { isDraft ? 'Draft PR, not ready for review!' : ''}
-                                  </div>
-                                  <div>
-                                    <small>Author: </small>
-                                    <img
-                                      className="githubAvatar"
-                                      src={author.avatarUrl}
-                                      alt={author.login}
-                                      title={author.login}></img>
-                                  </div>
-                                </auro-alerts>
+                              : (reviewDecision === "REVIEW_REQUIRED"
+                                  ? <auro-alerts noIcon information className="alert">
+                                      <div className="cardHeader">
+                                        <div>
+                                          { reviewDecision === "REVIEW_REQUIRED" ? "Review required " : '' }
+                                        </div>
+                                        <div>
+                                          <auro-datetime utc={createdAt}></auro-datetime>
+                                        </div>
+                                      </div>
+                                      <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                                      <div className="cardStats">
+                                        <div className="statsBadge"><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
+                                        <div><auro-badge pill advisory>{commits.totalCount}</auro-badge> Commit{commits.totalCount > 1 ? 's' : ''}</div>
+                                      </div>
+                                      <div>
+                                        { isDraft ? 'Draft PR, not ready for review!' : ''}
+                                      </div>
+                                      <div>
+                                        <small>Author: </small>
+                                        <img
+                                          className="githubAvatar"
+                                          src={author.avatarUrl}
+                                          alt={author.login}
+                                          title={author.login}></img>
+                                      </div>
+                                    </auro-alerts>
+                                  : <auro-alerts noIcon error className="alert">
+                                      <div className="cardHeader">
+                                        <div>
+                                          <b>{ reviewDecision === "CHANGES_REQUESTED" ? "Changes requested": ''}</b>
+                                        </div>
+                                        <div>
+                                          <auro-datetime utc={createdAt}></auro-datetime>
+                                        </div>
+                                      </div>
+                                      <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
+                                      <div className="cardStats">
+                                        <div className="statsBadge"><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
+                                        <div><auro-badge pill advisory>{commits.totalCount}</auro-badge> Commit{commits.totalCount > 1 ? 's' : ''}</div>
+                                      </div>
+                                      <div>
+                                        { isDraft ? 'Draft PR, not ready for review!' : ''}
+                                      </div>
+                                      <div>
+                                        <small>Author: </small>
+                                        <img
+                                          className="githubAvatar"
+                                          src={author.avatarUrl}
+                                          alt={author.login}
+                                          title={author.login}></img>
+                                      </div>
+                                    </auro-alerts>
+                                )
                             )
                           }
                         </span>
