@@ -50,6 +50,9 @@ import AuroLabs from './content/dynamic/labs/aurolabs';
 import AuroLabsMinors from './content/dynamic/labs/aurolabsMinors';
 import AuroLabsMajors from './content/dynamic/labs/aurolabsMajors';
 
+// Developer setup
+import DevSetup from './content/dynamic/devSetup/devSetup';
+
 // WC-Generator
 import GeneratorInstall from './content/dynamic/generator/install';
 import GeneratorApi from './content/dynamic/generator/api';
@@ -371,6 +374,10 @@ function App() {
               <Route exact path="/status"><ComponentStatus /></Route>
               <Route exact path="/audit"><ComponentAudit /></Route>
               <Route exact path="/ado-use"><UseDashboard /></Route>
+
+              {/* Developer setup */}
+              <Route exact path="/dev-setup"><DevSetup /></Route>
+
 
               {/* Direct links */}
               <Route exact path="/status"><ComponentStatus /></Route>

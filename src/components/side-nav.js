@@ -27,6 +27,7 @@ export default function SideNav(props) {
         // { linkTitle: "Governance", route: "/getting-started/developers/governance", parent: true },
         // { linkTitle: "Design Handoff", route: "/getting-started/handoff", parent: true },
 
+        { linkTitle: "Developer setup", route: "/dev-setup", parent: true },
         { linkTitle: "Contributing", route: "/contributing", parent: true },
         // { linkTitle: "*Custom element 101", route: "/custom-element-101", parent: true },
       ]
