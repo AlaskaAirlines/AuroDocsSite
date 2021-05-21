@@ -56,8 +56,9 @@ import DevSetup from './content/dynamic/devSetup/devSetup';
 // WC-Generator
 import GeneratorInstall from './content/dynamic/generator/install';
 import GeneratorApi from './content/dynamic/generator/api';
+import GeneratorDefineApi from './content/dynamic/generator/defineApi';
 import GeneratorUpgrade from './content/dynamic/generator/upgrade';
-import DevelopmentSetup from './content/dynamic/generator/developmentSetup';
+// import DevelopmentSetup from './content/dynamic/devSetup/devSetup';
 
 // Contributing
 import Contributing from './content/dynamic/contributing/contributing';
@@ -439,9 +440,9 @@ function App() {
               <Route exact path="/generator"><GeneratorInstall /></Route>
               <Route exact path="/getting-started/developers/generator/install"><GeneratorInstall /></Route>
               <Route exact path="/getting-started/developers/generator/generator/api"><GeneratorApi /></Route>
-              <Route exact path="/getting-started/developers/generator/getting-started"><AuroLabsMinors /></Route>
+              <Route exact path="/aurolabs/minors"><AuroLabsMinors /></Route>
               <Route exact path="/getting-started/developers/generator/upgrade"><GeneratorUpgrade /></Route>
-              <Route exact path="/getting-started/developers/generator/development-setup"><DevelopmentSetup /></Route>
+              <Route exact path="/getting-started/developers/generator/define-api"><GeneratorDefineApi /></Route>
 
               {/* Generator */}
               <Route exact path="/contributing"><Contributing /></Route>
