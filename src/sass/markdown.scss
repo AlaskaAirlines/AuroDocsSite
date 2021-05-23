@@ -214,3 +214,23 @@ code[class*="language-"], pre[class*="language-"] {
 }
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+// site specifics
+
+// home page
+
+.home--quotes {
+  flex-wrap: wrap;
+
+  div {
+    @include auro_breakpoint--md {
+      max-width: 50%;
+      flex-basis: 50%;
+      padding-left: 0;
+
+      &:nth-child(even) {
+        padding-right: 0;
+      }
+    }
+  }
+}

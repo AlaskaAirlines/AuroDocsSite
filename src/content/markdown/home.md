@@ -47,14 +47,21 @@
 
 ## What people are saying about Auro
 
-> Needing to move away from a legacy lightbox dialog solution, I spent the better part of a day weeding out the old code, and only 10 minutes adding in auro-dialog and was up and running.
-
--- Caleb Wells, Software Engineer
-
-> Been working on some new tools for the team and decided to use the auro stuff to get rolling quickly and its so easy to use. Love the work you've been doing - keep it up!
-
--- Josh Benard, Sr Product Mgr
-
-> I must say, you do really good work.  I'm impressed!  Let me just say, I'm an Auro fan!
-
--- Scott Flesher, Principal Software Engineer
+<div class="auro_util_displayFlex columns home--quotes">
+  <div>
+    <blockquote>Been working on some new tools for the team and decided to use the auro stuff to get rolling quickly and its so easy to use. Love the work you've been doing - keep it up!</blockquote>
+    <p>-- Josh Benard, Sr Product Mgr</p>
+  </div>
+  <div>
+    <blockquote>Needing to move away from a legacy lightbox dialog solution, I spent the better part of a day weeding out the old code, and only 10 minutes adding in auro-dialog and was up and running.</blockquote>
+    <p>-- Caleb Wells, Software Engineer</p>
+  </div>
+  <div>
+    <blockquote>One way to fix [accessibility] is to use an Auro component.</blockquote>
+    <p>-- Forrest Taylor, Software Engineer</p>
+  </div>
+  <div>
+    <blockquote>I must say, you do really good work.  I'm impressed!  Let me just say, I'm an Auro fan!</blockquote>
+    <p>-- Scott Flesher, Principal Software Engineer</p>
+  </div>
+</div>
