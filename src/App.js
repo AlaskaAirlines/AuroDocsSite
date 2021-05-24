@@ -51,14 +51,15 @@ import AuroLabsMinors from './content/dynamic/labs/aurolabsMinors';
 import AuroLabsMajors from './content/dynamic/labs/aurolabsMajors';
 
 // Developer setup
-import DevSetup from './content/dynamic/devSetup/devSetup';
+import DevSetupWindows from './content/dynamic/devSetup/devSetupWin';
+import DevSetupMac from './content/dynamic/devSetup/devSetupMac';
+import DevSetupLinux from './content/dynamic/devSetup/devSetupLinux';
 
 // WC-Generator
 import GeneratorInstall from './content/dynamic/generator/install';
 import GeneratorApi from './content/dynamic/generator/api';
 import GeneratorDefineApi from './content/dynamic/generator/defineApi';
 import GeneratorUpgrade from './content/dynamic/generator/upgrade';
-// import DevelopmentSetup from './content/dynamic/devSetup/devSetup';
 
 // Contributing
 import Contributing from './content/dynamic/contributing/contributing';
@@ -377,7 +378,9 @@ function App() {
               <Route exact path="/ado-use"><UseDashboard /></Route>
 
               {/* Developer setup */}
-              <Route exact path="/dev-setup"><DevSetup /></Route>
+              <Route exact path="/developer-setup/windows"><DevSetupWindows /></Route>
+              <Route exact path="/developer-setup/macOS"><DevSetupMac /></Route>
+              <Route exact path="/developer-setup/linux"><DevSetupLinux /></Route>
 
 
               {/* Direct links */}

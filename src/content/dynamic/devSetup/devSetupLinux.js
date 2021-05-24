@@ -1,12 +1,13 @@
 import React from "react";
 import marked from 'marked';
 import Prism from 'prismjs';
+import { Nav } from './nav';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/docs/devSetup.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/docs/devSetupLinux.md';
 
-class AuroFlight extends MarkdownPageWrapper {
+class DevSetupLinux extends MarkdownPageWrapper {
 
   // function to get text from MD document
   getMarkdownText() {
@@ -46,6 +47,8 @@ class AuroFlight extends MarkdownPageWrapper {
     return (
       <section className="auro_baseType">
 
+        <Nav />
+
         <section
           className="auro-markdown"
           dangerouslySetInnerHTML={this.getMarkdownText()}
@@ -55,4 +58,4 @@ class AuroFlight extends MarkdownPageWrapper {
   }
 }
 
-export default AuroFlight;
+export default DevSetupLinux;

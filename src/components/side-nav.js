@@ -21,7 +21,7 @@ export default function SideNav(props) {
         { linkTitle: "Common definitions", route: "/getting-started/developers/common-definitions", parent: true },
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "WC-Generator", route: "/getting-started/developers/generator/install", parent: true  },
-        { linkTitle: "Developer setup", route: "/dev-setup", parent: true  },
+        { linkTitle: "Developer setup", route: "/developer-setup/windows", parent: true  },
         { linkTitle: "CSS guidelines", route: "/getting-started/developers/webcorestylesheets", parent: true },
 
         { linkTitle: "Auro compliance", route: "/getting-started/developers/compliance", parent: true },
