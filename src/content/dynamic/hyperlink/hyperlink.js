@@ -78,13 +78,13 @@ class Hyperlink extends Component {
         <p>By default the auro-hyperlink will assume that the url passed is an absolute URL to <code>www.alaskaair.com</code></p>
 
         <div className="demo--inline exampleWrapper">
-          <auro-hyperlink href="/route-map">Absolute URL to route map</auro-hyperlink>
+          <auro-hyperlink href="/route-map" nav>Absolute URL to route map</auro-hyperlink>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
             {`// Web component example
-<auro-hyperlink href="/route-map">Absolute URL to route map</auro-hyperlink>
+<auro-hyperlink href="/route-map" nav>Absolute URL to route map</auro-hyperlink>
 
 // Output code in shadow DOM element
 <a class="hyperlink" href="https://www.alaskaair.com/route-map"><slot>Absolute URL to route map</slot></a>`}
@@ -113,13 +113,13 @@ class Hyperlink extends Component {
         <p>For relative URLs, use the <code>relative</code> property.</p>
 
         <div className="demo--inline exampleWrapper">
-          <auro-hyperlink relative href="#">Relative URL</auro-hyperlink>
+          <auro-hyperlink nav relative href="#">Relative URL</auro-hyperlink>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
             {`// Web component example
-<auro-hyperlink relative href="#">Relative URL</auro-hyperlink>
+<auro-hyperlink nav relative href="#">Relative URL</auro-hyperlink>
 
 // Output code in shadow DOM element
 <a class="hyperlink" href="#"><slot>Relative URL</slot></a>`}
