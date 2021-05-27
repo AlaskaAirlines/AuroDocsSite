@@ -57,6 +57,7 @@ import Contributing from './content/dynamic/contributing/contributing';
 import ContributingUpstream from './content/dynamic/contributing/upstream';
 import ContribGitWorkflow from './content/dynamic/contributing/gitWorkflow';
 import ContribIssuePrLabels from './content/dynamic/contributing/issuePrLables';
+import DoD from './content/dynamic/contributing/dod';
 
 // design tokens
 import DesignTokens from './content/dynamic/designTokens/tokens';
@@ -426,6 +427,7 @@ function App() {
               <Route exact path="/contributing/upstream"><ContributingUpstream /></Route>
               <Route exact path="/contributing/git-workflow"><ContribGitWorkflow /></Route>
               <Route exact path="/contributing/issues-prs-labels"><ContribIssuePrLabels /></Route>
+              <Route exact path="/definition-of-done"><DoD /></Route>
 
               {/* Typography */}
               <Route exact path="/typography/overview"><TypographyOverview /></Route>
