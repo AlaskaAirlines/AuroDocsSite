@@ -36,15 +36,6 @@ import HelpWanted from './content/dynamic/componentStatus/helpWanted';
 import ComponentStatus from './content/dynamic/componentStatus/statusView';
 import ComponentAudit from './content/dynamic/componentAudit/auditView';
 
-// Design to dev handoff process
-// import DesignHandoffIndex from './content/dynamic/designHandoff/index';
-// import DesignHandoffParent from './content/dynamic/designHandoff/parent';
-// import DesignHandoffDev from './content/dynamic/designHandoff/development';
-// import DesignHandoffSym from './content/dynamic/designHandoff/symbolize';
-// import DesignHandoffReview from './content/dynamic/designHandoff/review';
-// import DesignHandoffLabels from './content/dynamic/designHandoff/labels';
-// import DesignHandoffClose from './content/dynamic/designHandoff/close';
-
 // Auro Labs
 import AuroLabs from './content/dynamic/labs/aurolabs';
 import AuroLabsMinors from './content/dynamic/labs/aurolabsMinors';
@@ -76,9 +67,6 @@ import DesignTokensInstall from './content/dynamic/designTokens/install';
 import ColorOverview from './content/dynamic/color/overview';
 import CoreDigitalPalette from './content/dynamic/color/digitalPalette';
 import PersonalityPalette from './content/dynamic/color/personalityPalette';
-
-// import ColorUsageLegacy from './content/dynamic/color/usage_legacy';
-// import ColorOverviewLegacy from './content/dynamic/color/overview_legacy';
 
 // typography
 import TypographyOverview from './content/dynamic/typography/overview';
@@ -226,7 +214,6 @@ import AuroHyperlinkInstall from './content/dynamic/hyperlink/install';
 import AuroHyperlinkApi from './content/dynamic/hyperlink/api';
 import AuroHyperlinkA11y from './content/dynamic/hyperlink/a11y';
 import AuroHyperlinkReleases from './content/dynamic/hyperlink/releases';
-import Hyperlink from './content/dynamic/hyperlink/legacy'; // legacy
 
 // toast
 import Toast from './content/dynamic/toast/toast';
@@ -410,10 +397,9 @@ function App() {
 
               {/* Getting Started/developers */}
               <Route exact path="/getting-started/developers/what-is-what"><WhatIsWhat /></Route>
-              {/* <Route exact path="/getting-started/developers/generator"><WCGenerator /></Route> */}
               <Route exact path="/getting-started/developers/compliance"><ComplianceDocs /></Route>
-              {/* <Route exact path="/getting-started/developers/contributing"><ContributingDocs /></Route> */}
               <Route exact path="/getting-started/developers/governance"><GovernanceDocs /></Route>
+
               {/* Design Tokens */}
               <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
               <Route exact path="//design-tokens"><DesignTokens /></Route>
@@ -422,22 +408,10 @@ function App() {
               <Route exact path="/design-tokens/deprecated"><DeprecatedTokens /></Route>
               <Route exact path="/officehours"><Officehours /></Route>
 
-              {/* Desing to dev handoff process */}
-              {/* <Route exact path="/getting-started/handoff"><DesignHandoffIndex /></Route>
-              <Route exact path="/getting-started/handoff/parent"><DesignHandoffParent /></Route>
-              <Route exact path="/getting-started/handoff/development"><DesignHandoffDev /></Route>
-              <Route exact path="/getting-started/handoff/symbolize"><DesignHandoffSym /></Route>
-              <Route exact path="/getting-started/handoff/review"><DesignHandoffReview /></Route>
-              <Route exact path="/getting-started/handoff/labels"><DesignHandoffLabels /></Route>
-              <Route exact path="/getting-started/handoff/close"><DesignHandoffClose /></Route> */}
-
               {/* Color */}
               <Route exact path="/color/overview"><ColorOverview /></Route>
               <Route exact path="/color/digital-palette"><CoreDigitalPalette /></Route>
               <Route exact path="/color/personality-palette"><PersonalityPalette /></Route>
-              {/* legacy redirects */}
-              <Route exact path="/color/core-digital-palette-usage"><CoreDigitalPalette /></Route>
-              <Route exact path="/color/personality-palette-usage"><PersonalityPalette /></Route>
 
               {/* Generator */}
               <Route exact path="/generator"><GeneratorInstall /></Route>
@@ -523,7 +497,6 @@ function App() {
               <Route exact path="/components/auro/checkbox/install"><AuroCheckboxInstall /></Route>
               <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route>
               <Route exact path="/components/auro/checkbox/releases"><AuroCheckboxReleases /></Route>
-              {/* <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route> */}
 
               {/* Auro Popover */}
               <Route exact path="/components/auro/popover"><AuroPopover /></Route>
@@ -561,7 +534,6 @@ function App() {
               <Route exact path="/components/auro/hyperlink/api"><AuroHyperlinkApi /></Route>
               <Route exact path="/components/auro/hyperlink/a11y"><AuroHyperlinkA11y /></Route>
               <Route exact path="/components/auro/hyperlink/releases"><AuroHyperlinkReleases /></Route>
-              <Route exact path="/components/orion/hyperlink"><Hyperlink /></Route>
 
               {/* toast */}
               <Route exact path="/components/orion/toast/"><Toast /></Route>
