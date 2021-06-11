@@ -17,6 +17,7 @@ export default function SideNav(props) {
     {
       header: 'Getting started',
       items: [
+        { linkTitle: "Common defs", route: "/common-defs", parent: true },
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "WC-Generator", route: "/getting-started/developers/generator/install", parent: true  },
         { linkTitle: "Developer setup", route: "/developer-setup/windows", parent: true  },

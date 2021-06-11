@@ -51,6 +51,7 @@ import GeneratorInstall from './content/dynamic/generator/install';
 import GeneratorApi from './content/dynamic/generator/api';
 import GeneratorDefineApi from './content/dynamic/generator/defineApi';
 import GeneratorUpgrade from './content/dynamic/generator/upgrade';
+import CommonDefs from './content/dynamic/generator/commonDefs';
 
 // Contributing
 import Contributing from './content/dynamic/contributing/contributing';
@@ -393,6 +394,7 @@ function App() {
               <Route exact path="/aurolabs/minors"><AuroLabsMinors /></Route>
               <Route exact path="/getting-started/developers/generator/upgrade"><GeneratorUpgrade /></Route>
               <Route exact path="/getting-started/developers/generator/define-api"><GeneratorDefineApi /></Route>
+              <Route exact path="/common-defs"><CommonDefs /></Route>
 
               {/* Generator */}
               <Route exact path="/contributing"><Contributing /></Route>
