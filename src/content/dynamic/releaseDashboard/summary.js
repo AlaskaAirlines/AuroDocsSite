@@ -16,7 +16,7 @@ class Summary extends MarkdownPageWrapper {
             description !== ""
             ? <div key={title} className="summaryWrapper">
                 <h1 className="auro_heading auro_heading--800">{title}</h1>
-                <p><b>Sprint end:</b> {this.createNewDate(dueOn)} | <b>Relesae status:</b> <auro-hyperlink href={url} target="_blank">{state.toLowerCase()}</auro-hyperlink></p>
+                <p><b>Sprint end:</b> {this.createNewDate(dueOn)} | <b>Release status:</b> <auro-hyperlink href={url} target="_blank">{state.toLowerCase()}</auro-hyperlink></p>
                 <div className="auro-markdown">
                   <ReactMarkdown
                     source={description}
