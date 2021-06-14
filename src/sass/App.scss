@@ -554,7 +554,7 @@ pre {
   overflow-y: hidden;
   display: flex;
   flex-wrap: nowrap;
-  box-shadow: inset 0 -2px 0 var(--auro-color-border-primary-on-light);
+  box-shadow: inset 0 -2px 0 var(--auro-color-brand-gray-300);
 
   @include auro_breakpoint--md {
     line-height: 3rem;
@@ -565,7 +565,7 @@ pre {
   @include auro_transition($property: border);
 
   color: var(--auro-color-text-link-on-light);
-  border-color: var(--auro-color-border-primary-on-light);
+  border-color: var(--auro-color-brand-gray-300);
   padding: var(--auro-size-md);
   border-width: 0 0 2px 0;
   border-style: solid;
