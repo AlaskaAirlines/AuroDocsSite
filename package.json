@@ -10,7 +10,7 @@
     "@alaskaairux/auro-checkbox": "^1.1.2",
     "@alaskaairux/auro-datetime": "^1.2.0",
     "@alaskaairux/auro-flight": "^1.2.0",
-    "@alaskaairux/auro-flightline": "^1.0.1",
+    "@alaskaairux/auro-flightline": "^1.1.1",
     "@alaskaairux/auro-header": "^1.5.1",
     "@alaskaairux/auro-hyperlink": "^2.3.0",
     "@alaskaairux/auro-input": "^1.3.4",
@@ -18,9 +18,9 @@
     "@alaskaairux/auro-pane": "^1.1.1",
     "@alaskaairux/auro-radio": "^1.3.4",
     "@alaskaairux/auro-swatch": "^2.1.0",
-    "@alaskaairux/auro-table": "^1.0.0",
+    "@alaskaairux/auro-table": "^1.0.1",
     "@alaskaairux/design-tokens": "^3.3.0",
-    "@alaskaairux/icons": "^4.6.0",
+    "@alaskaairux/icons": "^4.7.0",
     "@alaskaairux/orion-design-tokens": "^2.12.3",
     "@alaskaairux/orion-icons": "^2.1.5",
     "@alaskaairux/orion-web-core-style-sheets": "^2.12.2",
@@ -90,10 +90,10 @@
   "devDependencies": {
     "@alaskaairux/orion-design-tokens": "^2.12.3",
     "copyfiles": "^2.4.1",
-    "marked": "^2.0.7",
+    "marked": "^2.1.1",
     "npm-run-all": "^4.1.5",
     "prismjs": "^1.23.0",
-    "react-markdown": "4.3.1",
+    "react-markdown": "^6.0.2",
     "svg-react-loader": "^0.4.6"
   }
 }
