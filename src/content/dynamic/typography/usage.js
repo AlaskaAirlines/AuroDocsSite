@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import LinkIcons from 'components/linkIcons';
 import Highlight from 'react-highlight';
 import header from 'assets/typography/header.png';
-import allTokens from '@alaskaairux/orion-design-tokens/dist/tokens/JSObject--allTokens.js';
+import allTokens from '@alaskaairux/design-tokens/dist/tokens/JSObject--allTokens.js';
 import _getTokens from "functions/getTokens";
 import 'highlight.js/styles/github.css';
 import { Nav } from './nav.js';

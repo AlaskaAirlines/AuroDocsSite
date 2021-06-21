@@ -11,7 +11,7 @@ import './sass/App.scss';
 
 // -=-=-=-=-=-=-=-=-=-=- LEGACY =-=-=-=-=-=-=-=-=-=-=-=-=
 // Only needed for deprecated resources still in the site
-import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
+// import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
 // -=-=-=-=-=-=-=-=-=-=- LEGACY =-=-=-=-=-=-=-=-=-=-=-=-=
 
 // =-=-=-=-=-=-=-=-=- New Hotness =-=-=-=-=-=-=-=-=-=-=-=
@@ -73,7 +73,6 @@ import PersonalityPalette from './content/dynamic/color/personalityPalette';
 // typography
 import TypographyOverview from './content/dynamic/typography/overview';
 import TypographyUsage from './content/dynamic/typography/usage';
-import TypographyDeprecated from './content/dynamic/typography/deprecated';
 
 // icons
 import IconsGuidelines from './content/dynamic/icons/guidelines';
@@ -406,7 +405,6 @@ function App() {
               {/* Typography */}
               <Route exact path="/typography/overview"><TypographyOverview /></Route>
               <Route exact path="/typography/usage"><TypographyUsage /></Route>
-              <Route exact path="/typography/deprecated"><TypographyDeprecated /></Route>
 
               {/* Icons */}
               <Route exact path="/icons/guidelines"><IconsGuidelines /></Route>
