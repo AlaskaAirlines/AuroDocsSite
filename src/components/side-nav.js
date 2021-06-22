@@ -21,7 +21,8 @@ export default function SideNav(props) {
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "WC-Generator", route: "/getting-started/developers/generator/install", parent: true  },
         { linkTitle: "Developer setup", route: "/developer-setup/windows", parent: true  },
-        { linkTitle: "CSS guidelines", route: "/getting-started/developers/webcorestylesheets", parent: true },
+        { linkTitle: "WCSS", route: "/webcorestylesheets", parent: true },
+        { linkTitle: "CSS guidelines", route: "/css/conventions", parent: true },
         { linkTitle: "Auro compliance", route: "/getting-started/developers/compliance", parent: true },
         { linkTitle: "Contributing", route: "/contributing", parent: true },
       ]
@@ -62,7 +63,6 @@ export default function SideNav(props) {
         { linkTitle: "Popover", route: '/components/auro/popover', parent: true },
         { linkTitle: "Radio button", route: '/components/auro/radio', parent: true },
         { linkTitle: "Table", route: '/components/auro/table', parent: true },
-        // { linkTitle: "Toast", route: '/components/orion/toast', parent: true }
       ]
     },
     {

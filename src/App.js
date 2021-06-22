@@ -198,16 +198,19 @@ import AuroRadioApi from './content/dynamic/radio/api';
 import AuroRadioInstall from './content/dynamic/radio/install';
 import AuroRadioReleases from './content/dynamic/radio/releases';
 
+// css guides
+import WcssConventions from './content/dynamic/cssGuides/conventions';
+import WcssGuidelines from './content/dynamic/cssGuides/guidelines';
+import CustomElementCss from './content/dynamic/cssGuides/customElementCss';
+import WcssLinter from './content/dynamic/cssGuides/lint';
+
 // wcss
 import WebCoreStyleSheets from './content/dynamic/wcss/wcss';
 import WcssFeatures from './content/dynamic/wcss/features';
-import WcssConventions from './content/dynamic/wcss/conventions';
-import WcssFaq from './content/dynamic/wcss/faq';
 import WcssTests from './content/dynamic/wcss/tests';
-import WcssLinter from './content/dynamic/wcss/lint';
-import WcssGuidelines from './content/dynamic/wcss/guidelines';
-import CustomElementCss from './content/dynamic/wcss/customElementCss';
-import IdiomaticCss from './content/dynamic/wcss/idiomatic';
+
+// linked to from CSS Conventions
+import IdiomaticCss from './content/dynamic/cssGuides/idiomatic';
 
 // hyperlink
 import AuroHyperlink from './content/dynamic/hyperlink/hyperlink';
@@ -586,13 +589,12 @@ function App() {
               <Route exact path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
               <Route exact path="/getting-started/developers/webcorestylesheets"><WebCoreStyleSheets /></Route>
 
-              <Route exact path="/webcorestylesheets/conventions"><WcssConventions /></Route>
-              <Route exact path="/webcorestylesheets/faq"><WcssFaq /></Route>
+              <Route exact path="/css/conventions"><WcssConventions /></Route>
               <Route exact path="/webcorestylesheets/tests"><WcssTests /></Route>
-              <Route exact path="/webcorestylesheets/linter"><WcssLinter /></Route>
-              <Route exact path="/webcorestylesheets/guidelines"><WcssGuidelines /></Route>
-              <Route exact path="/webcorestylesheets/custom-element-css"><CustomElementCss /></Route>
-              <Route exact path="/webcorestylesheets/idiomatic-css"><IdiomaticCss /></Route>
+              <Route exact path="/css/linter"><WcssLinter /></Route>
+              <Route exact path="/css/guidelines"><WcssGuidelines /></Route>
+              <Route exact path="/css/custom-element-css"><CustomElementCss /></Route>
+              <Route exact path="/css/idiomatic-css"><IdiomaticCss /></Route>
               <Route exact path="/webcorestylesheets/features"><WcssFeatures /></Route>
 
               {/* Process */}
