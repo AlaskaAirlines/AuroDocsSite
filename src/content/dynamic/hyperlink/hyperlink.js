@@ -52,13 +52,35 @@ class Hyperlink extends Component {
           </Highlight>
         </auro-accordion>
 
+        <auro-header level="2" display="700">External links</auro-header>
+
+        <p>Hyperlinks are domain aware and return either an internal domain new-window icon versus an icon that communicates users will be taken to a new doamin. </p>
+
         <div className="demo--inline exampleWrapper">
-          <auro-hyperlink href="/" target="_blank">External href</auro-hyperlink>
+          <auro-hyperlink style={{"display": "block"}} target="_blank" href="https://www.alaskaair.com/content/mobile/mobile-apps">Example link with external target, but same domain</auro-hyperlink>
+          <auro-hyperlink style={{"display": "block"}} target="_blank" href="https://m.alaskaair.com/">Exanple link with external target, but alternate sub-domain</auro-hyperlink>
+          <auro-hyperlink style={{"display": "block"}} target="_blank" href="//www.apple.com">External target with other than Alaska domain</auro-hyperlink>
         </div>
+
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
-            {`<auro-hyperlink href="/" target="_blank">External href</auro-hyperlink>`}
+            {`<auro-hyperlink target="_blank" href="https://www.alaskaair.com/content/mobile/mobile-apps">Example link with external target, but same domain</auro-hyperlink>
+<auro-hyperlink target="_blank" href="https://m.alaskaair.com/">Exanple link with external target, but alternate sub-domain</auro-hyperlink>
+<auro-hyperlink target="_blank" href="//www.apple.com">External target with other than Alaska domain</auro-hyperlink>`}
+          </Highlight>
+        </auro-accordion>
+
+        <p>Targeted URLs with relative paths are not supported and will most likely return a 404. </p>
+
+        <div className="demo--inline exampleWrapper">
+          <auro-hyperlink target="_blank" relative href="/route-map/">Targeted relative links are NOT supported</auro-hyperlink>
+        </div>
+
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-hyperlink target="_blank" relative href="/route-map/">Targeted relative links are NOT supported</auro-hyperlink>`}
           </Highlight>
         </auro-accordion>
 
