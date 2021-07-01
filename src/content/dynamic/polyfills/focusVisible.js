@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro/master/src/FOCUS_VISIBLE.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/docs/focus-visible.md';
 
 class FocusVisible extends MarkdownPageWrapper {
 
