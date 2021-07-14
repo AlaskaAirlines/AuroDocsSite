@@ -22,6 +22,9 @@ class Repo extends Component {
                 </small>
               </div>
             </td>
+            <td>
+              <a href={`https://github.com/AlaskaAirlines/${this.props.name}/`} target="_blank"><img src={`https://img.shields.io/github/workflow/status/AlaskaAirlines/${this.props.name}/Test%20and%20publish?branch=master&style=for-the-badge`} style={{'margin-bottom': '-8px', 'max-width': 'unset'}}></img></a>
+            </td>
             <td className="">
               { this.charGenerate() }
               { // loop over releases for URL to last release
@@ -63,7 +66,7 @@ class Repo extends Component {
                 </a>
               }
             </td>
-            <td className="auro_util_nowrap">
+            {/* <td className="auro_util_nowrap">
               {
                 <a href={`https://github.com/AlaskaAirlines/${this.props.name}/pulls`} target="_blank" className="noLinkUi" rel="noopener noreferrer">
                   <div className="badge">
@@ -76,14 +79,15 @@ class Repo extends Component {
                   </div>
                 </a>
               }
-            </td>
+            </td> */}
             <td>
-              <div className="shortWrap">{this.props.description}</div>
-
+              <div className="shortWrap">
+                {this.props.description}
+              </div>
               {
                 this.props.pullRequests.totalCount > 0
                 ? <auro-accordion lowProfile noProfile justifyLeft>
-                    <strong slot="trigger">Pull request details</strong>
+                    <strong slot="trigger">Open pull request{this.props.pullRequests.totalCount > 1 ? 's' : ''}</strong>
                     <div className="statusPrLayout">
                       {this.props.pullRequests.nodes.map(({title, mergeable, changedFiles, commits, url, isDraft, reviewDecision, author, createdAt}) => (
                         <span>

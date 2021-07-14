@@ -363,9 +363,10 @@ class ComponentStatus extends Component {
           <thead>
             <tr>
               <th>Project</th>
+              <th>Build</th>
               <th>Package</th>
               <th>Issues</th>
-              <th>PRs</th>
+              {/* <th>PRs</th> */}
               <th className="short">Description</th>
             </tr>
           </thead>
@@ -464,9 +465,10 @@ class ComponentStatus extends Component {
           <thead>
             <tr>
               <th>Project</th>
+              <th>Build</th>
               <th>Package</th>
               <th>Issues</th>
-              <th>PRs</th>
+              {/* <th>PRs</th> */}
               <th className="short">Description</th>
             </tr>
           </thead>
