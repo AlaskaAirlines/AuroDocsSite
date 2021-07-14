@@ -41,7 +41,7 @@ export default function SideNav(props) {
       header: "Components",
       items: [
         { linkTitle: "Accordion", route: '/components/auro/accordion', parent: true },
-        { linkTitle: "Alerts", route: '/components/auro/alerts', parent: true },
+        { linkTitle: "Alert", route: '/components/auro/alert', parent: true },
         { linkTitle: "Avatar", route: '/components/auro/avatar', parent: true },
         { linkTitle: "Badge", route: '/components/auro/badge', parent: true },
         { linkTitle: "Banner", route: '/components/auro/banner', parent: true },

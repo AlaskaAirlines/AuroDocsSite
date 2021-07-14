@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@alaskaairux/auro-alerts": "^1.4.2",
     "@alaskaairux/auro-avatar": "^2.1.0",
     "@alaskaairux/auro-badge": "^1.2.3",
     "@alaskaairux/auro-carousel": "^1.2.5",

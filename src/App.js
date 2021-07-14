@@ -420,10 +420,10 @@ function App() {
               <Route exact path="/layout/spacing"><LayoutSpacing /></Route>
 
               {/* Auro Alerts */}
-              <Route exact path="/components/auro/alerts"><AuroAlerts /></Route>
-              <Route exact path="/components/auro/alerts/install"><AuroAlertsInstall /></Route>
-              <Route exact path="/components/auro/alerts/api"><AuroAlertsApi /></Route>
-              <Route exact path="/components/auro/alerts/releases"><AuroAlertsReleases /></Route>
+              <Route exact path="/components/auro/alert"><AuroAlerts /></Route>
+              <Route exact path="/components/auro/alert/install"><AuroAlertsInstall /></Route>
+              <Route exact path="/components/auro/alert/api"><AuroAlertsApi /></Route>
+              <Route exact path="/components/auro/alert/releases"><AuroAlertsReleases /></Route>
 
               {/* Auro Flight */}
               <Route exact path="/components/auro/flight"><AuroFlight /></Route>
