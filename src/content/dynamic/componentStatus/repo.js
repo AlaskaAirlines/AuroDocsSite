@@ -23,7 +23,7 @@ class Repo extends Component {
               </div>
             </td>
             <td>
-              <a href={`https://github.com/AlaskaAirlines/${this.props.name}/`} target="_blank"><img src={`https://img.shields.io/github/workflow/status/AlaskaAirlines/${this.props.name}/Test%20and%20publish?branch=master&style=for-the-badge`} style={{'margin-bottom': '-8px', 'max-width': 'unset'}}></img></a>
+              <a href={`https://github.com/AlaskaAirlines/${this.props.name}/`} target="_blank" rel="noopener noreferrer"><img alt={`${this.props.name} build status`}src={`https://img.shields.io/github/workflow/status/AlaskaAirlines/${this.props.name}/Test%20and%20publish?branch=master&style=for-the-badge`} style={{'margin-bottom': '-8px', 'max-width': 'unset'}}></img></a>
             </td>
             <td className="">
               { this.charGenerate() }
@@ -31,15 +31,15 @@ class Repo extends Component {
                 this.props.releases.nodes.length !== 0
                   ? this.props.releases.nodes.map(({tagName, createdAt, id, url}) => (
                       <div>
-                        <div className="badge util_pointer" id={randomNumber}>
-                          <div className="title">Release</div>
-                          <div className="data data--release">{tagName}</div>
-                        </div>
+                        <a href={url} target="_blank" rel="noopener noreferrer" style={{'text-decoration': 'none'}}>
+                          <div className="badge util_pointer" id={randomNumber}>
+                            <div className="title">Release</div>
+                            <div className="data data--release">{tagName}</div>
+                          </div>
+                        </a>
                         <auro-popover for={randomNumber} sticky>
                           <strong>Last release: </strong>
-                          <a key={id} href={url} target="_blank" className="hyperlink" rel="noopener noreferrer">
-                            <auro-datetime utc={createdAt} weekday="long"> <auro-icon category="interface" name="external-link-md" customcolor></auro-icon></auro-datetime>
-                          </a>
+                          <auro-datetime utc={createdAt} weekday="long"></auro-datetime>
                         </auro-popover>
                       </div>
                     ))
@@ -66,20 +66,6 @@ class Repo extends Component {
                 </a>
               }
             </td>
-            {/* <td className="auro_util_nowrap">
-              {
-                <a href={`https://github.com/AlaskaAirlines/${this.props.name}/pulls`} target="_blank" className="noLinkUi" rel="noopener noreferrer">
-                  <div className="badge">
-                    <div className="title">PRs</div>
-                    {
-                      this.props.pullRequests.totalCount > 0
-                      ? <div className="data data--prs">{this.props.pullRequests.totalCount}</div>
-                      : <div className="data data--null">{this.props.pullRequests.totalCount}</div>
-                    }
-                  </div>
-                </a>
-              }
-            </td> */}
             <td>
               <div className="shortWrap">
                 {this.props.description}
