@@ -15,7 +15,7 @@ class Repo extends Component {
         return (
           <tr>
             <td className="auro_util_nowrap">
-              <auro-hyperlink href={this.props.homepageUrl}>{this.props.name}</auro-hyperlink>
+              <auro-hyperlink href={this.props.homepageUrl}><strong>{this.props.name}</strong></auro-hyperlink>
               <div>
                 <small>
                   <auro-hyperlink href={`https://github.com/AlaskaAirlines/${this.props.name}/pulse`} target="_blank">Insights</auro-hyperlink>
@@ -23,15 +23,15 @@ class Repo extends Component {
               </div>
             </td>
             <td>
-              <a href={`https://github.com/AlaskaAirlines/${this.props.name}/`} target="_blank" rel="noopener noreferrer"><img alt={`${this.props.name} build status`}src={`https://img.shields.io/github/workflow/status/AlaskaAirlines/${this.props.name}/Test%20and%20publish?branch=master&style=for-the-badge`} style={{'margin-bottom': '-8px', 'max-width': 'unset'}}></img></a>
+              <a href={`https://github.com/AlaskaAirlines/${this.props.name}/`} target="_blank" rel="noopener noreferrer"><img alt={`${this.props.name} build status`}src={`https://img.shields.io/github/workflow/status/AlaskaAirlines/${this.props.name}/Test%20and%20publish?branch=master&style=for-the-badge`} style={{'marginBottom': '-8px', 'maxWidth': 'unset'}}></img></a>
             </td>
-            <td className="">
+            <td>
               { this.charGenerate() }
               { // loop over releases for URL to last release
                 this.props.releases.nodes.length !== 0
                   ? this.props.releases.nodes.map(({tagName, createdAt, id, url}) => (
-                      <div>
-                        <a href={url} target="_blank" rel="noopener noreferrer" style={{'text-decoration': 'none'}}>
+                      <div key={id}>
+                        <a href={url} target="_blank" rel="noopener noreferrer" style={{'textDecoration': 'none'}}>
                           <div className="badge util_pointer" id={randomNumber}>
                             <div className="title">Release</div>
                             <div className="data data--release">{tagName}</div>
@@ -192,10 +192,10 @@ class Repo extends Component {
           </tr>
         )
       } else {
-        return ('')
+        return (null)
       }
     } else {
-      return ('')
+      return (null)
     }
   }
 }

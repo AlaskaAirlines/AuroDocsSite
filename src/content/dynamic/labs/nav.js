@@ -9,6 +9,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/aurolabs`} activeClassName="is-active">AuroLabs: BETA</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/aurolabs/minors`} activeClassName="is-active">The Minors</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/aurolabs/majors`} activeClassName="is-active">The Majors</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/component-status`} activeClassName="is-active">Status</NavLink>
       </div>
     )
   }

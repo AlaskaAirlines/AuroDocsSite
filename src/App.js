@@ -34,7 +34,6 @@ import PlannedWork from './content/dynamic/componentStatus/plannedWork';
 import PrioritizedWork from './content/dynamic/componentStatus/prioritizedWork';
 import HelpWanted from './content/dynamic/componentStatus/helpWanted';
 import ComponentStatus from './content/dynamic/componentStatus/statusView';
-import ComponentAudit from './content/dynamic/componentAudit/auditView';
 
 // Auro Labs
 import AuroLabs from './content/dynamic/labs/aurolabs';
@@ -124,7 +123,7 @@ import AuroIconInstall from './content/dynamic/icon/install';
 import AuroIconReleases from './content/dynamic/icon/releases';
 import AuroAlaska from './content/dynamic/icon/alaska';
 
-// Alerts
+// Alert
 import AuroAlerts from './content/dynamic/alerts/component';
 import AuroAlertsApi from './content/dynamic/alerts/api';
 import AuroAlertsInstall from './content/dynamic/alerts/install';
@@ -343,7 +342,6 @@ function App() {
               <Route exact path="/help-wanted"><HelpWanted /></Route>
               <Route exact path="/component-status"><ComponentStatus /></Route>
               <Route exact path="/status"><ComponentStatus /></Route>
-              <Route exact path="/audit"><ComponentAudit /></Route>
               <Route exact path="/ado-use"><UseDashboard /></Route>
 
               {/* Developer setup */}
