@@ -4,15 +4,14 @@ import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
 import Help from './issue--helpWanted';
 
-
-const allWork = gql`
+const typeBug = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
       repositories(first: 50) {
         nodes {
           name
-          issues(first: 50, orderBy: {field: COMMENTS, direction: DESC}, states: OPEN) {
+          issues(first: 50, orderBy: {field: COMMENTS, direction: DESC}, states: OPEN, filterBy: {labels: "Type: Bug"}) {
             nodes {
               title
               body
@@ -59,19 +58,18 @@ const allWork = gql`
 }
 `
 
-class PlannedWork extends Component {
+class Bugs extends Component {
   render() {
     return (
       <section>
 
         <Nav />
 
-        <h1 className="auro_heading auro_heading--display">All open issues</h1>
-        <p>The following is a list of all open issues.</p>
-
-        <Query query={allWork}>
+        <h1 className="auro_heading auro_heading--display">Bugs</h1>
+        <p>With all code, there are issues to be addressed. The following are reported bugs that if you can help with, we would love the support! </p>
+        <Query query={typeBug}>
           {({ loading, error, data }) => {
-            if (loading) return <auro-loader laser onlight></auro-loader>;
+            if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (
@@ -86,4 +84,4 @@ class PlannedWork extends Component {
   }
 }
 
-export default PlannedWork;
+export default Bugs;

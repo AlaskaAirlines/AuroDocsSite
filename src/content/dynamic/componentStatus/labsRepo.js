@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 
-let randomNumber = ''
-
 class LabsRepo extends Component {
-
-  charGenerate() {
-    const chars = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-    randomNumber = [...Array(10)].map(i=>chars[Math.random()*chars.length|0]).join``
-  }
 
   render() {
     return (
@@ -22,7 +15,7 @@ class LabsRepo extends Component {
               {
                 this.props.repositoryTopics.nodes.map(({topic}) => (
                   topic.name === 'auro'
-                    ? 'auro'
+                    ? topic.name
                     : ''
                 ))
               }
@@ -36,21 +29,21 @@ class LabsRepo extends Component {
               {
                 this.props.repositoryTopics.nodes.map(({topic}) => (
                   topic.name === 'internal'
-                    ? ', internal use only'
+                    ? `, ${topic.name}`
                     : ''
                 ))
               }
               {
                 this.props.repositoryTopics.nodes.map(({topic}) => (
                   topic.name === 'experimental'
-                    ? ', experimental '
+                    ? `, ${topic.name}`
                     : ''
                 ))
               }
               {
                 this.props.repositoryTopics.nodes.map(({topic}) => (
                   topic.name === 'pre-release'
-                    ? ', pre-released version'
+                    ? `, ${topic.name}`
                     : ''
                 ))
               }

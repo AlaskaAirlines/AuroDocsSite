@@ -58,60 +58,6 @@ const helpWanted = gql`
 }
 `
 
-const typeBug = gql`
-{
-  organization(login: "AlaskaAirlines") {
-    team(slug: "auro-team") {
-      repositories(first: 50) {
-        nodes {
-          name
-          issues(first: 50, orderBy: {field: COMMENTS, direction: DESC}, states: OPEN, filterBy: {labels: "Type: Bug"}) {
-            nodes {
-              title
-              body
-              url
-              number
-              createdAt
-              labels(last: 10, orderBy: {field: NAME, direction: ASC}) {
-                nodes {
-                  name
-                  color
-                  description
-                }
-              }
-              comments(last: 1) {
-                nodes {
-                  body
-                  createdAt
-                  author {
-                    avatarUrl(size: 50)
-                    login
-                  }
-                }
-              }
-              projectCards {
-                nodes {
-                  column {
-                    name
-                  }
-                }
-              }
-              assignees(last: 5) {
-                nodes {
-                  avatarUrl(size: 50)
-                  name
-                  id
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-`
-
 class HelpWanted extends Component {
   render() {
     return (
@@ -125,21 +71,6 @@ class HelpWanted extends Component {
         <Query query={helpWanted}>
           {({ loading, error, data }) => {
             if (loading) return <auro-loader laser onlight></auro-loader>;
-            if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
-
-            return data.organization.team.repositories.nodes.map(({ name, issues }) => (
-              issues.nodes.length > 0
-                ? <Help key={name} name={name} issues={issues.nodes} />
-                : ''
-            ));
-          }}
-        </Query>
-
-        <h2 className="auro_heading auro_heading--700">Bugs</h2>
-        <p>With all code, there are issues to be addressed. The following are reported bugs that if you can help with, we would love the support! </p>
-        <Query query={typeBug}>
-          {({ loading, error, data }) => {
-            if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (

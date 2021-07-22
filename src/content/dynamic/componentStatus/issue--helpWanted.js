@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import Readme from '-!svg-react-loader!../../../assets/readme.svg';
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import Github from '-!svg-react-loader!../../../assets/github.svg';
 
 class HelpWanted extends Component {
   getContrastYIQ(hexcolor) {
@@ -17,18 +13,14 @@ class HelpWanted extends Component {
 
   toggleDialog = (elName) => {
     let dialog = document.querySelector(elName);
-    const html = document.querySelector('html');
 
-    html.style.overflow = 'hidden';
     dialog.removeAttribute("open");
     dialog.setAttribute("open", true);
   }
 
   toggleDialogClose = (elName) => {
     let dialog = document.querySelector(elName);
-    const html = document.querySelector('html');
 
-    html.style.overflow = '';
     dialog.removeAttribute("open");
   }
 
@@ -37,8 +29,7 @@ class HelpWanted extends Component {
       <table key={this.props.name} className="auro_table epicIssues">
         <thead>
           <tr>
-            <th className="auro_table--spread">Issues for: {this.props.name}</th>
-            <th className="auro_table--spread"></th>
+            <th className="auro_table--spread"><auro-header level="2" display="600">{this.props.name}</auro-header></th>
             <th className="auro_table--spread">Latest Comments</th>
           </tr>
         </thead>
@@ -47,7 +38,20 @@ class HelpWanted extends Component {
             <tr key={title}>
               <td className="auro_table--issue">
                 <div>
-                  <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>(<small>#{number}</small>)
+                  <button className="imgIcon" onClick={() => this.toggleDialog(`#dialog-${number}`)} aria-label="Go to Github Site">
+                    {title} (<small>#{number}</small>)
+                  </button>
+                  <auro-drawer id={`dialog-${number}`} md>
+                    <span slot="header">{title}</span>
+                    <span slot="content">
+                      <div className="auro-markdown util_wrap">
+                        <ReactMarkdown source={body} />
+                    </div>
+                    </span>
+                    <span slot="footer">
+                      <auro-hyperlink cta secondary href={url} target="_blank">See: {title}</auro-hyperlink>
+                    </span>
+                  </auro-drawer>
                 </div>
                 <div className="labelWrapper util_stackPaddingMd--top">
                   {labels.nodes.map(({name, color, description}) => (
@@ -61,31 +65,9 @@ class HelpWanted extends Component {
                   <small>Assigned: </small>{assignees.nodes.map(({avatarUrl, name, id}) => (
                     assignees.nodes.length > 0
                     ? <img key={id} src={avatarUrl} className="githubAvatar" alt={name} title={name} />
-                    : ''
+                    : 'unassigned'
                   ))}
                 </div>
-              </td>
-              <td className="auro_table--labels">
-                <button className="imgIcon" onClick={() => this.toggleDialog(`#dialog-${number}`)} aria-label="Go to Github Site">
-                  <Readme role="img" aria-hidden="false" />
-                </button>
-                <div className="imgIcon">
-                  <a href={url} target="_blank" rel="noopener noreferrer" aria-label="Go to Github Site">
-                    <Github role="img" aria-hidden="false" />
-                  </a>
-                </div>
-
-                <auro-dialog id={`dialog-${number}`} md>
-                  <span slot="header">{title}</span>
-                  <span slot="content">
-                    <div className="auro-markdown util_wrap">
-                      <ReactMarkdown source={body} />
-                  </div>
-                  </span>
-                  <span slot="footer">
-                    <auro-hyperlink cta secondary href={url} target="_blank">See: {title}</auro-hyperlink>
-                  </span>
-                </auro-dialog>
               </td>
               <td className="auro_table--notes">
                 {comments.nodes.map(({body, createdAt}) => (

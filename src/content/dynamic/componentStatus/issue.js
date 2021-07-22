@@ -16,7 +16,7 @@ class Issue extends Component {
       <table key={this.props.name} className="auro_table epicIssues">
         <thead>
           <tr>
-            <th className="auro_util_nowrap">{this.props.name}</th>
+            <th className="auro_util_nowrap"><auro-header level="2" display="600">{this.props.name}</auro-header></th>
             <th>Labels</th>
             <th className="auro_table--notes">Comments</th>
           </tr>

@@ -54,13 +54,9 @@ class Repo extends Component {
                 <a href={`https://github.com/AlaskaAirlines/${this.props.name}/issues`} target="_blank" className="noLinkUi" rel="noopener noreferrer">
                   <div className="badge">
                     <div className="title">Issues</div>
-                    {this.props.negativeCount
-                      ? this.props.issues.totalCount - 1 > 0
-                        ? <div className="data data--issues">{this.props.issues.totalCount - 1}</div>
-                        : <div className="data data--null">{this.props.issues.totalCount - 1}</div>
-                      : this.props.issues.totalCount > 0
-                        ? <div className="data data--issues">{this.props.issues.totalCount}</div>
-                        : <div className="data data--null">{this.props.issues.totalCount}</div>
+                    {this.props.issues.totalCount > 0
+                      ? <div className="data data--issues">{this.props.issues.totalCount}</div>
+                      : <div className="data data--null">{this.props.issues.totalCount}</div>
                     }
                   </div>
                 </a>

@@ -2,24 +2,17 @@
 
 button.imgIcon {
   all: unset;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: var(--auro-color-ui-default-on-light);
+  text-decoration: underline;
 
   &:hover {
-    background-color: var(--auro-color-brand-atlas-400);
     cursor: pointer;
+    text-decoration: none;
   }
 
   &.focus-visible {
     background-color: var(--auro-color-brand-atlas-400);
-
-    svg {
-      fill: var(--auro-color-base-white);
-    }
+    color: var(--auro-color-text-primary-on-dark);
   }
 }
 

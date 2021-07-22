@@ -33,6 +33,7 @@ import DocSiteStrategy from './content/dynamic/epics/projectDocSite';
 import PlannedWork from './content/dynamic/componentStatus/plannedWork';
 import PrioritizedWork from './content/dynamic/componentStatus/prioritizedWork';
 import HelpWanted from './content/dynamic/componentStatus/helpWanted';
+import Bugs from './content/dynamic/componentStatus/bugs';
 import ComponentStatus from './content/dynamic/componentStatus/statusView';
 
 // Auro Labs
@@ -340,6 +341,7 @@ function App() {
               <Route exact path="/wip"><PlannedWork /></Route>
               <Route exact path="/prioritized"><PrioritizedWork /></Route>
               <Route exact path="/help-wanted"><HelpWanted /></Route>
+              <Route exact path="/bugs"><Bugs /></Route>
               <Route exact path="/component-status"><ComponentStatus /></Route>
               <Route exact path="/status"><ComponentStatus /></Route>
               <Route exact path="/ado-use"><UseDashboard /></Route>
