@@ -165,13 +165,13 @@ class Hyperlink extends Component {
 
         <auro-header level="2" display="700">Call to action (cta) buttons</auro-header>
         <div className="demo--inline exampleWrapper">
-          <auro-hyperlink cta href="#">Default</auro-hyperlink> <auro-hyperlink cta href="" target="_blank" >Default</auro-hyperlink>
+          <auro-hyperlink cta href="#">Default</auro-hyperlink> <auro-hyperlink cta href="#" target="_blank" >Default</auro-hyperlink>
         </div>
         <auro-accordion lowProfile justifyRight class="spaceAfterCode">
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
             {`<auro-hyperlink cta href="#">Default</auro-hyperlink>
-<auro-hyperlink cta href="" target="_blank" >Default</auro-hyperlink>`}
+<auro-hyperlink cta href="#" target="_blank" >Default</auro-hyperlink>`}
           </Highlight>
         </auro-accordion>
 
