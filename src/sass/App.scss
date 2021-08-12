@@ -85,23 +85,21 @@ ul {
 // -=-=-=-=-=-=-=-=-= body wrapper -=-=-=-=-=-=-=-=-=-=-=
 footer,
 .wrapper > section {
-  margin: var(--auro-size-md);
+  margin: var(--auro-size-xl);
   padding-top: var(--auro-size-md);
 
   @include auro_breakpoint--sm {
-    padding-top: var(--auro-size-md);
-    max-width: 40rem;
-    margin: var(--auro-size-md) auto 0 270px;
-    padding-right: 1.5rem;
+    max-width: 62%;
+    margin: var(--auro-size-md) auto 0 250px;
   }
 
   @include auro_breakpoint--md {
-    max-width: 60%;
-    margin: var(--auro-size-md) auto 0 30%;
-    padding-right: unset;
+    max-width: 70%;
+    margin: var(--auro-size-md) auto 0 290px;
   }
 
-  @include auro_breakpoint($min: 1700px) {
+  @include auro_breakpoint--lg {
+    max-width: 64rem;
     margin: var(--auro-size-md) auto 0 25%;
   }
 }
@@ -274,14 +272,6 @@ code:not(.html):not(.css):not(.js) {
   color: var(--auro-color-brand-flamingo-500);
 }
 
-blockquote {
-  padding: var(--auro-size-xs) var(--auro-size-sm);
-  border-left: 2px solid var(--auro-color-base-neutral-500);
-  color: var(--auro-color-text-secondary-on-light);
-  margin: var(--auro-size-lg) var(--auro-size-xxs);
-  font-weight: 200;
-}
-
 .indention {
   padding-left: var(--auro-size-md);
   border-left: 1px solid var(--auro-color-base-neutral-500);
@@ -321,24 +311,9 @@ pre {
   background-color: #f8f8f8 !important;
 }
 
-.exampleWrapper {
-  $stripe: #f3f3f3;
-  $background: var(--auro-color-base-white);
-
-  background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
-  overflow: auto;
-}
-
 .spaceAfterCode {
   display: block;
   margin-bottom: 1rem;
-}
-
-.exampleWrapper--ondark {
-  $stripe: var(--auro-color-background-darkest);
-  $background: var(--auro-color-background-darker);
-
-  background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
 }
 
 .exampleWrapper--deprecated {

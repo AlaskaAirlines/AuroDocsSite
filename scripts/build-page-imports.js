@@ -80,7 +80,7 @@ export class Tests extends ExternalMarkdownWrapper {
   module = "@aurodesignsystem/wc-generator"
   githubURL = "https://github.com/AlaskaAirlines/wc-generator/"
   codeURL = "https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator"
-  readme = "docs/tests.md"
+  readme = "docs/test-runner.md"
 }
 export class Compliance extends ExternalMarkdownWrapper {
   module = "@aurodesignsystem/wc-generator"

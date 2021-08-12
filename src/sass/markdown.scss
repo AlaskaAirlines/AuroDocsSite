@@ -1,3 +1,12 @@
+// Copyright (c) Alaska Air. All right reserved. Licensed under the Apache-2.0 license
+// See LICENSE in the project root for license information.
+
+// Styles in this document are standardized are NOT to be edited.
+// All styles for the custom element are located in the ./src directory.
+
+// ----------------------- DO NOT EDIT -----------------------------
+
+// Import Auro tokens
 @import '~@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
 @import "~@alaskaairux/webcorestylesheets/dist/breakpoints";
 
@@ -11,9 +20,13 @@ $paragraph: true;
 @import "~@alaskaairux/webcorestylesheets/dist/utilityClasses/fontStyles";
 @import "~@alaskaairux/webcorestylesheets/dist/headings";
 @import "~@alaskaairux/webcorestylesheets/dist/utilityMixins/layoutPropertiesGenerator";
+@import "~@alaskaairux/webcorestylesheets/dist/componentSupport/table";
 $prefix: null;
 
+@import url('https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/elementDemoStyles.css');
+
 .auro-markdown {
+
   &.epicWrapper--data,
   &.releaseWrapper--data {
     h1 {
@@ -51,171 +64,9 @@ $prefix: null;
       @extend .auro_heading--400;
     }
   }
-
-  footer img {
-    width: 50px;
-    min-height: 100%;
-  }
-
-  blockquote {
-    margin-left: 0;
-    border-left: 1px solid var(--auro-color-border-active-on-light);
-    padding: var(--auro-size-xs);
-    padding-left: var(--auro-size-xl);
-    color: var(--auro-color-text-secondary-on-light);
-    font-weight: 200;
-    margin-top: var(--auro-size-lg);
-    margin-bottom: var(--auro-size-lg);
-
-    p {
-      line-height: 2;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    & + p {
-      margin-bottom: var(--auro-size-xl);
-    }
-  }
-
-  strong {
-    @extend .auro_heading--300;
-  }
-
-  img {
-    &[alt="Orion Design System Logo"] {
-      width: 125px;
-      margin: 0 0 10px 10px;
-    }
-  }
-
-  h1,
-  h2,
-  h3 {
-    @extend .auro_heading;
-  }
-
-  h1 {
-    @extend .auro_heading--display;
-  }
-
-  h2 {
-    @extend .auro_heading--700;
-  }
-
-  h3 {
-    @extend .auro_heading--600;
-  }
-
-  h4 {
-    @extend .auro_heading--500;
-  }
-
-  a {
-    @extend .auro_hyperlink;
-
-    &.focus-visible {
-      @include auro_focus-hyperlink(sass);
-    }
-  }
-
-  p {
-    @extend .auro_p;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  // !important because that libraries that inline CSS SUCK!
-  pre  {
-    overflow: auto;
-    background: var(--auro-color-base-gray-100) !important;
-    border: unset !important;
-    margin-bottom: var(--auro-size-xxl);
-    padding-left: var(--auro-size-sm) !important;
-    padding-top: var(--auro-size-md) !important;
-    padding-bottom: var(--auro-size-md) !important;
-
-    code {
-      font-size: .9rem;
-    }
-  }
-
-  table {
-    display: block;
-    border-collapse: collapse;
-    overflow: scroll;
-    width: auto;
-    border-spacing: var(--auro-size-sm);
-    margin-bottom: var(--auro-size-xl);
-    font-weight: var(--auro-text-heading-display-weight);
-
-    tr {
-      &:nth-child(even) {
-        background-color: var(--auro-color-base-gray-100);
-      }
-    }
-
-    th {
-      text-align: left;
-      font-weight: var(--auro-text-heading-default-weight);
-    }
-
-    img {
-     max-width: unset;
-    }
-
-    @include auro_breakpoint--sm {
-      width: 100%;
-      display: table;
-    }
-  }
-
-  thead {
-    border-bottom: 1px solid var(--auro-color-base-gray-200);
-    border-collapse: collapse;
-  }
-
-  th, td {
-    padding: var(--auro-size-md);
-  }
-
-  footer {
-    font-size: var(--auro-text-body-size-xs);
-    color: var(--auro-color-base-gray-100);
-  }
 }
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-:not(pre) > code[class*="language-"], pre[class*="language-"] {
-  background: #f8f8f8;
-}
-
-auro-accordion {
-  pre[class*="language-"] {
-    background: none !important;
-    margin-top: 0 !important;
-    margin-bottom: 1rem !important;
-    padding: 0 !important;
-  }
-}
-
-auro-accordion + .exampleWrapper,
-auro-accordion + p {
-  margin-top: 2rem !important;
-}
-
-code[class*="language-"], pre[class*="language-"] {
-  font-family: monospace;
-}
-
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-// site specifics
 
 // home page
 
