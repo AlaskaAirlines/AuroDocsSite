@@ -150,6 +150,12 @@ import AuroLockupApi from './content/dynamic/lockup/api';
 import AuroLockupInstall from './content/dynamic/lockup/install';
 import AuroLockupReleases from './content/dynamic/lockup/releases';
 
+// skeleton
+import AuroSkeleton from './content/dynamic/skeleton/component';
+import AuroSkeletonApi from './content/dynamic/skeleton/api';
+import AuroSkeletonInstall from './content/dynamic/skeleton/install';
+import AuroSkeletonReleases from './content/dynamic/skeleton/releases';
+
 // button
 import AuroButton from './content/dynamic/button/component';
 import AuroButtonApi from './content/dynamic/button/api';
@@ -371,6 +377,7 @@ function App() {
               <Route exact path="/pane/"><AuroPane /></Route>
               <Route exact path="/popover"><AuroPopover /></Route>
               <Route exact path="/radio"><AuroRadio /></Route>
+              <Route exact path="/skeleton"><AuroSkeleton /></Route>
               <Route exact path="/table"><AuroTable /></Route>
               <Route exact path="/toast/"><Toast /></Route>
 
@@ -444,6 +451,12 @@ function App() {
               <Route exact path="/components/auro/lockup/install"><AuroLockupInstall /></Route>
               <Route exact path="/components/auro/lockup/api"><AuroLockupApi /></Route>
               <Route exact path="/components/auro/lockup/releases"><AuroLockupReleases /></Route>
+
+              {/* Auro Skeleton */}
+              <Route exact path="/components/auro/skeleton"><AuroSkeleton /></Route>
+              <Route exact path="/components/auro/skeleton/install"><AuroSkeletonInstall /></Route>
+              <Route exact path="/components/auro/skeleton/api"><AuroSkeletonApi /></Route>
+              <Route exact path="/components/auro/skeleton/releases"><AuroSkeletonReleases /></Route>
 
               {/* Auro Button */}
               <Route exact path="/components/auro/button"><AuroButton /></Route>
