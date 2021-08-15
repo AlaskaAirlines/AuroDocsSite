@@ -73,10 +73,14 @@ $prefix: null;
 .home--quotes {
   flex-wrap: wrap;
 
+  blockquote {
+    margin-right: 0;
+  }
+
   div {
-    @include auro_breakpoint--md {
+    @include auro_breakpoint--lg {
       max-width: 50%;
-      flex-basis: 50%;
+      flex-basis: 48%;
       padding-left: 0;
 
       &:nth-child(even) {
