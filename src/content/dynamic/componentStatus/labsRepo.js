@@ -12,6 +12,7 @@ class LabsRepo extends Component {
               <small><auro-hyperlink target="_blank" href={`https://github.com/AlaskaAirlines/${this.props.name}/issues`}>Issues</auro-hyperlink></small>
             </td>
             <td>
+              {console.log(this.props.repositoryTopics.nodes)}
               {
                 this.props.repositoryTopics.nodes.map(({topic}) => (
                   topic.name === 'auro'
@@ -43,6 +44,13 @@ class LabsRepo extends Component {
               {
                 this.props.repositoryTopics.nodes.map(({topic}) => (
                   topic.name === 'pre-release'
+                    ? `, ${topic.name}`
+                    : ''
+                ))
+              }
+              {
+                this.props.repositoryTopics.nodes.map(({topic}) => (
+                  topic.name === 'candidate'
                     ? `, ${topic.name}`
                     : ''
                 ))
