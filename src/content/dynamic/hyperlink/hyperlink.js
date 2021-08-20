@@ -58,7 +58,7 @@ class Hyperlink extends Component {
 
         <div className="demo--inline exampleWrapper">
           <auro-hyperlink style={{"display": "block"}} target="_blank" href="https://www.alaskaair.com/content/mobile/mobile-apps">Example link with external target, but same domain</auro-hyperlink>
-          <auro-hyperlink style={{"display": "block"}} target="_blank" href="https://m.alaskaair.com/">Exanple link with external target, but alternate sub-domain</auro-hyperlink>
+          <auro-hyperlink style={{"display": "block"}} target="_blank" href="https://m.alaskaair.com/">Example link with external target, but alternate sub-domain</auro-hyperlink>
           <auro-hyperlink style={{"display": "block"}} target="_blank" href="//www.apple.com">External target with other than Alaska domain</auro-hyperlink>
         </div>
 
@@ -116,8 +116,7 @@ class Hyperlink extends Component {
         <p>Defining the absolute URL will render the same results, regardless of protocol.</p>
 
         <div className="demo--inline exampleWrapper">
-          <auro-hyperlink href="http://www.alaskaair.com/route-map">http absolute URL to route map</auro-hyperlink> or
-          <auro-hyperlink href="//www.alaskaair.com/route-map">no hypertext transfer protocol absolute URL to route map</auro-hyperlink>
+          <auro-hyperlink href="http://www.alaskaair.com/route-map">http absolute URL to route map</auro-hyperlink> or <auro-hyperlink href="//www.alaskaair.com/route-map"> no hypertext transfer protocol absolute URL to route map</auro-hyperlink>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>

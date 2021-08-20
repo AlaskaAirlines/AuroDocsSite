@@ -27,7 +27,7 @@ Please see the items below for commonly asked questions regarding development an
       <p>An important part and core element of everything from CSS to web components are <auro-hyperlink href="getting-started/developers/design-tokens" relative>design tokens</auro-hyperlink>. Design tokens are common variables for all of the core atomic UI properties. Fonts, colors, sizes, breakpoints, etc ... if it's a common value to the UI, it's a design token.</p>
       <p>Next it's suggested to get familiar with <auro-hyperlink href="/webcorestylesheets" relative>Web Core Style Sheets</auro-hyperlink>, or WCSS for short. WCSS is a foundational CSS library to assist in the quick and easy setup of Auro styles. Also, don't forget to review the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/" target="_blank">WCSS API</auro-hyperlink> for an inside look at this supporting library.</p>
       <p>No UI would be complete without the use of <auro-hyperlink href="/icons/overview" relative>icons</auro-hyperlink>. Auro has a vast array of predefined SVG icons to be used. Please see the documentation for all the ways you can make use of this library, or make use of Auro's easy to use  <auro-hyperlink href="/components/auro/icon" relative>icon custom element</auro-hyperlink>.</p>
-      <p>Last, please see the list of available pre-developed <auro-hyperlink href="/component-status" relative>HTML native custom elements</auro-hyperlink>. These components can be used in virtually any development stack. Be sure you checkout the <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink>, <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink> and <auro-hyperlink href="/javascriptSetup" relative>standard JS</auro-hyperlink>example projects.</p>
+      <p>Last, please see the list of available pre-developed <auro-hyperlink href="/component-status" relative>HTML native custom elements</auro-hyperlink>. These components can be used in virtually any development stack. Be sure you checkout the <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink>, <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink> and <auro-hyperlink href="/javascriptSetup" relative>standard JS</auro-hyperlink> example projects.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="getStarted" chromeless noProfile>
@@ -49,7 +49,7 @@ Please see the items below for commonly asked questions regarding development an
     <div class="lightText">
       <p>The core parts of Auro, design tokens, WCSS and Icons are all IE11 compatible. Also be sure to review Auro's official <auro-hyperlink href="/support/browsersSupport" relative>browser support policy</auro-hyperlink>.</p>
       <p>For design tokens, it is best to use either the Sass versions of the tokens or look to add <auro-hyperlink href="https://github.com/postcss/postcss-custom-properties" target="_blank">postCSS Custom Properties</auro-hyperlink>.</p>
-      <p>In order for IE11 to support web components, we rely on the <auro-hyperlink href="/support/polyfills/webcomponentsjs" relative>Web Components Polyfills</auro-hyperlink>project. For specific framework examples, please be sure you checkout the <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink>, <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink> and <auro-hyperlink href="/javascriptSetup" relative>standard JS</auro-hyperlink>example projects.</p>
+      <p>In order for IE11 to support web components, we rely on the <auro-hyperlink href="/support/polyfills/webcomponentsjs" relative>Web Components Polyfills</auro-hyperlink>project. For specific framework examples, please be sure you checkout the <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink>, <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink> and <auro-hyperlink href="/javascriptSetup" relative>standard JS</auro-hyperlink> example projects.</p>
       <p>On August 17, 2020, Microsoft published a timeline indicating that Microsoft Teams will stop supporting Internet Explorer 11 on November 30, 2020, whereas Microsoft 365 products will end Internet Explorer 11 support on August 17, 2021. It is our position that Auro will no longer support IE11 as of Q3, 2021.</p>
       <p>Alternative bundled versions are available for most custom elements, please see <strong>Install bundled assets from CDN</strong> in each project's README for more information.</p>
     </div>
@@ -69,11 +69,11 @@ Please see the items below for commonly asked questions regarding development an
     </div>
   </auro-accordion>
   <auro-accordion id="generator" chromeless noProfile>
-    <span slot="trigger">Q: What is AuroLabs?</span>
+    <span slot="trigger">Q: What is auroLabs?</span>
     <div class="lightText">
-      <p><auro-hyperlink href="/aurolabs" relative>AuroLabs</auro-hyperlink> is a process to enable development of new ideas without all the pre-process that is typically required to add a new component to the design system. </p>
-      <p>That being said, this does not ignore the process. It simply reverses priorities. AuroLabs allows engineers to build and deliver an idea allowing for a iterative refinement process post it's first release. </p>
-      <p>Make sure to refer to the <auro-hyperlink href="/aurolabs" relative>AuroLabs</auro-hyperlink> page for all information regarding this process.</p>
+      <p><auro-hyperlink href="/aurolabs" relative>auroLabs</auro-hyperlink> is a process to enable development of new ideas without all the pre-process that is typically required to add a new component to the design system. </p>
+      <p>That being said, this does not ignore the process. It simply reverses priorities. auroLabs allows engineers to build and deliver an idea allowing for a iterative refinement process post it's first release. </p>
+      <p>Make sure to refer to the <auro-hyperlink href="/aurolabs" relative>auroLabs</auro-hyperlink> page for all information regarding this process.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="release" chromeless noProfile>
@@ -110,7 +110,7 @@ Please see the items below for commonly asked questions regarding development an
   <auro-accordion id="newWork" chromeless noProfile>
     <span slot="trigger">Q: How do teams bring work to Auro?</span>
     <div class="lightText">
-      <p>New work comes from everywhere. Bringing new ideas to Auro is as simple as submitting a new issue or scheduling a meeting with the Auro team. Please see the <auro-hyperlink relative href="https://auro.alaskaair.com/aurolabs">AuroLabs</auro-hyperlink> page for more details about this specific process.</p>
+      <p>New work comes from everywhere. Bringing new ideas to Auro is as simple as submitting a new issue or scheduling a meeting with the Auro team. Please see the <auro-hyperlink relative href="https://auro.alaskaair.com/aurolabs">auroLabs</auro-hyperlink> page for more details about this specific process.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
@@ -118,7 +118,7 @@ Please see the items below for commonly asked questions regarding development an
     <div class="lightText">
       <p>What is a new variant when it comes to Auro custom elements? It's basically the same as with any variant in a design, but in this context it requires new feature support.</p>
       <p>How a variant is discovered will vary. The discovery consists of reviewing an existing Auro custom element, presented in this doc site or the UI kit design documentation, and the new variant is the difference between what is presented and what is wanted.</p>
-      <p>To request that this new feature be developed, the best way forward is to submit an issue to the Auro team via <auro-hyperlink href="https://auro.alaskaair.com/component-status" relative>the Auro status page.</auro-hyperlink>Click on the <b>ISSUES</b> button associated to the custom element you want to update, this will take you to the issues page of the repository. Click the <b>NEW ISSUE</b> and choose <b>Feature request</b>.</p>
+      <p>To request that this new feature be developed, the best way forward is to submit an issue to the Auro team via <auro-hyperlink href="https://auro.alaskaair.com/component-status" relative>the Auro status page.</auro-hyperlink> Click on the <b>ISSUES</b> button associated to the custom element you want to update, this will take you to the issues page of the repository. Click the <b>NEW ISSUE</b> and choose <b>Feature request</b>.</p>
       <p>In the feature request, please be sure to include all the information you have to describe the new feature. Attach a design proposal if that is helpful. Please indicate how you would like this feature to work. And include a description as to why this variant is needed. That is always helpful. </p>
       <p>Please, do not submit a pull request without first submitting an issue. Without submitting an issue first, we would hate for anyone on your team to lose time because the variant was decided not to be included into the custom element.</p>
     </div>
