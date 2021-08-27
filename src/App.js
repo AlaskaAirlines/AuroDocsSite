@@ -49,6 +49,7 @@ import DevSetupLinux from './content/dynamic/devSetup/devSetupLinux';
 // WC-Generator
 import GeneratorInstall from './content/dynamic/generator/install';
 import GeneratorApi from './content/dynamic/generator/api';
+import GeneratorBestPractice from './content/dynamic/generator/bestPractice';
 import GeneratorDefineApi from './content/dynamic/generator/defineApi';
 import GeneratorUpgrade from './content/dynamic/generator/upgrade';
 import CommonDefs from './content/dynamic/generator/commonDefs';
@@ -398,12 +399,20 @@ function App() {
 
               {/* Generator */}
               <Route exact path="/generator"><GeneratorInstall /></Route>
+              <Route exact path="/generator/install"><GeneratorInstall /></Route>
+              <Route exact path="/generator/api"><GeneratorApi /></Route>
+              <Route exact path="/generator/best-practice"><GeneratorBestPractice /></Route>
+              <Route exact path="/aurolabs/minors"><AuroLabsMinors /></Route>
+              <Route exact path="/generator/upgrade"><GeneratorUpgrade /></Route>
+              <Route exact path="/generator/define-api"><GeneratorDefineApi /></Route>
+              <Route exact path="/common-defs"><CommonDefs /></Route>
+
+              {/* Legacy routes */}
               <Route exact path="/getting-started/developers/generator/install"><GeneratorInstall /></Route>
               <Route exact path="/getting-started/developers/generator/generator/api"><GeneratorApi /></Route>
-              <Route exact path="/aurolabs/minors"><AuroLabsMinors /></Route>
+              <Route exact path="/getting-started/developers/generator/generator/best-practice"><GeneratorBestPractice /></Route>
               <Route exact path="/getting-started/developers/generator/upgrade"><GeneratorUpgrade /></Route>
               <Route exact path="/getting-started/developers/generator/define-api"><GeneratorDefineApi /></Route>
-              <Route exact path="/common-defs"><CommonDefs /></Route>
 
               {/* Generator */}
               <Route exact path="/contributing"><Contributing /></Route>
