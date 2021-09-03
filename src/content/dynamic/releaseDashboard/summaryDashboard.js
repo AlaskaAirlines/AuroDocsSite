@@ -11,7 +11,7 @@ const milestones = gql`
       repositories(first: 20, orderBy: {field: CREATED_AT, direction: ASC}) {
         nodes {
           name
-          milestones(first: 18, orderBy: {field: DUE_DATE, direction: DESC}) {
+          milestones(first: 18, orderBy: {field: DUE_DATE, direction: DESC}, query: "Release") {
             nodes {
               title
               description
