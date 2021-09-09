@@ -421,6 +421,9 @@ function App() {
               <Route exact path="/contributing/issues-prs-labels"><ContribIssuePrLabels /></Route>
               <Route exact path="/definition-of-done"><DoD /></Route>
 
+              {/* Fallback route */}
+              <Route exact path="/getting-started/developers/contributing"><Contributing /></Route>
+
               {/* Typography */}
               <Route exact path="/typography/overview"><TypographyOverview /></Route>
               <Route exact path="/typography/usage"><TypographyUsage /></Route>
