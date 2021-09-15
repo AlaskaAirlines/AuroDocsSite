@@ -98,6 +98,12 @@ import AuroDateTimeApi from './content/dynamic/datetime/api';
 import AuroDateTimeInstall from './content/dynamic/datetime/install';
 import AuroDateTimeReleases from './content/dynamic/datetime/releases';
 
+// background
+import AuroBackground from './content/dynamic/background/component';
+import AuroBackgroundApi from './content/dynamic/background/api';
+import AuroBackgroundInstall from './content/dynamic/background/install';
+import AuroBackgroundReleases from './content/dynamic/background/releases';
+
 // Accordion
 import AuroAccordion from './content/dynamic/accordion/component';
 import AuroAccordionApi from './content/dynamic/accordion/api';
@@ -369,6 +375,7 @@ function App() {
               <Route exact path="/carousel/"><AuroCarousel /></Route>
               <Route exact path="/card/"><AuroCard /></Route>
               <Route exact path="/checkbox"><AuroCheckbox /></Route>
+              <Route exact path="/background/"><AuroBackground /></Route>
               <Route exact path="/datetime/"><AuroDateTime /></Route>
               <Route exact path="/interruption/"><AuroInterruption /></Route>
               <Route exact path="/header"><AuroHeader /></Route>
@@ -523,6 +530,12 @@ function App() {
               <Route exact path="/components/auro/datetime/install"><AuroDateTimeInstall /></Route>
               <Route exact path="/components/auro/datetime/api"><AuroDateTimeApi /></Route>
               <Route exact path="/components/auro/datetime/releases"><AuroDateTimeReleases /></Route>
+
+              {/* Auro Background */}
+              <Route exact path="/components/auro/background"><AuroBackground /></Route>
+              <Route exact path="/components/auro/background/install"><AuroBackgroundInstall /></Route>
+              <Route exact path="/components/auro/background/api"><AuroBackgroundApi /></Route>
+              <Route exact path="/components/auro/background/releases"><AuroBackgroundReleases /></Route>
 
               {/* Auro Header */}
               <Route exact path="/components/auro/header"><AuroHeader /></Route>
