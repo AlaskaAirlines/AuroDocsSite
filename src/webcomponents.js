@@ -14,9 +14,6 @@ import "@alaskaairux/auro-badge";
 // hyperlink
 import "@alaskaairux/auro-hyperlink";
 
-// avatar
-import "@alaskaairux/auro-avatar";
-
 // loader
 import "@alaskaairux/auro-loader";
 

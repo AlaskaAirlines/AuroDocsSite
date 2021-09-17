@@ -7,7 +7,7 @@ import 'prismjs/themes/prism.css';
 // import markdownContent from '@alaskaairux/auro-avatar/demo/demo.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-avatar/master/demo/demo.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-avatar/main/demo/demo.md';
 
 class AuroAvatar extends MarkdownPageWrapper {
 
@@ -66,7 +66,7 @@ class AuroAvatar extends MarkdownPageWrapper {
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-avatar"
           npm="https://www.npmjs.com/package/@alaskaairux/auro-avatar"
-          code="https://github.com/AlaskaAirlines/auro-avatar/blob/master/src/auro-avatar.js"
+          code="https://github.com/AlaskaAirlines/auro-avatar/blob/main/src/auro-avatar.js"
           version={this.showVersion()}
         />
       </section>

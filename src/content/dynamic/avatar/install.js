@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-avatar/master/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-avatar/main/README.md';
 
 class AuroAlertsInstall extends MarkdownPageWrapper {
 
@@ -45,7 +45,7 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-avatar"
           npm="https://www.npmjs.com/package/@alaskaairux/auro-avatar"
-          code="https://github.com/AlaskaAirlines/auro-avatar/blob/master/src/auro-avatar.js"
+          code="https://github.com/AlaskaAirlines/auro-avatar/blob/main/src/auro-avatar.js"
         />
       </section>
     );
