@@ -4,7 +4,7 @@
 
 We promote ease and inspire engagement through focused and intentional design. Translating our friendly and optimistic brand, our digital experiences establish emotional connections — delivering care and value.
 
-For more in-depth information on the overall company brand, refer to the [Alaska Brand Hub](http://alaskabrandhub.com/).
+For more in-depth information on the overall company brand, refer to the Alaska Brand Hub.
 
 ## Design pillars
 
