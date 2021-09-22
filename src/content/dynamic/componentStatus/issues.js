@@ -71,7 +71,7 @@ class HelpWanted extends Component {
               </td>
               <td className="auro_table--notes">
                 {comments.nodes.map(({body, createdAt}) => (
-                  <div className="auro-markdown">
+                  <div className="auro-markdown" key={createdAt}>
                     <ReactMarkdown source={body} />
 
                     {comments.nodes.map(({author}) => (
