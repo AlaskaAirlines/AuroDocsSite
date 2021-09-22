@@ -765,6 +765,12 @@ img[src*='shields.io'] {
     color: white;
     background-color: var(--auro-color-brand-flamingo-500);
   }
+
+  img {
+    max-width: 100px;
+    display: block;
+    margin-bottom: 1rem;
+  }
 }
 
 // status issues
