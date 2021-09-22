@@ -12,6 +12,7 @@ export class Nav extends Component {
         {/* <NavLink role="tab" exact className="tab link" to={`/prioritized`} activeClassName="is-active">Prioritized issues</NavLink> */}
         <NavLink role="tab" exact className="tab link" to={`/help-wanted`} activeClassName="is-active">Help Wanted</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/bugs`} activeClassName="is-active">Bugs</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/notreviewed`} activeClassName="is-active">Not Reviewed</NavLink>
       </div>
     )
   }
