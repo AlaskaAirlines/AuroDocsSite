@@ -30,8 +30,7 @@ import NotFound from './content/notFound.js';
 import VersionZero from './content/dynamic/epics/projectVersionZero';
 import UserResearch  from './content/dynamic/epics/projectUserResearch';
 import DocSiteStrategy from './content/dynamic/epics/projectDocSite';
-import PlannedWork from './content/dynamic/componentStatus/plannedWork';
-import PrioritizedWork from './content/dynamic/componentStatus/prioritizedWork';
+import OpenIssues from './content/dynamic/componentStatus/openIssues';
 import HelpWanted from './content/dynamic/componentStatus/helpWanted';
 import Bugs from './content/dynamic/componentStatus/bugs';
 import NotReviewed from './content/dynamic/componentStatus/notReviewed';
@@ -352,8 +351,7 @@ function App() {
               <Route exact path="/epics/user-research"><UserResearch /></Route>
               <Route exact path="/epics/doc-site-strategy"><DocSiteStrategy /></Route>
 
-              <Route exact path="/wip"><PlannedWork /></Route>
-              <Route exact path="/prioritized"><PrioritizedWork /></Route>
+              <Route exact path="/wip"><OpenIssues /></Route>
               <Route exact path="/help-wanted"><HelpWanted /></Route>
               <Route exact path="/bugs"><Bugs /></Route>
               <Route exact path="/not-reviewed"><NotReviewed /></Route>
