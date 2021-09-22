@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Nav } from './nav';
 import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
-import Help from './issue--helpWanted';
+import Help from './issues';
 
 const helpWanted = gql`
 {
