@@ -69,7 +69,7 @@ class NotReviewed extends Component {
         <p>Issues that have not been reviewed by the team.</p>
         <Query query={typeBug}>
           {({ loading, error, data }) => {
-            if (loading) return <p></p>;
+            if (loading) return <auro-loader laser onlight></auro-loader>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
             return data.organization.team.repositories.nodes.map(({ name, issues }) => (
