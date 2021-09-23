@@ -53,6 +53,7 @@ import GeneratorBestPractice from './content/dynamic/generator/bestPractice';
 import GeneratorDefineApi from './content/dynamic/generator/defineApi';
 import GeneratorUpgrade from './content/dynamic/generator/upgrade';
 import CommonDefs from './content/dynamic/generator/commonDefs';
+import GeneratorReleases from './content/dynamic/generator/releases';
 
 // Contributing
 import Contributing from './content/dynamic/contributing/contributing';
@@ -413,6 +414,7 @@ function App() {
               <Route exact path="/generator/upgrade"><GeneratorUpgrade /></Route>
               <Route exact path="/generator/define-api"><GeneratorDefineApi /></Route>
               <Route exact path="/common-defs"><CommonDefs /></Route>
+              <Route exact path="/generator/releases"><GeneratorReleases /></Route>
 
               {/* Legacy routes */}
               <Route exact path="/getting-started/developers/generator/install"><GeneratorInstall /></Route>
