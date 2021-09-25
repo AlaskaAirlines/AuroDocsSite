@@ -22,17 +22,11 @@ const componentStatus = gql`
             nodes {
               title
               url
-              mergeable
               changedFiles
               isDraft
               state
               reviewDecision
               createdAt
-              suggestedReviewers {
-                reviewer {
-                  name
-                }
-              }
               author {
                 login
                 avatarUrl(size: 30)
@@ -80,17 +74,11 @@ const generator = gql`
             nodes {
               title
               url
-              mergeable
               changedFiles
               isDraft
               state
               reviewDecision
               createdAt
-              suggestedReviewers {
-                reviewer {
-                  name
-                }
-              }
               author {
                 login
                 avatarUrl(size: 30)
@@ -136,17 +124,11 @@ const eslint = gql`
             nodes {
               title
               url
-              mergeable
               changedFiles
               isDraft
               state
               reviewDecision
               createdAt
-              suggestedReviewers {
-                reviewer {
-                  name
-                }
-              }
               author {
                 login
                 avatarUrl(size: 30)
@@ -192,17 +174,11 @@ const tokens = gql`
             nodes {
               title
               url
-              mergeable
               changedFiles
               isDraft
               state
               reviewDecision
               createdAt
-              suggestedReviewers {
-                reviewer {
-                  name
-                }
-              }
               author {
                 login
                 avatarUrl(size: 30)
@@ -248,17 +224,11 @@ const WebCoreStyleSheets = gql`
             nodes {
               title
               url
-              mergeable
               changedFiles
               isDraft
               state
               reviewDecision
               createdAt
-              suggestedReviewers {
-                reviewer {
-                  name
-                }
-              }
               author {
                 login
                 avatarUrl(size: 30)
@@ -304,17 +274,11 @@ const Icons = gql`
             nodes {
               title
               url
-              mergeable
               changedFiles
               isDraft
               state
               reviewDecision
               createdAt
-              suggestedReviewers {
-                reviewer {
-                  name
-                }
-              }
               author {
                 login
                 avatarUrl(size: 30)

@@ -132,7 +132,7 @@ class Repo extends Component {
                                       alt={author.login}
                                       title={author.login}></img>
                                   </div>
-                                  <small>Ready to merge: {mergeable ? 'Yes': 'No'}</small>
+
                                 </auro-alert>
                               : (reviewDecision === "REVIEW_REQUIRED"
                                   ? <auro-alert noIcon type="warning">
@@ -160,7 +160,6 @@ class Repo extends Component {
                                           alt={author.login}
                                           title={author.login}></img>
                                       </div>
-                                      <small>Ready to merge: {mergeable ? 'Yes': 'No'}</small>
                                     </auro-alert>
                                   : <auro-alert noIcon type="error">
                                       <div className="cardHeader">
@@ -187,7 +186,7 @@ class Repo extends Component {
                                           alt={author.login}
                                           title={author.login}></img>
                                       </div>
-                                      <small>Ready to merge: {mergeable ? 'Yes': 'No'}</small>
+
                                     </auro-alert>
                                 )
                             )
