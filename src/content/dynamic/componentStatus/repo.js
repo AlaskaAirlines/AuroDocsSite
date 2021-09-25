@@ -15,10 +15,15 @@ class Repo extends Component {
         return (
           <tr>
             <td className="auro_util_nowrap">
-              <auro-hyperlink href={this.props.homepageUrl}><strong>{this.props.name}</strong></auro-hyperlink>
+              <auro-hyperlink nav href={this.props.homepageUrl}><strong>{this.props.name}</strong></auro-hyperlink>
               <div>
                 <small>
-                  <auro-hyperlink href={`https://github.com/AlaskaAirlines/${this.props.name}/pulse`} target="_blank">Insights</auro-hyperlink>
+                  <auro-hyperlink href={`https://github.com/AlaskaAirlines/${this.props.name}/pulse`} target="_blank" nav>Insights</auro-hyperlink><br/>
+                  {
+                    this.props.pullRequests.totalCount > 0
+                      ? <auro-hyperlink href={`https://github.com/AlaskaAirlines/${this.props.name}/pulls`} target="_blank" nav>PRs</auro-hyperlink>
+                      : ''
+                  }
                 </small>
               </div>
             </td>
@@ -69,13 +74,17 @@ class Repo extends Component {
               {
                 this.props.pullRequests.totalCount > 0
                 ? <auro-accordion lowProfile noProfile justifyLeft>
-                    <strong slot="trigger">Open pull request{this.props.pullRequests.totalCount > 1 ? 's' : ''}</strong>
+                    <strong slot="trigger" style={{'color': 'var(--auro-color-ui-default-on-light)'}}>
+                      {this.props.pullRequests.totalCount > 1
+                        ? `Their are (${this.props.pullRequests.totalCount}) open pull requests`
+                        : `There is (${this.props.pullRequests.totalCount}) open pull request`}
+                    </strong>
                     <div className="statusPrLayout">
                       {this.props.pullRequests.nodes.map(({title, mergeable, changedFiles, commits, url, isDraft, reviewDecision, author, createdAt}) => (
                         <span>
                           {
                             isDraft
-                            ? <auro-alerts noIcon className="alert">
+                            ? <auro-alert noIcon>
                                 <div className="cardHeader">
                                   <div>
                                     Draft
@@ -84,6 +93,7 @@ class Repo extends Component {
                                     <auro-datetime utc={createdAt}></auro-datetime>
                                   </div>
                                 </div>
+                                <small>Review only, DO NOT MERGE!!!</small>
                                 <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
                                 <div className="cardStats">
                                   <div className="statsBadge"><auro-badge pill advisory>{changedFiles}</auro-badge> Changed file{changedFiles > 1 ? 's' : ''}</div>
@@ -97,9 +107,10 @@ class Repo extends Component {
                                     alt={author.login}
                                     title={author.login}></img>
                                 </div>
-                              </auro-alerts>
+
+                              </auro-alert>
                             : (mergeable && !isDraft && reviewDecision==='APPROVED'
-                              ? <auro-alerts noIcon success>
+                              ? <auro-alert noIcon type="success">
                                   <div className="cardHeader">
                                     <div>
                                       Approved
@@ -121,9 +132,10 @@ class Repo extends Component {
                                       alt={author.login}
                                       title={author.login}></img>
                                   </div>
-                                </auro-alerts>
+                                  <small>Ready to merge: {mergeable ? 'Yes': 'No'}</small>
+                                </auro-alert>
                               : (reviewDecision === "REVIEW_REQUIRED"
-                                  ? <auro-alerts noIcon information className="alert">
+                                  ? <auro-alert noIcon type="warning">
                                       <div className="cardHeader">
                                         <div>
                                           { reviewDecision === "REVIEW_REQUIRED" ? "Review required " : '' }
@@ -148,11 +160,12 @@ class Repo extends Component {
                                           alt={author.login}
                                           title={author.login}></img>
                                       </div>
-                                    </auro-alerts>
-                                  : <auro-alerts noIcon error className="alert">
+                                      <small>Ready to merge: {mergeable ? 'Yes': 'No'}</small>
+                                    </auro-alert>
+                                  : <auro-alert noIcon type="error">
                                       <div className="cardHeader">
                                         <div>
-                                          <b>{ reviewDecision === "CHANGES_REQUESTED" ? "Changes requested": ''}</b>
+                                          { reviewDecision === "CHANGES_REQUESTED" ? "Changes requested": ''}
                                         </div>
                                         <div>
                                           <auro-datetime utc={createdAt}></auro-datetime>
@@ -174,7 +187,8 @@ class Repo extends Component {
                                           alt={author.login}
                                           title={author.login}></img>
                                       </div>
-                                    </auro-alerts>
+                                      <small>Ready to merge: {mergeable ? 'Yes': 'No'}</small>
+                                    </auro-alert>
                                 )
                             )
                           }

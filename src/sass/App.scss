@@ -1010,8 +1010,15 @@ img[src*='shields.io'] {
     margin-right: 1rem;
   }
 
-  auro-alerts {
+  auro-alert {
     margin-bottom: 1rem;
+  }
+}
+
+.statusViewTable {
+  th,
+  td {
+    padding-right: 0.5rem !important;
   }
 }
 

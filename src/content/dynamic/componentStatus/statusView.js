@@ -382,13 +382,13 @@ class ComponentStatus extends Component {
 
         <auro-header level="3" display="600">Design System support tools</auro-header>
 
-        <table className="auro_table">
+        <table className="auro_table statusViewTable">
           <thead>
             <tr>
               <th>Project</th>
-              <th>Build</th>
-              <th>Package</th>
-              <th>Issues</th>
+              <th></th>
+              <th></th>
+              <th></th>
               <th className="short">Description</th>
             </tr>
           </thead>
@@ -487,9 +487,9 @@ class ComponentStatus extends Component {
           <thead>
             <tr>
               <th>Project</th>
-              <th>Build</th>
-              <th>Package</th>
-              <th>Issues</th>
+              <th></th>
+              <th></th>
+              <th></th>
               <th className="short">Description</th>
             </tr>
           </thead>
