@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Nav } from './nav';
 import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
-import Help from './issues';
+import Issues from './issues';
 
 const helpWanted = gql`
 {
@@ -67,19 +67,20 @@ class HelpWanted extends Component {
 
         <h1 className="auro_heading auro_heading--display">Help Wanted</h1>
         <p>The following issues are open tickets with the Auro Design System and help is greatly appreciated. If you see an issue here that you feel you can help with, design, a11y, or feature, please reach out and we would be excited to work with you!</p>
+        <auro-accordion-group>
+          <Query query={helpWanted}>
+            {({ loading, error, data }) => {
+              if (loading) return <auro-loader laser onlight></auro-loader>;
+              if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
-        <Query query={helpWanted}>
-          {({ loading, error, data }) => {
-            if (loading) return <auro-loader laser onlight></auro-loader>;
-            if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
-
-            return data.organization.team.repositories.nodes.map(({ name, issues }) => (
-              issues.nodes.length > 0
-                ? <Help key={name} name={name} issues={issues.nodes} />
-                : ''
-            ));
-          }}
-        </Query>
+              return data.organization.team.repositories.nodes.map(({ name, issues }) => (
+                issues.nodes.length > 0
+                  ? <Issues key={name} name={name} issues={issues.nodes} />
+                  : ''
+              ));
+            }}
+          </Query>
+        </auro-accordion-group>
       </section>
     )
   }

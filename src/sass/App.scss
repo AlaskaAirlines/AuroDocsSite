@@ -611,6 +611,7 @@ img[src*='shields.io'] {
 
 // CSS Loader
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// Pretty sure this was replaced with auro-loader work
 .isLoading {
   color: var(--auro-color-background-darker);
   font-size: 80px;
@@ -747,6 +748,17 @@ img[src*='shields.io'] {
   }
 }
 
+//
+.auro_table--statusView {
+  th,
+  td {
+    &:first-child {
+      padding-left: 10px;
+    }
+  }
+}
+
+// This is a deprecated UI
 .epicIssues {
   .OPEN,
   .CLOSED {

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Nav } from './nav';
 import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
-import Help from './issues';
+import Issues from './issues';
 
 
 const allWork = gql`
@@ -69,18 +69,20 @@ class PlannedWork extends Component {
         <h1 className="auro_heading auro_heading--display">All open issues</h1>
         <p>The following is a list of all open issues.</p>
 
-        <Query query={allWork}>
-          {({ loading, error, data }) => {
-            if (loading) return <auro-loader laser onlight></auro-loader>;
-            if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
+        <auro-accordion-group>
+          <Query query={allWork}>
+            {({ loading, error, data }) => {
+              if (loading) return <auro-loader laser onlight></auro-loader>;
+              if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
-            return data.organization.team.repositories.nodes.map(({ name, issues }) => (
-              issues.nodes.length > 0
-                ? <Help key={name} name={name} issues={issues.nodes} />
-                : ''
-            ));
-          }}
-        </Query>
+              return data.organization.team.repositories.nodes.map(({ name, issues }) => (
+                issues.nodes.length > 0
+                  ? <Issues key={name} name={name} issues={issues.nodes} />
+                  : ''
+              ));
+            }}
+          </Query>
+        </auro-accordion-group>
       </section>
     )
   }
