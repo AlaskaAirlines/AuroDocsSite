@@ -67,7 +67,7 @@ class HelpWanted extends Component {
                   </div>
                   <div className="labelWrapper util_stackPaddingMd--top">
                     {labels.nodes.map(({name, color, description}) => (
-                      <div key={name} title={description} className="issueLabel" style={{backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
+                      <div key={name} title={description} className="issueLabel" style={{'font-weight':'bold', backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
                         {name}
                       </div>
                     ))}
