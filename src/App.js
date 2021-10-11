@@ -241,6 +241,7 @@ import ToastToaster from './content/dynamic/toast/toaster';
 // Table
 import AuroTable from './content/dynamic/table/component';
 import AuroTableApi from './content/dynamic/table/api';
+import AuroTableFigma from './content/dynamic/table/figma';
 import AuroTableInstall from './content/dynamic/table/install';
 import AuroTableReleases from './content/dynamic/table/releases';
 
@@ -525,6 +526,7 @@ function App() {
               <Route exact path="/components/auro/table"><AuroTable /></Route>
               <Route exact path="/components/auro/table/install"><AuroTableInstall /></Route>
               <Route exact path="/components/auro/table/api"><AuroTableApi /></Route>
+              <Route exact path="/components/auro/table/figma"><AuroTableFigma /></Route>
               <Route exact path="/components/auro/table/releases"><AuroTableReleases /></Route>
 
               {/* Auro Date/Time */}

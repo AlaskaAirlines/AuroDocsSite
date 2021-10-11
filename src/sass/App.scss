@@ -1059,3 +1059,11 @@ img[src*='shields.io'] {
     display: block;
   }
 }
+
+// =-=-=-=-=-=- Figma demo page -=-=-=-=-=-=
+.figmaIframe {
+  border: 1px solid var(--auro-color-border-divider-on-light);
+  border-radius: var(--auro-border-radius);
+  width: 100%;
+  height: 60vh
+}
