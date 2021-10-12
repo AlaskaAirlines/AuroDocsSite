@@ -20,7 +20,7 @@
     "@alaskaairux/design-tokens": "^3.3.0",
     "@alaskaairux/icons": "^4.8.4",
     "@alaskaairux/orion-web-core-style-sheets": "^2.12.2",
-    "@alaskaairux/webcorestylesheets": "^3.6.3",
+    "@alaskaairux/webcorestylesheets": "^3.7.0",
     "@apollo/react-components": "^3.1.5",
     "@apollo/react-hooks": "^3.1.5",
     "@aurolabs/auro-back-to-top": "^1.1.0",

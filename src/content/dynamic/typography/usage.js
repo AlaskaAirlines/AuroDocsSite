@@ -162,7 +162,23 @@ class Typography extends Component {
         <auro-accordion lowProfile noProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
-            {`<p class="auro_baseParagraph">Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>`}
+            {`<p class="baseParagraph">Basic text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>`}
+          </Highlight>
+          <br/>
+        </auro-accordion>
+
+        <auro-header level="2" display="800">Fine print support</auro-header>
+        <p>Auro's <code>.fineprint</code> selector support is intended to be used in cases where bulk copy is to be smaller than the more obvious larger print it accompanies. Fine print copy typically advertises or otherwise describes or partially describes a commercial product or service.</p>
+
+        <p>Support for the <code>.fineprint</code> is included in the <auro-hyperlink target="_blank" href="https://alaskaairlines.github.io/WebCoreStyleSheets/#essentials-css-#{$scope}.#{$prefix}fineprint">essentials file</auro-hyperlink> of Auro's Web Core Style Sheets.</p>
+
+        <div className="exampleWrapper auro_baseType">
+          <p className="auro_fineprint">Basic fine print text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <auro-accordion lowProfile noProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<p class="fineprint">Basic fine print text example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>`}
           </Highlight>
           <br/>
         </auro-accordion>
