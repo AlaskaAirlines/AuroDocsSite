@@ -287,6 +287,39 @@ handleKeyPress = (event) => {
           </Highlight>
         </auro-accordion>
 
+        <auro-header level="2" display="700">Common pattern example</auro-header>
+
+        <p>Auro's hyperlink element can be used in many creative ways in combination with other elements for easy-to-manage UI solutions. </p>
+
+        <auro-header level="3" display="600">Back or Next navigation</auro-header>
+
+        <div className="demo--inline exampleWrapper" style={{'display': 'flex', 'justify-content': 'space-between'}}>
+          <auro-hyperlink href="/" nav>
+            <auro-icon category="interface" name="chevron-left" customColor></auro-icon>
+            Click here to go back
+          </auro-hyperlink>
+
+          <auro-hyperlink href="/" nav>
+            Click here to go forward
+            <auro-icon category="interface" name="chevron-right" customColor></auro-icon>
+          </auro-hyperlink>
+        </div>
+
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-hyperlink href="/" nav>
+  <auro-icon category="interface" name="chevron-left" customColor></auro-icon>
+  Click here to go back
+</auro-hyperlink>
+
+<auro-hyperlink href="/" nav>
+  Click here to go forward
+  <auro-icon category="interface" name="chevron-right" customColor></auro-icon>
+</auro-hyperlink>`}
+          </Highlight>
+        </auro-accordion>
+
         <auro-header level="2" display="700">Usage guidelines</auro-header>
 
         <auro-header level="3" display="600">Free space nav hyperlink</auro-header>
@@ -294,19 +327,19 @@ handleKeyPress = (event) => {
         <p>When using the auro-hyperlink custom element, make sure to understand the context of placement. When using the hyperlink element in an open space for the purpose of navigation use the <code>nav</code> property. This will ensure that the hyperlink does not have an underline.</p>
 
         <p>
-          <auro-alerts noIcon error>
+          <auro-alert noIcon type="error">
             <div className="demo--inline exampleWrapper">
               <auro-hyperlink href="/">Free space navigation style hyperlink</auro-hyperlink>
             </div>
-          </auro-alerts>
+          </auro-alert>
         </p>
 
         <p>
-          <auro-alerts noIcon success>
+          <auro-alert noIcon type="success">
             <div className="demo--inline exampleWrapper">
               <auro-hyperlink href="/" nav>Free space navigation style hyperlink</auro-hyperlink>
             </div>
-          </auro-alerts>
+          </auro-alert>
         </p>
 
         <auro-header level="3" display="600">Hyperlink in content</auro-header>
@@ -314,19 +347,19 @@ handleKeyPress = (event) => {
         <p>When using the Auro hyperlink custom element in context with other content, for accessibility purposes, the hyperlink is to appear with an underline. This is the default experience with <code>auro-hyperlink</code></p>
 
         <p>
-          <auro-alerts noIcon error>
+          <auro-alert noIcon type="error">
             <div className="demo--inline exampleWrapper">
               This is a paragraph with an inline <auro-hyperlink style={{"display": "inline-block"}}href="/" nav>anchor tag</auro-hyperlink> for navigation.
             </div>
-          </auro-alerts>
+          </auro-alert>
         </p>
 
         <p>
-          <auro-alerts noIcon success>
+          <auro-alert noIcon type="success">
             <div className="demo--inline exampleWrapper">
               This is a paragraph with an inline <auro-hyperlink href="/">anchor tag</auro-hyperlink> for navigation.
             </div>
-          </auro-alerts>
+          </auro-alert>
         </p>
 
       </section>
