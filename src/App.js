@@ -169,6 +169,7 @@ import AuroButton from './content/dynamic/button/component';
 import AuroButtonApi from './content/dynamic/button/api';
 import AuroButtonInstall from './content/dynamic/button/install';
 import AuroButtonReleases from './content/dynamic/button/releases';
+import AuroButtonFigma from './content/dynamic/button/figma';
 
 // badge
 import AuroBadge from './content/dynamic/badge/component';
@@ -485,6 +486,7 @@ function App() {
               <Route exact path="/components/auro/button/install"><AuroButtonInstall /></Route>
               <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
               <Route exact path="/components/auro/button/releases"><AuroButtonReleases /></Route>
+              <Route exact path="/components/auro/button/figma"><AuroButtonFigma /></Route>
 
               {/* Auro Badge */}
               <Route exact path="/components/auro/badge"><AuroBadge /></Route>
