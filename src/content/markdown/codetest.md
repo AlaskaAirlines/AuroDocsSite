@@ -46,4 +46,4 @@ The expectations for this project are the following:
 
 If you are in need of examples, please do not hesitate to review all the existing [Auro Web Components](https://auro.alaskaair.com/component-status).
 
-If you find yourself completely stuck, please do not hesitate to reach out to either Dale Sande or Geoff Rich. Your success in completing this exercise if our primary goal.
+If you find yourself completely stuck, please do not hesitate to reach out to either Dale Sande or Geoff Rich. Your success in completing this exercise is our primary goal.
