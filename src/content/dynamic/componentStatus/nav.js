@@ -11,6 +11,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/help-wanted`} activeClassName="is-active">Help Wanted</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/bugs`} activeClassName="is-active">Bugs</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/not-reviewed`} activeClassName="is-active">Not reviewed</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/open-pull-request`} activeClassName="is-active">Open PRs</NavLink>
       </div>
     )
   }

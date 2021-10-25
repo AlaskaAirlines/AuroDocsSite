@@ -31,6 +31,7 @@ import VersionZero from './content/dynamic/epics/projectVersionZero';
 import UserResearch  from './content/dynamic/epics/projectUserResearch';
 import DocSiteStrategy from './content/dynamic/epics/projectDocSite';
 import OpenIssues from './content/dynamic/componentStatus/openIssues';
+import OpenPullRequest from './content/dynamic/componentStatus/openPullRequest';
 import HelpWanted from './content/dynamic/componentStatus/helpWanted';
 import Bugs from './content/dynamic/componentStatus/bugs';
 import NotReviewed from './content/dynamic/componentStatus/notReviewed';
@@ -355,6 +356,7 @@ function App() {
               <Route exact path="/epics/doc-site-strategy"><DocSiteStrategy /></Route>
 
               <Route exact path="/wip"><OpenIssues /></Route>
+              <Route exact path="/open-pull-request"><OpenPullRequest /></Route>
               <Route exact path="/help-wanted"><HelpWanted /></Route>
               <Route exact path="/bugs"><Bugs /></Route>
               <Route exact path="/not-reviewed"><NotReviewed /></Route>
