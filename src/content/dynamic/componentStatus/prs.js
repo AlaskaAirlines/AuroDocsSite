@@ -17,7 +17,7 @@ class Repo extends Component {
             <td className="auro_util_nowrap" style={{'vertical-align': 'baseline'}}>
               <auro-hyperlink nav href={this.props.homepageUrl}><strong>{this.props.name}</strong></auro-hyperlink>
             </td>
-            <td>
+            <td style={{'vertical-align': 'baseline'}}>
               { this.charGenerate() }
               { // loop over releases for URL to last release
                 this.props.releases.nodes.length !== 0
