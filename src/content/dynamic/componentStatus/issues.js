@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
 
-class HelpWanted extends Component {
+class AllIssues extends Component {
   getContrastYIQ(hexcolor) {
     hexcolor = hexcolor.replace("#", "");
     var r = parseInt(hexcolor.substr(0,2),16);
@@ -103,4 +103,4 @@ class HelpWanted extends Component {
   }
 }
 
-export default HelpWanted;
+export default AllIssues;

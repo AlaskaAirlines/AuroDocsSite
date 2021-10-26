@@ -114,34 +114,34 @@ class ColorsOverview extends Component {
         </section>
 
         <h3 className="auro_heading auro_heading--400">Midnight</h3>
-        <auro-tokens-list swatch circle componentData={getTokens(midnight, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="circle" componentData={getTokens(midnight, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--400">Atlas</h3>
-        <auro-tokens-list swatch circle componentData={getTokens(atlas, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="circle" componentData={getTokens(atlas, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--400">Breeze</h3>
-        <auro-tokens-list swatch circle componentData={getTokens(breeze, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="circle" componentData={getTokens(breeze, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--400">Tropical</h3>
-        <auro-tokens-list swatch circle componentData={getTokens(tropical, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="circle" componentData={getTokens(tropical, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--400">Alpine</h3>
-        <auro-tokens-list swatch circle componentData={getTokens(alpine, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="circle" componentData={getTokens(alpine, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--400">Flamingo</h3>
-        <auro-tokens-list swatch circle componentData={getTokens(flamingo, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="circle" componentData={getTokens(flamingo, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--400">Canyon</h3>
-        <auro-tokens-list swatch circle componentData={getTokens(canyon, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="circle" componentData={getTokens(canyon, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--400">Goldcoast</h3>
-        <auro-tokens-list swatch circle componentData={getTokens(goldcoast, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="circle" componentData={getTokens(goldcoast, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--400">Neutral</h3>
-        <auro-tokens-list swatch circle componentData={getTokens(neutral, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="circle" componentData={getTokens(neutral, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--400">Gray</h3>
-        <auro-tokens-list swatch circle componentData={getTokens(gray, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="circle" componentData={getTokens(gray, [])}></auro-tokenlist>
       </section>
     );
   }

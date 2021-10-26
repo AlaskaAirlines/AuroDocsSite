@@ -62,81 +62,81 @@ class DeprecatedTokens extends Component {
         </auro-alerts>
 
         <h3 className="auro_heading auro_heading--600">Animation</h3>
-        <auro-tokens-list componentData={_getTokens(animation, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(animation, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Borders</h3>
-        <auro-tokens-list unit="rem" componentData={_getTokens(border, [])}></auro-tokens-list>
+        <auro-tokenlist unit="rem" componentData={_getTokens(border, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Breakpoint</h3>
-        <auro-tokens-list componentData={_getTokens(breakpoint, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(breakpoint, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Colors</h3>
         <h4 className="auro_heading auro_heading--400">Alert</h4>
-        <auro-tokens-list swatch componentData={_getTokens(alertColors, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(alertColors, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Background</h4>
-        <auro-tokens-list swatch componentData={_getTokens(backgroundColors, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(backgroundColors, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Base</h4>
-        <auro-tokens-list swatch componentData={_getTokens(baseColors, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(baseColors, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Border</h4>
-        <auro-tokens-list swatch componentData={_getTokens(borderColors, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(borderColors, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Brand</h4>
-        <auro-tokens-list swatch componentData={_getTokens(brandColors, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(brandColors, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Icons</h4>
-        <auro-tokens-list swatch componentData={_getTokens(iconColors, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(iconColors, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">State</h4>
-        <auro-tokens-list swatch componentData={_getTokens(stateColors, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(stateColors, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Text</h4>
-        <auro-tokens-list swatch componentData={_getTokens(textColors, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(textColors, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">UI</h4>
-        <auro-tokens-list swatch componentData={_getTokens(uiColors, [])}></auro-tokens-list>
+        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(uiColors, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Depth</h3>
-        <auro-tokens-list componentData={_getTokens(depth, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(depth, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Size</h3>
-        <auro-tokens-list unit="rem" componentData={_getTokens(size, [])}></auro-tokens-list>
+        <auro-tokenlist unit="rem" componentData={_getTokens(size, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Typography</h3>
         <h4 className="auro_heading auro_heading--400">Font families</h4>
-        <auro-tokens-list componentData={_getTokens(font, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(font, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Body (default, lg, sm, xs)</h4>
-        <auro-tokens-list componentData={_getTokens(textBody, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textBody, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Heading defaults</h4>
-        <auro-tokens-list componentData={_getTokens(textHeadingDefault, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeadingDefault, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Heading display</h4>
-        <auro-tokens-list componentData={_getTokens(textHeadingDisplay, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeadingDisplay, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Heading 800</h4>
-        <auro-tokens-list componentData={_getTokens(textHeading800, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeading800, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Heading 700</h4>
-        <auro-tokens-list componentData={_getTokens(textHeading700, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeading700, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Heading 600</h4>
-        <auro-tokens-list componentData={_getTokens(textHeading600, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeading600, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Heading 500</h4>
-        <auro-tokens-list componentData={_getTokens(textHeading500, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeading500, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Heading 400</h4>
-        <auro-tokens-list componentData={_getTokens(textHeading400, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeading400, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Heading 300</h4>
-        <auro-tokens-list componentData={_getTokens(textHeading300, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeading300, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Unitless values</h3>
-        <auro-tokens-list componentData={_getTokens(unitless, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(unitless, [])}></auro-tokenlist>
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/AuroDesignTokens"

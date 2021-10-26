@@ -38,7 +38,7 @@ class DeprecatedTokens extends Component {
 
         <h2 className="auro_heading auro_heading--700">Post 3.0 deprecated tokens</h2>
         <p>The following tokens have been scheduled for deprecation. Please note the version of deprecation notice.</p>
-        <auro-tokens-list deprecated version componentData={this._getTokens(deprecated3_0, [])}></auro-tokens-list>
+        <auro-tokenlist type="deprecated" version componentData={this._getTokens(deprecated3_0, [])}></auro-tokenlist>
       </section>
     );
   }

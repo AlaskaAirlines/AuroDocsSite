@@ -31,6 +31,14 @@ import "@alaskaairux/auro-swatch/dist/auro-swatch-list";
 import "@alaskaairux/auro-swatch/dist/auro-tokens-list";
 import "@alaskaairux/auro-swatch/dist/auro-color-avatar";
 
+// tokenlist
+import "@aurodesignsystem/auro-tokenlist/dist/auro-tokendisplay";
+import "@aurodesignsystem/auro-tokenlist/dist/auro-tokenavatar";
+import "@aurodesignsystem/auro-tokenlist/dist/auro-tokenlist";
+
+// input type text
+import "@alaskaairux/auro-input";
+
 // header
 import "@alaskaairux/auro-header";
 

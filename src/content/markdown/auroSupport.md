@@ -45,13 +45,11 @@ Please see the items below for commonly asked questions regarding development an
     </div>
   </auro-accordion>
   <auro-accordion id="ie11" chromeless noProfile>
-    <span slot="trigger">Q: How does Auro support IE11?</span>
+    <span slot="trigger">Q: Does Auro support IE11?</span>
     <div class="lightText">
       <p>The core parts of Auro, design tokens, WCSS and Icons are all IE11 compatible. Also be sure to review Auro's official <auro-hyperlink href="/support/browsersSupport" relative>browser support policy</auro-hyperlink>.</p>
-      <p>For design tokens, it is best to use either the Sass versions of the tokens or look to add <auro-hyperlink href="https://github.com/postcss/postcss-custom-properties" target="_blank">postCSS Custom Properties</auro-hyperlink>.</p>
-      <p>In order for IE11 to support web components, we rely on the <auro-hyperlink href="/support/polyfills/webcomponentsjs" relative>Web Components Polyfills</auro-hyperlink>project. For specific framework examples, please be sure you checkout the <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink>, <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink> and <auro-hyperlink href="/javascriptSetup" relative>standard JS</auro-hyperlink> example projects.</p>
       <p>On August 17, 2020, Microsoft published a timeline indicating that Microsoft Teams will stop supporting Internet Explorer 11 on November 30, 2020, whereas Microsoft 365 products will end Internet Explorer 11 support on August 17, 2021. It is our position that Auro will no longer support IE11 as of Q3, 2021.</p>
-      <p>Alternative bundled versions are available for most custom elements, please see <strong>Install bundled assets from CDN</strong> in each project's README for more information.</p>
+      <p>Alternative bundled versions may be available for custom elements, please see <strong>Install bundled assets from CDN</strong> in each project's README for more information.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="css" chromeless noProfile>
