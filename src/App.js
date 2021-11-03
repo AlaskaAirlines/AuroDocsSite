@@ -183,6 +183,7 @@ import AuroInput from './content/dynamic/input/component';
 import AuroInputApi from './content/dynamic/input/api';
 import AuroInputInstall from './content/dynamic/input/install';
 import AuroInputReleases from './content/dynamic/input/releases';
+import AuroInputFigma from './content/dynamic/input/figma'
 
 // loader
 import AuroLoader from './content/dynamic/loader/component';
@@ -501,6 +502,7 @@ function App() {
               <Route exact path="/components/auro/input/install"><AuroInputInstall /></Route>
               <Route exact path="/components/auro/input/api"><AuroInputApi /></Route>
               <Route exact path="/components/auro/input/releases"><AuroInputReleases /></Route>
+              <Route exact path="/components/auro/input/figma"><AuroInputFigma /></Route>
 
               {/* Auro Loader */}
               <Route exact path="/components/auro/loader"><AuroLoader /></Route>
