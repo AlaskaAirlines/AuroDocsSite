@@ -260,6 +260,12 @@ import AuroPopoverApi from './content/dynamic/popover/api';
 import AuroPopoverInstall from './content/dynamic/popover/install';
 import AuroPopoverReleases from './content/dynamic/popover/releases';
 
+// Tokenlist
+import AuroTokenlist from './content/dynamic/tokenlist/component';
+import AuroTokenlistApi from './content/dynamic/tokenlist/api';
+import AuroTokenlistInstall from './content/dynamic/tokenlist/install';
+import AuroTokenlistReleases from './content/dynamic/tokenlist/releases';
+
 // polyfills
 import FocusVisible from './content/dynamic/polyfills/focusVisible';
 import Webcomponentsjs from './content/dynamic/polyfills/webcomponentsjs';
@@ -390,6 +396,7 @@ function App() {
               <Route exact path="/input"><AuroInput /></Route>
               <Route exact path="/pane/"><AuroPane /></Route>
               <Route exact path="/popover"><AuroPopover /></Route>
+              <Route exact path="/tokenlist"><AuroTokenlist /></Route>
               <Route exact path="/radio"><AuroRadio /></Route>
               <Route exact path="/skeleton"><AuroSkeleton /></Route>
               <Route exact path="/table"><AuroTable /></Route>
@@ -521,6 +528,12 @@ function App() {
               <Route exact path="/components/auro/popover/install"><AuroPopoverInstall /></Route>
               <Route exact path="/components/auro/popover/api"><AuroPopoverApi /></Route>
               <Route exact path="/components/auro/popover/releases"><AuroPopoverReleases/></Route>
+
+              {/* Auro Popover */}
+              <Route exact path="/components/auro/tokenlist"><AuroTokenlist /></Route>
+              <Route exact path="/components/auro/tokenlist/install"><AuroTokenlistInstall /></Route>
+              <Route exact path="/components/auro/tokenlist/api"><AuroTokenlistApi /></Route>
+              <Route exact path="/components/auro/tokenlist/releases"><AuroTokenlistReleases/></Route>
 
               {/* Auro Radio button */}
               <Route exact path="/components/auro/radio"><AuroRadio /></Route>
