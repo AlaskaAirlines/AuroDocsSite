@@ -235,6 +235,7 @@ import AuroHyperlinkInstall from './content/dynamic/hyperlink/install';
 import AuroHyperlinkApi from './content/dynamic/hyperlink/api';
 import AuroHyperlinkA11y from './content/dynamic/hyperlink/a11y';
 import AuroHyperlinkReleases from './content/dynamic/hyperlink/releases';
+import AuroHyperlinkFigma from './content/dynamic/hyperlink/figma';
 
 // toast
 import Toast from './content/dynamic/toast/toast';
@@ -572,6 +573,7 @@ function App() {
               <Route exact path="/components/auro/hyperlink/api"><AuroHyperlinkApi /></Route>
               <Route exact path="/components/auro/hyperlink/a11y"><AuroHyperlinkA11y /></Route>
               <Route exact path="/components/auro/hyperlink/releases"><AuroHyperlinkReleases /></Route>
+              <Route exact path="/components/auro/hyperlink/figma"><AuroHyperlinkFigma /></Route>
 
               {/* toast */}
               <Route exact path="/components/orion/toast/"><Toast /></Route>
