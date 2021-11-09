@@ -1,13 +1,6 @@
 
 // All Auro web components need to be listed here to be packaged properly for IE11 support
 
-// flightline
-import "@alaskaairux/auro-flightline";
-import "@alaskaairux/auro-flightline/dist/auro-flight-segment";
-
-// flight
-import "@alaskaairux/auro-flight";
-
 // badge
 import "@alaskaairux/auro-badge";
 
