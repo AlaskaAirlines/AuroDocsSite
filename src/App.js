@@ -208,6 +208,7 @@ import AuroCheckbox from './content/dynamic/checkbox/component';
 import AuroCheckboxApi from './content/dynamic/checkbox/api';
 import AuroCheckboxInstall from './content/dynamic/checkbox/install';
 import AuroCheckboxReleases from './content/dynamic/checkbox/releases';
+import AuroCheckboxFigma from './content/dynamic/checkbox/figma';
 
 // radio button
 import AuroRadio from './content/dynamic/radio/component';
@@ -523,6 +524,7 @@ function App() {
               <Route exact path="/components/auro/checkbox/install"><AuroCheckboxInstall /></Route>
               <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route>
               <Route exact path="/components/auro/checkbox/releases"><AuroCheckboxReleases /></Route>
+              <Route exact path="/components/auro/checkbox/figma"><AuroCheckboxFigma /></Route>
 
               {/* Auro Popover */}
               <Route exact path="/components/auro/popover"><AuroPopover /></Route>
