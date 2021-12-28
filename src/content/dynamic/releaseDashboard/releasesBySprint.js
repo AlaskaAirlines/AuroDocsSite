@@ -3,7 +3,6 @@ import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
 import calculateSprints, { createSprintReleaseDataset } from 'functions/sprintCalculator';
 import Release from './release';
-import { Nav } from './nav';
 
 const RELEASES = gql`
 {
@@ -32,7 +31,6 @@ class ReleasesBySprint extends Component {
     const sprints = calculateSprints(new Date());
     return (
       <section id="releases-by-sprint">
-        <Nav />
 
         <h1 className="auro_heading auro_heading--display">Auro release dashboard</h1>
         <p>The following is a list of Auro product releases and changelog notes for the last four sprint release cycles.</p>

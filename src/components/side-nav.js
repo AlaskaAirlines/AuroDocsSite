@@ -9,7 +9,7 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Philosophy", route: "/philosophy", parent: true },
         { linkTitle: "Status", route: "/component-status", parent: true },
-        { linkTitle: "Releases", route: "/support/releases-summary", parent: true },
+        { linkTitle: "Releases", route: "/support/releases-by-sprint", parent: true },
         { linkTitle: "Support", route: "/auro-support", parent: true },
         { linkTitle: "auroLabs", route: "/aurolabs", parent: true },
       ]
