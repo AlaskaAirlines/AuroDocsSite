@@ -31,6 +31,21 @@ Please see the items below for commonly asked questions regarding development an
     </div>
   </auro-accordion>
   <auro-accordion id="getStarted" chromeless noProfile>
+    <span slot="trigger">Q: Does Auro use LitElement?</span>
+    <div class="lightText">
+      <p>Yes. LitElement is the base class that all Auro custom elements are built upon. Auro currently supports <auro-hyperlink target="_blank" href="https://www.npmjs.com/package/lit-element/v/2.5.1">Lit-element v2.5.1</auro-hyperlink>. There is a plan to convert all current custom elements to the new <auro-hyperlink target="_blank" href="https://lit.dev/">Lit 2.0 spec</auro-hyperlink> by the end of 2022.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="getStarted" chromeless noProfile>
+    <span slot="trigger">Q: Does Auro support React, Svelte, Vue, etc...?</span>
+    <div class="lightText">
+      <p>Auro web components are based on LitElement HTML custom elements. This gives us the greatest spread possible for working with <auro-hyperlink target="_blank" href="https://custom-elements-everywhere.com/">just about any front-end framework in use today</auro-hyperlink>. </p>
+      <p>When it comes to React specifically, there are <auro-hyperlink target="_blank" href="https://custom-elements-everywhere.com/libraries/react/results/results.html">some kinks</auro-hyperlink> that need to be addressed, but progress is happening. See this <auro-hyperlink target="_blank" href="https://codesandbox.io/s/adoring-breeze-jrewu?file=/src/App.js:0-27">demo</auro-hyperlink> of another LitElement based component library used in a React setup using the new <auro-hyperlink target="_blank" href="https://github.com/facebook/react/issues/11347">React 18 rc</auro-hyperlink>.</p>
+      <p>To ensure that we continue to support the widest possible range of development frameworks, the Auro team has come up with a series of <auro-hyperlink relative href="/best-practice">custom element best practices</auro-hyperlink> as well a <auro-hyperlink href="/generator/define-api" relative>guide to consistent API developent</auro-hyperlink>. Together these tools help guild new development for consistency, scaleability and reuse.</p>
+      <p>For more inspiration with using Auro custom elements, see our <auro-hyperlink relative target="_blank" href="/reactSetup">React</auro-hyperlink> and <auro-hyperlink relative target="_blank" href="svelteSetup">Svelte</auro-hyperlink> demo projects.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="getStarted" chromeless noProfile>
     <span slot="trigger">Q: How do I contact the Auro Team?</span>
     <div class="lightText">
       <p>There are a lot of ways to get questions and support issues to the team. If there is an issue you are seeing with any of the parts of the Auro ecosystem, we highly recommend that you send a support issue. Select any of the ISSUE buttons on our <auro-hyperlink relative href="/component-status">status</auro-hyperlink> page and submit an issue from the repository.</p>
@@ -62,7 +77,7 @@ Please see the items below for commonly asked questions regarding development an
   <auro-accordion id="generator" chromeless noProfile>
     <span slot="trigger">Q: What is the WC-Generator?</span>
     <div class="lightText">
-      <p>The <auro-hyperlink href="/getting-started/developers/generator/install" relative>Auro WC-Generator</auro-hyperlink> is an easy to use and easy to setup developer experience for starting new web component projects from scratch. When building HTML custom elements there is a lot of boiler-plate code and support needed for testing and demo setup. The Auro team works hard to keep this generator up to date to ensure quality of code and developer experience with each new project.</p>
+      <p>The <auro-hyperlink href="/generator/install" relative>Auro WC-Generator</auro-hyperlink> is an easy to use and easy to setup developer experience for starting new web component projects based on the LitElement base class. When building HTML custom elements there is a lot of boiler-plate code and support needed for testing and demo setup. The Auro team works hard to keep this generator up to date to ensure quality of code and developer experience with each new project.</p>
       <p>For more information on how to start a project from scratch, be sure to take a look at <auro-hyperlink href="/getting-started/developers/generator/getting-started" relative>Getting Started</auro-hyperlink> guide for a step-by-step walk-through.</p>
     </div>
   </auro-accordion>
@@ -140,13 +155,13 @@ Please see the items below for commonly asked questions regarding development an
       <p>Please see our <auro-hyperlink href="/contributing" relative>Auro Design System Contributing Guidelines</auro-hyperlink> for more information.</p>
     </div>
   </auro-accordion>
-  <auro-accordion id="sla" chromeless noProfile>
+  <!-- <auro-accordion id="sla" chromeless noProfile>
     <span slot="trigger">Q: Issues, draft PRs and labels?</span>
     <div class="lightText">
       <p>Seeing the <auro-hyperlink href="https://github.com/orgs/AlaskaAirlines/projects/1" target="_blank">volume of work</auro-hyperlink>, it's easy to see how things can get lost and issues can fall through the cracks. Well, we have a plan for that. Labeling, comments, and draft PRs are all tools that we can use to signal the correct people as to the state of work.</p>
       <p>Please be sure to review the <auro-hyperlink relative href="/contributing/issues-prs-labels">Issues, pull requests and labels</auro-hyperlink> section if our site for a full descriptions of this process.</p>
     </div>
-  </auro-accordion>
+  </auro-accordion> -->
 </auro-accordion-group>
 
 ## Frequently asked Tech support questions
