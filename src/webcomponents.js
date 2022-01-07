@@ -5,7 +5,7 @@
 import "@alaskaairux/auro-badge";
 
 // hyperlink
-import "@alaskaairux/auro-hyperlink";
+// import "@alaskaairux/auro-hyperlink";
 
 // loader
 import "@alaskaairux/auro-loader";

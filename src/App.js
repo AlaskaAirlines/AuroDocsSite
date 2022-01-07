@@ -231,10 +231,9 @@ import WcssTests from './content/dynamic/wcss/tests';
 import IdiomaticCss from './content/dynamic/cssGuides/idiomatic';
 
 // hyperlink
-import AuroHyperlink from './content/dynamic/hyperlink/hyperlink';
+import AuroHyperlink from './content/dynamic/hyperlink/component';
 import AuroHyperlinkInstall from './content/dynamic/hyperlink/install';
 import AuroHyperlinkApi from './content/dynamic/hyperlink/api';
-import AuroHyperlinkA11y from './content/dynamic/hyperlink/a11y';
 import AuroHyperlinkReleases from './content/dynamic/hyperlink/releases';
 import AuroHyperlinkFigma from './content/dynamic/hyperlink/figma';
 
@@ -573,7 +572,6 @@ function App() {
               <Route exact path="/components/auro/hyperlink"><AuroHyperlink /></Route>
               <Route exact path="/components/auro/hyperlink/install"><AuroHyperlinkInstall /></Route>
               <Route exact path="/components/auro/hyperlink/api"><AuroHyperlinkApi /></Route>
-              <Route exact path="/components/auro/hyperlink/a11y"><AuroHyperlinkA11y /></Route>
               <Route exact path="/components/auro/hyperlink/releases"><AuroHyperlinkReleases /></Route>
               <Route exact path="/components/auro/hyperlink/figma"><AuroHyperlinkFigma /></Route>
 
