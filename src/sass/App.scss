@@ -307,6 +307,14 @@ pre {
   margin-bottom: 0;
 }
 
+.twoColDemoRow {
+  display: flex;
+
+  > * {
+    flex: 1;
+  }
+}
+
 .afterCode.hljs.openCode {
   background-color: #f8f8f8 !important;
 }
