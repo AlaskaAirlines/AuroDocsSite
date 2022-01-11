@@ -172,6 +172,12 @@ import AuroButtonInstall from './content/dynamic/button/install';
 import AuroButtonReleases from './content/dynamic/button/releases';
 import AuroButtonFigma from './content/dynamic/button/figma';
 
+// dropdown
+import AuroDropdown from './content/dynamic/dropdown/component';
+import AuroDropdownApi from './content/dynamic/dropdown/api';
+import AuroDropdownInstall from './content/dynamic/dropdown/install';
+import AuroDropdownReleases from './content/dynamic/dropdown/releases';
+
 // badge
 import AuroBadge from './content/dynamic/badge/component';
 import AuroBadgeApi from './content/dynamic/badge/api';
@@ -384,6 +390,7 @@ function App() {
               <Route exact path="/alerts"><AuroAlerts /></Route>
               <Route exact path="/avatar/"><AuroAvatar /></Route>
               <Route exact path="/button"><AuroButton /></Route>
+              <Route exact path="/dropdown"><AuroDropdown /></Route>
               <Route exact path="/lockup"><AuroLockup /></Route>
               <Route exact path="/carousel/"><AuroCarousel /></Route>
               <Route exact path="/card/"><AuroCard /></Route>
@@ -498,6 +505,12 @@ function App() {
               <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
               <Route exact path="/components/auro/button/releases"><AuroButtonReleases /></Route>
               <Route exact path="/components/auro/button/figma"><AuroButtonFigma /></Route>
+
+              {/* Auro Dropdown */}
+              <Route exact path="/components/auro/dropdown"><AuroDropdown /></Route>
+              <Route exact path="/components/auro/dropdown/install"><AuroDropdownInstall /></Route>
+              <Route exact path="/components/auro/dropdown/api"><AuroDropdownApi /></Route>
+              <Route exact path="/components/auro/dropdown/releases"><AuroDropdownReleases /></Route>
 
               {/* Auro Badge */}
               <Route exact path="/components/auro/badge"><AuroBadge /></Route>
