@@ -33,7 +33,7 @@ class AllReleases extends Component {
         <Nav />
 
         <h1 className="auro_heading auro_heading--display">Releases</h1>
-        <p>The following is a list of all Auro Popover releases.</p>
+        <p>The following is a list of all Auro element releases.</p>
 
         <Query query={RELEASES}>
           {({ loading, error, data }) => {
