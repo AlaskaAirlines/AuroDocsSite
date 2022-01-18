@@ -177,6 +177,7 @@ import AuroDropdown from './content/dynamic/dropdown/component';
 import AuroDropdownApi from './content/dynamic/dropdown/api';
 import AuroDropdownInstall from './content/dynamic/dropdown/install';
 import AuroDropdownReleases from './content/dynamic/dropdown/releases';
+import AuroDropdownFigma from './content/dynamic/dropdown/figma'
 
 // badge
 import AuroBadge from './content/dynamic/badge/component';
@@ -511,6 +512,7 @@ function App() {
               <Route exact path="/components/auro/dropdown/install"><AuroDropdownInstall /></Route>
               <Route exact path="/components/auro/dropdown/api"><AuroDropdownApi /></Route>
               <Route exact path="/components/auro/dropdown/releases"><AuroDropdownReleases /></Route>
+              <Route exact path="/components/auro/dropdown/figma"><AuroDropdownFigma /></Route>
 
               {/* Auro Badge */}
               <Route exact path="/components/auro/badge"><AuroBadge /></Route>
