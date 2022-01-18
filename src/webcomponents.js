@@ -16,11 +16,6 @@ import "@alaskaairux/auro-pane";
 // table
 import "@alaskaairux/auro-table/dist/auro-table";
 
-// tokenlist
-import "@aurodesignsystem/auro-tokenlist/dist/auro-tokendisplay";
-import "@aurodesignsystem/auro-tokenlist/dist/auro-tokenavatar";
-import "@aurodesignsystem/auro-tokenlist/dist/auro-tokenlist";
-
 // input type radio/checkbox
 import "@alaskaairux/auro-checkbox";
 import "@alaskaairux/auro-checkbox/dist/auro-checkbox-group";
