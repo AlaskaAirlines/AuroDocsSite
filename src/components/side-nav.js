@@ -132,6 +132,8 @@ export default function SideNav(props) {
             </section>
         </Fragment>
       ))}
+
+      <auro-hyperlink href="https://twitter.com/DesignAuro" target="_blank" style={{'display': 'block', 'margin-top': 'var(--auro-size-xxl)'}}>Follow on Twitter</auro-hyperlink>
     </nav>
   )
 }
