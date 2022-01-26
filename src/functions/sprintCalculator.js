@@ -1,4 +1,4 @@
-const firstSprintStartDate = new Date("12/27/2021");
+const firstSprintStartDate = new Date("12/29/2021");
 const sprintDurationInDays = 14;
 
 const addDays = (date, days) => {
@@ -13,7 +13,7 @@ const calculateSprints = (date) => {
   const numberOfSprints = Math.ceil(sprintDays / sprintDurationInDays);
   const sprints = [];
 
-  for (let i = numberOfSprints - 0; i <= numberOfSprints; i++) {
+  for (let i = numberOfSprints - 1; i <= numberOfSprints; i++) {
     const startDateModifier = sprintDurationInDays * (i - 1);
     const endDateModifier = sprintDurationInDays * i;
     const startDate = addDays(firstSprintStartDate, startDateModifier);
