@@ -61,6 +61,7 @@ export default function SideNav(props) {
         { linkTitle: "Interruption", route: '/components/auro/interruption', parent: true },
         { linkTitle: "Loader", route: '/components/auro/loader', parent: true },
         { linkTitle: "Lockup", route: '/components/auro/lockup', parent: true },
+        { linkTitle: "Menu", route: '/components/auro/menu', parent: true },
         { linkTitle: "Pane", route: "/components/auro/pane/", parent: true },
         { linkTitle: "Popover", route: '/components/auro/popover', parent: true },
         { linkTitle: "Radio button", route: '/components/auro/radio', parent: true },

@@ -2,12 +2,12 @@ import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
-// import markdownContent from '@alaskaairux/auro-[Component]/docs/api.md'
+// import markdownContent from '@alaskaairux/auro-menu/docs/api.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-[component]/master/docs/api.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-menu/master/docs/api.md';
 
-class Auro[Component]Api extends MarkdownPageWrapper {
+class AuroMenuApi extends MarkdownPageWrapper {
 
   componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
@@ -37,4 +37,4 @@ class Auro[Component]Api extends MarkdownPageWrapper {
   }
 }
 
-export default Auro[Component]Api;
+export default AuroMenuApi;

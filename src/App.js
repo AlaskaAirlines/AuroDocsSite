@@ -256,6 +256,13 @@ import AuroTableFigma from './content/dynamic/table/figma';
 import AuroTableInstall from './content/dynamic/table/install';
 import AuroTableReleases from './content/dynamic/table/releases';
 
+// Menu
+import AuroMenu from './content/dynamic/menu/component';
+import AuroMenuApi from './content/dynamic/menu/api';
+// import AuroMenuFigma from './content/dynamic/menu/figma';
+import AuroMenuInstall from './content/dynamic/menu/install';
+import AuroMenuReleases from './content/dynamic/menu/releases';
+
 // Header
 import AuroHeader from './content/dynamic/header/component';
 import AuroHeaderApi from './content/dynamic/header/api';
@@ -564,6 +571,13 @@ function App() {
               <Route exact path="/components/auro/table/api"><AuroTableApi /></Route>
               <Route exact path="/components/auro/table/figma"><AuroTableFigma /></Route>
               <Route exact path="/components/auro/table/releases"><AuroTableReleases /></Route>
+
+              {/* Auro Menu */}
+              <Route exact path="/components/auro/menu"><AuroMenu /></Route>
+              <Route exact path="/components/auro/menu/install"><AuroMenuInstall /></Route>
+              <Route exact path="/components/auro/menu/api"><AuroMenuApi /></Route>
+              {/* <Route exact path="/components/auro/menu/figma"><AuroMenuFigma /></Route> */}
+              <Route exact path="/components/auro/menu/releases"><AuroMenuReleases /></Route>
 
               {/* Auro Date/Time */}
               <Route exact path="/components/auro/datetime"><AuroDateTime /></Route>
