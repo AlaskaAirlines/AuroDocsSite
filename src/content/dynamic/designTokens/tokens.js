@@ -19,6 +19,7 @@ const iconColors = allTokens.color.icon;
 const stateColors = allTokens.color.state;
 const textColors = allTokens.color.text;
 const uiColors = allTokens.color.ui;
+const tierColors = allTokens.color.tier;
 
 const font = allTokens.font;
 const textBody = allTokens.text.body;
@@ -37,7 +38,7 @@ class DeprecatedTokens extends Component {
     const pjson = require('../../../../package.json');
     const dependencies = pjson.dependencies['@alaskaairux/design-tokens'];
 
-    console.log(allTokens)
+    // console.log(allTokens)
 
     return `@alaskaairux/design-tokens: ${dependencies}`;
   };
@@ -85,6 +86,9 @@ class DeprecatedTokens extends Component {
 
         <h4 className="auro_heading auro_heading--400">Brand</h4>
         <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(brandColors, [])}></auro-tokenlist>
+
+        <h4 className="auro_heading auro_heading--400">Tier status</h4>
+        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(tierColors, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Icons</h4>
         <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(iconColors, [])}></auro-tokenlist>
