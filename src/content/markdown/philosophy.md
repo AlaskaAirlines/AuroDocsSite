@@ -1,4 +1,4 @@
-# Our philosophy
+# Our design philosophy
 
 ## Overview
 

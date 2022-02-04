@@ -363,7 +363,7 @@ function App() {
               <Route exact path="/a11y-statement"><A11yStatement /></Route>
               <Route exact path="/user-support"><AuroSupport /></Route> {/* redirect old url */}
               <Route exact path="/auro-support"><AuroSupport /></Route>
-              <Route exact path="/philosophy"><Philosophy /></Route>
+              <Route exact path="/design-philosophy"><Philosophy /></Route>
               <Route exact path="/support/shadycss"><ShadyCSS /></Route>
               <Route path="/core/voice-and-tone"><VoiceTone /></Route>
               <Route exact path="/take-home"><Codetest /></Route>

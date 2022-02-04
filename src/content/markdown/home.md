@@ -32,16 +32,14 @@
     <p>
       <auro-hyperlink href="/typography/overview" relative>Typography</auro-hyperlink> and <auro-hyperlink href="/color/overview" relative>Color</auro-hyperlink>,<br/>
       a vast array of <auro-hyperlink href="/getting-started/developers/design-tokens" relative>Design Tokens,</auro-hyperlink><br/>
-      pixel-perfect<auro-hyperlink href="/icons" relative>Icons,</auro-hyperlink><br/>
+      <auro-hyperlink href="/icons" relative>pixel-perfect Icons,</auro-hyperlink><br/>
       and the <auro-hyperlink href="/generator" relative>WC-Generator</auro-hyperlink> for a unique developer experience.<br/>
     </p>
   </div>
   <div>
     <auro-header display="700">Implementations</auro-header>
-    <p>Universally applicable and easy to use. Using LitElement as a base, the Auro Design System allows for highly flexible component use in almost any development environment.</p>
-    <auro-hyperlink href="/webcorestylesheets" relative>WC Style Sheets, </auro-hyperlink>
-    <auro-hyperlink href="/icons" relative>Auro icons</auro-hyperlink><br/>
-    ... and a growing list of pre-built <auro-hyperlink href="/component-status" relative>universally useable web components.</auro-hyperlink>
+    <p>Using LitElement as a base, the Auro web components allows for highly flexible use in almost any development environment including <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink> and <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink>.</p>
+    See our growing list of pre-built <auro-hyperlink href="/component-status" relative>web components.</auro-hyperlink>
   </div>
 </div><br>
 
