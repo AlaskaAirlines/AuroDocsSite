@@ -264,6 +264,13 @@ import AuroMenuFigma from './content/dynamic/menu/figma';
 import AuroMenuInstall from './content/dynamic/menu/install';
 import AuroMenuReleases from './content/dynamic/menu/releases';
 
+// Select
+import AuroSelect from './content/dynamic/select/component';
+import AuroSelectApi from './content/dynamic/select/api';
+// import AuroSelectFigma from './content/dynamic/select/figma';
+import AuroSelectInstall from './content/dynamic/select/install';
+import AuroSelectReleases from './content/dynamic/select/releases';
+
 // Header
 import AuroHeader from './content/dynamic/header/component';
 import AuroHeaderApi from './content/dynamic/header/api';
@@ -581,6 +588,13 @@ function App() {
               <Route exact path="/components/auro/menu/api"><AuroMenuApi /></Route>
               <Route exact path="/components/auro/menu/figma"><AuroMenuFigma /></Route>
               <Route exact path="/components/auro/menu/releases"><AuroMenuReleases /></Route>
+
+              {/* Auro Select */}
+              <Route exact path="/components/auro/select"><AuroSelect /></Route>
+              <Route exact path="/components/auro/select/install"><AuroSelectInstall /></Route>
+              <Route exact path="/components/auro/select/api"><AuroSelectApi /></Route>
+              {/* <Route exact path="/components/auro/select/figma"><AuroSelectFigma /></Route> */}
+              <Route exact path="/components/auro/select/releases"><AuroSelectReleases /></Route>
 
               {/* Auro Date/Time */}
               <Route exact path="/components/auro/datetime"><AuroDateTime /></Route>
