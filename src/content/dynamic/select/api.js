@@ -5,7 +5,7 @@ import CodeBlock from 'components/CodeBlock';
 // import markdownContent from '@alaskaairux/auro-select/docs/api.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-select/master/docs/api.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-select/main/demo/apiExamples.md';
 
 class AuroSelectApi extends MarkdownPageWrapper {
 
