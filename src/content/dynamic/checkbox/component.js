@@ -48,7 +48,7 @@ class AuroCheckbox extends Component {
 
         <Nav />
 
-        <h2 className="auro_heading auro_heading--display">Checkbox</h2>
+        <h2 className="auro_heading auro_heading--display">Checkbox input type</h2>
 
         <p>Auro component type checkbox is rendered by default as styled boxes that are checked (ticked) when activated. A checkbox allows you to select single values for submission in a form (or not).</p>
 

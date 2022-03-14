@@ -18,7 +18,7 @@ class AuroRadioButton extends Component {
 
         <Nav />
 
-        <h2 className="auro_heading auro_heading--display">Radio button</h2>
+        <h2 className="auro_heading auro_heading--display">Radio input type</h2>
 
         <p>The auro-radio component is rendered as a small circle, which is filled or highlighted when selected. Only one auro-radio component in a given radio-button-group can be selected at the same time.</p>
 
