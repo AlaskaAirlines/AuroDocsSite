@@ -34,7 +34,7 @@ body {
 
   @include auro_breakpoint--md {
     display: block;
-    width: 30%;
+    width: 30% !important;
   }
 }
 
