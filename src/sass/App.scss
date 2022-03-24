@@ -24,6 +24,26 @@ body {
   background-color: var(--auro-color-background-lightest);
 }
 
+// customization for use with the google search widget
+.gsc-control-cse {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  display: none;
+
+  @include auro_breakpoint--md {
+    display: block;
+    width: 30%;
+  }
+}
+
+.gsc-search-button-v2 {
+  line-height: 1.5;
+  padding: 10px;
+}
+// --------------------------------------------------
+
 .ondark {
   background-color: var(--auro-color-background-darkest);
   padding: 10px 20px;
