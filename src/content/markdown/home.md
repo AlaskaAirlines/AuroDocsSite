@@ -114,14 +114,14 @@
       <p>Alternative bundled versions may be available for custom elements, please see <strong>Install bundled assets from CDN</strong> in each project's README for more information.</p>
     </div>
   </auro-accordion>
-  <auro-accordion id="generator" chromeless noProfile>
+  <!-- <auro-accordion id="generator" chromeless noProfile>
     <span slot="trigger">Q: What is auroLabs?</span>
     <div class="lightText">
       <p><auro-hyperlink href="/aurolabs" relative>auroLabs</auro-hyperlink> is a process to enable development of new ideas without all the pre-process that is typically required to add a new component to the design system. </p>
       <p>That being said, this does not ignore the process. It simply reverses priorities. auroLabs allows engineers to build and deliver an idea allowing for a iterative refinement process post it's first release. </p>
       <p>Make sure to refer to the <auro-hyperlink href="/aurolabs" relative>auroLabs</auro-hyperlink> page for all information regarding this process.</p>
     </div>
-  </auro-accordion>
+  </auro-accordion> -->
 <auro-accordion-group>
 
 ## What people are saying about Auro

@@ -27,7 +27,7 @@ body {
 // customization for use with the google search widget
 .gsc-control-cse {
   position: fixed;
-  top: 0;
+  top: 5px;
   right: 0;
   z-index: var(--auro-depth-overlay);
   display: none;

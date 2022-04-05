@@ -11,8 +11,8 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/generator/releases`} activeClassName="is-active">Releases</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/generator/define-api`} activeClassName="is-active">API dev guide</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/generator/best-practice`} activeClassName="is-active">Best practices</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/generator/upgrade`} activeClassName="is-active">Update repo</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/aurolabs/minors`} activeClassName="is-active">auroLabs</NavLink>
+        {/* <NavLink role="tab" exact className="tab link" to={`/generator/upgrade`} activeClassName="is-active">Update repo</NavLink> */}
+        {/* <NavLink role="tab" exact className="tab link" to={`/aurolabs/minors`} activeClassName="is-active">auroLabs</NavLink> */}
       </div>
     )
   }

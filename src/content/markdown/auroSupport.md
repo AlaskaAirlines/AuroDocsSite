@@ -81,14 +81,14 @@ Please see the items below for commonly asked questions regarding development an
       <p>For more information on how to start a project from scratch, be sure to take a look at <auro-hyperlink href="/getting-started/developers/generator/getting-started" relative>Getting Started</auro-hyperlink> guide for a step-by-step walk-through.</p>
     </div>
   </auro-accordion>
-  <auro-accordion id="generator" chromeless noProfile>
+  <!-- <auro-accordion id="generator" chromeless noProfile>
     <span slot="trigger">Q: What is auroLabs?</span>
     <div class="lightText">
       <p><auro-hyperlink href="/aurolabs" relative>auroLabs</auro-hyperlink> is a process to enable development of new ideas without all the pre-process that is typically required to add a new component to the design system. </p>
       <p>That being said, this does not ignore the process. It simply reverses priorities. auroLabs allows engineers to build and deliver an idea allowing for a iterative refinement process post it's first release. </p>
       <p>Make sure to refer to the <auro-hyperlink href="/aurolabs" relative>auroLabs</auro-hyperlink> page for all information regarding this process.</p>
     </div>
-  </auro-accordion>
+  </auro-accordion> -->
   <auro-accordion id="release" chromeless noProfile>
     <span slot="trigger">Q: How many components have been released?</span>
     <div class="lightText">
@@ -122,9 +122,9 @@ Please see the items below for commonly asked questions regarding development an
 <auro-accordion-group>
   <auro-accordion id="newWork" chromeless noProfile>
     <span slot="trigger">Q: How do teams bring work to Auro?</span>
-    <div class="lightText">
+    <!-- <div class="lightText">
       <p>New work comes from everywhere. Bringing new ideas to Auro is as simple as submitting a new issue or scheduling a meeting with the Auro team. Please see the <auro-hyperlink relative href="https://auro.alaskaair.com/aurolabs">auroLabs</auro-hyperlink> page for more details about this specific process.</p>
-    </div>
+    </div> -->
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
     <span slot="trigger">Q: A new element variant is discovered?</span>
