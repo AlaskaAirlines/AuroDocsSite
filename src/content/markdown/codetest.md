@@ -35,8 +35,8 @@ The expectations for this project are the following:
 1. Use the Generator to build out the specified web component
 1. Use tooling from the Auro Design System to build out the UI of the web component<br>
   \- The UI in the video is NOT an expectation, only the functionality<br>
-1. Meet the minimum test threshold when running `npm run test`
-1. Meet the JavaScript quality threshold when running `npm run esLint`
+1. Meet the minimum test threshold when running `npm test`
+1. Meet the JavaScript quality threshold when running `npm run linters`
 1. Testing in IE is NOT required
 1. Complete the `./demo/demo.md` document to visually review the web component
 1. Update the `./README.md` document to reflect the new web component
