@@ -223,6 +223,7 @@ import AuroRadio from './content/dynamic/radio/component';
 import AuroRadioApi from './content/dynamic/radio/api';
 import AuroRadioInstall from './content/dynamic/radio/install';
 import AuroRadioReleases from './content/dynamic/radio/releases';
+import AuroRadioFigma from './content/dynamic/radio/figma';
 
 // css guides
 import WcssConventions from './content/dynamic/cssGuides/conventions';
