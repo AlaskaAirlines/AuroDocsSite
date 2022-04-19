@@ -31,6 +31,7 @@ class AuroPane extends Component {
         </ul>
 
         <auro-header level="2" display="700">Display date</auro-header>
+        <p>Default using <code>date</code> attribute</p>
         <div className="demo--inline exampleWrapper paneContainer">
           <auro-pane date="2020-09-20"></auro-pane>
           <auro-pane date="2020-09-21" selected></auro-pane>
@@ -46,6 +47,7 @@ class AuroPane extends Component {
         </auro-accordion>
 
         <auro-header level="2" display="700">Display date and price</auro-header>
+        <p>Default using both <code>date</code> and <code>price</code> attributes.</p>
         <div className="demo--inline exampleWrapper paneContainer">
           <auro-pane date="2020-09-20" price="$500"></auro-pane>
           <auro-pane date="2020-09-21" price="$501" selected></auro-pane>
@@ -57,6 +59,22 @@ class AuroPane extends Component {
             {`<auro-pane date="2020-09-10" price="$500"></auro-pane>
 <auro-pane date="2020-09-21" price="$501" selected></auro-pane>
 <auro-pane date="2020-09-22" price="" disabled></auro-pane>`}
+          </Highlight>
+        </auro-accordion>
+
+        <auro-header level="2" display="700">Use sm size</auro-header>
+        <p>Use the <code>sm</code> attribute to main the small UI that is consistent with mobile and desktop.</p>
+        <div className="demo--inline exampleWrapper paneContainer">
+          <auro-pane sm date="2020-09-20" price="$500"></auro-pane>
+          <auro-pane sm date="2020-09-21" price="$501" selected></auro-pane>
+          <auro-pane sm date="2020-09-22" price="" disabled></auro-pane>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-pane sm date="2020-09-10" price="$500"></auro-pane>
+<auro-pane sm date="2020-09-21" price="$501" selected></auro-pane>
+<auro-pane sm date="2020-09-22" price="" disabled></auro-pane>`}
           </Highlight>
         </auro-accordion>
       </section>
