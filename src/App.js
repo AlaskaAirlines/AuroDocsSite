@@ -173,6 +173,13 @@ import AuroButtonInstall from './content/dynamic/button/install';
 import AuroButtonReleases from './content/dynamic/button/releases';
 import AuroButtonFigma from './content/dynamic/button/figma';
 
+// combobox
+import AuroCombobox from './content/dynamic/combobox/component';
+import AuroComboboxApi from './content/dynamic/combobox/api';
+import AuroComboboxInstall from './content/dynamic/combobox/install';
+import AuroComboboxReleases from './content/dynamic/combobox/releases';
+import AuroComboboxFigma from './content/dynamic/combobox/figma'
+
 // dropdown
 import AuroDropdown from './content/dynamic/dropdown/component';
 import AuroDropdownApi from './content/dynamic/dropdown/api';
@@ -413,6 +420,7 @@ function App() {
               <Route exact path="/checkbox"><AuroCheckbox /></Route>
               <Route exact path="/datetime/"><AuroDateTime /></Route>
               <Route exact path="/dropdown"><AuroDropdown /></Route>
+              <Route exact path="/combobox"><AuroCombobox /></Route>
               <Route exact path="/header"><AuroHeader /></Route>
               <Route exact path="/hyperlink"><AuroHyperlink /></Route>
               <Route exact path="/interruption/"><AuroInterruption /></Route>
@@ -531,6 +539,13 @@ function App() {
               <Route exact path="/components/auro/dropdown/api"><AuroDropdownApi /></Route>
               <Route exact path="/components/auro/dropdown/releases"><AuroDropdownReleases /></Route>
               <Route exact path="/components/auro/dropdown/figma"><AuroDropdownFigma /></Route>
+
+              {/* Auro Combobox */}
+              <Route exact path="/components/auro/combobox"><AuroCombobox /></Route>
+              <Route exact path="/components/auro/combobox/install"><AuroComboboxInstall /></Route>
+              <Route exact path="/components/auro/combobox/api"><AuroComboboxApi /></Route>
+              <Route exact path="/components/auro/combobox/releases"><AuroComboboxReleases /></Route>
+              <Route exact path="/components/auro/combobox/figma"><AuroComboboxFigma /></Route>
 
               {/* Auro Badge */}
               <Route exact path="/components/auro/badge"><AuroBadge /></Route>
