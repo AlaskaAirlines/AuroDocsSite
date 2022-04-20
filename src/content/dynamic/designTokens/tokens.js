@@ -112,7 +112,7 @@ class DeprecatedTokens extends Component {
         <h4 className="auro_heading auro_heading--400">Font families</h4>
         <auro-tokenlist componentData={_getTokens(font, [])}></auro-tokenlist>
 
-        <h4 className="auro_heading auro_heading--400">Body (default, lg, sm, xs)</h4>
+        <h4 className="auro_heading auro_heading--400">Body (default, lg, sm, etc...)</h4>
         <auro-tokenlist componentData={_getTokens(textBody, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Heading defaults</h4>
