@@ -5,6 +5,7 @@ import _getTokens from "../../../functions/getTokens";
 import allTokens from '@alaskaairux/design-tokens/dist/tokens/JSObject--allTokens.js';
 
 const animation = allTokens.animation;
+const elevation = allTokens.elevation;
 const breakpoint = allTokens.breakpoint;
 const depth = allTokens.depth;
 const size = allTokens.size;
@@ -64,6 +65,9 @@ class DeprecatedTokens extends Component {
 
         <h3 className="auro_heading auro_heading--600">Animation</h3>
         <auro-tokenlist componentData={_getTokens(animation, [])}></auro-tokenlist>
+
+        <h3 className="auro_heading auro_heading--600">Elevation</h3>
+        <auro-tokenlist componentData={_getTokens(elevation, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Borders</h3>
         <auro-tokenlist unit="rem" componentData={_getTokens(border, [])}></auro-tokenlist>
