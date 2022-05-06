@@ -9,6 +9,8 @@
 
 Looking for help with Auro? F.A.Q.s, how to contact, it's all here. Also be sure to check out our [office hours](/officehours) for how to best contact the Auro team.
 
+To submit an issue with any part of the Auro ecosystem, please see our [status page](/component-status). Click/tap on any of the repo's corresponding *ISSUES* badge.
+
 ## Frequently asked questions
 
 <!-- >
@@ -37,19 +39,25 @@ Please see the items below for commonly asked questions regarding development an
     </div>
   </auro-accordion>
   <auro-accordion id="getStarted" chromeless noProfile>
+    <span slot="trigger">Q: How do I contact the Auro Team?</span>
+    <div class="lightText">
+      <p>There are a lot of ways to get questions and support issues to the team. If there is an issue you are seeing with any of the parts of the Auro ecosystem, we highly recommend that you send a support issue. Select any of the ISSUE buttons on our <auro-hyperlink relative href="/component-status">status</auro-hyperlink> page and submit an issue from the repository.</p>
+      <p>When sending an issue is not enough, take a look at our <auro-hyperlink href="/officehours" relative>Office Hours</auro-hyperlink> for the best time to contact us.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="getStarted" chromeless noProfile>
+    <span slot="trigger">Q: How do I submit an issue?</span>
+    <div class="lightText">
+      <p>Auro is not an single repository, but an ecosystem of tools and components. Every part of the ecosystem has its own Github repo. To submit an issue with any of the repos in Auro's ecosystem, please see our <auro-hyperlink href="/component-status" relative>component status</auro-hyperlink> page and click/tap on the repo's corresponding <i>ISSUES</i> badge.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="getStarted" chromeless noProfile>
     <span slot="trigger">Q: Does Auro support React, Svelte, Vue, etc...?</span>
     <div class="lightText">
       <p>Auro web components are based on LitElement HTML custom elements. This gives us the greatest spread possible for working with <auro-hyperlink target="_blank" href="https://custom-elements-everywhere.com/">just about any front-end framework in use today</auro-hyperlink>. </p>
       <p>When it comes to React specifically, there are <auro-hyperlink target="_blank" href="https://custom-elements-everywhere.com/libraries/react/results/results.html">some kinks</auro-hyperlink> that need to be addressed, but progress is happening. See this <auro-hyperlink target="_blank" href="https://codesandbox.io/s/adoring-breeze-jrewu?file=/src/App.js:0-27">demo</auro-hyperlink> of another LitElement based component library used in a React setup using the new <auro-hyperlink target="_blank" href="https://github.com/facebook/react/issues/11347">React 18 rc</auro-hyperlink>.</p>
       <p>To ensure that we continue to support the widest possible range of development frameworks, the Auro team has come up with a series of <auro-hyperlink relative href="/best-practice">custom element best practices</auro-hyperlink> as well a <auro-hyperlink href="/generator/define-api" relative>guide to consistent API developent</auro-hyperlink>. Together these tools help guild new development for consistency, scaleability and reuse.</p>
       <p>For more inspiration with using Auro custom elements, see our <auro-hyperlink relative target="_blank" href="/reactSetup">React</auro-hyperlink> and <auro-hyperlink relative target="_blank" href="svelteSetup">Svelte</auro-hyperlink> demo projects.</p>
-    </div>
-  </auro-accordion>
-  <auro-accordion id="getStarted" chromeless noProfile>
-    <span slot="trigger">Q: How do I contact the Auro Team?</span>
-    <div class="lightText">
-      <p>There are a lot of ways to get questions and support issues to the team. If there is an issue you are seeing with any of the parts of the Auro ecosystem, we highly recommend that you send a support issue. Select any of the ISSUE buttons on our <auro-hyperlink relative href="/component-status">status</auro-hyperlink> page and submit an issue from the repository.</p>
-      <p>When sending an issue is not enough, take a look at our <auro-hyperlink href="/officehours" relative>Office Hours</auro-hyperlink> for the best time to contact us.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="primary" chromeless noProfile>
