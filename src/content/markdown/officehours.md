@@ -30,6 +30,4 @@ Sometimes documentation or setup instructions simply aren't enough. Please see t
 | Dale Sande | Principal Engineer | Team lead | Please [schedule](https://calendly.com/dalesande) | 1-4pm / M-W |
 | Jason Baker | Software Engineer | Team member | Please [schedule](https://calendly.com/jason-baker-alaskaair) | 1-4pm / M-F |
 | June Lee | Product Designer | Team member | Please [schedule](https://calendly.com/leejune) | 1-4pm / M-F |
-| Gus Naughton | Software Engineer | Contributor | Please [schedule](https://calendly.com/gusn) ||
 | Geoff Rich | Software Engineer | Contributor | Please [schedule](https://calendly.com/geoff-rich-alaska) ||
-| Dayna Anderson | Software Engineer | Contributor | Please [schedule](https://calendly.com/dayna-a) ||
