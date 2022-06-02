@@ -3,7 +3,7 @@ import './style.scss';
 
 function Header() {
   return (
-    <header className="siteHeader">
+    <header className="siteHeader" role="banner">
       <auro-lockup>
         <span slot="title">Auro</span>
         <span slot="subtitle">design system</span>
