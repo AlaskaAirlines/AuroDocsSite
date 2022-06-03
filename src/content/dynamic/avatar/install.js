@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
@@ -41,12 +40,6 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
               link: this.linkRenderer
             }}/>
         </section>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-avatar"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-avatar"
-          code="https://github.com/AlaskaAirlines/auro-avatar/blob/main/src/auro-avatar.js"
-        />
       </section>
     );
   }

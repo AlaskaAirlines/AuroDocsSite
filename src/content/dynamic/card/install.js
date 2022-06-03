@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 // import markdownContent from '@alaskaairux/auro-card/README.md'
@@ -35,12 +34,6 @@ class AuroCardInstall extends MarkdownPageWrapper {
               link: this.linkRenderer
             }}/>
         </section>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-card"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-card"
-          code="https://github.com/AlaskaAirlines/auro-card/blob/master/src/auro-card.js"
-        />
       </section>
     );
   }

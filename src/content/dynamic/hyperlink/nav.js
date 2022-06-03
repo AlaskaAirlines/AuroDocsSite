@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LinkIcons from 'components/linkIcons';
 import { NavLink } from "react-router-dom";
 
 export class Nav extends Component {
@@ -11,6 +12,12 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/hyperlink/api`} activeClassName="is-active">API</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/hyperlink/releases`} activeClassName="is-active">Releases</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/hyperlink/figma`} activeClassName="is-active">Design support</NavLink>
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/auro-hyperlink/issues"
+          npm="https://www.npmjs.com/package/@alaskaairux/auro-hyperlink"
+          code="https://github.com/AlaskaAirlines/auro-hyperlink/blob/master/src/auro-hyperlink.js"
+        />
+
       </div>
     )
   }

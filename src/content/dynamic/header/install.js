@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
@@ -42,11 +41,6 @@ class AuroButtonInstall extends MarkdownPageWrapper {
             }}/>
         </section>
 
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-header"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-header"
-          code="https://github.com/AlaskaAirlines/auro-header/blob/master/src/auro-header.js"
-        />
       </section>
     );
   }

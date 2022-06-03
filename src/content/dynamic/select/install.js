@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 // import markdownContent from '@alaskaairux/auro-select/README.md'
@@ -43,11 +42,6 @@ class AuroSelectInstall extends MarkdownPageWrapper {
             }}/>
         </section>
 
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-select"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-select"
-          code="https://github.com/AlaskaAirlines/auro-select/blob/master/src/auro-select.js"
-        />
       </section>
     );
   }

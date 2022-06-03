@@ -2,7 +2,7 @@ import React from 'react';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import Npm from '-!svg-react-loader!../../assets/npmInstall.svg';
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import Github from '-!svg-react-loader!../../assets/github.svg';
+import Issue from '-!svg-react-loader!../../assets/issue.svg';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import GetCode from '-!svg-react-loader!../../assets/getCode.svg';
 // eslint-disable-next-line import/no-webpack-loader-syntax
@@ -32,9 +32,9 @@ function LinkIcons(props) {
   }
 
   return (
-    <div className="imgIcon util_stackMarginXl--bottom util_stackMarginXl--top">
+    <div className="imgIcon">
       <a href={props.github} target="_blank" rel="noopener noreferrer" aria-label="Go to Github Site">
-        <Github role="img" aria-hidden="false" />
+        <Issue role="img" aria-hidden="false" />
       </a>
       {npm()}
       <a href={props.code} target="_blank" rel="noopener noreferrer" aria-label="See the code on Github">

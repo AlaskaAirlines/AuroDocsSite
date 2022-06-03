@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 // import markdownContent from '@alaskaairux/auro-lockup/README.md'
@@ -43,11 +42,6 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
             }}/>
         </section>
 
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-lockup"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-lockup"
-          code="https://github.com/AlaskaAirlines/auro-lockup/blob/master/src/auro-lockup.js"
-        />
       </section>
     );
   }

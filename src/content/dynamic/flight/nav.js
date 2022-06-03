@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LinkIcons from 'components/linkIcons';
 import { NavLink } from "react-router-dom";
 
 export class Nav extends Component {
@@ -11,6 +12,12 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/flight/api`} activeClassName="is-active">API</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/flight/dot`} activeClassName="is-active">DoT compliance</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/flight/releases`} activeClassName="is-active">Releases</NavLink>
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/auro-flight"
+          npm="https://www.npmjs.com/package/@alaskaairux/auro-flight"
+          code="https://github.com/AlaskaAirlines/auro-flight/blob/master/src/auro-flight.js"
+        />
+
       </div>
     )
   }

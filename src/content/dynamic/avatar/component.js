@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
@@ -61,13 +60,6 @@ class AuroAvatar extends MarkdownPageWrapper {
         <section
           className="auro-markdown"
           dangerouslySetInnerHTML={this.getMarkdownText()}
-        />
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-avatar"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-avatar"
-          code="https://github.com/AlaskaAirlines/auro-avatar/blob/main/src/auro-avatar.js"
-          version={this.showVersion()}
         />
       </section>
     );

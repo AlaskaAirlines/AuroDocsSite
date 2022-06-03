@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 // import markdownContent from '@aurodesignsystem/auro-background/README.md'
@@ -42,12 +41,6 @@ class AuroBackgroundInstall extends MarkdownPageWrapper {
               link: this.linkRenderer
             }}/>
         </section>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-background"
-          npm="https://www.npmjs.com/package/@aurodesignsystem/auro-background"
-          code="https://github.com/AlaskaAirlines/auro-background/blob/master/src/auro-background.js"
-        />
       </section>
     );
   }

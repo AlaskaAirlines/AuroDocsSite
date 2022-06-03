@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 // import markdownContent from '@alaskaairux/auro-skeleton/README.md'
@@ -43,11 +42,6 @@ class AuroSkeletonInstall extends MarkdownPageWrapper {
             }}/>
         </section>
 
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-skeleton"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-skeleton"
-          code="https://github.com/AlaskaAirlines/auro-skeleton/blob/master/src/auro-skeleton.js"
-        />
       </section>
     );
   }

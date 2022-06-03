@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
@@ -41,12 +40,6 @@ class AuroCarouselInstall extends MarkdownPageWrapper {
               link: this.linkRenderer
             }}/>
         </section>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-carousel"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-carousel"
-          code="https://github.com/AlaskaAirlines/auro-carousel/blob/master/src/auro-carousel.js"
-        />
       </section>
     );
   }

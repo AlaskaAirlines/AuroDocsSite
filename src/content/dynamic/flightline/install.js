@@ -1,6 +1,5 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 // import markdownContent from '@alaskaairux/auro-flightline/README.md'
@@ -43,11 +42,6 @@ class AuroFlightlineInstall extends MarkdownPageWrapper {
             }}/>
         </section>
 
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-flightline"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-flightline"
-          code="https://github.com/AlaskaAirlines/auro-flightline/blob/master/src/auro-flightline.js"
-        />
       </section>
     );
   }
