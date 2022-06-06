@@ -145,6 +145,26 @@ class AuroCheckbox extends Component {
           </Highlight>
         </auro-accordion>
 
+        <h3 className="auro_heading auro_heading--500">Disabled Checkbox within group</h3>
+        <p>The auro-checkbox element also supports a single disabled option within a group.</p>
+        <div className="demo--inline exampleWrapper">
+          <auro-checkbox-group>
+            <span slot="legend">Example group</span>
+            <auro-checkbox id="optionOne" disabled name="exampleOptions" value="option one">Option one</auro-checkbox>
+            <auro-checkbox id="optionTwo" checked name="exampleOptions" value="option two">Option two</auro-checkbox>
+          </auro-checkbox-group>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-checkbox-group>
+  <span slot="legend">Example group</span>
+  <auro-checkbox id="optionOne" disabled name="exampleOptions" value="option one">Option one</auro-checkbox>
+  <auro-checkbox id="optionTwo" checked name="exampleOptions" value="option two">Option two</auro-checkbox>
+</auro-checkbox-group>`}
+          </Highlight>
+        </auro-accordion>
+
 
         <h3 className="auro_heading auro_heading--500">Checkbox Group with error</h3>
         <p>The auro-checkbox component is designed to work in concert with the auro-checkbox-group component. </p>
