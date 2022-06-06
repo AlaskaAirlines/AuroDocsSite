@@ -27,7 +27,7 @@ Sometimes documentation or setup instructions simply aren't enough. Please see t
 
 | Name | Title | Support type | Contact preferences | Office hours |
 | --- | --- | --- | --- |
-| Dale Sande | Principal Engineer | Team lead | Please [schedule](https://calendly.com/dalesande) | 1-4pm / M-W |
+| Dale Sande | Principal Engineer | Team lead | Please [schedule](https://calendly.com/dalesande) | 1-4pm / T-Th |
 | Jason Baker | Software Engineer | Team member | Please [schedule](https://calendly.com/jason-baker-alaskaair) | 1-4pm / M-F |
 | June Lee | Product Designer | Team member | Please [schedule](https://calendly.com/leejune) | 1-4pm / M-F |
 | Geoff Rich | Software Engineer | Contributor | Please [schedule](https://calendly.com/geoff-rich-alaska) ||
