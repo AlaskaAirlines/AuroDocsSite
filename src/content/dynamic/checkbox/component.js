@@ -146,8 +146,14 @@ class AuroCheckbox extends Component {
         </auro-accordion>
 
         <h3 className="auro_heading auro_heading--500">Disabled Checkbox within group</h3>
-        <p>The auro-checkbox element also supports a single disabled option within a group.</p>
+        <p>The auro-checkbox element also supports a single disabled option within a optional or required group.</p>
         <div className="demo--inline exampleWrapper">
+          <auro-checkbox-group required>
+            <span slot="legend">Example group</span>
+            <auro-checkbox id="optionOne" disabled name="exampleOptions" value="option one">Option one</auro-checkbox>
+            <auro-checkbox id="optionTwo" checked name="exampleOptions" value="option two">Option two</auro-checkbox>
+          </auro-checkbox-group>
+
           <auro-checkbox-group>
             <span slot="legend">Example group</span>
             <auro-checkbox id="optionOne" disabled name="exampleOptions" value="option one">Option one</auro-checkbox>
@@ -157,7 +163,13 @@ class AuroCheckbox extends Component {
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
-            {`<auro-checkbox-group>
+            {`<auro-checkbox-group required>
+  <span slot="legend">Example group</span>
+  <auro-checkbox id="optionOne" disabled name="exampleOptions" value="option one">Option one</auro-checkbox>
+  <auro-checkbox id="optionTwo" checked name="exampleOptions" value="option two">Option two</auro-checkbox>
+</auro-checkbox-group>
+
+<auro-checkbox-group>
   <span slot="legend">Example group</span>
   <auro-checkbox id="optionOne" disabled name="exampleOptions" value="option one">Option one</auro-checkbox>
   <auro-checkbox id="optionTwo" checked name="exampleOptions" value="option two">Option two</auro-checkbox>
@@ -169,6 +181,12 @@ class AuroCheckbox extends Component {
         <h3 className="auro_heading auro_heading--500">Checkbox Group with error</h3>
         <p>The auro-checkbox component is designed to work in concert with the auro-checkbox-group component. </p>
         <div className="demo--inline exampleWrapper">
+          <auro-checkbox-group required error="this is an error message">
+            <span slot="legend">Example group</span>
+            <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
+            <auro-checkbox id="optionTwo" checked name="exampleOptions" value="option two">Option two</auro-checkbox>
+          </auro-checkbox-group>
+
           <auro-checkbox-group error="this is an error message">
             <span slot="legend">Example group</span>
             <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
@@ -178,7 +196,13 @@ class AuroCheckbox extends Component {
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
-            {`<auro-checkbox-group error="this is an error message">
+            {`<auro-checkbox-group required error="this is an error message">
+  <span slot="legend">Example group</span>
+  <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
+  <auro-checkbox id="optionTwo" checked name="exampleOptions" value="option two">Option two</auro-checkbox>
+</auro-checkbox-group>
+
+<auro-checkbox-group error="this is an error message">
   <span slot="legend">Example group</span>
   <auro-checkbox id="optionOne" name="exampleOptions" value="option one">Option one</auro-checkbox>
   <auro-checkbox id="optionTwo" checked name="exampleOptions" value="option two">Option two</auro-checkbox>
