@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LinkIcons from 'components/linkIcons';
 import { NavLink } from "react-router-dom";
 
 export class Nav extends Component {
@@ -13,6 +14,11 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/generator/best-practice`} activeClassName="is-active">Best practices</NavLink>
         {/* <NavLink role="tab" exact className="tab link" to={`/generator/upgrade`} activeClassName="is-active">Update repo</NavLink> */}
         {/* <NavLink role="tab" exact className="tab link" to={`/aurolabs/minors`} activeClassName="is-active">auroLabs</NavLink> */}
+        <LinkIcons
+          github="https://github.com/AlaskaAirlines/WC-Generator/issues"
+          npm="https://www.npmjs.com/package/@aurodesignsystem/wc-generator"
+          code="https://github.com/AlaskaAirlines/WC-Generator"
+        />
       </div>
     )
   }
