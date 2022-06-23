@@ -1,17 +1,10 @@
 import React, { Component } from "react";
-import LinkIcons from 'components/linkIcons';
 import icons from 'assets/icons/icons.png';
 import { Nav } from './nav.js';
 import IconList from './iconList';
 
 
 class Icons extends Component {
-
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/icons'];
-    return `@alaskaairux/icons: ${dependencies}`;
-  };
 
   render() {
     return (
@@ -32,13 +25,6 @@ class Icons extends Component {
         <p>For quick application of Icons to any project, be sure to check out the <auro-hyperlink href="/components/auro/icon" relative>auro-icon</auro-hyperlink> component.</p>
 
         <IconList />
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/Icons"
-          npm="https://www.npmjs.com/package/@alaskaairux/icons"
-          code="https://github.com/AlaskaAirlines/Icons/tree/master/src/icons"
-          version={this.showVersion()}
-        />
 
       </section>
     );
