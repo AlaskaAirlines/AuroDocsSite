@@ -12,7 +12,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/carousel/api`} activeClassName="is-active">API</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/carousel/releases`} activeClassName="is-active">Releases</NavLink>
         <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-carousel/index"
+          github="https://github.com/AlaskaAirlines/auro-carousel/issues"
           npm="https://www.npmjs.com/package/@alaskaairux/auro-carousel"
           code="https://github.com/AlaskaAirlines/auro-carousel/blob/master/src/auro-carousel.js"
         />
