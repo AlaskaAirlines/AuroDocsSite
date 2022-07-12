@@ -52,6 +52,7 @@ export default function SideNav(props) {
         { linkTitle: "Checkbox input", route: '/components/auro/checkbox', parent: true },
         { linkTitle: "Combobox", route: '/components/auro/combobox', parent: true },
         { linkTitle: "Date/time", route: '/components/auro/datetime', parent: true },
+        { linkTitle: "Datepicker", route: '/components/auro/datepicker', parent: true },
         { linkTitle: "Dialog", route: '/components/auro/interruption/dialog', parent: true },
         { linkTitle: "Drawer", route: '/components/auro/interruption/drawer', parent: true },
         { linkTitle: "Dropdown", route: '/components/auro/dropdown', parent: true },
