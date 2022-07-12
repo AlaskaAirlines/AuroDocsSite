@@ -180,6 +180,13 @@ import AuroComboboxInstall from './content/dynamic/combobox/install';
 import AuroComboboxReleases from './content/dynamic/combobox/releases';
 import AuroComboboxFigma from './content/dynamic/combobox/figma'
 
+// datepicker
+import AuroDatepicker from './content/dynamic/datepicker/component';
+import AuroDatepickerApi from './content/dynamic/datepicker/api';
+import AuroDatepickerInstall from './content/dynamic/datepicker/install';
+import AuroDatepickerReleases from './content/dynamic/datepicker/releases';
+import AuroDatepickerFigma from './content/dynamic/datepicker/figma'
+
 // dropdown
 import AuroDropdown from './content/dynamic/dropdown/component';
 import AuroDropdownApi from './content/dynamic/dropdown/api';
@@ -421,6 +428,7 @@ function App() {
               <Route exact path="/datetime/"><AuroDateTime /></Route>
               <Route exact path="/dropdown"><AuroDropdown /></Route>
               <Route exact path="/combobox"><AuroCombobox /></Route>
+              <Route exact path="/datepicker"><AuroDatepicker /></Route>
               <Route exact path="/header"><AuroHeader /></Route>
               <Route exact path="/hyperlink"><AuroHyperlink /></Route>
               <Route exact path="/interruption/"><AuroInterruption /></Route>
@@ -546,6 +554,13 @@ function App() {
               <Route exact path="/components/auro/combobox/api"><AuroComboboxApi /></Route>
               <Route exact path="/components/auro/combobox/releases"><AuroComboboxReleases /></Route>
               <Route exact path="/components/auro/combobox/figma"><AuroComboboxFigma /></Route>
+
+              {/* Auro Datepicker */}
+              <Route exact path="/components/auro/datepicker"><AuroDatepicker /></Route>
+              <Route exact path="/components/auro/datepicker/install"><AuroDatepickerInstall /></Route>
+              <Route exact path="/components/auro/datepicker/api"><AuroDatepickerApi /></Route>
+              <Route exact path="/components/auro/datepicker/releases"><AuroDatepickerReleases /></Route>
+              <Route exact path="/components/auro/datepicker/figma"><AuroDatepickerFigma /></Route>
 
               {/* Auro Badge */}
               <Route exact path="/components/auro/badge"><AuroBadge /></Route>
