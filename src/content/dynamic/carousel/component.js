@@ -110,6 +110,38 @@ class AuroCarousel extends Component {
           </Highlight>
         </auro-accordion>
 
+        <auro-header level="2" display="700">Carousel with centerElement event</auro-header>
+        <div className="demo--inline exampleWrapper">
+          <auro-carousel label="Flight options">
+            {days.map((day, idx) => (
+              <auro-pane
+                key={day}
+                date={`2021-10-${(day + 1).toString().padStart(2, 0)}`}
+                selected={this.state.centerSelectedDay === idx ? true : undefined}
+                onClick={() => {
+                  this.setState({centerSelectedDay: idx});
+                }}>
+              </auro-pane>
+            ))}
+          </auro-carousel>
+        </div>
+        <auro-accordion lowProfile justifyRight>
+          <span slot="trigger">See code</span>
+          <Highlight className='html afterCode'>
+            {`<auro-carousel label="Flight options">
+  <auro-pane date="2020-01-01"></auro-pane>
+  <auro-pane date="2020-01-02"></auro-pane>
+  <auro-pane date="2020-01-03"></auro-pane>
+  <auro-pane date="2020-01-04" selected></auro-pane>
+  <auro-pane date="2020-01-05"></auro-pane>
+  <auro-pane date="2020-01-06"></auro-pane>
+
+  ...
+
+</auro-carousel>`}
+          </Highlight>
+        </auro-accordion>
+
         <auro-header level="2" display="700">Carousel of images w/custom scroll distance</auro-header>
         <div className="demo--inline exampleWrapper">
           <auro-carousel label="Images" scrollDistance="600">
