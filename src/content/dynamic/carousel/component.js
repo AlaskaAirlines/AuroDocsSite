@@ -13,6 +13,7 @@ class AuroCarousel extends Component {
       selectedDay: 3,
       anotherSelectedDay: 4
     };
+    this.centerCarouselRef = React.createRef();
   }
 
   render() {
@@ -110,16 +111,17 @@ class AuroCarousel extends Component {
           </Highlight>
         </auro-accordion>
 
-        <auro-header level="2" display="700">Carousel with centerElement event</auro-header>
+        <auro-header level="2" display="700">Carousel that calls centerElement onClick</auro-header>
         <div className="demo--inline exampleWrapper">
-          <auro-carousel label="Flight options">
+          <auro-carousel label="Flight options" ref={this.centerCarouselRef}>
             {days.map((day, idx) => (
               <auro-pane
                 key={day}
                 date={`2021-10-${(day + 1).toString().padStart(2, 0)}`}
                 selected={this.state.centerSelectedDay === idx ? true : undefined}
-                onClick={() => {
+                onClick={({ target }) => {
                   this.setState({centerSelectedDay: idx});
+                  this.centerCarouselRef.current.centerElement(target);
                 }}>
               </auro-pane>
             ))}
