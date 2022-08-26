@@ -4,11 +4,6 @@ let randomNumber = ''
 
 class Repo extends Component {
 
-  charGenerate() {
-    const chars = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-    randomNumber = [...Array(10)].map(i=>chars[Math.random()*chars.length|0]).join``
-  }
-
   render() {
     if (!this.props.isPrivate) {
       if (this.props.releases.nodes.length !== 0) {
@@ -18,6 +13,18 @@ class Repo extends Component {
               <auro-hyperlink nav href={this.props.homepageUrl}><strong>{this.props.name}</strong></auro-hyperlink>
               <div>
                 <small>
+                  { // loop over releases for URL to last release
+                    this.props.releases.nodes.length !== 0
+                      ? this.props.releases.nodes.map(({tagName, id, url}) => (
+                          <div key={id}>
+                            <auro-hyperlink href={url} target="_blank" nav>Release {tagName}</auro-hyperlink>
+                          </div>
+                        ))
+                      : <div className="badge">
+                          <div className="title">Release</div>
+                          <div className="data data--null">v0</div>
+                        </div>
+                  }
                   <auro-hyperlink href={`https://github.com/AlaskaAirlines/${this.props.name}/pulse`} target="_blank" nav>Insights</auro-hyperlink><br/>
                   {
                     this.props.pullRequests.totalCount > 0
@@ -31,28 +38,9 @@ class Repo extends Component {
               <a href={`https://github.com/AlaskaAirlines/${this.props.name}/`} target="_blank" rel="noopener noreferrer"><img alt={`${this.props.name} build status`}src={`https://img.shields.io/github/workflow/status/AlaskaAirlines/${this.props.name}/Test%20and%20publish?branch=master&style=for-the-badge`} style={{'marginBottom': '-8px', 'maxWidth': 'unset'}}></img></a>
             </td>
             <td>
-              { this.charGenerate() }
-              { // loop over releases for URL to last release
-                this.props.releases.nodes.length !== 0
-                  ? this.props.releases.nodes.map(({tagName, createdAt, id, url}) => (
-                      <div key={id}>
-                        <a href={url} target="_blank" rel="noopener noreferrer" style={{'textDecoration': 'none'}}>
-                          <div className="badge util_pointer" id={randomNumber}>
-                            <div className="title">Release</div>
-                            <div className="data data--release">{tagName}</div>
-                          </div>
-                        </a>
-                        <auro-popover for={randomNumber} sticky>
-                          <strong>Last release: </strong>
-                          <auro-datetime utc={createdAt} weekday="long"></auro-datetime>
-                        </auro-popover>
-                      </div>
-                    ))
-                  : <div className="badge">
-                      <div className="title">Release</div>
-                      <div className="data data--null">v0</div>
-                    </div>
-              }
+              <a href={`https://snyk.io/test/github/AlaskaAirlines/${this.props.name}?tab=issues`} target="_blank" rel="noopener noreferrer">
+                <img alt="Snyk Vulnerabilities for GitHub Repo" style={{'marginBottom': '-8px', 'maxWidth': 'unset'}} src={`https://img.shields.io/snyk/vulnerabilities/github/AlaskaAirlines/${this.props.name}?style=for-the-badge`}/>
+              </a>
             </td>
             <td className="auro_util_nowrap">
               {
