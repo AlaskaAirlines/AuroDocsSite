@@ -26,7 +26,9 @@ The Auro WC-Generator is a ready-to-build development environment where all the 
 
 ## Using the Auro WC-Generator
 
-To use the generator, please read through the [Getting Started](https://auro.alaskaair.com/getting-started/developers/generator/getting-started) documentation.
+To use the generator, please read through the [installer guide](/generator/install) as well as our [API documentation](/generator/api).
+
+It will be informative to read through the [generator's best practices](/generator/best-practice) and [API development](/generator/define-api) documentation. As well as our [CSS guidelines](/css/conventions), specifically the section on [idiomatic CSS](/css/idiomatic-css). Lastly, please review our contributing guidelines documentation on [Conventional Commits](https://auro.alaskaair.com/contributing#:~:text=the%20outlined%20steps.-,Conventional%20Commits,-This%20project%20utilizes).
 
 ## Expectations
 
