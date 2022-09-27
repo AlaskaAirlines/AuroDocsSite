@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-let randomNumber = ''
-
 class Repo extends Component {
 
   render() {
