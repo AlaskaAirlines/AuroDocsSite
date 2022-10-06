@@ -2,7 +2,7 @@ import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
-// import markdownContent from '@alaskaairux/webcorestylesheets/CONVENTIONS.md'
+// import markdownContent from '@aurodesignsystem/webcorestylesheets/CONVENTIONS.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 // This doc should be relocated to WCSS

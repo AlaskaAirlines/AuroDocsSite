@@ -8,22 +8,19 @@
 
 // Import Auro tokens
 @import '~@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
-@import "~@alaskaairux/webcorestylesheets/dist/breakpoints";
-
-// accessibility
-@import "~@alaskaairux/webcorestylesheets/dist/utilityMixins/focusVisible";
+@import "~@aurodesignsystem/webcorestylesheets/dist/breakpoints";
 
 // Auro typography and spacing
 $prefix: true;
 $paragraph: true;
-@import "~@alaskaairux/webcorestylesheets/dist/essentials";
-@import "~@alaskaairux/webcorestylesheets/dist/utilityClasses/fontStyles";
-@import "~@alaskaairux/webcorestylesheets/dist/headings";
-@import "~@alaskaairux/webcorestylesheets/dist/utilityMixins/layoutPropertiesGenerator";
-@import "~@alaskaairux/webcorestylesheets/dist/componentSupport/table";
+@import "~@aurodesignsystem/webcorestylesheets/dist/essentials";
+@import "~@aurodesignsystem/webcorestylesheets/dist/utilityClasses/fontStyles";
+@import "~@aurodesignsystem/webcorestylesheets/dist/headings";
+@import "~@aurodesignsystem/webcorestylesheets/dist/utilityMixins/layoutPropertiesGenerator";
+@import "~@aurodesignsystem/webcorestylesheets/dist/componentSupport/table";
 $prefix: null;
 
-@import url('https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/elementDemoStyles.css');
+@import url('https://unpkg.com/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css');
 
 .auro-markdown {
 

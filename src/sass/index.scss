@@ -6,32 +6,32 @@
 
 // WCSS imports
 /* ------------------------ WCSS imports ------------------------ */
-@import '~@alaskaairux/webcorestylesheets/dist/breakpoints';
-@import '~@alaskaairux/webcorestylesheets/dist/fonts';
-@import '~@alaskaairux/webcorestylesheets/dist/componentSupport/tablist';
-@import '~@alaskaairux/webcorestylesheets/dist/componentSupport/containedButtons';
-@import '~@alaskaairux/webcorestylesheets/dist/utilityClasses/layoutProperties';
-@import '~@alaskaairux/webcorestylesheets/dist/picture';
+@import '~@aurodesignsystem/webcorestylesheets/dist/breakpoints';
+@import '~@aurodesignsystem/webcorestylesheets/dist/fonts';
+@import '~@aurodesignsystem/webcorestylesheets/dist/componentSupport/tablist';
+@import '~@aurodesignsystem/webcorestylesheets/dist/componentSupport/containedButtons';
+@import '~@aurodesignsystem/webcorestylesheets/dist/utilityClasses/layoutProperties';
+@import '~@aurodesignsystem/webcorestylesheets/dist/picture';
 
 // Auro typography
 /* ------------------------ Auro typography ------------------------ */
-@import '~@alaskaairux/webcorestylesheets/dist/essentials';
+@import '~@aurodesignsystem/webcorestylesheets/dist/essentials';
 
 $prefix: true;
 $paragraph: true;
-@import '~@alaskaairux/webcorestylesheets/dist/utilityClasses/fontStyles';
-@import '~@alaskaairux/webcorestylesheets/dist/headings';
+@import '~@aurodesignsystem/webcorestylesheets/dist/utilityClasses/fontStyles';
+@import '~@aurodesignsystem/webcorestylesheets/dist/headings';
 $prefix: null;
 
 // Auro Selector generators
 /* ------------------------ Auro Selector generators ------------------------ */
-@import '~@alaskaairux/webcorestylesheets/dist/utilityMixins/_layoutPropertiesGenerator';
+@import '~@aurodesignsystem/webcorestylesheets/dist/utilityMixins/_layoutPropertiesGenerator';
 
 $auro-spacing-types: stack;
 $important: true;
 @import '~@alaskaairux/design-tokens/dist/tokens/SCSSVariableMap';
-@import '~@alaskaairux/webcorestylesheets/dist/utilityMixins/spacingUtility';
+@import '~@aurodesignsystem/webcorestylesheets/dist/utilityMixins/spacingUtility';
 
 // Table
 /* ------------------------ Table ------------------------ */
-@import '~@alaskaairux/webcorestylesheets/dist/componentSupport/table';
+@import '~@aurodesignsystem/webcorestylesheets/dist/componentSupport/table';
