@@ -14,8 +14,6 @@
     "@alaskaairux/auro-table": "^1.0.2",
     "@alaskaairux/design-tokens": "^3.11.0",
     "@alaskaairux/icons": "^4.16.0",
-    "@alaskaairux/orion-web-core-style-sheets": "^2.12.2",
-    "@alaskaairux/webcorestylesheets": "^3.7.3",
     "@apollo/react-components": "^3.1.5",
     "@apollo/react-hooks": "^3.1.5",
     "@aurodesignsystem/webcorestylesheets": "^4.1.0",
