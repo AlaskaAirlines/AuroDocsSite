@@ -5,7 +5,7 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-combobox/main/demo/apiExamples.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-combobox/main/demo/api.md';
 
 class AuroComboboxApi extends MarkdownPageWrapper {
 
@@ -40,8 +40,6 @@ class AuroComboboxApi extends MarkdownPageWrapper {
         renderer: renderer
     });
   }
-
-
 
   render() {
     return (
