@@ -6,7 +6,7 @@ import 'prismjs/themes/prism.css';
 // import markdownContent from '@alaskaairux/auro-select/demo/demo.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-select/master/demo/demo.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-select/master/demo/index.md';
 
 class AuroSelect extends MarkdownPageWrapper {
 
