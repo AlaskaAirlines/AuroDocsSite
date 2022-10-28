@@ -24,7 +24,7 @@
   <div>
     <auro-header display="700">Philosophy</auro-header>
     <p>We promote ease and inspire engagement through focused and intentional design. Translating our friendly and optimistic brand, our digital experiences establish emotional connections — delivering care and value. Simple. Consistent. Relevant. Engaging.</p>
-    <auro-hyperlink href="/philosophy" relative>Learn More About Our Philosophy</auro-hyperlink>
+    <auro-hyperlink href="https://auro.alaskaair.com/design-philosophy" relative>Learn More About Our Philosophy</auro-hyperlink>
   </div>
   <div>
     <auro-header display="700">Resources</auro-header>
