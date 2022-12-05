@@ -28,20 +28,14 @@ Please see the items below for commonly asked questions regarding development an
       <p>Getting started with Auro may seem daunting at first, but once basic foundations are in place, it's all plug-n-play after that. First off, please see the <auro-hyperlink href="/getting-started/developers/compliance" relative>Compliance</auro-hyperlink> section for an understanding on the levels of Auro compliance from CSS to web components.</p>
       <p>An important part and core element of everything from CSS to web components are <auro-hyperlink href="getting-started/developers/design-tokens" relative>design tokens</auro-hyperlink>. Design tokens are common variables for all of the core atomic UI properties. Fonts, colors, sizes, breakpoints, etc ... if it's a common value to the UI, it's a design token.</p>
       <p>Next it's suggested to get familiar with <auro-hyperlink href="/webcorestylesheets" relative>Web Core Style Sheets</auro-hyperlink>, or WCSS for short. WCSS is a foundational CSS library to assist in the quick and easy setup of Auro styles. Also, don't forget to review the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/" target="_blank">WCSS API</auro-hyperlink> for an inside look at this supporting library.</p>
-      <p>No UI would be complete without the use of <auro-hyperlink href="/icons/overview" relative>icons</auro-hyperlink>. Auro has a vast array of predefined SVG icons to be used. Please see the documentation for all the ways you can make use of this library, or make use of Auro's easy to use  <auro-hyperlink href="/components/auro/icon" relative>icon custom element</auro-hyperlink>.</p>
+      <p>No UI would be complete without the use of <auro-hyperlink href="/icons" relative>icons</auro-hyperlink>. Auro has a vast array of predefined SVG icons to be used. Please see the documentation for all the ways you can make use of this library, or make use of Auro's easy to use  <auro-hyperlink href="/components/auro/icon" relative>icon custom element</auro-hyperlink>.</p>
       <p>Last, please see the list of available pre-developed <auro-hyperlink href="/component-status" relative>HTML native custom elements</auro-hyperlink>. These components can be used in virtually any development stack. Be sure you checkout the <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink>, <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink> and <auro-hyperlink href="/javascriptSetup" relative>standard JS</auro-hyperlink> example projects.</p>
-    </div>
-  </auro-accordion>
-  <auro-accordion id="getStarted" chromeless noProfile>
-    <span slot="trigger">Q: Does Auro use LitElement?</span>
-    <div class="lightText">
-      <p>Yes. LitElement is the base class that all Auro custom elements are built upon. Auro currently supports <auro-hyperlink target="_blank" href="https://www.npmjs.com/package/lit-element/v/2.5.1">Lit-element v2.5.1</auro-hyperlink>. There is a plan to convert all current custom elements to the new <auro-hyperlink target="_blank" href="https://lit.dev/">Lit 2.0 spec</auro-hyperlink> by the end of 2022.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="getStarted" chromeless noProfile>
     <span slot="trigger">Q: How do I contact the Auro Team?</span>
     <div class="lightText">
-      <p>There are a lot of ways to get questions and support issues to the team. If there is an issue you are seeing with any of the parts of the Auro ecosystem, we highly recommend that you send a support issue. Select any of the ISSUE buttons on our <auro-hyperlink relative href="/component-status">status</auro-hyperlink> page and submit an issue from the repository.</p>
+      <p>There are a lot of ways to get questions and support issues to the team. If there is an issue you are seeing with any of the parts of the Auro ecosystem, we highly recommend that you send a support issue. Select any of the ISSUE buttons on our <auro-hyperlink relative href="/component-status">status</auro-hyperlink> page and submit an issue from the repository. Or click the Github Issue link that appears at the top of every Auro element page.</p>
       <p>When sending an issue is not enough, take a look at our <auro-hyperlink href="/officehours" relative>Office Hours</auro-hyperlink> for the best time to contact us.</p>
     </div>
   </auro-accordion>
@@ -49,6 +43,22 @@ Please see the items below for commonly asked questions regarding development an
     <span slot="trigger">Q: How do I submit an issue?</span>
     <div class="lightText">
       <p>Auro is not an single repository, but an ecosystem of tools and components. Every part of the ecosystem has its own Github repo. To submit an issue with any of the repos in Auro's ecosystem, please see our <auro-hyperlink href="/component-status" relative>component status</auro-hyperlink> page and click/tap on the repo's corresponding <i>ISSUES</i> badge.</p>
+      <p>There are also Github Issue links at the top of every Auro element page.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="getStarted" chromeless noProfile>
+    <span slot="trigger">Q: How do I submit a pull request?</span>
+    <div class="lightText">
+      <p>Submitting a pull request is the life blood of any open source project. But to ensure that you are submitting work that will be merged, we ask that you PLEASE first submit an issue with the work you have in mind. Allowing the Auro team to understand your potential contribution will assist in the submission and code review process.</p>
+      <p>We ask that you allow up to 48 hours for the Auro team to respond to your submitted issue prior to doing any work. We have found at times that eager developers address issues that on the surface seem easy to address but are unaware of an ecosystem complexity. We would hate for you to lose time working on a submission that may not be accepted.</p>
+      <p>Once an issue is submitted, someone from the Auro team will respond within 48 hours to provide any guidance and support needed prior to doing any work. Once that consultation has been addressed, we look forward to your contribution to the Auro design system.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="getStarted" chromeless noProfile>
+    <span slot="trigger">Q: What tech does Auro use?</span>
+    <div class="lightText">
+      <p>LitElement is the base class that all Auro custom elements are built upon. Auro currently supports <auro-hyperlink target="_blank" href="https://www.npmjs.com/package/lit-element/v/2.5.1">Lit-element v2.5.1</auro-hyperlink>. There is a plan to convert all current custom elements to the new <auro-hyperlink target="_blank" href="https://lit.dev/">Lit 2.0 spec</auro-hyperlink> by the end of 2023.</p>
+      <p>LitElement is "Interoperable & future-ready". Meaning that while we use LitElement as our base technology, we are not constrained by it's use. For a full list of all the platforms LitElement supports, please see <auro-hyperlink target="_blank" href="https://custom-elements-everywhere.com/">Custom Elements Everywhere</auro-hyperlink>.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="getStarted" chromeless noProfile>
@@ -79,24 +89,15 @@ Please see the items below for commonly asked questions regarding development an
     <span slot="trigger">Q: Does Auro have a standard for CSS?</span>
     <div class="lightText">
       <p>CSS in Auro is no different than in any other project. The better CSS is organized, the easier it is to follow and maintain. Regardless of scope.</p>
-      <p><auro-hyperlink href="/webcorestylesheets/conventions" relative>Auro's opinions on CSS</auro-hyperlink> are simple and easy to follow. Single responsibility, tokens and utilities, it's all covered. In addition to these conventions, Auro has a full <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/" target="_blank">CSS library</auro-hyperlink>to help with daily development. You may also want to review <auro-hyperlink relative href="/webcorestylesheets/custom-element-css">CSS styles and custom elements</auro-hyperlink> for helpful information and background for writing CSS for custom elements.</p>
+      <p><auro-hyperlink href="/css/conventions" relative>Auro's opinions on CSS</auro-hyperlink> are simple and easy to follow. Single responsibility, tokens and utilities, it's all covered. In addition to these conventions, Auro has a full <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/" target="_blank">CSS library</auro-hyperlink>to help with daily development. You may also want to review <auro-hyperlink relative href="/css/custom-element-css">CSS styles and custom elements</auro-hyperlink> for helpful information and background for writing CSS for custom elements.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="generator" chromeless noProfile>
     <span slot="trigger">Q: What is the WC-Generator?</span>
     <div class="lightText">
       <p>The <auro-hyperlink href="/generator/install" relative>Auro WC-Generator</auro-hyperlink> is an easy to use and easy to setup developer experience for starting new web component projects based on the LitElement base class. When building HTML custom elements there is a lot of boiler-plate code and support needed for testing and demo setup. The Auro team works hard to keep this generator up to date to ensure quality of code and developer experience with each new project.</p>
-      <p>For more information on how to start a project from scratch, be sure to take a look at <auro-hyperlink href="/getting-started/developers/generator/getting-started" relative>Getting Started</auro-hyperlink> guide for a step-by-step walk-through.</p>
     </div>
   </auro-accordion>
-  <!-- <auro-accordion id="generator" chromeless noProfile>
-    <span slot="trigger">Q: What is auroLabs?</span>
-    <div class="lightText">
-      <p><auro-hyperlink href="/aurolabs" relative>auroLabs</auro-hyperlink> is a process to enable development of new ideas without all the pre-process that is typically required to add a new component to the design system. </p>
-      <p>That being said, this does not ignore the process. It simply reverses priorities. auroLabs allows engineers to build and deliver an idea allowing for a iterative refinement process post it's first release. </p>
-      <p>Make sure to refer to the <auro-hyperlink href="/aurolabs" relative>auroLabs</auro-hyperlink> page for all information regarding this process.</p>
-    </div>
-  </auro-accordion> -->
   <auro-accordion id="release" chromeless noProfile>
     <span slot="trigger">Q: How many components have been released?</span>
     <div class="lightText">
@@ -129,12 +130,6 @@ Please see the items below for commonly asked questions regarding development an
 
 <auro-accordion-group>
   <auro-accordion id="newWork" chromeless noProfile>
-    <span slot="trigger">Q: How do teams bring work to Auro?</span>
-    <!-- <div class="lightText">
-      <p>New work comes from everywhere. Bringing new ideas to Auro is as simple as submitting a new issue or scheduling a meeting with the Auro team. Please see the <auro-hyperlink relative href="https://auro.alaskaair.com/aurolabs">auroLabs</auro-hyperlink> page for more details about this specific process.</p>
-    </div> -->
-  </auro-accordion>
-  <auro-accordion id="newWork" chromeless noProfile>
     <span slot="trigger">Q: A new element variant is discovered?</span>
     <div class="lightText">
       <p>What is a new variant when it comes to Auro custom elements? It's basically the same as with any variant in a design, but in this context it requires new feature support.</p>
@@ -148,7 +143,7 @@ Please see the items below for commonly asked questions regarding development an
     <span slot="trigger">Q: What is Auro's SLA?</span>
     <div class="lightText">
       <auro-header level="3" display="500">Issues</auro-header>
-      <p>When it comes to servicing our customers we hold ourselves to a high level of support. Once an issue is submitted, you have our promise that you will receive a response within 24 hours. </p>
+      <p>When it comes to servicing our customers we hold ourselves to a high level of support. Once an issue is submitted, you have our promise that you will receive a response within 48 hours. </p>
       <p>That is not to say that we will address the issue within that time, but someone from our team will respond to your issue with the information we have and what our plan will be to prioritize the issue.</p>
       <p>Prioritization of work will take a few things into consideration, but the overall process will follow the MoSCoW approach. </p>
       <ul>
@@ -159,17 +154,10 @@ Please see the items below for commonly asked questions regarding development an
       </ul>
       <p>Following these guidelines, every new request, and even bug reports, can be judged fairly and prioritized appropriately.</p>
       <auro-header level="3" display="500">Pull Requests</auro-header>
-      <p>For pull requests, our SLA is the same. Please allow up to 24 hours for solicited code changes that are associated with an approved issue. If the pull request is unsolicited and not associated with an approved issue, please allow up to 72 hours for a response. To help expedite this process, please submit an issue for review prior to submitting a pull request. </p>
+      <p>For pull requests, our SLA is the same. Please allow up to 48 hours for solicited code changes that are associated with an approved issue. If the pull request is unsolicited and not associated with an approved issue, please allow up to 72 hours for a response. To help expedite this process, please submit an issue for review prior to submitting a pull request. </p>
       <p>Please see our <auro-hyperlink href="/contributing" relative>Auro Design System Contributing Guidelines</auro-hyperlink> for more information.</p>
     </div>
   </auro-accordion>
-  <!-- <auro-accordion id="sla" chromeless noProfile>
-    <span slot="trigger">Q: Issues, draft PRs and labels?</span>
-    <div class="lightText">
-      <p>Seeing the <auro-hyperlink href="https://github.com/orgs/AlaskaAirlines/projects/1" target="_blank">volume of work</auro-hyperlink>, it's easy to see how things can get lost and issues can fall through the cracks. Well, we have a plan for that. Labeling, comments, and draft PRs are all tools that we can use to signal the correct people as to the state of work.</p>
-      <p>Please be sure to review the <auro-hyperlink relative href="/contributing/issues-prs-labels">Issues, pull requests and labels</auro-hyperlink> section if our site for a full descriptions of this process.</p>
-    </div>
-  </auro-accordion> -->
 </auro-accordion-group>
 
 ## Frequently asked Tech support questions

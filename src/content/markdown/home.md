@@ -65,11 +65,26 @@
       <p>Last, please see the list of available pre-developed <auro-hyperlink href="/component-status" relative>HTML native custom elements</auro-hyperlink>. These components can be used in virtually any development stack. Be sure you checkout the <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink>, <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink> and <auro-hyperlink href="/javascriptSetup" relative>standard JS</auro-hyperlink> example projects.</p>
     </div>
   </auro-accordion>
+  <auro-accordion id="getStarted" chromeless noProfile>
+    <span slot="trigger">Q: How do I submit an issue?</span>
+    <div class="lightText">
+      <p>Auro is not an single repository, but an ecosystem of tools and components. Every part of the ecosystem has its own Github repo. To submit an issue with any of the repos in Auro's ecosystem, please see our <auro-hyperlink href="/component-status" relative>component status</auro-hyperlink> page and click/tap on the repo's corresponding <i>ISSUES</i> badge.</p>
+      <p>There are also Github Issue links at the top of every Auro element page.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="getStarted" chromeless noProfile>
+    <span slot="trigger">Q: How do I submit a pull request?</span>
+    <div class="lightText">
+      <p>Submitting a pull request is the life blood of any open source project. But to ensure that you are submitting work that will be merged, we ask that you PLEASE first submit an issue with the work you have in mind. Allowing the Auro team to understand your potential contribution will assist in the submission and code review process.</p>
+      <p>We ask that you allow up to 48 hours for the Auro team to respond to your submitted issue prior to doing any work. We have found at times that eager developers address issues that on the surface seem easy to address but are unaware of an ecosystem complexity. We would hate for you to lose time working on a submission that may not be accepted.</p>
+      <p>Once an issue is submitted, someone from the Auro team will respond within 48 hours to provide any guidance and support needed prior to doing any work. Once that consultation has been addressed, we look forward to your contribution to the Auro design system.</p>
+    </div>
+  </auro-accordion>
   <auro-accordion id="sla" chromeless noProfile>
     <span slot="trigger">Q: What is Auro's SLA?</span>
     <div class="lightText">
       <auro-header level="3" display="500">Issues</auro-header>
-      <p>When it comes to servicing our customers we hold ourselves to a high level of support. Once an issue is submitted, you have our promise that you will receive a response within 24 hours. </p>
+      <p>When it comes to servicing our customers we hold ourselves to a high level of support. Once an issue is submitted, you have our promise that you will receive a response within 48 hours. </p>
       <p>That is not to say that we will address the issue within that time, but someone from our team will respond to your issue with the information we have and what our plan will be to prioritize the issue.</p>
       <p>Prioritization of work will take a few things into consideration, but the overall process will follow the MoSCoW approach. </p>
       <ul>
@@ -80,14 +95,15 @@
       </ul>
       <p>Following these guidelines, every new request, and even bug reports, can be judged fairly and prioritized appropriately.</p>
       <auro-header level="3" display="500">Pull Requests</auro-header>
-      <p>For pull requests, our SLA is the same. Please allow up to 24 hours for solicited code changes that are associated with an approved issue. If the pull request is unsolicited and not associated with an approved issue, please allow up to 72 hours for a response. To help expedite this process, please submit an issue for review prior to submitting a pull request. </p>
+      <p>For pull requests, our SLA is the same. Please allow up to 48 hours for solicited code changes that are associated with an approved issue. If the pull request is unsolicited and not associated with an approved issue, please allow up to 72 hours for a response. To help expedite this process, please submit an issue for review prior to submitting a pull request. </p>
       <p>Please see our <auro-hyperlink href="/contributing" relative>Auro Design System Contributing Guidelines</auro-hyperlink> for more information.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="getStarted" chromeless noProfile>
-    <span slot="trigger">Q: Does Auro use LitElement?</span>
+    <span slot="trigger">Q: What tech does Auro use?</span>
     <div class="lightText">
-      <p>Yes. LitElement is the base class that all Auro custom elements are built upon. Auro currently supports <auro-hyperlink target="_blank" href="https://www.npmjs.com/package/lit-element/v/2.5.1">Lit-element v2.5.1</auro-hyperlink>. There is a plan to convert all current custom elements to the new <auro-hyperlink target="_blank" href="https://lit.dev/">Lit 2.0 spec</auro-hyperlink> by the end of 2022.</p>
+      <p>LitElement is the base class that all Auro custom elements are built upon. Auro currently supports <auro-hyperlink target="_blank" href="https://www.npmjs.com/package/lit-element/v/2.5.1">Lit-element v2.5.1</auro-hyperlink>. There is a plan to convert all current custom elements to the new <auro-hyperlink target="_blank" href="https://lit.dev/">Lit 2.0 spec</auro-hyperlink> by the end of 2023.</p>
+      <p>LitElement is "Interoperable & future-ready". Meaning that while we use LitElement as our base technology, we are not constrained by it's use. For a full list of all the platforms LitElement supports, please see <auro-hyperlink target="_blank" href="https://custom-elements-everywhere.com/">Custom Elements Everywhere</auro-hyperlink>.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="getStarted" chromeless noProfile>
@@ -114,19 +130,19 @@
       <p>Alternative bundled versions may be available for custom elements, please see <strong>Install bundled assets from CDN</strong> in each project's README for more information.</p>
     </div>
   </auro-accordion>
-  <!-- <auro-accordion id="generator" chromeless noProfile>
-    <span slot="trigger">Q: What is auroLabs?</span>
-    <div class="lightText">
-      <p><auro-hyperlink href="/aurolabs" relative>auroLabs</auro-hyperlink> is a process to enable development of new ideas without all the pre-process that is typically required to add a new component to the design system. </p>
-      <p>That being said, this does not ignore the process. It simply reverses priorities. auroLabs allows engineers to build and deliver an idea allowing for a iterative refinement process post it's first release. </p>
-      <p>Make sure to refer to the <auro-hyperlink href="/aurolabs" relative>auroLabs</auro-hyperlink> page for all information regarding this process.</p>
-    </div>
-  </auro-accordion> -->
 <auro-accordion-group>
 
 ## What people are saying about Auro
 
 <div class="auro_util_displayFlex columns home--quotes">
+  <div>
+    <blockquote>Auro is a great tool to keep micro sites at Alaska looking like Alaska</blockquote>
+    <p>-- Daniel Zwelling, Software Engineer</p>
+  </div>
+  <div>
+    <blockquote>If you're looking for consistency in design, accessibility, and speed you should definitely give Auro a shot. Auro's framework agnostic design means I can use it in just about anything!</blockquote>
+    <p>-- Michael Archer, Software Engineer</p>
+  </div>
   <div>
     <blockquote>Been working on some new tools for the team and decided to use the auro stuff to get rolling quickly and its so easy to use. Love the work you've been doing - keep it up!</blockquote>
     <p>-- Josh Benard, Sr Product Mgr</p>
