@@ -2,7 +2,6 @@ import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
-// import markdownContent from '@alaskaairux/auro-menu/README.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-menu/master/README.md';
@@ -11,9 +10,9 @@ class AuroMenuInstall extends MarkdownPageWrapper {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-menu'];
+    const dependencies = pjson.dependencies['@aurodesignsystem/auro-menu'];
 
-    return `@alaskaairux/auro-menu: ${dependencies}`;
+    return `@aurodesignsystem/auro-menu: ${dependencies}`;
   };
 
   // function to get text from MD document
