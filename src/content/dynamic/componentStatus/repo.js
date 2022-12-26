@@ -33,7 +33,7 @@ class Repo extends Component {
               </div>
             </td>
             <td>
-              <a href={`https://github.com/AlaskaAirlines/${this.props.name}/`} target="_blank" rel="noopener noreferrer"><img alt={`${this.props.name} build status`}src={`https://img.shields.io/github/workflow/status/AlaskaAirlines/${this.props.name}/Test%20and%20publish?branch=master&style=for-the-badge`} style={{'marginBottom': '-8px', 'maxWidth': 'unset'}}></img></a>
+              <a href={`https://github.com/AlaskaAirlines/${this.props.name}/`} target="_blank" rel="noopener noreferrer"><img alt={`${this.props.name} build status`}src={`https://img.shields.io/github/actions/workflow/status/AlaskaAirlines/${this.props.name}/testPublish.yml?branch=master&style=for-the-badge`} style={{'marginBottom': '-8px', 'maxWidth': 'unset'}}></img></a>
             </td>
             <td>
               <a href={`https://snyk.io/test/github/AlaskaAirlines/${this.props.name}?tab=issues`} target="_blank" rel="noopener noreferrer">
