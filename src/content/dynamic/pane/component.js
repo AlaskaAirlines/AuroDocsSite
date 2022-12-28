@@ -51,14 +51,14 @@ class AuroPane extends Component {
         <div className="demo--inline exampleWrapper paneContainer">
           <auro-pane date="2020-09-20" price="$500"></auro-pane>
           <auro-pane date="2020-09-21" price="$501" selected></auro-pane>
-          <auro-pane date="2020-09-22" price="" disabled></auro-pane>
+          <auro-pane date="2020-09-22" price="$480" disabled></auro-pane>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
             {`<auro-pane date="2020-09-10" price="$500"></auro-pane>
 <auro-pane date="2020-09-21" price="$501" selected></auro-pane>
-<auro-pane date="2020-09-22" price="" disabled></auro-pane>`}
+<auro-pane date="2020-09-22" price="$480" disabled></auro-pane>`}
           </Highlight>
         </auro-accordion>
 
@@ -67,14 +67,14 @@ class AuroPane extends Component {
         <div className="demo--inline exampleWrapper paneContainer">
           <auro-pane sm date="2020-09-20" price="$500"></auro-pane>
           <auro-pane sm date="2020-09-21" price="$501" selected></auro-pane>
-          <auro-pane sm date="2020-09-22" price="" disabled></auro-pane>
+          <auro-pane sm date="2020-09-22" price="$480" disabled></auro-pane>
         </div>
         <auro-accordion lowProfile justifyRight>
           <span slot="trigger">See code</span>
           <Highlight className='html afterCode'>
             {`<auro-pane sm date="2020-09-10" price="$500"></auro-pane>
 <auro-pane sm date="2020-09-21" price="$501" selected></auro-pane>
-<auro-pane sm date="2020-09-22" price="" disabled></auro-pane>`}
+<auro-pane sm date="2020-09-22" price="$480" disabled></auro-pane>`}
           </Highlight>
         </auro-accordion>
       </section>
