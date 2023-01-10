@@ -243,34 +243,34 @@ class Typography extends Component {
         <auro-header level="2" display="800">Design tokens</auro-header>
         <p>Please see <auro-hyperlink href="/getting-started/developers/design-tokens/install" relative>install docs</auro-hyperlink> for more information.</p>
         <auro-header level="3" display="500">Font families</auro-header>
-        <auro-tokens-list componentData={_getTokens(font, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(font, [])}></auro-tokenlist>
 
         <auro-header level="3" display="500">Heading defaults</auro-header>
-        <auro-tokens-list componentData={_getTokens(textHeadingDefault, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeadingDefault, [])}></auro-tokenlist>
 
         <auro-header level="3" display="500">Heading display</auro-header>
-        <auro-tokens-list componentData={_getTokens(textHeadingDisplay, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeadingDisplay, [])}></auro-tokenlist>
 
         <auro-header level="3" display="500">Heading 800</auro-header>
-        <auro-tokens-list componentData={_getTokens(textHeading800, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeading800, [])}></auro-tokenlist>
 
         <auro-header level="3" display="500">Heading 700</auro-header>
-        <auro-tokens-list componentData={_getTokens(textHeading700, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeading700, [])}></auro-tokenlist>
 
         <auro-header level="3" display="500">Heading 600</auro-header>
-        <auro-tokens-list componentData={_getTokens(textHeading600, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeading600, [])}></auro-tokenlist>
 
         <auro-header level="3" display="500">Heading 500</auro-header>
-        <auro-tokens-list componentData={_getTokens(textHeading500, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeading500, [])}></auro-tokenlist>
 
         <auro-header level="3" display="500">Heading 400</auro-header>
-        <auro-tokens-list componentData={_getTokens(textHeading400, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeading400, [])}></auro-tokenlist>
 
         <auro-header level="3" display="500">Heading 300</auro-header>
-        <auro-tokens-list componentData={_getTokens(textHeading300, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textHeading300, [])}></auro-tokenlist>
 
         <auro-header level="3" display="500">Body (default, lg, sm, xs)</auro-header>
-        <auro-tokens-list componentData={_getTokens(textBody, [])}></auro-tokens-list>
+        <auro-tokenlist componentData={_getTokens(textBody, [])}></auro-tokenlist>
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/OrionWebCoreStyleSheets"
