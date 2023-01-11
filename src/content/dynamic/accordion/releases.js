@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
-import Release from '../releaseDashboard/release';
+import Releases from '../releaseDashboard/releases';
 import { Nav } from './nav';
 
 const RELEASES = gql`
@@ -42,7 +42,7 @@ class AllReleases extends Component {
 
             return data.organization.team.repositories.nodes.map(({ name, releases }) => (
               releases.nodes.length > 0
-                ? <Release key={name} name={name} releases={releases.nodes} />
+                ? <Releases key={name} name={name} releases={releases.nodes} />
                 : ''
             ));
           }}

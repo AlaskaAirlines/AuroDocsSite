@@ -42,8 +42,8 @@ class ReleasesBySprint extends Component {
 
             const sprintsDataset = createSprintReleaseDataset(sprints, data.organization.team.repositories.nodes);
 
-            return sprintsDataset.map(({sprintName, releases}) => (
-              <Release key={sprintName} name={sprintName} releases={releases} />
+            return sprintsDataset.map(({sprintName, releases, sprintStartDate, sprintEndDate}) => (
+              <Release key={sprintName} name={sprintName} releases={releases} start={sprintStartDate} end={sprintEndDate} />
             ));
           }}
         </Query>
