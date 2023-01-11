@@ -9,14 +9,6 @@ const options = {
   day: "numeric",
 };
 
-const yearOptions = {
-  weekday: "short",
-  year: "numeric",
-  month: "short",
-  day: "numeric",
-};
-
-
 class Release extends MarkdownPageWrapper {
   render() {
     return (

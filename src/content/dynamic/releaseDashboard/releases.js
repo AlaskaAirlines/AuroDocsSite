@@ -3,20 +3,6 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const options = {
-  weekday: "short",
-  month: "short",
-  day: "numeric",
-};
-
-const yearOptions = {
-  weekday: "short",
-  year: "numeric",
-  month: "short",
-  day: "numeric",
-};
-
-
 class Release extends MarkdownPageWrapper {
   render() {
     return (
