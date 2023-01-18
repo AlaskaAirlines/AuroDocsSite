@@ -1,20 +1,44 @@
 import React from "react";
 import { Nav } from './nav';
-import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
-// import markdownContent from '@alaskaairux/auro-select/docs/api.md'
+import marked from 'marked';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-select/main/demo/apiExamples.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-select/main/demo/api.md';
 
 class AuroSelectApi extends MarkdownPageWrapper {
 
-  componentWillMount() {
-    fetch(markdownContent).then((response) => response.text()).then((text) => {
-      this.setState({
-        contentBuild: text
-      })
-    })
+  // function to get text from MD document
+  getMarkdownText() {
+    fetch(markdownContent)
+        .then((response) => response.text())
+        .then((text) => {
+          const rawHtml = marked(text);
+          document.querySelector('.auro-markdown').innerHTML = rawHtml;
+          Prism.highlightAll();
+        });
+
+    const renderer = new marked.Renderer();
+    renderer.link = function(href, title, text) {
+      const link = marked.Renderer.prototype.link.call(this, href, title, text);
+      let url = href
+      url = url.replace(/^.*\/\/[^/]+/, '')
+
+      if (href.includes("auro.alaskaair.com") || href.charAt(0) === '#') {
+
+        return link.replace("href",`href="${url}"`);
+      } else {
+
+        const newLink = `<a href="${href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
+
+        return newLink;
+      }
+    };
+
+    marked.setOptions({
+        renderer: renderer
+    });
   }
 
   render() {
@@ -23,15 +47,10 @@ class AuroSelectApi extends MarkdownPageWrapper {
 
         <Nav />
 
-        <section className="auro-markdown">
-          <ReactMarkdown
-            source={this.state.contentBuild}
-            escapeHtml={false}
-            renderers={{
-              code: CodeBlock,
-              heading: this.headingRenderer
-            }}/>
-        </section>
+        <section
+          className="auro-markdown"
+          dangerouslySetInnerHTML={this.getMarkdownText()}
+        />
       </section>
     );
   }
