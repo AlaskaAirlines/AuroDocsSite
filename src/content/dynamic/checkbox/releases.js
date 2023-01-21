@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Query } from '@apollo/react-components';
 import { gql } from 'apollo-boost';
-import Release from '../releaseDashboard/release';
+import Release from '../releaseDashboard/releases';
 import { Nav } from './nav';
 
 const RELEASES = gql`
