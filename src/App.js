@@ -279,6 +279,13 @@ import AuroMenuFigma from './content/dynamic/menu/figma';
 import AuroMenuInstall from './content/dynamic/menu/install';
 import AuroMenuReleases from './content/dynamic/menu/releases';
 
+// Nav
+import AuroNav from './content/dynamic/nav/component';
+import AuroNavApi from './content/dynamic/nav/api';
+import AuroNavFigma from './content/dynamic/nav/figma';
+import AuroNavInstall from './content/dynamic/nav/install';
+import AuroNavReleases from './content/dynamic/nav/releases';
+
 // Select
 import AuroSelect from './content/dynamic/select/component';
 import AuroSelectApi from './content/dynamic/select/api';
@@ -436,6 +443,7 @@ function App() {
               <Route exact path="/input"><AuroInput /></Route>
               <Route exact path="/lockup"><AuroLockup /></Route>
               <Route exact path="/menu"><AuroMenu /></Route>
+              <Route exact path="/nav"><AuroNav /></Route>
               <Route exact path="/pane/"><AuroPane /></Route>
               <Route exact path="/popover"><AuroPopover /></Route>
               <Route exact path="/radio"><AuroRadio /></Route>
@@ -620,6 +628,13 @@ function App() {
               <Route exact path="/components/auro/menu/figma"><AuroMenuFigma /></Route>
               <Route exact path="/components/auro/menu/releases"><AuroMenuReleases /></Route>
 
+              {/* Auro Nav */}
+              <Route exact path="/components/auro/nav"><AuroNav /></Route>
+              <Route exact path="/components/auro/nav/install"><AuroNavInstall /></Route>
+              <Route exact path="/components/auro/nav/api"><AuroNavApi /></Route>
+              <Route exact path="/components/auro/nav/figma"><AuroNavFigma /></Route>
+              <Route exact path="/components/auro/nav/releases"><AuroNavReleases /></Route>
+
               {/* Auro Select */}
               <Route exact path="/components/auro/select"><AuroSelect /></Route>
               <Route exact path="/components/auro/select/install"><AuroSelectInstall /></Route>
@@ -709,6 +724,9 @@ function App() {
 
               {/* menu */}
               <Route exact path="/components/auro/menu/"><Wip /></Route>
+
+              {/* nav */}
+              <Route exact path="/components/auro/nav/"><Wip /></Route>
 
               {/* pane */}
               <Route exact path="/components/auro/pane/"><AuroPane /></Route>
