@@ -6,7 +6,7 @@ import allTokens from '@alaskaairux/design-tokens/dist/tokens/JSObject--allToken
 
 const animation = allTokens.animation;
 const elevation = allTokens.elevation;
-const breakpoint = allTokens.breakpoint;
+const breakpoint = allTokens.gridBreakpoint;
 const depth = allTokens.depth;
 const size = allTokens.size;
 const border = allTokens.border;
