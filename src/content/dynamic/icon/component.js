@@ -42,7 +42,21 @@ class AuroIcon extends MarkdownPageWrapper {
     });
   }
 
-
+  componentDidMount() {
+    const customIconScriptId = "customIconScript";
+    let customIconScriptTag = document.getElementById(customIconScriptId);
+    if (!customIconScriptTag) {
+      customIconScriptTag = document.createElement('script');
+      customIconScriptTag.type = 'module';
+      customIconScriptTag.id = customIconScriptId;
+      customIconScriptTag.async = true;
+      customIconScriptTag.innerHTML = `
+        import { registerComponent as registerIcon } from "https://cdn.jsdelivr.net/npm/@alaskaairux/auro-icon@latest/dist/auro-icon__bundled.js"
+        registerIcon('custom-icon');
+      `
+      document.body.appendChild(customIconScriptTag);
+    }
+  }
 
   render() {
     return (
