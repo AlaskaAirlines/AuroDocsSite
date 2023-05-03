@@ -9,6 +9,18 @@ const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-c
 
 class AuroCombobox extends MarkdownPageWrapper {
 
+  componentDidMount() {
+    const scriptSrc = 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-combobox@latest/apiExamples/swapValue.js';
+    const script = document.querySelector(`script[src="${scriptSrc}"]`);
+
+    if (!script) {
+      let customScriptTag = document.createElement('script');
+      customScriptTag.src = scriptSrc;
+      customScriptTag.async = true;
+      document.body.appendChild(customScriptTag);
+    }
+  }
+
   // function to get text from MD document
   getMarkdownText() {
     fetch(markdownContent)
@@ -41,8 +53,6 @@ class AuroCombobox extends MarkdownPageWrapper {
     });
   }
 
-
-
   render() {
     return (
       <section className="auro_baseType">
@@ -53,7 +63,6 @@ class AuroCombobox extends MarkdownPageWrapper {
           className="auro-markdown"
           dangerouslySetInnerHTML={this.getMarkdownText()}
         />
-        <script src="https://raw.githubusercontent.com/AlaskaAirlines/auro-combobox/main/demo/index.js"></script>
       </section>
     );
   }
