@@ -1,24 +1,27 @@
-# Contributing Guidelines
+# Contributing to Auro
+Auro team categorizes contributions into 3 categories with a few differences between how they are handled:
+ * Bug: If you encounter a bug in an Auro component, please check if there is an existing issue in our [GitHub repositories](https://github.com/orgs/AlaskaAirlines/repositories) that describes it. If not, please create a new issue in the appropriate repository and follow the template for bug reports. If you are able and willing to fix the bug yourself, please assign yourself to the issue and proceed to Step 4. Otherwise, the Auro team will prioritize the issue and work on a fix.
+ * Existing issue in GitHub: If you find an existing issue in an Auro [GitHub repo](https://github.com/orgs/AlaskaAirlines/repositories) that you want to work on, please read the details and comments on that issue and contact the Auro engineers to let them know. They will assign you to the issue and you can proceed to Step 4.
+ * New Feature/functionality: If you are in need of a new feature, or new functionality for an Auro component, please follow all the steps below.
+## Flow of Contribution
+Below is what we consider our standard flow of contribution to Auro.  That is to say, the expected steps to successfully contribute code to Auro.  Skipping any of these steps may result in sending requests back to get the necessary approvals/check-offs from Product and design.  Our goal with this process is to accommodate large contributions in the form of new components, while also trying to be as light weight as possible for small changes and bug fixes.
+### Step 1: Meet with Product
+First step is to reach out to our Product Manager, Brandon Shields, via e-mail or Teams message.  The larger the change, the larger the lead time we will need to assess the impact of the change. Please provide as much detail as possible about your proposed contribution, such as:
+ * What problem are you trying to solve?
+ * What is the scope and impact of your contribution?
+ * How does your contribution align with Auro’s vision and goals?
+ * Do you have any mockups or prototypes of your contribution?
+### Step 2: Meet with Design
+Once you have met with our Product manager, you should reach out to our Product Designer, June Lee for final design approval via teams or e-mail.  The design approval process may vary depending on the size and complexity of your contribution.
+### Step 3: Consult with Engineering
+Step 3 is a check-in to engage with engineering to discuss any architectural or technical aspects of your contribution, as well as to get guidance and support. You should maintain regular communication with the Auro engineers throughout the development process. You can reach them via the [Auro Guild Teams Channel](https://teams.microsoft.com/l/channel/19%3a1d6708349b9f437d88a9e3bc48fa6b1f%40thread.tacv2/Auro%2520Users%2520and%2520Contributors?groupId=b28e0e4d-943b-472d-9c2c-0f15d562abc1&tenantId=0f44c5d4-42b0-45c2-bf55-d0fea8430d33) or via [office hours](http://auro.alaskaair.com/officehours) if you are external to Alaska Arilines
+### Step 4: Create a Draft PR
+Once you have had your initial meeting with Engineering and started coding, please create a draft PR so that the Auro team can monitor your progress and offer timely assistance as needed
+### Step 5: Do coding to it!
+This is the fun part. Be sure to keep in touch with the Auro engineers for any questions or issues you may encounter. Remember to update your draft PR frequently. Also, be sure to follow our coding standards below and follow our Auro Compliance guide
+### Step 6: Submit for review
+When you are done, notify the engineering team for a final review. If you are making any design changes or implementing a new component, please also include designers in the review. If everything looks good (all tagged reviewers approved with no changes requested), your PR will be merged into main and the issue will be closed in GitHub.
 
-Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
-
-## Feature Requests
-
-Feature requests stem from a business need. Also be sure to find out whether your idea fits with the scope and aims of the project of if this serves to address a personal/local scenario. It is up to you to make a strong case to convince the project's managers of the merits of this feature. Please provide as much detail and context as possible.
-
-## Reporting Bugs
-
-A bug is defined by: "A demonstrable problem that is caused by a file in the repository." Good bug reports are extremely helpful - thank you!
-
-Guidelines for bug reports:
-
-1. Use the search option under Boards > Work Items — check if the issue has already been reported
-1. Check if the issue has been fixed — try to reproduce it using the latest master or development branch in the repository
-1. Isolate the problem — ideally create a reduced test case and a live example
-
-A good bug report shouldn't leave others needing to chase you up for more information. Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS experience the problem? What would you expect to be the outcome? All these details will help people to fix any potential bugs.
-
-Poor bug reports will be reassigned back to the creator for revision prior to any additional investigation.
 
 ## Submitting pull requests
 
