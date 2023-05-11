@@ -5,20 +5,17 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
+// import { initComboboxIndexExamples } from 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-combobox@latest/demo/index.min.js';
+
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-combobox/main/demo/index.md';
 
 class AuroCombobox extends MarkdownPageWrapper {
 
   componentDidMount() {
-    const scriptSrc = 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-combobox@latest/apiExamples/swapValue.js';
-    const script = document.querySelector(`script[src="${scriptSrc}"]`);
+    console.log("component did mount INDEX");
+    const event = new Event('auroCombobox-indexMounted');
 
-    if (!script) {
-      let customScriptTag = document.createElement('script');
-      customScriptTag.src = scriptSrc;
-      customScriptTag.async = true;
-      document.body.appendChild(customScriptTag);
-    }
+    document.dispatchEvent(event);
   }
 
   // function to get text from MD document
