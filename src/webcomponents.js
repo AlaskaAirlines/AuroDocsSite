@@ -14,8 +14,8 @@ import "@alaskaairux/auro-pane";
 import "@alaskaairux/auro-table/dist/auro-table";
 
 // input type radio/checkbox
-import "@alaskaairux/auro-checkbox";
-import "@alaskaairux/auro-checkbox/dist/auro-checkbox-group";
+// import "@alaskaairux/auro-checkbox";
+// import "@alaskaairux/auro-checkbox/dist/auro-checkbox-group";
 
 // back-to-top
 import "@aurolabs/auro-back-to-top";

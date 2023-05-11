@@ -7,7 +7,6 @@
   "private": true,
   "dependencies": {
     "@alaskaairux/auro-carousel": "^1.3.0",
-    "@alaskaairux/auro-checkbox": "^1.2.0",
     "@alaskaairux/auro-loader": "^1.1.1",
     "@alaskaairux/auro-pane": "^1.2.3",
     "@alaskaairux/auro-radio": "^1.6.2",
