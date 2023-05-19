@@ -12,9 +12,9 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/popover/api`} activeClassName="is-active">API</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/popover/releases`} activeClassName="is-active">Releases</NavLink>
         <LinkIcons
-          github="https://github.com/AlaskaAirlines/auro-datetime/issues"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-datetime"
-          code="https://github.com/AlaskaAirlines/auro-datetime/blob/master/src/auro-datetime.js"
+          github="https://github.com/AlaskaAirlines/auro-popover/issues"
+          npm="https://www.npmjs.com/package/@alaskaairux/auro-popover"
+          code="https://github.com/AlaskaAirlines/auro-popover/blob/master/src/auro-popover.js"
         />
 
       </div>
