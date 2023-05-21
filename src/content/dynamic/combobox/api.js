@@ -5,17 +5,12 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-// import { initComboboxApiExamples } from 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-combobox@latest/demo/api.min.js';
-
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-combobox/main/demo/api.md';
 
 class AuroComboboxApi extends MarkdownPageWrapper {
 
   componentDidMount() {
-    console.log("component did mount API");
-    const event = new Event('auroCombobox-apiMounted');
-
-    document.dispatchEvent(event);
+    window.initComboboxApiExamples();
   }
 
   // function to get text from MD document
