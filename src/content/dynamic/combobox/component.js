@@ -12,10 +12,7 @@ const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-c
 class AuroCombobox extends MarkdownPageWrapper {
 
   componentDidMount() {
-    console.log("component did mount INDEX");
-    const event = new Event('auroCombobox-indexMounted');
-
-    document.dispatchEvent(event);
+    window.initComboboxIndexExamples();
   }
 
   // function to get text from MD document
