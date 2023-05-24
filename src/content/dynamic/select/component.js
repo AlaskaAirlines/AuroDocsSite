@@ -10,6 +10,10 @@ const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-s
 
 class AuroSelect extends MarkdownPageWrapper {
 
+  componentDidMount() {
+    window.initSelectIndexExamples();
+  }
+
   // function to get text from MD document
   getMarkdownText() {
     fetch(markdownContent)

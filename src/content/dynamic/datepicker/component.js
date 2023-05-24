@@ -9,6 +9,10 @@ const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-d
 
 class AuroDatepicker extends MarkdownPageWrapper {
 
+  componentDidMount() {
+    window.initDatepickerIndexExamples();
+  }
+
   // function to get text from MD document
   getMarkdownText() {
     fetch(markdownContent)

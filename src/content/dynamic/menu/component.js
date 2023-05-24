@@ -9,6 +9,10 @@ const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-m
 
 class AuroMenu extends MarkdownPageWrapper {
 
+  componentDidMount() {
+    window.initMenuIndexExamples();
+  }
+
   // function to get text from MD document
   getMarkdownText() {
     fetch(markdownContent)
