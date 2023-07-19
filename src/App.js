@@ -261,9 +261,10 @@ import AuroHyperlinkFigma from './content/dynamic/hyperlink/figma';
 import AuroHyperlinka11y from './content/dynamic/hyperlink/a11y';
 
 // toast
-import Toast from './content/dynamic/toast/toast';
-import ToastInstall from './content/dynamic/toast/install';
-import ToastToaster from './content/dynamic/toast/toaster';
+import AuroToast from './content/dynamic/toast/component';
+import AuroToastApi from './content/dynamic/toast/api';
+import AuroToastInstall from './content/dynamic/toast/install';
+import AuroToastReleases from './content/dynamic/toast/releases';
 
 // Table
 import AuroTable from './content/dynamic/table/component';
@@ -450,7 +451,7 @@ function App() {
               <Route exact path="/skeleton"><AuroSkeleton /></Route>
               <Route exact path="/tokenlist"><AuroTokenlist /></Route>
               <Route exact path="/table"><AuroTable /></Route>
-              <Route exact path="/toast/"><Toast /></Route>
+              <Route exact path="/toast"><AuroToast /></Route>
 
 
               {/* Getting Started/developers */}
@@ -621,6 +622,12 @@ function App() {
               <Route exact path="/components/auro/table/figma"><AuroTableFigma /></Route>
               <Route exact path="/components/auro/table/releases"><AuroTableReleases /></Route>
 
+              {/* Auro Toast */}
+              <Route exact path="/components/auro/toast"><AuroToast /></Route>
+              <Route exact path="/components/auro/toast/install"><AuroToastInstall /></Route>
+              <Route exact path="/components/auro/toast/api"><AuroToastApi /></Route>
+              <Route exact path="/components/auro/toast/releases"><AuroToastReleases /></Route>
+
               {/* Auro Menu */}
               <Route exact path="/components/auro/menu"><AuroMenu /></Route>
               <Route exact path="/components/auro/menu/install"><AuroMenuInstall /></Route>
@@ -667,11 +674,6 @@ function App() {
               <Route exact path="/components/auro/hyperlink/releases"><AuroHyperlinkReleases /></Route>
               <Route exact path="/components/auro/hyperlink/figma"><AuroHyperlinkFigma /></Route>
               <Route exact path="/components/auro/hyperlink/a11y"><AuroHyperlinka11y /></Route>
-
-              {/* toast */}
-              <Route exact path="/components/orion/toast/"><Toast /></Route>
-              <Route exact path="/components/orion/toast/install"><ToastInstall /></Route>
-              <Route exact path="/components/orion/toast/toaster"><ToastToaster /></Route>
 
               {/* card */}
               <Route exact path="/components/auro/card/"><AuroCard /></Route>

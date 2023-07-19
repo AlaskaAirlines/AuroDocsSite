@@ -1,18 +1,18 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/ods-toast/master/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-toast/main/README.md';
 
-class AuroButtonInstall extends MarkdownPageWrapper {
+class AuroToastInstall extends MarkdownPageWrapper {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/ods-toast'];
-    return `@alaskaairux/ods-toast: ${dependencies}`;
+    const dependencies = pjson.dependencies['@aurodesignsystem/auro-toast'];
+
+    return `@aurodesignsystem/auro-toast: ${dependencies}`;
   };
 
   // function to get text from MD document
@@ -41,14 +41,9 @@ class AuroButtonInstall extends MarkdownPageWrapper {
             }}/>
         </section>
 
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/ods-toast"
-          npm="https://www.npmjs.com/package/@alaskaairux/ods-toast"
-          code="https://github.com/AlaskaAirlines/ods-toast/blob/master/src/ods-toast.js"
-        />
       </section>
     );
   }
 }
 
-export default AuroButtonInstall;
+export default AuroToastInstall;
