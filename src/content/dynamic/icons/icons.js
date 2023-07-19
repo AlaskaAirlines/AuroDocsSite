@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import icons from 'assets/icons/icons.png';
 import { Nav } from './nav.js';
-import IconList from './iconList';
+// import IconList from './iconList';
 
 
 class Icons extends Component {
@@ -24,7 +24,7 @@ class Icons extends Component {
 
         <p>For quick application of Icons to any project, be sure to check out the <auro-hyperlink href="/components/auro/icon" relative>auro-icon</auro-hyperlink> component.</p>
 
-        <IconList />
+        {/* <IconList /> */}
 
       </section>
     );
