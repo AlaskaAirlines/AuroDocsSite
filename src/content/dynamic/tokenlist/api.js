@@ -2,7 +2,7 @@ import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
-// import markdownContent from '@alaskaairux/auro-tokenlist/docs/api.md'
+// import markdownContent from '@aurodesignsystem/auro-tokenlist/docs/api.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-tokenlist/master/docs/api.md';

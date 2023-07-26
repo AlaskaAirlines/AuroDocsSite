@@ -11,7 +11,7 @@ import "@alaskaairux/auro-carousel";
 import "@alaskaairux/auro-pane";
 
 // table
-import "@alaskaairux/auro-table/dist/auro-table";
+// import "@alaskaairux/auro-table/dist/auro-table";
 
 // input type radio/checkbox
 // import "@alaskaairux/auro-checkbox";

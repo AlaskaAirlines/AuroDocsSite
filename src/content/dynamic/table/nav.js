@@ -11,10 +11,9 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/table/install`} activeClassName="is-active">Install</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/table/api`} activeClassName="is-active">API</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/table/releases`} activeClassName="is-active">Releases</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/table/figma`} activeClassName="is-active">Design support</NavLink>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-table/issues"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-table"
+          npm="https://www.npmjs.com/package/@aurodesignsystem/auro-table"
           code="https://github.com/AlaskaAirlines/auro-table/blob/master/src/auro-table.js"
         />
 

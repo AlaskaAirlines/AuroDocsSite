@@ -8,13 +8,6 @@ const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-b
 
 class AuroAlertsInstall extends MarkdownPageWrapper {
 
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-badge'];
-
-    return `@alaskaairux/auro-badge: ${dependencies}`;
-  };
-
   // function to get text from MD document
   componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {

@@ -3,7 +3,7 @@ import { Nav } from './nav';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
-// import markdownContent from '@alaskaairux/auro-icon/demo/demo.md'
+// import markdownContent from '@aurodesignsystem/auro-icon/demo/demo.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-icon/master/demo/demo.md';
@@ -51,7 +51,7 @@ class AuroIcon extends MarkdownPageWrapper {
       customIconScriptTag.id = customIconScriptId;
       customIconScriptTag.async = true;
       customIconScriptTag.innerHTML = `
-        import { registerComponent as registerIcon } from "https://cdn.jsdelivr.net/npm/@alaskaairux/auro-icon@latest/dist/auro-icon__bundled.js"
+        import { registerComponent as registerIcon } from "https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-icon@latest/dist/auro-icon__bundled.js"
         registerIcon('custom-icon');
       `
       document.body.appendChild(customIconScriptTag);

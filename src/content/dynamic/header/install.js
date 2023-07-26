@@ -8,13 +8,6 @@ const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-h
 
 class AuroButtonInstall extends MarkdownPageWrapper {
 
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-header'];
-
-    return `@alaskaairux/auro-header: ${dependencies}`;
-  };
-
   // function to get text from MD document
   componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {

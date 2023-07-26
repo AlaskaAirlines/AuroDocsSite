@@ -10,7 +10,6 @@
     "@alaskaairux/auro-loader": "^1.1.1",
     "@alaskaairux/auro-pane": "^1.2.3",
     "@alaskaairux/auro-radio": "^1.6.2",
-    "@alaskaairux/auro-table": "^1.0.2",
     "@alaskaairux/design-tokens": "^3.14.0",
     "@alaskaairux/icons": "^4.28.0",
     "@apollo/react-components": "^3.1.5",

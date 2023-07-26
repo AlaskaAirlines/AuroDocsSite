@@ -3,7 +3,7 @@ import { Nav } from './nav';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
-// import markdownContent from '@alaskaairux/auro-select/demo/demo.md'
+// import markdownContent from '@aurodesignsystem/auro-select/demo/demo.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-select/master/demo/index.md';

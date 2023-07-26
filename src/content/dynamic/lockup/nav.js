@@ -13,7 +13,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/lockup/releases`} activeClassName="is-active">Releases</NavLink>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-lockup/issues"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-lockup"
+          npm="https://www.npmjs.com/package/@aurodesignsystem/auro-lockup"
           code="https://github.com/AlaskaAirlines/auro-lockup/blob/master/src/auro-lockup.js"
         />
 
