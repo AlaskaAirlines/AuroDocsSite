@@ -4,12 +4,15 @@ import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-sidenav/main/demo/demo.md';
 
 class AuroSideNav extends MarkdownPageWrapper {
 
-
+  componentDidMount() {
+    registerCustomComponent('custom-sidenav', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-sidenav@latest/dist/auro-sidenav__bundled.js');
+  }
 
   // function to get text from MD document
   getMarkdownText() {

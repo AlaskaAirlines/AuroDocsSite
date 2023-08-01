@@ -5,6 +5,7 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 // import markdownContent from '@aurodesignsystem/auro-header/demo/demo.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-header/master/demo/demo.md';
 
@@ -43,19 +44,7 @@ class AuroHeader extends MarkdownPageWrapper {
   }
 
   componentDidMount() {
-    const customScriptId = "customHeaderScript";
-    let customScriptTag = document.getElementById(customScriptId);
-    if (!customScriptTag) {
-      customScriptTag = document.createElement('script');
-      customScriptTag.type = 'module';
-      customScriptTag.id = customScriptId;
-      customScriptTag.async = true;
-      customScriptTag.innerHTML = `
-        import { registerComponent as registerHeader } from "https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-header@latest/dist/auro-header__bundled.js"
-        registerHeader('custom-header');
-      `
-      document.body.appendChild(customScriptTag);
-    }
+    registerCustomComponent('custom-header', 'https://cdn.jsdelivr.net/npm/@alaskaairux/auro-header@latest/dist/auro-header__bundled.js');
   }
 
 

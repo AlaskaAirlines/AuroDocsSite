@@ -5,6 +5,7 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 // import markdownContent from '@aurodesignsystem/auro-icon/demo/demo.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-icon/master/demo/demo.md';
 
@@ -43,19 +44,7 @@ class AuroIcon extends MarkdownPageWrapper {
   }
 
   componentDidMount() {
-    const customIconScriptId = "customIconScript";
-    let customIconScriptTag = document.getElementById(customIconScriptId);
-    if (!customIconScriptTag) {
-      customIconScriptTag = document.createElement('script');
-      customIconScriptTag.type = 'module';
-      customIconScriptTag.id = customIconScriptId;
-      customIconScriptTag.async = true;
-      customIconScriptTag.innerHTML = `
-        import { registerComponent as registerIcon } from "https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-icon@latest/dist/auro-icon__bundled.js"
-        registerIcon('custom-icon');
-      `
-      document.body.appendChild(customIconScriptTag);
-    }
+    registerCustomComponent('custom-icon', 'https://cdn.jsdelivr.net/npm/@alaskaairux/auro-icon@latest/dist/auro-icon__bundled.js');
   }
 
   render() {
