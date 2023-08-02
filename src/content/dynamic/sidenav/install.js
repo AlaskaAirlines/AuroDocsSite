@@ -6,7 +6,7 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-sidenav/main/README.md';
 
-class AuroSideNavInstall extends MarkdownPageWrapper {
+class AuroSidenavInstall extends MarkdownPageWrapper {
 
   showVersion() {
     const pjson = require('../../../../package.json');
@@ -46,4 +46,4 @@ class AuroSideNavInstall extends MarkdownPageWrapper {
   }
 }
 
-export default AuroSideNavInstall;
+export default AuroSidenavInstall;

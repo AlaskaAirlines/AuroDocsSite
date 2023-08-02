@@ -233,10 +233,10 @@ import AuroCheckboxReleases from './content/dynamic/checkbox/releases';
 import AuroCheckboxFigma from './content/dynamic/checkbox/figma';
 
 // sidenav
-import AuroSideNav from './content/dynamic/sidenav/component';
-import AuroSideNavApi from './content/dynamic/sidenav/api';
-import AuroSideNavInstall from './content/dynamic/sidenav/install';
-import AuroSideNavReleases from './content/dynamic/sidenav/releases';
+import AuroSidenav from './content/dynamic/sidenav/component';
+import AuroSidenavApi from './content/dynamic/sidenav/api';
+import AuroSidenavInstall from './content/dynamic/sidenav/install';
+import AuroSidenavReleases from './content/dynamic/sidenav/releases';
 
 // radio button
 import AuroRadio from './content/dynamic/radio/component';
@@ -604,10 +604,10 @@ function App() {
               <Route exact path="/components/auro/checkbox/figma"><AuroCheckboxFigma /></Route>
 
               {/* Auro SideNav */}
-              <Route exact path="/components/auro/sidenav"><AuroSideNav /></Route>
-              <Route exact path="/components/auro/sidenav/install"><AuroSideNavInstall /></Route>
-              <Route exact path="/components/auro/sidenav/api"><AuroSideNavApi /></Route>
-              <Route exact path="/components/auro/sidenav/releases"><AuroSideNavReleases /></Route>
+              <Route exact path="/components/auro/sidenav"><AuroSidenav /></Route>
+              <Route exact path="/components/auro/sidenav/install"><AuroSidenavInstall /></Route>
+              <Route exact path="/components/auro/sidenav/api"><AuroSidenavApi /></Route>
+              <Route exact path="/components/auro/sidenav/releases"><AuroSidenavReleases /></Route>
 
 
               {/* Auro Popover */}
