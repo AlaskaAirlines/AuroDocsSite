@@ -8,7 +8,7 @@ import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-sidenav/main/demo/demo.md';
 
-class AuroSideNav extends MarkdownPageWrapper {
+class AuroSidenav extends MarkdownPageWrapper {
 
   componentDidMount() {
     registerCustomComponent('custom-sidenav', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-sidenav@latest/dist/auro-sidenav__bundled.js');
@@ -63,4 +63,4 @@ class AuroSideNav extends MarkdownPageWrapper {
   }
 }
 
-export default AuroSideNav;
+export default AuroSidenav;

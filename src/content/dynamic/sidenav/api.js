@@ -7,7 +7,7 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-sidenav/main/demo/apiExamples.md';
 
-class AuroSideNavApi extends MarkdownPageWrapper {
+class AuroSidenavApi extends MarkdownPageWrapper {
 
   // function to get text from MD document
   getMarkdownText() {
@@ -56,4 +56,4 @@ class AuroSideNavApi extends MarkdownPageWrapper {
   }
 }
 
-export default AuroSideNavApi;
+export default AuroSidenavApi;

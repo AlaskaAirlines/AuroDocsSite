@@ -25,7 +25,7 @@ const RELEASES = gql`
 }
 `
 
-class AuroSideNavReleases extends Component {
+class AuroSidenavReleases extends Component {
   render() {
     return (
       <section id="releases">
@@ -52,4 +52,4 @@ class AuroSideNavReleases extends Component {
   }
 }
 
-export default AuroSideNavReleases;
+export default AuroSidenavReleases;

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import icons from 'assets/icons/icons.png';
 import { Nav } from './nav.js';
-// import IconList from './iconList';
-
 
 class Icons extends Component {
 
