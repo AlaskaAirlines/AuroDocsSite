@@ -15,7 +15,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/hyperlink/a11y`} activeClassName="is-active">Accessibility</NavLink>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-hyperlink/issues"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-hyperlink"
+          npm="https://www.npmjs.com/package/@aurodesignsystem/auro-hyperlink"
           code="https://github.com/AlaskaAirlines/auro-hyperlink/blob/master/src/auro-hyperlink.js"
         />
 

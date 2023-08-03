@@ -14,7 +14,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/combobox/figma`} activeClassName="is-active">Design Support</NavLink>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-combobox/issues"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-combobox"
+          npm="https://www.npmjs.com/package/@aurodesignsystem/auro-combobox"
           code="https://github.com/AlaskaAirlines/auro-combobox/blob/master/src/auro-combobox.js"
         />
 

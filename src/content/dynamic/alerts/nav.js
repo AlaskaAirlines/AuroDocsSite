@@ -14,7 +14,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/alert/figma`} activeClassName="is-active">Design support</NavLink>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-alerts/issues"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-alerts"
+          npm="https://www.npmjs.com/package/@aurodesignsystem/auro-alert"
           code="https://github.com/AlaskaAirlines/auro-alerts/blob/initialBuild/src/auro-alerts.js"
         />
       </div>

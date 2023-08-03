@@ -14,7 +14,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/datepicker/figma`} activeClassName="is-active">Design Support</NavLink>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-datepicker/issues"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-datepicker"
+          npm="https://www.npmjs.com/package/@aurodesignsystem/auro-datepicker"
           code="https://github.com/AlaskaAirlines/auro-datepicker/blob/master/src/auro-datepicker.js"
         />
 

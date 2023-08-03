@@ -14,7 +14,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/flight/releases`} activeClassName="is-active">Releases</NavLink>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-flight"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-flight"
+          npm="https://www.npmjs.com/package/@aurodesignsystem/auro-flight"
           code="https://github.com/AlaskaAirlines/auro-flight/blob/master/src/auro-flight.js"
         />
 

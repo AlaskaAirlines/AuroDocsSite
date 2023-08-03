@@ -13,7 +13,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/datetime/releases`} activeClassName="is-active">Releases</NavLink>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-datetime/issues"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-datetime"
+          npm="https://www.npmjs.com/package/@aurodesignsystem/auro-datetime"
           code="https://github.com/AlaskaAirlines/auro-datetime/blob/master/src/auro-datetime.js"
         />
 
