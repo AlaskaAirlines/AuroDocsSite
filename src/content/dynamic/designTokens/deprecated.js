@@ -42,7 +42,7 @@ class DeprecatedTokens extends Component {
           <li>Updated npm name space to @aurodesignsystem</li>
           <li>100% removal of all the deprecated tokens listed below</li>
           <li>Releasing features to support themes and other color modes</li>
-          <li>The removal of the <code>auro</code> token name prefix, e.g. <code>var(--auro-size-none)</code> will become <code>var(--size-none)</code></li>
+          <li>The removal of the <code>auro</code> token name prefix, e.g. <code>var(--auro-size-none)</code> will become <code>var(--ds-size-none)</code></li>
         </ul>
 
         <h2 className="auro_heading auro_heading--700">Post 3.0 deprecated tokens</h2>
