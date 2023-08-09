@@ -312,6 +312,12 @@ import AuroPopoverApi from './content/dynamic/popover/api';
 import AuroPopoverInstall from './content/dynamic/popover/install';
 import AuroPopoverReleases from './content/dynamic/popover/releases';
 
+// BacktoTop
+import AuroBacktotop from './content/dynamic/backtotop/component';
+import AuroBacktotopApi from './content/dynamic/backtotop/api';
+import AuroBacktotopInstall from './content/dynamic/backtotop/install';
+import AuroBacktotopReleases from './content/dynamic/backtotop/releases';
+
 // Tokenlist
 import AuroTokenlist from './content/dynamic/tokenlist/component';
 import AuroTokenlistApi from './content/dynamic/tokenlist/api';
@@ -582,6 +588,13 @@ function App() {
               <Route exact path="/components/auro/badge/install"><AuroBadgeInstall /></Route>
               <Route exact path="/components/auro/badge/api"><AuroBadgeApi /></Route>
               <Route exact path="/components/auro/badge/releases"><AuroBadgeReleases /></Route>
+
+
+              {/* Auro BacktoTop */}
+              <Route exact path="/components/auro/backtotop"><AuroBacktotop /></Route>
+              <Route exact path="/components/auro/backtotop/install"><AuroBacktotopInstall /></Route>
+              <Route exact path="/components/auro/backtotop/api"><AuroBacktotopApi /></Route>
+              <Route exact path="/components/auro/backtotop/releases"><AuroBacktotopReleases /></Route>
 
               {/* Auro Input */}
               <Route exact path="/components/auro/input"><AuroInput /></Route>
