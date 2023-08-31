@@ -1,231 +1,203 @@
 [
-  {
+   {
+     "name": "auro-name",
+     "cat": "default",
+     "color": "fa23e4",
+     "description": "Element identification",
+     "process": "Key filter for this repo"
+   },
+   {
      "name": "duplicate",
      "cat": "default",
-     "color": "cde6ff",
+     "color": "156fad",
      "description": "This Issue or Pull Request already exists",
      "process": "When duplicate issue or pull request is discovered, please apply this label\nand add a comment so that the repo admin can address."
-  },
-  {
+   },
+   {
+     "name": "not-reviewed",
+     "cat": "default",
+     "color": "222222",
+     "description": "Issue has not been reviewed by Auro team members",
+     "process": "Automated: auto-applied with new issue, manually removed by reviewer"
+   },
+   {
      "name": "good first issue",
      "cat": "default",
      "color": "6bb7fb",
      "description": "Good for newcomers",
      "process": "Apply label to issues deemed low complexity",
      "aliases": [
-        "beginner-friendly",
-        "beginner",
-        "good-starter-issue",
-        "good for beginner",
-        "Good for beginners",
-        "starter-issue",
-        "starter"
+       "beginner-friendly",
+       "beginner",
+       "good-starter-issue",
+       "good for beginner",
+       "Good for beginners",
+       "starter-issue",
+       "starter"
      ]
-  },
-  {
+   },
+   {
      "name": "help wanted",
      "cat": "default",
+     "color": "6bb7fb",
      "process": "Apply label to issues where a team resource is not immediately available and community help is requested",
-     "color": "2492eb",
-     "description": "Extra attention is needed, this user requires assistance to complete\nthe work"
-  },
-  {
-     "name": "Priority: High",
-     "cat": "default",
-     "color": "f65b7b",
-     "description": "Issues that need attention soon"
-  },
-  {
+     "description": "Extra attention is needed, this user requires assistance to complete the work"
+   },
+   {
      "name": "released",
-     "cat": "default",
+     "cat": "status",
      "color": "A9A9A9",
      "description": "Completed work has been released",
      "process": "Automated: applied once a pull request has been merged and released"
-  },
-  {
-     "name": "not-reviewed",
-     "cat": "default",
-     "color": "222222",
-     "description": "Issue has not been reviewed by Auro team member",
-     "process": "Automated: auto-applied with new issue, manually removed by reviewer"
-  },
-  {
-     "name": "Status: Abandoned",
-     "cat": "default",
-     "color": "156fad",
-     "description": "The issue or Pull Request is wontfix",
-     "process": "Apply label prior to contacting author one last time before closing issue\nor pull request",
-     "aliases": [
-        "wontfix",
-        "invalid"
-     ]
-  },
-  {
-     "name": "Status: Proposal",
+   },
+   {
+     "name": "Status: Work In Progress",
      "cat": "status",
-     "color": "fe58bc",
-     "description": "Propose new custom element or feature to existing release",
-     "process": "Apply label to issues that are proposed ideas or require discussion",
-     "aliases": [
-        "idea",
-        "proposal",
-        "discussion"
-     ]
-  },
-  {
+     "process": "Apply label when the issue is being actively worked on",
+     "description": "Issue is in Progress",
+     "color": "c0e585"
+   },
+   {
+     "name": "Status: Review Needed",
+     "cat": "status",
+     "color": "c0e585",
+     "process": "Applied by author to alert managers and developers that work is in progress",
+     "description": "Work is completed, user is requesting feedback"
+   },
+   {
+     "name": "Status: Complete",
+     "cat": "status",
+     "color": "c0e585",
+     "process": "This label can be applied to communicate that work is done while not yet accepted",
+     "description": "Owner has completed work and considers it ready to be merged"
+   },
+   {
      "name": "Status: Blocked",
      "cat": "status",
      "color": "df0b37",
-     "description": "Immediate attention is required",
      "process": "Apply label to issues or pull requests that blocked from progress",
+     "description": "Progress on the issue is Blocked, immediate attention is required",
      "aliases": [
-        "blocked"
+       "blocked"
      ]
-  },
-  {
-     "name": "Status: Waiting on design sponsor",
+   },
+   {
+     "name": "Abandoned",
      "cat": "status",
-     "process": "Apply label to issues where a designer's support is requested",
-     "color": "df0b37",
-     "description": "This work is waiting for a design sponsor to help define spec",
+     "color": "156fad",
+     "process": "Apply label prior to contacting author one last time before closing issue\nor pull request",
+     "description": "The author of this issue or Pull Request is not responding",
      "aliases": [
-        "blocked"
+       "wontfix",
+       "invalid"
      ]
-  },
-  {
-     "name": "Status: Ready to merge",
-     "process": "Applied by author to pull requests when the work complete and ready to merge on approval",
-     "cat": "status",
-     "color": "29a329",
-     "description": "Owner has completed work and considers it ready to be merged"
-  },
-  {
-     "name": "Status: Review Needed",
-     "process": "Applied by author to alert the team that a review is requested",
-     "cat": "status",
-     "color": "91be62",
-     "description": "Work is completed, user is requesting feedback"
-  },
-  {
-     "name": "Status: Work In Progress",
-     "cat": "status",
-     "description": "Issue or Pull Request work is in Progress",
-     "color": "c0e585",
-     "process": "Applied by author to alert managers and developers that work is in progress"
-  },
-  {
+   },
+   {
      "name": "Type: Bug",
      "cat": "type",
      "color": "df0b37",
+     "process": "Author applies label type when reporting issue",
      "description": "Bug or Bug fixes",
-     "process": "Author applies label type when reporting issue",
      "aliases": [
-        "bug"
+       "bug"
      ]
-  },
-  {
-     "name": "Type: CI",
-     "cat": "type",
-     "color": "b83302",
-     "description": "Changes to CI configuration files and scripts",
-     "process": "Author applies label type when reporting issue",
-     "aliases": [
-        "travis",
-        "ci",
-        "circleci"
-     ]
-  },
-  {
-     "name": "Type: Content or data",
-     "cat": "type",
-     "color": "ffd200",
-     "description": "Adding or editing new content or data to the repo",
-     "process": "Author applies label type when reporting issue",
-     "aliases": [
-        "enhancement"
-     ]
-  },
-  {
-     "name": "Type: Dependencies",
-     "cat": "type",
-     "color": "b83302",
-     "description": "Pull requests that update a dependency file",
-     "process": "Author applies label type when reporting issue",
-     "aliases": [
-        "dependencies"
-     ]
-  },
-  {
-     "name": "Type: Design",
-     "cat": "type",
-     "color": "e5ad07",
-     "description": "New Design",
-     "process": "Author applies label type when reporting issue",
-     "aliases": [
-        "enhancement"
-     ]
-  },
-  {
-     "name": "Type: Documentation",
-     "cat": "type",
-     "color": "f26135",
-     "description": "Documentation only changes",
-     "process": "Author applies label type when reporting issue",
-     "aliases": [
-        "documents",
-        "document"
-     ]
-  },
-  {
+   },
+   {
      "name": "Type: Feature",
      "cat": "type",
-     "color": "e5ad07",
+     "color": "ffd200",
+     "process": "Author applies label type when reporting issue",
      "description": "New Feature",
-     "process": "Author applies label type when reporting issue",
      "aliases": [
-        "enhancement"
+       "enhancement"
      ]
-  },
-  {
-     "name": "Type: Maintenance",
+   },
+   {
+     "name": "Type: Design",
      "cat": "type",
-     "color": "b83302",
-     "description": "Repository Maintenance",
+     "color": "ffd200",
      "process": "Author applies label type when reporting issue",
+     "description": "New or related Design work",
      "aliases": [
-        "greenkeeper",
-        "maintenance"
+       "enhancement"
      ]
-  },
-  {
-     "name": "Type: Question",
+   },
+   {
+     "name": "Type: Content",
      "cat": "type",
-     "color": "b83302",
-     "description": "Further information is requested",
+     "color": "ffd200",
      "process": "Author applies label type when reporting issue",
+     "description": "Adding or editing content",
      "aliases": [
-        "question"
+       "enhancement"
      ]
-  },
-  {
+   },
+   {
      "name": "Type: Refactoring",
      "cat": "type",
-     "color": "ffdb67",
+     "color": "ffd200",
+     "process": "Author applies label type when reporting issue",
      "description": "A code change that neither fixes a bug nor adds a feature",
-     "process": "Author applies label type when reporting issue",
      "aliases": [
-        "refactor"
+       "refactor"
      ]
-  },
-  {
-     "name": "Type: Testing",
+   },
+   {
+     "name": "Type: Documentation",
      "cat": "type",
-     "color": "fff0cd",
-     "description": "Adding missing tests or correcting existing tests",
+     "color": "ffd200",
      "process": "Author applies label type when reporting issue",
+     "description": "Documentation only changes",
      "aliases": [
-        "test",
-        "testing"
+       "documents",
+       "document"
      ]
-  }
-]
+   },
+   {
+     "name": "Type: CI",
+     "cat": "type",
+     "color": "ffd200",
+     "process": "Author applies label type when reporting issue",
+     "description": "Changes to CI configuration files and scripts",
+     "aliases": [
+       "ci"
+     ]
+   },
+   {
+     "name": "Type: Perf",
+     "cat": "type",
+     "color": "ffd200",
+     "process": "Author applies label type when reporting issue",
+     "description": "Performance update to existing code"
+   },
+   {
+     "name": "Question",
+     "cat": "default",
+     "color": "b83302",
+     "process": "Apply this label when there is an open question being asked as part of the issue",
+     "description": "Further information is requested",
+     "aliases": [
+       "question"
+     ]
+   },
+   {
+     "name": "Type: Dependencies",
+     "cat": "type",
+     "color": "ffd200",
+     "process": "Author applies label type when reporting issue",
+     "description": "Pull requests that update a dependency file",
+     "aliases": [
+       "dependencies"
+     ]
+   },
+   {
+     "name": "Type: UI Update",
+     "cat": "type",
+     "color": "ffd200",
+     "process": "Author applies label type when reporting issue",
+     "description": "Changes to the user interface",
+     "aliases": [
+       "dependencies"
+     ]
+   }
+ ]
