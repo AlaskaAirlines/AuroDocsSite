@@ -30,13 +30,6 @@ stages:
         workingDir: '$(System.DefaultWorkingDirectory)'
         verbose: false
     - task: Npm@1
-      displayName: 'npm rebuildSass'
-      inputs:
-        command: custom
-        workingDir: '$(System.DefaultWorkingDirectory)'
-        verbose: false
-        customCommand: 'run rebuildSass'
-    - task: Npm@1
       displayName: 'npm buildIcons'
       inputs:
         command: custom

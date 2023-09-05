@@ -10,9 +10,9 @@ class AuroPaneInstall extends MarkdownPageWrapper {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-pane'];
+    const dependencies = pjson.dependencies['@aurodesignsystem/auro-pane'];
 
-    return `@alaskaairux/auro-pane: ${dependencies}`;
+    return `@aurodesignsystem/auro-pane: ${dependencies}`;
   };
 
   // function to get text from MD document
