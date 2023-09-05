@@ -1,85 +1,64 @@
-import React, { Component } from "react";
+import React from "react";
 import { Nav } from './nav';
-import Highlight from 'react-highlight';
-import 'highlight.js/styles/github.css';
-import './style.scss';
+import marked from 'marked';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism.css';
+import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
-class AuroPane extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedDay: undefined
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-pane/master/demo/demo.md';
+
+class AuroIcon extends MarkdownPageWrapper {
+
+  // function to get text from MD document
+  getMarkdownText() {
+    fetch(markdownContent)
+        .then((response) => response.text())
+        .then((text) => {
+          const rawHtml = marked(text);
+          document.querySelector('.auro-markdown').innerHTML = rawHtml;
+          Prism.highlightAll();
+        });
+
+    const renderer = new marked.Renderer();
+    renderer.link = function(href, title, text) {
+      const link = marked.Renderer.prototype.link.call(this, href, title, text);
+      let url = href
+      url = url.replace(/^.*\/\/[^/]+/, '')
+
+      if (href.includes("auro.alaskaair.com")) {
+
+        return link.replace("href",`href="${url}"`);
+      } else {
+
+        const newLink = `<a href="${href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
+
+        return newLink;
+      }
     };
+
+    marked.setOptions({
+        renderer: renderer
+    });
+  }
+
+  componentDidMount() {
+    registerCustomComponent('custom-pane', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-pane@latest/dist/auro-pane__bundled.js');
   }
 
   render() {
     return (
-      <section id="carousel">
+      <section className="auro_baseType">
 
         <Nav />
 
-        <auro-header level="2" display="display">Pane</auro-header>
-
-        <p>Use auro-pane to display selectable shoulder dates and associated prices. </p>
-
-        <auro-header level="2" display="700">Component use cases</auro-header>
-
-        <p>The <code>auro-pane</code> element should be used in situations where users may:</p>
-        <ul>
-          <li>Select a date to see available flight options</li>
-          <li>See multiple dates with price and availability information</li>
-        </ul>
-
-        <auro-header level="2" display="700">Display date</auro-header>
-        <p>Default using <code>date</code> attribute</p>
-        <div className="demo--inline exampleWrapper paneContainer">
-          <auro-pane date="2020-09-20"></auro-pane>
-          <auro-pane date="2020-09-21" selected></auro-pane>
-          <auro-pane date="2020-09-22" disabled></auro-pane>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-pane date="2020-09-20"></auro-pane>
-<auro-pane date="2020-09-21" selected></auro-pane>
-<auro-pane date="2020-09-22" disabled></auro-pane>`}
-          </Highlight>
-        </auro-accordion>
-
-        <auro-header level="2" display="700">Display date and price</auro-header>
-        <p>Default using both <code>date</code> and <code>price</code> attributes.</p>
-        <div className="demo--inline exampleWrapper paneContainer">
-          <auro-pane date="2020-09-20" price="$500"></auro-pane>
-          <auro-pane date="2020-09-21" price="$501" selected></auro-pane>
-          <auro-pane date="2020-09-22" price="$480" disabled></auro-pane>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-pane date="2020-09-10" price="$500"></auro-pane>
-<auro-pane date="2020-09-21" price="$501" selected></auro-pane>
-<auro-pane date="2020-09-22" price="$480" disabled></auro-pane>`}
-          </Highlight>
-        </auro-accordion>
-
-        <auro-header level="2" display="700">Use sm size</auro-header>
-        <p>Use the <code>sm</code> attribute to main the small UI that is consistent with mobile and desktop.</p>
-        <div className="demo--inline exampleWrapper paneContainer">
-          <auro-pane sm date="2020-09-20" price="$500"></auro-pane>
-          <auro-pane sm date="2020-09-21" price="$501" selected></auro-pane>
-          <auro-pane sm date="2020-09-22" price="$480" disabled></auro-pane>
-        </div>
-        <auro-accordion lowProfile justifyRight>
-          <span slot="trigger">See code</span>
-          <Highlight className='html afterCode'>
-            {`<auro-pane sm date="2020-09-10" price="$500"></auro-pane>
-<auro-pane sm date="2020-09-21" price="$501" selected></auro-pane>
-<auro-pane sm date="2020-09-22" price="$480" disabled></auro-pane>`}
-          </Highlight>
-        </auro-accordion>
+        <section
+          className="auro-markdown"
+          dangerouslySetInnerHTML={this.getMarkdownText()}
+        />
       </section>
     );
   }
 }
 
-export default AuroPane;
+export default AuroIcon;

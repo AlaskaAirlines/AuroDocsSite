@@ -10,9 +10,9 @@ class AuroCarouselInstall extends MarkdownPageWrapper {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-carousel'];
+    const dependencies = pjson.dependencies['@aurodesignsystem/auro-carousel'];
 
-    return `@alaskaairux/auro-carousel: ${dependencies}`;
+    return `@aurodesignsystem/auro-carousel: ${dependencies}`;
   };
 
   // function to get text from MD document
