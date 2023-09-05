@@ -24,7 +24,6 @@
     "focus-visible": "^5.2.0",
     "graphql": "^15.5.3",
     "husky": "^4.3.8",
-    "node-sass": "^4.14.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-ga": "^3.3.1",
@@ -32,14 +31,15 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "react-scroll": "^1.8.9",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.5.0",
+    "sass": "^1.66.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "echo \"No tests specified\" && exit 0",
     "eject": "react-scripts eject",
-    "rebuildSass": "npm rebuild node-sass",
+    "rebuildSass": "npm rebuild sass",
     "buildIconsScript": "node ./scripts/build-icon-lib.js",
     "buildPages": "node ./scripts/build-page-imports.js",
     "buildIcons": "npm-run-all buildPages buildIconsScript",
