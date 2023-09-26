@@ -9,13 +9,13 @@ import {
 import './sass/index.scss';
 import './sass/App.scss';
 
-// -=-=-=-=-=-=-=-=-=-=- LEGACY =-=-=-=-=-=-=-=-=-=-=-=-=
-// Only needed for deprecated resources still in the site
-// import '@alaskaairux/orion-design-tokens/dist/tokens/CSSTokenProperties.css';
-// -=-=-=-=-=-=-=-=-=-=- LEGACY =-=-=-=-=-=-=-=-=-=-=-=-=
-
-// =-=-=-=-=-=-=-=-=- New Hotness =-=-=-=-=-=-=-=-=-=-=-=
+// -=-=-=-=-=-=-=-=-=-=- LEGACY =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Required to support components not yet updated to new lib
+// -=-=-=-=-=-=-=-=-=-=- LEGACY =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 import '@alaskaairux/design-tokens/dist/tokens/CSSCustomProperties.css';
+
+// Current auro tokens
+import '@aurodesignsystem/design-tokens/dist/tokens/CSSCustomProperties.css';
 
 // Logo to appear in console
 import './scripts/auro-consoleLogo';

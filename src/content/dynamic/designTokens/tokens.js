@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Nav } from './nav';
 import LinkIcons from '../../../components/linkIcons';
 import _getTokens from "../../../functions/getTokens";
-import allTokens from '@alaskaairux/design-tokens/dist/tokens/JSObject--allTokens.js';
+import allTokens from '@aurodesignsystem/design-tokens/dist/tokens/JSObject--allTokens.js';
 
 const animation = allTokens.animation;
 const elevation = allTokens.elevation;
@@ -37,11 +37,11 @@ class DeprecatedTokens extends Component {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/design-tokens'];
+    const dependencies = pjson.dependencies['@aurodesignsystem/design-tokens'];
 
     // console.log(allTokens)
 
-    return `@alaskaairux/design-tokens: ${dependencies}`;
+    return `@aurodesignsystem/design-tokens: ${dependencies}`;
   };
 
   render() {
@@ -150,7 +150,7 @@ class DeprecatedTokens extends Component {
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/AuroDesignTokens"
-          npm="https://www.npmjs.com/package/@alaskaairux/design-tokens"
+          npm="https://www.npmjs.com/package/@aurodesignsystem/design-tokens"
           code="https://github.com/AlaskaAirlines/AuroDesignTokens/tree/master/src"
           version={this.showVersion()}
         />

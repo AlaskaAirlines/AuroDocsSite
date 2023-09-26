@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
-import deprecated3_0 from '@alaskaairux/design-tokens/dist/tokens/JSObject--deprecated.js';
+import deprecated3_0 from '@aurodesignsystem/design-tokens/dist/tokens/JSObject--deprecated.js';
 
 /*
   Future note: for future deprecation look at getting data from external source
-  https://unpkg.com/@alaskaairux/orion-design-tokens@2.12.3/dist/tokens/JSObject--deprecated.js
+  https://unpkg.com/@aurodesignsystem/design-tokens/dist/tokens/JSObject--deprecated.js
 */
 
 class DeprecatedTokens extends Component {

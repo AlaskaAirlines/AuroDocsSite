@@ -1,27 +1,28 @@
 // Auro Support
 /* ------------------------ Auro Support ------------------------ */
-@import "~@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
-@import "~@aurodesignsystem/webcorestylesheets/dist/breakpoints";
-@import "~@aurodesignsystem/webcorestylesheets/dist/animation";
-@import "~@aurodesignsystem/webcorestylesheets/dist/utilityMixins/anchor-roleTab";
+/* auro tokens for legacy components */
+// @import '~@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
 
+@import '~@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import "~@aurodesignsystem/webcorestylesheets/src/breakpoints";
+@import "~@aurodesignsystem/webcorestylesheets/src/animation";
+@import "~@aurodesignsystem/webcorestylesheets/src/utilityMixins/anchor-roleTab";
 
-@import "~@aurodesignsystem/webcorestylesheets/dist/essentials";
+@import "~@aurodesignsystem/webcorestylesheets/src/essentials";
 
 $prefix: true;
 $paragraph: true;
 $focus: true;
-@import "~@aurodesignsystem/webcorestylesheets/dist/utilityClasses/typeProperties";
-@import "~@aurodesignsystem/webcorestylesheets/dist/utilityClasses/fontStyles";
-@import "~@alaskaairux/design-tokens/dist/tokens/SassCustomPropertiesColorRGB";
-@import "~@aurodesignsystem/webcorestylesheets/dist/utilityClasses/displayProperties";
+@import "~@aurodesignsystem/webcorestylesheets/src/utilityClasses/typeProperties";
+@import "~@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles";
+@import "~@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties";
 
 %see {
   outline: 2px solid red;
 }
 
 body {
-  background-color: var(--auro-color-background-lightest);
+  background-color: var(--ds-color-background-lightest);
 }
 
 // customization for use with the google search widget
@@ -29,7 +30,7 @@ body {
   position: fixed;
   top: 5px;
   right: 0;
-  z-index: var(--auro-depth-overlay);
+  z-index: var(--ds-depth-overlay);
   display: none;
 
   @include auro_breakpoint--md {
@@ -45,12 +46,12 @@ body {
 // --------------------------------------------------
 
 .ondark {
-  background-color: var(--auro-color-background-darkest);
+  background-color: var(--ds-color-background-darkest);
   padding: 10px 20px;
 }
 
 hr {
-  margin: var(--auro-size-xxl) 0;
+  margin: var(--ds-size-600) 0;
 }
 
 img {
@@ -84,7 +85,7 @@ ul {
 .util_hover {
   &:hover {
     cursor: pointer;
-    color: var(--auro-color-ui-hover-on-light);
+    color: var(--ds-color-ui-hover-default);
   }
 }
 
@@ -105,30 +106,30 @@ ul {
 // -=-=-=-=-=-=-=-=-= body wrapper -=-=-=-=-=-=-=-=-=-=-=
 footer,
 .wrapper > section {
-  margin: var(--auro-size-xl);
-  padding-top: var(--auro-size-md);
+  margin: var(--ds-size-400);
+  padding-top: var(--ds-size-200);
 
   @include auro_breakpoint--sm {
     max-width: 62%;
-    margin: var(--auro-size-md) auto 0 250px;
+    margin: var(--ds-size-200) auto 0 250px;
   }
 
   @include auro_breakpoint--md {
     max-width: 70%;
-    margin: var(--auro-size-md) auto 0 290px;
+    margin: var(--ds-size-200) auto 0 290px;
   }
 
   @include auro_breakpoint--lg {
     max-width: 64rem;
-    margin: var(--auro-size-md) auto 0 25%;
+    margin: var(--ds-size-200) auto 0 25%;
   }
 }
 // -=-=-=-=-=-=-=-=-= body wrapper -=-=-=-=-=-=-=-=-=-=-=
 
 footer {
-  padding-top:var(--auro-size-xxxl);
+  padding-top:var(--ds-size-800);
   padding-bottom: 80px;
-  color: var(--auro-color-text-secondary-on-light);
+  color: var(--ds-color-text-secondary-default);
   font-weight: 100;
 }
 
@@ -155,19 +156,19 @@ auro-swatch-list {
   position: fixed;
   z-index: 100;
   background-color: white;
-  padding-left: var(--auro-size-lg);
+  padding-left: var(--ds-size-300);
   height: calc(100% - 80px);
   overflow: scroll;
   top: 80px;
-  background-color: var(--auro-color-background-lighter);
-  background-color: #f8f8f8;
+  background-color: var(--ds-color-background-lighter);
+  background-color: var(--ds-color-brand-gray-100);
 
   .isHeading {
-    margin: var(--auro-size-lg) 0 0;
+    margin: var(--ds-size-300) 0 0;
   }
 
   a {
-    margin-bottom: var(--auro-size-xxs);
+    margin-bottom: var(--ds-size-50);
 
     &:last-child {
       margin-bottom: 0;
@@ -192,7 +193,7 @@ auro-swatch-list {
 .auro_hyperlink.is-active,
 .auro_hyperlink--active,
 .hyperlink--active {
-  color: var(--auro-color-text-primary-on-light) !important;
+  color: var(--ds-color-text-primary-default) !important;
   text-decoration: none !important;
   cursor: default;
 }
@@ -204,16 +205,16 @@ auro-swatch-list {
 }
 
 .auro_hyperlink--nav {
-  margin-top: var(--auro-size-md);
+  margin-top: var(--ds-size-200);
 
   &:first-child {
-    margin-top: var(--auro-size-xs);
+    margin-top: var(--ds-size-100);
   }
 }
 
 .auro_hyperlink--subNav {
   margin-top: 0;
-  padding-left: var(--auro-size-xs);
+  padding-left: var(--ds-size-100);
 }
 
 .auro_hyperlink--parent + .auro_hyperlink--parent {
@@ -240,7 +241,7 @@ auro-swatch-list {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--auro-color-background-lighter);
+    background-color: var(--ds-color-background-lighter);
     box-shadow: 0px 0px 10px #222;
     right: -12px;
     top: -13px;
@@ -274,28 +275,28 @@ auro-swatch-list {
     & ~ .sidenav {
       opacity: 1;
       left: 0;
-      background-color: var(--auro-color-background-lightest);
+      background-color: var(--ds-color-background-lightest);
       width: 75%;
-      box-shadow: 0px 15px 28px -10px var(--auro-color-background-darker);
+      box-shadow: 0px 15px 28px -10px var(--ds-color-background-darker);
       margin-left: 0;
-      padding-left: var(--auro-size-lg);
+      padding-left: var(--ds-size-300);
       top: 80px;
 
       a {
-        margin-bottom: var(--auro-size-sm);
+        margin-bottom: var(--ds-size-sm);
       }
     }
   }
 }
 
 code:not(.html):not(.css):not(.js) {
-  color: var(--auro-color-brand-flamingo-500);
+  color: var(--ds-color-brand-flamingo-500);
 }
 
 .indention {
-  padding-left: var(--auro-size-md);
-  border-left: 1px solid var(--auro-color-base-neutral-500);
-  margin-bottom: var(--auro-size-xxl);
+  padding-left: var(--ds-size-200);
+  border-left: 1px solid var(--ds-color-base-neutral-500);
+  margin-bottom: var(--ds-size-600);
 
   &--warning {
     border-color: var(--color-background-alert);
@@ -304,8 +305,8 @@ code:not(.html):not(.css):not(.js) {
 }
 
 .install {
-  padding: var(--auro-size-lg) 0 var(--auro-size-xl) var(--auro-size-lg) !important;
-  margin-bottom: var(--auro-size-xxl);
+  padding: var(--ds-size-300) 0 var(--ds-size-400) var(--ds-size-300) !important;
+  margin-bottom: var(--ds-size-600);
 }
 
 // animation speed for auro-loader //
@@ -336,7 +337,7 @@ pre {
 }
 
 .afterCode.hljs.openCode {
-  background-color: #f8f8f8 !important;
+  background-color: var(--ds-color-brand-gray-100) !important;
 }
 
 .spaceAfterCode {
@@ -345,8 +346,8 @@ pre {
 }
 
 .exampleWrapper--deprecated {
-  $stripe: var(--auro-color-alert-advisory-on-light);
-  $background: var(--auro-color-base-white);
+  $stripe: var(--ds-color-alert-advisory-default);
+  $background: var(--ds-color-base-white);
 
   background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
   overflow: auto;
@@ -360,10 +361,10 @@ pre {
 }
 
 .content--deprecated {
-  border: 1px solid var(--auro-color-alert-advisory-on-light);
-  background-color: var(--auro-color-alert-advisory-on-light);
-  padding: var(--auro-size-md);
-  border-radius: var(--auro-border-radius);
+  border: 1px solid var(--ds-color-alert-advisory-default);
+  background-color: var(--ds-color-alert-advisory-default);
+  padding: var(--ds-size-200);
+  border-radius: var(--ds-border-radius);
 }
 
 .afterCode {
@@ -374,18 +375,18 @@ pre {
 }
 
 .dataSelected {
-  $stripe: var(--auro-color-background-lighter);
-  $background: var(--auro-color-base-white);
+  $stripe: var(--ds-color-background-lighter);
+  $background: var(--ds-color-base-white);
 
   border-width: 1px 1px 0;
   background: repeating-linear-gradient( 45deg, $stripe, $stripe 5px, $background 5px, $background 10px);
 
-  color: var(--auro-color-background-lighter);
-  line-height: var(--auro-size-xxl);
+  color: var(--ds-color-background-lighter);
+  line-height: var(--ds-size-600);
   padding: 0 10px 0;
 
   span {
-    color: var(--auro-color-base-crimson-500);
+    color: var(--ds-color-base-crimson-500);
   }
 }
 
@@ -394,11 +395,11 @@ pre {
 .iconsWrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: var(--auro-size-xxl);
+  margin-bottom: var(--ds-size-600);
 
   span {
     position: absolute;
-    font-size: var(--auro-text-body-size-xs);
+    font-size: var(--ds-text-body-size-xs);
     bottom: 10px;
     padding: 0 15px;
     line-height: 1.2;
@@ -410,32 +411,32 @@ pre {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: var(--auro-border-radius);
-    background-color: var(--auro-color-base-gray-100);
-    margin: 0 var(--auro-size-xs) var(--auro-size-xs) 0;
+    border-radius: var(--ds-border-radius);
+    background-color: var(--ds-color-base-gray-100);
+    margin: 0 var(--ds-size-100) var(--ds-size-100) 0;
 
     &:nth-child(even) {
       margin-right: 0;
     }
 
-    width: calc(50% - var(--auro-size-xxs));
+    width: calc(50% - var(--ds-size-50));
     height: 125px;
 
     @include auro-breakpoint--sm {
-      width: calc(30% - var(--auro-size-xxs));
+      width: calc(30% - var(--ds-size-50));
       height: 150px;
       padding: 1rem 1.5rem;
       &:nth-child(even) {
-        margin-right: var(--auro-size-xs);
+        margin-right: var(--ds-size-100);
       }
     }
 
     @include auro-breakpoint--lg {
-      width: calc(18% - var(--auro-size-xxs));
+      width: calc(18% - var(--ds-size-50));
       height: 150px;
       padding: 1rem 1.5rem;
       &:nth-child(even) {
-        margin-right: var(--auro-size-xs);
+        margin-right: var(--ds-size-100);
       }
     }
   }
@@ -481,7 +482,7 @@ pre {
   line-height: 100px;
   text-align: center;
   border-radius: 5px;
-  margin-bottom: var(--auro-size-md);
+  margin-bottom: var(--ds-size-200);
 }
 
 .transparentSwatch {
@@ -492,44 +493,44 @@ pre {
 
 // sass example
 .auro-color-brand-alpine-400--50 {
-  background-color: rgba($auro-color-brand-alpine-400, 0.5);
+  background-color: rgba($ds-color-brand-alpine-400, 0.5);
 }
 
 // CSS custom properties examples
 .auro-rgb-color-brand-alpine-400--10 {
-  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.1);
+  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.1);
 }
 
 .auro-rgb-color-brand-alpine-400--20 {
-  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.2);
+  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.2);
 }
 
 .auro-rgb-color-brand-alpine-400--30 {
-  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.3);
+  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.3);
 }
 
 .auro-rgb-color-brand-alpine-400--40 {
-  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.4);
+  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.4);
 }
 
 .auro-rgb-color-brand-alpine-400--50 {
-  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.5);
+  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.5);
 }
 
 .auro-rgb-color-brand-alpine-400--60 {
-  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.6);
+  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.6);
 }
 
 .auro-rgb-color-brand-alpine-400--70 {
-  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.7);
+  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.7);
 }
 
 .auro-rgb-color-brand-alpine-400--80 {
-  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.8);
+  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.8);
 }
 
 .auro-rgb-color-brand-alpine-400--90 {
-  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.9);
+  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.9);
 }
 // -------------------------------------------------------------
 
@@ -557,7 +558,7 @@ pre {
   overflow-y: hidden;
   display: flex;
   flex-wrap: nowrap;
-  box-shadow: inset 0 -2px 0 var(--auro-color-brand-gray-300);
+  box-shadow: inset 0 -2px 0 var(--ds-color-brand-gray-300);
 
   @include auro_breakpoint--md {
     line-height: 3rem;
@@ -567,9 +568,9 @@ pre {
 .tab {
   @include auro_transition($property: border);
 
-  color: var(--auro-color-text-link-on-light);
-  border-color: var(--auro-color-brand-gray-300);
-  padding: var(--auro-size-md);
+  color: var(--ds-color-text-link-default);
+  border-color: var(--ds-color-brand-gray-300);
+  padding: var(--ds-size-200);
   border-width: 0 0 2px 0;
   border-style: solid;
   border-color: transparent;
@@ -580,7 +581,7 @@ pre {
     &:hover {
       text-decoration: none;
       cursor: pointer;
-      color: var(--auro-color-text-link-on-light-hover);
+      color: var(--ds-color-text-link-default-hover);
       border-color: currentColor;
     }
   }
@@ -588,15 +589,15 @@ pre {
   &.is-active {
     text-decoration: none;
     cursor: pointer;
-    color: var(--auro-color-text-primary-on-light);
+    color: var(--ds-color-text-primary-default);
     border-color: currentColor;
   }
 }
 
 .tab.focus-visible {
-  color: var(--auro-color-base-white) !important;
-  background-color: var(--auro-color-text-link-on-light);
-  border-bottom-color: var(--auro-color-text-primary-on-light);
+  color: var(--ds-color-base-white) !important;
+  background-color: var(--ds-color-text-link-default);
+  border-bottom-color: var(--ds-color-text-primary-default);
 }
 
 // this really should be done in the component?
@@ -623,15 +624,15 @@ img[src*='shields.io'] {
 
 // release views
 .releaseWrapper {
-  margin: var(--auro-size-lg) 0;
-  padding: 0 0 var(--auro-size-lg) 0;
-  border-bottom: 1px solid var(--auro-color-border-primary-on-light);
+  margin: var(--ds-size-300) 0;
+  padding: 0 0 var(--ds-size-300) 0;
+  border-bottom: 1px solid var(--ds-color-border-primary-default);
 
   .release {
-    padding: var(--auro-size-lg);
-    padding-top: var(--auro-size-xs);
+    padding: var(--ds-size-300);
+    padding-top: var(--ds-size-100);
     &:nth-child(even) {
-      background-color: var(--auro-color-base-gray-100);
+      background-color: var(--ds-color-base-gray-100);
     }
   }
 }
@@ -641,7 +642,7 @@ img[src*='shields.io'] {
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Pretty sure this was replaced with auro-loader work
 .isLoading {
-  color: var(--auro-color-background-darker);
+  color: var(--ds-color-background-darker);
   font-size: 80px;
   text-indent: -9999em;
   overflow: hidden;
@@ -740,7 +741,7 @@ img[src*='shields.io'] {
     white-space: nowrap;
 
     @include auro_breakpoint--md {
-      box-shadow: inset 0px -1px 0px 0px var(--auro-color-border-primary-on-light);
+      box-shadow: inset 0px -1px 0px 0px var(--ds-color-border-primary-default);
       position: sticky;
       top: 271px;
       background-color: #fff;
@@ -790,7 +791,7 @@ img[src*='shields.io'] {
 .epicIssues {
   .OPEN,
   .CLOSED {
-    padding: 0 var(--auro-size-md);
+    padding: 0 var(--ds-size-200);
     border-radius: 3px;
     line-height: 2.5;
     display: block;
@@ -798,12 +799,12 @@ img[src*='shields.io'] {
   }
 
   .OPEN {
-    background-color: var(--auro-color-brand-tropical-300);
+    background-color: var(--ds-color-brand-tropical-300);
   }
 
   .CLOSED {
     color: white;
-    background-color: var(--auro-color-brand-flamingo-500);
+    background-color: var(--ds-color-brand-flamingo-500);
   }
 
   img {
@@ -827,25 +828,25 @@ img[src*='shields.io'] {
 .issueLabel {
   font-size: 0;
   border-radius: 50%;
-  width: var(--auro-size-md);
-  height: var(--auro-size-md);
-  margin-bottom: var(--auro-size-xs);
-  margin-right: var(--auro-size-xs);
+  width: var(--ds-size-200);
+  height: var(--ds-size-200);
+  margin-bottom: var(--ds-size-100);
+  margin-right: var(--ds-size-100);
 
   @include auro_breakpoint--sm {
-    font-size: var(--auro-text-body-size-xs);
-    border-radius: var(--auro-border-radius);
+    font-size: var(--ds-text-body-size-xs);
+    border-radius: var(--ds-border-radius);
     width: auto;
     height: auto;
-    padding: var(--auro-size-xs);
-    line-height: var(--auro-unitless-scale-100);
-    margin-right: var(--auro-size-md);
+    padding: var(--ds-size-100);
+    line-height: var(--ds-unitless-scale-100);
+    margin-right: var(--ds-size-200);
   }
 }
 
 .auditLabel {
-  width: var(--auro-size-md);
-  height: var(--auro-size-md);
+  width: var(--ds-size-200);
+  height: var(--ds-size-200);
   border-radius: 50%;
   margin: 0 auto;
 
@@ -858,8 +859,8 @@ img[src*='shields.io'] {
   position: sticky;
   z-index: 1;
   top: 160px;
-  background-color: var(--auro-color-background-lighter);
-  border-bottom: 1px solid var(--auro-color-border-primary-on-light);
+  background-color: var(--ds-color-background-lighter);
+  border-bottom: 1px solid var(--ds-color-border-primary-default);
   padding: 0.5rem 1rem 1rem;
 
   &--labelWrapper {
@@ -890,26 +891,26 @@ img[src*='shields.io'] {
 }
 
 .githubAvatar {
-  width: var(--auro-size-lg);
+  width: var(--ds-size-300);
   border-radius: 50%;
-  padding: 0 var(--auro-size-xxxs);
+  padding: 0 var(--ds-size-25);
   vertical-align: middle;
-  margin-right: var(--auro-size-xs);
+  margin-right: var(--ds-size-100);
 
   &--wrapper {
-    padding-top: var(--auro-size-xxs);
+    padding-top: var(--ds-size-50);
   }
 
   &--xl {
-    width: var(--auro-size-xl);
+    width: var(--ds-size-400);
   }
 }
 
 // header color example
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-.error--on-light {
-  color: var(--auro-color-alert-error-on-light);
+.error--default {
+  color: var(--ds-color-alert-error-default);
 }
 
 
@@ -922,9 +923,9 @@ img[src*='shields.io'] {
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 .summaryWrapper {
-  border-bottom: 1px solid var(--auro-color-border-primary-on-light);
-  margin-bottom: var(--auro-size-xxl);
-  padding-bottom: var(--auro-size-xxl);
+  border-bottom: 1px solid var(--ds-color-border-primary-default);
+  margin-bottom: var(--ds-size-600);
+  padding-bottom: var(--ds-size-600);
 
   &:last-child {
     border-width: 0;
@@ -954,39 +955,39 @@ img[src*='shields.io'] {
 
 .badge {
   display: flex;
-  background-color: var(--auro-color-base-gray-500);
+  background-color: var(--ds-color-base-gray-500);
   line-height: 1;
   letter-spacing: 1px;
-  color: var(--auro-color-base-white);
-  font-size: var(--auro-size-sm);
+  color: var(--ds-color-base-white);
+  font-size: var(--ds-size-sm);
 }
 
 .title {
-  padding: var(--auro-size-xs);
+  padding: var(--ds-size-100);
   text-transform: uppercase;
   text-align: center;
   flex-grow: 4;
 }
 
 .data {
-  color: var(--auro-color-base-white);
-  padding: var(--auro-size-xs);
+  color: var(--ds-color-base-white);
+  padding: var(--ds-size-100);
   font-weight: 500;
 
   &--release {
-    background-color: var(--auro-color-brand-breeze-300);
+    background-color: var(--ds-color-brand-breeze-300);
   }
 
   &--issues {
-    background-color: var(--auro-color-brand-atlas-400);
+    background-color: var(--ds-color-brand-atlas-400);
   }
 
   &--prs {
-    background-color: var(--auro-color-brand-goldcoast-400);
+    background-color: var(--ds-color-brand-goldcoast-400);
   }
 
   &--null {
-    background-color: var(--auro-color-base-gray-300);
+    background-color: var(--ds-color-base-gray-300);
   }
 }
 
@@ -1011,7 +1012,7 @@ img[src*='shields.io'] {
     }
 
     @include auro_breakpoint--lg {
-      padding: 0 var(--auro-size-lg);
+      padding: 0 var(--ds-size-300);
       flex-basis: 33.3333%;
       max-width: 33.333%;
     }
@@ -1090,8 +1091,8 @@ img[src*='shields.io'] {
 
 // =-=-=-=-=-=- Figma demo page -=-=-=-=-=-=
 .figmaIframe {
-  border: 1px solid var(--auro-color-border-divider-on-light);
-  border-radius: var(--auro-border-radius);
+  border: 1px solid var(--ds-color-border-divider-default);
+  border-radius: var(--ds-border-radius);
   width: 100%;
   height: 60vh
 }

@@ -7,17 +7,17 @@
 // ----------------------- DO NOT EDIT -----------------------------
 
 // Import Auro tokens
-@import '~@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
-@import "~@aurodesignsystem/webcorestylesheets/dist/breakpoints";
+@import '~@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import "~@aurodesignsystem/webcorestylesheets/src/breakpoints";
 
 // Auro typography and spacing
 $prefix: true;
 $paragraph: true;
-@import "~@aurodesignsystem/webcorestylesheets/dist/essentials";
-@import "~@aurodesignsystem/webcorestylesheets/dist/utilityClasses/fontStyles";
-@import "~@aurodesignsystem/webcorestylesheets/dist/headings";
-@import "~@aurodesignsystem/webcorestylesheets/dist/utilityMixins/layoutPropertiesGenerator";
-@import "~@aurodesignsystem/webcorestylesheets/dist/componentSupport/table";
+@import "~@aurodesignsystem/webcorestylesheets/src/essentials";
+@import "~@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles";
+@import "~@aurodesignsystem/webcorestylesheets/src/headings";
+@import "~@aurodesignsystem/webcorestylesheets/src/utilityMixins/layoutPropertiesGenerator";
+@import "~@aurodesignsystem/webcorestylesheets/src/componentSupport/table";
 $prefix: null;
 
 @import url('https://unpkg.com/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css');
@@ -32,7 +32,7 @@ $prefix: null;
 
     ul {
       margin: 0;
-      padding-left: var(--auro-size-lg);
+      padding-left: var(--ds-size-300);
     }
   }
 

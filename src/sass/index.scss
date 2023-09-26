@@ -1,37 +1,35 @@
 /* index.scss */
-
 /* auro tokens */
-// @import '~@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables';
-@import '~@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
+@import '~@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
 
 // WCSS imports
 /* ------------------------ WCSS imports ------------------------ */
-@import '~@aurodesignsystem/webcorestylesheets/dist/breakpoints';
-@import '~@aurodesignsystem/webcorestylesheets/dist/fonts';
-@import '~@aurodesignsystem/webcorestylesheets/dist/componentSupport/tablist';
-@import '~@aurodesignsystem/webcorestylesheets/dist/componentSupport/containedButtons';
-@import '~@aurodesignsystem/webcorestylesheets/dist/utilityClasses/layoutProperties';
-@import '~@aurodesignsystem/webcorestylesheets/dist/picture';
+@import '~@aurodesignsystem/webcorestylesheets/src/breakpoints';
+@import '~@aurodesignsystem/webcorestylesheets/src/fonts';
+@import '~@aurodesignsystem/webcorestylesheets/src/componentSupport/tablist';
+@import '~@aurodesignsystem/webcorestylesheets/src/componentSupport/containedButtons';
+@import '~@aurodesignsystem/webcorestylesheets/src/utilityClasses/layoutProperties';
+@import '~@aurodesignsystem/webcorestylesheets/src/picture';
 
 // Auro typography
 /* ------------------------ Auro typography ------------------------ */
-@import '~@aurodesignsystem/webcorestylesheets/dist/essentials';
+@import '~@aurodesignsystem/webcorestylesheets/src/essentials';
 
 $prefix: true;
 $paragraph: true;
-@import '~@aurodesignsystem/webcorestylesheets/dist/utilityClasses/fontStyles';
-@import '~@aurodesignsystem/webcorestylesheets/dist/headings';
+@import '~@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles';
+@import '~@aurodesignsystem/webcorestylesheets/src/headings';
 $prefix: null;
 
 // Auro Selector generators
 /* ------------------------ Auro Selector generators ------------------------ */
-@import '~@aurodesignsystem/webcorestylesheets/dist/utilityMixins/_layoutPropertiesGenerator';
+@import '~@aurodesignsystem/webcorestylesheets/src/utilityMixins/_layoutPropertiesGenerator';
 
 $auro-spacing-types: stack;
 $important: true;
-@import '~@alaskaairux/design-tokens/dist/tokens/SCSSVariableMap';
-@import '~@aurodesignsystem/webcorestylesheets/dist/utilityMixins/spacingUtility';
+@import '~@aurodesignsystem/design-tokens/dist/tokens/SCSSVariableMap';
+@import '~@aurodesignsystem/webcorestylesheets/src/utilityMixins/spacingUtility';
 
 // Table
 /* ------------------------ Table ------------------------ */
-@import '~@aurodesignsystem/webcorestylesheets/dist/componentSupport/table';
+@import '~@aurodesignsystem/webcorestylesheets/src/componentSupport/table';

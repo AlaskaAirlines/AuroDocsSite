@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import LinkIcons from 'components/linkIcons';
 import Highlight from 'react-highlight';
 import header from 'assets/typography/header.png';
-import allTokens from '@alaskaairux/design-tokens/dist/tokens/JSObject--allTokens.js';
+import allTokens from '@aurodesignsystem/design-tokens/dist/tokens/JSObject--allTokens.js';
 import _getTokens from "functions/getTokens";
 import 'highlight.js/styles/github.css';
 import { Nav } from './nav.js';
@@ -22,9 +22,9 @@ class Typography extends Component {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/orion-web-core-style-sheets'];
+    const dependencies = pjson.dependencies['@aurodesignsystem/webcorestylesheets'];
 
-    return `@alaskaairux/orion-web-core-style-sheets: ${dependencies}`;
+    return `@aurodesignsystem/webcorestylesheets: ${dependencies}`;
   };
 
   render() {
