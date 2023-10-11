@@ -955,11 +955,11 @@ img[src*='shields.io'] {
 
 .badge {
   display: flex;
-  background-color: var(--ds-color-base-gray-500);
+  background-color: #555555;
   line-height: 1;
   letter-spacing: 1px;
   color: var(--ds-color-base-white);
-  font-size: var(--ds-size-sm);
+  font-size: var(--ds-size-150);
 }
 
 .title {
