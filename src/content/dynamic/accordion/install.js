@@ -4,9 +4,9 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-accordion/main/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-accordion/v1.6.6/README.md';
 
-class AuroAccordionInstall extends MarkdownPageWrapper {
+class AuroAlertsInstall extends MarkdownPageWrapper {
   showVersion() {
     const pjson = require('../../../../package.json');
     const dependencies = pjson.dependencies['@alaskaairux/auro-accordion'];
@@ -44,4 +44,4 @@ class AuroAccordionInstall extends MarkdownPageWrapper {
   }
 }
 
-export default AuroAccordionInstall;
+export default AuroAlertsInstall;
