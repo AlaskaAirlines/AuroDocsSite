@@ -4,9 +4,9 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-accordion/v1.6.6/docs/api.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-accordion/main/demo/api.md';
 
-class AuroAlertsApi extends MarkdownPageWrapper {
+class AuroButtonApi extends MarkdownPageWrapper {
 
   componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
@@ -36,4 +36,4 @@ class AuroAlertsApi extends MarkdownPageWrapper {
   }
 }
 
-export default AuroAlertsApi;
+export default AuroButtonApi;
