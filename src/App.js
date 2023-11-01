@@ -360,6 +360,7 @@ import {
   // ./scripts/build-page-imports.js
   // content located in ./src/content/markdown
   A11yStatement,
+  NodeSupport,
   AuroSupport, // FAQ page
   Codetest, // interview test
   Home, /// home page
@@ -403,7 +404,8 @@ function App() {
 
               {/* Automated links from internal docs */}
               <Route exact path='/' component={Home} />
-              <Route exact path="/a11y-statement"><A11yStatement /></Route>
+              <Route exact path="/a11y-statement"><A11yStatement/></Route>
+              <Route exact path="/node-support"><NodeSupport/></Route>
               <Route exact path="/user-support"><AuroSupport /></Route> {/* redirect old url */}
               <Route exact path="/auro-support"><AuroSupport /></Route>
               <Route exact path="/design-philosophy"><Philosophy /></Route>

@@ -89,6 +89,7 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Automated testing", route: "/support/tests", parent: true },
         { linkTitle: "Browser support", route: "/support/browsersSupport", parent: true },
+        { linkTitle: "Node support", route: "/node-support", parent: true },
         { linkTitle: "Polyfills", route: "/support/polyfills/focusvisible", parent: true},
         { linkTitle: "The <slot> element", route: "/support/slots", parent: true },
         { linkTitle: "Accessibility statement", route: "/a11y-statement", parent: true },

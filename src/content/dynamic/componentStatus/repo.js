@@ -15,7 +15,7 @@ class Repo extends Component {
                     this.props.releases.nodes.length !== 0
                       ? this.props.releases.nodes.map(({tagName, id, url}) => (
                           <div key={id}>
-                            <auro-hyperlink href={url} target="_blank" nav>Release {tagName}</auro-hyperlink>
+                            <auro-hyperlink href={url} target="_blank" nav>{tagName}</auro-hyperlink>
                           </div>
                         ))
                       : <div className="badge">
@@ -23,29 +23,63 @@ class Repo extends Component {
                           <div className="data data--null">v0</div>
                         </div>
                   }
-                  <auro-hyperlink href={`https://github.com/AlaskaAirlines/${this.props.name}/pulse`} target="_blank" nav>Insights</auro-hyperlink><br/>
+                  <auro-hyperlink href={`https://github.com/AlaskaAirlines/${this.props.name}/issues`} target="_blank" nav>
+                    {this.props.issues.totalCount} Issue
+                    {
+                      this.props.issues.totalCount === 1
+                        ? ``
+                        : `s`
+                    }
+                  </auro-hyperlink>
+                  {/* <br/>
                   {
                     this.props.pullRequests.totalCount > 0
                       ? <auro-hyperlink href={`https://github.com/AlaskaAirlines/${this.props.name}/pulls`} target="_blank" nav>PRs</auro-hyperlink>
                       : ''
-                  }
+                  } */}
                 </small>
               </div>
             </td>
             <td>
               <a href={`https://github.com/AlaskaAirlines/${this.props.name}/`} target="_blank" rel="noopener noreferrer"><img alt={`${this.props.name} build status`}src={`https://img.shields.io/github/actions/workflow/status/AlaskaAirlines/${this.props.name}/testPublish.yml?branch=${this.props.defaultBranchRef.name}&style=for-the-badge`} style={{'marginBottom': '-8px', 'maxWidth': 'unset'}}></img></a>
             </td>
-            <td className="auro_util_nowrap">
+            {/* <td>
               {
+                // This isn't great, but the package name is != to the repo name.
+                this.props.name === 'AuroDesignTokens'
+                  ?
+                    <a href={`https://www.npmjs.com/package/@aurodesignsystem/design-tokens`} target="_blank" rel="noopener noreferrer">
+                      <img alt={`Node support for ${this.props.name}`}src={`https://img.shields.io/node/v/@aurodesignsystem/design-tokens/latest?style=for-the-badge&color=pink`} style={{'marginBottom': '-8px', 'maxWidth': 'unset'}} />
+                    </a>
+                  :
+                    <a href={`https://www.npmjs.com/package/@aurodesignsystem/${this.props.name.toLowerCase()}`} target="_blank" rel="noopener noreferrer">
+                      <img alt={`Node support for ${this.props.name}`}src={`https://img.shields.io/node/v/@aurodesignsystem/${this.props.name.toLowerCase()}/latest?style=for-the-badge&color=pink`} style={{'marginBottom': '-8px', 'maxWidth': 'unset'}} />
+                    </a>
+              }
+            </td> */}
+            <td className="auro_util_nowrap">
+              {/* {
                 <a href={`https://github.com/AlaskaAirlines/${this.props.name}/issues`} target="_blank" className="noLinkUi" rel="noopener noreferrer">
                   <div className="badge">
                     <div className="title">Issues</div>
                     {this.props.issues.totalCount > 0
-                      ? <div className="data data--issues">{this.props.issues.totalCount}</div>
-                      : <div className="data data--null">{this.props.issues.totalCount}</div>
+                      ? <div className="data data--issues">{this.props.issues.totalCount} OPEN</div>
+                      : <div className="data data--null">{this.props.issues.totalCount} OPEN</div>
                     }
                   </div>
                 </a>
+              } */}
+              {
+                // This isn't great, but the package name is != to the repo name.
+                this.props.name === 'AuroDesignTokens'
+                  ?
+                    <a href={`https://www.npmjs.com/package/@aurodesignsystem/design-tokens`} target="_blank" rel="noopener noreferrer">
+                      <img alt={`Node support for ${this.props.name}`}src={`https://img.shields.io/node/v/@aurodesignsystem/design-tokens/latest?style=for-the-badge&color=pink`} style={{'marginBottom': '-8px', 'maxWidth': 'unset'}} />
+                    </a>
+                  :
+                    <a href={`https://www.npmjs.com/package/@aurodesignsystem/${this.props.name.toLowerCase()}`} target="_blank" rel="noopener noreferrer">
+                      <img alt={`Node support for ${this.props.name}`}src={`https://img.shields.io/node/v/@aurodesignsystem/${this.props.name.toLowerCase()}/latest?style=for-the-badge&color=pink`} style={{'marginBottom': '-8px', 'maxWidth': 'unset'}} />
+                    </a>
               }
             </td>
             <td>
@@ -54,12 +88,12 @@ class Repo extends Component {
               </div>
               {
                 this.props.pullRequests.totalCount > 0
-                ? <auro-accordion lowProfile noProfile justifyLeft>
-                    <strong slot="trigger" style={{'color': 'var(--auro-color-ui-default-on-light)'}}>
+                ? <auro-accordion>
+                    <span slot="trigger" style={{'color': 'var(--auro-color-ui-default-on-light)'}}>
                       {this.props.pullRequests.totalCount > 1
-                        ? `Their are (${this.props.pullRequests.totalCount}) open pull requests`
-                        : `There is (${this.props.pullRequests.totalCount}) open pull request`}
-                    </strong>
+                        ? `(${this.props.pullRequests.totalCount}) PRs open`
+                        : `(${this.props.pullRequests.totalCount}) PR open`}
+                    </span>
                     <div className="statusPrLayout">
                       {this.props.pullRequests.nodes.map(({title, mergeable, changedFiles, commits, url, isDraft, reviewDecision, author, createdAt}) => (
                         <span>

@@ -28,9 +28,9 @@ class AllIssues extends Component {
   render() {
 
     return (
-      <auro-accordion lowProfile noProfile>
+      <auro-accordion>
 
-        <auro-header slot="trigger" level="2" display="300">{this.props.name} <small>({this.props.issues.length})</small></auro-header>
+        <span slot="trigger">{this.props.name} <small>({this.props.issues.length})</small></span>
 
         <table key={this.props.name} className="auro_table auro_table--statusView epicIssues">
           <thead>
