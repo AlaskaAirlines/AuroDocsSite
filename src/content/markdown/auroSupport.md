@@ -57,7 +57,7 @@ Please see the items below for commonly asked questions regarding development an
   <auro-accordion id="getStarted" chromeless noProfile>
     <span slot="trigger">Q: What tech does Auro use?</span>
     <div class="lightText">
-      <p>LitElement is the base class that all Auro custom elements are built upon. Auro currently supports <auro-hyperlink target="_blank" href="https://www.npmjs.com/package/lit-element/v/2.5.1">Lit-element v2.5.1</auro-hyperlink>. There is a plan to convert all current custom elements to the new <auro-hyperlink target="_blank" href="https://lit.dev/">Lit 2.0 spec</auro-hyperlink> by the end of 2023.</p>
+      <p>LitElement is the base class that all Auro custom elements are built upon. The team is in the process of converting all current custom elements to the new <auro-hyperlink target="_blank" href="https://lit.dev/">Lit 3.0 spec</auro-hyperlink> by the end of 2023.</p>
       <p>LitElement is "Interoperable & future-ready". Meaning that while we use LitElement as our base technology, we are not constrained by it's use. For a full list of all the platforms LitElement supports, please see <auro-hyperlink target="_blank" href="https://custom-elements-everywhere.com/">Custom Elements Everywhere</auro-hyperlink>.</p>
     </div>
   </auro-accordion>

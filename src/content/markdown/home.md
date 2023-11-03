@@ -83,7 +83,7 @@
   <auro-accordion id="sla" chromeless noProfile>
     <span slot="trigger">Q: What is Auro's SLA?</span>
     <div class="lightText">
-      <auro-header level="3" display="500">Issues</auro-header>
+      <auro-header level="4" display="500" style="margin-top: 0;">Issues</auro-header>
       <p>When it comes to servicing our customers we hold ourselves to a high level of support. Once an issue is submitted, you have our promise that you will receive a response within 48 hours. </p>
       <p>That is not to say that we will address the issue within that time, but someone from our team will respond to your issue with the information we have and what our plan will be to prioritize the issue.</p>
       <p>Prioritization of work will take a few things into consideration, but the overall process will follow the MoSCoW approach. </p>
@@ -102,7 +102,7 @@
   <auro-accordion id="getStarted" chromeless noProfile>
     <span slot="trigger">Q: What tech does Auro use?</span>
     <div class="lightText">
-      <p>LitElement is the base class that all Auro custom elements are built upon. Auro currently supports <auro-hyperlink target="_blank" href="https://www.npmjs.com/package/lit-element/v/2.5.1">Lit-element v2.5.1</auro-hyperlink>. There is a plan to convert all current custom elements to the new <auro-hyperlink target="_blank" href="https://lit.dev/">Lit 2.0 spec</auro-hyperlink> by the end of 2023.</p>
+      <p>LitElement is the base class that all Auro custom elements are built upon. The team is in the process of converting all current custom elements to the new <auro-hyperlink target="_blank" href="https://lit.dev/">Lit 3.0 spec</auro-hyperlink> by the end of 2023.</p>
       <p>LitElement is "Interoperable & future-ready". Meaning that while we use LitElement as our base technology, we are not constrained by it's use. For a full list of all the platforms LitElement supports, please see <auro-hyperlink target="_blank" href="https://custom-elements-everywhere.com/">Custom Elements Everywhere</auro-hyperlink>.</p>
     </div>
   </auro-accordion>
