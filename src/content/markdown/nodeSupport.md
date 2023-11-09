@@ -30,6 +30,12 @@ The release will directly support the current LTS:
 node-version: 20.x
 ```
 
+Repo `settings.yml`` file will reference:
+
+```js
+contexts: ["test (18.x)", "test (20.x)", "license/cla"]
+```
+
 Following the Node.js Release Working Group [release schedule](https://github.com/nodejs/release#release-schedule) Auro commits to maintaining a similar schedule of support whereas by the 1st quarter of the year we will begin migration to the next LTS which is expected to be completed by the 4th quarter of the same year.
 
 | Release  | Auro Status         |Initial Release | Active LTS Start | Maintenance Start | End-of-life|
