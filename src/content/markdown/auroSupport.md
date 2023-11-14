@@ -7,6 +7,23 @@
 
 # Auro support
 
+<auro-banner billboard slim alignLeft onDark>
+  <picture slot="displayImage">
+    <source srcset="https://picsum.photos/id/42/1124/800" media="(min-width: 1024px)"/>
+    <source srcset="https://picsum.photos/id/42/1124/1000" media="(min-width: 768px)"/>
+    <source srcset="https://picsum.photos/id/42/736/750" media="(min-width: 736px)"/>
+    <source srcset="https://picsum.photos/id/42/736/1400" media="(min-width: 375px)"/>
+    <source srcset="https://picsum.photos/id/42/320/700" media="(min-width: 320px)"/>
+    <img src="https://picsum.photos/id/42/225/550" alt="" />
+  </picture>
+  <span slot="title"><auro-icon category="interface" name="chat" customColor customSize style="width: 50px"></auro-icon>Auro Discussions </span>
+  <p slot="description">
+    <span style="max-width: 500px; display: block">Have ideas you want to share or need more information about Auro? Please feel free to start a new discussion with the team.</span>
+  </p>
+  <auro-hyperlink style="margin-right: 1rem; margin-bottom: 0.5rem" type="cta" onDark href="https://github.com/AlaskaAirlines/WC-Generator/discussions/new/choose" slot="action" target="_blank">Start a new discussion</auro-hyperlink>
+  <auro-hyperlink type="cta" onDark href="https://github.com/AlaskaAirlines/WC-Generator/discussions" slot="action" target="_blank">View open discussions</auro-hyperlink>
+</auro-banner><br><br>
+
 Looking for help with Auro? F.A.Q.s, how to contact, it's all here. Also be sure to check out our [office hours](/officehours) for how to best contact the Auro team.
 
 To submit an issue with any part of the Auro ecosystem, please see our [status page](/component-status). Click/tap on any of the repo's corresponding *ISSUES* badge.
@@ -30,6 +47,13 @@ Please see the items below for commonly asked questions regarding development an
       <p>Next it's suggested to get familiar with <auro-hyperlink href="/webcorestylesheets" relative>Web Core Style Sheets</auro-hyperlink>, or WCSS for short. WCSS is a foundational CSS library to assist in the quick and easy setup of Auro styles. Also, don't forget to review the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/" target="_blank">WCSS API</auro-hyperlink> for an inside look at this supporting library.</p>
       <p>No UI would be complete without the use of <auro-hyperlink href="/icons" relative>icons</auro-hyperlink>. Auro has a vast array of predefined SVG icons to be used. Please see the documentation for all the ways you can make use of this library, or make use of Auro's easy to use  <auro-hyperlink href="/components/auro/icon" relative>icon custom element</auro-hyperlink>.</p>
       <p>Last, please see the list of available pre-developed <auro-hyperlink href="/component-status" relative>HTML native custom elements</auro-hyperlink>. These components can be used in virtually any development stack. Be sure you checkout the <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink>, <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink> and <auro-hyperlink href="/javascriptSetup" relative>standard JS</auro-hyperlink> example projects.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="getStarted" chromeless noProfile>
+    <span slot="trigger">Q: Forking a repo?</span>
+    <div class="lightText">
+      <p>So you are interested in supporting Auro? That's great. There is one step you may or may not know when contributing to an open source repo. If you are not part of the trusted committers security group, this means that you need to fork the repo. It is in the fork that you have full access to make any updates you wish and then submit them back to us in a pull request to merge in your new ideas.</p>
+      <p>Not sure how to fork, here is a great <auro-hyperlink href="https://docs.github.com/en/get-started/quickstart/fork-a-repo" target="_blank">how-to article</auro-hyperlink> from Github.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="getStarted" chromeless noProfile>

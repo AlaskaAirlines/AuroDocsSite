@@ -8,40 +8,24 @@
   <img alt="homepage hero image" src="/images/content/home.jpg" />
 </div><br>
 
-<!-- <auro-alerts information noicon>
-  NOTE: The following Custom Elements have been updated with a new bundled CDN build process:<br><br>
-  <auro-hyperlink href="/components/auro/hyperlink/install" relative>auro-hyperlink v2.1</auro-hyperlink>,
-  <auro-hyperlink href="/components/auro/alerts/install" relative>auro-alerts v1.3</auro-hyperlink>, and
-  <auro-hyperlink href="/components/auro/radio/install" relative>auro-radio v1.3</auro-hyperlink>
-  <br><br>If you are using this bundled version, make sure NOT to use <code>@latest</code> in your code.
-  These versions no longer support the <code>polyfill.js</code>. Be sure to see the updated link code in the individual component install page.
-</auro-alerts><br> -->
-
-
 <!-- Auro provides components and tools to help product teams work more efficiently. Designed and developed to support all Alaska Airlines digital experiences. -->
 
-<div class="auro_util_displayFlex columns">
-  <div>
-    <auro-header display="700">Philosophy</auro-header>
-    <p>We promote ease and inspire engagement through focused and intentional design. Translating our friendly and optimistic brand, our digital experiences establish emotional connections — delivering care and value. Simple. Consistent. Relevant. Engaging.</p>
-    <auro-hyperlink href="https://auro.alaskaair.com/design-philosophy" relative>Learn More About Our Philosophy</auro-hyperlink>
-  </div>
-  <div>
-    <auro-header display="700">Resources</auro-header>
-    <p>Designer or developer, we have resources for every audience.</p>
-    <p>
-      <auro-hyperlink href="/typography/overview" relative>Typography</auro-hyperlink> and <auro-hyperlink href="/color/overview" relative>Color</auro-hyperlink>,<br/>
-      a vast array of <auro-hyperlink href="/getting-started/developers/design-tokens" relative>Design Tokens,</auro-hyperlink><br/>
-      <auro-hyperlink href="/icons" relative>pixel-perfect Icons,</auro-hyperlink><br/>
-      and the <auro-hyperlink href="/generator" relative>WC-Generator</auro-hyperlink> for a unique developer experience.<br/>
-    </p>
-  </div>
-  <div>
-    <auro-header display="700">Implementations</auro-header>
-    <p>Using LitElement as a base, the Auro web components allows for highly flexible use in almost any development environment including <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink> and <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink>.</p>
-    See our growing list of pre-built <auro-hyperlink href="/component-status" relative>web components.</auro-hyperlink>
-  </div>
-</div><br>
+<auro-banner billboard slim alignLeft onDark>
+  <picture slot="displayImage">
+    <source srcset="https://picsum.photos/id/42/1124/800" media="(min-width: 1024px)"/>
+    <source srcset="https://picsum.photos/id/42/1124/1000" media="(min-width: 768px)"/>
+    <source srcset="https://picsum.photos/id/42/736/750" media="(min-width: 736px)"/>
+    <source srcset="https://picsum.photos/id/42/736/1400" media="(min-width: 375px)"/>
+    <source srcset="https://picsum.photos/id/42/320/700" media="(min-width: 320px)"/>
+    <img src="https://picsum.photos/id/42/225/550" alt="" />
+  </picture>
+  <span slot="title"><auro-icon category="interface" name="chat" customColor customSize style="width: 50px"></auro-icon>Auro Discussions </span>
+  <p slot="description">
+    <span style="max-width: 500px; display: block">Have ideas you want to share or need more information about Auro? Please feel free to start a new discussion with the team.</span>
+  </p>
+  <auro-hyperlink style="margin-right: 1rem; margin-bottom: 0.5rem" type="cta" onDark href="https://github.com/AlaskaAirlines/WC-Generator/discussions/new/choose" slot="action" target="_blank">Start a new discussion</auro-hyperlink>
+  <auro-hyperlink type="cta" onDark href="https://github.com/AlaskaAirlines/WC-Generator/discussions" slot="action" target="_blank">View open discussions</auro-hyperlink>
+</auro-banner>
 
 ## Auro's top FAQs
 
@@ -63,6 +47,13 @@
       <p>Next it's suggested to get familiar with <auro-hyperlink href="/webcorestylesheets" relative>Web Core Style Sheets</auro-hyperlink>, or WCSS for short. WCSS is a foundational CSS library to assist in the quick and easy setup of Auro styles. Also, don't forget to review the <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/" target="_blank">WCSS API</auro-hyperlink> for an inside look at this supporting library.</p>
       <p>No UI would be complete without the use of <auro-hyperlink href="/icons/overview" relative>icons</auro-hyperlink>. Auro has a vast array of predefined SVG icons to be used. Please see the documentation for all the ways you can make use of this library, or make use of Auro's easy to use  <auro-hyperlink href="/components/auro/icon" relative>icon custom element</auro-hyperlink>.</p>
       <p>Last, please see the list of available pre-developed <auro-hyperlink href="/component-status" relative>HTML native custom elements</auro-hyperlink>. These components can be used in virtually any development stack. Be sure you checkout the <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink>, <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink> and <auro-hyperlink href="/javascriptSetup" relative>standard JS</auro-hyperlink> example projects.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="getStarted" chromeless noProfile>
+    <span slot="trigger">Q: Forking a repo?</span>
+    <div class="lightText">
+      <p>So you are interested in supporting Auro? That's great. There is one step you may or may not know when contributing to an open source repo. If you are not part of the trusted committers security group, this means that you need to fork the repo. It is in the fork that you have full access to make any updates you wish and then submit them back to us in a pull request to merge in your new ideas.</p>
+      <p>Not sure how to fork, here is a great <auro-hyperlink href="https://docs.github.com/en/get-started/quickstart/fork-a-repo" target="_blank">how-to article</auro-hyperlink> from Github.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="getStarted" chromeless noProfile>

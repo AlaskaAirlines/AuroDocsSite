@@ -362,7 +362,26 @@ class ComponentStatus extends Component {
         <Nav />
 
         <auro-header level="1" display="display">Status</auro-header>
-        <p>IMPORTANT: The Auro custom element are a work in progress and releases are subject to major changes.</p>
+        <p>
+          <auro-banner billboard slim alignLeft onDark>
+            <picture slot="displayImage">
+              <source srcset="https://picsum.photos/id/42/1124/800" media="(min-width: 1024px)"/>
+              <source srcset="https://picsum.photos/id/42/1124/1000" media="(min-width: 768px)"/>
+              <source srcset="https://picsum.photos/id/42/736/750" media="(min-width: 736px)"/>
+              <source srcset="https://picsum.photos/id/42/736/1400" media="(min-width: 375px)"/>
+              <source srcset="https://picsum.photos/id/42/320/700" media="(min-width: 320px)"/>
+              <img src="https://picsum.photos/id/42/225/550" alt="" />
+            </picture>
+            <span slot="title"><auro-icon category="interface" name="chat" customColor customSize style={{width: '50px'}}></auro-icon>Auro Discussions </span>
+            <p slot="description">
+              <span style={{'max-width': '500px', display: 'block'}}>Have ideas you want to share or need more information about Auro? Please feel free to start a new discussion with the team.</span>
+            </p>
+            <auro-hyperlink style={{'margin-right': '1rem', 'margin-bottom': '0.5rem'}} type="cta" onDark href="https://github.com/AlaskaAirlines/WC-Generator/discussions/new/choose" slot="action" target="_blank">Start a new discussion</auro-hyperlink>
+            <auro-hyperlink type="cta" onDark href="https://github.com/AlaskaAirlines/WC-Generator/discussions" slot="action" target="_blank">View open discussions</auro-hyperlink>
+          </auro-banner>
+        </p>
+
+        <p>Auro custom elements are always in a 'work in progress' status and releases are subject to major changes.</p>
         <p>Auro custom element are a collection of custom element maintained by Alaska Airlines that implement the Auro Design System. Tools and developed elements that are universally useable in almost any development environment including <auro-hyperlink href="/reactSetup" relative>React,</auro-hyperlink> <auro-hyperlink href="/svelteSetup" relative>Svelte,</auro-hyperlink> or simply standard <auro-hyperlink href="/javascriptSetup" relative>JavaScript.</auro-hyperlink></p>
 
         <p>For more information about how we address Node support maintenance, see our <auro-hyperlink href="/node-support" relative>Auro Node support</auro-hyperlink> page.</p>
