@@ -7,6 +7,23 @@
 
 # Auro support
 
+<auro-banner billboard slim alignLeft onDark>
+  <picture slot="displayImage">
+    <source srcset="https://picsum.photos/id/42/1124/800" media="(min-width: 1024px)"/>
+    <source srcset="https://picsum.photos/id/42/1124/1000" media="(min-width: 768px)"/>
+    <source srcset="https://picsum.photos/id/42/736/750" media="(min-width: 736px)"/>
+    <source srcset="https://picsum.photos/id/42/736/1400" media="(min-width: 375px)"/>
+    <source srcset="https://picsum.photos/id/42/320/700" media="(min-width: 320px)"/>
+    <img src="https://picsum.photos/id/42/225/550" alt="" />
+  </picture>
+  <span slot="title"><auro-icon category="interface" name="chat" customColor customSize style="width: 50px"></auro-icon>Auro Discussions </span>
+  <p slot="description">
+    <span style="max-width: 500px; display: block">Have ideas you want to share or need more information about Auro? Please feel free to start a new discussion with the team.</span>
+  </p>
+  <auro-hyperlink style="margin-right: 1rem" type="cta" small secondary ondark href="https://github.com/AlaskaAirlines/WC-Generator/discussions/new/choose" slot="action" target="_blank">Start a new discussion</auro-hyperlink>
+  <auro-hyperlink type="cta" small secondary ondark href="https://github.com/AlaskaAirlines/WC-Generator/discussions" slot="action" target="_blank">View open discussions</auro-hyperlink>
+</auro-banner><br><br>
+
 Looking for help with Auro? F.A.Q.s, how to contact, it's all here. Also be sure to check out our [office hours](/officehours) for how to best contact the Auro team.
 
 To submit an issue with any part of the Auro ecosystem, please see our [status page](/component-status). Click/tap on any of the repo's corresponding *ISSUES* badge.

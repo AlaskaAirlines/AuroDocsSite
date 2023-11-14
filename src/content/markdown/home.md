@@ -20,6 +20,23 @@
 
 <!-- Auro provides components and tools to help product teams work more efficiently. Designed and developed to support all Alaska Airlines digital experiences. -->
 
+<auro-banner billboard slim alignLeft onDark>
+  <picture slot="displayImage">
+    <source srcset="https://picsum.photos/id/42/1124/800" media="(min-width: 1024px)"/>
+    <source srcset="https://picsum.photos/id/42/1124/1000" media="(min-width: 768px)"/>
+    <source srcset="https://picsum.photos/id/42/736/750" media="(min-width: 736px)"/>
+    <source srcset="https://picsum.photos/id/42/736/1400" media="(min-width: 375px)"/>
+    <source srcset="https://picsum.photos/id/42/320/700" media="(min-width: 320px)"/>
+    <img src="https://picsum.photos/id/42/225/550" alt="" />
+  </picture>
+  <span slot="title"><auro-icon category="interface" name="chat" customColor customSize style="width: 50px"></auro-icon>Auro Discussions </span>
+  <p slot="description">
+    <span style="max-width: 500px; display: block">Have ideas you want to share or need more information about Auro? Please feel free to start a new discussion with the team.</span>
+  </p>
+  <auro-hyperlink style="margin-right: 1rem" type="cta" small secondary ondark href="https://github.com/AlaskaAirlines/WC-Generator/discussions/new/choose" slot="action" target="_blank">Start a new discussion</auro-hyperlink>
+  <auro-hyperlink type="cta" small secondary ondark href="https://github.com/AlaskaAirlines/WC-Generator/discussions" slot="action" target="_blank">View open discussions</auro-hyperlink>
+</auro-banner>
+
 <div class="auro_util_displayFlex columns">
   <div>
     <auro-header display="700">Philosophy</auro-header>
@@ -42,6 +59,23 @@
     See our growing list of pre-built <auro-hyperlink href="/component-status" relative>web components.</auro-hyperlink>
   </div>
 </div><br>
+
+<!-- <auro-banner billboard slim alignLeft onDark>
+  <picture slot="displayImage">
+    <source srcset="https://picsum.photos/id/42/1124/800" media="(min-width: 1024px)"/>
+    <source srcset="https://picsum.photos/id/42/1124/1000" media="(min-width: 768px)"/>
+    <source srcset="https://picsum.photos/id/42/736/750" media="(min-width: 736px)"/>
+    <source srcset="https://picsum.photos/id/42/736/1400" media="(min-width: 375px)"/>
+    <source srcset="https://picsum.photos/id/42/320/700" media="(min-width: 320px)"/>
+    <img src="https://picsum.photos/id/42/225/550" alt="" />
+  </picture>
+  <span slot="title"><auro-icon category="interface" name="chat" customColor customSize style="width: 50px"></auro-icon>Auro Discussions </span>
+  <p slot="description">
+    <span style="max-width: 500px; display: block">Have ideas you want to share or need more information about Auro? Please feel free to start a new discussion with the team.</span>
+  </p>
+  <auro-hyperlink style="margin-right: 1rem" type="cta" small secondary ondark href="https://github.com/AlaskaAirlines/WC-Generator/discussions/new/choose" slot="action" target="_blank">Start a new discussion</auro-hyperlink>
+  <auro-hyperlink type="cta" small secondary ondark href="https://github.com/AlaskaAirlines/WC-Generator/discussions" slot="action" target="_blank">View open discussions</auro-hyperlink>
+</auro-banner> -->
 
 ## Auro's top FAQs
 
