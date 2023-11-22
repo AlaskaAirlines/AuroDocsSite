@@ -13,7 +13,7 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/accordion/releases`} activeClassName="is-active">Releases</NavLink>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-accordion/issues"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-accordion"
+          npm="https://www.npmjs.com/package/@aurodesignsystem/auro-accordion"
           code="https://github.com/AlaskaAirlines/auro-accordion/blob/master/src/auro-accordion.js"
         />
       </div>
