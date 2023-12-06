@@ -632,7 +632,7 @@ img[src*='shields.io'] {
     padding: var(--ds-size-300);
     padding-top: var(--ds-size-100);
     &:nth-child(even) {
-      background-color: var(--ds-color-base-gray-100);
+      background-color: var(--ds-color-brand-gray-100);
     }
   }
 }
