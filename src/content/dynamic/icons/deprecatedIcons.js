@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Nav } from './nav.js';
- import DeprecatedIconList from './deprecatedIconList';
+import DeprecatedIconList from './deprecatedIconList';
 
 class Icons extends Component {
 

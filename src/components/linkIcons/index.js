@@ -24,7 +24,7 @@ function LinkIcons(props) {
   function npm() {
     if (props.npm) {
       return (
-        <a href={props.npm} target="_blank" rel="noopener noreferrer" aria-label="Install npm pachage">
+        <a href={props.npm} target="_blank" rel="noopener noreferrer" aria-label="Install npm package">
           <Npm role="img" aria-hidden="false" />
         </a>
       )

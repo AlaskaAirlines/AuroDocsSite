@@ -1,62 +1,18 @@
-import React from "react";
-import { Nav } from './nav';
-import marked from 'marked';
-import Prism from 'prismjs';
-import 'prismjs/themes/prism.css';
-// import markdownContent from '@aurodesignsystem/auro-avatar/demo/demo.md'
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import AuroComponentContent from "functions/renderContentPage";
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-avatar/main/demo/demo.md';
+class AuroContent extends AuroComponentContent {
 
-class AuroAvatar extends MarkdownPageWrapper {
+  constructor(props) {
+    super(props);
 
-  // function to get text from MD document
-  getMarkdownText() {
-    fetch(markdownContent)
-        .then((response) => response.text())
-        .then((text) => {
-          const rawHtml = marked(text);
-          document.querySelector('.auro-markdown').innerHTML = rawHtml;
-          Prism.highlightAll();
-        });
+    this.nameSpace = 'aurodesignsystem';
+    this.componentName = 'avatar';
+    this.markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-avatar/main/demo/demo.md';
+  };
 
-    const renderer = new marked.Renderer();
-    renderer.link = function(href, title, text) {
-      const link = marked.Renderer.prototype.link.call(this, href, title, text);
-      let url = href
-      url = url.replace(/^.*\/\/[^/]+/, '')
-
-      if (href.includes("auro.alaskaair.com")) {
-
-        return link.replace("href",`href="${url}"`);
-      } else {
-
-        const newLink = `<a href="${href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
-
-        return newLink;
-      }
-    };
-
-    marked.setOptions({
-        renderer: renderer
-    });
-  }
-
-
-
-  render() {
-    return (
-      <section className="auro_baseType">
-
-        <Nav />
-
-        <section
-          className="auro-markdown"
-          dangerouslySetInnerHTML={this.getMarkdownText()}
-        />
-      </section>
-    );
+  componentDidMount() {
+    // registerCustomComponent('custom-avatar', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-avatar@latest/dist/auro-accordion__bundled.js');
   }
 }
 
-export default AuroAvatar;
+export default AuroContent;

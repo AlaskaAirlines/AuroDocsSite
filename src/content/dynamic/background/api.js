@@ -1,40 +1,14 @@
-import React from "react";
-import { Nav } from './nav';
-import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
-// import markdownContent from '@aurodesignsystem/auro-background/docs/api.md'
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import AuroComponentContent from "functions/renderContentPage";
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-background/main/demo/api.md';
+class AuroContent extends AuroComponentContent {
 
-class AuroBackgroundApi extends MarkdownPageWrapper {
+  constructor(props) {
+    super(props);
 
-  componentWillMount() {
-    fetch(markdownContent).then((response) => response.text()).then((text) => {
-      this.setState({
-        contentBuild: text
-      })
-    })
-  }
-
-  render() {
-    return (
-      <section className="auro_baseType">
-
-        <Nav />
-
-        <section className="auro-markdown">
-          <ReactMarkdown
-            source={this.state.contentBuild}
-            escapeHtml={false}
-            renderers={{
-              code: CodeBlock,
-              heading: this.headingRenderer
-            }}/>
-        </section>
-      </section>
-    );
-  }
+    // this.nameSpace = `aurodesignsystem`;
+    this.name = `background`;
+    this.markdownContent = `https://raw.githubusercontent.com/AlaskaAirlines/auro-${this.name}/master/docs/api.md`;
+  };
 }
 
-export default AuroBackgroundApi;
+export default AuroContent;
