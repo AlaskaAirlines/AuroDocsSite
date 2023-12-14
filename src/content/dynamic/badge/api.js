@@ -1,39 +1,14 @@
-import React from "react";
-import { Nav } from './nav';
-import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import AuroComponentContent from "functions/renderContentPage";
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-badge/main/docs/api.md';
+class AuroContent extends AuroComponentContent {
 
-class AuroBadgeApi extends MarkdownPageWrapper {
+  constructor(props) {
+    super(props);
 
-  componentWillMount() {
-    fetch(markdownContent).then((response) => response.text()).then((text) => {
-      this.setState({
-        contentBuild: text
-      })
-    })
-  }
-
-  render() {
-    return (
-      <section className="auro_baseType">
-
-        <Nav />
-
-        <section className="auro-markdown">
-          <ReactMarkdown
-            source={this.state.contentBuild}
-            escapeHtml={false}
-            renderers={{
-              code: CodeBlock,
-              heading: this.headingRenderer
-            }}/>
-        </section>
-      </section>
-    );
-  }
+    this.nameSpace = 'aurodesignsystem';
+    this.componentName = 'badge';
+    this.markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-badge/master/docs/api.md';
+  };
 }
 
-export default AuroBadgeApi;
+export default AuroContent;

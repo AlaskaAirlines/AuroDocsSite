@@ -19,7 +19,7 @@ class AuroSidenav extends MarkdownPageWrapper {
     fetch(markdownContent)
         .then((response) => response.text())
         .then((text) => {
-          const rawHtml = marked(text);
+          const rawHtml = marked.parse(text);
           document.querySelector('.auro-markdown').innerHTML = rawHtml;
           Prism.highlightAll();
         });
