@@ -6,7 +6,7 @@ import 'prismjs/themes/prism.css';
 // import markdownContent from '@alaskaairux/auro-popover/demo/demo.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-popover/master/demo/demo.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-popover/master/demo/index.md';
 
 class AuroPopover extends MarkdownPageWrapper {
 
