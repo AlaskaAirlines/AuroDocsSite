@@ -87,6 +87,12 @@ import IconsWaysToUse from './content/dynamic/icons/ways-to-use';
 import LayoutGrid from './content/dynamic/layout/grid';
 import LayoutSpacing from './content/dynamic/layout/spacing';
 
+// banner
+import AuroBanner from './content/dynamic/banner/component';
+import AuroBannerApi from './content/dynamic/banner/api';
+import AuroBannerInstall from 'content/dynamic/banner/install';
+import AuroBannerReleases from 'content/dynamic/banner/releases';
+
 // card
 import AuroCard from './content/dynamic/card/component';
 import AuroCardApi from './content/dynamic/card/api';
@@ -442,6 +448,7 @@ function App() {
               <Route exact path="/alerts"><AuroAlerts /></Route>
               <Route exact path="/avatar/"><AuroAvatar /></Route>
               <Route exact path="/background/"><AuroBackground /></Route>
+              <Route exact path="/banner/"><AuroBanner /></Route>
               <Route exact path="/button"><AuroButton /></Route>
               <Route exact path="/card/"><AuroCard /></Route>
               <Route exact path="/carousel/"><AuroCarousel /></Route>
@@ -701,6 +708,12 @@ function App() {
               <Route exact path="/components/auro/hyperlink/releases"><AuroHyperlinkReleases /></Route>
               <Route exact path="/components/auro/hyperlink/figma"><AuroHyperlinkFigma /></Route>
               <Route exact path="/components/auro/hyperlink/a11y"><AuroHyperlinka11y /></Route>
+
+              {/* banner */}
+              <Route exact path="/components/auro/banner/"><AuroBanner /></Route>
+              <Route exact path="/components/auro/banner/api"><AuroBannerApi /></Route>
+              <Route exact path="/components/auro/banner/install"><AuroBannerInstall /></Route>
+              <Route exact path="/components/auro/banner/releases"><AuroBannerReleases /></Route>
 
               {/* card */}
               <Route exact path="/components/auro/card/"><AuroCard /></Route>
