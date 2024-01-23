@@ -89,7 +89,6 @@ import LayoutSpacing from './content/dynamic/layout/spacing';
 
 // card
 import AuroCard from './content/dynamic/card/component';
-import AuroBanner from './content/dynamic/card/banner';
 import AuroCardApi from './content/dynamic/card/api';
 import AuroCardInstall from './content/dynamic/card/install';
 import AuroCardReleases from './content/dynamic/card/releases';
@@ -705,7 +704,6 @@ function App() {
 
               {/* card */}
               <Route exact path="/components/auro/card/"><AuroCard /></Route>
-              <Route exact path="/components/auro/banner/"><AuroBanner /></Route>
               <Route exact path="/components/auro/card/api"><AuroCardApi /></Route>
               <Route exact path="/components/auro/card/install"><AuroCardInstall /></Route>
               <Route exact path="/components/auro/card/releases"><AuroCardReleases /></Route>

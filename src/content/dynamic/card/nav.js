@@ -8,14 +8,13 @@ export class Nav extends Component {
     return (
       <div role="tablist" className="tabList">
         <NavLink role="tab" exact className="tab link" to={`/components/auro/card`} activeClassName="is-active">Card</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/banner`} activeClassName="is-active">Banner</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/card/install`} activeClassName="is-active">Install</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/card/api`} activeClassName="is-active">API</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/card/releases`} activeClassName="is-active">Releases</NavLink>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-card/issues"
-          npm="https://www.npmjs.com/package/@alaskaairux/auro-card"
-          code="https://github.com/AlaskaAirlines/auro-card/blob/master/src/auro-card.js"
+          npm="https://www.npmjs.com/package/@aurodesignsystem/auro-card"
+          code="https://github.com/AlaskaAirlines/auro-card/blob/main/src/auro-card.js"
         />
 
       </div>
