@@ -125,13 +125,17 @@ import AuroAvatarApi from './content/dynamic/avatar/api';
 import AuroAvatarInstall from './content/dynamic/avatar/install';
 import AuroAvatarReleases from './content/dynamic/avatar/releases';
 
-// Interruption [dialog, drawer]
-import AuroInterruption from './content/dynamic/interruption/component';
-import AuroInterruptionDialog from './content/dynamic/interruption/dialog';
-import AuroInterruptionDrawer from './content/dynamic/interruption/drawer';
-import AuroInterruptionApi from './content/dynamic/interruption/api';
-import AuroInterruptionInstall from './content/dynamic/interruption/install';
-import AuroInterruptionReleases from './content/dynamic/interruption/releases';
+// Dialog
+import AuroDialog from './content/dynamic/dialog/component';
+import AuroDialogApi from './content/dynamic/dialog/api';
+import AuroDialogInstall from './content/dynamic/dialog/install';
+import AuroDialogReleases from './content/dynamic/dialog/releases';
+
+// Drawer
+import AuroDrawer from './content/dynamic/drawer/component';
+import AuroDrawerApi from './content/dynamic/drawer/api';
+import AuroDrawerInstall from './content/dynamic/drawer/install';
+import AuroDrawerReleases from './content/dynamic/drawer/releases';
 
 // Icon
 import AuroIcon from './content/dynamic/icon/component';
@@ -456,12 +460,13 @@ function App() {
               <Route exact path="/carousel/"><AuroCarousel /></Route>
               <Route exact path="/checkbox"><AuroCheckbox /></Route>
               <Route exact path="/datetime/"><AuroDateTime /></Route>
+              <Route exact path="/dialog/"><AuroDialog /></Route>
+              <Route exact path="/drawer/"><AuroDrawer /></Route>
               <Route exact path="/dropdown"><AuroDropdown /></Route>
               <Route exact path="/combobox"><AuroCombobox /></Route>
               <Route exact path="/datepicker"><AuroDatepicker /></Route>
               <Route exact path="/header"><AuroHeader /></Route>
               <Route exact path="/hyperlink"><AuroHyperlink /></Route>
-              <Route exact path="/interruption/"><AuroInterruption /></Route>
               <Route exact path="/icon/"><AuroIcon /></Route>
               <Route exact path="/input"><AuroInput /></Route>
               <Route exact path="/lockup"><AuroLockup /></Route>
@@ -749,13 +754,17 @@ function App() {
               <Route exact path="/components/auro/icon/releases"><AuroIconReleases /></Route>
               <Route exact path="/components/auro/icon/alaska"><AuroAlaska/></Route>
 
-              {/* modal */}
-              <Route exact path="/components/auro/interruption/"><AuroInterruption /></Route>
-              <Route exact path="/components/auro/interruption/dialog"><AuroInterruptionDialog /></Route>
-              <Route exact path="/components/auro/interruption/drawer"><AuroInterruptionDrawer /></Route>
-              <Route exact path="/components/auro/interruption/install"><AuroInterruptionInstall/></Route>
-              <Route exact path="/components/auro/interruption/api"><AuroInterruptionApi /></Route>
-              <Route exact path="/components/auro/interruption/releases"><AuroInterruptionReleases /></Route>
+              {/* Auro Dialog */}
+              <Route exact path="/components/auro/dialog"><AuroDialog /></Route>
+              <Route exact path="/components/auro/dialog/install"><AuroDialogInstall /></Route>
+              <Route exact path="/components/auro/dialog/api"><AuroDialogApi /></Route>
+              <Route exact path="/components/auro/dialog/releases"><AuroDialogReleases /></Route>
+
+              {/* Auro Drawer */}
+              <Route exact path="/components/auro/drawer"><AuroDrawer /></Route>
+              <Route exact path="/components/auro/drawer/install"><AuroDrawerInstall /></Route>
+              <Route exact path="/components/auro/drawer/api"><AuroDrawerApi /></Route>
+              <Route exact path="/components/auro/drawer/releases"><AuroDrawerReleases /></Route>
 
               {/* flight-details */}
               <Route exact path="/components/auro/flight-details/"><Wip /></Route>

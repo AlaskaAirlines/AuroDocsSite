@@ -8,7 +8,7 @@ const RELEASES = gql`
 {
   organization(login: "AlaskaAirlines") {
     team(slug: "auro-team") {
-      repositories(first: 1, orderBy: {field: NAME, direction: ASC}, query: "auro-interruption") {
+      repositories(first: 1, orderBy: {field: NAME, direction: ASC}, query: "auro-dialog") {
         nodes {
           name
           releases(first: 20, orderBy: {field: CREATED_AT, direction: DESC}) {

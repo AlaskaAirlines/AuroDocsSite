@@ -4,10 +4,18 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-interruption/master/docs/api.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-dialog/main/README.md';
 
-class AuroAlertsApi extends MarkdownPageWrapper {
+class AuroDialogInstall extends MarkdownPageWrapper {
 
+  showVersion() {
+    const pjson = require('../../../../package.json');
+    const dependencies = pjson.dependencies['@aurodesignsystem/auro-dialog'];
+
+    return `@aurodesignsystem/auro-dialog: ${dependencies}`;
+  };
+
+  // function to get text from MD document
   componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
       this.setState({
@@ -28,12 +36,14 @@ class AuroAlertsApi extends MarkdownPageWrapper {
             escapeHtml={false}
             renderers={{
               code: CodeBlock,
-              heading: this.headingRenderer
+              heading: this.headingRenderer,
+              link: this.linkRenderer
             }}/>
         </section>
+
       </section>
     );
   }
 }
 
-export default AuroAlertsApi;
+export default AuroDialogInstall;
