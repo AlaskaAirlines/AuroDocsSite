@@ -4,18 +4,10 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-interruption/master/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-drawer/main/demo/api.md';
 
-class AuroAlertsInstall extends MarkdownPageWrapper {
+class AuroDrawerApi extends MarkdownPageWrapper {
 
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-interruption'];
-
-    return `@alaskaairux/auro-interruption: ${dependencies}`;
-  };
-
-  // function to get text from MD document
   componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
       this.setState({
@@ -36,14 +28,12 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
             escapeHtml={false}
             renderers={{
               code: CodeBlock,
-              heading: this.headingRenderer,
-              link: this.linkRenderer
+              heading: this.headingRenderer
             }}/>
         </section>
-
       </section>
     );
   }
 }
 
-export default AuroAlertsInstall;
+export default AuroDrawerApi;

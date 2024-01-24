@@ -3,12 +3,11 @@ import { Nav } from './nav';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
-// import markdownContent from '@alaskaairux/auro-interruption/demo/dialog.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-interruption/master/demo/dialog.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-dialog/main/demo/index.md';
 
-class AuroInterruptionDialog extends MarkdownPageWrapper {
+class AuroDialog extends MarkdownPageWrapper {
 
   // function to get text from MD document
   getMarkdownText() {
@@ -59,4 +58,4 @@ class AuroInterruptionDialog extends MarkdownPageWrapper {
   }
 }
 
-export default AuroInterruptionDialog;
+export default AuroDialog;
