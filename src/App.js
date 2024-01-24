@@ -80,6 +80,7 @@ import TypographyUsage from './content/dynamic/typography/usage';
 // icons
 import IconsGuidelines from './content/dynamic/icons/guidelines';
 import Icons from './content/dynamic/icons/icons.js';
+import DeprecatedIcons from './content/dynamic/icons/deprecatedIcons';
 import IconsInstall from './content/dynamic/icons/install';
 import IconsWaysToUse from './content/dynamic/icons/ways-to-use';
 
@@ -523,6 +524,7 @@ function App() {
               {/* Icons */}
               <Route exact path="/icons/guidelines"><IconsGuidelines /></Route>
               <Route exact path="/icons"><Icons /></Route>
+              <Route exact path="/deprecated-icons"><DeprecatedIcons /></Route>
               <Route exact path="/icons/install"><IconsInstall /></Route>
               <Route exact path="/icons/ways-to-use"><IconsWaysToUse /></Route>
 

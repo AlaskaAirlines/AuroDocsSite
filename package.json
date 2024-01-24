@@ -9,7 +9,7 @@
     "@alaskaairux/auro-loader": "^1.1.1",
     "@alaskaairux/auro-radio": "^1.6.2",
     "@alaskaairux/design-tokens": "^3.15.5",
-    "@alaskaairux/icons": "^4.31.0",
+    "@alaskaairux/icons": "^4.34.1",
     "@apollo/react-components": "^3.1.5",
     "@apollo/react-hooks": "^3.1.5",
     "@aurodesignsystem/design-tokens": "^4.1.1",
@@ -41,7 +41,7 @@
     "buildIconsScript": "node ./scripts/build-icon-lib.js",
     "buildPages": "node ./scripts/build-page-imports.js",
     "buildIcons": "npm-run-all buildPages buildIconsScript",
-    "dev": "npm-run-all buildPages buildIconsScript start"
+    "dev": "npm-run-all buildIcons start"
   },
   "husky": {
     "hooks": {

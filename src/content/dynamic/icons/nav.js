@@ -17,6 +17,8 @@ export class Nav extends Component {
         <NavLink role="tab" exact className="tab link" to={`/icons/guidelines`} activeClassName="is-active">Design guidelines</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/icons/install`} activeClassName="is-active">Install</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/icons/ways-to-use`} activeClassName="is-active">Ways to use</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/deprecated-icons`} activeClassName="is-active">Deprecated Icons</NavLink>
+
         <LinkIcons
           github="https://github.com/AlaskaAirlines/Icons/issues"
           npm="https://www.npmjs.com/package/@alaskaairux/icons"
