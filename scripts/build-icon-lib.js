@@ -1,111 +1,77 @@
-const { resolve, normalize } = require('path');
-const { readdir } = require('fs').promises;
 const fs = require('fs');
+const { getFiles, getCategory, buildImports, buildElements, REGEX_FILE_EXTENSION } = require('./utils');
 
-async function* getFiles(dir) {
-  const dirents = await readdir(dir, { withFileTypes: true });
+/**
+ * Build the iconList.js and deprecatedIconList.js file.
+ */
+async function buildIconList() {
+  const icons = [];
+  const deprecatedIcons = [];
+  const files = getFiles('./node_modules/@alaskaairux/icons/dist/icons');
+  for await (const f of files) {
+    // read non es6 js file for non-deprecated value and push the svg file
+    if (/^(?=.*(?:.js))(?!.*(?:es6))/.test(f)) {
+      const file = require(f);
 
-  for (const dirent of dirents) {
-    const res = resolve(dir, dirent.name);
-
-    if (dirent.isDirectory()) {
-      yield* getFiles(normalize(res));
-    } else {
-      yield res.replace(/\\/g, '/');
+      const iconPath = `${f.split('node_modules/')[1].replace(REGEX_FILE_EXTENSION,'.svg')}`;
+      if (file.deprecated) {
+        deprecatedIcons.push(iconPath);
+      } else {
+        icons.push(iconPath);
+      }
     }
-  }
-}
+  };
 
-const getFile = (filePath) => {
-    const dirs = filePath.split('/');
-
-    return dirs[dirs.length -1];
-}
-
-const getImportName = (filePath) => {
-    const file = getFile(filePath);
-    let name = file.split('.')[0];
-    name = name.replace(/-/g, '');
-    const camelCaseName = name.charAt(0).toUpperCase() + name.substring(1);
-
-    return camelCaseName;
-};
-
-const buildImports = (iconPaths) => {
-    let importText = "";
-
-    iconPaths.forEach(i => {
-        importText += "// eslint-disable-next-line import/no-webpack-loader-syntax \n";
-        importText += `import ${getImportName(i)} from '-!svg-react-loader!${i}'; \n`;
-    })
-
-    return importText
-}
-
-const buildElements = (sortedIcons) => {
-
-    let allCategories = '';
-
-    for(let category in sortedIcons) {
-      let iconPaths = sortedIcons[category];
-      let elements = "";
-
-      iconPaths.forEach(i => {
-          const file = getFile(i);
-          const tag = getImportName(i);
-          elements += `<div title="${file}"><${tag} /><span>${file}</span></div>`
-      });
-
-      allCategories += `<section><h2 className="icon-category">${category}</h2><div className="iconsWrapper">${elements}</div></section>`;
-    }
-
-    return allCategories;
-}
-
-const getCategory = (iconPath) => {
-  const iconAndDist = iconPath.split('dist/icons/')[1];
-  let category = "Legacy";
-
-  if(iconAndDist.includes('/')) category = iconAndDist.split('/')[0];
-
-  return category;
-}
-
-
-(async () => {
-    const icons = [];
-    for await (const f of getFiles('./node_modules/@alaskaairux/icons/dist/icons')) {
-      if(f.includes('.svg')) icons.push(f.split('node_modules/')[1]);
-    }
-
-    const sortedIcons = {};
-
-    icons.forEach(i => {
+  /**
+   * Sort the icons into categories.
+   * @param {Array} payload 
+   * @returns Array of icons sorted by category.
+   */
+  const sortIcons = (payload) => {
+    return payload.reduce((sortedIcons, i) => {
       const category = getCategory(i);
-
-      if(!sortedIcons[category]) sortedIcons[category] = [];
+      sortedIcons[category] = sortedIcons[category] || [];
       sortedIcons[category].push(i);
+      return sortedIcons;
+    }, {});
+  }
 
-    });
+  const sortedIcons = sortIcons(icons);
+  const sortedDeprecatedIcons = sortIcons(deprecatedIcons);
 
-    const iconListComponentText = `// DO NOT EDIT! \n// This doc was auto generated from ./scripts/build-icon-lib.js \n// ${new Date()}';
+  /**
+   * Compile the file text as a React component.
+   * @param {Array} iconsData Array of iconsPath before it was sorted.
+   * @param {Array} sortedIconsData Array of iconsPath after it was sorted to its categories.
+   * @returns React component file text string.
+   */
+  const buildIconListComponentText = (iconsData, sortedIconsData) => {
+    return `// DO NOT EDIT! \n// This doc was auto generated from ./scripts/build-icon-lib.js \n// ${new Date()}';
 
 import React from "react";
-${buildImports(icons)}
-
+${buildImports(iconsData)}
+    
 export default function iconList() {
   return (
     <div id="icon-list">
-      ${buildElements(sortedIcons)}
+      ${buildElements(sortedIconsData)}
     </div>
   )
 }`;
+}
 
-    fs.writeFile("src/content/dynamic/icons/iconList.js", iconListComponentText, (err) => {
+  const iconListComponentText = buildIconListComponentText(icons, sortedIcons);
+  const deprecatedIconListComponentText = buildIconListComponentText(deprecatedIcons, sortedDeprecatedIcons);
+  
+  fs.writeFile("src/content/dynamic/icons/iconList.js", iconListComponentText, (err) => {
+    if(err) return console.log(err);
+    console.log("The iconList.js file was saved to src/content/dynamic/icons/iconList.js!");
+  });
 
-        if(err) return console.log(err);
+  fs.writeFile("src/content/dynamic/icons/deprecatedIconList.js", deprecatedIconListComponentText, (err) => {
+    if(err) return console.log(err);
+    console.log("The deprecatedIconList.js file was saved to src/content/dynamic/icons/deprecatedIconList.js!");
+  });
+}
 
-        console.log("The file was saved!");
-    });
-
-  })()
+buildIconList();

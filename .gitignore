@@ -26,6 +26,7 @@ yarn-error.log*
 # Generated docs
 src/content/docsExport.js
 src/content/dynamic/icons/iconList.js
+src/content/dynamic/icons/deprecatedIconList.js
 
 # Secrets
 .env

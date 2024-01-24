@@ -1,37 +1,8 @@
-const { resolve, normalize } = require('path');
-const { readdir } = require('fs').promises;
 const fs = require('fs');
 const path = require('path');
+const { getImportName, getFiles } = require('./utils');
 
-async function* getFiles(dir) {
 
-  const dirents = await readdir(dir, { withFileTypes: true });
-
-  for (const dirent of dirents) {
-    const res = resolve(dir, dirent.name);
-
-    if (dirent.isDirectory()) {
-      yield* getFiles(normalize(res));
-    } else {
-      yield res.replace(/\\/g, '/');
-    }
-  }
-}
-
-const getFile = (filePath) => {
-    const dirs = filePath.split('/');
-
-    return dirs[dirs.length -1];
-}
-
-const getImportName = (filePath) => {
-    const file = getFile(filePath);
-    let name = file.split('.')[0];
-    name = name.replace(/-/g, '');
-    const camelCaseName = name.charAt(0).toUpperCase() + name.substring(1);
-
-    return camelCaseName;
-};
 
 const buildImports = (iconPaths) => {
   let importText = "";
