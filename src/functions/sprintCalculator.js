@@ -1,6 +1,6 @@
-const firstSprintStartDate = new Date("12/28/2022");
+const firstSprintStartDate = new Date("5/20/2019");
 const currentYear = new Date().getFullYear();
-const sprintDurationInDays = 14;
+const sprintDurationInDays = 7;
 
 const addDays = (date, days) => {
   var result = new Date(date);
@@ -14,7 +14,8 @@ const calculateSprints = (date) => {
   const numberOfSprints = Math.ceil(sprintDays / sprintDurationInDays);
   const sprints = [];
 
-  for (let i = numberOfSprints - 13; i <= numberOfSprints; i++) {
+  // how many sprints to show
+  for (let i = numberOfSprints - 3; i <= numberOfSprints; i++) {
     const startDateModifier = sprintDurationInDays * (i - 1);
     const endDateModifier = sprintDurationInDays * i - 1;
     const startDate = addDays(firstSprintStartDate, startDateModifier);
@@ -22,7 +23,7 @@ const calculateSprints = (date) => {
 
     if (i > 0) {
       sprints.push({
-        sprintName: ` ${i === numberOfSprints ? `Current` : ''} Sprint ${i}.${currentYear.toString().substring(2)}`,
+        sprintName: ` ${i === numberOfSprints ? `Current` : ''} Release ${i}.${currentYear.toString().substring(2)}`,
         sprintStartDate: startDate,
         sprintEndDate: endDate,
         releases: []
