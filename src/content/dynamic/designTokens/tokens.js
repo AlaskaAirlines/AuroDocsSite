@@ -7,6 +7,9 @@ import allTokens from '@aurodesignsystem/design-tokens/dist/tokens/JSObject--all
 const animation = allTokens.animation;
 const elevation = allTokens.elevation;
 const breakpoint = allTokens.gridBreakpoint;
+const gridColumn = allTokens.gridColumn;
+const gridGutter = allTokens.gridGutter;
+const gridMargin = allTokens.gridMargin;
 const depth = allTokens.depth;
 const size = allTokens.size;
 const border = allTokens.border;
@@ -71,10 +74,19 @@ class DeprecatedTokens extends Component {
         <auro-tokenlist componentData={_getTokens(elevation, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Borders</h3>
-        <auro-tokenlist unit="rem" componentData={_getTokens(border, [])}></auro-tokenlist>
+        <auro-tokenlist componentData={_getTokens(border, [])}></auro-tokenlist>
 
-        <h3 className="auro_heading auro_heading--600">Breakpoint</h3>
+        <h3 className="auro_heading auro_heading--600">Breakpoints</h3>
         <auro-tokenlist componentData={_getTokens(breakpoint, [])}></auro-tokenlist>
+
+        <h3 className="auro_heading auro_heading--600">Grid Columns</h3>
+        <auro-tokenlist componentData={_getTokens(gridColumn, [])}></auro-tokenlist>
+
+        <h3 className="auro_heading auro_heading--600">Grid Gutters</h3>
+        <auro-tokenlist unit="rem" componentData={_getTokens(gridGutter, [])}></auro-tokenlist>
+
+        <h3 className="auro_heading auro_heading--600">Grid Margins</h3>
+        <auro-tokenlist componentData={_getTokens(gridMargin, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Colors</h3>
         <h4 className="auro_heading auro_heading--400">Alert</h4>
@@ -111,7 +123,7 @@ class DeprecatedTokens extends Component {
         <auro-tokenlist componentData={_getTokens(depth, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Size</h3>
-        <auro-tokenlist unit="rem" componentData={_getTokens(size, [])}></auro-tokenlist>
+        <auro-tokenlist componentData={_getTokens(size, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Typography</h3>
         <h4 className="auro_heading auro_heading--400">Font families</h4>

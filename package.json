@@ -74,7 +74,7 @@
     ]
   },
   "devDependencies": {
-    "@aurodesignsystem/auro-tokenlist": "^1.1.3",
+    "@aurodesignsystem/auro-tokenlist": "^1.2.0",
     "copyfiles": "^2.4.1",
     "marked": "^2.1.3",
     "npm-check": "^5.9.2",
