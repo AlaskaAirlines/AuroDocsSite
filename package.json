@@ -35,7 +35,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build buildIcons",
     "test": "echo \"No tests specified\" && exit 0",
     "eject": "react-scripts eject",
     "buildIconsScript": "node ./scripts/build-icon-lib.js",
