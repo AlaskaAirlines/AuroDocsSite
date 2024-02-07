@@ -6,7 +6,7 @@ import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-carousel/master/demo/index.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-carousel/master/demo/demo.md';
 
 class AuroIcon extends MarkdownPageWrapper {
 
