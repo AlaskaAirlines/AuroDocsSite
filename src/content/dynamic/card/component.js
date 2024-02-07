@@ -4,6 +4,8 @@ import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
+
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-card/main/demo/index.md';
 
@@ -41,7 +43,9 @@ class AuroCard extends MarkdownPageWrapper {
     });
   }
 
-
+  componentDidMount() {
+    registerCustomComponent('custom-card', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-card@latest/dist/auro-card__bundled.js');
+  }
 
   render() {
     return (
