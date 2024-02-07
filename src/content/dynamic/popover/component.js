@@ -3,8 +3,8 @@ import { Nav } from './nav';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
-// import markdownContent from '@alaskaairux/auro-popover/demo/demo.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-popover/master/demo/index.md';
 
@@ -42,7 +42,9 @@ class AuroPopover extends MarkdownPageWrapper {
     });
   }
 
-
+  componentDidMount() {
+    registerCustomComponent('custom-popover', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-popover@latest/dist/auro-popover__bundled.js');
+  }
 
   render() {
     return (

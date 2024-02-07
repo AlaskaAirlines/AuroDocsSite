@@ -4,6 +4,7 @@ import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-input/main/demo/index.md';
 
@@ -41,7 +42,9 @@ class AuroButton extends MarkdownPageWrapper {
     });
   }
 
-
+  componentDidMount() {
+    registerCustomComponent('custom-input', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-input@latest/dist/auro-input__bundled.js');
+  }
 
   render() {
     return (

@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-pane/master/demo/apiExamples.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-pane/master/demo/api.md';
 
 class AuroPaneApi extends MarkdownPageWrapper {
 

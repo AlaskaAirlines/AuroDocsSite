@@ -5,8 +5,6 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-// import { initComboboxIndexExamples } from 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-combobox@latest/demo/index.min.js';
-
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-combobox/main/demo/index.md';
 
 class AuroCombobox extends MarkdownPageWrapper {

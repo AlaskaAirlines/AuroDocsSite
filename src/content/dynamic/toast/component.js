@@ -4,6 +4,7 @@ import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-toast/main/demo/demo.md';
 
@@ -11,6 +12,7 @@ class AuroToast extends MarkdownPageWrapper {
 
   componentDidMount() {
     window.initToastIndexExamples();
+    registerCustomComponent('custom-toast', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-toast@latest/dist/auro-toast__bundled.js');
   }
 
   // function to get text from MD document
@@ -44,8 +46,6 @@ class AuroToast extends MarkdownPageWrapper {
         renderer: renderer
     });
   }
-
-
 
   render() {
     return (

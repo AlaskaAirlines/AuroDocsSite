@@ -4,8 +4,9 @@ import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-checkbox/master/demo/demo.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-checkbox/master/demo/index.md';
 
 class AuroCheckbox extends MarkdownPageWrapper {
 
@@ -41,7 +42,9 @@ class AuroCheckbox extends MarkdownPageWrapper {
     });
   }
 
-
+  componentDidMount() {
+    registerCustomComponent('custom-checkbox', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-checkbox@latest/dist/auro-checkbox__bundled.js');
+  }
 
   render() {
     return (

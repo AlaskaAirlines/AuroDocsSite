@@ -4,8 +4,9 @@ import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-backtotop/master/demo/index.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-backtotop/main/demo/index.md';
 
 class AuroBacktotop extends MarkdownPageWrapper {
 
@@ -41,7 +42,9 @@ class AuroBacktotop extends MarkdownPageWrapper {
     });
   }
 
-
+  componentDidMount() {
+    registerCustomComponent('custom-backtotop', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-backtotop@latest/dist/auro-backtotop__bundled.js');
+  }
 
   render() {
     return (

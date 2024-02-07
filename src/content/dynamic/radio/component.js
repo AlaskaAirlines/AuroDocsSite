@@ -4,6 +4,7 @@ import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-radio/main/demo/demo.md';
 
@@ -41,7 +42,9 @@ class AuroRadio extends MarkdownPageWrapper {
     });
   }
 
-
+  componentDidMount() {
+    registerCustomComponent('custom-radio', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-radio@latest/dist/auro-radio__bundled.js');
+  }
 
   render() {
     return (

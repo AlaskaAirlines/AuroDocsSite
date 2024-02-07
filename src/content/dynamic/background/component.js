@@ -3,10 +3,10 @@ import { Nav } from './nav';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
-// import markdownContent from '@aurodesignsystem/auro-background/demo/demo.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-background/master/demo/demo.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-background/main/demo/index.md';
 
 class AuroBackground extends MarkdownPageWrapper {
 
@@ -42,7 +42,9 @@ class AuroBackground extends MarkdownPageWrapper {
     });
   }
 
-
+  componentDidMount() {
+    registerCustomComponent('custom-background', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-background@latest/dist/auro-background__bundled.js');
+  }
 
   render() {
     return (
