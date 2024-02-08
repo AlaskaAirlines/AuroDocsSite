@@ -5,7 +5,7 @@ class AuroContent extends AuroComponentContent {
   constructor(props) {
     super(props);
 
-    this.markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-accordion/main/demo/api.md';
+    this.markdownContentPath = 'demo/api.md';
   };
 }
 

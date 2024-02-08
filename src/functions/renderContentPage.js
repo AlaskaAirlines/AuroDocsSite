@@ -6,6 +6,7 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 import LinkIcons from 'components/linkIcons';
 import { NavLink } from "react-router-dom";
 import { registerCustomComponent } from "content/utils/registerCustomComponent";
+import packageJson from './../../package.json';
 
 // Imports for the Release page
 import { Query } from '@apollo/react-components';
@@ -19,9 +20,15 @@ class AuroComponentContent extends MarkdownPageWrapper {
 
     this.hasFigma = false;
     this.name = undefined;
+    this.componentName = undefined;
     this.nameSpace = 'aurodesignsystem';
     this.releasePage = false;
-    this.version = 'latest';
+    this.version = undefined;
+
+    /**
+     * @private
+     */
+    this.componentVersion = undefined;
   };
 
   static get properties() {
@@ -71,6 +78,36 @@ class AuroComponentContent extends MarkdownPageWrapper {
     } else {
       this.name = route;
     }
+
+    const packageName = `@${this.nameSpace}/auro-${this.name}`;
+
+    // use package version only if not set in the component page
+    if (!this.version) {
+      this.componentVersion = packageJson.dependencies[packageName];
+
+      // replace leading caret with `v` if present
+      if (this.componentVersion.charAt(0) === '^') {
+        this.componentVersion = `v${this.componentVersion.substring(1)}`;
+      }
+
+      // remove leading caret if present
+      const char0 = this.componentVersion.charAt(0);
+      if (char0 === '^' || char0 === 'v') {
+        this.version = this.componentVersion.substring(1);
+      } else {
+        this.version = this.componentVersion;
+      }
+    } else {
+      this.componentVersion = `v${this.version}`;
+    }
+
+    // set component name if not set in the component page
+    if (!this.componentName) {
+      this.componentName = `auro-${this.name}`;
+    }
+
+    // set markdown content if not set in the component page
+    this.markdownContent = `https://raw.githubusercontent.com/AlaskaAirlines/${this.componentName}/${this.componentVersion}/${this.markdownContentPath}`;
   }
 
   // function to get text from MD document
@@ -112,8 +149,10 @@ class AuroComponentContent extends MarkdownPageWrapper {
       this.writeComponentName();
     }
 
-    if (this.name && this.version) {
-      registerCustomComponent(`custom-${this.name}`, `https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-${this.name}@${this.version}/dist/auro-${this.name}__bundled.js`);
+    try {
+      registerCustomComponent(`custom-${this.name}`, `https://cdn.jsdelivr.net/npm/@${this.nameSpace}/auro-${this.name}@${this.componentVersion}/dist/auro-${this.name}__bundled.js`);
+    } catch (err) {
+      console.error(`Failed to register component with custom name: ${err}`);
     }
   }
 
