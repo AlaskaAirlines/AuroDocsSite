@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav } from './nav';
+// import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
@@ -27,7 +27,7 @@ class AuroComboboxFigma extends MarkdownPageWrapper {
     return (
       <section className="auro_baseType">
 
-        <Nav />
+        {/* <Nav /> */}
 
         <section className="auro-markdown">
           <ReactMarkdown
