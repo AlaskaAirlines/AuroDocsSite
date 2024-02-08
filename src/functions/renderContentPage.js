@@ -149,10 +149,34 @@ class AuroComponentContent extends MarkdownPageWrapper {
       this.writeComponentName();
     }
 
+    this.loadExampleScript('demo/api.min.js');
+    this.loadExampleScript('demo/index.min.js');
+
     try {
+      // TODO: Make this work using the local dependency
       registerCustomComponent(`custom-${this.name}`, `https://cdn.jsdelivr.net/npm/@${this.nameSpace}/auro-${this.name}@${this.componentVersion}/dist/auro-${this.name}__bundled.js`);
     } catch (err) {
       console.error(`Failed to register component with custom name: ${err}`);
+    }
+  }
+
+  appendScript(url) {
+    let scriptElem = document.createElement('script');
+    scriptElem.setAttribute('src', url);
+
+    const head = document.querySelector('head');
+
+    head.appendChild(scriptElem);
+  }
+
+  loadExampleScript(path) {
+    // TODO: Make this work using the local dependency
+    const scriptUrl = `https://cdn.jsdelivr.net/npm/@${this.nameSpace}/${this.componentName}@${this.componentVersion}/${path}`;
+
+    let scriptElem = document.querySelector(`script[src="${scriptUrl}"]`);
+
+    if (!scriptElem) {
+      this.appendScript(scriptUrl);
     }
   }
 
