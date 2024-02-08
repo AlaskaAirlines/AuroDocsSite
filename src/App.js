@@ -17,6 +17,41 @@ import '@alaskaairux/design-tokens/dist/tokens/CSSCustomProperties.css';
 // Current auro tokens
 import '@aurodesignsystem/design-tokens/dist/tokens/CSSCustomProperties.css';
 
+// Auro Components
+import '@aurodesignsystem/auro-accordion';
+import '@aurodesignsystem/auro-alert';
+import '@aurodesignsystem/auro-avatar';
+import '@aurodesignsystem/auro-background';
+import '@aurodesignsystem/auro-backtotop';
+import '@aurodesignsystem/auro-badge';
+// import '@aurodesignsystem/auro-banner';
+import '@aurodesignsystem/auro-button';
+import '@aurodesignsystem/auro-card';
+import '@aurodesignsystem/auro-carousel';
+import '@aurodesignsystem/auro-checkbox';
+import '@aurodesignsystem/auro-datetime';
+import '@aurodesignsystem/auro-dialog';
+import '@aurodesignsystem/auro-drawer';
+import '@aurodesignsystem/auro-dropdown';
+import '@aurodesignsystem/auro-flight';
+import '@aurodesignsystem/auro-flightline';
+import '@aurodesignsystem/auro-header';
+import '@aurodesignsystem/auro-hyperlink';
+import '@aurodesignsystem/auro-icon';
+import '@aurodesignsystem/auro-input';
+import '@aurodesignsystem/auro-lockup';
+import '@aurodesignsystem/auro-menu';
+import '@aurodesignsystem/auro-nav';
+import '@aurodesignsystem/auro-pane';
+import '@aurodesignsystem/auro-popover';
+import '@aurodesignsystem/auro-radio';
+import '@aurodesignsystem/auro-select';
+import '@aurodesignsystem/auro-sidenav';
+import '@aurodesignsystem/auro-skeleton';
+import '@aurodesignsystem/auro-toast';
+import '@aurodesignsystem/auro-tokenlist';
+import '@aurodesignsystem/auro-table';
+
 // Logo to appear in console
 import './scripts/auro-consoleLogo';
 
