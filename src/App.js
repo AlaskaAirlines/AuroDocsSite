@@ -46,7 +46,7 @@ import '@aurodesignsystem/auro-pane';
 import '@aurodesignsystem/auro-popover';
 import '@aurodesignsystem/auro-radio';
 import '@aurodesignsystem/auro-select';
-// import '@aurodesignsystem/auro-sidenav';
+import '@aurodesignsystem/auro-sidenav';
 import '@aurodesignsystem/auro-skeleton';
 import '@aurodesignsystem/auro-toast';
 import '@aurodesignsystem/auro-tokenlist';
