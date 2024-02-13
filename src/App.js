@@ -42,10 +42,11 @@ import AuroLabs from './content/dynamic/labs/aurolabs';
 import AuroLabsMinors from './content/dynamic/labs/aurolabsMinors';
 import AuroLabsMajors from './content/dynamic/labs/aurolabsMajors';
 
-// Developer setup
+// Developer support
 import DevSetupWindows from './content/dynamic/devSetup/devSetupWin';
 import DevSetupMac from './content/dynamic/devSetup/devSetupMac';
 import DevSetupLinux from './content/dynamic/devSetup/devSetupLinux';
+import DevSetupNpm from './content/dynamic/devSetup/devSetupNpm';
 
 // WC-Generator
 import GeneratorInstall from './content/dynamic/generator/install';
