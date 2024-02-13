@@ -71,8 +71,8 @@ export default function SideNav(props) {
         { linkTitle: "Popover", route: '/components/auro/popover', parent: true },
         { linkTitle: "Radio", route: '/components/auro/radio', parent: true },
         { linkTitle: "Select", route: '/components/auro/select', parent: true },
-        { linkTitle: "Skeleton", route: '/components/auro/skeleton', parent: true },
         { linkTitle: "Sidenav", route: '/components/auro/sidenav', parent: true },
+        { linkTitle: "Skeleton", route: '/components/auro/skeleton', parent: true },
         { linkTitle: "Table", route: '/components/auro/table', parent: true },
         { linkTitle: "Toast", route: '/components/auro/toast', parent: true },
       ]
