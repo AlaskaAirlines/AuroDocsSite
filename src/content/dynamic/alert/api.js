@@ -4,21 +4,14 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-alert/main/docs/figma.md';
-const releaseContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-alert/main/docs/design-notes.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-alert/main/demo/api.md';
 
-class AuroAlertsFigma extends MarkdownPageWrapper {
+class AuroAlertApi extends MarkdownPageWrapper {
 
   componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
       this.setState({
         contentBuild: text
-      })
-    })
-
-    fetch(releaseContent).then((response) => response.text()).then((text) => {
-      this.setState({
-        releaseBuild: text
       })
     })
   }
@@ -38,21 +31,9 @@ class AuroAlertsFigma extends MarkdownPageWrapper {
               heading: this.headingRenderer
             }}/>
         </section>
-
-        <hr/>
-
-        <section className="auro-markdown">
-          <ReactMarkdown
-            source={this.state.releaseBuild}
-            escapeHtml={false}
-            renderers={{
-              code: CodeBlock,
-              heading: this.headingRenderer
-            }}/>
-        </section>
       </section>
     );
   }
 }
 
-export default AuroAlertsFigma;
+export default AuroAlertApi;
