@@ -145,11 +145,11 @@ import AuroIconReleases from './content/dynamic/icon/releases';
 import AuroAlaska from './content/dynamic/icon/alaska';
 
 // Alert
-import AuroAlerts from './content/dynamic/alerts/component';
-import AuroAlertsApi from './content/dynamic/alerts/api';
-import AuroAlertsInstall from './content/dynamic/alerts/install';
-import AuroAlertsReleases from './content/dynamic/alerts/releases';
-import AuroAlertsFigma from './content/dynamic/alerts/figma';
+import AuroAlert from './content/dynamic/alerts/component';
+import AuroAlertApi from './content/dynamic/alerts/api';
+import AuroAlertInstall from './content/dynamic/alerts/install';
+import AuroAlertReleases from './content/dynamic/alerts/releases';
+import AuroAlertFigma from './content/dynamic/alerts/figma';
 
 // Flight
 import AuroFlight from './content/dynamic/flight/component';
@@ -451,7 +451,7 @@ function App() {
               {/* Direct links */}
               <Route exact path="/status"><ComponentStatus /></Route>
               <Route exact path="/accordion/"><AuroAccordion /></Route>
-              <Route exact path="/alerts"><AuroAlerts /></Route>
+              <Route exact path="/alerts"><AuroAlert /></Route>
               <Route exact path="/avatar/"><AuroAvatar /></Route>
               <Route exact path="/background/"><AuroBackground /></Route>
               <Route exact path="/banner/"><AuroBanner /></Route>
@@ -539,11 +539,11 @@ function App() {
               <Route exact path="/layout/spacing"><LayoutSpacing /></Route>
 
               {/* Auro Alerts */}
-              <Route exact path="/components/auro/alert"><AuroAlerts /></Route>
-              <Route exact path="/components/auro/alert/install"><AuroAlertsInstall /></Route>
-              <Route exact path="/components/auro/alert/api"><AuroAlertsApi /></Route>
-              <Route exact path="/components/auro/alert/releases"><AuroAlertsReleases /></Route>
-              <Route exact path="/components/auro/alert/figma"><AuroAlertsFigma /></Route>
+              <Route exact path="/components/auro/alert"><AuroAlert /></Route>
+              <Route exact path="/components/auro/alert/install"><AuroAlertInstall /></Route>
+              <Route exact path="/components/auro/alert/api"><AuroAlertApi /></Route>
+              <Route exact path="/components/auro/alert/releases"><AuroAlertReleases /></Route>
+              <Route exact path="/components/auro/alert/figma"><AuroAlertFigma /></Route>
 
               {/* Auro Flight */}
               <Route exact path="/components/auro/flight"><AuroFlight /></Route>

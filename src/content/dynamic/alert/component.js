@@ -5,7 +5,7 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-alert/master/demo/index.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-alert/main/demo/index.md';
 
 class AuroAlert extends MarkdownPageWrapper {
 
