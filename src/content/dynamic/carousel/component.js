@@ -6,9 +6,9 @@ import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-carousel/main/demo/demo.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-carousel/main/demo/index.md';
 
-class AuroIcon extends MarkdownPageWrapper {
+class AuroCarousel extends MarkdownPageWrapper {
 
   // function to get text from MD document
   getMarkdownText() {
@@ -61,4 +61,4 @@ class AuroIcon extends MarkdownPageWrapper {
   }
 }
 
-export default AuroIcon;
+export default AuroCarousel;
