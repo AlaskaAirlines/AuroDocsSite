@@ -17,7 +17,7 @@ export default function SideNav(props) {
     {
       header: 'Getting started',
       items: [
-        { linkTitle: "Developer support", route: "/developer-setup/windows", parent: true  },
+        { linkTitle: "Developer support", route: "/developer-setup/npm", parent: true  },
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "WCSS", route: "/webcorestylesheets", parent: true },
         { linkTitle: "Contributing", route: "/contributing", parent: true },

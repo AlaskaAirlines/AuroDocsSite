@@ -442,7 +442,7 @@ function App() {
               <Route exact path="/developer-setup/windows"><DevSetupWindows /></Route>
               <Route exact path="/developer-setup/macOS"><DevSetupMac /></Route>
               <Route exact path="/developer-setup/linux"><DevSetupLinux /></Route>
-
+              <Route exact path="/developer-setup/npm"><DevSetupNpm /></Route>
 
               {/* Direct links */}
               <Route exact path="/status"><ComponentStatus /></Route>
