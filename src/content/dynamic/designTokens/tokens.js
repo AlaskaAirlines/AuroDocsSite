@@ -42,8 +42,6 @@ class DeprecatedTokens extends Component {
     const pjson = require('../../../../package.json');
     const dependencies = pjson.dependencies['@aurodesignsystem/design-tokens'];
 
-    // console.log(allTokens)
-
     return `@aurodesignsystem/design-tokens: ${dependencies}`;
   };
 

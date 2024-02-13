@@ -1,13 +1,12 @@
-import AuroComponentContent from "functions/renderContentPage";
+import AuroComponentContent from "functions/renderComponentPage";
 
 class AuroContent extends AuroComponentContent {
 
   constructor(props) {
     super(props);
 
-    this.nameSpace = 'aurodesignsystem';
-    this.componentName = 'button';
-    this.markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-button/master/demo/demo.md';
+    this.hasFigma = true;
+    this.markdownContentPath = 'demo/demo.md';
   };
 }
 

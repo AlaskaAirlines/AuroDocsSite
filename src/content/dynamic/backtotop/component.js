@@ -1,14 +1,12 @@
-import AuroComponentContent from "functions/renderContentPage";
+import AuroComponentContent from "functions/renderComponentPage";
 
-class AuroBacktotop extends AuroComponentContent {
+class AuroContent extends AuroComponentContent {
 
   constructor(props) {
     super(props);
 
-    this.nameSpace = 'aurodesignsystem';
-    // this.name = 'backtotop';
-    this.markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-backtotop/master/demo/index.md';
+    this.markdownContentPath = 'demo/index.md';
   };
 }
 
-export default AuroBacktotop;
+export default AuroContent;

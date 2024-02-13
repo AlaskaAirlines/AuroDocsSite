@@ -1,50 +1,14 @@
-import React from "react";
-import { Nav } from './nav';
-import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
-// import markdownContent from './a11y.md'
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import AuroComponentContent from "functions/renderComponentPage";
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-hyperlink/main/demo/a11y.md';
+class AuroContent extends AuroComponentContent {
 
-class AuroHyperlinkA11y extends MarkdownPageWrapper {
+  constructor(props) {
+    super(props);
 
-  showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-hyperlink'];
-
-    return `@alaskaairux/auro-hyperlink: ${dependencies}`;
+    this.hasAccessibility = true;
+    this.hasFigma = true;
+    this.markdownContentPath = 'demo/a11y.md';
   };
-
-  // function to get text from MD document
-  componentWillMount() {
-    fetch(markdownContent).then((response) => response.text()).then((text) => {
-      this.setState({
-        contentBuild: text
-      })
-    })
-  }
-
-  render() {
-    return (
-      <section className="auro_baseType">
-
-        <Nav />
-
-        <section className="auro-markdown">
-          <ReactMarkdown
-            source={this.state.contentBuild}
-            escapeHtml={false}
-            renderers={{
-              code: CodeBlock,
-              heading: this.headingRenderer,
-              link: this.linkRenderer
-            }}/>
-        </section>
-
-      </section>
-    );
-  }
 }
 
-export default AuroHyperlinkA11y;
+export default AuroContent;

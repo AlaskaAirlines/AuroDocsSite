@@ -1,4 +1,4 @@
-import AuroComponentContent from "functions/renderContentPage";
+import AuroComponentContent from "functions/renderComponentPage";
 
 class AuroContent extends AuroComponentContent {
 
