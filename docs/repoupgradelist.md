@@ -35,7 +35,6 @@
 |@aurodesignsystem|auro-icon|[ ]|[x] |[icon](https://www.npmjs.com/package/@aurodesignsystem/auro-icon)|[ ]
 |@alaskaairux|auro-input|[x] |[ ]|[input](https://www.npmjs.com/package/@alaskaairux/auro-input)|[ ]
 |@aurodesignsystem|auro-input|[ ]|[x] |[input](https://www.npmjs.com/package/@aurodesignsystem/auro-input)|[ ]  
-|@alaskaairux|auro-interruption  |[ ]|[ ]|[interruption](https://www.npmjs.com/package/@alaskaairux/auro-interruption)|[ ]
 |n/a|auro-leftnavigation
 |@alaskaairux|auro-loader  |[ ]|[ ]|[loader](https://www.npmjs.com/package/@alaskaairux/auro-loader)|[ ]
 |@alaskaairux|auro-lockup |[x]|[ ]|[lockup](https://www.npmjs.com/package/@alaskaairux/auro-lockup)|[ ]
