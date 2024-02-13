@@ -6,13 +6,13 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-loader/master/README.md';
 
-class AuroAlertsInstall extends MarkdownPageWrapper {
+class AuroLoaderInstall extends MarkdownPageWrapper {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-loader'];
+    const dependencies = pjson.dependencies['@aurodesignsystem/auro-loader'];
 
-    return `@alaskaairux/auro-loader: ${dependencies}`;
+    return `@aurodesignsystem/auro-loader: ${dependencies}`;
   };
 
   // function to get text from MD document
@@ -46,4 +46,4 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
   }
 }
 
-export default AuroAlertsInstall;
+export default AuroLoaderInstall;

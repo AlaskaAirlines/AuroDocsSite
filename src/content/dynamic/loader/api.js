@@ -6,7 +6,7 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-loader/main/demo/apiExamples.md';
 
-class AuroAlertsApi extends MarkdownPageWrapper {
+class AuroLoaderApi extends MarkdownPageWrapper {
 
   componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
@@ -36,4 +36,4 @@ class AuroAlertsApi extends MarkdownPageWrapper {
   }
 }
 
-export default AuroAlertsApi;
+export default AuroLoaderApi;

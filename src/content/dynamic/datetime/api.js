@@ -6,7 +6,7 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-datetime/main/docs/api.md';
 
-class AuroAlertsApi extends MarkdownPageWrapper {
+class AuroDateTimeApi extends MarkdownPageWrapper {
 
   componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
@@ -36,4 +36,4 @@ class AuroAlertsApi extends MarkdownPageWrapper {
   }
 }
 
-export default AuroAlertsApi;
+export default AuroDateTimeApi;

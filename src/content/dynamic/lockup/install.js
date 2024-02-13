@@ -7,7 +7,7 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-lockup/master/README.md';
 
-class AuroAlertsInstall extends MarkdownPageWrapper {
+class AuroLockupInstall extends MarkdownPageWrapper {
 
   // function to get text from MD document
   componentWillMount() {
@@ -40,4 +40,4 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
   }
 }
 
-export default AuroAlertsInstall;
+export default AuroLockupInstall;

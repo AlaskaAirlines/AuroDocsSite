@@ -6,13 +6,13 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-datetime/main/README.md';
 
-class AuroAlertsInstall extends MarkdownPageWrapper {
+class AuroDateTimeInstall extends MarkdownPageWrapper {
 
   showVersion() {
     const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-datetime'];
+    const dependencies = pjson.dependencies['@aurodesignsystem/auro-datetime'];
 
-    return `@alaskaairux/auro-datetime: ${dependencies}`;
+    return `@aurodesignsystem/auro-datetime: ${dependencies}`;
   };
 
   // function to get text from MD document
@@ -46,4 +46,4 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
   }
 }
 
-export default AuroAlertsInstall;
+export default AuroDateTimeInstall;
