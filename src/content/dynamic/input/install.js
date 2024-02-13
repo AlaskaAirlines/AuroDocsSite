@@ -6,7 +6,7 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-input/main/README.md';
 
-class AuroAlertsInstall extends MarkdownPageWrapper {
+class AuroInputInstall extends MarkdownPageWrapper {
 
   showVersion() {
     const pjson = require('../../../../package.json');
@@ -46,4 +46,4 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
   }
 }
 
-export default AuroAlertsInstall;
+export default AuroInputInstall;

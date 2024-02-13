@@ -6,7 +6,7 @@ import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-badge/master/README.md';
 
-class AuroAlertsInstall extends MarkdownPageWrapper {
+class AuroBadgeInstall extends MarkdownPageWrapper {
 
   // function to get text from MD document
   componentWillMount() {
@@ -38,4 +38,4 @@ class AuroAlertsInstall extends MarkdownPageWrapper {
   }
 }
 
-export default AuroAlertsInstall;
+export default AuroBadgeInstall;
