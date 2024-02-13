@@ -18,17 +18,35 @@ class AuroComponentContent extends MarkdownPageWrapper {
   constructor(props) {
     super(props);
 
+    this.hasIndexExamples = false;
+    this.hasApiExamples = false;
     this.hasFigma = false;
+    this.hasAccessibility = false;
     this.name = undefined;
     this.componentName = undefined;
     this.nameSpace = 'aurodesignsystem';
+    this.packageName = undefined;
     this.releasePage = false;
+    this.figmaPage = false;
     this.version = undefined;
+    this.markdownContentPath = undefined;
+    this.figmaPath = 'docs/figma.md';
+    this.designNotesPath = 'docs/design-notes.md';
 
     /**
      * @private
      */
     this.componentVersion = undefined;
+
+    /**
+     * @private
+     */
+    this.figmaContent = undefined;
+
+    /**
+     * @private
+     */
+    this.designNotesContent = undefined;
   };
 
   static get properties() {
@@ -41,9 +59,14 @@ class AuroComponentContent extends MarkdownPageWrapper {
 
   writeComponentName() {
     const elem = document.getElementById('componentLink');
-    const tabTitle = this.convertToUpperCase(this.name);
 
-    elem.innerText = tabTitle;
+    // only write the component name if the element exists
+    // this prevents non-component pages from throwing an error
+    if (elem) {
+      const tabTitle = this.convertToUpperCase(this.name);
+
+      elem.innerText = tabTitle;
+    }
   }
 
   convertToUpperCase(str) {
@@ -65,6 +88,10 @@ class AuroComponentContent extends MarkdownPageWrapper {
       this.releasePage = true;
     }
 
+    if (route.endsWith('/figma')) {
+      this.figmaPage = true;
+    }
+
     let dividerIndex = 0;
 
     const indexStr = '/auro/';
@@ -79,11 +106,13 @@ class AuroComponentContent extends MarkdownPageWrapper {
       this.name = route;
     }
 
-    const packageName = `@${this.nameSpace}/auro-${this.name}`;
+    if (!this.packageName) {
+      this.packageName = `@${this.nameSpace}/auro-${this.name}`;
+    }
 
     // use package version only if not set in the component page
     if (!this.version) {
-      this.componentVersion = packageJson.dependencies[packageName];
+      this.componentVersion = packageJson.dependencies[this.packageName];
 
       // replace leading caret with `v` if present
       if (this.componentVersion.charAt(0) === '^') {
@@ -107,18 +136,34 @@ class AuroComponentContent extends MarkdownPageWrapper {
     }
 
     // set markdown content if not set in the component page
-    this.markdownContent = `https://raw.githubusercontent.com/AlaskaAirlines/${this.componentName}/${this.componentVersion}/${this.markdownContentPath}`;
+    if (!this.markdownContent) {
+      this.markdownContent = `https://raw.githubusercontent.com/AlaskaAirlines/${this.componentName}/${this.componentVersion}/${this.markdownContentPath}`;
+    }
+
+    // set figma content if not set in the component page
+    if (this.figmaPath) {
+      this.figmaContent = `https://raw.githubusercontent.com/AlaskaAirlines/${this.componentName}/${this.componentVersion}/${this.figmaPath}`;
+    }
+
+    // set design notes content if not set in the component page
+    if (this.designNotesPath) {
+      this.designNotesContent = `https://raw.githubusercontent.com/AlaskaAirlines/${this.componentName}/${this.componentVersion}/${this.designNotesPath}`;
+    }
   }
 
   // function to get text from MD document
-  getMarkdownText() {
+  getMarkdownText(markdown, containerSelector) {
+    if (!containerSelector) {
+      containerSelector = '.auro-markdown';
+    }
+
     this.parseRoute();
 
-    fetch(this.markdownContent)
+    fetch(markdown)
         .then((response) => response.text())
         .then((text) => {
           const rawHtml = marked.parse(text);
-          document.querySelector('.auro-markdown').innerHTML = rawHtml;
+          document.querySelector(containerSelector).innerHTML = rawHtml;
           Prism.highlightAll();
         });
 
@@ -129,10 +174,8 @@ class AuroComponentContent extends MarkdownPageWrapper {
       url = url.replace(/^.*\/\/[^/]+/, '')
 
       if (href.includes("auro.alaskaair.com")) {
-
         return link.replace(`href`,`href="${url}"`);
       } else {
-
         const newLink = `<a href="${href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
 
         return newLink;
@@ -149,9 +192,20 @@ class AuroComponentContent extends MarkdownPageWrapper {
       this.writeComponentName();
     }
 
-    this.loadExampleScript('demo/api.min.js');
-    this.loadExampleScript('demo/index.min.js');
+    // load and launch API examples
+    if (this.hasApiExamples && !this.releasePage) {
+      this.loadExampleScript('demo/api.min.js');
+      const apiMethodName = `init${this.convertToUpperCase(this.name)}ApiExamples`;
+      window[apiMethodName]();
+    }
 
+    // load and launch index examples
+    if (this.hasIndexExamples && !this.releasePage) {
+      this.loadExampleScript('demo/index.min.js');
+      const indexMethodName = `init${this.convertToUpperCase(this.name)}IndexExamples`;
+      window[indexMethodName]();  
+    }
+    
     try {
       // TODO: Make this work using the local dependency
       registerCustomComponent(`custom-${this.name}`, `https://cdn.jsdelivr.net/npm/@${this.nameSpace}/auro-${this.name}@${this.componentVersion}/dist/auro-${this.name}__bundled.js`);
@@ -172,6 +226,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
   loadExampleScript(path) {
     // TODO: Make this work using the local dependency
     const scriptUrl = `https://cdn.jsdelivr.net/npm/@${this.nameSpace}/${this.componentName}@${this.componentVersion}/${path}`;
+    console.warn('scriptUrl', scriptUrl);
 
     let scriptElem = document.querySelector(`script[src="${scriptUrl}"]`);
 
@@ -180,7 +235,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
     }
   }
 
-  getNavHtml() {
+  renderNav() {
     return (
       <div role="tablist" className="tabList">
         <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}`} activeClassName="is-active" id="componentLink">{this.convertToUpperCase(this.name)}</NavLink>
@@ -190,6 +245,11 @@ class AuroComponentContent extends MarkdownPageWrapper {
         {
           this.hasFigma ?
             <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/figma`} activeClassName="is-active">Design support</NavLink>
+          : undefined
+        }
+        {
+          this.hasAccessibility ?
+            <NavLink role="tab" exact className="tab link" to={`/components/auro/hyperlink/a11y`} activeClassName="is-active">Accessibility</NavLink>
           : undefined
         }
 
@@ -207,43 +267,31 @@ class AuroComponentContent extends MarkdownPageWrapper {
       this.parseRoute();
     }
 
-    if (!this.releasePage) {
-      return (
-        <section className="auro_baseType">
-
-          { this.getNavHtml() }
-
-          <section
-            className="auro-markdown"
-            dangerouslySetInnerHTML={this.getMarkdownText()}
-          />
-        </section>
-      );
-    } else {
+    if (this.releasePage) {
       const RELEASES = gql`
-      {
-        organization(login: "AlaskaAirlines") {
-          team(slug: "auro-team") {
-            repositories(first: 1, orderBy: {field: NAME, direction: ASC}, query: "auro-alert") {
-              nodes {
-                name
-                releases(first: 20, orderBy: {field: CREATED_AT, direction: DESC}) {
-                  nodes {
-                    name
-                    updatedAt
-                    description
+        {
+          organization(login: "AlaskaAirlines") {
+            team(slug: "auro-team") {
+              repositories(first: 1, orderBy: {field: NAME, direction: ASC}, query: "auro-alert") {
+                nodes {
+                  name
+                  releases(first: 20, orderBy: {field: CREATED_AT, direction: DESC}) {
+                    nodes {
+                      name
+                      updatedAt
+                      description
+                    }
                   }
                 }
               }
             }
           }
         }
-      }
       `
 
       return (
         <section id="releases">
-          { this.getNavHtml() }
+          { this.renderNav() }
 
           <h1 className="auro_heading auro_heading--display">Releases</h1>
           <p>The following is a list of all Auro element releases.</p>
@@ -260,6 +308,35 @@ class AuroComponentContent extends MarkdownPageWrapper {
               ));
             }}
           </Query>
+        </section>
+      );
+    } else if (this.figmaPage) {
+      return (
+        <section className="auro_baseType">
+
+          { this.renderNav() }
+
+          <section
+            className="auro-markdown"
+            id="figma"
+            dangerouslySetInnerHTML={this.getMarkdownText(this.figmaContent, '#figma')}/>
+
+          <section
+            className="auro-markdown"
+            id="designNotes"
+            dangerouslySetInnerHTML={this.getMarkdownText(this.designNotesContent, '#designNotes')}/>
+        </section>
+      );
+    } else {
+
+      return (
+        <section className="auro_baseType">
+
+          { this.renderNav() }
+
+          <section
+            className="auro-markdown"
+            dangerouslySetInnerHTML={this.getMarkdownText(this.markdownContent)}/>
         </section>
       );
     }

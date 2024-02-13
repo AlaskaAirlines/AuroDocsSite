@@ -1,39 +1,19 @@
-import React from "react";
+import AuroComponentContent from "functions/renderComponentPage";
 import { Nav } from './nav';
-import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-icon/master/demo/api.md';
+class AuroContent extends AuroComponentContent {
 
-class AuroIconApi extends MarkdownPageWrapper {
+  constructor(props) {
+    super(props);
 
-  componentWillMount() {
-    fetch(markdownContent).then((response) => response.text()).then((text) => {
-      this.setState({
-        contentBuild: text
-      })
-    })
-  }
+    this.markdownContentPath = 'docs/api.md';
+  };
 
-  render() {
+  renderNav() {
     return (
-      <section className="auro_baseType">
-
-        <Nav />
-
-        <section className="auro-markdown">
-          <ReactMarkdown
-            source={this.state.contentBuild}
-            escapeHtml={false}
-            renderers={{
-              code: CodeBlock,
-              heading: this.headingRenderer
-            }}/>
-        </section>
-      </section>
+      <Nav />
     );
   }
 }
 
-export default AuroIconApi;
+export default AuroContent;
