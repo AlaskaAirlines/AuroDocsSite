@@ -145,11 +145,11 @@ import AuroIconReleases from './content/dynamic/icon/releases';
 import AuroAlaska from './content/dynamic/icon/alaska';
 
 // Alert
-import AuroAlert from './content/dynamic/alerts/component';
-import AuroAlertApi from './content/dynamic/alerts/api';
-import AuroAlertInstall from './content/dynamic/alerts/install';
-import AuroAlertReleases from './content/dynamic/alerts/releases';
-import AuroAlertFigma from './content/dynamic/alerts/figma';
+import AuroAlert from './content/dynamic/alert/component';
+import AuroAlertApi from './content/dynamic/alert/api';
+import AuroAlertInstall from './content/dynamic/alert/install';
+import AuroAlertReleases from './content/dynamic/alert/releases';
+import AuroAlertFigma from './content/dynamic/alert/figma';
 
 // Flight
 import AuroFlight from './content/dynamic/flight/component';
@@ -451,7 +451,7 @@ function App() {
               {/* Direct links */}
               <Route exact path="/status"><ComponentStatus /></Route>
               <Route exact path="/accordion/"><AuroAccordion /></Route>
-              <Route exact path="/alerts"><AuroAlert /></Route>
+              <Route exact path="/alert"><AuroAlert /></Route>
               <Route exact path="/avatar/"><AuroAvatar /></Route>
               <Route exact path="/background/"><AuroBackground /></Route>
               <Route exact path="/banner/"><AuroBanner /></Route>
@@ -538,7 +538,7 @@ function App() {
               <Route exact path="/layout/grid"><LayoutGrid /></Route>
               <Route exact path="/layout/spacing"><LayoutSpacing /></Route>
 
-              {/* Auro Alerts */}
+              {/* Auro Alert */}
               <Route exact path="/components/auro/alert"><AuroAlert /></Route>
               <Route exact path="/components/auro/alert/install"><AuroAlertInstall /></Route>
               <Route exact path="/components/auro/alert/api"><AuroAlertApi /></Route>
