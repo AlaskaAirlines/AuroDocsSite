@@ -5,7 +5,7 @@ import CodeBlock from 'components/CodeBlock';
 // import markdownContent from '@alaskaairux/auro-flight/docs/api.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-flight/main/demo/apiExamples.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-flight/main/demo/api.md';
 
 class AuroFlightApi extends MarkdownPageWrapper {
 
