@@ -2,10 +2,9 @@ import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
-// import markdownContent from '@aurodesignsystem/auro-lockup/demo/apiExamples.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-lockup/main/demo/apiExamples.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-lockup/main/demo/api.md';
 
 class AuroLockupApi extends MarkdownPageWrapper {
 
