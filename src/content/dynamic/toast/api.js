@@ -5,7 +5,7 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-toast/main/demo/apiExamples.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-toast/main/demo/api.md';
 
 class AuroToastApi extends MarkdownPageWrapper {
 
