@@ -10,7 +10,8 @@ async function buildIconList() {
   const files = getFiles('./node_modules/@alaskaairux/icons/dist/icons');
   for await (const f of files) {
     // read non es6 js file for non-deprecated value and push the svg file
-    if (/^(?=.*(?:.js))(?!.*(?:es6))/.test(f)) {
+    // if (/^(?=.*(?:.js))(?!.*(?:es6))/.test(f)) {
+    if (/^(?=.*(?:.js))(?!.*(?:es6))(?!.*(?:mjs))/.test(f)) {
       const file = require(f);
 
       const iconPath = `${f.split('node_modules/')[1].replace(REGEX_FILE_EXTENSION,'.svg')}`;
@@ -24,7 +25,7 @@ async function buildIconList() {
 
   /**
    * Sort the icons into categories.
-   * @param {Array} payload 
+   * @param {Array} payload
    * @returns Array of icons sorted by category.
    */
   const sortIcons = (payload) => {
@@ -50,7 +51,7 @@ async function buildIconList() {
 
 import React from "react";
 ${buildImports(iconsData)}
-    
+
 export default function iconList() {
   return (
     <div id="icon-list">
@@ -62,7 +63,7 @@ export default function iconList() {
 
   const iconListComponentText = buildIconListComponentText(icons, sortedIcons);
   const deprecatedIconListComponentText = buildIconListComponentText(deprecatedIcons, sortedDeprecatedIcons);
-  
+
   fs.writeFile("src/content/dynamic/icons/iconList.js", iconListComponentText, (err) => {
     if(err) return console.log(err);
     console.log("The iconList.js file was saved to src/content/dynamic/icons/iconList.js!");
