@@ -21,6 +21,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
     this.hasIndexExamples = false;
     this.hasApiExamples = false;
     this.hasFigma = false;
+    this.hasDOT = false;
     this.hasAccessibility = false;
     this.name = undefined;
     this.componentName = undefined;
@@ -241,6 +242,11 @@ class AuroComponentContent extends MarkdownPageWrapper {
         <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}`} activeClassName="is-active" id="componentLink">{this.convertToUpperCase(this.name)}</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/install`} activeClassName="is-active">Install</NavLink>
         <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/api`} activeClassName="is-active">API</NavLink>
+        {
+          this.hasDOT ?
+          <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/dot`} activeClassName="is-active">DoT compliance</NavLink>
+          : undefined
+        }
         <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/releases`} activeClassName="is-active">Releases</NavLink>
         {
           this.hasFigma ?
