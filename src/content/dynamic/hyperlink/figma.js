@@ -4,8 +4,8 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-hyperlink/master/docs/figma.md';
-const releaseContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-hyperlink/master/docs/design-notes.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-hyperlink/main/docs/figma.md';
+const releaseContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-hyperlink/main/docs/design-notes.md';
 
 class AuroHyperlinkFigma extends MarkdownPageWrapper {
 
