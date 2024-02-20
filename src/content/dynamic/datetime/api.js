@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import CodeBlock from 'components/CodeBlock';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-datetime/main/docs/api.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-datetime/main/demo/api.md';
 
 class AuroDateTimeApi extends MarkdownPageWrapper {
 

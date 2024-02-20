@@ -6,7 +6,7 @@ import 'prismjs/themes/prism.css';
 // import markdownContent from '@alaskaairux/auro-datetime/demo/demo.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-datetime/main/demo/demo.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-datetime/main/demo/index.md';
 
 class AuroDatetime extends MarkdownPageWrapper {
 
