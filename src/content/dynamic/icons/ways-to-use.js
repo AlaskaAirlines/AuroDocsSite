@@ -1,42 +1,13 @@
-import React from "react";
-import { Nav } from './nav';
-import ReactMarkdown from 'react-markdown';
-// import markdownContent from '@alaskaairux/icons/docs/ways-to-use.md'
-import CodeBlock from 'components/CodeBlock';
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import AuroComponentContent from "functions/renderIconsPage";
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/Icons/master/docs/ways-to-use.md';
+class AuroContent extends AuroComponentContent {
 
-class AuroIconsUse extends MarkdownPageWrapper {
+  constructor(props) {
+    super(props);
 
-  // function to get text from MD document
-  componentWillMount() {
-    fetch(markdownContent).then((response) => response.text()).then((text) => {
-      this.setState({
-        contentBuild: text
-      })
-    })
-  }
-
-  render() {
-    return (
-      <section className="auro_baseType">
-
-        <Nav />
-
-        <section className="auro-markdown">
-          <ReactMarkdown
-            source={this.state.contentBuild}
-            escapeHtml={false}
-            renderers={{
-              code: CodeBlock,
-              heading: this.headingRenderer,
-              link: this.linkRenderer
-            }}/>
-        </section>
-      </section>
-    );
-  }
+    this.markdownContentPath = 'docs/ways-to-use.md';
+  };
 }
 
-export default AuroIconsUse;
+export default AuroContent;
+
