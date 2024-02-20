@@ -5,7 +5,7 @@ import CodeBlock from 'components/CodeBlock';
 // import markdownContent from '@alaskaairux/auro-flightline/README.md'
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-flightline/master/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-flightline/main/README.md';
 
 class AuroFlightlineInstall extends MarkdownPageWrapper {
 
