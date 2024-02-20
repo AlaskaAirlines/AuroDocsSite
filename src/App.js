@@ -39,6 +39,7 @@ import '@aurodesignsystem/auro-header';
 import '@aurodesignsystem/auro-hyperlink';
 import '@aurodesignsystem/auro-icon';
 import '@aurodesignsystem/auro-input';
+import '@aurodesignsystem/auro-loader';
 import '@aurodesignsystem/auro-lockup';
 import '@aurodesignsystem/auro-menu';
 import '@aurodesignsystem/auro-nav';
@@ -131,7 +132,6 @@ import IdiomaticCss from './content/dynamic/cssGuides/idiomatic';
 import WcssConventions from './content/dynamic/cssGuides/conventions';
 import WcssGuidelines from './content/dynamic/cssGuides/guidelines';
 import CustomElementCss from './content/dynamic/cssGuides/customElementCss';
-import WcssLinter from './content/dynamic/cssGuides/lint';
 
 // Tokenlist
 import AuroTokenlist from './content/dynamic/tokenlist/component';
@@ -260,7 +260,6 @@ import AuroCheckbox from './content/dynamic/checkbox/component';
 import AuroCheckboxApi from './content/dynamic/checkbox/api';
 import AuroCheckboxInstall from './content/dynamic/checkbox/install';
 import AuroCheckboxReleases from './content/dynamic/checkbox/releases';
-import AuroCheckboxFigma from './content/dynamic/checkbox/figma';
 
 // combobox
 import AuroCombobox from './content/dynamic/combobox/component';
@@ -367,7 +366,6 @@ import AuroMenuReleases from './content/dynamic/menu/releases';
 // Nav
 import AuroNav from './content/dynamic/nav/component';
 import AuroNavApi from './content/dynamic/nav/api';
-import AuroNavFigma from './content/dynamic/nav/figma';
 import AuroNavInstall from './content/dynamic/nav/install';
 import AuroNavReleases from './content/dynamic/nav/releases';
 
@@ -388,7 +386,6 @@ import AuroRadio from './content/dynamic/radio/component';
 import AuroRadioApi from './content/dynamic/radio/api';
 import AuroRadioInstall from './content/dynamic/radio/install';
 import AuroRadioReleases from './content/dynamic/radio/releases';
-import AuroRadioFigma from './content/dynamic/radio/figma';
 
 // Select
 import AuroSelect from './content/dynamic/select/component';
@@ -499,6 +496,7 @@ function App() {
               <Route exact path="/hyperlink"><AuroHyperlink /></Route>
               <Route exact path="/icon/"><AuroIcon /></Route>
               <Route exact path="/input"><AuroInput /></Route>
+              <Route exact path="/loader"><AuroLoader /></Route>
               <Route exact path="/lockup"><AuroLockup /></Route>
               <Route exact path="/menu"><AuroMenu /></Route>
               <Route exact path="/nav"><AuroNav /></Route>
@@ -636,7 +634,6 @@ function App() {
               <Route exact path="/components/auro/checkbox/install"><AuroCheckboxInstall /></Route>
               <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route>
               <Route exact path="/components/auro/checkbox/releases"><AuroCheckboxReleases /></Route>
-              <Route exact path="/components/auro/checkbox/figma"><AuroCheckboxFigma /></Route>
 
               {/* Auro Combobox */}
               <Route exact path="/components/auro/combobox"><AuroCombobox /></Route>
@@ -745,7 +742,6 @@ function App() {
               <Route exact path="/components/auro/nav"><AuroNav /></Route>
               <Route exact path="/components/auro/nav/install"><AuroNavInstall /></Route>
               <Route exact path="/components/auro/nav/api"><AuroNavApi /></Route>
-              <Route exact path="/components/auro/nav/figma"><AuroNavFigma /></Route>
               <Route exact path="/components/auro/nav/releases"><AuroNavReleases /></Route>
 
               {/* pane */}
@@ -765,7 +761,6 @@ function App() {
               <Route exact path="/components/auro/radio/install"><AuroRadioInstall /></Route>
               <Route exact path="/components/auro/radio/api"><AuroRadioApi /></Route>
               <Route exact path="/components/auro/radio/releases"><AuroRadioReleases /></Route>
-              <Route exact path="/components/auro/radio/figma"><AuroRadioFigma /></Route>
 
               {/* Auro Select */}
               <Route exact path="/components/auro/select"><AuroSelect /></Route>
@@ -819,7 +814,6 @@ function App() {
 
               <Route exact path="/css/conventions"><WcssConventions /></Route>
               <Route exact path="/webcorestylesheets/tests"><WcssTests /></Route>
-              <Route exact path="/css/linter"><WcssLinter /></Route>
               <Route exact path="/css/guidelines"><WcssGuidelines /></Route>
               <Route exact path="/css/custom-element-css"><CustomElementCss /></Route>
               <Route exact path="/css/idiomatic-css"><IdiomaticCss /></Route>

@@ -18,6 +18,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
   constructor(props) {
     super(props);
 
+    this.hasCustomElementRegistration = true;
     this.hasIndexExamples = false;
     this.hasApiExamples = false;
     this.hasFigma = false;
@@ -91,6 +92,10 @@ class AuroComponentContent extends MarkdownPageWrapper {
 
     if (route.endsWith('/figma')) {
       this.figmaPage = true;
+    }
+
+    if (route.endsWith('/figma')) {
+      this.accessibilityPage = true;
     }
 
     let dividerIndex = 0;
@@ -207,11 +212,8 @@ class AuroComponentContent extends MarkdownPageWrapper {
       window[indexMethodName]();  
     }
     
-    try {
-      // TODO: Make this work using the local dependency
+    if (this.hasCustomElementRegistration && !this.releasePage && !this.figmaPage && !this.accessibilityPage) {
       registerCustomComponent(`custom-${this.name}`, `https://cdn.jsdelivr.net/npm/@${this.nameSpace}/auro-${this.name}@${this.componentVersion}/dist/auro-${this.name}__bundled.js`);
-    } catch (err) {
-      console.error(`Failed to register component with custom name: ${err}`);
     }
   }
 

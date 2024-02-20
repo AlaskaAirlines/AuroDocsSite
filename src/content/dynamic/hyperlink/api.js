@@ -7,7 +7,7 @@ class AuroContent extends AuroComponentContent {
 
     this.hasAccessibility = true;
     this.hasFigma = true;
-    this.markdownContentPath = 'docs/api.md';
+    this.markdownContentPath = 'demo/api.md';
   };
 }
 

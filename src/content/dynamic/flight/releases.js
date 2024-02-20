@@ -1,12 +1,11 @@
 import AuroComponentContent from "functions/renderComponentPage";
-import { Nav } from './nav';
 
 class AuroContent extends AuroComponentContent {
-  renderNav() {
-    return (
-      <Nav />
-    );
-  }
+  constructor(props) {
+    super(props);
+
+    this.hasDOT = true;
+  };
 }
 
 export default AuroContent;

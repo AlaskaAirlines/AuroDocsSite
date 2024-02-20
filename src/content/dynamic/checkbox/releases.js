@@ -1,12 +1,5 @@
 import AuroComponentContent from "functions/renderComponentPage";
 
-class AuroContent extends AuroComponentContent {
-  constructor(props) {
-    super(props);
-
-    this.hasFigma = true;
-    this.figma = true;
-  };
-}
+class AuroContent extends AuroComponentContent {}
 
 export default AuroContent;
