@@ -24,7 +24,7 @@ import '@aurodesignsystem/auro-avatar';
 import '@aurodesignsystem/auro-background';
 import '@aurodesignsystem/auro-backtotop';
 import '@aurodesignsystem/auro-badge';
-// import '@aurodesignsystem/auro-banner';
+import '@aurodesignsystem/auro-banner';
 import '@aurodesignsystem/auro-button';
 import '@aurodesignsystem/auro-card';
 import '@aurodesignsystem/auro-carousel';
