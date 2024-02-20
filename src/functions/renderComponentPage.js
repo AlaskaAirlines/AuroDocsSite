@@ -336,7 +336,6 @@ class AuroComponentContent extends MarkdownPageWrapper {
         </section>
       );
     } else {
-
       return (
         <section className="auro_baseType">
 

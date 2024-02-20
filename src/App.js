@@ -18,6 +18,7 @@ import '@alaskaairux/design-tokens/dist/tokens/CSSCustomProperties.css';
 import '@aurodesignsystem/design-tokens/dist/tokens/CSSCustomProperties.css';
 
 // Auro Components
+import '@alaskaairux/icons';
 import '@aurodesignsystem/auro-accordion';
 import '@aurodesignsystem/auro-alert';
 import '@aurodesignsystem/auro-avatar';
