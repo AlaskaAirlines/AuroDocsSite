@@ -1,20 +1,13 @@
 import AuroComponentContent from "functions/renderComponentPage";
-import { Nav } from './nav';
 
 class AuroContent extends AuroComponentContent {
 
   constructor(props) {
     super(props);
 
-    this.nameSpace = 'alaskaairux';
+    this.hasDOT = true;
     this.markdownContentPath = 'demo/dotCompliance.md';
   };
-
-  renderNav() {
-    return (
-      <Nav />
-    );
-  }
 }
 
 export default AuroContent;

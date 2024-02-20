@@ -9,7 +9,6 @@ class AuroContent extends RenderMarkdownPage {
           <NavLink role="tab" exact className="tab link" to={`/css/conventions`} activeClassName="is-active">CSS conventions</NavLink>
           <NavLink role="tab" exact className="tab link" to={`/css/custom-element-css`} activeClassName="is-active">CSS & custom elements</NavLink>
           <NavLink role="tab" exact className="tab link" to={`/css/guidelines`} activeClassName="is-active">Style guidelines</NavLink>
-          <NavLink role="tab" exact className="tab link" to={`/css/linter`} activeClassName="is-active">Stylelint rules</NavLink>
           <NavLink role="tab" exact className="tab link" to={`/css/idiomatic-css`} activeClassName="is-active">Idiomatic CSS</NavLink>
         </div>
         <section

@@ -6,7 +6,7 @@ class AuroContent extends AuroComponentContent {
     super(props);
 
     this.hasFigma = true;
-    this.markdownContentPath = 'demo/demo.md';
+    this.markdownContentPath = 'demo/index.md';
   };
 }
 

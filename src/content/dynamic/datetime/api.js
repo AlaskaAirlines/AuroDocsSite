@@ -5,7 +5,7 @@ class AuroContent extends AuroComponentContent {
   constructor(props) {
     super(props);
 
-    this.markdownContentPath = 'docs/api.md';
+    this.markdownContentPath = 'demo/api.md';
   };
 }
 
