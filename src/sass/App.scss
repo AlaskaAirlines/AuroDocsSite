@@ -491,46 +491,49 @@ pre {
   width: 50%;
 }
 
+// support references:
+// - color-mix: https://caniuse.com/mdn-css_types_color_color-mix
+
 // sass example
 .auro-color-brand-alpine-400--50 {
-  background-color: rgba($ds-color-brand-alpine-400, 0.5);
+  background-color: color-mix(in srgb, var(--ds-color-brand-alpine-400) 5%, transparent);
 }
 
 // CSS custom properties examples
 .auro-rgb-color-brand-alpine-400--10 {
-  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.1);
+  background-color: color-mix(in srgb, var(--ds-color-brand-alpine-400) 10%, transparent);
 }
 
 .auro-rgb-color-brand-alpine-400--20 {
-  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.2);
+  background-color: color-mix(in srgb, var(--ds-color-brand-alpine-400) 20%, transparent);
 }
 
 .auro-rgb-color-brand-alpine-400--30 {
-  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.3);
+  background-color: color-mix(in srgb, var(--ds-color-brand-alpine-400) 30%, transparent);
 }
 
 .auro-rgb-color-brand-alpine-400--40 {
-  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.4);
+  background-color: color-mix(in srgb, var(--ds-color-brand-alpine-400) 40%, transparent);
 }
 
 .auro-rgb-color-brand-alpine-400--50 {
-  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.5);
+  background-color: color-mix(in srgb, var(--ds-color-brand-alpine-400) 50%, transparent);
 }
 
 .auro-rgb-color-brand-alpine-400--60 {
-  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.6);
+  background-color: color-mix(in srgb, var(--ds-color-brand-alpine-400) 60%, transparent);
 }
 
 .auro-rgb-color-brand-alpine-400--70 {
-  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.7);
+  background-color: color-mix(in srgb, var(--ds-color-brand-alpine-400) 70%, transparent);
 }
 
 .auro-rgb-color-brand-alpine-400--80 {
-  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.8);
+  background-color: color-mix(in srgb, var(--ds-color-brand-alpine-400) 80%, transparent);
 }
 
 .auro-rgb-color-brand-alpine-400--90 {
-  background-color: rgba(var(--ds-rgb-color-brand-alpine-400), 0.9);
+  background-color: color-mix(in srgb, var(--ds-color-brand-alpine-400) 90%, transparent);
 }
 // -------------------------------------------------------------
 

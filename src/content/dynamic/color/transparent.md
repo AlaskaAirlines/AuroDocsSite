@@ -20,18 +20,18 @@ This table below illustrates the the use of `color-brand-alpine-400` and the dif
 
 Using Sass to create different opacity levels:
 
-1. Using the `rgba()` function
-1. Using Sass Token variables
+1. Using the `color-mix()` function
+2. Using Sass Token variables
 
-Using Sass to create opacity levels will output a final RGBA value that is compatible with all browsers.
+Using Sass `color-mix` to create opacity levels will output a final RGBA value. Support for `color-mix` can be seen in this [caniuse page](https://caniuse.com/mdn-css_types_color_color-mix).
 
-In this example use `$auro-color-brand-alpine-400` to create some opacity examples. Notice the use of a modifier in the [naming convention](/support/css-conventions).
+In this example use `$ds-color-brand-alpine-400` to create some opacity examples. Notice the use of a modifier in the [naming convention](/css/conventions).
 
 <div class="transparencyBlock auro-color-brand-alpine-400--50"> 50% transparency </div>
 
 ```sass
 .auro-color-brand-tropical-400--50 {
-  background-color: rgba($auro-color-brand-alpine-400, 0.5);
+  background-color: color-mix(in srgb, $ds-color-brand-alpine-400 90%, transparent);
 }
 ```
 
@@ -39,12 +39,14 @@ In this example use `$auro-color-brand-alpine-400` to create some opacity exampl
 
 Using CSS to create different opacity levels:
 
-1. Using the CSS `rgba()` function
-1. Using CSS custom properties
+1. Using the `color-mix()` function
+2. Using CSS custom properties
 
 Using CSS to create opacity levels will not be compatible with browsers that do not [support custom properties](https://caniuse.com/#feat=css-variables).
 
-In this example we use `var(--auro-rgb-color-brand-alpine-400)` to create some opacity examples. Notice the use of a modifier in the [naming convention](/support/css-conventions).
+Also, support for `color-mix` can be seen in this [caniuse page](https://caniuse.com/mdn-css_types_color_color-mix).
+
+In this example we use `var(--ds-color-brand-alpine-400)` to create some opacity examples. Notice the use of a modifier in the [naming convention](/css/conventions).
 
 Creating opacities from standard CSS is much like using Sass. There is a dependency on this CSS file from design tokens, `CSSCustomPropertiesColorRGB.css`. This file contains color token output with only the R,G,B values. E.g. `205, 230, 255`. Notice the custom prefix to the token name, `auro-rgb-...`
 
@@ -57,6 +59,6 @@ Note, this syntax will work inside a `.scss` file.
 
 ```css
 .auro-rgb-color-brand-alpine-400--50 {
-  background-color: rgba(var(--auro-rgb-color-brand-alpine-400), 0.5);
+  background-color: color-mix(in srgb, var(--ds-color-brand-alpine-400) 50%, transparent);
 }
 ```
