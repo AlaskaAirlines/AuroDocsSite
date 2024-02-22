@@ -197,44 +197,9 @@ class AuroComponentContent extends MarkdownPageWrapper {
     if (!this.releasePage) {
       this.writeComponentName();
     }
-
-    // load and launch API examples
-    if (this.hasApiExamples && !this.releasePage) {
-      this.loadExampleScript('demo/api.min.js');
-      const apiMethodName = `init${this.convertToUpperCase(this.name)}ApiExamples`;
-      window[apiMethodName]();
-    }
-
-    // load and launch index examples
-    if (this.hasIndexExamples && !this.releasePage) {
-      this.loadExampleScript('demo/index.min.js');
-      const indexMethodName = `init${this.convertToUpperCase(this.name)}IndexExamples`;
-      window[indexMethodName]();  
-    }
     
     if (this.hasCustomElementRegistration && !this.releasePage && !this.figmaPage && !this.accessibilityPage) {
       registerCustomComponent(`custom-${this.name}`, `https://cdn.jsdelivr.net/npm/@${this.nameSpace}/auro-${this.name}@${this.componentVersion}/dist/auro-${this.name}__bundled.js`);
-    }
-  }
-
-  appendScript(url) {
-    let scriptElem = document.createElement('script');
-    scriptElem.setAttribute('src', url);
-
-    const head = document.querySelector('head');
-
-    head.appendChild(scriptElem);
-  }
-
-  loadExampleScript(path) {
-    // TODO: Make this work using the local dependency
-    const scriptUrl = `https://cdn.jsdelivr.net/npm/@${this.nameSpace}/${this.componentName}@${this.componentVersion}/${path}`;
-    console.warn('scriptUrl', scriptUrl);
-
-    let scriptElem = document.querySelector(`script[src="${scriptUrl}"]`);
-
-    if (!scriptElem) {
-      this.appendScript(scriptUrl);
     }
   }
 
