@@ -4,6 +4,7 @@ import marked from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { registerCustomComponent } from "content/utils/registerCustomComponent";
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-select/main/demo/index.md';
 
@@ -11,6 +12,7 @@ class AuroSelect extends MarkdownPageWrapper {
 
   componentDidMount() {
     window.initSelectIndexExamples();
+    registerCustomComponent('custom-select', 'https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-select@latest/dist/auro-select__bundled.js');
   }
 
   // function to get text from MD document
