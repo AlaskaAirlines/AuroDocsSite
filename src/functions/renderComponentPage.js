@@ -199,6 +199,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
     }
     
     if (this.hasCustomElementRegistration && !this.releasePage && !this.figmaPage && !this.accessibilityPage) {
+      console.warn(`registering custom element: custom-${this.name}, https://cdn.jsdelivr.net/npm/@${this.nameSpace}/auro-${this.name}@${this.componentVersion}/dist/auro-${this.name}__bundled.js`);
       registerCustomComponent(`custom-${this.name}`, `https://cdn.jsdelivr.net/npm/@${this.nameSpace}/auro-${this.name}@${this.componentVersion}/dist/auro-${this.name}__bundled.js`);
     }
   }

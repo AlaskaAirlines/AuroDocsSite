@@ -1,5 +1,5 @@
 import AuroComponentContent from "functions/renderComponentPage";
-// import { initExamples } from '@aurodesignsystem/auro-carousel/demo/index.min.js';
+import { initExamples } from '@aurodesignsystem/auro-carousel/demo/index.min.js';
 
 class AuroContent extends AuroComponentContent {
 
@@ -9,11 +9,11 @@ class AuroContent extends AuroComponentContent {
     this.markdownContentPath = 'demo/index.md';
   };
 
-  // componentDidMount() {
-  //   super.componentDidMount();
+  componentDidMount() {
+    super.componentDidMount();
 
-  //   initExamples();
-  // }
+    initExamples();
+  }
 }
 
 export default AuroContent;
