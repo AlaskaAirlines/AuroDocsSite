@@ -39,6 +39,7 @@ import '@aurodesignsystem/auro-flightline';
 import '@aurodesignsystem/auro-header';
 import '@aurodesignsystem/auro-hyperlink';
 import '@aurodesignsystem/auro-icon';
+import '@aurodesignsystem/auro-icon/src/auro-alaska';
 import '@aurodesignsystem/auro-input';
 import '@aurodesignsystem/auro-loader';
 import '@aurodesignsystem/auro-lockup';

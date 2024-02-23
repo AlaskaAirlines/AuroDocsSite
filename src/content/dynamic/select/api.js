@@ -1,4 +1,5 @@
 import AuroComponentContent from "functions/renderComponentPage";
+import { initExamples } from "@aurodesignsystem/auro-select/demo/api.min.js";
 
 class AuroContent extends AuroComponentContent {
 
@@ -7,6 +8,12 @@ class AuroContent extends AuroComponentContent {
 
     this.markdownContentPath = 'demo/api.md';
   };
+
+  componentDidMount() {
+    super.componentDidMount();
+
+    initExamples();
+  }
 }
 
 export default AuroContent;

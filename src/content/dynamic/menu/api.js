@@ -1,4 +1,5 @@
 import AuroComponentContent from "functions/renderComponentPage";
+import { initExamples } from "@aurodesignsystem/auro-menu/demo/api.min.js";
 
 class AuroContent extends AuroComponentContent {
 
@@ -8,6 +9,12 @@ class AuroContent extends AuroComponentContent {
     this.hasFigma = true;
     this.markdownContentPath = 'demo/api.md';
   };
+
+  componentDidMount() {
+    super.componentDidMount();
+
+    initExamples();
+  }
 }
 
 export default AuroContent;
