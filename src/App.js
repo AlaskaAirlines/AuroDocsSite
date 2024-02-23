@@ -202,11 +202,11 @@ import AuroAccordionInstall from './content/dynamic/accordion/install';
 import AuroAccordionReleases from './content/dynamic/accordion/releases';
 
 // Alert
-import AuroAlerts from './content/dynamic/alerts/component';
-import AuroAlertsApi from './content/dynamic/alerts/api';
-import AuroAlertsInstall from './content/dynamic/alerts/install';
-import AuroAlertsReleases from './content/dynamic/alerts/releases';
-import AuroAlertsFigma from './content/dynamic/alerts/figma';
+import AuroAlert from './content/dynamic/alert/component';
+import AuroAlertApi from './content/dynamic/alert/api';
+import AuroAlertInstall from './content/dynamic/alert/install';
+import AuroAlertReleases from './content/dynamic/alert/releases';
+import AuroAlertFigma from './content/dynamic/alert/figma';
 
 // Avatar
 import AuroAvatar from './content/dynamic/avatar/component';
@@ -576,11 +576,11 @@ function App() {
               <Route exact path="/components/auro/accordion/releases"><AuroAccordionReleases /></Route>
 
               {/* Auro Alerts */}
-              <Route exact path="/components/auro/alert"><AuroAlerts /></Route>
-              <Route exact path="/components/auro/alert/install"><AuroAlertsInstall /></Route>
-              <Route exact path="/components/auro/alert/api"><AuroAlertsApi /></Route>
-              <Route exact path="/components/auro/alert/releases"><AuroAlertsReleases /></Route>
-              <Route exact path="/components/auro/alert/figma"><AuroAlertsFigma /></Route>
+              <Route exact path="/components/auro/alert"><AuroAlert /></Route>
+              <Route exact path="/components/auro/alert/install"><AuroAlertInstall /></Route>
+              <Route exact path="/components/auro/alert/api"><AuroAlertApi /></Route>
+              <Route exact path="/components/auro/alert/releases"><AuroAlertReleases /></Route>
+              <Route exact path="/components/auro/alert/figma"><AuroAlertFigma /></Route>
 
               {/* avatar */}
               <Route exact path="/components/auro/avatar/"><AuroAvatar /></Route>
