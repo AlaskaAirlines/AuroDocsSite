@@ -7,6 +7,7 @@ class AuroContent extends AuroComponentContent {
 
     this.hasDOT = true;
     this.markdownContentPath = 'demo/dotCompliance.md';
+    this.hasCustomElementRegistration = false;
   };
 }
 

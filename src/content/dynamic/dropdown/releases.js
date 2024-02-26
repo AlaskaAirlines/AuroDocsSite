@@ -5,6 +5,7 @@ class AuroContent extends AuroComponentContent {
     super(props);
 
     this.hasFigma = true;
+    this.hasCustomElementRegistration = false;
   };
 }
 

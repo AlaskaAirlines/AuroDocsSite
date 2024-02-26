@@ -6,6 +6,7 @@ class AuroContent extends AuroComponentContent {
     super(props);
 
     this.markdownContentPath = 'demo/index.md';
+    this.hasCustomElementRegistration = false;
   };
 }
 
