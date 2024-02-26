@@ -18,22 +18,26 @@ class AuroComponentContent extends MarkdownPageWrapper {
   constructor(props) {
     super(props);
 
-    this.hasCustomElementRegistration = true;
-    this.hasIndexExamples = false;
-    this.hasApiExamples = false;
-    this.hasFigma = false;
-    this.hasDOT = false;
-    this.hasAccessibility = false;
+
+    // Common flags for all component pages
     this.name = undefined;
     this.componentName = undefined;
     this.nameSpace = 'aurodesignsystem';
     this.packageName = undefined;
-    this.releasePage = false;
-    this.figmaPage = false;
+    this.hasCustomElementRegistration = true;
     this.version = undefined;
     this.markdownContentPath = undefined;
-    this.figmaPath = 'docs/figma.md';
+    
+    // Flags for component nav for inconsistent pages
+    this.hasFigma = false;
+    this.hasDOT = false;
+    this.hasAccessibility = false;
+
+    // Flags for identifiying which page template is being rendered
+    this.releasePage = false;
+    this.figmaPage = false;
     this.designNotesPath = 'docs/design-notes.md';
+    this.figmaPath = 'docs/figma.md';
 
     /**
      * @private
@@ -59,6 +63,11 @@ class AuroComponentContent extends MarkdownPageWrapper {
     };
   }
 
+  /**
+   * Write the component name to the first tab on the component page navigation menu.
+   * @private
+   * @returns {void}
+   */
   writeComponentName() {
     const elem = document.getElementById('componentLink');
 
@@ -71,6 +80,11 @@ class AuroComponentContent extends MarkdownPageWrapper {
     }
   }
 
+  /**
+   * Capitalize the first letter of a string.
+   * @private
+   * @returns {string} The string with the first letter capitalized.
+   */
   convertToUpperCase(str) {
     if(str) {
       return str.charAt(0).toUpperCase() + str.slice(1);
@@ -79,25 +93,12 @@ class AuroComponentContent extends MarkdownPageWrapper {
     }
   }
 
-  parseRoute() {
-    let route = window.location.pathname;
-    
-    if (!this.name) {
-      this.name = route.replace('/components/auro/', '');
-    }
-
-    if (route.endsWith('/releases')) {
-      this.releasePage = true;
-    }
-
-    if (route.endsWith('/figma')) {
-      this.figmaPage = true;
-    }
-
-    if (route.endsWith('/figma')) {
-      this.accessibilityPage = true;
-    }
-
+  /**
+   * Get the name and tagname of the component and from the route.
+   * @private
+   * @returns {string} The string with the first letter capitalized.
+   */
+  getName(route) {
     let dividerIndex = 0;
 
     const indexStr = '/auro/';
@@ -112,6 +113,20 @@ class AuroComponentContent extends MarkdownPageWrapper {
       this.name = route;
     }
 
+    // set component name if not set in the component page
+    if (!this.componentName) {
+      this.componentName = `auro-${this.name}`;
+    }
+  }
+
+
+  /**
+   * Determine the packageName and version for the component page.
+   * @private
+   * @returns {void}
+   */
+  getVersion(route) {
+    // set package name if not set in the component page
     if (!this.packageName) {
       this.packageName = `@${this.nameSpace}/auro-${this.name}`;
     }
@@ -135,12 +150,14 @@ class AuroComponentContent extends MarkdownPageWrapper {
     } else {
       this.componentVersion = `v${this.version}`;
     }
+  }
 
-    // set component name if not set in the component page
-    if (!this.componentName) {
-      this.componentName = `auro-${this.name}`;
-    }
-
+  /**
+   * Determine the URL for the markdown content.
+   * @private
+   * @returns {void}
+   */
+  setMarkdownContent() {
     // set markdown content if not set in the component page
     if (!this.markdownContent) {
       this.markdownContent = `https://raw.githubusercontent.com/AlaskaAirlines/${this.componentName}/${this.componentVersion}/${this.markdownContentPath}`;
@@ -154,10 +171,52 @@ class AuroComponentContent extends MarkdownPageWrapper {
     // set design notes content if not set in the component page
     if (this.designNotesPath) {
       this.designNotesContent = `https://raw.githubusercontent.com/AlaskaAirlines/${this.componentName}/${this.componentVersion}/${this.designNotesPath}`;
+    } 
+  }
+
+  /**
+   * Parse the current route and determine properties for the component page.
+   * @private
+   * @returns {void}
+   */
+  parseRoute() {
+    let route = window.location.pathname;
+
+    // Determine if the current page is a component page.
+    if (route.includes('auro')) {
+      // Determine the component name from the route.
+      if (!this.name) {
+        this.name = route.replace('/components/auro/', '');
+      }
+
+      // Determine if the current page is a release page.
+      if (route.endsWith('/releases')) {
+        this.releasePage = true;
+      }
+
+      // Determine if the current page is a figma page.
+      if (route.endsWith('/figma')) {
+        this.figmaPage = true;
+      }
+
+      // Determine if the current page is an accessibility page.
+      if (route.endsWith('/a11y')) {
+        this.accessibilityPage = true;
+      }
+
+      this.getName(route);
+      this.getVersion(route);
+      this.setMarkdownContent();
     }
   }
 
-  // function to get text from MD document
+  /**
+   * Fetch the markdown file and render the content.
+   * @param {string} markdown - The path to the markdown file.
+   * @param {string} containerSelector - The selector for the container to render the markdown into.
+   * @private
+   * @returns {void}
+   */
   getMarkdownText(markdown, containerSelector) {
     if (!containerSelector) {
       containerSelector = '.auro-markdown';
@@ -199,11 +258,15 @@ class AuroComponentContent extends MarkdownPageWrapper {
     }
     
     if (this.hasCustomElementRegistration && !this.releasePage && !this.figmaPage && !this.accessibilityPage) {
-      console.warn(`registering custom element: custom-${this.name}, https://cdn.jsdelivr.net/npm/@${this.nameSpace}/auro-${this.name}@${this.componentVersion}/dist/auro-${this.name}__bundled.js`);
       registerCustomComponent(`custom-${this.name}`, `https://cdn.jsdelivr.net/npm/@${this.nameSpace}/auro-${this.name}@${this.componentVersion}/dist/auro-${this.name}__bundled.js`);
     }
   }
 
+  /**
+   * Render the correct nav items for the component page
+   * @private
+   * @returns {object} The component nav items.
+   */
   renderNav() {
     return (
       <div role="tablist" className="tabList">
