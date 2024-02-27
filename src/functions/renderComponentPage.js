@@ -238,7 +238,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
       let url = href
       url = url.replace(/^.*\/\/[^/]+/, '')
 
-      if (href.includes("auro.alaskaair.com")) {
+      if (href.includes("auro.alaskaair.com") || href.startsWith('#')) {
         return link.replace(`href`,`href="${url}"`);
       } else {
         const newLink = `<a href="${href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
