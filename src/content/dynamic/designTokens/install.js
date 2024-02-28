@@ -1,4 +1,5 @@
 import AuroComponentContent from "functions/renderComponentPage";
+import { Nav } from './nav';
 
 class AuroContent extends AuroComponentContent {
 
@@ -9,6 +10,12 @@ class AuroContent extends AuroComponentContent {
     this.packageName = '@aurodesignsystem/design-tokens';
     this.hasCustomElementRegistration = false;
   };
+
+  renderNav() {
+    return (
+      <Nav />
+    )
+  }
 }
 
 export default AuroContent;
