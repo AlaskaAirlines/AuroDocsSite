@@ -5,7 +5,9 @@ class AuroContent extends AuroComponentContent {
   constructor(props) {
     super(props);
 
-    this.markdownContentPath = 'README.md';
+    this.markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/AuroDesignTokens/v4.3.1/README.md';
+    this.packageName = '@aurodesignsystem/design-tokens';
+    this.hasCustomElementRegistration = false;
   };
 }
 
