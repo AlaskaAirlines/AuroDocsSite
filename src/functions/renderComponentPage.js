@@ -203,11 +203,11 @@ class AuroComponentContent extends MarkdownPageWrapper {
       if (route.endsWith('/a11y')) {
         this.accessibilityPage = true;
       }
-
-      this.getName(route);
-      this.getVersion(route);
-      this.setMarkdownContent();
     }
+
+    this.getName(route);
+    this.getVersion(route);
+    this.setMarkdownContent();
   }
 
   /**
