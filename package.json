@@ -8,7 +8,6 @@
   "dependencies": {
     "@alaskaairux/auro-flightline": "^1.4.0",
     "@alaskaairux/auro-loader": "^1.1.1",
-    "@alaskaairux/auro-radio": "^1.6.2",
     "@alaskaairux/design-tokens": "^3.15.5",
     "@alaskaairux/icons": "^4.37.0",
     "@apollo/react-components": "^3.1.5",
