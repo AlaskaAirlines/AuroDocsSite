@@ -13,6 +13,7 @@
 // Auro typography and spacing
 $prefix: true;
 $paragraph: true;
+@import '~@aurodesignsystem/webcorestylesheets/src/focus-visible';
 @import "~@aurodesignsystem/webcorestylesheets/src/essentials";
 @import "~@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles";
 @import "~@aurodesignsystem/webcorestylesheets/src/headings";
@@ -20,7 +21,7 @@ $paragraph: true;
 @import "~@aurodesignsystem/webcorestylesheets/src/componentSupport/table";
 $prefix: null;
 
-@import url('https://unpkg.com/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css');
+@import url('https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css');
 
 .auro-markdown {
 

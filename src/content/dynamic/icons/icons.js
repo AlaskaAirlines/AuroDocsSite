@@ -23,6 +23,11 @@ class Icons extends Component {
 
         <p>For quick application of Icons to any project, be sure to check out the <auro-hyperlink href="/components/auro/icon" relative>auro-icon</auro-hyperlink> component.</p>
 
+        <auro-alert type="warning">
+          <p>For inclusion with JavaScript based front-end development, due to ESM/SSR support requirements, the legacy file type <code>.js</code> and the name convention of <code>_es6.js</code> have been deprecated and will be removed in the next MAJOR release. All users are requested to use the <code>.mjs</code> file type.</p>
+          <p>Please see <auro-hyperlink relative href="/deprecated-icons">the deprecated icons list</auro-hyperlink> for more about these updates.</p>
+        </auro-alert>
+
         <IconList />
 
       </section>

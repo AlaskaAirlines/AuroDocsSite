@@ -156,7 +156,7 @@ auro-swatch-list {
   position: fixed;
   z-index: 100;
   background-color: white;
-  padding-left: var(--ds-size-300);
+  padding: 0 var(--ds-size-300) 100px var(--ds-size-300);
   height: calc(100% - 80px);
   overflow: scroll;
   top: 80px;
@@ -396,6 +396,11 @@ pre {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: var(--ds-size-600);
+
+  svg {
+    --ds-size-300: 2.5rem;
+    --auro-size-lg: 2.5rem;
+  }
 
   span {
     position: absolute;
