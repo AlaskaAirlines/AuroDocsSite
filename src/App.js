@@ -53,6 +53,8 @@ import '@aurodesignsystem/auro-sidenav';
 import '@aurodesignsystem/auro-skeleton';
 import '@aurodesignsystem/auro-toast';
 import '@aurodesignsystem/auro-tokenlist';
+import '@aurodesignsystem/auro-tokenlist/dist/auro-tokenavatar';
+import '@aurodesignsystem/auro-tokenlist/dist/auro-tokendisplay';
 import '@aurodesignsystem/auro-table';
 
 // Logo to appear in console
