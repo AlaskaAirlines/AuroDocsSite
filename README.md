@@ -13,10 +13,25 @@ After cloning the repo locally, please address these simple steps;
 1. `$ npm i`
 1. `$ npm run dev`
 
+### Environmental variable
+
+To run the Github data service pages, you will need to add a `/.env` file, at the repo root, with a PAT from Github. This file is intentionally ignored. 
+
+In your local `/.env` file add the following: 
+
+```
+REACT_APP_GITHUB_API_KEY=[add your PAT]
+```
+
+### To generate a PAT
+
+Go to [Personal access tokens](https://github.com/settings/tokens), generate a new token with the following settings:
+
+1. repo:status
+1. repo_deployment
+1. public_repo
+1. read:discussion
+
 ## Publish to site
 
 The CI/CD pipeline will publish a new build of the site with each merge to `master`. 
-
-## More information 
-
-For any additional information in regards to this site or the Auro Design System, please be sure you check out the [Teams Channel](https://teams.microsoft.com/l/channel/19%3a5df2ca021a6548c4af54256bbc737129%40thread.skype/Auro%2520(public)?groupId=3a6a4783-59c6-496a-a20c-ab306461a894&tenantId=0f44c5d4-42b0-45c2-bf55-d0fea8430d33)
