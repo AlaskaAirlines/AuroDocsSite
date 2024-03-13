@@ -31,6 +31,7 @@ import '@aurodesignsystem/auro-card';
 import '@aurodesignsystem/auro-carousel';
 import '@aurodesignsystem/auro-checkbox';
 import '@aurodesignsystem/auro-datetime';
+import '@aurodesignsystem/auro-datepicker';
 import '@aurodesignsystem/auro-dialog';
 import '@aurodesignsystem/auro-drawer';
 import '@aurodesignsystem/auro-dropdown';
