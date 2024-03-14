@@ -31,7 +31,6 @@ import '@aurodesignsystem/auro-card';
 import '@aurodesignsystem/auro-carousel';
 import '@aurodesignsystem/auro-checkbox';
 import '@aurodesignsystem/auro-datetime';
-import '@aurodesignsystem/auro-datepicker';
 import '@aurodesignsystem/auro-dialog';
 import '@aurodesignsystem/auro-drawer';
 import '@aurodesignsystem/auro-dropdown';
@@ -57,6 +56,10 @@ import '@aurodesignsystem/auro-tokenlist';
 import '@aurodesignsystem/auro-tokenlist/dist/auro-tokenavatar';
 import '@aurodesignsystem/auro-tokenlist/dist/auro-tokendisplay';
 import '@aurodesignsystem/auro-table';
+
+// Datepicker loaded out of order to prevent it from registering auro-input before auro-input can self register
+import '@aurodesignsystem/auro-combobox';
+import '@aurodesignsystem/auro-datepicker';
 
 // Logo to appear in console
 import './scripts/auro-consoleLogo';
