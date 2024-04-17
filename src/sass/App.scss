@@ -109,17 +109,17 @@ footer,
   margin: var(--ds-size-400);
   padding-top: var(--ds-size-200);
 
-  @include auro_breakpoint--sm {
+  @include auro_grid-breakpoint--sm {
     max-width: 62%;
     margin: var(--ds-size-200) auto 0 250px;
   }
 
-  @include auro_breakpoint--md {
+  @include auro_grid-breakpoint--md {
     max-width: 70%;
     margin: var(--ds-size-200) auto 0 290px;
   }
 
-  @include auro_breakpoint--lg {
+  @include auro_grid-breakpoint--xl {
     max-width: 64rem;
     margin: var(--ds-size-200) auto 0 25%;
   }
