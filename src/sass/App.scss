@@ -29,7 +29,7 @@ body {
 .gsc-control-cse {
   position: fixed;
   top: 5px;
-  right: 0;
+  right: 180px;
   z-index: var(--ds-depth-overlay);
   display: none;
 
@@ -44,6 +44,13 @@ body {
   padding: 10px;
 }
 // --------------------------------------------------
+
+auro-themeswitcher {
+  position: fixed;
+  top: 11px;
+  right: 10px;
+  z-index: var(--ds-depth-overlay);
+}
 
 .ondark {
   background-color: var(--ds-color-background-darkest);
