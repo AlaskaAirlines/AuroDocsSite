@@ -223,7 +223,6 @@ class AuroComponentContent extends MarkdownPageWrapper {
    * @returns {void}
    */
   getMarkdownText(markdown, containerSelector) {
-    console.warn('getMarkdowntext', markdown, containerSelector);
     if (!containerSelector) {
       containerSelector = '.auro-markdown';
     }

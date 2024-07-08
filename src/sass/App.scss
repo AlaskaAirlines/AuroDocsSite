@@ -22,7 +22,7 @@ $focus: true;
 }
 
 body {
-  background-color: var(--ds-color-background-lightest);
+  background-color: var(--ds-color-background-primary-100-default);
 }
 
 // customization for use with the google search widget
@@ -53,7 +53,7 @@ auro-themeswitcher {
 }
 
 .ondark {
-  background-color: var(--ds-color-background-darkest);
+  background-color: var(--ds-color-background-primary-100-inverse);
   padding: 10px 20px;
 }
 
@@ -89,7 +89,7 @@ ul {
   white-space: normal;
 }
 
-.util_hover {
+.util_hover { // WHERE IS THIS USED?
   &:hover {
     cursor: pointer;
     color: var(--ds-color-ui-hover-default);
@@ -167,8 +167,7 @@ auro-swatch-list {
   height: calc(100% - 80px);
   overflow: scroll;
   top: 80px;
-  background-color: var(--ds-color-background-lighter);
-  background-color: var(--ds-color-brand-gray-100);
+  background-color: var(--ds-color-background-primary-200-default);
 
   .isHeading {
     margin: var(--ds-size-300) 0 0;
@@ -200,7 +199,7 @@ auro-swatch-list {
 .auro_hyperlink.is-active,
 .auro_hyperlink--active,
 .hyperlink--active {
-  color: var(--ds-color-text-primary-default) !important;
+  color: var(--ds-color-text-ui-active-default) !important;
   text-decoration: none !important;
   cursor: default;
 }
@@ -248,7 +247,7 @@ auro-swatch-list {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--ds-color-background-lighter);
+    background-color: var(--ds-color-background-primary-200-default);
     box-shadow: 0px 0px 10px #222;
     right: -12px;
     top: -13px;
@@ -282,9 +281,9 @@ auro-swatch-list {
     & ~ .sidenav {
       opacity: 1;
       left: 0;
-      background-color: var(--ds-color-background-lightest);
+      background-color: var(--ds-color-background-primary-100-default);
       width: 75%;
-      box-shadow: 0px 15px 28px -10px var(--ds-color-background-darker);
+      box-shadow: 0px 15px 28px -10px var(--ds-color-background-primary-300-default);
       margin-left: 0;
       padding-left: var(--ds-size-300);
       top: 80px;
@@ -297,16 +296,16 @@ auro-swatch-list {
 }
 
 code:not(.html):not(.css):not(.js) {
-  color: var(--ds-color-brand-flamingo-500);
+  color: var(--ds-color-utility-red-default);
 }
 
 .indention {
   padding-left: var(--ds-size-200);
-  border-left: 1px solid var(--ds-color-base-neutral-500);
+  border-left: 1px solid var(--ds-color-utility-neutral-default);
   margin-bottom: var(--ds-size-600);
 
-  &--warning {
-    border-color: var(--color-background-alert);
+  &--warning { // WHERE IS THIS USED?
+    border-color: red; // var(--color-background-alert); // IS THIS NEEDED?
     border-width: 4px;
   }
 }
@@ -344,7 +343,7 @@ pre {
 }
 
 .afterCode.hljs.openCode {
-  background-color: var(--ds-color-brand-gray-100) !important;
+  background-color: var(--ds-color-utility-gray-default) !important;
 }
 
 .spaceAfterCode {
@@ -353,8 +352,8 @@ pre {
 }
 
 .exampleWrapper--deprecated {
-  $stripe: var(--ds-color-alert-advisory-default);
-  $background: var(--ds-color-base-white);
+  $stripe: var(--ds-color-utility-warning-default);
+  $background: var(--ds-color-background-primary-100-default);
 
   background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
   overflow: auto;
@@ -368,8 +367,8 @@ pre {
 }
 
 .content--deprecated {
-  border: 1px solid var(--ds-color-alert-advisory-default);
-  background-color: var(--ds-color-alert-advisory-default);
+  border: 1px solid var(--ds-color-border-warning-default);
+  background-color: var(--ds-color-container-warning-default);
   padding: var(--ds-size-200);
   border-radius: var(--ds-border-radius);
 }
@@ -381,9 +380,9 @@ pre {
  }
 }
 
-.dataSelected {
-  $stripe: var(--ds-color-background-lighter);
-  $background: var(--ds-color-base-white);
+.dataSelected { // WHERE IS THIS USED? CLEANUP THE TOKENS
+  $stripe: var(--ds-color-background-primary-200-default);
+  $background: var(--ds-color-background-primary-100-default);
 
   border-width: 1px 1px 0;
   background: repeating-linear-gradient( 45deg, $stripe, $stripe 5px, $background 5px, $background 10px);
@@ -424,7 +423,7 @@ pre {
     justify-content: center;
     align-items: center;
     border-radius: var(--ds-border-radius);
-    background-color: var(--ds-color-brand-gray-100);
+    background-color: var(--ds-color-container-subtle-default);
     margin: 0 var(--ds-size-100) var(--ds-size-100) 0;
 
     &:nth-child(even) {
@@ -567,13 +566,14 @@ pre {
   margin-bottom: 2rem;
   position: sticky;
   top: 80px;
-  background: linear-gradient(180deg, rgba(255,255,255,.99) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,.9) 100%);
+  background-color: var(--ds-color-background-primary-100-default);
+  // background: linear-gradient(180deg, rgba(255,255,255,.99) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,.9) 100%);
   z-index: 10;
   overflow-x: auto;
   overflow-y: hidden;
   display: flex;
   flex-wrap: nowrap;
-  box-shadow: inset 0 -2px 0 var(--ds-color-brand-gray-300);
+  box-shadow: inset 0 -2px 0 var(--ds-color-utility-gray-default);
 
   @include auro_breakpoint--md {
     line-height: 3rem;
@@ -583,8 +583,8 @@ pre {
 .tab {
   @include auro_transition($property: border);
 
-  color: var(--ds-color-text-link-default);
-  border-color: var(--ds-color-brand-gray-300);
+  color: var(--ds-color-text-ui-default-default);
+  border-color: var(--ds-color-utility-gray-default);
   padding: var(--ds-size-200);
   border-width: 0 0 2px 0;
   border-style: solid;
@@ -596,7 +596,7 @@ pre {
     &:hover {
       text-decoration: none;
       cursor: pointer;
-      color: var(--ds-color-text-link-default-hover);
+      color: var(--ds-color-text-ui-hover-default);
       border-color: currentColor;
     }
   }
@@ -604,15 +604,15 @@ pre {
   &.is-active {
     text-decoration: none;
     cursor: pointer;
-    color: var(--ds-color-text-primary-default);
+    color: var(--ds-color-text-ui-default-default);
     border-color: currentColor;
   }
 }
 
 .tab.focus-visible {
-  color: var(--ds-color-base-white) !important;
-  background-color: var(--ds-color-text-link-default);
-  border-bottom-color: var(--ds-color-text-primary-default);
+  color: var(--ds-color-text-ui-default-inverse) !important;
+  background-color: var(--ds-color-container-ui-primary-active-default);
+  border-bottom-color: var(--ds-color-border-primary-default);
 }
 
 // this really should be done in the component?
@@ -647,7 +647,7 @@ img[src*='shields.io'] {
     padding: var(--ds-size-300);
     padding-top: var(--ds-size-100);
     &:nth-child(even) {
-      background-color: var(--ds-color-brand-gray-100);
+      background-color: var(--ds-color-background-primary-200-default);
     }
   }
 }
@@ -657,7 +657,7 @@ img[src*='shields.io'] {
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Pretty sure this was replaced with auro-loader work
 .isLoading {
-  color: var(--ds-color-background-darker);
+  color: var(--ds-color-background-primary-300-default);
   font-size: 80px;
   text-indent: -9999em;
   overflow: hidden;
@@ -756,10 +756,10 @@ img[src*='shields.io'] {
     white-space: nowrap;
 
     @include auro_breakpoint--md {
-      box-shadow: inset 0px -1px 0px 0px var(--ds-color-border-primary-default);
+      box-shadow: inset 0px -1px 0px 0px var(--ds-color-border-primary-100-default);
       position: sticky;
       top: 271px;
-      background-color: #fff;
+      background-color: var(--ds-color-background-primary-100-default);
     }
   }
 }
@@ -803,7 +803,7 @@ img[src*='shields.io'] {
 }
 
 // This is a deprecated UI
-.epicIssues {
+.epicIssues { // I THINK THIS CAN BE DELETED
   .OPEN,
   .CLOSED {
     padding: 0 var(--ds-size-200);
@@ -870,7 +870,7 @@ img[src*='shields.io'] {
   }
 }
 
-.auditLegend {
+.auditLegend { // WHERE IS THIS USED??
   position: sticky;
   z-index: 1;
   top: 160px;
@@ -924,8 +924,8 @@ img[src*='shields.io'] {
 // header color example
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-.error--default {
-  color: var(--ds-color-alert-error-default);
+.error--default { // WHERE IS THIS USED?
+  color: var(--ds-color-text-error-default);
 }
 
 
@@ -937,7 +937,7 @@ img[src*='shields.io'] {
 // Release summary
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-.summaryWrapper {
+.summaryWrapper { // I THINK THIS IS DEPRECATED
   border-bottom: 1px solid var(--ds-color-border-primary-default);
   margin-bottom: var(--ds-size-600);
   padding-bottom: var(--ds-size-600);
@@ -968,7 +968,7 @@ img[src*='shields.io'] {
   text-decoration: none;
 }
 
-.badge {
+.badge { // IS THIS ON A PAGE THAT IS UNUSED NOW?
   display: flex;
   background-color: #555555;
   line-height: 1;
@@ -984,7 +984,7 @@ img[src*='shields.io'] {
   flex-grow: 4;
 }
 
-.data {
+.data { // IS THIS ON A PAGE THAT IS UNUSED NOW?
   color: var(--ds-color-base-white);
   padding: var(--ds-size-100);
   font-weight: 500;
@@ -1082,7 +1082,7 @@ img[src*='shields.io'] {
 // =-=-=-=-=-=- home page -=-=-=-=-=-=
 
 .imageBox {
-  background-color: #01426c;
+  background-color: var(--ds-color-background-primary-200-inverse);
   justify-content: center;
   position: relative;
 
