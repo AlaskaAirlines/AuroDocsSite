@@ -6,15 +6,11 @@ import { Nav} from './nav.js';
 import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
 
 import data from '@aurodesignsystem/design-tokens/dist/tokens/JSData--color.js'
-import windows from 'assets/color/windows.png';
 import transparentColors from './transparent.md';
 
-const background = data.color.background;
-const ui = data.color.ui;
 const border = data.color.border;
 const text = data.color.text;
 const icon = data.color.icon;
-const alert = data.color.alert;
 
 class ColorsOverview extends Component {
 
@@ -130,17 +126,6 @@ class ColorsOverview extends Component {
         <Nav />
 
         <h1 className="auro_heading auro_heading--display">Digital Brand Palette</h1>
-
-        <h2 className="auro_heading auro_heading--600">Background</h2>
-        <img className="util_marginBottom--xl" src={windows} alt="page header" />
-        <auro-tokendisplay componentData={this.getColors(background, 'neutral', [])}></auro-tokendisplay>
-
-        <h2 className="auro_heading auro_heading--600">User Interaction</h2>
-        <div className="avatarWrapper avatarWrapper--2up">
-          {this.getAvatars(ui, 'ui', 'default', [])}
-        </div>
-        <auro-tokendisplay componentData={this.getColors(ui, 'default', [])}></auro-tokendisplay>
-
         <h2 className="auro_heading auro_heading--600">Border</h2>
         <h3 className="auro_heading auro_heading--400">For light backgrounds</h3>
         <div className="avatarWrapper avatarWrapper--3up">
@@ -178,12 +163,6 @@ class ColorsOverview extends Component {
           {this.getAvatars(icon, 'icon', 'inverse', [])}
         </div>
         <auro-tokendisplay onDark componentData={this.getColors(icon, 'inverse', [])}></auro-tokendisplay>
-
-        <h2 className="auro_heading auro_heading--600">Alerts / Messaging</h2>
-        <div className="avatarWrapper avatarWrapper--3up">
-          {this.getAvatars(alert, 'alert', 'default', [])}
-        </div>
-        <auro-tokendisplay componentData={this.getColors(alert, 'default', [])}></auro-tokendisplay>
 
         <section className="auro-markdown">
           <ReactMarkdown
