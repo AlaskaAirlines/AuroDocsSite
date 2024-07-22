@@ -48,7 +48,7 @@
     "@aurodesignsystem/auro-table": "^2.1.5",
     "@aurodesignsystem/auro-toast": "^1.1.6",
     "@aurodesignsystem/auro-tokenlist": "^1.2.0",
-    "@aurodesignsystem/design-tokens": "^4.4.0",
+    "@aurodesignsystem/design-tokens": "^4.9.0",
     "@aurodesignsystem/wc-generator": "^4.5.9",
     "@aurodesignsystem/webcorestylesheets": "^5.1.1",
     "@aurolabs/auro-back-to-top": "^1.1.0",
