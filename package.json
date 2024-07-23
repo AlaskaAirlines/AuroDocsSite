@@ -43,7 +43,7 @@
     "@aurodesignsystem/auro-popover": "^3.2.3",
     "@aurodesignsystem/auro-radio": "^3.0.0",
     "@aurodesignsystem/auro-select": "^2.10.2",
-    "@aurodesignsystem/auro-sidenav": "^2.0.0",
+    "@aurodesignsystem/auro-sidenav": "^2.0.1",
     "@aurodesignsystem/auro-skeleton": "^2.1.5",
     "@aurodesignsystem/auro-table": "^2.1.5",
     "@aurodesignsystem/auro-toast": "^1.1.6",
