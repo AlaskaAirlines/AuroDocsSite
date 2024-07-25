@@ -14,16 +14,15 @@ const depth = allTokens.depth;
 const size = allTokens.size;
 const border = allTokens.border;
 const unitless = allTokens.unitless;
-// const alertColors = allTokens.color.alert;
 const backgroundColors = allTokens.color.background;
 const baseColors = allTokens.color.base;
 const borderColors = allTokens.color.border;
 const brandColors = allTokens.color.brand;
 const iconColors = allTokens.color.icon;
-// const stateColors = allTokens.color.state;
 const textColors = allTokens.color.text;
-// const uiColors = allTokens.color.ui;
 const tierColors = allTokens.color.tier;
+const containerColors = allTokens.color.container;
+const utilityColors = allTokens.color.utility;
 
 const font = allTokens.font;
 const textBody = allTokens.text.body;
@@ -49,6 +48,8 @@ class DeprecatedTokens extends Component {
     return (
       <section>
 
+        {console.log(allTokens.color)}
+
         <Nav />
 
         <h1 className="auro_heading auro_heading--display">Auro design tokens</h1>
@@ -59,11 +60,6 @@ class DeprecatedTokens extends Component {
         <p>Tokens are stored as JSON data and can be output as CSS custom properties, Sass, native iOS and Android, among many others. Tokens are represented here as <auro-hyperlink target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">CSS custom properties</auro-hyperlink>.
 
         See <auro-hyperlink href="/getting-started/developers/design-tokens/install">Design tokens API</auro-hyperlink> for a full listing currently supported output types.</p>
-
-        <h2 className="auro_heading auro_heading--600">ANNOUNCING the 4.0 release!</h2>
-        <p><auro-alert type="warning">
-          Be sure to review <auro-hyperlink relative href="/getting-started/developers/design-tokens/deprecated">the deprecated tokens</auro-hyperlink>.
-        </auro-alert></p>
 
         <h3 className="auro_heading auro_heading--600">Animation</h3>
         <auro-tokenlist componentData={_getTokens(animation, [])}></auro-tokenlist>
@@ -87,9 +83,6 @@ class DeprecatedTokens extends Component {
         <auro-tokenlist componentData={_getTokens(gridMargin, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Colors</h3>
-        {/* <h4 className="auro_heading auro_heading--400">Alert</h4>
-        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(alertColors, [])}></auro-tokenlist> */}
-
         <h4 className="auro_heading auro_heading--400">Background</h4>
         <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(backgroundColors, [])}></auro-tokenlist>
 
@@ -102,20 +95,20 @@ class DeprecatedTokens extends Component {
         <h4 className="auro_heading auro_heading--400">Brand</h4>
         <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(brandColors, [])}></auro-tokenlist>
 
+        <h4 className="auro_heading auro_heading--400">Container</h4>
+        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(containerColors, [])}></auro-tokenlist>
+
         <h4 className="auro_heading auro_heading--400">Tier status</h4>
         <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(tierColors, [])}></auro-tokenlist>
 
         <h4 className="auro_heading auro_heading--400">Icons</h4>
         <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(iconColors, [])}></auro-tokenlist>
 
-        {/* <h4 className="auro_heading auro_heading--400">State</h4>
-        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(stateColors, [])}></auro-tokenlist> */}
-
         <h4 className="auro_heading auro_heading--400">Text</h4>
         <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(textColors, [])}></auro-tokenlist>
 
-        {/* <h4 className="auro_heading auro_heading--400">UI</h4>
-        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(uiColors, [])}></auro-tokenlist> */}
+        <h4 className="auro_heading auro_heading--400">Utility</h4>
+        <auro-tokenlist swatchType="rectangle" swatch componentData={_getTokens(utilityColors, [])}></auro-tokenlist>
 
         <h3 className="auro_heading auro_heading--600">Depth</h3>
         <auro-tokenlist componentData={_getTokens(depth, [])}></auro-tokenlist>
