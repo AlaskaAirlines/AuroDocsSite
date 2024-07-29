@@ -140,6 +140,11 @@ class AuroComponentContent extends MarkdownPageWrapper {
         this.componentVersion = `v${this.componentVersion.substring(1)}`;
       }
 
+      // add leading `v` if not present - this handles when the component is locked to a specific version
+      if (this.componentVersion.charAt(0) !== 'v') {
+        this.componentVersion = `v${this.componentVersion}`;
+      }
+
       // remove leading caret if present
       const char0 = this.componentVersion.charAt(0);
       if (char0 === '^' || char0 === 'v') {

@@ -51,6 +51,7 @@ import '@aurodesignsystem/auro-radio';
 import '@aurodesignsystem/auro-select';
 import '@aurodesignsystem/auro-sidenav';
 import '@aurodesignsystem/auro-skeleton';
+import '@aurodesignsystem/auro-themeswitcher';
 import '@aurodesignsystem/auro-toast';
 import '@aurodesignsystem/auro-tokenlist';
 import '@aurodesignsystem/auro-tokenlist/dist/auro-tokenavatar';

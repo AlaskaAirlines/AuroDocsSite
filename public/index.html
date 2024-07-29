@@ -75,12 +75,19 @@
     -->
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2/webcomponents-loader.js" defer></script>
     <title>Auro Design System | Alaska Airlines | Seattle, WA</title>
+
+    <style>
+      .exampleWrapper--ondark {
+        color: var(--ds-color-text-primary-inverse);
+      }
+    </style>
   </head>
   <body>
     <div role="search">
       <script async src="https://cse.google.com/cse.js?cx=b792c366f1ce73e3d"></script>
       <div class="gcse-search"></div>
     </div>
+    <auro-themeswitcher>Select Theme(s)</auro-themeswitcher>
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>

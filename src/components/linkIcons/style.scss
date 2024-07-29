@@ -2,7 +2,7 @@
 
 button.imgIcon {
   all: unset;
-  color: var(--auro-color-ui-default-on-light);
+  color: var(--ds-color-icon-ui-default-inverse);
   text-decoration: underline;
 
   &:hover {
@@ -11,8 +11,8 @@ button.imgIcon {
   }
 
   &.focus-visible {
-    background-color: var(--auro-color-brand-atlas-400);
-    color: var(--auro-color-text-primary-on-dark);
+    background-color: var(--ds-color-container-ui-primary-active-default);
+    color: var(--ds-color-text-primary-inverse);
   }
 }
 
@@ -34,26 +34,26 @@ button.imgIcon {
     transition: background-color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 
     &:hover {
-      background-color: var(--auro-color-brand-atlas-400);
+      background-color: var(--ds-color-icon-ui-hover-default);
     }
   }
 
   .focus-visible {
-    background-color: var(--auro-color-brand-atlas-400);
+    background-color: var(--ds-color-icon-ui-hover-default);
     outline: none;
 
     svg {
-      fill: var(--auro-color-base-white);
+      fill: var(--ds-color-background-primary-100-default);
     }
   }
 
   svg {
     width: 22px;
     height: 22px;
-    fill: var(--auro-color-brand-atlas-400);
+    fill: var(--ds-color-icon-ui-default-default);
 
     &:hover {
-      fill: var(--auro-color-base-white);
+      fill: var(--ds-color-background-primary-100-default);
     }
   }
 
