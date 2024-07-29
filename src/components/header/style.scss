@@ -11,8 +11,8 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 1px solid var(--auro-color-border-primary-on-light);
-  background-color: white;
+  border-bottom: 1px solid var(--ds-color-border-primary-default);
+  background-color: var(--ds-color-background-primary-100-default);
 
   @include auro_breakpoint--sm {
     padding: 10px 0 10px 25px;

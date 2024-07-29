@@ -61,7 +61,7 @@ export default function SideNav(props) {
         { linkTitle: "Flightline", route: '/components/auro/flightline', parent: true },
         { linkTitle: "Header", route: '/components/auro/header', parent: true },
         { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
-        { linkTitle: "Icon", route: '/components/auro/icon', parent: true },
+        { linkTitle: "JASON Icon", route: '/components/auro/icon', parent: true },
         { linkTitle: "Input", route: '/components/auro/input', parent: true },
         { linkTitle: "Loader", route: '/components/auro/loader', parent: true },
         { linkTitle: "Lockup", route: '/components/auro/lockup', parent: true },
