@@ -190,6 +190,8 @@ import {
   Officehours, // linked from FAQ page
   Philosophy,
   VoiceTone, // owned by UX writers
+  // One-off pages
+  Onboarding,
 
   // temp home for components in progress
   Wip
@@ -518,6 +520,7 @@ function App() {
 
 
               {/* Getting Started/developers */}
+              <Route exact path="/getting-started/developers"><Onboarding/></Route>
               <Route exact path="/getting-started/developers/compliance"><Compliance /></Route>
               <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
               <Route exact path="/design-tokens"><DesignTokens /></Route>

@@ -17,6 +17,7 @@ export default function SideNav(props) {
     {
       header: 'Getting started',
       items: [
+        { linkTitle: "Working with the Auro team", route: "/getting-started/developers", parent: true  },
         { linkTitle: "Developer support", route: "/developer-setup/npm", parent: true  },
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "WCSS", route: "/webcorestylesheets", parent: true },
