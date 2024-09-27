@@ -1,82 +1,112 @@
-# Welcome to the Auro team!
+# Engineering Startup Guide
 
-We're glad you're here :) For your first day, we recommend going through the following steps to set you up for success:
+## Overview
+
+This guide is intended to help software engineers through the steps necessary to begin contributing to the Auro Design System. There are few hard requirements for your developer environment and some topics presented in this guide are recommendations based on our own preferences.
+
+We will cover the following topics:
+
+- Setting up your computer
+- Accounts and permissions
+- Clone your first repository
+- Run the localhost environment
+- Additional Reading
+
+_Note: This guide assumes a base level of technical skill. If you need to contribute to our codebase, yet are not comfortable working with a code editor, terminal, or git commands please contact the Auro team for assistance._
 
 ## Setup your computer
 
-Get your favorite Node.js version manager and install latest subversion of v20/LTS. Most of the team is using
-[nvm](https://nvm.sh) to manage their Node.js versions. You don't strictly _need_ to use nvm, but the rest of the team
-is already using it, so you'll have an easier time if you do too. Nvm _may_ be a requirement in the future, so it's
-best to get it set up now.
+**Integrated Developer Environment**
 
-We typically use the latest LTS version of Node.js, which is currently v20.X.X. You can check the latest LTS version
-[here](https://nodejs.org/en/).
+Install your IDE of choice. We recommend Visual Studio Code which can be downloaded at [code.visualstudio.com/download](https://code.visualstudio.com/download).
 
-To install that with nvm:
-```shell
-$ nvm install 20 && nvm alias default node
-$ nvm use 20 # optional, nvm will use a version after installing by default
-```
+**Node Version Manager**
 
-Most of the team currently uses VS Code or WebStorm as their code editor, though you can use whatever you're comfortable with.
+Install a node version manager. We recommend [NVM](https://nvm.sh).
 
-If you are using an Alaska-issued laptop (which you should be), you shouldn't need to install Teams, but installing
-Firefox and a Chromium-based browser (like Chrome, Arc, and/or Edge) is strongly recommended for cross-browser testing.
+Run either of the following commands in a terminal window to install NVM:
 
-## Set up your GitHub account
-Since we are an open source project, you can use either an Alaska-specific GitHub account or your personal account.
-Either solution you choose requires the same setup steps:
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash`
 
-- Generate an SSH key and [add it to your GitHub account ](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
-  - TL;DR: run `ssh-keygen` and then copy the contents of `~/.ssh/id_rsa.pub` to your [GitHub account here](https://github.com/settings/keys)
-- Send your GitHub username to your manager to get access to the `AlaskaAirlines` GitHub organization
-  - Since we are open source, you can totally just fork repositories and make pull requests to contribute to the design system,
-  but our workflows are far more streamlined when making changes directly to the main repository via branches and pull requests.
+or
 
-## Check out the other Auro components
-We have quite a few components in the Auro ecosystem, so play around with them and get familiar! Don't worry too much
-about understanding everything right away - we're not going to quiz you ;) 
+`wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash`
 
-- https://auro.alaskaair.com/components/
+**Browsers**
 
-### Suggestions
-Want to go a little deeper? Here are some suggestions:
-- Take a look at the components listed there and pick one to try and install locally
-- Run through the README and install that component :)
-    - Usually this means - `git clone` the repo onto your computer then `npm install`
-
-## Run the Auro docs site locally
-Our doc site is a Create React App that pulls in Markdown files and other data from our GitHub repositories to
-automatically generate documentation.
-
-- Clone the [Auro docs site repo](https://github.com/AlaskaAirlines/AuroDocsSite)
-- Get Node.js v14.17.0
-```shell
-$ nvm install 14.17.0
-$ nvm use 14.17.0 # in the root of the project
-```
-- Run `npm install && npm run build && npm run dev` for quick setup
-- Open your browser to `http://localhost:3000` to see the site!
-
-## Suggested Tools and Resources
-Tools our team uses and recommends:
-
-### Browsers
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/): Open-source browser from Mozilla
 - [Chrome](https://www.google.com/chrome/): Google's flagship browser
 - [Edge](https://www.microsoft.com/en-us/edge): Microsoft's browser based on Chromium
 - [Safari](https://www.apple.com/safari/): Apple's browser (comes pre-installed on macOS)
 
-### CLI Tools
-- [Node Version Manager (nvm)](https://nvm.sh): Node.js version manager
-- [Homebrew](https://brew.sh): macOS package manager
+All browser clients should be installed for validating your code changes.
 
-### Code Editors/Terminal Emulators
-- [Visual Studio Code](https://code.visualstudio.com/): Microsoft's open-source code editor
-- [WebStorm](https://www.jetbrains.com/webstorm/): JetBrains IDE for web development
-- [iTerm2](https://iterm2.com/): Tried and true terminal emulator for macOS
-- [Warp](https://warp.dev/): Rust-based terminal replacement 
+## Accounts and Permissions
 
-## Recommended Reading
-- FEEDBACK NEEDED HERE!
-- I'm not sure what's best to put here :)
+A GitHub account is required for contribution. If you do not have an account, you can set up a new one at [github.com/signup](https://github.com/signup). You may use your own personal account, however, you are required to attach your `@alaskaair.com` work email address to the account. This can be done at [github.com/settings/emails](https://github.com/settings/emails) after you login.
+
+**Join the AlaskaAirlines GitHub organization**
+
+While joining the `AlaskaAirlines` GitHub organization is not strictly required for contributing to our open source project, the workflow for contributions is far more streamlined and easier for members.
+
+To join the organization, you will need to provide your GitHub username to your manager or the engineering manager of the Auro team.
+
+**Configure an SSH Key**
+
+  1. Run `ssh-keygen` in a terminal to create a new SSH Key
+  1. Copy the contents of `~/.ssh/id_rsa.pub` to your GitHub account at [github.com/settings/keys](https://github.com/settings/keys).
+
+For more details see [docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
+
+**GitHub CLI**
+
+We recommend using the GitHub CLI as it simplifies certain actions such as cloning a repo. You can get it at [cli.github.com](https://cli.github.com).
+
+_Note: the instructions later in this document assume you have installed GiTHub CLI._
+
+## Clone your first Auro repository
+
+For the purposes of this example documentation we will use `auro-hyperlink`. The instructions are the same for all repositories, only the command parameters change based on the name of the project.
+
+1. In your terminal navigate to the directory you wish to clone the repository to (e.g. `cd ~/Development`)
+1. run `gh repo clone AlaskaAirlines/auro-hyperlink`
+1. In your IDE, open the component directory (e.g. `~/Development/auro-hyperlink`)
+
+You should now see all the repository code in your IDE.
+
+## Run the component localhost
+
+1. In the IDE open `./package.json`
+1. Within package.json find the `engines` key. This will tell you which version of node the component requires.<br /><br />
+_"engines": {<br />_
+_&ensp;&ensp;"node": "^18 || ^20"<br />_
+_}<br /><br />_
+1. Install the supported Node version using NVM by running `nvm install 20`. (substituting whichever version your component defined). You may specify a major/minor/patch version (e.g 20.2.1) but this is unnecessary for your needs here. Using the major version only will install the latest minor/patch version for that major version.<br /><br />_Note: after you have installed multiple versions of node you may switch between them by running `nvm use <version>` rather than reinstalling the version you need to switch to._<br /><br />
+1. Install the component dependencies by running `npm i`
+1. Build the component by running `npm run build`
+1. Launch the localhost by running `npm run dev`
+
+You should now have a new browser window automatically open and the component documentation rendered in the localhost.
+
+**Making code changes**
+
+When the localhost is running via `npm run dev` the browser window will automatically refresh reflecting those changes. You will also want to run the following commands before making any Git commits.
+
+- `npm run tests`
+- `npm run linters`
+- `npm run build`
+
+Any errors discovered while running those commands must be resolved before submitting your code.
+
+Before doing any Git commits and Pull Requests review our [Contributing Guidelines](https://auro.alaskaair.com/contributing) to learn about the requirements.
+
+## Additional Reading
+
+We recommend that you take some time to become familiar with our documentation site as well as certain other resources.
+
+- [Auro Design System](https://auro.alaskaair.com/)<br />
+We have quite a few components in the Auro ecosystem. It is recommended that you take some time to browse through them on the doc site and familiarize yourself with the API and UI/UX of the component library.
+  - [Contributing Guidelines](https://auro.alaskaair.com/contributing)
+  - [CSS Guidelines](https://auro.alaskaair.com/css/conventions)
+  - [Support & FAQ](https://auro.alaskaair.com/auro-support)
+- LIT Documentation: [lit.dev/docs/](https://lit.dev/docs/)
