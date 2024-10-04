@@ -9,7 +9,7 @@ const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-t
 
 class AuroTokenListApi extends MarkdownPageWrapper {
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
       this.setState({
         contentBuild: text

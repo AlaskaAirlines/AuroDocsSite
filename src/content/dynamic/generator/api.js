@@ -8,7 +8,7 @@ const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Gen
 
 class AuroButtonApi extends MarkdownPageWrapper {
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
       this.setState({
         contentBuild: text

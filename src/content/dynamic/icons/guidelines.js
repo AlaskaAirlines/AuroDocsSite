@@ -18,7 +18,7 @@ class Colors extends Component {
     this.headingRenderer = this.headingRenderer.bind(this);
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     fetch(guidelines).then((response) => response.text()).then((text) => {
       this.setState({
         guidelinesBuild: text

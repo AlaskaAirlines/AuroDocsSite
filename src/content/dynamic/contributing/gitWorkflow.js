@@ -10,7 +10,7 @@ const markdownContent = 'https://gist.githubusercontent.com/blackfalcon/8428401/
 class AuroContributingGitWorkflow extends MarkdownPageWrapper {
 
   // function to get text from MD document
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
       this.setState({
         contentBuild: text

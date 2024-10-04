@@ -95,15 +95,6 @@ export default function SideNav(props) {
         { linkTitle: "The <slot> element", route: "/support/slots", parent: true },
         { linkTitle: "Accessibility statement", route: "/a11y-statement", parent: true },
       ]
-    },
-    {
-      title: "- Example projects",
-      items: [
-        { linkTitle: "React setup", route: "/reactSetup", parent: true},
-        { linkTitle: "Javascript setup", route: "/javascriptSetup", parent: true},
-        { linkTitle: "Svelte setup", route: "/svelteSetup", parent: true}
-
-      ]
     }
   ]);
 
@@ -142,8 +133,6 @@ export default function SideNav(props) {
             </section>
         </Fragment>
       ))}
-
-      <auro-hyperlink href="https://twitter.com/DesignAuro" target="_blank" style={{'display': 'block', 'marginTop': 'var(--auro-size-xxl)'}}>Follow on Twitter</auro-hyperlink>
     </nav>
   )
 }

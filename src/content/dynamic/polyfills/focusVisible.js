@@ -9,7 +9,7 @@ const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Gen
 class FocusVisible extends MarkdownPageWrapper {
 
   // function to get text from MD document
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     fetch(markdownContent).then((response) => response.text()).then((text) => {
       this.setState({
         contentBuild: text

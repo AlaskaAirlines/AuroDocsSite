@@ -19,7 +19,7 @@ export class RawMarkdownWrapper extends Component {
   };
 
   // function to get text from MD document
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     fetch(this.getMarkdown()).then((response) => response.text()).then((text) => {
       this.setState({
         docsGenerator: text

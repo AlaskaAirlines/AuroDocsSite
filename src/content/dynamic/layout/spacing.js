@@ -21,7 +21,7 @@ class Colors extends Component {
     this.linkRenderer = this.linkRenderer.bind(this);
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     fetch(content).then((response) => response.text()).then((text) => {
       this.setState({
         contentBuild: text

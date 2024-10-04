@@ -1,15 +1,11 @@
 export const registerCustomComponent = (customTag, scriptUrl) => {
-  const customIconScriptId = `${customTag}-script`;
-  let customIconScriptTag = document.getElementById(customIconScriptId);
-  if (!customIconScriptTag) {
-    customIconScriptTag = document.createElement('script');
-    customIconScriptTag.type = 'module';
-    customIconScriptTag.id = customIconScriptId;
-    customIconScriptTag.async = true;
-    customIconScriptTag.innerHTML = `
-      import { registerComponent } from "${scriptUrl}"
-      registerComponent('${customTag}');
-    `
-    document.body.appendChild(customIconScriptTag);
+  const customScriptId = `${customTag}-script`;
+  let customScriptTag = document.getElementById(customScriptId);
+  if (!customScriptTag) {
+    customScriptTag = document.createElement('script');
+    customScriptTag.type = 'module';
+    customScriptTag.id = customScriptId;
+    customScriptTag.async = true;
+    document.body.appendChild(customScriptTag);
   }
 };
