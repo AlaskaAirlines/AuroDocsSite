@@ -1,10 +1,10 @@
 import React from "react";
 import { Nav } from './nav';
-import LinkIcons from 'components/linkIcons';
+import LinkIcons from '~/components/linkIcons';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
+import CodeBlock from '~/components/CodeBlock';
 // import markdownContent from '@aurodesignsystem/auro-tokenlist/README.md'
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-tokenlist/main/README.md';
 

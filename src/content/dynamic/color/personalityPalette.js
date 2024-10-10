@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
-import getTokens from "functions/getTokens"
+import CodeBlock from '~/components/CodeBlock';
+import getTokens from "~/functions/getTokens"
 import overview from './personalityPalette.md'
 import { Nav} from './nav.js';
 import data from '@aurodesignsystem/design-tokens/dist/tokens/JSData--color.js'
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
+import ExternalLink from '@alaskaairux/icons/dist/icons/interface/external-link-sm.svg?react';
 
 const midnight = data.color.brand.midnight;
 const atlas = data.color.brand.atlas;

@@ -1,11 +1,11 @@
 import React from "react";
-import marked from 'marked';
+import { marked } from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
-import LinkIcons from 'components/linkIcons';
+import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
+import LinkIcons from '~/components/linkIcons';
 import { NavLink } from "react-router-dom";
-import { registerCustomComponent } from "content/utils/registerCustomComponent";
+import { registerCustomComponent } from "~/content/utils/registerCustomComponent";
 import packageJson from './../../package.json';
 
 // Imports for the Release page
@@ -270,23 +270,23 @@ class AuroComponentContent extends MarkdownPageWrapper {
   renderNav() {
     return (
       <div role="tablist" className="tabList">
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}`} activeClassName="is-active" id="componentLink">{this.convertToUpperCase(this.name)}</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/install`} activeClassName="is-active">Install</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/api`} activeClassName="is-active">API</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}`} activeclassname="is-active" id="componentLink">{this.convertToUpperCase(this.name)}</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/install`} activeclassname="is-active">Install</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/api`} activeclassname="is-active">API</NavLink>
         {
           this.hasDOT ?
-          <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/dot`} activeClassName="is-active">DoT compliance</NavLink>
+          <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/dot`} activeclassname="is-active">DoT compliance</NavLink>
           : undefined
         }
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/releases`} activeClassName="is-active">Releases</NavLink>
+        <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/releases`} activeclassname="is-active">Releases</NavLink>
         {
           this.hasFigma ?
-            <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/figma`} activeClassName="is-active">Design support</NavLink>
+            <NavLink role="tab" exact className="tab link" to={`/components/auro/${this.name}/figma`} activeclassname="is-active">Design support</NavLink>
           : undefined
         }
         {
           this.hasAccessibility ?
-            <NavLink role="tab" exact className="tab link" to={`/components/auro/hyperlink/a11y`} activeClassName="is-active">Accessibility</NavLink>
+            <NavLink role="tab" exact className="tab link" to={`/components/auro/hyperlink/a11y`} activeclassname="is-active">Accessibility</NavLink>
           : undefined
         }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from "react-router-dom";
 
@@ -243,8 +243,8 @@ import AuroBadgeReleases from './content/dynamic/badge/releases';
 // banner
 import AuroBanner from './content/dynamic/banner/component';
 import AuroBannerApi from './content/dynamic/banner/api';
-import AuroBannerInstall from 'content/dynamic/banner/install';
-import AuroBannerReleases from 'content/dynamic/banner/releases';
+// import AuroBannerInstall from 'content/dynamic/banner/install';
+// import AuroBannerReleases from 'content/dynamic/banner/releases';
 
 // button
 import AuroButton from './content/dynamic/button/component';
@@ -427,7 +427,7 @@ import AuroToastApi from './content/dynamic/toast/api';
 import AuroToastInstall from './content/dynamic/toast/install';
 import AuroToastReleases from './content/dynamic/toast/releases';
 
-const API_KEY = process.env.REACT_APP_GITHUB_API_KEY;
+const API_KEY = import.meta.env.VITE_APP_GITHUB_API_KEY;
 
 const client = new ApolloClient({
   uri: 'https://api.github.com/graphql',
@@ -451,399 +451,399 @@ function App() {
           <Router>
             <ScrollToTop />
             <SideNav />
-            <Switch>
+            <Routes>
 
               {/* Automated links from internal docs */}
               <Route exact path='/' component={Home} />
-              <Route exact path="/a11y-statement"><A11yStatement/></Route>
-              <Route exact path="/node-support"><NodeSupport/></Route>
-              <Route exact path="/user-support"><AuroSupport /></Route> {/* redirect old url */}
-              <Route exact path="/auro-support"><AuroSupport /></Route>
-              <Route exact path="/design-philosophy"><Philosophy /></Route>
-              <Route exact path="/support/shadycss"><ShadyCSS /></Route>
-              <Route path="/core/voice-and-tone"><VoiceTone /></Route>
-              <Route exact path="/take-home"><Codetest /></Route>
+              <Route exact path="/a11y-statement" element={<A11yStatement/>} />
+              <Route exact path="/node-support" element={<NodeSupport/>} />
+              <Route exact path="/user-support" element={<AuroSupport />} /> {/* redirect old url */}
+              <Route exact path="/auro-support" element={<AuroSupport />} />
+              <Route exact path="/design-philosophy" element={<Philosophy />} />
+              <Route exact path="/support/shadycss" element={<ShadyCSS />} />
+              <Route path="/core/voice-and-tone" element={<VoiceTone />} />
+              <Route exact path="/take-home" element={<Codetest />} />
 
               {/* Home */}
-              <Route exact path="/epics/"><VersionZero /></Route>
-              <Route exact path="/epics/version-zero"><VersionZero /></Route>
-              <Route exact path="/epics/user-research"><UserResearch /></Route>
-              <Route exact path="/epics/doc-site-strategy"><DocSiteStrategy /></Route>
+              <Route exact path="/epics/" element={<VersionZero />} />
+              <Route exact path="/epics/version-zero" element={<VersionZero />} />
+              <Route exact path="/epics/user-research" element={<UserResearch />} />
+              <Route exact path="/epics/doc-site-strategy" element={<DocSiteStrategy />} />
 
-              <Route exact path="/wip"><OpenIssues /></Route>
-              <Route exact path="/open-pull-request"><OpenPullRequest /></Route>
-              <Route exact path="/help-wanted"><HelpWanted /></Route>
-              <Route exact path="/bugs"><Bugs /></Route>
-              <Route exact path="/not-reviewed"><NotReviewed /></Route>
-              <Route exact path="/component-status"><ComponentStatus /></Route>
-              <Route exact path="/status"><ComponentStatus /></Route>
-              <Route exact path="/ado-use"><UseDashboard /></Route>
+              <Route exact path="/wip" element={<OpenIssues />} />
+              <Route exact path="/open-pull-request" element={<OpenPullRequest />} />
+              <Route exact path="/help-wanted" element={<HelpWanted />} />
+              <Route exact path="/bugs" element={<Bugs />} />
+              <Route exact path="/not-reviewed" element={<NotReviewed />} />
+              <Route exact path="/component-status" element={<ComponentStatus />} />
+              <Route exact path="/status" element={<ComponentStatus />} />
+              <Route exact path="/ado-use" element={<UseDashboard />} />
 
               {/* Developer setup */}
-              <Route exact path="/developer-setup/windows"><DevSetupWindows /></Route>
-              <Route exact path="/developer-setup/macOS"><DevSetupMac /></Route>
-              <Route exact path="/developer-setup/linux"><DevSetupLinux /></Route>
-              <Route exact path="/developer-setup/npm"><DevSetupNpm /></Route>
+              <Route exact path="/developer-setup/windows" element={<DevSetupWindows />} />
+              <Route exact path="/developer-setup/macOS" element={<DevSetupMac />} />
+              <Route exact path="/developer-setup/linux" element={<DevSetupLinux />} />
+              <Route exact path="/developer-setup/npm" element={<DevSetupNpm />} />
 
               {/* Direct links */}
-              <Route exact path="/status"><ComponentStatus /></Route>
-              <Route exact path="/accordion/"><AuroAccordion /></Route>
-              <Route exact path="/alert"><AuroAlert /></Route>
-              <Route exact path="/avatar/"><AuroAvatar /></Route>
-              <Route exact path="/background/"><AuroBackground /></Route>
-              <Route exact path="/banner/"><AuroBanner /></Route>
-              <Route exact path="/button"><AuroButton /></Route>
-              <Route exact path="/card/"><AuroCard /></Route>
-              <Route exact path="/carousel/"><AuroCarousel /></Route>
-              <Route exact path="/checkbox"><AuroCheckbox /></Route>
-              <Route exact path="/datetime/"><AuroDateTime /></Route>
-              <Route exact path="/dialog"><AuroDialog /></Route>
-              <Route exact path="/drawer"><AuroDrawer /></Route>
-              <Route exact path="/dropdown"><AuroDropdown /></Route>
-              <Route exact path="/combobox"><AuroCombobox /></Route>
-              <Route exact path="/datepicker"><AuroDatepicker /></Route>
-              <Route exact path="/header"><AuroHeader /></Route>
-              <Route exact path="/hyperlink"><AuroHyperlink /></Route>
-              <Route exact path="/icon/"><AuroIcon /></Route>
-              <Route exact path="/input"><AuroInput /></Route>
-              <Route exact path="/loader"><AuroLoader /></Route>
-              <Route exact path="/lockup"><AuroLockup /></Route>
-              <Route exact path="/menu"><AuroMenu /></Route>
-              <Route exact path="/nav"><AuroNav /></Route>
-              <Route exact path="/pane/"><AuroPane /></Route>
-              <Route exact path="/popover"><AuroPopover /></Route>
-              <Route exact path="/radio"><AuroRadio /></Route>
-              <Route exact path="/skeleton"><AuroSkeleton /></Route>
-              <Route exact path="/tokenlist"><AuroTokenlist /></Route>
-              <Route exact path="/table"><AuroTable /></Route>
-              <Route exact path="/toast"><AuroToast /></Route>
+              <Route exact path="/status" element={<ComponentStatus />} />
+              <Route exact path="/accordion/" element={<AuroAccordion />} />
+              <Route exact path="/alert" element={<AuroAlert />} />
+              <Route exact path="/avatar/" element={<AuroAvatar />} />
+              <Route exact path="/background/" element={<AuroBackground />} />
+              <Route exact path="/banner/" element={<AuroBanner />} />
+              <Route exact path="/button" element={<AuroButton />} />
+              <Route exact path="/card/" element={<AuroCard />} />
+              <Route exact path="/carousel/" element={<AuroCarousel />} />
+              <Route exact path="/checkbox" element={<AuroCheckbox />} />
+              <Route exact path="/datetime/" element={<AuroDateTime />} />
+              <Route exact path="/dialog" element={<AuroDialog />} />
+              <Route exact path="/drawer" element={<AuroDrawer />} />
+              <Route exact path="/dropdown" element={<AuroDropdown />} />
+              <Route exact path="/combobox" element={<AuroCombobox />} />
+              <Route exact path="/datepicker" element={<AuroDatepicker />} />
+              <Route exact path="/header" element={<AuroHeader />} />
+              <Route exact path="/hyperlink" element={<AuroHyperlink />} />
+              <Route exact path="/icon/" element={<AuroIcon />} />
+              <Route exact path="/input" element={<AuroInput />} />
+              <Route exact path="/loader" element={<AuroLoader />} />
+              <Route exact path="/lockup" element={<AuroLockup />} />
+              <Route exact path="/menu" element={<AuroMenu />} />
+              <Route exact path="/nav" element={<AuroNav />} />
+              <Route exact path="/pane/" element={<AuroPane />} />
+              <Route exact path="/popover" element={<AuroPopover />} />
+              <Route exact path="/radio" element={<AuroRadio />} />
+              <Route exact path="/skeleton" element={<AuroSkeleton />} />
+              <Route exact path="/tokenlist" element={<AuroTokenlist />} />
+              <Route exact path="/table" element={<AuroTable />} />
+              <Route exact path="/toast" element={<AuroToast />} />
 
 
               {/* Getting Started/developers */}
-              <Route exact path="/getting-started/developers"><Onboarding/></Route>
-              <Route exact path="/getting-started/developers/compliance"><Compliance /></Route>
-              <Route exact path="/getting-started/developers/design-tokens"><DesignTokens /></Route>
-              <Route exact path="/design-tokens"><DesignTokens /></Route>
-              <Route exact path="/getting-started/developers/design-tokens/install"><DesignTokensInstall /></Route>
-              <Route exact path="/getting-started/developers/design-tokens/deprecated"><DeprecatedTokens /></Route>
-              <Route exact path="/design-tokens/deprecated"><DeprecatedTokens /></Route>
-              <Route exact path="/officehours"><Officehours /></Route>
+              <Route exact path="/getting-started/developers" element={<Onboarding/>} />
+              <Route exact path="/getting-started/developers/compliance" element={<Compliance />} />
+              <Route exact path="/getting-started/developers/design-tokens" element={<DesignTokens />} />
+              <Route exact path="/design-tokens" element={<DesignTokens />} />
+              <Route exact path="/getting-started/developers/design-tokens/install" element={<DesignTokensInstall />} />
+              <Route exact path="/getting-started/developers/design-tokens/deprecated" element={<DeprecatedTokens />} />
+              <Route exact path="/design-tokens/deprecated" element={<DeprecatedTokens />} />
+              <Route exact path="/officehours" element={<Officehours />} />
 
               {/* Color */}
-              <Route exact path="/color/overview"><ColorOverview /></Route>
-              <Route exact path="/color/digital-palette"><CoreDigitalPalette /></Route>
-              <Route exact path="/color/personality-palette"><PersonalityPalette /></Route>
+              <Route exact path="/color/overview" element={<ColorOverview />} />
+              <Route exact path="/color/digital-palette" element={<CoreDigitalPalette />} />
+              <Route exact path="/color/personality-palette" element={<PersonalityPalette />} />
 
               {/* Generator */}
-              <Route exact path="/generator"><GeneratorInstall /></Route>
-              <Route exact path="/generator/install"><GeneratorInstall /></Route>
-              <Route exact path="/generator/api"><GeneratorApi /></Route>
-              <Route exact path="/generator/best-practice"><GeneratorBestPractice /></Route>
-              <Route exact path="/generator/upgrade"><GeneratorUpgrade /></Route>
-              <Route exact path="/generator/define-api"><GeneratorDefineApi /></Route>
-              <Route exact path="/common-defs"><CommonDefs /></Route>
-              <Route exact path="/generator/releases"><GeneratorReleases /></Route>
+              <Route exact path="/generator" element={<GeneratorInstall />} />
+              <Route exact path="/generator/install" element={<GeneratorInstall />} />
+              <Route exact path="/generator/api" element={<GeneratorApi />} />
+              <Route exact path="/generator/best-practice" element={<GeneratorBestPractice />} />
+              <Route exact path="/generator/upgrade" element={<GeneratorUpgrade />} />
+              <Route exact path="/generator/define-api" element={<GeneratorDefineApi />} />
+              <Route exact path="/common-defs" element={<CommonDefs />} />
+              <Route exact path="/generator/releases" element={<GeneratorReleases />} />
 
               {/* Legacy routes */}
-              <Route exact path="/getting-started/developers/generator/install"><GeneratorInstall /></Route>
-              <Route exact path="/getting-started/developers/generator/generator/api"><GeneratorApi /></Route>
-              <Route exact path="/getting-started/developers/generator/generator/best-practice"><GeneratorBestPractice /></Route>
-              <Route exact path="/getting-started/developers/generator/upgrade"><GeneratorUpgrade /></Route>
-              <Route exact path="/getting-started/developers/generator/define-api"><GeneratorDefineApi /></Route>
+              <Route exact path="/getting-started/developers/generator/install" element={<GeneratorInstall />} />
+              <Route exact path="/getting-started/developers/generator/generator/api" element={<GeneratorApi />} />
+              <Route exact path="/getting-started/developers/generator/generator/best-practice" element={<GeneratorBestPractice />} />
+              <Route exact path="/getting-started/developers/generator/upgrade" element={<GeneratorUpgrade />} />
+              <Route exact path="/getting-started/developers/generator/define-api" element={<GeneratorDefineApi />} />
 
               {/* Generator */}
-              <Route exact path="/contributing"><Contributing /></Route>
-              <Route exact path="/contributing/upstream"><ContributingUpstream /></Route>
-              <Route exact path="/contributing/git-workflow"><ContribGitWorkflow /></Route>
-              <Route exact path="/contributing/issues-prs-labels"><ContribIssuePrLabels /></Route>
-              <Route exact path="/definition-of-done"><DoD /></Route>
+              <Route exact path="/contributing" element={<Contributing />} />
+              <Route exact path="/contributing/upstream" element={<ContributingUpstream />} />
+              <Route exact path="/contributing/git-workflow" element={<ContribGitWorkflow />} />
+              <Route exact path="/contributing/issues-prs-labels" element={<ContribIssuePrLabels />} />
+              <Route exact path="/definition-of-done" element={<DoD />} />
 
               {/* Fallback route */}
-              <Route exact path="/getting-started/developers/contributing"><Contributing /></Route>
+              <Route exact path="/getting-started/developers/contributing" element={<Contributing />} />
 
               {/* Typography */}
-              <Route exact path="/typography/overview"><TypographyOverview /></Route>
-              <Route exact path="/typography/usage"><TypographyUsage /></Route>
+              <Route exact path="/typography/overview" element={<TypographyOverview />} />
+              <Route exact path="/typography/usage" element={<TypographyUsage />} />
 
               {/* Icons */}
-              <Route exact path="/icons/guidelines"><IconsGuidelines /></Route>
-              <Route exact path="/icons"><Icons /></Route>
-              <Route exact path="/deprecated-icons"><DeprecatedIcons /></Route>
-              <Route exact path="/icons/install"><IconsInstall /></Route>
-              <Route exact path="/icons/ways-to-use"><IconsWaysToUse /></Route>
+              <Route exact path="/icons/guidelines" element={<IconsGuidelines />} />
+              <Route exact path="/icons" element={<Icons />} />
+              <Route exact path="/deprecated-icons" element={<DeprecatedIcons />} />
+              <Route exact path="/icons/install" element={<IconsInstall />} />
+              <Route exact path="/icons/ways-to-use" element={<IconsWaysToUse />} />
 
               {/* Layout */}
-              <Route exact path="/layout/grid"><LayoutGrid /></Route>
-              <Route exact path="/layout/spacing"><LayoutSpacing /></Route>
+              <Route exact path="/layout/grid" element={<LayoutGrid />} />
+              <Route exact path="/layout/spacing" element={<LayoutSpacing />} />
 
               {/* COMPONENTS */}
 
               {/* accordion */}
-              <Route exact path="/components/auro/accordion/"><AuroAccordion /></Route>
-              <Route exact path="/components/auro/accordion/api"><AuroAccordionApi /></Route>
-              <Route exact path="/components/auro/accordion/install"><AuroAccordionInstall /></Route>
-              <Route exact path="/components/auro/accordion/releases"><AuroAccordionReleases /></Route>
+              <Route exact path="/components/auro/accordion/" element={<AuroAccordion />} />
+              <Route exact path="/components/auro/accordion/api" element={<AuroAccordionApi />} />
+              <Route exact path="/components/auro/accordion/install" element={<AuroAccordionInstall />} />
+              <Route exact path="/components/auro/accordion/releases" element={<AuroAccordionReleases />} />
 
               {/* Auro Alerts */}
-              <Route exact path="/components/auro/alert"><AuroAlert /></Route>
-              <Route exact path="/components/auro/alert/install"><AuroAlertInstall /></Route>
-              <Route exact path="/components/auro/alert/api"><AuroAlertApi /></Route>
-              <Route exact path="/components/auro/alert/releases"><AuroAlertReleases /></Route>
-              <Route exact path="/components/auro/alert/figma"><AuroAlertFigma /></Route>
+              <Route exact path="/components/auro/alert" element={<AuroAlert />} />
+              <Route exact path="/components/auro/alert/install" element={<AuroAlertInstall />} />
+              <Route exact path="/components/auro/alert/api" element={<AuroAlertApi />} />
+              <Route exact path="/components/auro/alert/releases" element={<AuroAlertReleases />} />
+              <Route exact path="/components/auro/alert/figma" element={<AuroAlertFigma />} />
 
               {/* avatar */}
-              <Route exact path="/components/auro/avatar/"><AuroAvatar /></Route>
-              <Route exact path="/components/auro/avatar/api"><AuroAvatarApi /></Route>
-              <Route exact path="/components/auro/avatar/install"><AuroAvatarInstall /></Route>
-              <Route exact path="/components/auro/avatar/releases"><AuroAvatarReleases /></Route>
+              <Route exact path="/components/auro/avatar/" element={<AuroAvatar />} />
+              <Route exact path="/components/auro/avatar/api" element={<AuroAvatarApi />} />
+              <Route exact path="/components/auro/avatar/install" element={<AuroAvatarInstall />} />
+              <Route exact path="/components/auro/avatar/releases" element={<AuroAvatarReleases />} />
 
               {/* Auro Background */}
-              <Route exact path="/components/auro/background"><AuroBackground /></Route>
-              <Route exact path="/components/auro/background/install"><AuroBackgroundInstall /></Route>
-              <Route exact path="/components/auro/background/api"><AuroBackgroundApi /></Route>
-              <Route exact path="/components/auro/background/releases"><AuroBackgroundReleases /></Route>
+              <Route exact path="/components/auro/background" element={<AuroBackground />} />
+              <Route exact path="/components/auro/background/install" element={<AuroBackgroundInstall />} />
+              <Route exact path="/components/auro/background/api" element={<AuroBackgroundApi />} />
+              <Route exact path="/components/auro/background/releases" element={<AuroBackgroundReleases />} />
 
               {/* Auro BacktoTop */}
-              <Route exact path="/components/auro/backtotop"><AuroBacktotop /></Route>
-              <Route exact path="/components/auro/backtotop/install"><AuroBacktotopInstall /></Route>
-              <Route exact path="/components/auro/backtotop/api"><AuroBacktotopApi /></Route>
-              <Route exact path="/components/auro/backtotop/releases"><AuroBacktotopReleases /></Route>
+              <Route exact path="/components/auro/backtotop" element={<AuroBacktotop />} />
+              <Route exact path="/components/auro/backtotop/install" element={<AuroBacktotopInstall />} />
+              <Route exact path="/components/auro/backtotop/api" element={<AuroBacktotopApi />} />
+              <Route exact path="/components/auro/backtotop/releases" element={<AuroBacktotopReleases />} />
 
               {/* Auro Badge */}
-              <Route exact path="/components/auro/badge"><AuroBadge /></Route>
-              <Route exact path="/components/auro/badge/install"><AuroBadgeInstall /></Route>
-              <Route exact path="/components/auro/badge/api"><AuroBadgeApi /></Route>
-              <Route exact path="/components/auro/badge/releases"><AuroBadgeReleases /></Route>
+              <Route exact path="/components/auro/badge" element={<AuroBadge />} />
+              <Route exact path="/components/auro/badge/install" element={<AuroBadgeInstall />} />
+              <Route exact path="/components/auro/badge/api" element={<AuroBadgeApi />} />
+              <Route exact path="/components/auro/badge/releases" element={<AuroBadgeReleases />} />
 
               {/* banner */}
-              <Route exact path="/components/auro/banner/"><AuroBanner /></Route>
-              <Route exact path="/components/auro/banner/api"><AuroBannerApi /></Route>
-              <Route exact path="/components/auro/banner/install"><AuroBannerInstall /></Route>
-              <Route exact path="/components/auro/banner/releases"><AuroBannerReleases /></Route>
+              <Route exact path="/components/auro/banner/" element={<AuroBanner />} />
+              <Route exact path="/components/auro/banner/api" element={<AuroBannerApi />} />
+              {/* <Route exact path="/components/auro/banner/install" element={<AuroBannerInstall />} /> */}
+              {/* <Route exact path="/components/auro/banner/releases" element={<AuroBannerReleases />} /> */}
 
               {/* Auro Button */}
-              <Route exact path="/components/auro/button"><AuroButton /></Route>
-              <Route exact path="/components/auro/button/install"><AuroButtonInstall /></Route>
-              <Route exact path="/components/auro/button/api"><AuroButtonApi /></Route>
-              <Route exact path="/components/auro/button/releases"><AuroButtonReleases /></Route>
-              <Route exact path="/components/auro/button/figma"><AuroButtonFigma /></Route>
+              <Route exact path="/components/auro/button" element={<AuroButton />} />
+              <Route exact path="/components/auro/button/install" element={<AuroButtonInstall />} />
+              <Route exact path="/components/auro/button/api" element={<AuroButtonApi />} />
+              <Route exact path="/components/auro/button/releases" element={<AuroButtonReleases />} />
+              <Route exact path="/components/auro/button/figma" element={<AuroButtonFigma />} />
 
               {/* card */}
-              <Route exact path="/components/auro/card/"><AuroCard /></Route>
-              <Route exact path="/components/auro/card/api"><AuroCardApi /></Route>
-              <Route exact path="/components/auro/card/install"><AuroCardInstall /></Route>
-              <Route exact path="/components/auro/card/releases"><AuroCardReleases /></Route>
+              <Route exact path="/components/auro/card/" element={<AuroCard />} />
+              <Route exact path="/components/auro/card/api" element={<AuroCardApi />} />
+              <Route exact path="/components/auro/card/install" element={<AuroCardInstall />} />
+              <Route exact path="/components/auro/card/releases" element={<AuroCardReleases />} />
 
               {/* carousel */}
-              <Route exact path="/components/auro/carousel/"><AuroCarousel /></Route>
-              <Route exact path="/components/auro/carousel/api"><AuroCarouselApi /></Route>
-              <Route exact path="/components/auro/carousel/install"><AuroCarouselInstall /></Route>
-              <Route exact path="/components/auro/carousel/releases"><AuroCarouselReleases /></Route>
+              <Route exact path="/components/auro/carousel/" element={<AuroCarousel />} />
+              <Route exact path="/components/auro/carousel/api" element={<AuroCarouselApi />} />
+              <Route exact path="/components/auro/carousel/install" element={<AuroCarouselInstall />} />
+              <Route exact path="/components/auro/carousel/releases" element={<AuroCarouselReleases />} />
 
               {/* Auro Checkbox */}
-              <Route exact path="/components/auro/checkbox"><AuroCheckbox /></Route>
-              <Route exact path="/components/auro/checkbox/install"><AuroCheckboxInstall /></Route>
-              <Route exact path="/components/auro/checkbox/api"><AuroCheckboxApi /></Route>
-              <Route exact path="/components/auro/checkbox/releases"><AuroCheckboxReleases /></Route>
+              <Route exact path="/components/auro/checkbox" element={<AuroCheckbox />} />
+              <Route exact path="/components/auro/checkbox/install" element={<AuroCheckboxInstall />} />
+              <Route exact path="/components/auro/checkbox/api" element={<AuroCheckboxApi />} />
+              <Route exact path="/components/auro/checkbox/releases" element={<AuroCheckboxReleases />} />
 
               {/* Auro Combobox */}
-              <Route exact path="/components/auro/combobox"><AuroCombobox /></Route>
-              <Route exact path="/components/auro/combobox/install"><AuroComboboxInstall /></Route>
-              <Route exact path="/components/auro/combobox/api"><AuroComboboxApi /></Route>
-              <Route exact path="/components/auro/combobox/releases"><AuroComboboxReleases /></Route>
-              <Route exact path="/components/auro/combobox/figma"><AuroComboboxFigma /></Route>
+              <Route exact path="/components/auro/combobox" element={<AuroCombobox />} />
+              <Route exact path="/components/auro/combobox/install" element={<AuroComboboxInstall />} />
+              <Route exact path="/components/auro/combobox/api" element={<AuroComboboxApi />} />
+              <Route exact path="/components/auro/combobox/releases" element={<AuroComboboxReleases />} />
+              <Route exact path="/components/auro/combobox/figma" element={<AuroComboboxFigma />} />
 
               {/* Auro Datepicker */}
-              <Route exact path="/components/auro/datepicker"><AuroDatepicker /></Route>
-              <Route exact path="/components/auro/datepicker/install"><AuroDatepickerInstall /></Route>
-              <Route exact path="/components/auro/datepicker/api"><AuroDatepickerApi /></Route>
-              <Route exact path="/components/auro/datepicker/releases"><AuroDatepickerReleases /></Route>
-              <Route exact path="/components/auro/datepicker/figma"><AuroDatepickerFigma /></Route>
+              <Route exact path="/components/auro/datepicker" element={<AuroDatepicker />} />
+              <Route exact path="/components/auro/datepicker/install" element={<AuroDatepickerInstall />} />
+              <Route exact path="/components/auro/datepicker/api" element={<AuroDatepickerApi />} />
+              <Route exact path="/components/auro/datepicker/releases" element={<AuroDatepickerReleases />} />
+              <Route exact path="/components/auro/datepicker/figma" element={<AuroDatepickerFigma />} />
 
               {/* Auro Date/Time */}
-              <Route exact path="/components/auro/datetime"><AuroDateTime /></Route>
-              <Route exact path="/components/auro/datetime/install"><AuroDateTimeInstall /></Route>
-              <Route exact path="/components/auro/datetime/api"><AuroDateTimeApi /></Route>
-              <Route exact path="/components/auro/datetime/releases"><AuroDateTimeReleases /></Route>
+              <Route exact path="/components/auro/datetime" element={<AuroDateTime />} />
+              <Route exact path="/components/auro/datetime/install" element={<AuroDateTimeInstall />} />
+              <Route exact path="/components/auro/datetime/api" element={<AuroDateTimeApi />} />
+              <Route exact path="/components/auro/datetime/releases" element={<AuroDateTimeReleases />} />
 
               {/* Auro Dialog */}
-              <Route exact path="/components/auro/dialog"><AuroDialog /></Route>
-              <Route exact path="/components/auro/dialog/install"><AuroDialogInstall /></Route>
-              <Route exact path="/components/auro/dialog/api"><AuroDialogApi /></Route>
-              <Route exact path="/components/auro/dialog/releases"><AuroDialogReleases /></Route>
+              <Route exact path="/components/auro/dialog" element={<AuroDialog />} />
+              <Route exact path="/components/auro/dialog/install" element={<AuroDialogInstall />} />
+              <Route exact path="/components/auro/dialog/api" element={<AuroDialogApi />} />
+              <Route exact path="/components/auro/dialog/releases" element={<AuroDialogReleases />} />
 
               {/* Auro drawer */}
-              <Route exact path="/components/auro/drawer"><AuroDrawer /></Route>
-              <Route exact path="/components/auro/drawer/install"><AuroDrawerInstall /></Route>
-              <Route exact path="/components/auro/drawer/api"><AuroDrawerApi /></Route>
-              <Route exact path="/components/auro/drawer/releases"><AuroDrawerReleases /></Route>
+              <Route exact path="/components/auro/drawer" element={<AuroDrawer />} />
+              <Route exact path="/components/auro/drawer/install" element={<AuroDrawerInstall />} />
+              <Route exact path="/components/auro/drawer/api" element={<AuroDrawerApi />} />
+              <Route exact path="/components/auro/drawer/releases" element={<AuroDrawerReleases />} />
 
               {/* Auro Dropdown */}
-              <Route exact path="/components/auro/dropdown"><AuroDropdown /></Route>
-              <Route exact path="/components/auro/dropdown/install"><AuroDropdownInstall /></Route>
-              <Route exact path="/components/auro/dropdown/api"><AuroDropdownApi /></Route>
-              <Route exact path="/components/auro/dropdown/releases"><AuroDropdownReleases /></Route>
-              <Route exact path="/components/auro/dropdown/figma"><AuroDropdownFigma /></Route>
+              <Route exact path="/components/auro/dropdown" element={<AuroDropdown />} />
+              <Route exact path="/components/auro/dropdown/install" element={<AuroDropdownInstall />} />
+              <Route exact path="/components/auro/dropdown/api" element={<AuroDropdownApi />} />
+              <Route exact path="/components/auro/dropdown/releases" element={<AuroDropdownReleases />} />
+              <Route exact path="/components/auro/dropdown/figma" element={<AuroDropdownFigma />} />
 
               {/* Auro Flight */}
-              <Route exact path="/components/auro/flight"><AuroFlight /></Route>
-              <Route exact path="/components/auro/flight/install"><AuroFlightInstall /></Route>
-              <Route exact path="/components/auro/flight/api"><AuroFlightApi /></Route>
-              <Route exact path="/components/auro/flight/dot"><AuroFlightDot /></Route>
-              <Route exact path="/components/auro/flight/releases"><AuroFlightReleases /></Route>
+              <Route exact path="/components/auro/flight" element={<AuroFlight />} />
+              <Route exact path="/components/auro/flight/install" element={<AuroFlightInstall />} />
+              <Route exact path="/components/auro/flight/api" element={<AuroFlightApi />} />
+              <Route exact path="/components/auro/flight/dot" element={<AuroFlightDot />} />
+              <Route exact path="/components/auro/flight/releases" element={<AuroFlightReleases />} />
 
               {/* Auro Flightline */}
-              <Route exact path="/components/auro/flightline"><AuroFlightline /></Route>
-              <Route exact path="/components/auro/flightline/install"><AuroFlightlineInstall /></Route>
-              <Route exact path="/components/auro/flightline/api"><AuroFlightlineApi /></Route>
-              <Route exact path="/components/auro/flightline/dot"><AuroFlightlineDot /></Route>
-              <Route exact path="/components/auro/flightline/releases"><AuroFlightlineReleases /></Route>
+              <Route exact path="/components/auro/flightline" element={<AuroFlightline />} />
+              <Route exact path="/components/auro/flightline/install" element={<AuroFlightlineInstall />} />
+              <Route exact path="/components/auro/flightline/api" element={<AuroFlightlineApi />} />
+              <Route exact path="/components/auro/flightline/dot" element={<AuroFlightlineDot />} />
+              <Route exact path="/components/auro/flightline/releases" element={<AuroFlightlineReleases />} />
 
               {/* flight-details */}
-              <Route exact path="/components/auro/flight-details/"><Wip /></Route>
+              <Route exact path="/components/auro/flight-details/" element={<Wip />} />
 
               {/* Auro Header */}
-              <Route exact path="/components/auro/header"><AuroHeader /></Route>
-              <Route exact path="/components/auro/header/install"><AuroHeaderInstall /></Route>
-              <Route exact path="/components/auro/header/api"><AuroHeaderApi /></Route>
-              <Route exact path="/components/auro/header/releases"><AuroHeaderReleases /></Route>
+              <Route exact path="/components/auro/header" element={<AuroHeader />} />
+              <Route exact path="/components/auro/header/install" element={<AuroHeaderInstall />} />
+              <Route exact path="/components/auro/header/api" element={<AuroHeaderApi />} />
+              <Route exact path="/components/auro/header/releases" element={<AuroHeaderReleases />} />
 
               {/* Auro Hyperlink */}
-              <Route exact path="/components/auro/hyperlink"><AuroHyperlink /></Route>
-              <Route exact path="/components/auro/hyperlink/install"><AuroHyperlinkInstall /></Route>
-              <Route exact path="/components/auro/hyperlink/api"><AuroHyperlinkApi /></Route>
-              <Route exact path="/components/auro/hyperlink/releases"><AuroHyperlinkReleases /></Route>
-              <Route exact path="/components/auro/hyperlink/figma"><AuroHyperlinkFigma /></Route>
-              <Route exact path="/components/auro/hyperlink/a11y"><AuroHyperlinka11y /></Route>
+              <Route exact path="/components/auro/hyperlink" element={<AuroHyperlink />} />
+              <Route exact path="/components/auro/hyperlink/install" element={<AuroHyperlinkInstall />} />
+              <Route exact path="/components/auro/hyperlink/api" element={<AuroHyperlinkApi />} />
+              <Route exact path="/components/auro/hyperlink/releases" element={<AuroHyperlinkReleases />} />
+              <Route exact path="/components/auro/hyperlink/figma" element={<AuroHyperlinkFigma />} />
+              <Route exact path="/components/auro/hyperlink/a11y" element={<AuroHyperlinka11y />} />
 
               {/* icon */}
-              <Route exact path="/components/auro/icon/"><AuroIcon /></Route>
-              <Route exact path="/components/auro/icon/install"><AuroIconInstall /></Route>
-              <Route exact path="/components/auro/icon/api"><AuroIconApi /></Route>
-              <Route exact path="/components/auro/icon/releases"><AuroIconReleases /></Route>
-              <Route exact path="/components/auro/icon/alaska"><AuroAlaska/></Route>
+              <Route exact path="/components/auro/icon/" element={<AuroIcon />} />
+              <Route exact path="/components/auro/icon/install" element={<AuroIconInstall />} />
+              <Route exact path="/components/auro/icon/api" element={<AuroIconApi />} />
+              <Route exact path="/components/auro/icon/releases" element={<AuroIconReleases />} />
+              <Route exact path="/components/auro/icon/alaska" element={<AuroAlaska/>} />
 
               {/* Auro Input */}
-              <Route exact path="/components/auro/input"><AuroInput /></Route>
-              <Route exact path="/components/auro/input/install"><AuroInputInstall /></Route>
-              <Route exact path="/components/auro/input/api"><AuroInputApi /></Route>
-              <Route exact path="/components/auro/input/releases"><AuroInputReleases /></Route>
-              <Route exact path="/components/auro/input/figma"><AuroInputFigma /></Route>
+              <Route exact path="/components/auro/input" element={<AuroInput />} />
+              <Route exact path="/components/auro/input/install" element={<AuroInputInstall />} />
+              <Route exact path="/components/auro/input/api" element={<AuroInputApi />} />
+              <Route exact path="/components/auro/input/releases" element={<AuroInputReleases />} />
+              <Route exact path="/components/auro/input/figma" element={<AuroInputFigma />} />
 
               {/* Auro Loader */}
-              <Route exact path="/components/auro/loader"><AuroLoader /></Route>
-              <Route exact path="/components/auro/loader/install"><AuroLoaderInstall /></Route>
-              <Route exact path="/components/auro/loader/api"><AuroLoaderApi /></Route>
-              <Route exact path="/components/auro/loader/releases"><AuroLoaderReleases /></Route>
+              <Route exact path="/components/auro/loader" element={<AuroLoader />} />
+              <Route exact path="/components/auro/loader/install" element={<AuroLoaderInstall />} />
+              <Route exact path="/components/auro/loader/api" element={<AuroLoaderApi />} />
+              <Route exact path="/components/auro/loader/releases" element={<AuroLoaderReleases />} />
 
               {/* Auro Lockup */}
-              <Route exact path="/components/auro/lockup"><AuroLockup /></Route>
-              <Route exact path="/components/auro/lockup/install"><AuroLockupInstall /></Route>
-              <Route exact path="/components/auro/lockup/api"><AuroLockupApi /></Route>
-              <Route exact path="/components/auro/lockup/releases"><AuroLockupReleases /></Route>
+              <Route exact path="/components/auro/lockup" element={<AuroLockup />} />
+              <Route exact path="/components/auro/lockup/install" element={<AuroLockupInstall />} />
+              <Route exact path="/components/auro/lockup/api" element={<AuroLockupApi />} />
+              <Route exact path="/components/auro/lockup/releases" element={<AuroLockupReleases />} />
 
               {/* Auro Menu */}
-              <Route exact path="/components/auro/menu"><AuroMenu /></Route>
-              <Route exact path="/components/auro/menu/install"><AuroMenuInstall /></Route>
-              <Route exact path="/components/auro/menu/api"><AuroMenuApi /></Route>
-              <Route exact path="/components/auro/menu/figma"><AuroMenuFigma /></Route>
-              <Route exact path="/components/auro/menu/releases"><AuroMenuReleases /></Route>
+              <Route exact path="/components/auro/menu" element={<AuroMenu />} />
+              <Route exact path="/components/auro/menu/install" element={<AuroMenuInstall />} />
+              <Route exact path="/components/auro/menu/api" element={<AuroMenuApi />} />
+              <Route exact path="/components/auro/menu/figma" element={<AuroMenuFigma />} />
+              <Route exact path="/components/auro/menu/releases" element={<AuroMenuReleases />} />
 
               {/* Auro Nav */}
-              <Route exact path="/components/auro/nav"><AuroNav /></Route>
-              <Route exact path="/components/auro/nav/install"><AuroNavInstall /></Route>
-              <Route exact path="/components/auro/nav/api"><AuroNavApi /></Route>
-              <Route exact path="/components/auro/nav/releases"><AuroNavReleases /></Route>
+              <Route exact path="/components/auro/nav" element={<AuroNav />} />
+              <Route exact path="/components/auro/nav/install" element={<AuroNavInstall />} />
+              <Route exact path="/components/auro/nav/api" element={<AuroNavApi />} />
+              <Route exact path="/components/auro/nav/releases" element={<AuroNavReleases />} />
 
               {/* pane */}
-              <Route exact path="/components/auro/pane/"><AuroPane /></Route>
-              <Route exact path="/components/auro/pane/api"><AuroPaneApi /></Route>
-              <Route exact path="/components/auro/pane/install"><AuroPaneInstall /></Route>
-              <Route exact path="/components/auro/pane/releases"><AuroPaneReleases /></Route>
+              <Route exact path="/components/auro/pane/" element={<AuroPane />} />
+              <Route exact path="/components/auro/pane/api" element={<AuroPaneApi />} />
+              <Route exact path="/components/auro/pane/install" element={<AuroPaneInstall />} />
+              <Route exact path="/components/auro/pane/releases" element={<AuroPaneReleases />} />
 
               {/* Auro Popover */}
-              <Route exact path="/components/auro/popover"><AuroPopover /></Route>
-              <Route exact path="/components/auro/popover/install"><AuroPopoverInstall /></Route>
-              <Route exact path="/components/auro/popover/api"><AuroPopoverApi /></Route>
-              <Route exact path="/components/auro/popover/releases"><AuroPopoverReleases/></Route>
+              <Route exact path="/components/auro/popover" element={<AuroPopover />} />
+              <Route exact path="/components/auro/popover/install" element={<AuroPopoverInstall />} />
+              <Route exact path="/components/auro/popover/api" element={<AuroPopoverApi />} />
+              <Route exact path="/components/auro/popover/releases" element={<AuroPopoverReleases/>} />
 
               {/* Auro Radio */}
-              <Route exact path="/components/auro/radio"><AuroRadio /></Route>
-              <Route exact path="/components/auro/radio/install"><AuroRadioInstall /></Route>
-              <Route exact path="/components/auro/radio/api"><AuroRadioApi /></Route>
-              <Route exact path="/components/auro/radio/releases"><AuroRadioReleases /></Route>
+              <Route exact path="/components/auro/radio" element={<AuroRadio />} />
+              <Route exact path="/components/auro/radio/install" element={<AuroRadioInstall />} />
+              <Route exact path="/components/auro/radio/api" element={<AuroRadioApi />} />
+              <Route exact path="/components/auro/radio/releases" element={<AuroRadioReleases />} />
 
               {/* Auro Select */}
-              <Route exact path="/components/auro/select"><AuroSelect /></Route>
-              <Route exact path="/components/auro/select/install"><AuroSelectInstall /></Route>
-              <Route exact path="/components/auro/select/api"><AuroSelectApi /></Route>
-              <Route exact path="/components/auro/select/releases"><AuroSelectReleases /></Route>
+              <Route exact path="/components/auro/select" element={<AuroSelect />} />
+              <Route exact path="/components/auro/select/install" element={<AuroSelectInstall />} />
+              <Route exact path="/components/auro/select/api" element={<AuroSelectApi />} />
+              <Route exact path="/components/auro/select/releases" element={<AuroSelectReleases />} />
 
               {/* Auro SideNav */}
-              <Route exact path="/components/auro/sidenav"><AuroSidenav /></Route>
-              <Route exact path="/components/auro/sidenav/install"><AuroSidenavInstall /></Route>
-              <Route exact path="/components/auro/sidenav/api"><AuroSidenavApi /></Route>
-              <Route exact path="/components/auro/sidenav/releases"><AuroSidenavReleases /></Route>
+              <Route exact path="/components/auro/sidenav" element={<AuroSidenav />} />
+              <Route exact path="/components/auro/sidenav/install" element={<AuroSidenavInstall />} />
+              <Route exact path="/components/auro/sidenav/api" element={<AuroSidenavApi />} />
+              <Route exact path="/components/auro/sidenav/releases" element={<AuroSidenavReleases />} />
 
               {/* Auro Skeleton */}
-              <Route exact path="/components/auro/skeleton"><AuroSkeleton /></Route>
-              <Route exact path="/components/auro/skeleton/install"><AuroSkeletonInstall /></Route>
-              <Route exact path="/components/auro/skeleton/api"><AuroSkeletonApi /></Route>
-              <Route exact path="/components/auro/skeleton/releases"><AuroSkeletonReleases /></Route>
+              <Route exact path="/components/auro/skeleton" element={<AuroSkeleton />} />
+              <Route exact path="/components/auro/skeleton/install" element={<AuroSkeletonInstall />} />
+              <Route exact path="/components/auro/skeleton/api" element={<AuroSkeletonApi />} />
+              <Route exact path="/components/auro/skeleton/releases" element={<AuroSkeletonReleases />} />
 
               {/* Auro Table */}
-              <Route exact path="/components/auro/table"><AuroTable /></Route>
-              <Route exact path="/components/auro/table/install"><AuroTableInstall /></Route>
-              <Route exact path="/components/auro/table/api"><AuroTableApi /></Route>
-              <Route exact path="/components/auro/table/releases"><AuroTableReleases /></Route>
+              <Route exact path="/components/auro/table" element={<AuroTable />} />
+              <Route exact path="/components/auro/table/install" element={<AuroTableInstall />} />
+              <Route exact path="/components/auro/table/api" element={<AuroTableApi />} />
+              <Route exact path="/components/auro/table/releases" element={<AuroTableReleases />} />
 
               {/* Auro Toast */}
-              <Route exact path="/components/auro/toast"><AuroToast /></Route>
-              <Route exact path="/components/auro/toast/install"><AuroToastInstall /></Route>
-              <Route exact path="/components/auro/toast/api"><AuroToastApi /></Route>
-              <Route exact path="/components/auro/toast/releases"><AuroToastReleases /></Route>
+              <Route exact path="/components/auro/toast" element={<AuroToast />} />
+              <Route exact path="/components/auro/toast/install" element={<AuroToastInstall />} />
+              <Route exact path="/components/auro/toast/api" element={<AuroToastApi />} />
+              <Route exact path="/components/auro/toast/releases" element={<AuroToastReleases />} />
 
               {/* Auro Token List */}
-              <Route exact path="/components/auro/tokenlist"><AuroTokenlist /></Route>
-              <Route exact path="/components/auro/tokenlist/install"><AuroTokenlistInstall /></Route>
-              <Route exact path="/components/auro/tokenlist/api"><AuroTokenlistApi /></Route>
-              <Route exact path="/components/auro/tokenlist/releases"><AuroTokenlistReleases/></Route>
+              <Route exact path="/components/auro/tokenlist" element={<AuroTokenlist />} />
+              <Route exact path="/components/auro/tokenlist/install" element={<AuroTokenlistInstall />} />
+              <Route exact path="/components/auro/tokenlist/api" element={<AuroTokenlistApi />} />
+              <Route exact path="/components/auro/tokenlist/releases" element={<AuroTokenlistReleases/>} />
 
               {/* Dev resources */}
-              <Route exact path="/support/browsersSupport"><BrowserSupport /></Route>
-              <Route exact path="/support/slots"><Slots /></Route>
-              <Route exact path="/support/tests"><Tests /></Route>
-              <Route exact path="/support/polyfills/focusvisible"><FocusVisible /></Route>
-              <Route exact path="/support/polyfills/webcomponentsjs"><Webcomponentsjs /></Route>
-              <Route exact path="/support/all-releases"><AllReleases /></Route>
-              <Route exact path="/support/releases-by-sprint"><ReleasesBySprint /></Route>
-              <Route exact path="/support/releases-summary"><ReleaseSummary /></Route>
+              <Route exact path="/support/browsersSupport" element={<BrowserSupport />} />
+              <Route exact path="/support/slots" element={<Slots />} />
+              <Route exact path="/support/tests" element={<Tests />} />
+              <Route exact path="/support/polyfills/focusvisible" element={<FocusVisible />} />
+              <Route exact path="/support/polyfills/webcomponentsjs" element={<Webcomponentsjs />} />
+              <Route exact path="/support/all-releases" element={<AllReleases />} />
+              <Route exact path="/support/releases-by-sprint" element={<ReleasesBySprint />} />
+              <Route exact path="/support/releases-summary" element={<ReleaseSummary />} />
 
-              <Route exact path="/support/custom-properties"><CustomProperties /></Route>
-              <Route exact path="/webcorestylesheets"><WebCoreStyleSheets /></Route>
-              <Route exact path="/getting-started/developers/webcorestylesheets"><WebCoreStyleSheets /></Route>
+              <Route exact path="/support/custom-properties" element={<CustomProperties />} />
+              <Route exact path="/webcorestylesheets" element={<WebCoreStyleSheets />} />
+              <Route exact path="/getting-started/developers/webcorestylesheets" element={<WebCoreStyleSheets />} />
 
-              <Route exact path="/css/conventions"><WcssConventions /></Route>
-              <Route exact path="/webcorestylesheets/tests"><WcssTests /></Route>
-              <Route exact path="/css/guidelines"><WcssGuidelines /></Route>
-              <Route exact path="/css/custom-element-css"><CustomElementCss /></Route>
-              <Route exact path="/css/idiomatic-css"><IdiomaticCss /></Route>
-              <Route exact path="/webcorestylesheets/features"><WcssFeatures /></Route>
+              <Route exact path="/css/conventions" element={<WcssConventions />} />
+              <Route exact path="/webcorestylesheets/tests" element={<WcssTests />} />
+              <Route exact path="/css/guidelines" element={<WcssGuidelines />} />
+              <Route exact path="/css/custom-element-css" element={<CustomElementCss />} />
+              <Route exact path="/css/idiomatic-css" element={<IdiomaticCss />} />
+              <Route exact path="/webcorestylesheets/features" element={<WcssFeatures />} />
 
               {/* Process */}
 
 
               {/* Example Projects  */}
               {/* Content for these pages need to be updated and have better descriptions of project */}
-              <Route exact path="/angularSetup"><AngularDemoDocs /></Route> {/* not used */}
-              <Route exact path="/javascriptSetup"><JavascriptDemoDocs /></Route>
-              <Route exact path="/reactSetup"><ReactDemoDocs /></Route>
-              <Route exact path="/svelteSetup"><SvelteDemoDocs /></Route>
+              <Route exact path="/angularSetup" element={<AngularDemoDocs />} /> {/* not used */}
+              <Route exact path="/javascriptSetup" element={<JavascriptDemoDocs />} />
+              <Route exact path="/reactSetup" element={<ReactDemoDocs />} />
+              <Route exact path="/svelteSetup" element={<SvelteDemoDocs />} />
 
 
-              <Route path="*"><NotFound /></Route>
+              <Route path="*" element={<NotFound />} />
 
-            </Switch>
+            </Routes>
           </Router>
         </div>
         <Footer />

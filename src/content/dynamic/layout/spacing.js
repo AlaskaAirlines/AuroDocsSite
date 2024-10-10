@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
+import CodeBlock from '~/components/CodeBlock';
 import content from './spacing.md'
 import { Nav} from './nav.js';
 import header from './spacing_header.png';
-
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
+import ExternalLink from '@alaskaairux/icons/dist/icons/interface/external-link-sm.svg?react';
 
 class Colors extends Component {
 

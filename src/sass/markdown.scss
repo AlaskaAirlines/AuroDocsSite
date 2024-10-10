@@ -7,18 +7,18 @@
 // ----------------------- DO NOT EDIT -----------------------------
 
 // Import Auro tokens
-@import '~@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
-@import "~@aurodesignsystem/webcorestylesheets/src/breakpoints";
+@import '@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import "@aurodesignsystem/webcorestylesheets/src/breakpoints";
 
 // Auro typography and spacing
 $prefix: true;
 $paragraph: true;
-@import '~@aurodesignsystem/webcorestylesheets/src/focus-visible';
-@import "~@aurodesignsystem/webcorestylesheets/src/essentials";
-@import "~@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles";
-@import "~@aurodesignsystem/webcorestylesheets/src/headings";
-@import "~@aurodesignsystem/webcorestylesheets/src/utilityMixins/layoutPropertiesGenerator";
-@import "~@aurodesignsystem/webcorestylesheets/src/componentSupport/table";
+@import '@aurodesignsystem/webcorestylesheets/src/focus-visible';
+@import "@aurodesignsystem/webcorestylesheets/src/essentials";
+@import "@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles";
+@import "@aurodesignsystem/webcorestylesheets/src/headings";
+@import "@aurodesignsystem/webcorestylesheets/src/utilityMixins/layoutPropertiesGenerator";
+@import "@aurodesignsystem/webcorestylesheets/src/componentSupport/table";
 $prefix: null;
 
 @import url('https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css');

@@ -1,8 +1,8 @@
 import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import CodeBlock from '~/components/CodeBlock';
+import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro/master/src/handoffProcess/designReview.md';
 

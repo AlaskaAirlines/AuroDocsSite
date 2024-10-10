@@ -1,9 +1,9 @@
 import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
+import CodeBlock from '~/components/CodeBlock';
 // import markdownContent from '@alaskaairux/auro-[Component]/README.md'
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
 const markdownContent = 'https://gist.githubusercontent.com/blackfalcon/8428401/raw/d697660fe128864acc3ee4ba9ca5075894553808/git-feature-workflow.md';
 

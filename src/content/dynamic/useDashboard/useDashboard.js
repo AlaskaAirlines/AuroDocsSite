@@ -25,7 +25,7 @@ class UseDashboard extends Component {
         headers: {
           'Content-Type': 'application/json',
           'Org': 'itsals',
-          'PAT': process.env.REACT_APP_ADO_PAT
+          'PAT': import.meta.env.VITE_APP_ADO_PAT
         }
       })
       .then(res => {

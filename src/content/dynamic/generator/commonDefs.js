@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import CodeBlock from '~/components/CodeBlock';
+import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/docs/commonDefs.md';
 

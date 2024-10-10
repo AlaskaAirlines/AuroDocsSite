@@ -1,4 +1,4 @@
-import AuroComponentContent from "functions/renderComponentPage";
+import AuroComponentContent from "~/functions/renderComponentPage";
 import { initExamples } from '@aurodesignsystem/auro-input/demo/api.min.js';
 
 class AuroContent extends AuroComponentContent {

@@ -1,12 +1,8 @@
 import React from 'react';
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import Npm from '-!svg-react-loader!../../assets/npmInstall.svg';
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import Issue from '-!svg-react-loader!../../assets/issue.svg';
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import GetCode from '-!svg-react-loader!../../assets/getCode.svg';
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import Docs from '-!svg-react-loader!../../assets/docsSite.svg';
+import Npm from '~/assets/npmInstall.svg?react';
+import Issue from '~/assets/issue.svg?react';
+import GetCode from '~/assets/getCode.svg?react';
+import Docs from '~/assets/docsSite.svg?react';
 import './style.scss';
 
 function LinkIcons(props) {

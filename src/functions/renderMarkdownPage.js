@@ -1,7 +1,7 @@
-import marked from 'marked';
+import { marked } from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
 class RenderMarkdownPage extends MarkdownPageWrapper {
 

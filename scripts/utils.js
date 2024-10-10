@@ -36,11 +36,9 @@ const buildImports = (iconPaths) => {
   let importText = ''
 
   iconPaths.forEach((i) => {
-    importText +=
-      '// eslint-disable-next-line import/no-webpack-loader-syntax \n'
     importText += `import ${getImportName(
       i
-    )} from '-!svg-react-loader!${i}'; \n`
+    )} from '${i}?react'; \n`
   })
 
   return importText

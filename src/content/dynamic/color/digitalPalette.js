@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
-import { Nav} from './nav.js';
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
+import CodeBlock from '~/components/CodeBlock';
+import { Nav } from './nav.js';
+import ExternalLink from '@alaskaairux/icons/dist/icons/interface/external-link-sm.svg?react';
 
 import data from '@aurodesignsystem/design-tokens/dist/tokens/JSData--color.js'
-import windows from 'assets/color/windows.png';
+import windows from '~/assets/color/windows.png';
 import transparentColors from './transparent.md';
 
 const background = data.color.background;

@@ -1,10 +1,10 @@
 import React from "react";
 import { Nav } from './nav';
-import marked from 'marked';
+import { marked } from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 // import markdownContent from '@alaskaairux/auro-[component]/demo/demo.md'
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/template/.github/CONTRIBUTING.md';
 

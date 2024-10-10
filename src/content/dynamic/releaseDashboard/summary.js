@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import CodeBlock from '~/components/CodeBlock';
+import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
 class Summary extends MarkdownPageWrapper {
   createNewDate(date) {
