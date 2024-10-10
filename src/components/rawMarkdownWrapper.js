@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import 'sass/markdown.scss';
+import '~/sass/markdown.scss';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
+import CodeBlock from '~/components/CodeBlock';
+import ExternalLink from '@alaskaairux/icons/dist/icons/interface/external-link-sm.svg?react';
 
 export class RawMarkdownWrapper extends Component {
 

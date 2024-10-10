@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {generateFileTableData,getTableHeaders} from "functions/useDataService";
+import {generateFileTableData,getTableHeaders} from "~/functions/useDataService";
 
 class Repository extends Component {
   render() {

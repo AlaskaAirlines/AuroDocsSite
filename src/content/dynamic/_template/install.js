@@ -1,9 +1,9 @@
 import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
+import CodeBlock from '~/components/CodeBlock';
 // import markdownContent from '@alaskaairux/auro-[Component]/README.md'
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-[component]/master/README.md';
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
+import CodeBlock from '~/components/CodeBlock';
 import content from './overview.md'
 import { Nav} from './nav.js';
 import header from './overview_header.jpg';

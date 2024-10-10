@@ -1,9 +1,9 @@
 import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from 'components/CodeBlock';
+import CodeBlock from '~/components/CodeBlock';
 import markdownContent from './issuePrLables.md'; // this document needs to be a request against from the file in github, not local
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 import data from './labelSettings.json'; // this data needs to be a request against data file in github, not local
 import Template from './issuePrLablesTemplate';
 

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// eslint-disable-next-line import/no-webpack-loader-syntax
-import ExternalLink from '-!svg-react-loader!@alaskaairux/icons/dist/icons/interface/external-link-sm.svg';
+import ExternalLink from '@alaskaairux/icons/dist/icons/interface/external-link-sm.svg?react';
 
 export class MarkdownPageWrapper extends Component {
 

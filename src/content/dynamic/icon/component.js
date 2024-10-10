@@ -1,4 +1,4 @@
-import AuroComponentContent from "functions/renderComponentPage";
+import AuroComponentContent from "~/functions/renderComponentPage";
 import { Nav } from './nav';
 
 class AuroContent extends AuroComponentContent {

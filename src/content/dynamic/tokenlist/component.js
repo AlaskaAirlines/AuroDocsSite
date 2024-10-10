@@ -1,10 +1,10 @@
 import React from "react";
 import { Nav } from './nav';
-import marked from 'marked';
+import { marked } from 'marked';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 // import markdownContent from '@aurodesignsystem/auro-[component]/demo/demo.md'
-import { MarkdownPageWrapper } from 'components/markdownPageWrapper';
+import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-tokenlist/main/demo/demo.md';
 

@@ -1,21 +1,21 @@
 // Auro Support
 /* ------------------------ Auro Support ------------------------ */
 /* auro tokens for legacy components */
-// @import '~@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
+// @import '@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
 
-@import '~@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
-@import "~@aurodesignsystem/webcorestylesheets/src/breakpoints";
-@import "~@aurodesignsystem/webcorestylesheets/src/animation";
-@import "~@aurodesignsystem/webcorestylesheets/src/utilityMixins/anchor-roleTab";
+@import '@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import "@aurodesignsystem/webcorestylesheets/src/breakpoints";
+@import "@aurodesignsystem/webcorestylesheets/src/animation";
+@import "@aurodesignsystem/webcorestylesheets/src/utilityMixins/anchor-roleTab";
 
-@import "~@aurodesignsystem/webcorestylesheets/src/essentials";
+@import "@aurodesignsystem/webcorestylesheets/src/essentials";
 
 $prefix: true;
 $paragraph: true;
 $focus: true;
-@import "~@aurodesignsystem/webcorestylesheets/src/utilityClasses/typeProperties";
-@import "~@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles";
-@import "~@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties";
+@import "@aurodesignsystem/webcorestylesheets/src/utilityClasses/typeProperties";
+@import "@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles";
+@import "@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties";
 
 %see {
   outline: 2px solid red;
