@@ -10,21 +10,29 @@ export default defineConfig({
     assetsInclude: ['**/*.md'],
     resolve: {
         alias: {
-          "~": path.resolve(__dirname, "./src"),
+            "~": path.resolve(__dirname, "./src"),
+            "ROOT": path.resolve(__dirname, "./"),
         }
     },
-    server: {    
+    server: {
         // this ensures that the browser opens upon server start
         open: true,
         // this sets a default port to 3000  
-        port: 3000, 
+        port: 3000,
         fs: {
             cachedChecks: false
         }
     },
     esbuild: {
-        include: /\.js$/,
-        exclude: [],
         loader: 'jsx',
+        include: /.*\.jsx?$/,
+        exclude: []
     },
+    optimizeDeps: {
+        esbuildOptions: {
+            loader: {
+                '.js': 'jsx',
+            },
+        },
+    }
 })

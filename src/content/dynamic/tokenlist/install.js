@@ -2,17 +2,21 @@ import React from "react";
 import { Nav } from './nav';
 import LinkIcons from '~/components/linkIcons';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
 import CodeBlock from '~/components/CodeBlock';
 // import markdownContent from '@aurodesignsystem/auro-tokenlist/README.md'
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
+import packageJson from 'ROOT/package.json';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-tokenlist/main/README.md';
 
 class AuroTokenListInstall extends MarkdownPageWrapper {
 
   showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@aurodesignsystem/auro-tokenlist'];
+
+    const dependencies = packageJson.dependencies['@aurodesignsystem/auro-tokenlist'];
 
     return `@aurodesignsystem/auro-tokenlist: ${dependencies}`;
   };
@@ -34,9 +38,10 @@ class AuroTokenListInstall extends MarkdownPageWrapper {
 
         <section className="auro-markdown">
           <ReactMarkdown
-            source={this.state.contentBuild}
-            escapeHtml={false}
-            renderers={{
+            children={this.state.contentBuild}
+            remarkPlugins={[remarkGfm,remarkRehype]}
+            rehypePlugins={[rehypeRaw]}
+            components={{
               code: CodeBlock,
               heading: this.headingRenderer,
               link: this.linkRenderer

@@ -6,6 +6,7 @@ import allTokens from '@aurodesignsystem/design-tokens/dist/tokens/JSObject--all
 import _getTokens from "~/functions/getTokens";
 import 'highlight.js/styles/github.css';
 import { Nav } from './nav.js';
+import packageJson from 'ROOT/package.json';
 
 const font = allTokens.font;
 const textBody = allTokens.text.body;
@@ -21,8 +22,8 @@ const textHeading300 = allTokens.text.heading[300];
 class Typography extends Component {
 
   showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@aurodesignsystem/webcorestylesheets'];
+
+    const dependencies = packageJson.dependencies['@aurodesignsystem/webcorestylesheets'];
 
     return `@aurodesignsystem/webcorestylesheets: ${dependencies}`;
   };

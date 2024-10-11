@@ -1,18 +1,20 @@
 import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
 import CodeBlock from '~/components/CodeBlock';
 // import markdownContent from '@alaskaairux/auro-[Component]/README.md'
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
+import packageJson from 'ROOT/package.json';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-[component]/master/README.md';
 
 class Auro[Component]Install extends MarkdownPageWrapper {
 
   showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/auro-[component]'];
-
+    const dependencies = packageJson.dependencies['@alaskaairux/auro-[component]'];
     return `@alaskaairux/auro-[component]: ${dependencies}`;
   };
 
@@ -33,9 +35,10 @@ class Auro[Component]Install extends MarkdownPageWrapper {
 
         <section className="auro-markdown">
           <ReactMarkdown
-            source={this.state.contentBuild}
-            escapeHtml={false}
-            renderers={{
+            children={this.state.contentBuild}
+            remarkPlugins={[remarkGfm,remarkRehype]}
+            rehypePlugins={[rehypeRaw]}
+            components={{
               code: CodeBlock,
               heading: this.headingRenderer,
               link: this.linkRenderer

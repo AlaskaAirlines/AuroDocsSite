@@ -1,5 +1,8 @@
 import React from "react";
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
 import CodeBlock from '~/components/CodeBlock';
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
@@ -22,9 +25,10 @@ class CommonDefs extends MarkdownPageWrapper {
 
         <section className="auro-markdown">
           <ReactMarkdown
-            source={this.state.contentBuild}
-            escapeHtml={false}
-            renderers={{
+            children={this.state.contentBuild}
+            remarkPlugins={[remarkGfm,remarkRehype]}
+            rehypePlugins={[rehypeRaw]}
+            components={{
               code: CodeBlock,
               heading: this.headingRenderer,
               link: this.linkRenderer

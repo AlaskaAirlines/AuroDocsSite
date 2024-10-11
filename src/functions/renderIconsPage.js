@@ -1,7 +1,7 @@
 import RenderMarkdownPage from "~/functions/renderComponentPage";
 import { NavLink } from "react-router-dom";
 import LinkIcons from './../components/linkIcons';
-import packageJson from './../../package.json';
+import packageJson from 'ROOT/package.json';
 
 class AuroContent extends RenderMarkdownPage {
   constructor(props) {
@@ -14,7 +14,6 @@ class AuroContent extends RenderMarkdownPage {
   };
 
   showVersion() {
-    // const pjson = require('../../../../package.json');
     const dependencies = packageJson.dependencies['@alaskaairux/icons'];
     return `@alaskaairux/icons: ${dependencies}`;
   };
