@@ -22,7 +22,7 @@ export default function SideNav(props) {
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
         { linkTitle: "WCSS", route: "/webcorestylesheets", parent: true },
         { linkTitle: "Contributing", route: "/contributing", parent: true },
-        { linkTitle: "WC-Generator", route: "/generator/install", parent: true  },
+        { linkTitle: "WC-Generator", route: "/generator", parent: true  },
         { linkTitle: "CSS guidelines", route: "/css/conventions", parent: true },
         { linkTitle: "Common defs", route: "/common-defs", parent: true },
         { linkTitle: "Auro compliance", route: "/getting-started/developers/compliance", parent: true },
