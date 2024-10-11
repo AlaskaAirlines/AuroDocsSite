@@ -1,5 +1,8 @@
 import React from "react";
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
 import CodeBlock from '~/components/CodeBlock';
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
@@ -19,8 +22,8 @@ class Summary extends MarkdownPageWrapper {
                 <p><b>Sprint end:</b> {this.createNewDate(dueOn)} | <b>Release status:</b> <auro-hyperlink href={url} target="_blank">{state.toLowerCase()}</auro-hyperlink></p>
                 <div className="auro-markdown">
                   <ReactMarkdown
-                    source={description}
-                    renderers={{
+                    children={description}
+                    components={{
                       code: CodeBlock,
                       heading: this.headingRenderer,
                       link: this.linkRenderer

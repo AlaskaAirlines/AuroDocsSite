@@ -38,13 +38,6 @@ const textHeading300 = allTokens.text.heading[300];
 
 class DeprecatedTokens extends Component {
 
-  // showVersion() {
-  //   const pjson = require('../../../../package.json');
-  //   const dependencies = pjson.dependencies['@aurodesignsystem/design-tokens'];
-
-  //   return `@aurodesignsystem/design-tokens: ${dependencies}`;
-  // };
-
   render() {
     return (
       <section>

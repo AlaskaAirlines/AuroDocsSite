@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
 
 class AllIssues extends Component {
   getContrastYIQ(hexcolor) {
@@ -57,7 +60,7 @@ class AllIssues extends Component {
                       <span slot="header">{title}</span>
                       <span slot="content">
                         <div className="auro-markdown util_wrap">
-                          <ReactMarkdown source={body} />
+                          <ReactMarkdown children={body} />
                       </div>
                       </span>
                       <span slot="footer">
@@ -84,7 +87,7 @@ class AllIssues extends Component {
                 <td className="auro_table--notes">
                   {comments.nodes.map(({body, createdAt}) => (
                     <div className="auro-markdown" key={createdAt}>
-                      <ReactMarkdown source={body} />
+                      <ReactMarkdown children={body} />
 
                       {comments.nodes.map(({author}) => (
                         <img key={createdAt} src={author.avatarUrl} className="githubAvatar" alt="avatar" title={author.login} />

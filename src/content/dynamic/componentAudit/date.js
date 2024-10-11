@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
 
 class Issue extends Component {
 
@@ -70,7 +73,7 @@ class Issue extends Component {
               <td>
                 {comments.nodes.map(({body, createdAt}) => (
                   <div className="auro-markdown">
-                    <ReactMarkdown source={body} />
+                    <ReactMarkdown children={body} />
                     {createdAt}
                   </div>
                 ))}

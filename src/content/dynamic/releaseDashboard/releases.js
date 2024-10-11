@@ -1,5 +1,8 @@
 import React from "react";
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
 import CodeBlock from '~/components/CodeBlock';
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
@@ -14,8 +17,8 @@ class Release extends MarkdownPageWrapper {
             <h2 className="auro_heading auro_heading--600">{name}</h2>
             <div className="auro-markdown releaseWrapper--data">
               <ReactMarkdown
-                source={description}
-                renderers={{
+                children={description}
+                components={{
                   code: CodeBlock,
                   heading: this.headingRenderer,
                   link: this.linkRenderer

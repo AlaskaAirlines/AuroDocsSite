@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import LinkIcons from '~/components/linkIcons';
 import { NavLink } from "react-router-dom";
+import packageJson from 'ROOT/package.json';
 
 export class Nav extends Component {
 
   showVersion() {
-    const pjson = require('../../../../package.json');
-    const dependencies = pjson.dependencies['@alaskaairux/icons'];
+
+    const dependencies = packageJson.dependencies['@alaskaairux/icons'];
     return `@alaskaairux/icons: ${dependencies}`;
   };
 

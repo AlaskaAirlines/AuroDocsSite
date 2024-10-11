@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import '~/sass/markdown.scss';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
 import CodeBlock from '~/components/CodeBlock';
 import ExternalLink from '@alaskaairux/icons/dist/icons/interface/external-link-sm.svg?react';
 
@@ -89,9 +92,10 @@ export class ExternalMarkdownWrapper extends RawMarkdownWrapper {
       <section>
         <article className="auro-markdown">
           <ReactMarkdown
-            source={this.state.docsGenerator}
-            escapeHtml={false}
-            renderers={{
+            children={this.state.docsGenerator}
+            remarkPlugins={[remarkGfm,remarkRehype]}
+            rehypePlugins={[rehypeRaw]}
+            components={{
               code: CodeBlock,
               heading: this.headingRenderer,
               link: this.linkRenderer
@@ -114,9 +118,10 @@ export class InternalMarkdownWrapper extends RawMarkdownWrapper {
       <section>
         <section className="auro-markdown">
           <ReactMarkdown
-            source={this.state.docsGenerator}
-            escapeHtml={false}
-            renderers={{
+            children={this.state.docsGenerator}
+            remarkPlugins={[remarkGfm,remarkRehype]}
+            rehypePlugins={[rehypeRaw]}
+            components={{
               code: CodeBlock,
               heading: this.headingRenderer,
               link: this.linkRenderer

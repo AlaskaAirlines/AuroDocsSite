@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
 import CodeBlock from '~/components/CodeBlock';
 import guidelines from './guidelines.md'
 import { Nav} from './nav.js';
@@ -47,9 +50,10 @@ class Colors extends Component {
 
         <section className="auro-markdown">
           <ReactMarkdown
-            source={this.state.guidelinesBuild}
-            escapeHtml={false}
-            renderers={{
+            children={this.state.guidelinesBuild}
+            remarkPlugins={[remarkGfm,remarkRehype]}
+            rehypePlugins={[rehypeRaw]}
+            components={{
               code: CodeBlock,
               heading: this.headingRenderer
             }}/>

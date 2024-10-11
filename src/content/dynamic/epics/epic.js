@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
 
 class Epic extends Component {
   render() {
@@ -10,7 +13,7 @@ class Epic extends Component {
             <h1 className="auro_heading auro_heading--display">{title}</h1>
             <auro-hyperlink href={url} target="_blank">See epic in Github</auro-hyperlink>
             <div className="auro-markdown epicWrapper--data">
-              <ReactMarkdown source={body} />
+              <ReactMarkdown children={body} />
             </div>
           </div>
         ))}
