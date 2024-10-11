@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
-import CodeBlock from '~/components/CodeBlock';
+import rehypeHighlight from "rehype-highlight";
 import guidelines from './guidelines.md'
 import { Nav} from './nav.js';
 
@@ -52,9 +52,8 @@ class Colors extends Component {
           <ReactMarkdown
             children={this.state.guidelinesBuild}
             remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[rehypeRaw]}
+            rehypePlugins={[rehypeHighlight,rehypeRaw]}
             components={{
-              code: CodeBlock,
               heading: this.headingRenderer
             }}/>
         </section>

@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
-import CodeBlock from '~/components/CodeBlock';
+import rehypeHighlight from "rehype-highlight";
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/docs/gettingStarted.md';
@@ -30,9 +30,8 @@ class AuroButtonInstall extends MarkdownPageWrapper {
           <ReactMarkdown
             children={this.state.contentBuild}
             remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[rehypeRaw]}
+            rehypePlugins={[rehypeHighlight,rehypeRaw]}
             components={{
-              code: CodeBlock,
               heading: this.headingRenderer,
               link: this.linkRenderer
             }}/>

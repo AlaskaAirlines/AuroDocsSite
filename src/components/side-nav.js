@@ -113,7 +113,7 @@ export default function SideNav(props) {
               {/* TODO: Toggle HIDDEN attr on click to hide/show nav items within a block */}
               <div className="navBlock">
                 {navBlock.items.map(link => (
-                  <NavLink key={link.route} to={link.route} activeclassname="is-active"
+                  <NavLink key={link.route} to={link.route} 
 
                     className={`auro_hyperlink auro_hyperlink--nav ${link.active ? 'auro_hyperlink--active': ''} ${link.subNav ? 'auro_hyperlink--subNav': ''} ${link.parent ? 'auro_hyperlink--parent': ''}`}>
 

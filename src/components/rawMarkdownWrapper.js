@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
-import CodeBlock from '~/components/CodeBlock';
+import rehypeHighlight from "rehype-highlight";
 import ExternalLink from '@alaskaairux/icons/dist/icons/interface/external-link-sm.svg?react';
 
 export class RawMarkdownWrapper extends Component {
@@ -94,9 +94,8 @@ export class ExternalMarkdownWrapper extends RawMarkdownWrapper {
           <ReactMarkdown
             children={this.state.docsGenerator}
             remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[rehypeRaw]}
+            rehypePlugins={[rehypeHighlight,rehypeRaw]}
             components={{
-              code: CodeBlock,
               heading: this.headingRenderer,
               link: this.linkRenderer
             }}
@@ -120,9 +119,8 @@ export class InternalMarkdownWrapper extends RawMarkdownWrapper {
           <ReactMarkdown
             children={this.state.docsGenerator}
             remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[rehypeRaw]}
+            rehypePlugins={[rehypeHighlight,rehypeRaw]}
             components={{
-              code: CodeBlock,
               heading: this.headingRenderer,
               link: this.linkRenderer
             }}

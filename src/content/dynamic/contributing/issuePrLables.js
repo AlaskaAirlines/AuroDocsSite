@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
-import CodeBlock from '~/components/CodeBlock';
+import rehypeHighlight from "rehype-highlight";
 import markdownContent from './issuePrLables.md'; // this document needs to be a request against from the file in github, not local
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 import data from './labelSettings.json'; // this data needs to be a request against data file in github, not local
@@ -33,9 +33,8 @@ class AuroContributingIssues extends MarkdownPageWrapper {
           <ReactMarkdown
             children={this.state.contentBuild}
             remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[rehypeRaw]}
+            rehypePlugins={[rehypeHighlight,rehypeRaw]}
             components={{
-              code: CodeBlock,
               heading: this.headingRenderer,
               link: this.linkRenderer
             }}/>

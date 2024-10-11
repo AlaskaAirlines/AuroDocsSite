@@ -6,9 +6,9 @@ export class Nav extends Component {
   render() {
     return (
       <div role="tablist" className="tabList">
-        <NavLink role="tab" exact className="tab link" to={`/getting-started/developers/design-tokens`} activeclassname="is-active">Design Tokens</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/getting-started/developers/design-tokens/install`} activeclassname="is-active">Install</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/getting-started/developers/design-tokens/deprecated`} activeclassname="is-active">Deprecated</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/getting-started/developers/design-tokens`} >Design Tokens</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/getting-started/developers/design-tokens/install`} >Install</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/getting-started/developers/design-tokens/deprecated`} >Deprecated</NavLink>
       </div>
     )
   }

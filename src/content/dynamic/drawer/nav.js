@@ -7,10 +7,10 @@ export class Nav extends Component {
   render() {
     return (
       <div role="tablist" className="tabList">
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/drawer`} activeclassname="is-active">Drawer</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/drawer/install`} activeclassname="is-active">Install</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/drawer/api`} activeclassname="is-active">API</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/drawer/releases`} activeclassname="is-active">Releases</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/components/auro/drawer`} >Drawer</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/components/auro/drawer/install`} >Install</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/components/auro/drawer/api`} >API</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/components/auro/drawer/releases`} >Releases</NavLink>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-drawer/issues"
           npm="https://www.npmjs.com/package/@aurodesignsystem/auro-drawer"
