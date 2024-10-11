@@ -88,6 +88,7 @@ import DevSetupLinux from './content/dynamic/devSetup/devSetupLinux';
 import DevSetupNpm from './content/dynamic/devSetup/devSetupNpm';
 
 // WC-Generator
+import Generator from './content/dynamic/generator/index';
 import GeneratorInstall from './content/dynamic/generator/install';
 import GeneratorApi from './content/dynamic/generator/api';
 import GeneratorBestPractice from './content/dynamic/generator/bestPractice';
@@ -535,7 +536,7 @@ function App() {
               <Route path="/color/personality-palette" element={<PersonalityPalette />} />
 
               {/* Generator */}
-              <Route path="/generator" element={<GeneratorInstall />} />
+              <Route end path="/generator" element={<Generator />} />
               <Route path="/generator/install" element={<GeneratorInstall />} />
               <Route path="/generator/api" element={<GeneratorApi />} />
               <Route path="/generator/best-practice" element={<GeneratorBestPractice />} />

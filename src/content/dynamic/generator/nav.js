@@ -7,8 +7,9 @@ export class Nav extends Component {
   render() {
     return (
       <div role="tablist" className="tabList">
+        <NavLink role="tab" end className="tab link" to={`/generator`} >WC-Generator</NavLink>
         <NavLink role="tab" end className="tab link" to={`/generator/install`} >Install</NavLink>
-        <NavLink role="tab" end className="tab link" to={`/generator/api`} >Installer API</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/generator/api`} >API</NavLink>
         <NavLink role="tab" end className="tab link" to={`/generator/releases`} >Releases</NavLink>
         <NavLink role="tab" end className="tab link" to={`/generator/define-api`} >API dev guide</NavLink>
         <NavLink role="tab" end className="tab link" to={`/generator/best-practice`} >Best practices</NavLink>

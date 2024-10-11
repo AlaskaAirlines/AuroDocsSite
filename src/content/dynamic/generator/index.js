@@ -7,7 +7,7 @@ import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight";
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/refs/heads/master/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/refs/heads/master/docs/readme.md';
 
 class AuroButtonApi extends MarkdownPageWrapper {
 
