@@ -14,11 +14,11 @@ export class Nav extends Component {
   render() {
     return (
       <div role="tablist" className="tabList">
-        <NavLink role="tab" exact className="tab link" to={`/icons`} activeclassname="is-active">Icons</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/icons/guidelines`} activeclassname="is-active">Design guidelines</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/icons/install`} activeclassname="is-active">Install</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/icons/ways-to-use`} activeclassname="is-active">Ways to use</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/deprecated-icons`} activeclassname="is-active">Deprecated Icons</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/icons`} >Icons</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/icons/guidelines`} >Design guidelines</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/icons/install`} >Install</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/icons/ways-to-use`} >Ways to use</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/deprecated-icons`} >Deprecated Icons</NavLink>
 
         <LinkIcons
           github="https://github.com/AlaskaAirlines/Icons/issues"

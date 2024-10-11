@@ -190,7 +190,7 @@ auro-swatch-list {
   }
 }
 
-.auro_hyperlink.is-active,
+.auro_hyperlink.active,
 .auro_hyperlink--active,
 .hyperlink--active {
   color: var(--ds-color-text-primary-default) !important;
@@ -545,7 +545,7 @@ pre {
 .link {
   @extend .auro_hyperlink;
 
-  &.is-active {
+  &.active {
     color: #054687;
     text-decoration: none;
     border-bottom: 2px solid currentColor;
@@ -594,7 +594,7 @@ pre {
     }
   }
 
-  &.is-active {
+  &.active {
     text-decoration: none;
     cursor: pointer;
     color: var(--ds-color-text-primary-default);

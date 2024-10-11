@@ -6,10 +6,10 @@ class AuroContent extends RenderMarkdownPage {
     return (
       <section className="auro_baseType">
         <div role="tablist" className="tabList">
-          <NavLink role="tab" exact className="tab link" to={`/css/conventions`} activeclassname="is-active">CSS conventions</NavLink>
-          <NavLink role="tab" exact className="tab link" to={`/css/custom-element-css`} activeclassname="is-active">CSS & custom elements</NavLink>
-          <NavLink role="tab" exact className="tab link" to={`/css/guidelines`} activeclassname="is-active">Style guidelines</NavLink>
-          <NavLink role="tab" exact className="tab link" to={`/css/idiomatic-css`} activeclassname="is-active">Idiomatic CSS</NavLink>
+          <NavLink role="tab" end className="tab link" to={`/css/conventions`} >CSS conventions</NavLink>
+          <NavLink role="tab" end className="tab link" to={`/css/custom-element-css`} >CSS & custom elements</NavLink>
+          <NavLink role="tab" end className="tab link" to={`/css/guidelines`} >Style guidelines</NavLink>
+          <NavLink role="tab" end className="tab link" to={`/css/idiomatic-css`} >Idiomatic CSS</NavLink>
         </div>
         <section
           className="auro-markdown"

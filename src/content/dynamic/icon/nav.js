@@ -7,11 +7,11 @@ export class Nav extends Component {
   render() {
     return (
       <div role="tablist" className="tabList">
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/icon`} activeclassname="is-active">Icon</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/icon/alaska`} activeclassname="is-active">Alaska Logo</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/icon/install`} activeclassname="is-active">Install</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/icon/api`} activeclassname="is-active">API</NavLink>
-        <NavLink role="tab" exact className="tab link" to={`/components/auro/icon/releases`} activeclassname="is-active">Releases</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/components/auro/icon`} >Icon</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/components/auro/icon/alaska`} >Alaska Logo</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/components/auro/icon/install`} >Install</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/components/auro/icon/api`} >API</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/components/auro/icon/releases`} >Releases</NavLink>
         <LinkIcons
           github="https://github.com/AlaskaAirlines/auro-icon/issues"
           npm="https://www.npmjs.com/package/@aurodesignsystem/auro-icon"
