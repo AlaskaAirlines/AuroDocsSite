@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Query } from '@apollo/react-components';
-import { gql } from 'apollo-boost';
+import Query from '~/functions/renderQuery';
+import { gql } from '@apollo/client';
 import calculateSprints, { createSprintReleaseDataset } from '~/functions/sprintCalculator';
 import Release from './release';
 
