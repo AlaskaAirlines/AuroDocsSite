@@ -61,6 +61,7 @@ class ColorsOverview extends Component {
       if (background === 'inverse') {
         colorSet.push(
           <auro-tokenavatar
+            key={color['name']}
             avatartype={type}
             colorname={color['name']}
             ondark
@@ -70,6 +71,7 @@ class ColorsOverview extends Component {
       } else {
         colorSet.push(
           <auro-tokenavatar
+            key={color['name']}
             avatartype={type}
             colorname={color['name']}
             >

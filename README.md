@@ -20,7 +20,7 @@ To run the Github data service pages, you will need to add a `/.env` file, at th
 In your local `/.env` file add the following: 
 
 ```
-REACT_APP_GITHUB_API_KEY=[add your PAT]
+VITE_GH_TOKEN=[add your PAT]
 ```
 
 ### To generate a PAT
