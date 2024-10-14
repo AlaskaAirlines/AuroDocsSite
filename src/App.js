@@ -199,8 +199,7 @@ import {
 
 } from './content/docsExport';
 
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from '@apollo/react-hooks';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
 // COMPONENTS
 
@@ -428,10 +427,11 @@ import AuroToastApi from './content/dynamic/toast/api';
 import AuroToastInstall from './content/dynamic/toast/install';
 import AuroToastReleases from './content/dynamic/toast/releases';
 
-const API_KEY = import.meta.env.VITE_APP_GITHUB_API_KEY;
+const API_KEY = import.meta.env.VITE_GH_TOKEN;
 
 const client = new ApolloClient({
   uri: 'https://api.github.com/graphql',
+  cache: new InMemoryCache(),
   headers: {
     authorization: `Bearer ${API_KEY}`
   }

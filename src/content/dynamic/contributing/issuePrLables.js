@@ -44,7 +44,7 @@ class AuroContributingIssues extends MarkdownPageWrapper {
         <p>The list below is a representation of the current set of labels, their descriptions and the process to use them.</p>
 
         <auro-header level="3" display="500">Default labels</auro-header>
-        <table class="auro_table">
+        <table className="auro_table">
           <thead>
             <tr>
               <th>Label</th>
@@ -55,14 +55,14 @@ class AuroContributingIssues extends MarkdownPageWrapper {
           <tbody>
             {data.map(({name, cat, color, description, process}) => (
               cat === 'default'
-                ? <Template name={name} color={color} description={description} process={process}/>
+                ? <Template key={name} name={name} color={color} description={description} process={process}/>
                 : ''
             ))}
           </tbody>
         </table>
 
         <auro-header level="3" display="500">Status labels</auro-header>
-        <table class="auro_table">
+        <table className="auro_table">
           <thead>
             <tr>
               <th>Label</th>
@@ -73,14 +73,14 @@ class AuroContributingIssues extends MarkdownPageWrapper {
           <tbody>
             {data.map(({name, cat, color, description, process}) => (
               cat === 'status'
-                ? <Template name={name} color={color} description={description} process={process}/>
+                ? <Template key={name} name={name} color={color} description={description} process={process}/>
                 : ''
             ))}
           </tbody>
         </table>
 
         <auro-header level="3" display="500">Type labels</auro-header>
-        <table class="auro_table">
+        <table className="auro_table">
           <thead>
             <tr>
               <th>Label</th>
@@ -91,7 +91,7 @@ class AuroContributingIssues extends MarkdownPageWrapper {
           <tbody>
             {data.map(({name, cat, color, description, process}) => (
               cat === 'type'
-                ? <Template name={name} color={color} description={description} process={process}/>
+                ? <Template key={name} name={name} color={color} description={description} process={process}/>
                 : ''
             ))}
           </tbody>
