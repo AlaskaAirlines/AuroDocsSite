@@ -19,8 +19,8 @@ class Release extends MarkdownPageWrapper {
 
         <h1 className="auro_heading auro_heading--700">{this.props.name}</h1>
         <p style={{marginTop: "-26px"}}>{this.props.start.toLocaleDateString("en-US", options)} - {this.props.end.toLocaleDateString("en-US", options)}</p>
-        {this.props.releases.map(({name, description}) => (
-          <div key={name} className="release">
+        {this.props.releases.map(({name, description}, index) => (
+          <div key={name + index} className="release">
             <h2 className="auro_heading auro_heading--600">{name}</h2>
             <div className="auro-markdown releaseWrapper--data">
               <ReactMarkdown

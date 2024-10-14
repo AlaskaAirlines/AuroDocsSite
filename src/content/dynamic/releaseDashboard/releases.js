@@ -12,7 +12,7 @@ class Release extends MarkdownPageWrapper {
       <div key={this.props.name} className="releaseWrapper">
 
         <h1 className="auro_heading auro_heading--700">{this.props.name}</h1>
-        {this.props.releases.map(({name, description}) => (
+        {this.props.releases.map(({name, description}, index) => (
           <div key={name} className="release">
             <h2 className="auro_heading auro_heading--600">{name}</h2>
             <div className="auro-markdown releaseWrapper--data">

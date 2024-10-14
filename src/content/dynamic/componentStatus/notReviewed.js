@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Nav } from './nav';
-import { Query } from '@apollo/react-components';
-import { gql } from 'apollo-boost';
+import Query from '~/functions/renderQuery';
+import { gql } from '@apollo/client';
 import Issues from './issues';
 
 const typeBug = gql`
