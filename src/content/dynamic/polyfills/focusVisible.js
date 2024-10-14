@@ -7,7 +7,7 @@ import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight";
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/docs/focus-visible.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/refs/tags/v3.17.4/docs/focus-visible.md';
 
 class FocusVisible extends MarkdownPageWrapper {
 

@@ -20,7 +20,7 @@ export default function SideNav(props) {
         { linkTitle: "Engineering Start Guide", route: "/getting-started/developers", parent: true  },
         { linkTitle: "Developer support", route: "/developer-setup/npm", parent: true  },
         { linkTitle: "Design tokens", route: "/getting-started/developers/design-tokens", parent: true },
-        { linkTitle: "WCSS", route: "/webcorestylesheets", parent: true },
+        { linkTitle: "WCSS", route: "/webcorestylesheets/features", parent: true },
         { linkTitle: "Contributing", route: "/contributing", parent: true },
         { linkTitle: "WC-Generator", route: "/generator", parent: true  },
         { linkTitle: "CSS guidelines", route: "/css/conventions", parent: true },
