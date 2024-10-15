@@ -376,7 +376,7 @@ class ComponentStatus extends Component {
             <p slot="description">
               <span style={{'max-width': '500px', display: 'block'}}>Have ideas you want to share or need more information about Auro? Please feel free to start a new discussion with the team.</span>
             </p>
-            <auro-hyperlink style={{'margin-right': '1rem', 'margin-bottom': '0.5rem'}} type="cta" secondary href="https://github.com/AlaskaAirlines/WC-Generator/discussions/new/choose" slot="action" target="_blank">Start a new discussion</auro-hyperlink>
+            <auro-hyperlink style={{'marginRight': '1rem', 'marginBottom': '0.5rem'}} type="cta" secondary href="https://github.com/AlaskaAirlines/WC-Generator/discussions/new/choose" slot="action" target="_blank">Start a new discussion</auro-hyperlink>
             <auro-hyperlink type="cta" secondary href="https://github.com/AlaskaAirlines/WC-Generator/discussions" slot="action" target="_blank">View open discussions</auro-hyperlink>
           </auro-banner>
         </p>

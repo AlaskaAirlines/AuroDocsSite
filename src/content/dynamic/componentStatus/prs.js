@@ -21,9 +21,9 @@ class Repo extends Component {
               { this.charGenerate() }
               { // loop over releases for URL to last release
                 this.props.releases.nodes.length !== 0
-                  ? this.props.releases.nodes.map(({tagName, createdAt, id, url}) => (
+                  ? this.props.releases.nodes.map(({tagName, createdAt, id, url}, index) => (
                       <div key={id}>
-                        <a href={url} target="_blank" rel="noopener noreferrer" style={{'textDecoration': 'none'}}>
+                        <a key={index} href={url} target="_blank" rel="noopener noreferrer" style={{'textDecoration': 'none'}}>
                           <div className="badge util_pointer" id={randomNumber}>
                             <div className="title"><b>Current release</b></div>
                             <div className="data data--release">{tagName}</div>
