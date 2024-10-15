@@ -13,9 +13,9 @@ class Repo extends Component {
                 <small>
                   { // loop over releases for URL to last release
                     this.props.releases.nodes.length !== 0
-                      ? this.props.releases.nodes.map(({tagName, id, url}) => (
+                      ? this.props.releases.nodes.map(({tagName, id, url}, index) => (
                           <div key={id}>
-                            <auro-hyperlink href={url} target="_blank" nav>{tagName}</auro-hyperlink>
+                            <auro-hyperlink key={index} href={url} target="_blank" nav>{tagName}</auro-hyperlink>
                           </div>
                         ))
                       : <div className="badge">
