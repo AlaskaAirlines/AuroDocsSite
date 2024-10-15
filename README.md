@@ -15,7 +15,7 @@ After cloning the repo locally, please address these simple steps;
 
 ### Environmental variable
 
-To run the Github data service pages, you will need to add a `/.env` file, at the repo root, with a PAT from Github. This file is intentionally ignored. 
+To run the Github data service pages, you will need to add a `/.env` file, at the repo root, with a PAT (Personal Access Token) from Github. This file is intentionally ignored. 
 
 In your local `/.env` file add the following: 
 
