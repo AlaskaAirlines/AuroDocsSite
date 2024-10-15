@@ -20,9 +20,9 @@ stages:
       vmImage: $(imageName)
     steps:
     - task: NodeTool@0
-      displayName: 'Use Node 12.x'
+      displayName: 'Use Node 20.x'
       inputs:
-        versionSpec: 12.x
+        versionSpec: 20.x
         checkLatest: true
     - task: Npm@1
       displayName: 'npm install'
@@ -45,6 +45,7 @@ stages:
         customCommand: 'run build'
       env:
         REACT_APP_GITHUB_API_KEY: $(REACT_APP_GITHUB_API_KEY)
+        VITE_GH_TOKEN: $(REACT_APP_GITHUB_API_KEY)
         REACT_APP_ADO_PAT: $(REACT_APP_ADO_PAT)
     - publish: '$(System.DefaultWorkingDirectory)/build'
       artifact: site
@@ -116,5 +117,5 @@ stages:
               appType: webAppLinux
               WebAppName: 'auro-prod-site-w2'
               packageForLinux: '$(Pipeline.Workspace)/site'
-              RuntimeStack: 'NODE|12-lts'
+              RuntimeStack: 'NODE|20-lts'
               StartupCommand: 'pm2 serve /home/site/wwwroot --spa --no-daemon'

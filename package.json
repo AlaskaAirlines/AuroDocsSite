@@ -81,7 +81,7 @@
   },
   "scripts": {
     "start": "vite",
-    "build": "vite build && buildIcons",
+    "build": "vite build && npm run buildIcons",
     "preview": "vite preview",
     "test": "echo \"No tests specified\" && exit 0",
     "buildIconsScript": "node ./scripts/build-icon-lib.js",
