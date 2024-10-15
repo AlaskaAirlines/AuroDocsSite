@@ -50,29 +50,29 @@ stages:
     - publish: '$(System.DefaultWorkingDirectory)/dist'
       artifact: site
 
-- stage: DeployToTest
-  condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
-  jobs:
-  - deployment: Deploy
-    displayName: Deploy Test Code
-    environment: 'aurodesignsystem-test'
-    pool:
-      vmImage: $(imageName)
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - download: current
-            artifact: site
-          - task: AzureRmWebAppDeployment@4
-            displayName: 'Azure App Service Deploy: Auro Site'
-            inputs:
-              azureSubscription: 'aurodesignsystem-test-group-SPN'
-              appType: webAppLinux
-              WebAppName: 'auro-test-site-w2'
-              packageForLinux: '$(Pipeline.Workspace)/site'
-              RuntimeStack: 'NODE|20-lts'
-              StartupCommand: 'pm2 serve /home/site/wwwroot --spa --no-daemon'
+# - stage: DeployToTest
+#   condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
+#   jobs:
+#   - deployment: Deploy
+#     displayName: Deploy Test Code
+#     environment: 'aurodesignsystem-test'
+#     pool:
+#       vmImage: $(imageName)
+#     strategy:
+#       runOnce:
+#         deploy:
+#           steps:
+#           - download: current
+#             artifact: site
+#           - task: AzureRmWebAppDeployment@4
+#             displayName: 'Azure App Service Deploy: Auro Site'
+#             inputs:
+#               azureSubscription: 'aurodesignsystem-test-group-SPN'
+#               appType: webAppLinux
+#               WebAppName: 'auro-test-site-w2'
+#               packageForLinux: '$(Pipeline.Workspace)/site'
+#               RuntimeStack: 'NODE|20-lts'
+#               StartupCommand: 'pm2 serve /home/site/wwwroot --spa --no-daemon'
 # - stage: DeployToQA
 #   condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
 #   jobs:
