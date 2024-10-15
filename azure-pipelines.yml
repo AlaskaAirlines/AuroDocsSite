@@ -47,7 +47,7 @@ stages:
         REACT_APP_GITHUB_API_KEY: $(REACT_APP_GITHUB_API_KEY)
         VITE_GH_TOKEN: $(REACT_APP_GITHUB_API_KEY)
         REACT_APP_ADO_PAT: $(REACT_APP_ADO_PAT)
-    - publish: '$(System.DefaultWorkingDirectory)/build'
+    - publish: '$(System.DefaultWorkingDirectory)/dist'
       artifact: site
 
 # - stage: DeployToTest
