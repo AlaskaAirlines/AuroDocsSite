@@ -130,7 +130,6 @@ import LayoutGrid from './content/dynamic/layout/grid';
 import LayoutSpacing from './content/dynamic/layout/spacing';
 
 // wcss
-import WebCoreStyleSheets from './content/dynamic/wcss/wcss';
 import WcssFeatures from './content/dynamic/wcss/features';
 import WcssTests from './content/dynamic/wcss/tests';
 
@@ -243,8 +242,8 @@ import AuroBadgeReleases from './content/dynamic/badge/releases';
 // banner
 import AuroBanner from './content/dynamic/banner/component';
 import AuroBannerApi from './content/dynamic/banner/api';
-// import AuroBannerInstall from 'content/dynamic/banner/install';
-// import AuroBannerReleases from 'content/dynamic/banner/releases';
+import AuroBannerInstall from './content/dynamic/banner/install';
+import AuroBannerReleases from './content/dynamic/banner/releases';
 
 // button
 import AuroButton from './content/dynamic/button/component';
@@ -619,8 +618,8 @@ function App() {
               {/* banner */}
               <Route path="/components/auro/banner/" element={<AuroBanner />} />
               <Route path="/components/auro/banner/api" element={<AuroBannerApi />} />
-              {/* <Route path="/components/auro/banner/install" element={<AuroBannerInstall />} /> */}
-              {/* <Route path="/components/auro/banner/releases" element={<AuroBannerReleases />} /> */}
+              <Route path="/components/auro/banner/install" element={<AuroBannerInstall />} />
+              <Route path="/components/auro/banner/releases" element={<AuroBannerReleases />} />
 
               {/* Auro Button */}
               <Route path="/components/auro/button" element={<AuroButton />} />
@@ -821,8 +820,8 @@ function App() {
               <Route path="/support/releases-summary" element={<ReleaseSummary />} />
 
               <Route path="/support/custom-properties" element={<CustomProperties />} />
-              <Route path="/webcorestylesheets" element={<WebCoreStyleSheets />} />
-              <Route path="/getting-started/developers/webcorestylesheets" element={<WebCoreStyleSheets />} />
+              <Route path="/webcorestylesheets" element={<WcssFeatures />} />
+              <Route path="/getting-started/developers/webcorestylesheets" element={<WcssFeatures />} />
 
               <Route path="/css/conventions" element={<WcssConventions />} />
               <Route path="/webcorestylesheets/tests" element={<WcssTests />} />

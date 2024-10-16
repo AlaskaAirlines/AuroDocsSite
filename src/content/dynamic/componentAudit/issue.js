@@ -29,9 +29,9 @@ class Issue extends Component {
               </td>
               <td>
                 <div className="labelWrapper">
-                  {labels.nodes.map(({name, color}) => (
+                  {labels.nodes.map(({name, color}, index) => (
                     name.includes("Artwork")
-                      ? <div key={name} data-name={name} title={name} className="issueLabel auditLabel"
+                      ? <div key={index + '_' + name} data-name={name} title={name} className="issueLabel auditLabel"
                           style={{backgroundColor: '#' + color, color: '#' + color}}>
                         </div>
                     : ''
@@ -40,9 +40,9 @@ class Issue extends Component {
               </td>
               <td>
                 <div className="labelWrapper">
-                  {labels.nodes.map(({name, color}) => (
+                  {labels.nodes.map(({name, color}, index) => (
                     name.includes("Code")
-                      ? <div key={name} data-name={name} title={name} className="issueLabel auditLabel"
+                      ? <div key={index + '_' + name} data-name={name} title={name} className="issueLabel auditLabel"
                           style={{backgroundColor: '#' + color, color: '#' + color}}>
                         </div>
                     : ''
@@ -51,9 +51,9 @@ class Issue extends Component {
               </td>
               <td>
                 <div className="labelWrapper">
-                  {labels.nodes.map(({name, color}) => (
+                  {labels.nodes.map(({name, color}, index) => (
                     name.includes("Docs")
-                      ? <div key={name} data-name={name} title={name} className="issueLabel auditLabel"
+                      ? <div key={index + '_' + name} data-name={name} title={name} className="issueLabel auditLabel"
                           style={{backgroundColor: '#' + color, color: '#' + color}}>
                         </div>
                     : ''
@@ -62,9 +62,9 @@ class Issue extends Component {
               </td>
               <td>
                 <div className="labelWrapper">
-                  {labels.nodes.map(({name, color}) => (
+                  {labels.nodes.map(({name, color}, index) => (
                     name.includes("UI Kit")
-                      ? <div key={name} data-name={name} title={name} className="issueLabel auditLabel"
+                      ? <div key={index + '_' + name} data-name={name} title={name} className="issueLabel auditLabel"
                           style={{backgroundColor: '#' + color, color: '#' + color}}>
                         </div>
                     : ''

@@ -53,9 +53,9 @@ class AuroContributingIssues extends MarkdownPageWrapper {
             </tr>
           </thead>
           <tbody>
-            {data.map(({name, cat, color, description, process}) => (
+            {data.map(({name, cat, color, description, process}, index) => (
               cat === 'default'
-                ? <Template key={name} name={name} color={color} description={description} process={process}/>
+                ? <Template key={index + '_' + name} name={name} color={color} description={description} process={process}/>
                 : ''
             ))}
           </tbody>
@@ -71,9 +71,9 @@ class AuroContributingIssues extends MarkdownPageWrapper {
             </tr>
           </thead>
           <tbody>
-            {data.map(({name, cat, color, description, process}) => (
+            {data.map(({name, cat, color, description, process}, index) => (
               cat === 'status'
-                ? <Template key={name} name={name} color={color} description={description} process={process}/>
+                ? <Template key={index + '_' + name} name={name} color={color} description={description} process={process}/>
                 : ''
             ))}
           </tbody>
@@ -89,9 +89,9 @@ class AuroContributingIssues extends MarkdownPageWrapper {
             </tr>
           </thead>
           <tbody>
-            {data.map(({name, cat, color, description, process}) => (
+            {data.map(({name, cat, color, description, process}, index) => (
               cat === 'type'
-                ? <Template key={name} name={name} color={color} description={description} process={process}/>
+                ? <Template key={index + '_' + name} name={name} color={color} description={description} process={process}/>
                 : ''
             ))}
           </tbody>

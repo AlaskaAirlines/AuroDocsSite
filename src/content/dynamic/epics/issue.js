@@ -27,15 +27,15 @@ class Issue extends Component {
               <auro-hyperlink href={url} target="_blank">{title} #{number}</auro-hyperlink>
             </td>
             <td className="labelWrapper">
-              {labels.nodes.map(({name, color, description}) => (
-                <div key={name} title={description} className="issueLabel" style={{backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
+              {labels.nodes.map(({name, color, description}, index) => (
+                <div key={index + '_' + name} title={description} className="issueLabel" style={{backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
                   {name}
                 </div>
               ))}
             </td>
             <td>
-              {projectCards.nodes.map(({column}) => (
-                <div key={column.name}>
+              {projectCards.nodes.map(({column}, index) => (
+                <div key={index + '_' + column.name}>
                   {column.name}
                 </div>
               ))}

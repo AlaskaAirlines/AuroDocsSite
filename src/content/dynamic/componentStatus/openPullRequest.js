@@ -82,8 +82,8 @@ class PullRequestStatus extends Component {
                 if (loading) return <tr><td></td></tr>;
                 if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
-                return data.organization.team.repositories.nodes.map(({name, isPrivate, description, url, homepageUrl, id, issues, releases, pullRequests}) => (
-                  <Pr key={id}
+                return data.organization.team.repositories.nodes.map(({name, isPrivate, description, url, homepageUrl, id, issues, releases, pullRequests}, index) => (
+                  <Pr key={index + '_' + id}
                     isPrivate={isPrivate}
                     pullRequests={pullRequests}
                     name={name}

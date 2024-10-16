@@ -25,8 +25,8 @@ class Issue extends Component {
           </tr>
         </thead>
         <tbody>
-          {this.props.issues.map(({title, url, number, labels, assignees, comments}) => (
-            <tr key={title}>
+          {this.props.issues.map(({title, url, number, labels, assignees, comments}, index) => (
+            <tr key={index + '_' +title}>
               <td className="auro_table--issue">
                 <div>
                   <auro-hyperlink href={url} target="_blank">{title}</auro-hyperlink>
@@ -35,17 +35,17 @@ class Issue extends Component {
                   <small> #{number}</small>
                 </div>
                 <div className="githubAvatar--wrapper">
-                  <small>Assigned: </small>{assignees.nodes.map(({avatarUrl, name, id}) => (
+                  <small>Assigned: </small>{assignees.nodes.map(({avatarUrl, name, id}, index) => (
                     assignees.nodes.length > 0
-                    ? <img key={id} src={avatarUrl} className="githubAvatar" alt={name} title={name} />
+                    ? <img key={index + '_' + id} src={avatarUrl} className="githubAvatar" alt={name} title={name} />
                     : ''
                   ))}
                 </div>
               </td>
               <td className="auro_table--labels">
                 <div className="labelWrapper">
-                  {labels.nodes.map(({name, color, description}) => (
-                    <div key={name} title={description} className="issueLabel" style={{backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
+                  {labels.nodes.map(({name, color, description}, index) => (
+                    <div key={index + '_' + name} title={description} className="issueLabel" style={{backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
                       {name}
                     </div>
                   ))}
@@ -56,8 +56,8 @@ class Issue extends Component {
                   <div className="auro-markdown">
                     <ReactMarkdown children={body} />
 
-                    {comments.nodes.map(({author}) => (
-                      <img key={createdAt} src={author.avatarUrl} className="githubAvatar" alt="avatar" title={author.login} />
+                    {comments.nodes.map(({author}, index) => (
+                      <img key={index + '_' + createdAt} src={author.avatarUrl} className="githubAvatar" alt="avatar" title={author.login} />
                     ))}<small>
                       <auro-datetime utc={createdAt} weekday="long"></auro-datetime>
                     </small>
