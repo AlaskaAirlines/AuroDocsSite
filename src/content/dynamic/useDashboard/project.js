@@ -7,7 +7,7 @@ class Project extends Component {
       <div key={this.props.name} className="projectWrapper">
         <h1 className="auro_heading auro_heading--800">{this.props.name}</h1>
         {this.props.repos.map(({Name, Files}) => (
-          <Repository key={Name} name={Name} files={Files} />
+          <Repository key={index + '_' + name} name={Name} files={Files} />
         ))}
       </div>
     )

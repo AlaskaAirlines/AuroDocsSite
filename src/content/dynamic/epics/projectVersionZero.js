@@ -74,9 +74,9 @@ class AllEpics extends Component {
             if (loading) return <p className="isLoading">Loading...</p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
-            return data.organization.team.repositories.nodes.map(({ name, issues }) => (
+            return data.organization.team.repositories.nodes.map(({ name, issues }, index) => (
               issues.nodes.length > 0
-                ? <Epic key={name} name={name} epics={issues.nodes} />
+                ? <Epic key={index + '_' + name} name={name} epics={issues.nodes} />
                 : ''
             ));
           }}
@@ -87,9 +87,9 @@ class AllEpics extends Component {
             if (loading) return <p></p>;
             if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
-            return data.organization.team.repositories.nodes.map(({ name, issues }) => (
+            return data.organization.team.repositories.nodes.map(({ name, issues }, index) => (
               issues.nodes.length > 0
-                ? <Issue key={name} name={name} issues={issues.nodes} />
+                ? <Issue key={index + '_' + name} name={name} issues={issues.nodes} />
                 : ''
             ));
           }}

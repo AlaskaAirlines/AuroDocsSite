@@ -73,9 +73,9 @@ class HelpWanted extends Component {
               if (loading) return <auro-loader laser onlight></auro-loader>;
               if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
-              return data.organization.team.repositories.nodes.map(({ name, issues }) => (
+              return data.organization.team.repositories.nodes.map(({ name, issues }, index) => (
                 issues.nodes.length > 0
-                  ? <Issues key={name} name={name} issues={issues.nodes} />
+                  ? <Issues key={index + '_' + name} name={name} issues={issues.nodes} />
                   : ''
               ));
             }}

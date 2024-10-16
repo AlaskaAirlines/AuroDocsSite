@@ -43,8 +43,8 @@ class UseDashboard extends Component {
       <section id="releases-by-sprint">
         <h1 className="auro_heading auro_heading--display">Auro use dashboard</h1>
         <p>The following summary data is a list of all the projects in ADO that are currently using Orion/Auro Design System resources. Be sure to review the <auro-hyperlink href="https://auro.alaskaair.com/component-status" target="_blank">current component status</auro-hyperlink> for applicable updates.</p>
-        {this.state.isLoading ? <p className="isLoading">Loading...</p> : this.state.Projects.map(({Name, Repositories}) => (
-          <Project key={Name} name={Name} repos={Repositories} />
+        {this.state.isLoading ? <p className="isLoading">Loading...</p> : this.state.Projects.map(({Name, Repositories}, index) => (
+          <Project key={index + '_' + Name} name={Name} repos={Repositories} />
         ))}
       </section>
     );

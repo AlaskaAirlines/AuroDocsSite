@@ -49,8 +49,8 @@ class AllIssues extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.issues.map(({title, body, url, labels, number, createdAt, assignees, comments}) => (
-              <tr key={title}>
+            {this.props.issues.map(({title, body, url, labels, number, createdAt, assignees, comments}, index) => (
+              <tr key={index + '_' + title}>
                 <td className="auro_table--issue">
                   <div>
                     <button className="imgIcon" onClick={() => this.toggleDialog(`#dialog-${number}`)} aria-label="Go to Github Site">
@@ -69,28 +69,28 @@ class AllIssues extends Component {
                     </auro-drawer>
                   </div>
                   <div className="labelWrapper util_stackPaddingMd--top">
-                    {labels.nodes.map(({name, color, description}) => (
-                      <div key={name} title={description} className="issueLabel" style={{'font-weight':'bold', backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
+                    {labels.nodes.map(({name, color, description}, index) => (
+                      <div key={index + '_' + name} title={description} className="issueLabel" style={{'font-weight':'bold', backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
                         {name}
                       </div>
                     ))}
                   </div>
                   <div className="githubAvatar--wrapper">
                     <small>Created at: <auro-datetime utc={createdAt} type="numeric"></auro-datetime></small><br/>
-                    <small>Assigned: </small>{assignees.nodes.map(({avatarUrl, name, id}) => (
+                    <small>Assigned: </small>{assignees.nodes.map(({avatarUrl, name, id}, index) => (
                       assignees.nodes.length > 0
-                      ? <img key={id} src={avatarUrl} className="githubAvatar" alt={name} title={name} />
+                      ? <img key={index + '_' + id} src={avatarUrl} className="githubAvatar" alt={name} title={name} />
                       : 'unassigned'
                     ))}
                   </div>
                 </td>
                 <td className="auro_table--notes">
-                  {comments.nodes.map(({body, createdAt}) => (
-                    <div className="auro-markdown" key={createdAt}>
+                  {comments.nodes.map(({body, createdAt}, index) => (
+                    <div className="auro-markdown" key={index + '_' + createdAt}>
                       <ReactMarkdown children={body} />
 
-                      {comments.nodes.map(({author}) => (
-                        <img key={createdAt} src={author.avatarUrl} className="githubAvatar" alt="avatar" title={author.login} />
+                      {comments.nodes.map(({author}, index) => (
+                        <img key={index + '_' + createdAt} src={author.avatarUrl} className="githubAvatar" alt="avatar" title={author.login} />
                       ))}<small>
                         <auro-datetime utc={createdAt} weekday="long"></auro-datetime>
                       </small>
