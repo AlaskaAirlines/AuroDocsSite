@@ -48,10 +48,10 @@ class ColorsOverview extends Component {
     if(pattern.test(props.href)) {
 
       // filter out links that are set to internal URLs
-      if (props.href.includes("auro.alaskaair.com")) {
+      if (props.href.toString().includes("auro.alaskaair.com")) {
 
         let url = props.href
-        url = url.replace(/^.*\/\/[^/]+/, '')
+        url = url.toString().replace(/^.*\/\/[^/]+/, '')
         return <a href={url}>{props.children}</a>
       }
 

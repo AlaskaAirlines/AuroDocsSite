@@ -12,7 +12,6 @@ class LabsRepo extends Component {
               <small><auro-hyperlink target="_blank" href={`https://github.com/AlaskaAirlines/${this.props.name}/issues`}>Issues</auro-hyperlink></small>
             </td>
             <td>
-              {console.log(this.props.repositoryTopics.nodes)}
               {
                 this.props.repositoryTopics.nodes.map(({topic}) => (
                   topic.name === 'auro'

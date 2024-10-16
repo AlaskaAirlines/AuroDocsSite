@@ -24,9 +24,9 @@ class AuroContributing extends MarkdownPageWrapper {
     renderer.link = function(href, title, text) {
       const link = marked.Renderer.prototype.link.call(this, href, title, text);
       let url = href
-      url = url.replace(/^.*\/\/[^/]+/, '')
+      url = url.toString().replace(/^.*\/\/[^/]+/, '')
 
-      if (href.includes("auro.alaskaair.com")) {
+      if (href.toString().includes("auro.alaskaair.com")) {
 
         return link.replace("href",`href="${url}"`);
       } else {
