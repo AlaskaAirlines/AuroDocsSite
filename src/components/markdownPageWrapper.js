@@ -38,7 +38,7 @@ export class MarkdownPageWrapper extends Component {
       // console.log(props.href)
 
       let url = props.href
-      url = url.replace(relativePattern, 'https://github.com/stylelint/stylelint/blob/master/')
+      url = url.toString().replace(relativePattern, 'https://github.com/stylelint/stylelint/blob/master/')
 
       console.log(url)
     }
@@ -46,10 +46,10 @@ export class MarkdownPageWrapper extends Component {
     if (pattern.test(props.href)) {
 
       // filter out links that are set to internal URLs
-      if (props.href.includes("auro.alaskaair.com")) {
+      if (props.href.toString().includes("auro.alaskaair.com")) {
 
         let url = props.href
-        url = url.replace(/^.*\/\/[^/]+/, '')
+        url = url.toString().replace(/^.*\/\/[^/]+/, '')
         return <a href={url}>{props.children}</a>
       }
 
@@ -73,7 +73,7 @@ export class MarkdownPageWrapper extends Component {
     if (relativePattern.test(props.href)) {
 
       let url = props.href
-      url = url.replace(relativePattern, 'https://github.com/stylelint/stylelint/blob/master/')
+      url = url.toString().replace(relativePattern, 'https://github.com/stylelint/stylelint/blob/master/')
 
       return <a href={url} target="_blank" className="externalLink" rel="noopener noreferrer">
         {props.children}
@@ -84,10 +84,10 @@ export class MarkdownPageWrapper extends Component {
     if (pattern.test(props.href)) {
 
       // filter out links that are set to internal URLs
-      if (props.href.includes("auro.alaskaair.com")) {
+      if (props.href.toString().includes("auro.alaskaair.com")) {
 
         let url = props.href
-        url = url.replace(/^.*\/\/[^/]+/, '')
+        url = url.toString().replace(/^.*\/\/[^/]+/, '')
         return <a href={url}>{props.children}</a>
       }
 
