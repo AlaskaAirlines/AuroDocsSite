@@ -50,9 +50,7 @@ class RenderMarkdownPage extends MarkdownPageWrapper {
         return link.replace(`href`,`href="${url}"`);
       } else {
 
-        const newLink = `<a href="${href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
-
-        return newLink;
+        return `<a href="${href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
       }
     };
 

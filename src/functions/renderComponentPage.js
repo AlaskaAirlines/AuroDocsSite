@@ -243,7 +243,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
       if (href.toString().includes("auro.alaskaair.com") || href.toString().startsWith('#')) {
         return link.replace(`href`,`href="${url}"`);
       } else {
-        return newLink = `<a href="${href.href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
+        return `<a href="${href.href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
       }
     };
 
