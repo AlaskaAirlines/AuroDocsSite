@@ -45,12 +45,14 @@ class RenderMarkdownPage extends MarkdownPageWrapper {
       let url = href
       url = url.toString().replace(/^.*\/\/[^/]+/, '')
 
+      text = text || href.text;
+
       if (href.toString().includes("auro.alaskaair.com")) {
 
         return link.replace(`href`,`href="${url}"`);
       } else {
 
-        return `<a href="${href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
+        return `<a href="${href.href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
       }
     };
 
