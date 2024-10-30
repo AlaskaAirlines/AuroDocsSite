@@ -404,7 +404,7 @@ class ComponentStatus extends Component {
                 if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
                 return data.organization.team.repositories.nodes.map(({name, isPrivate, description, url, homepageUrl, id, defaultBranchRef, issues, releases, pullRequests}, index) => (
-                  <Repo key={index + '_' + id}
+                  <Repo key={index + '_' + name}
                     isPrivate={isPrivate}
                     pullRequests={pullRequests}
                     name={name}
@@ -547,7 +547,7 @@ class ComponentStatus extends Component {
                 if (loading) return <tr><td></td></tr>;
                 if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
-                return data.organization.repositories.nodes.map(({name, isPrivate, description, url, id, defaultBranchRef, repositoryTopics, isArchived, createdAt}) => (
+                return data.organization.repositories.nodes.map(({name, isPrivate, description, url, id, defaultBranchRef, repositoryTopics, isArchived, createdAt}, index) => (
                   <LabsRepo key={index + '_' + id}
                     isPrivate={isPrivate}
                     name={name}
