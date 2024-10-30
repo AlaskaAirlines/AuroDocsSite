@@ -404,7 +404,7 @@ class ComponentStatus extends Component {
                 if (error) return <tr><td>We are unable to connect to GitHub at the moment, please try back later.</td></tr>;
 
                 return data.organization.team.repositories.nodes.map(({name, isPrivate, description, url, homepageUrl, id, defaultBranchRef, issues, releases, pullRequests}, index) => (
-                  <Repo key={index + '_' + name}
+                  <Repo key={index + '_' + id}
                     isPrivate={isPrivate}
                     pullRequests={pullRequests}
                     name={name}
