@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm'
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight";
+import rehypeExternalLinks from "rehype-external-links";
 import ExternalLink from '@alaskaairux/icons/dist/icons/interface/external-link-sm.svg?react';
 
 export class RawMarkdownWrapper extends Component {
@@ -94,7 +95,7 @@ export class ExternalMarkdownWrapper extends RawMarkdownWrapper {
           <ReactMarkdown
             children={this.state.docsGenerator}
             remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[rehypeHighlight,rehypeRaw]}
+            rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
             components={{
               heading: this.headingRenderer,
               link: this.linkRenderer
@@ -119,7 +120,7 @@ export class InternalMarkdownWrapper extends RawMarkdownWrapper {
           <ReactMarkdown
             children={this.state.docsGenerator}
             remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[rehypeHighlight,rehypeRaw]}
+            rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
             components={{
               heading: this.headingRenderer,
               link: this.linkRenderer

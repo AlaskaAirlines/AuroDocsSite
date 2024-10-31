@@ -1,13 +1,10 @@
-import React from "react";
-import { marked } from 'marked';
-import Prism from 'prismjs';
-import 'prismjs/themes/prism.css';
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 import LinkIcons from '~/components/linkIcons';
 import { NavLink } from "react-router-dom";
 import { registerCustomComponent } from "~/content/utils/registerCustomComponent";
 import packageJson from 'ROOT/package.json';
 import Query from '~/functions/renderQuery'
+import RenderRemoteMarkdown from '~/functions/RenderRemoteMarkdown';
 
 // Imports for the Release page
 import Release from '~/content/dynamic/releaseDashboard/releases';
@@ -210,48 +207,6 @@ class AuroComponentContent extends MarkdownPageWrapper {
     this.setMarkdownContent();
   }
 
-  /**
-   * Fetch the markdown file and render the content.
-   * @param {string} markdown - The path to the markdown file.
-   * @param {string} containerSelector - The selector for the container to render the markdown into.
-   * @private
-   * @returns {void}
-   */
-  getMarkdownText(markdown, containerSelector) {
-    if (!containerSelector) {
-      containerSelector = '.auro-markdown';
-    }
-
-    this.parseRoute();
-
-    fetch(markdown)
-        .then((response) => response.text())
-        .then((text) => {
-          const rawHtml = marked.parse(text);
-          document.querySelector(containerSelector).innerHTML = rawHtml;
-          Prism.highlightAll();
-        });
-
-    const renderer = new marked.Renderer();
-    renderer.link = function(href, title, text) {
-      const link = marked.Renderer.prototype.link.call(this, href, title, text);
-      let url = href;
-      url = url.toString().replace(/^.*\/\/[^/]+/, '');
-
-      text = text || href.text;
-
-      if (href.toString().includes("auro.alaskaair.com") || href.toString().startsWith('#')) {
-        return link.replace(`href`,`href="${url}"`);
-      } else {
-        return `<a href="${href.href}"  rel="noopener noreferrer" target="_blank" className="externalLink">${text} <auro-icon customColor category="interface" name="external-link-md"></auro-icon></a>`
-      }
-    };
-
-    marked.setOptions({
-        renderer: renderer
-    });
-  }
-
   componentDidMount() {
     if (!this.releasePage) {
       this.writeComponentName();
@@ -358,13 +313,15 @@ class AuroComponentContent extends MarkdownPageWrapper {
 
           <section
             className="auro-markdown"
-            id="figma"
-            dangerouslySetInnerHTML={this.getMarkdownText(this.figmaContent, '#figma')}/>
+            id="figma">
+              <RenderRemoteMarkdown markdownUrl={this.figmaContent} />
+          </section>
 
           <section
             className="auro-markdown"
-            id="designNotes"
-            dangerouslySetInnerHTML={this.getMarkdownText(this.designNotesContent, '#designNotes')}/>
+            id="designNotes">
+            <RenderRemoteMarkdown markdownUrl={this.designNotesContent} />
+          </section>
         </section>
       );
     } else {
@@ -375,7 +332,9 @@ class AuroComponentContent extends MarkdownPageWrapper {
 
           <section
             className="auro-markdown"
-            dangerouslySetInnerHTML={this.getMarkdownText(this.markdownContent)}/>
+            >
+              <RenderRemoteMarkdown markdownUrl={this.markdownContent} />
+            </section>
         </section>
       );
     }

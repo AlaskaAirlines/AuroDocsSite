@@ -3,6 +3,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
+import rehypeHighlight from "rehype-highlight";
+import rehypeExternalLinks from "rehype-external-links";
 
 class AllIssues extends Component {
   getContrastYIQ(hexcolor) {
@@ -60,7 +62,10 @@ class AllIssues extends Component {
                       <span slot="header">{title}</span>
                       <span slot="content">
                         <div className="auro-markdown util_wrap">
-                          <ReactMarkdown children={body} />
+                          <ReactMarkdown children={body}
+                          remarkPlugins={[remarkGfm,remarkRehype]}
+                          rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
+                          />
                       </div>
                       </span>
                       <span slot="footer">

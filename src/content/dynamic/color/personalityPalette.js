@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm'
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight";
+import rehypeExternalLinks from "rehype-external-links";
 import getTokens from "~/functions/getTokens"
 import overview from './personalityPalette.md'
 import { Nav} from './nav.js';
@@ -108,7 +109,7 @@ class ColorsOverview extends Component {
           <ReactMarkdown
             children={this.state.overviewBuild}
             remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[rehypeHighlight,rehypeRaw]}
+            rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
             components={{
               heading: this.headingRenderer,
               link: this.linkRenderer
