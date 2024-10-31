@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm'
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight";
+import rehypeExternalLinks from "rehype-external-links";
 // import markdownContent from '@alaskaairux/auro-[Component]/docs/api.md'
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
@@ -30,7 +31,7 @@ class Auro[Component]Api extends MarkdownPageWrapper {
           <ReactMarkdown
             children={this.state.contentBuild}
             remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[rehypeHighlight,rehypeRaw]}
+            rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
             components={{
               heading: this.headingRenderer
             }}/>

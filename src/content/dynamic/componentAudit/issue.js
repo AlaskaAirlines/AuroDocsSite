@@ -3,6 +3,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
+import rehypeHighlight from "rehype-highlight";
+import rehypeExternalLinks from "rehype-external-links";
 
 class Issue extends Component {
 
@@ -74,7 +76,11 @@ class Issue extends Component {
               <td>
                 {comments.nodes.map(({body, createdAt}) => (
                   <div className="auro-markdown">
-                    <ReactMarkdown children={body} />
+                    <ReactMarkdown 
+                    children={body} 
+                    remarkPlugins={[remarkGfm,remarkRehype]}
+                    rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
+                    />
                     <small>
                       <auro-datetime utc={createdAt} weekday="long"></auro-datetime>
                     </small>

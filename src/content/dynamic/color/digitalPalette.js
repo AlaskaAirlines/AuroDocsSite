@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm'
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight";
+import rehypeExternalLinks from "rehype-external-links";
 import { Nav } from './nav.js';
 import ExternalLink from '@alaskaairux/icons/dist/icons/interface/external-link-sm.svg?react';
 
@@ -193,7 +194,7 @@ class ColorsOverview extends Component {
           <ReactMarkdown
             children={this.state.transparentColorsBuild}
             remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[rehypeHighlight,rehypeRaw]}
+            rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
             components={{
               heading: this.headingRenderer,
               link: this.linkRenderer

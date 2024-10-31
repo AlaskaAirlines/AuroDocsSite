@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import LinkIcons from '~/components/linkIcons';
-import Highlight from 'react-highlight';
 import header from '~/assets/typography/header.png';
 import allTokens from '@aurodesignsystem/design-tokens/dist/tokens/JSObject--allTokens.js';
 import _getTokens from "~/functions/getTokens";
-import 'highlight.js/styles/github.css';
+import '~/sass/markdown.scss';
 import { Nav } from './nav.js';
 import packageJson from 'ROOT/package.json';
 

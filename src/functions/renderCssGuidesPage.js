@@ -1,4 +1,5 @@
 import RenderMarkdownPage from "~/functions/renderMarkdownPage";
+import RenderRemoteMarkdown from "~/functions/renderRemoteMarkdown";
 import { NavLink } from "react-router-dom";
 
 class AuroContent extends RenderMarkdownPage {
@@ -11,10 +12,9 @@ class AuroContent extends RenderMarkdownPage {
           <NavLink role="tab" end className="tab link" to={`/css/guidelines`} >Style guidelines</NavLink>
           <NavLink role="tab" end className="tab link" to={`/css/idiomatic-css`} >Idiomatic CSS</NavLink>
         </div>
-        <section
-          className="auro-markdown"
-          dangerouslySetInnerHTML={this.getMarkdownText()}
-        />
+        <section className="auro-markdown">
+            <RenderRemoteMarkdown markdownUrl={this.markdownContent} />
+        </section>
       </section>
     );
   }

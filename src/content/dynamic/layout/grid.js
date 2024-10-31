@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm'
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight";
+import rehypeExternalLinks from "rehype-external-links";
 import content from './grid.md'
 import { Nav} from './nav.js';
 import header from './grid_header.png';
@@ -53,7 +54,7 @@ class Colors extends Component {
           <ReactMarkdown
             children={this.state.contentBuild}
             remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[rehypeHighlight,rehypeRaw]}
+            rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
             components={{
               heading: this.headingRenderer
             }}/>

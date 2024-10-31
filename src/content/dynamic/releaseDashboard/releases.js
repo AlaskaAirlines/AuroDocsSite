@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm'
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight";
+import rehypeExternalLinks from "rehype-external-links";
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
 class Release extends MarkdownPageWrapper {
@@ -18,8 +19,9 @@ class Release extends MarkdownPageWrapper {
             <div className="auro-markdown releaseWrapper--data">
               <ReactMarkdown
                 children={description}
+                remarkPlugins={[remarkGfm,remarkRehype]}
+                rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
                 components={{
-                  
                   heading: this.headingRenderer,
                   link: this.linkRenderer
                 }}
