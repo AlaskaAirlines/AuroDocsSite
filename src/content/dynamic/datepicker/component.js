@@ -8,7 +8,6 @@ class AuroContent extends AuroComponentContent {
 
     this.markdownContentPath = 'demo/index.md';
     this.hasFigma = true;
-    this.hasCustomElementRegistration = false;
   };
 
   componentDidMount() {

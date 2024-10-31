@@ -1,4 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
+import '@aurodesignsystem/auro-icon/demo/index.min.js';
 import { Nav } from './nav';
 
 class AuroContent extends AuroComponentContent {

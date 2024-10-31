@@ -1,4 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
+import '@aurodesignsystem/auro-accordion/demo/index.min.js';
 
 class AuroContent extends AuroComponentContent {
 

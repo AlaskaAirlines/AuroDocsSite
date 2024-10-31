@@ -1,4 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
+import '@aurodesignsystem/auro-avatar/demo/index.min.js';
 
 class AuroContent extends AuroComponentContent {
 
@@ -6,7 +7,6 @@ class AuroContent extends AuroComponentContent {
     super(props);
 
     this.markdownContentPath = 'demo/index.md';
-    this.hasCustomElementRegistration = false;
   };
 }
 
