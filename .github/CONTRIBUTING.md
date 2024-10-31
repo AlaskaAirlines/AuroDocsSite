@@ -32,18 +32,24 @@ The name of the feature branch should be descriptive as to the nature of the wor
 
 ### Conventional Commits
 
-This project utilizes [Conventional Commits](https://www.conventionalcommits.org/) to auto-generate release verions, based on the [Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
+This project follows [Conventional Commits](https://www.conventionalcommits.org/) to auto-generate release versions based on [Angular Commit Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
 
+Commit messages follow the format:
 
 ```
 <type>[optional scope]: <description>
 ```
 
-All commit messages must be prefixed with a specific type so that the semver release configuration can analyze the commit and apply the correct version release. Please see the following types with their respective meanings.
+All messages must include a type prefix for semver analysis. Below are types with their respective meanings.
 
-#### MAJOR
+#### MAJOR Release
 
-For a MAJOR release, you MUST follow this template. The use of `perf:` and `BREAKING CHANGE:` are needed in order to push a major release.
+To trigger a **MAJOR** version update, use the following structure:
+
+- **Prefix with `perf:`**
+- **Include `BREAKING CHANGE:` in the message body**.
+
+Example:
 
 ```
 perf(pencil): remove graphiteWidth option
@@ -52,49 +58,51 @@ BREAKING CHANGE: The graphiteWidth option has been removed.
 The default graphite width of 10mm is always used for performance reasons.
 ```
 
-#### MINOR
+#### MINOR Release
+
+Example:
+
 ```
 feat(pencil): add 'graphiteWidth' option
 ```
 
-#### PATCH
+#### PATCH Release
+
+Example:
+
 ```
 fix(pencil): stop graphite breaking when too much pressure applied
 ```
 
-#### Other commit types
+### Commit Types Table
 
-| type | description |
-|---|---|
-| build | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm) |
-| ci | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) |
-| docs | Documentation only changes |
-| feat | A new feature (this correlates with `MINOR` in semantic versioning) |
-| fix | A bug fix (this correlates with `PATCH` in semantic versioning) |
-| perf | A code change that improves performance |
-| BREAKING CHANGE | A code change that is not backwards compatible (correlating with `MAJOR` in semantic versioning) |
-| refactor | A code change that neither fixes a bug nor adds a feature |
-| style | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc) |
-| test | Adding missing tests or correcting existing tests  |
+| Type             | Description                                                                                                   | Version Level |
+|------------------|---------------------------------------------------------------------------------------------------------------|---------------|
+| `perf`           | Code change that improves performance                                                                         | MAJOR          |
+| **`BREAKING CHANGE`** | Non-backward compatible change (must be in the body, not in title)                                      | MAJOR         |
+| `feat`           | Adds a new feature                                                                                            | MINOR         |
+| `build`          | Changes affecting the build system or external dependencies (e.g., gulp, npm)                                 | PATCH          |
+| `ci`             | Changes to CI files and scripts (e.g., Travis, CircleCI)                                                      | PATCH          |
+| `docs`           | Documentation-only changes                                                                                    | PATCH          |
+| `fix`            | Bug fixes                                                                                                     | PATCH         |
+| `refactor`       | Code change that neither fixes a bug nor adds a feature                                                       | PATCH          |
+| `style`          | Code changes that don't affect logic (whitespace, formatting, etc.)                                           | PATCH          |
+| `test`           | Adds or corrects tests                                                                                        | PATCH          |
 
-#### Git commit messages
 
-Once you have completed your feature update, please commit all changes to the branch. All commit messages should use an **imperative mood**.
+#### Git Commit Message Structure
 
-Imperative mood simply means _“spoken or written as if giving a command or instruction”_. A few examples are:
+Once you have completed your feature update, please commit all changes to the branch. All commit messages should use an imperative mood.
 
-* Clean your room
-* Close the door
-* Take out the trash
+Imperative mood simply means “spoken or written as if giving a command or instruction”. A few examples are:
 
+Clean your room
+Close the door
+Take out the trash
 A properly formed Git commit subject line should always be able to complete the following sentence:
 
-_"If applied, this commit will [your subject line here]."_
-
-For example:
-
-* If applied, this commit will `refactor component X for accessibility`
-* If applied, this commit will `add feature Y to component X`
+- If applied, this commit will `refactor component X for accessibility`
+- If applied, this commit will `add feature Y to component X`
 
 Example messages when using Conventional Commits:
 
