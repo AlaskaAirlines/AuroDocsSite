@@ -105,12 +105,12 @@ a[rel="nofollow"]:not(:has(img)) span {
   font-size: 11px;
   line-height: 16px;
   color: #3e5915;
-  background: var(--ds-color-container-secondary-default, #f7f7f7) !important;
+  background: #f7f7f7 !important;
   border: unset !important;
 }
 
 .token.property,.token.tag,.token.boolean,.token.number,.token.constant,.token.symbol,.token.deleted {
-  color: #905
+  color: #990055
 }
 
 .hljs-keyword {
@@ -127,10 +127,10 @@ a[rel="nofollow"]:not(:has(img)) span {
   color: #3e5915;
 }
 .hljs-string {
-  color: #690;
+  color: #669900;
 }
 .hljs-title {
-  color: var(--ds-color-brand-flamingo-500, #f7738e);
+  color: #b82b47;
 }
 .hljs-section {
   color: #2c009f;
@@ -197,5 +197,5 @@ a[rel="nofollow"]:not(:has(img)) span {
 }
 
 code:not(.html):not(.css):not(.js) {
-  color: var(--ds-color-brand-flamingo-500, #f7738e);
+  color: #990055
 }
