@@ -1,11 +1,7 @@
 import React from "react";
 import { Nav } from './nav';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'
-import remarkRehype from "remark-rehype";
-import rehypeRaw from "rehype-raw";
-import rehypeHighlight from "rehype-highlight";
-import rehypeExternalLinks from "rehype-external-links";
+import ReactMarkdown from "react-markdown";
+import markdownOptions from "~/functions/markdownOptions";
 // import markdownContent from '@alaskaairux/auro-[Component]/README.md'
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
@@ -31,12 +27,7 @@ class AuroContributingGitWorkflow extends MarkdownPageWrapper {
         <section className="auro-markdown">
           <ReactMarkdown
             children={this.state.contentBuild}
-            remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
-            components={{
-              heading: this.headingRenderer,
-              link: this.linkRenderer
-            }}/>
+            {... markdownOptions}/>
         </section>
       </section>
     );

@@ -54,7 +54,7 @@ class Issue extends Component {
               <td className="auro_table--notes">
                 {comments.nodes.map(({body, createdAt}) => (
                   <div className="auro-markdown">
-                    <ReactMarkdown children={body} />
+                    <ReactMarkdown children={body} {... markdownOptions}/>
 
                     {comments.nodes.map(({author}, index) => (
                       <img key={index + '_' + createdAt} src={author.avatarUrl} className="githubAvatar" alt="avatar" title={author.login} />

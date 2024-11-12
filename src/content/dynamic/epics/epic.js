@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'
-import remarkRehype from "remark-rehype";
-import rehypeRaw from "rehype-raw";
-import rehypeHighlight from "rehype-highlight";
-import rehypeExternalLinks from "rehype-external-links";
+import markdownOptions from "~/functions/markdownOptions";
 
 class Epic extends Component {
   render() {
@@ -16,8 +12,7 @@ class Epic extends Component {
             <auro-hyperlink href={url} target="_blank">See epic in Github</auro-hyperlink>
             <div className="auro-markdown epicWrapper--data">
               <ReactMarkdown children={body}
-              remarkPlugins={[remarkGfm,remarkRehype]}
-              rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
+              {... markdownOptions}
               />
             </div>
           </div>
