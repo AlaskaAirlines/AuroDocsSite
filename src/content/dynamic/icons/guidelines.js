@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'
-import remarkRehype from "remark-rehype";
-import rehypeRaw from "rehype-raw";
-import rehypeHighlight from "rehype-highlight";
-import rehypeExternalLinks from "rehype-external-links";
+import ReactMarkdown from "react-markdown";
+import markdownOptions from "~/functions/markdownOptions";
 import guidelines from './guidelines.md'
 import { Nav} from './nav.js';
 
@@ -52,11 +48,7 @@ class Colors extends Component {
         <section className="auro-markdown">
           <ReactMarkdown
             children={this.state.guidelinesBuild}
-            remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
-            components={{
-              heading: this.headingRenderer
-            }}/>
+            {... markdownOptions}/>
         </section>
       </section>
     );

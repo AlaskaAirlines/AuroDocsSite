@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-import rehypeHighlight from "rehype-highlight";
-import rehypeExternalLinks from "rehype-external-links";
-import rehypeRaw from "rehype-raw";
-//import '~/sass/markdown.scss';
-import 'prismjs/themes/prism.css';
+import markdownOptions from "~/functions/markdownOptions";
+import '~/sass/markdown.scss';
 
 /**
  * Fetch the markdown file and render the content.
@@ -32,8 +27,7 @@ const RenderRemoteMarkdown = ({ markdownUrl }) => {
       {text && (
         <ReactMarkdown
           children={text}
-          remarkPlugins={[remarkGfm,remarkRehype]}
-          rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
+          {... markdownOptions}
         />
       )}
     </div>

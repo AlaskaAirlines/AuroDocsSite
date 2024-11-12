@@ -6,6 +6,7 @@ import _getTokens from "~/functions/getTokens";
 import '~/sass/markdown.scss';
 import { Nav } from './nav.js';
 import packageJson from 'ROOT/package.json';
+import Highlight from "react-highlight";
 
 const font = allTokens.font;
 const textBody = allTokens.text.body;

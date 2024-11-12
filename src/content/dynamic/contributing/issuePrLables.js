@@ -1,11 +1,7 @@
 import React from "react";
 import { Nav } from './nav';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'
-import remarkRehype from "remark-rehype";
-import rehypeRaw from "rehype-raw";
-import rehypeHighlight from "rehype-highlight";
-import rehypeExternalLinks from "rehype-external-links";
+import ReactMarkdown from "react-markdown";
+import markdownOptions from "~/functions/markdownOptions";
 import markdownContent from './issuePrLables.md'; // this document needs to be a request against from the file in github, not local
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 import data from './labelSettings.json'; // this data needs to be a request against data file in github, not local
@@ -33,12 +29,7 @@ class AuroContributingIssues extends MarkdownPageWrapper {
         <section className="auro-markdown">
           <ReactMarkdown
             children={this.state.contentBuild}
-            remarkPlugins={[remarkGfm,remarkRehype]}
-            rehypePlugins={[[rehypeExternalLinks, {content: { type: 'text' , value: '' }}], rehypeHighlight,rehypeRaw]}
-            components={{
-              heading: this.headingRenderer,
-              link: this.linkRenderer
-            }}/>
+            {... markdownOptions}/>
         </section>
 
         <auro-header level="2" display="700">Current project labels</auro-header>
