@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav } from './nav';
-import RenderRemoteMarkdown from '~/functions/RenderRemoteMarkdown';
+import RenderRemoteMarkdown from '~/functions/renderRemoteMarkdown';
 // import markdownContent from '@aurodesignsystem/auro-[component]/demo/demo.md'
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
