@@ -1,5 +1,5 @@
 import RenderMarkdownPage from "~/functions/renderMarkdownPage";
-import RenderRemoteMarkdown from '~/functions/RenderRemoteMarkdown';
+import RenderRemoteMarkdown from '~/functions/renderRemoteMarkdown';
 import { NavLink } from "react-router-dom";
 
 class AuroContent extends RenderMarkdownPage {

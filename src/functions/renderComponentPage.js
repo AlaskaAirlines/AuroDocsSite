@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { registerCustomComponent } from "~/content/utils/registerCustomComponent";
 import packageJson from 'ROOT/package.json';
 import Query from '~/functions/renderQuery'
-import RenderRemoteMarkdown from '~/functions/RenderRemoteMarkdown';
+import RenderRemoteMarkdown from '~/functions/renderRemoteMarkdown';
 
 // Imports for the Release page
 import Release from '~/content/dynamic/releaseDashboard/releases';

@@ -1,5 +1,5 @@
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
-import RenderRemoteMarkdown from '~/functions/RenderRemoteMarkdown';
+import RenderRemoteMarkdown from '~/functions/renderRemoteMarkdown';
 
 class RenderMarkdownPage extends MarkdownPageWrapper {
 
