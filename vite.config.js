@@ -8,7 +8,7 @@ export default defineConfig({
     base: '/',
     publicDir: 'public',
     plugins: [svgr(), react()],
-    assetsInclude: ['**/*.md'],
+    assetsInclude: ['**/*.md', '**/*.zip'],
     resolve: {
         alias: {
             "~": path.resolve(__dirname, "./src"),

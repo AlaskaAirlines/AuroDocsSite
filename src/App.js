@@ -129,6 +129,9 @@ import IconsWaysToUse from './content/dynamic/icons/ways-to-use';
 import LayoutGrid from './content/dynamic/layout/grid';
 import LayoutSpacing from './content/dynamic/layout/spacing';
 
+// Utilities
+import ThemeSwitcher from './content/dynamic/utilities/theme-switcher';
+
 // wcss
 import WcssFeatures from './content/dynamic/wcss/features';
 import WcssTests from './content/dynamic/wcss/tests';
@@ -517,6 +520,9 @@ function App() {
               <Route path="/tokenlist" element={<AuroTokenlist />} />
               <Route path="/table" element={<AuroTable />} />
               <Route path="/toast" element={<AuroToast />} />
+
+              {/* Utilities */}
+              <Route path="/utilities/theme-switcher" element={<ThemeSwitcher />} />
 
 
               {/* Getting Started/developers */}
