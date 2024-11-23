@@ -81,7 +81,7 @@ export default function SideNav(props) {
     {
       header: "Utilities",
       items: [
-        { linkTitle: "Theme Switcher", route: "/utilities/theme-switcher", parent: true },
+        { linkTitle: "Auro Theme Switcher", route: "/utilities/theme-switcher", parent: true },
       ]
     },
     {
