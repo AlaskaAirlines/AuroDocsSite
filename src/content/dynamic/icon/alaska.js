@@ -1,12 +1,13 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
 import { Nav } from './nav';
+import content from '@aurodesignsystem/auro-icon/demo/alaska.md';
 
 class AuroContent extends AuroComponentContent {
 
   constructor(props) {
     super(props);
 
-    this.markdownContentPath = 'demo/alaska.md';
+    this.markdownContent = content; 
   };
 
   renderNav() {

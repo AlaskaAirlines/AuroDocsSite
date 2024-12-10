@@ -1,5 +1,6 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
 import { initExamples } from '@aurodesignsystem/auro-input/demo/index.min.js';
+import content from '@aurodesignsystem/auro-input/demo/index.md';
 
 class AuroContent extends AuroComponentContent {
 
@@ -7,7 +8,7 @@ class AuroContent extends AuroComponentContent {
     super(props);
 
     this.hasFigma = true;
-    this.markdownContentPath = 'demo/index.md';
+    this.markdownContent = content; 
   };
 
   componentDidMount() {

@@ -1,5 +1,6 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
 import { initExamples } from '@aurodesignsystem/auro-combobox/demo/api.min.js';
+import content from '@aurodesignsystem/auro-combobox/demo/api.md';
 
 class AuroContent extends AuroComponentContent {
 
@@ -8,7 +9,7 @@ class AuroContent extends AuroComponentContent {
 
     this.hasFigma = true;
     this.hasApiExamples = true;
-    this.markdownContentPath = 'demo/api.md';
+    this.markdownContent = content; 
   };
 
   componentDidMount() {

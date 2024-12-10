@@ -1,11 +1,12 @@
 import AuroComponentContent from "~/functions/renderIconsPage";
+import content from '@alaskaairux/icons/docs/ways-to-use.md';
 
 class AuroContent extends AuroComponentContent {
 
   constructor(props) {
     super(props);
 
-    this.markdownContentPath = 'docs/ways-to-use.md';
+    this.markdownContent = content;
   };
 }
 
