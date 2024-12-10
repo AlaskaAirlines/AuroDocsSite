@@ -1,4 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
+import content from '@aurodesignsystem/auro-flight/README.md';
 
 class AuroContent extends AuroComponentContent {
 
@@ -6,7 +7,7 @@ class AuroContent extends AuroComponentContent {
     super(props);
 
     this.hasDOT = true;
-    this.markdownContentPath = 'README.md';
+    this.markdownContent = content; 
     this.hasCustomElementRegistration = false;
   };
 }

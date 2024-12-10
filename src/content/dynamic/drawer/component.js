@@ -1,12 +1,13 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
 import { initExamples } from '@aurodesignsystem/auro-drawer/demo/index.min.js';
+import content from '@aurodesignsystem/auro-drawer/demo/index.md';
 
 class AuroContent extends AuroComponentContent {
 
   constructor(props) {
     super(props);
 
-    this.markdownContentPath = 'demo/index.md';
+    this.markdownContent = content; 
   };
 
   componentDidMount() {

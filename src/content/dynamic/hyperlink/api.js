@@ -1,4 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
+import content from '@aurodesignsystem/auro-hyperlink/demo/api.md';
 
 class AuroContent extends AuroComponentContent {
 
@@ -7,7 +8,7 @@ class AuroContent extends AuroComponentContent {
 
     this.hasAccessibility = true;
     this.hasFigma = true;
-    this.markdownContentPath = 'demo/api.md';
+    this.markdownContent = content; 
   };
 }
 

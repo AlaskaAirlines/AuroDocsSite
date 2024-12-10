@@ -1,12 +1,13 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
 import { initExamples } from "@aurodesignsystem/auro-toast/demo/api.min.js";
+import content from '@aurodesignsystem/auro-toast/demo/api.md';
 
 class AuroContent extends AuroComponentContent {
 
   constructor(props) {
     super(props);
 
-    this.markdownContentPath = 'demo/api.md';
+    this.markdownContent = content; 
     this.hasCustomElementRegistration = false;
   };
 
