@@ -1,11 +1,12 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
+import content from '@aurodesignsystem/auro-backtotop/demo/index.md';
 
 class AuroContent extends AuroComponentContent {
 
   constructor(props) {
     super(props);
 
-    this.markdownContentPath = 'demo/index.md';
+    this.markdownContent = content; 
   };
 }
 

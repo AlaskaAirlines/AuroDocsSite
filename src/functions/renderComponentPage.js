@@ -30,7 +30,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
     this.hasDOT = false;
     this.hasAccessibility = false;
 
-    // Flags for identifiying which page template is being rendered
+    // Flags for identifying which page template is being rendered
     this.releasePage = false;
     this.figmaPage = false;
     this.designNotesPath = 'docs/design-notes.md';
@@ -157,7 +157,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
   setMarkdownContent() {
     // set markdown content if not set in the component page
     if (!this.markdownContent) {
-      this.markdownContent = `https://raw.githubusercontent.com/AlaskaAirlines/${this.componentName}/${this.componentVersion}/${this.markdownContentPath}`;
+      this.markdownContent = `https://cdn.jsdelivr.net/npm/@aurodesignsystem/${this.componentName}@${this.componentVersion}/${this.markdownContentPath}`;
     }
 
     // set figma content if not set in the component page
