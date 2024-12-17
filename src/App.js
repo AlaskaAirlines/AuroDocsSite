@@ -429,6 +429,10 @@ import AuroToastApi from './content/dynamic/toast/api';
 import AuroToastInstall from './content/dynamic/toast/install';
 import AuroToastReleases from './content/dynamic/toast/releases';
 
+// formkit
+import AuroFormkitInstall from './content/dynamic/formkit/install';
+import AUroFormkitRelease from './content/dynamic/formkit/releases';
+
 const API_KEY = import.meta.env.VITE_GH_TOKEN;
 
 const client = new ApolloClient({
@@ -845,6 +849,12 @@ function App() {
               <Route path="/javascriptSetup" element={<JavascriptDemoDocs />} />
               <Route path="/reactSetup" element={<ReactDemoDocs />} />
               <Route path="/svelteSetup" element={<SvelteDemoDocs />} />
+
+
+              {/* Auro Formkit */}
+              <Route path="/components/auro/formkit" element={<AuroFormkitInstall />} />
+              <Route path="/components/auro/formkit/install" element={<AuroFormkitInstall />} />
+              <Route path="/components/auro/formkit/releases" element={<AUroFormkitRelease />} />
 
 
               <Route path="*" element={<NotFound />} />

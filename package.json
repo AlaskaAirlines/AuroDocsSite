@@ -30,6 +30,7 @@
     "@aurodesignsystem/auro-dropdown": "^3.2.1",
     "@aurodesignsystem/auro-flight": "^3.1.1",
     "@aurodesignsystem/auro-flightline": "^3.1.1",
+    "@aurodesignsystem/auro-formkit": "^1.6.0-beta.4",
     "@aurodesignsystem/auro-header": "^2.4.1",
     "@aurodesignsystem/auro-hyperlink": "^4.2.1",
     "@aurodesignsystem/auro-icon": "^6.1.1",

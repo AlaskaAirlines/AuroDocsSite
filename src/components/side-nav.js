@@ -101,6 +101,12 @@ export default function SideNav(props) {
         { linkTitle: "The <slot> element", route: "/support/slots", parent: true },
         { linkTitle: "Accessibility statement", route: "/a11y-statement", parent: true },
       ]
+    },
+    {
+      header: "Beta Releases",
+      items: [
+        { linkTitle: "Formkit", route: "/components/auro/formkit", parent: true },
+      ]
     }
   ]);
 
