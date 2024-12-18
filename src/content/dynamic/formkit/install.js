@@ -8,6 +8,7 @@ class AuroContent extends AuroComponentContent {
 
     this.markdownContent = content; 
     this.hasApi = false;
+    this.hasInstall = false;
   };
 }
 

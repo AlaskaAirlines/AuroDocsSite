@@ -30,6 +30,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
     this.hasDOT = false;
     this.hasAccessibility = false;
     this.hasApi = true;
+    this.hasInstall  = true;
 
     // Flags for identifying which page template is being rendered
     this.releasePage = false;
@@ -227,7 +228,11 @@ class AuroComponentContent extends MarkdownPageWrapper {
     return (
       <div role="tablist" className="tabList">
         <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}`}  id="componentLink">{this.convertToUpperCase(this.name)}</NavLink>
-        <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/install`} >Install</NavLink>
+        {
+          this.hasInstall ?
+          <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/install`} >Install</NavLink>
+          : undefined
+        }
         {
           this.hasApi ?
           <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/api`} >API</NavLink>

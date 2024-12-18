@@ -5,6 +5,7 @@ class AuroContent extends AuroComponentContent {
     super(props);
 
     this.hasApi = false;
+    this.hasInstall = false;
   };
 }
 
