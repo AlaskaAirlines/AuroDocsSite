@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
-import { initExamples } from "@aurodesignsystem/auro-dropdown/demo/api.min.js";
+import "@aurodesignsystem/auro-dropdown/demo/index.min.js";
 import content from '@aurodesignsystem/auro-dropdown/demo/index.md';
 
 class AuroContent extends AuroComponentContent {
@@ -10,12 +10,6 @@ class AuroContent extends AuroComponentContent {
     this.hasFigma = true;
     this.markdownContent = content; 
   };
-
-  componentDidMount() {
-    super.componentDidMount();
-
-    initExamples();
-  }
 }
 
 export default AuroContent;
