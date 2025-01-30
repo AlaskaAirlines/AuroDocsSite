@@ -37,7 +37,7 @@
   }
 </style>
 
-<p>Here are Auro's top FAQs. For more, please see our <auro-hyperlink relative href="/auro-support">Auro Support</auro-hyperlink> section.<p>
+<p>Here are Auro's top FAQs. For more, please see our <auro-hyperlink relative href="/auro-support">Auro Support</auro-hyperlink> section.</p>
 
 <auro-accordion-group>
   <auro-accordion id="getStarted" chromeless noProfile>
