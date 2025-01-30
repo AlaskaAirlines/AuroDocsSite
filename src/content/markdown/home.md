@@ -50,21 +50,21 @@
       <p>Last, please see the list of available pre-developed <auro-hyperlink href="/component-status" relative>HTML native custom elements</auro-hyperlink>. These components can be used in virtually any development stack. Be sure you checkout the <auro-hyperlink href="/reactSetup" relative>React</auro-hyperlink>, <auro-hyperlink href="/svelteSetup" relative>Svelte</auro-hyperlink> and <auro-hyperlink href="/javascriptSetup" relative>standard JS</auro-hyperlink> example projects.</p>
     </div>
   </auro-accordion>
-  <auro-accordion id="getStarted" chromeless noProfile>
+  <auro-accordion id="forkingRepo" chromeless noProfile>
     <span slot="trigger">Q: Forking a repo?</span>
     <div class="lightText">
       <p>So you are interested in supporting Auro? That's great. There is one step you may or may not know when contributing to an open source repo. If you are not part of the trusted committers security group, this means that you need to fork the repo. It is in the fork that you have full access to make any updates you wish and then submit them back to us in a pull request to merge in your new ideas.</p>
       <p>Not sure how to fork, here is a great <auro-hyperlink href="https://docs.github.com/en/get-started/quickstart/fork-a-repo" target="_blank">how-to article</auro-hyperlink> from Github.</p>
     </div>
   </auro-accordion>
-  <auro-accordion id="getStarted" chromeless noProfile>
+  <auro-accordion id="submitIssue" chromeless noProfile>
     <span slot="trigger">Q: How do I submit an issue?</span>
     <div class="lightText">
       <p>Auro is not an single repository, but an ecosystem of tools and components. Every part of the ecosystem has its own Github repo. To submit an issue with any of the repos in Auro's ecosystem, please see our <auro-hyperlink href="/component-status" relative>component status</auro-hyperlink> page and click/tap on the repo's corresponding <i>ISSUES</i> badge.</p>
       <p>There are also Github Issue links at the top of every Auro element page.</p>
     </div>
   </auro-accordion>
-  <auro-accordion id="getStarted" chromeless noProfile>
+  <auro-accordion id="submitPullRequest" chromeless noProfile>
     <span slot="trigger">Q: How do I submit a pull request?</span>
     <div class="lightText">
       <p>Submitting a pull request is the life blood of any open source project. But to ensure that you are submitting work that will be merged, we ask that you PLEASE first submit an issue with the work you have in mind. Allowing the Auro team to understand your potential contribution will assist in the submission and code review process.</p>
@@ -91,14 +91,14 @@
       <p>Please see our <auro-hyperlink href="/contributing" relative>Auro Design System Contributing Guidelines</auro-hyperlink> for more information.</p>
     </div>
   </auro-accordion>
-  <auro-accordion id="getStarted" chromeless noProfile>
+  <auro-accordion id="auroTech" chromeless noProfile>
     <span slot="trigger">Q: What tech does Auro use?</span>
     <div class="lightText">
       <p>LitElement is the base class that all Auro custom elements are built upon. The team is in the process of converting all current custom elements to the new <auro-hyperlink target="_blank" href="https://lit.dev/">Lit 3.0 spec</auro-hyperlink> by the end of 2023.</p>
       <p>LitElement is "Interoperable & future-ready". Meaning that while we use LitElement as our base technology, we are not constrained by it's use. For a full list of all the platforms LitElement supports, please see <auro-hyperlink target="_blank" href="https://custom-elements-everywhere.com/">Custom Elements Everywhere</auro-hyperlink>.</p>
     </div>
   </auro-accordion>
-  <auro-accordion id="getStarted" chromeless noProfile>
+  <auro-accordion id="auroSupport" chromeless noProfile>
     <span slot="trigger">Q: Does Auro support React, Svelte, Vue, etc...?</span>
     <div class="lightText">
       <p>Auro web components are based on LitElement HTML custom elements. This gives us the greatest spread possible for working with <auro-hyperlink target="_blank" href="https://custom-elements-everywhere.com/">just about any front-end framework in use today</auro-hyperlink>. </p>
@@ -107,7 +107,7 @@
       <p>For more inspiration with using Auro custom elements, see our <auro-hyperlink relative href="/reactSetup">React</auro-hyperlink> and <auro-hyperlink relative href="/svelteSetup">Svelte</auro-hyperlink> demo projects.</p>
     </div>
   </auro-accordion>
-  <auro-accordion id="getStarted" chromeless noProfile>
+  <auro-accordion id="auroContact" chromeless noProfile>
     <span slot="trigger">Q: How do I contact the Auro Team?</span>
     <div class="lightText">
       <p>There are a lot of ways to get questions and support issues to the team. If there is an issue you are seeing with any of the parts of the Auro ecosystem, we highly recommend that you send a support issue. Select any of the ISSUE buttons on our <auro-hyperlink relative href="/component-status">status</auro-hyperlink> page and submit an issue from the repository.</p>
