@@ -3,7 +3,7 @@
 /* auro tokens for legacy components */
 // @import '@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
 
-@import '@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import '@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables';
 @import "@aurodesignsystem/webcorestylesheets/src/breakpoints";
 @import "@aurodesignsystem/webcorestylesheets/src/animation";
 @import "@aurodesignsystem/webcorestylesheets/src/utilityMixins/anchor-roleTab";
@@ -25,6 +25,8 @@ body {
   background-color: var(--ds-color-background-lightest);
 }
 
+$sideNavHeight: 101px;
+
 // customization for use with the google search widget
 .gsc-control-cse {
   position: fixed;
@@ -33,7 +35,7 @@ body {
   z-index: var(--ds-depth-overlay);
   display: none;
 
-  @include auro_breakpoint--md {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
     display: block;
     width: 30% !important;
   }
@@ -65,7 +67,7 @@ ul {
 .util_mobileNowrap {
   white-space: nowrap;
 
-  @include auro_breakpoint--md {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
     white-space: normal;
   }
 }
@@ -73,7 +75,7 @@ ul {
 .shortWrap {
   width: 300px;
 
-  @include auro_breakpoint--md {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
     width: auto;
   }
 }
@@ -109,17 +111,17 @@ footer,
   margin: var(--ds-size-400);
   padding-top: var(--ds-size-200);
 
-  @include auro_grid-breakpoint--sm {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-sm) {
     max-width: 62%;
     margin: var(--ds-size-200) auto 0 250px;
   }
 
-  @include auro_grid-breakpoint--md {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
     max-width: 70%;
     margin: var(--ds-size-200) auto 0 290px;
   }
 
-  @include auro_grid-breakpoint--xl {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-xl) {
     max-width: 64rem;
     margin: var(--ds-size-200) auto 0 25%;
   }
@@ -128,7 +130,7 @@ footer,
 
 footer {
   padding-top:var(--ds-size-800);
-  padding-bottom: 80px;
+  padding-bottom: $sideNavHeight;
   color: var(--ds-color-text-secondary-default);
   font-weight: 100;
 }
@@ -151,15 +153,16 @@ auro-swatch-list {
 }
 
 .sidenav {
+  box-sizing: border-box;
   left: -300px;
   transition: all .3s ease;
   position: fixed;
   z-index: 100;
   background-color: white;
   padding: 0 var(--ds-size-300) 100px var(--ds-size-300);
-  height: calc(100% - 80px);
+  height: calc(100% - $sideNavHeight);
   overflow: scroll;
-  top: 80px;
+  top: $sideNavHeight;
   background-color: var(--ds-color-background-lighter);
   background-color: var(--ds-color-brand-gray-100);
 
@@ -175,17 +178,17 @@ auro-swatch-list {
     }
   }
 
-  @include auro_breakpoint--sm {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-sm) {
     left: 0;
     display: block;
     opacity: 1;
     left: auto;
     width: 230px;
-    top: 80px;
+    top: $sideNavHeight;
     padding-bottom: 100px;
   }
 
-  @include auro_breakpoint--md {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
     width: 270px;
   }
 }
@@ -228,7 +231,7 @@ auro-swatch-list {
   right: 30px;
   z-index: 299;
 
-  @include auro_breakpoint--sm {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-sm) {
     display: none;
   }
 }
@@ -252,7 +255,7 @@ auro-swatch-list {
 .menuIcon {
   display: block;
 
-  @include auro_breakpoint--sm {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-sm) {
     display: none;
   }
 }
@@ -280,7 +283,7 @@ auro-swatch-list {
       box-shadow: 0px 15px 28px -10px var(--ds-color-background-darker);
       margin-left: 0;
       padding-left: var(--ds-size-300);
-      top: 80px;
+      top: $sideNavHeight;
 
       a {
         margin-bottom: var(--ds-size-sm);
@@ -427,7 +430,7 @@ pre {
     width: calc(50% - var(--ds-size-50));
     height: 125px;
 
-    @include auro-breakpoint--sm {
+    @include auro_breakpoint($min: $ds-grid-breakpoint-sm) {
       width: calc(30% - var(--ds-size-50));
       height: 150px;
       padding: 1rem 1.5rem;
@@ -436,7 +439,7 @@ pre {
       }
     }
 
-    @include auro-breakpoint--lg {
+    @include auro_breakpoint($min: $ds-grid-breakpoint-lg) {
       width: calc(18% - var(--ds-size-50));
       height: 150px;
       padding: 1rem 1.5rem;
@@ -453,7 +456,7 @@ pre {
   display: block;
   margin-bottom: 2rem;
 
-  @include auro_breakpoint--lg {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-lg) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -559,7 +562,7 @@ pre {
   line-height: 1.5rem;
   margin-bottom: 2rem;
   position: sticky;
-  top: 80px;
+  top: $sideNavHeight;
   background: linear-gradient(180deg, rgba(255,255,255,.99) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,.9) 100%);
   z-index: 10;
   overflow-x: auto;
@@ -568,7 +571,7 @@ pre {
   flex-wrap: nowrap;
   box-shadow: inset 0 -2px 0 var(--ds-color-brand-gray-300);
 
-  @include auro_breakpoint--md {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
     line-height: 3rem;
   }
 }
@@ -613,7 +616,7 @@ auro-tokens-list {
   display: block;
   overflow: scroll;
 
-  @include auro_breakpoint--md {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
     overflow: unset;
   }
 }
@@ -735,7 +738,7 @@ img[src*='shields.io'] {
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 .auro_table--audit {
   thead {
-    @include auro_breakpoint--md {
+    @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
       border-bottom: unset;
     }
   }
@@ -748,7 +751,7 @@ img[src*='shields.io'] {
   th {
     white-space: nowrap;
 
-    @include auro_breakpoint--md {
+    @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
       box-shadow: inset 0px -1px 0px 0px var(--ds-color-border-primary-default);
       position: sticky;
       top: 271px;
@@ -766,13 +769,13 @@ img[src*='shields.io'] {
 }
 
 .auro_table--notes {
-  @include auro_breakpoint--md {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
     width: 55%;
   }
 }
 
 .auro_table--spread {
-  @include auro_breakpoint--md {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
     width: 15%;
 
     &:first-child {
@@ -827,7 +830,7 @@ img[src*='shields.io'] {
   display: flex;
   align-items: stretch;
 
-  @include auro_breakpoint--md {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
     width: 100% !important;
     flex-wrap: wrap;
   }
@@ -841,7 +844,7 @@ img[src*='shields.io'] {
   margin-bottom: var(--ds-size-100);
   margin-right: var(--ds-size-100);
 
-  @include auro_breakpoint--sm {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-sm) {
     font-size: var(--ds-text-body-size-xs);
     border-radius: var(--ds-border-radius);
     width: auto;
@@ -1006,7 +1009,7 @@ img[src*='shields.io'] {
 .columns {
  flex-direction: column;
 
- @include auro_breakpoint--lg {
+ @include auro_breakpoint($min: $ds-grid-breakpoint-lg) {
   flex-direction: row;
   justify-content: space-between;
  }
@@ -1019,7 +1022,7 @@ img[src*='shields.io'] {
       padding-right: 0;
     }
 
-    @include auro_breakpoint--lg {
+    @include auro_breakpoint($min: $ds-grid-breakpoint-lg) {
       padding: 0 var(--ds-size-300);
       flex-basis: 33.3333%;
       max-width: 33.333%;
@@ -1079,7 +1082,7 @@ img[src*='shields.io'] {
   justify-content: center;
   position: relative;
 
-  @include auro_breakpoint--lg {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-lg) {
     display: flex;
   }
 }
@@ -1093,7 +1096,7 @@ img[src*='shields.io'] {
   width: 25%;
   text-align: right;
 
-  @include auro_breakpoint--lg {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-lg) {
     display: block;
   }
 }

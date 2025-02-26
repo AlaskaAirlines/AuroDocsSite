@@ -129,16 +129,27 @@ class AuroComponentContent extends MarkdownPageWrapper {
     if (!this.packageName) {
       this.packageName = `@${this.nameSpace}/auro-${this.name}`;
     }
-
+  
     // use package version only if not set in the component page
     if (!this.version) {
-      this.componentVersion = packageJson.dependencies[this.packageName];
-
+      // Look in both dependencies and overrides
+      this.componentVersion = 
+        (packageJson.dependencies && packageJson.dependencies[this.packageName]) || 
+        (packageJson.overrides && packageJson.overrides[this.packageName]);
+  
+      // Add a null/undefined check
+      if (!this.componentVersion) {
+        console.warn(`Package ${this.packageName} not found in dependencies or overrides. Using 'latest' version.`);
+        this.version = 'latest';
+        this.componentVersion = 'latest';
+        return;
+      }
+  
       // replace leading caret with `v` if present
       if (this.componentVersion.charAt(0) === '^') {
         this.componentVersion = `v${this.componentVersion.substring(1)}`;
       }
-
+  
       // remove leading caret if present
       const char0 = this.componentVersion.charAt(0);
       if (char0 === '^' || char0 === 'v') {
