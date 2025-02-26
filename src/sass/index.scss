@@ -1,6 +1,6 @@
 /* index.scss */
 /* auro tokens */
-@import '@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import '@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables';
 
 // WCSS imports
 /* ------------------------ WCSS imports ------------------------ */
@@ -28,7 +28,7 @@ $prefix: null;
 
 $auro-spacing-types: stack;
 $important: true;
-@import '@aurodesignsystem/design-tokens/dist/tokens/SCSSVariableMap';
+@import '@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariableMap';
 @import '@aurodesignsystem/webcorestylesheets/src/utilityMixins/spacingUtility';
 
 // Table
