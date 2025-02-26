@@ -161,7 +161,7 @@ auro-swatch-list {
   z-index: 100;
   background-color: white;
   padding: 0 var(--ds-size-300) 100px var(--ds-size-300);
-  height: calc(100% - $sideNavHeight);
+  height: calc(100% - calc($sideNavHeight - $sideNavTop));
   overflow: scroll;
   top: $sideNavTop;
   background-color: var(--ds-color-background-lighter);

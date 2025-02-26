@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
-import { Nav } from './nav';
+import ThemePage from './components/ThemePage';
 
 class AuroContent extends AuroComponentContent {
   constructor(props) {
@@ -11,7 +11,7 @@ class AuroContent extends AuroComponentContent {
   
   renderNav() {
     return (
-      <Nav />
+      <ThemePage showFooter={false} renderSectionEl={false} />
     )
   }
 }
