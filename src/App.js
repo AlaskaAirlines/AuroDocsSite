@@ -101,6 +101,7 @@ import DoD from './content/dynamic/contributing/dod';
 import DesignTokens from './content/dynamic/designTokens/tokens';
 import AuroClassicTokens from './content/dynamic/designTokens/auro-classic';
 import AlaskaTokens from './content/dynamic/designTokens/alaska';
+import AlaskaClassicTokens from './content/dynamic/designTokens/alaska-classic';
 import HawaiianTokens from './content/dynamic/designTokens/hawaiian';
 import DesignTokensInstall from './content/dynamic/designTokens/install';
 
@@ -538,6 +539,7 @@ function App() {
               <Route path="/getting-started/developers/design-tokens/install" element={<DesignTokensInstall />} />
               <Route path="/getting-started/developers/design-tokens/auro-classic" element={<AuroClassicTokens />} />
               <Route path="/getting-started/developers/design-tokens/alaska" element={<AlaskaTokens />} />
+              <Route path="/getting-started/developers/design-tokens/alaska-classic" element={<AlaskaClassicTokens />} />
               <Route path="/getting-started/developers/design-tokens/hawaiian" element={<HawaiianTokens />} />
               <Route path="/design-tokens/deprecated" element={<AuroClassicTokens />} />
               <Route path="/officehours" element={<Officehours />} />

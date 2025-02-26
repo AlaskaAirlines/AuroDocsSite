@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import ThemePage from './components/ThemePage';
 import TokenSection from "./components/TokenSection";
-import alaskaAllTokens from '@aurodesignsystem/design-tokens/dist/alaska/JSObject--allTokens.js';
+import alaskaClassicAllTokens from '@aurodesignsystem/design-tokens/dist/alaska-classic/JSObject--allTokens.js';
 
 // Categories
-const { color, font } = alaskaAllTokens;
+const { color, font } = alaskaClassicAllTokens;
 
 // Colors
 const colorTokens = [
@@ -25,11 +25,15 @@ const fontWeightTokens = [
   { title: "Heading", tokens: font.weight.heading }
 ];
 
-class AlaskaTokens extends Component {
+class AlaskaClassicTokens extends Component {
   render() {
     return (
-      <ThemePage theme="as">
-        <h1 className="auro_heading auro_heading--display">Alaska Design Tokens</h1>
+      <ThemePage theme="asc">
+        <h1 className="auro_heading auro_heading--display">Alaska Classic Design Tokens</h1>
+
+        <p>The Alaska Classic theme uses the v5.x token names with the deprecated Auro Classic values.</p>
+
+        <p>It serves as a gateway to the v5.x tokens, facilitating a smooth transition for Auro components, leading to an eventual switch to the new "Alaska" theme.</p>
 
         <h2 className="auro_heading auro_heading--600">Colors</h2>
         <TokenSection 
@@ -55,4 +59,4 @@ class AlaskaTokens extends Component {
   }
 }
 
-export default AlaskaTokens;
+export default AlaskaClassicTokens;

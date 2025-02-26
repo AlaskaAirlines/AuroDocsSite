@@ -8,7 +8,7 @@
   "dependencies": {
     "@alaskaairux/auro-loader": "^1.1.1",
     "@alaskaairux/design-tokens": "^3.15.5",
-    "@alaskaairux/icons": "5.2.0",
+    "@alaskaairux/icons": "^5.2.0",
     "@apollo/client": "^3.13.1",
     "@aurodesignsystem/auro-accordion": "^5.0.0",
     "@aurodesignsystem/auro-alert": "^4.0.0",
@@ -39,8 +39,8 @@
     "@aurodesignsystem/auro-table": "^4.0.0",
     "@aurodesignsystem/auro-toast": "^3.0.0",
     "@aurodesignsystem/auro-tokenlist": "^1.3.0",
+    "@aurodesignsystem/design-tokens": "^5.2.1",
     "@aurodesignsystem/wc-generator": "^4.7.1",
-    "@aurodesignsystem/design-tokens": "5.0.6",
     "@aurodesignsystem/webcorestylesheets": "^6.1.0",
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
