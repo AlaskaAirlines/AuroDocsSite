@@ -1,5 +1,5 @@
 // Auro tokens
-@import "@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables";
+@import "@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables";
 
 @import "@aurodesignsystem/webcorestylesheets/src/breakpoints";
 
@@ -14,7 +14,7 @@
   border-bottom: 1px solid var(--auro-color-border-primary-on-light);
   background-color: white;
 
-  @include auro_breakpoint--sm {
+  @include auro_breakpoint($min: $ds-grid-breakpoint-sm) {
     padding: 10px 0 10px 25px;
   }
 }
