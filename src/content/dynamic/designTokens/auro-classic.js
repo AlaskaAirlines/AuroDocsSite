@@ -46,7 +46,7 @@ class AuroClassicTokens extends Component {
 
         <Nav />
 
-        <h1 className="auro_heading auro_heading--display">Auro Classic Design Tokens (Deprecated)</h1>
+        <h1 className="auro_heading auro_heading--display">Auro Classic Design Tokens</h1>
         <div className="auro_heading auro_heading--600 version-indicator">v4.x Tokens</div>
 
         <h2 className="auro_heading auro_heading--600">Animation</h2>
