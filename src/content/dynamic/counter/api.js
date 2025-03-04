@@ -1,12 +1,13 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
-import { initExamples } from '@aurodesignsystem/auro-formkit/auro-input/demo/api.js';
-import content from '@aurodesignsystem/auro-formkit/auro-input/demo/api.md';
+import { initExamples } from '@aurodesignsystem/auro-formkit/auro-counter/demo/api.js';
+import content from '@aurodesignsystem/auro-formkit/auro-counter/demo/api.md';
 
 class AuroContent extends AuroComponentContent {
 
   constructor(props) {
     super(props);
 
+    this.hasApiExamples = true;
     this.markdownContent = content; 
   };
 

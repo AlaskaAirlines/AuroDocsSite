@@ -1,6 +1,6 @@
-import AuroComponentContent from "~/functions/renderComponentPage";
-import { initExamples } from "@aurodesignsystem/auro-select/demo/api.min.js";
-import content from '@aurodesignsystem/auro-select/demo/api.md';
+import AuroComponentContent from "~/functions/renderFormkitComponentPage";
+import { initExamples } from "@aurodesignsystem/auro-formkit/auro-select/demo/api.js";
+import content from '@aurodesignsystem/auro-formkit/auro-select/demo/api.md';
 
 class AuroContent extends AuroComponentContent {
 

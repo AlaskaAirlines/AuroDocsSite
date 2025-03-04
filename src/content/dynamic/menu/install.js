@@ -1,12 +1,11 @@
-import AuroComponentContent from "~/functions/renderComponentPage";
-import content from '@aurodesignsystem/auro-menu/README.md';
+import AuroComponentContent from "~/functions/renderFormkitComponentPage";
+import content from '@aurodesignsystem/auro-formkit/auro-menu/readme.md';
 
 class AuroContent extends AuroComponentContent {
 
   constructor(props) {
     super(props);
 
-    this.hasFigma = true;
     this.markdownContent = content; 
   };
 }

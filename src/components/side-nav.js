@@ -26,6 +26,7 @@ export default function SideNav(props) {
         { linkTitle: "CSS guidelines", route: "/css/conventions", parent: true },
         { linkTitle: "Common defs", route: "/common-defs", parent: true },
         { linkTitle: "Auro compliance", route: "/getting-started/developers/compliance", parent: true },
+        { linkTitle: "Formkit", route: "/components/auro/formkit", parent: true },
       ]
     },
     {
@@ -53,6 +54,7 @@ export default function SideNav(props) {
         { linkTitle: "Carousel", route: '/components/auro/carousel', parent: true },
         { linkTitle: "Checkbox", route: '/components/auro/checkbox', parent: true },
         { linkTitle: "Combobox", route: '/components/auro/combobox', parent: true },
+        { linkTitle: "Counter", route: '/components/auro/counter', parent: true },
         { linkTitle: "Datepicker", route: '/components/auro/datepicker', parent: true },
         { linkTitle: "Datetime", route: '/components/auro/datetime', parent: true },
         { linkTitle: "Dialog", route: '/components/auro/dialog', parent: true },
@@ -60,6 +62,7 @@ export default function SideNav(props) {
         { linkTitle: "Dropdown", route: '/components/auro/dropdown', parent: true },
         { linkTitle: "Flight", route: '/components/auro/flight', parent: true },
         { linkTitle: "Flightline", route: '/components/auro/flightline', parent: true },
+        { linkTitle: "Form", route: '/components/auro/form', parent: true },
         { linkTitle: "Header", route: '/components/auro/header', parent: true },
         { linkTitle: "Hyperlink", route: '/components/auro/hyperlink', parent: true },
         { linkTitle: "Icon", route: '/components/auro/icon', parent: true },
@@ -100,12 +103,6 @@ export default function SideNav(props) {
         { linkTitle: "Polyfills", route: "/support/polyfills/focusvisible", parent: true},
         { linkTitle: "The <slot> element", route: "/support/slots", parent: true },
         { linkTitle: "Accessibility statement", route: "/a11y-statement", parent: true },
-      ]
-    },
-    {
-      header: "Beta Releases",
-      items: [
-        { linkTitle: "Formkit", route: "/components/auro/formkit", parent: true },
       ]
     }
   ]);
