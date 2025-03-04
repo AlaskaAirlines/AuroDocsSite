@@ -14,8 +14,11 @@ import './sass/App.scss';
 // -=-=-=-=-=-=-=-=-=-=- LEGACY =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 import '@alaskaairux/design-tokens/dist/tokens/CSSCustomProperties.css';
 
-// Current auro tokens
-import '@aurodesignsystem/design-tokens/dist/tokens/CSSCustomProperties.css';
+// All themes custom properties
+import '@aurodesignsystem/design-tokens/dist/CSSCustomProperties--bundled.css';
+
+// Auro Classic custom properties
+import '@aurodesignsystem/design-tokens/dist/auro-classic/CSSCustomProperties.css';
 
 // Auro Components
 import '@alaskaairux/icons';
@@ -106,7 +109,9 @@ import DoD from './content/dynamic/contributing/dod';
 
 // design tokens
 import DesignTokens from './content/dynamic/designTokens/tokens';
-import DeprecatedTokens from './content/dynamic/designTokens/deprecated';
+import AuroClassicTokens from './content/dynamic/designTokens/auro-classic';
+import AlaskaTokens from './content/dynamic/designTokens/alaska';
+import HawaiianTokens from './content/dynamic/designTokens/hawaiian';
 import DesignTokensInstall from './content/dynamic/designTokens/install';
 
 // color
@@ -535,8 +540,10 @@ function App() {
               <Route path="/getting-started/developers/design-tokens" element={<DesignTokens />} />
               <Route path="/design-tokens" element={<DesignTokens />} />
               <Route path="/getting-started/developers/design-tokens/install" element={<DesignTokensInstall />} />
-              <Route path="/getting-started/developers/design-tokens/deprecated" element={<DeprecatedTokens />} />
-              <Route path="/design-tokens/deprecated" element={<DeprecatedTokens />} />
+              <Route path="/getting-started/developers/design-tokens/auro-classic" element={<AuroClassicTokens />} />
+              <Route path="/getting-started/developers/design-tokens/alaska" element={<AlaskaTokens />} />
+              <Route path="/getting-started/developers/design-tokens/hawaiian" element={<HawaiianTokens />} />
+              <Route path="/design-tokens/deprecated" element={<AuroClassicTokens />} />
               <Route path="/officehours" element={<Officehours />} />
 
               {/* Color */}
