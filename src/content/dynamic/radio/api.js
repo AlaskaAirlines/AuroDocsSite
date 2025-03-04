@@ -1,5 +1,5 @@
-import AuroComponentContent from "~/functions/renderComponentPage";
-import content from '@aurodesignsystem/auro-radio/demo/api.md';
+import AuroComponentContent from "~/functions/renderFormkitComponentPage";
+import content from '@aurodesignsystem/auro-formkit/auro-radio/demo/api.md';
 
 class AuroContent extends AuroComponentContent {
 

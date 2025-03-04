@@ -24,13 +24,13 @@ $prefix: null;
 @import url('https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css');
 
 .auro-markdown {
+  h1 {
+    text-transform: capitalize;
+  }
 
   &.epicWrapper--data,
   &.releaseWrapper--data {
-    h1 {
-      text-transform: capitalize;
-    }
-
+    
     ul {
       margin: 0;
       padding-left: var(--ds-size-300);

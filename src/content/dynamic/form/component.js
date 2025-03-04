@@ -1,6 +1,6 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
-import { initExamples } from '@aurodesignsystem/auro-formkit/auro-input/demo/api.js';
-import content from '@aurodesignsystem/auro-formkit/auro-input/demo/api.md';
+import '@aurodesignsystem/auro-formkit/auro-form/demo/index.js';
+import content from '@aurodesignsystem/auro-formkit/auro-form/demo/index.md';
 
 class AuroContent extends AuroComponentContent {
 
@@ -13,7 +13,6 @@ class AuroContent extends AuroComponentContent {
   componentDidMount() {
     super.componentDidMount();
 
-    initExamples();
   }
 }
 

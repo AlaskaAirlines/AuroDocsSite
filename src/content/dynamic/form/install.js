@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
-import content from '@aurodesignsystem/auro-formkit/auro-datepicker/readme.md';
+import content from '@aurodesignsystem/auro-formkit/auro-form/readme.md';
 
 class AuroContent extends AuroComponentContent {
 
@@ -7,7 +7,6 @@ class AuroContent extends AuroComponentContent {
     super(props);
 
     this.markdownContent = content; 
-    this.hasCustomElementRegistration = false;
   };
 }
 

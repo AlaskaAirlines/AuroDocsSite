@@ -1,6 +1,6 @@
-import AuroComponentContent from "~/functions/renderComponentPage";
-import '@aurodesignsystem/auro-checkbox/demo/index.min.js';
-import content from '@aurodesignsystem/auro-checkbox/demo/index.md';
+import AuroComponentContent from "~/functions/renderFormkitComponentPage";
+import content from '@aurodesignsystem/auro-formkit/auro-checkbox/demo/index.md';
+import '@aurodesignsystem/auro-formkit/auro-checkbox/demo/index.js';
 
 class AuroContent extends AuroComponentContent {
 

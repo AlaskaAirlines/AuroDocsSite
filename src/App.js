@@ -32,26 +32,20 @@ import '@aurodesignsystem/auro-banner';
 import '@aurodesignsystem/auro-button';
 import '@aurodesignsystem/auro-card';
 import '@aurodesignsystem/auro-carousel';
-import '@aurodesignsystem/auro-checkbox';
 import '@aurodesignsystem/auro-datetime';
 import '@aurodesignsystem/auro-dialog';
 import '@aurodesignsystem/auro-drawer';
-import '@aurodesignsystem/auro-dropdown';
 import '@aurodesignsystem/auro-flight';
 import '@aurodesignsystem/auro-flightline';
 import '@aurodesignsystem/auro-header';
 import '@aurodesignsystem/auro-hyperlink';
 import '@aurodesignsystem/auro-icon';
 import '@aurodesignsystem/auro-icon/src/auro-alaska';
-import '@aurodesignsystem/auro-input';
 import '@aurodesignsystem/auro-loader';
 import '@aurodesignsystem/auro-lockup';
-import '@aurodesignsystem/auro-menu';
 import '@aurodesignsystem/auro-nav';
 import '@aurodesignsystem/auro-pane';
 import '@aurodesignsystem/auro-popover';
-import '@aurodesignsystem/auro-radio';
-import '@aurodesignsystem/auro-select';
 import '@aurodesignsystem/auro-sidenav';
 import '@aurodesignsystem/auro-skeleton';
 import '@aurodesignsystem/auro-toast';
@@ -59,10 +53,6 @@ import '@aurodesignsystem/auro-tokenlist';
 import '@aurodesignsystem/auro-tokenlist/dist/auro-tokenavatar';
 import '@aurodesignsystem/auro-tokenlist/dist/auro-tokendisplay';
 import '@aurodesignsystem/auro-table';
-
-// Datepicker loaded out of order to prevent it from registering auro-input before auro-input can self register
-import '@aurodesignsystem/auro-combobox';
-import '@aurodesignsystem/auro-datepicker';
 
 // Logo to appear in console
 import './scripts/auro-consoleLogo';
@@ -283,14 +273,18 @@ import AuroCombobox from './content/dynamic/combobox/component';
 import AuroComboboxApi from './content/dynamic/combobox/api';
 import AuroComboboxInstall from './content/dynamic/combobox/install';
 import AuroComboboxReleases from './content/dynamic/combobox/releases';
-import AuroComboboxFigma from './content/dynamic/combobox/figma'
+
+// counter
+import AuroCounter from './content/dynamic/counter/component';
+import AuroCounterApi from './content/dynamic/counter/api';
+import AuroCounterInstall from './content/dynamic/counter/install';
+import AuroCounterReleases from './content/dynamic/counter/releases';
 
 // datepicker
 import AuroDatepicker from './content/dynamic/datepicker/component';
 import AuroDatepickerApi from './content/dynamic/datepicker/api';
 import AuroDatepickerInstall from './content/dynamic/datepicker/install';
 import AuroDatepickerReleases from './content/dynamic/datepicker/releases';
-import AuroDatepickerFigma from './content/dynamic/datepicker/figma'
 
 // datetime
 import AuroDateTime from './content/dynamic/datetime/component';
@@ -304,7 +298,6 @@ import AuroDialogApi from './content/dynamic/dialog/api';
 import AuroDialogInstall from './content/dynamic/dialog/install';
 import AuroDialogReleases from './content/dynamic/dialog/releases';
 
-
 // drawer
 import AuroDrawer from './content/dynamic/drawer/component';
 import AuroDrawerApi from './content/dynamic/drawer/api';
@@ -316,7 +309,6 @@ import AuroDropdown from './content/dynamic/dropdown/component';
 import AuroDropdownApi from './content/dynamic/dropdown/api';
 import AuroDropdownInstall from './content/dynamic/dropdown/install';
 import AuroDropdownReleases from './content/dynamic/dropdown/releases';
-import AuroDropdownFigma from './content/dynamic/dropdown/figma'
 
 // Flight
 import AuroFlight from './content/dynamic/flight/component';
@@ -332,12 +324,17 @@ import AuroFlightlineInstall from './content/dynamic/flightline/install';
 import AuroFlightlineDot from './content/dynamic/flightline/dot';
 import AuroFlightlineReleases from './content/dynamic/flightline/releases';
 
+// Form
+import AuroForm from './content/dynamic/form/component';
+import AuroFormApi from './content/dynamic/form/api';
+import AuroFormInstall from './content/dynamic/form/install';
+import AuroFormReleases from './content/dynamic/form/releases';
+
 // header
 import AuroHeader from './content/dynamic/header/component';
 import AuroHeaderApi from './content/dynamic/header/api';
 import AuroHeaderInstall from './content/dynamic/header/install';
 import AuroHeaderReleases from './content/dynamic/header/releases';
-
 
 // hyperlink
 import AuroHyperlink from './content/dynamic/hyperlink/component';
@@ -359,7 +356,6 @@ import AuroInput from './content/dynamic/input/component';
 import AuroInputApi from './content/dynamic/input/api';
 import AuroInputInstall from './content/dynamic/input/install';
 import AuroInputReleases from './content/dynamic/input/releases';
-import AuroInputFigma from './content/dynamic/input/figma'
 
 // loader
 import AuroLoader from './content/dynamic/loader/component';
@@ -376,7 +372,6 @@ import AuroLockupReleases from './content/dynamic/lockup/releases';
 // Menu
 import AuroMenu from './content/dynamic/menu/component';
 import AuroMenuApi from './content/dynamic/menu/api';
-import AuroMenuFigma from './content/dynamic/menu/figma';
 import AuroMenuInstall from './content/dynamic/menu/install';
 import AuroMenuReleases from './content/dynamic/menu/releases';
 
@@ -513,6 +508,7 @@ function App() {
               <Route path="/drawer" element={<AuroDrawer />} />
               <Route path="/dropdown" element={<AuroDropdown />} />
               <Route path="/combobox" element={<AuroCombobox />} />
+              <Route path="/counter" element={<AuroCounter />} />
               <Route path="/datepicker" element={<AuroDatepicker />} />
               <Route path="/header" element={<AuroHeader />} />
               <Route path="/hyperlink" element={<AuroHyperlink />} />
@@ -668,14 +664,18 @@ function App() {
               <Route path="/components/auro/combobox/install" element={<AuroComboboxInstall />} />
               <Route path="/components/auro/combobox/api" element={<AuroComboboxApi />} />
               <Route path="/components/auro/combobox/releases" element={<AuroComboboxReleases />} />
-              <Route path="/components/auro/combobox/figma" element={<AuroComboboxFigma />} />
+
+              {/* Auro Counter */}
+              <Route path="/components/auro/counter" element={<AuroCounter />} />
+              <Route path="/components/auro/counter/install" element={<AuroCounterInstall />} />
+              <Route path="/components/auro/counter/api" element={<AuroCounterApi />} />
+              <Route path="/components/auro/counter/releases" element={<AuroCounterReleases />} />
 
               {/* Auro Datepicker */}
               <Route path="/components/auro/datepicker" element={<AuroDatepicker />} />
               <Route path="/components/auro/datepicker/install" element={<AuroDatepickerInstall />} />
               <Route path="/components/auro/datepicker/api" element={<AuroDatepickerApi />} />
               <Route path="/components/auro/datepicker/releases" element={<AuroDatepickerReleases />} />
-              <Route path="/components/auro/datepicker/figma" element={<AuroDatepickerFigma />} />
 
               {/* Auro Date/Time */}
               <Route path="/components/auro/datetime" element={<AuroDateTime />} />
@@ -700,7 +700,6 @@ function App() {
               <Route path="/components/auro/dropdown/install" element={<AuroDropdownInstall />} />
               <Route path="/components/auro/dropdown/api" element={<AuroDropdownApi />} />
               <Route path="/components/auro/dropdown/releases" element={<AuroDropdownReleases />} />
-              <Route path="/components/auro/dropdown/figma" element={<AuroDropdownFigma />} />
 
               {/* Auro Flight */}
               <Route path="/components/auro/flight" element={<AuroFlight />} />
@@ -718,6 +717,12 @@ function App() {
 
               {/* flight-details */}
               <Route path="/components/auro/flight-details/" element={<Wip />} />
+
+              {/* Auro Form */}
+              <Route path="/components/auro/form" element={<AuroForm />} />
+              <Route path="/components/auro/form/install" element={<AuroFormInstall />} />
+              <Route path="/components/auro/form/api" element={<AuroFormApi />} />
+              <Route path="/components/auro/form/releases" element={<AuroFormReleases />} />
 
               {/* Auro Header */}
               <Route path="/components/auro/header" element={<AuroHeader />} />
@@ -745,7 +750,6 @@ function App() {
               <Route path="/components/auro/input/install" element={<AuroInputInstall />} />
               <Route path="/components/auro/input/api" element={<AuroInputApi />} />
               <Route path="/components/auro/input/releases" element={<AuroInputReleases />} />
-              <Route path="/components/auro/input/figma" element={<AuroInputFigma />} />
 
               {/* Auro Loader */}
               <Route path="/components/auro/loader" element={<AuroLoader />} />
@@ -763,7 +767,6 @@ function App() {
               <Route path="/components/auro/menu" element={<AuroMenu />} />
               <Route path="/components/auro/menu/install" element={<AuroMenuInstall />} />
               <Route path="/components/auro/menu/api" element={<AuroMenuApi />} />
-              <Route path="/components/auro/menu/figma" element={<AuroMenuFigma />} />
               <Route path="/components/auro/menu/releases" element={<AuroMenuReleases />} />
 
               {/* Auro Nav */}

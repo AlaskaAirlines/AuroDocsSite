@@ -25,7 +25,8 @@ body {
   background-color: var(--ds-color-background-lightest);
 }
 
-$sideNavHeight: 101px;
+$sideNavHeight: 120px;
+$sideNavTop: 86px;
 
 // customization for use with the google search widget
 .gsc-control-cse {
@@ -112,12 +113,12 @@ footer,
   padding-top: var(--ds-size-200);
 
   @include auro_breakpoint($min: $ds-grid-breakpoint-sm) {
-    max-width: 62%;
+    max-width: 55%;
     margin: var(--ds-size-200) auto 0 250px;
   }
 
   @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
-    max-width: 70%;
+    max-width: 60%;
     margin: var(--ds-size-200) auto 0 290px;
   }
 
@@ -130,7 +131,7 @@ footer,
 
 footer {
   padding-top:var(--ds-size-800);
-  padding-bottom: $sideNavHeight;
+  padding-bottom: $sideNavTop;
   color: var(--ds-color-text-secondary-default);
   font-weight: 100;
 }
@@ -162,7 +163,7 @@ auro-swatch-list {
   padding: 0 var(--ds-size-300) 100px var(--ds-size-300);
   height: calc(100% - $sideNavHeight);
   overflow: scroll;
-  top: $sideNavHeight;
+  top: $sideNavTop;
   background-color: var(--ds-color-background-lighter);
   background-color: var(--ds-color-brand-gray-100);
 
@@ -183,13 +184,13 @@ auro-swatch-list {
     display: block;
     opacity: 1;
     left: auto;
-    width: 230px;
-    top: $sideNavHeight;
+    width: 180px;
+    top: $sideNavTop;
     padding-bottom: 100px;
   }
 
   @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
-    width: 270px;
+    width: 215px;
   }
 }
 
@@ -283,7 +284,7 @@ auro-swatch-list {
       box-shadow: 0px 15px 28px -10px var(--ds-color-background-darker);
       margin-left: 0;
       padding-left: var(--ds-size-300);
-      top: $sideNavHeight;
+      top: $sideNavTop;
 
       a {
         margin-bottom: var(--ds-size-sm);
@@ -562,7 +563,7 @@ pre {
   line-height: 1.5rem;
   margin-bottom: 2rem;
   position: sticky;
-  top: $sideNavHeight;
+  top: $sideNavTop;
   background: linear-gradient(180deg, rgba(255,255,255,.99) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,.9) 100%);
   z-index: 10;
   overflow-x: auto;

@@ -1,13 +1,12 @@
-import AuroComponentContent from "~/functions/renderComponentPage";
-import { initExamples } from '@aurodesignsystem/auro-input/demo/index.min.js';
-import content from '@aurodesignsystem/auro-input/demo/index.md';
+import AuroComponentContent from "~/functions/renderFormkitComponentPage";
+import { initExamples } from '@aurodesignsystem/auro-formkit/auro-input/demo/index.js';
+import content from '@aurodesignsystem/auro-formkit/auro-input/demo/index.md';
 
 class AuroContent extends AuroComponentContent {
 
   constructor(props) {
     super(props);
 
-    this.hasFigma = true;
     this.markdownContent = content; 
   };
 

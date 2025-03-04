@@ -1,6 +1,6 @@
-import AuroComponentContent from "~/functions/renderComponentPage";
-import { initExamples } from '@aurodesignsystem/auro-datepicker/demo/index.min.js';
-import content from '@aurodesignsystem/auro-datepicker/demo/index.md';
+import AuroComponentContent from "~/functions/renderFormkitComponentPage";
+import { initExamples } from '@aurodesignsystem/auro-formkit/auro-datepicker/demo/index.js';
+import content from '@aurodesignsystem/auro-formkit/auro-datepicker/demo/index.md';
 
 class AuroContent extends AuroComponentContent {
 
@@ -8,7 +8,6 @@ class AuroContent extends AuroComponentContent {
     super(props);
 
     this.markdownContent = content; 
-    this.hasFigma = true;
     this.hasCustomElementRegistration = false;
   };
 
