@@ -16,25 +16,18 @@
     <source srcset="https://picsum.photos/id/213/320/1100" media="(min-width: 320px)"/>
     <img src="https://picsum.photos/id/213/225/550" alt="" />
   </picture>
-  <span slot="title" style="color: white"><auro-icon category="interface" name="chat" customColor customSize style="width: 50px"></auro-icon>Auro Discussions </span>
+  <span slot="title" style="color: white">Looking for support with Auro?</span>
   <p slot="description">
-    <span style="max-width: 500px; display: block; color: white">Have ideas you want to share or need more information about Auro?<br>Please feel free to start a new discussion with the team.</span>
+    <span style="max-width: 500px; display: block; color: white">Please open a ticket in our support system!</span>
   </p>
-  <auro-hyperlink style="margin-right: 1rem; margin-bottom: 0.5rem" type="cta" secondary href="https://github.com/AlaskaAirlines/WC-Generator/discussions/new/choose" slot="action" target="_blank">Start a new discussion</auro-hyperlink>
-  <auro-hyperlink type="cta" secondary href="https://github.com/AlaskaAirlines/WC-Generator/discussions" slot="action" target="_blank">View open discussions</auro-hyperlink>
+  <auro-hyperlink style="margin-right: 1rem; margin-bottom: 0.5rem" type="cta" secondary href="https://dev.azure.com/itsals/Auro%20Design%20System/_workitems/create/Bug?templateId=f6462190-5e90-490c-a4f5-ad260e34be07&ownerId=1801e6f8-424d-400c-b97f-1c80c4b5cc0f" slot="action" target="_blank">File a Bug</auro-hyperlink>
+  <auro-hyperlink style="margin-right: 1rem; margin-bottom: 0.5rem" type="cta" secondary href="https://dev.azure.com/itsals/Auro%20Design%20System/_workitems/create/User%20Story?templateId=cf434bf6-4af0-4c9f-99bc-36df1339c146&ownerId=1801e6f8-424d-400c-b97f-1c80c4b5cc0f" slot="action" target="_blank">Request a Feature Change</auro-hyperlink>
+  <auro-hyperlink type="cta" secondary href="https://dev.azure.com/itsals/Auro%20Design%20System/_workitems/create/User%20Story?templateId=11bde815-6364-46ff-b0eb-26b42c93799d&ownerId=1801e6f8-424d-400c-b97f-1c80c4b5cc0f" slot="action" target="_blank">Other Support Request(s)</auro-hyperlink>
 </auro-banner><br><br>
 
-Looking for help with Auro? F.A.Q.s, how to contact, it's all here. Also be sure to check out our [office hours](/officehours) for how to best contact the Auro team.
-
-To submit an issue with any part of the Auro ecosystem, please see our [status page](/component-status). Click/tap on any of the repo's corresponding *ISSUES* badge.
+<p>Alaska Airlines employees may also ask questions in our <auro-hyperlink href="https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A850b95ad1ecf4c5db953e77774400a2a%40thread.skype%2FAuro%2520Support%2520Channel%3FgroupId%3Daa01c782-8f88-480d-85f1-0927b1757977&type=channel&deeplinkId=8777b121-2e88-49ae-b9cb-c3d776c93267&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true" target="_blank">Microsoft Teams Support Channel</a>.</p>
 
 ## Frequently asked questions
-
-<!-- >
-  <auro-accordion id="">
-    <span slot="trigger"></span>
-  </auro-accordion>
--->
 
 Please see the items below for commonly asked questions regarding development and instillation of the Auro Design System.
 
@@ -66,8 +59,10 @@ Please see the items below for commonly asked questions regarding development an
   <auro-accordion id="getStarted" chromeless noProfile>
     <span slot="trigger">Q: How do I submit an issue?</span>
     <div class="lightText">
-      <p>Auro is not an single repository, but an ecosystem of tools and components. Every part of the ecosystem has its own Github repo. To submit an issue with any of the repos in Auro's ecosystem, please see our <auro-hyperlink href="/component-status" relative>component status</auro-hyperlink> page and click/tap on the repo's corresponding <i>ISSUES</i> badge.</p>
-      <p>There are also Github Issue links at the top of every Auro element page.</p>
+      <p>Auro is not a single repository, but an ecosystem of tools and components. Support tickets may be opened using the following links:</p>
+      <auro-hyperlink href="https://dev.azure.com/itsals/Auro%20Design%20System/_workitems/create/Bug?templateId=f6462190-5e90-490c-a4f5-ad260e34be07&ownerId=1801e6f8-424d-400c-b97f-1c80c4b5cc0f" target="_blank">File a Bug</auro-hyperlink><br />
+      <auro-hyperlink href="https://dev.azure.com/itsals/Auro%20Design%20System/_workitems/create/User%20Story?templateId=cf434bf6-4af0-4c9f-99bc-36df1339c146&ownerId=1801e6f8-424d-400c-b97f-1c80c4b5cc0f" target="_blank">Request a Feature Change</auro-hyperlink><br />
+      <auro-hyperlink href="https://dev.azure.com/itsals/Auro%20Design%20System/_workitems/create/User%20Story?templateId=11bde815-6364-46ff-b0eb-26b42c93799d&ownerId=1801e6f8-424d-400c-b97f-1c80c4b5cc0f" target="_blank">Other Support Request(s)</auro-hyperlink>
     </div>
   </auro-accordion>
   <auro-accordion id="getStarted" chromeless noProfile>
@@ -144,7 +139,6 @@ Please see the items below for commonly asked questions regarding development an
     <span slot="trigger">Q: How can I help?</span>
     <div class="lightText">
       <p>Are you interested in helping with Auro?. There are multiple ways anyone can contribute to Auro. If you are using any one of the many Auro tools and you find a bug or want to propose an enhancement, we recommend that you submit an issue with any of the <auro-hyperlink href="/component-status" relative>Auro individual repos.</auro-hyperlink></p>
-      <p>If you are simply looking for something to do but don't know where to start? We have you covered there too. See our list of <auro-hyperlink href="/help-wanted" relative>help wanted</auro-hyperlink> issues.</p>
       <p>Submitting PRs is great, but we still recommend that you submit an issue to be reviewed before starting the work. While we try to work with everyone as much as possible, we can't guarantee that all PRs will be accepted and merged into the main branch. So to ensure that you are committing code that will be accepted, an issue first really helps.</p>
     </div>
   </auro-accordion>
@@ -167,18 +161,12 @@ Please see the items below for commonly asked questions regarding development an
     <span slot="trigger">Q: What is Auro's SLA?</span>
     <div class="lightText">
       <auro-header level="3" display="500">Issues</auro-header>
-      <p>When it comes to servicing our customers we hold ourselves to a high level of support. Once an issue is submitted, you have our promise that you will receive a response within 48 hours. </p>
-      <p>That is not to say that we will address the issue within that time, but someone from our team will respond to your issue with the information we have and what our plan will be to prioritize the issue.</p>
-      <p>Prioritization of work will take a few things into consideration, but the overall process will follow the MoSCoW approach. </p>
-      <ul>
-        <li><strong>Must</strong> -  The work is a MUST HAVE for the health and continued value of the Auro Design System. This criteria specifies that the work needs to happen in order to deliver on the goals of the Auro team and to ensure the success of any product team that is dependent on Auro's resources. </li>
-        <li><strong>Should</strong> - The work is high-priority and should be included in the sprint plan if it is possible. This is often critical work but one which can be satisfied in other ways if absolutely necessary.</li>
-        <li><strong>Could</strong> - Work that is considered desirable, but not necessary. This work can be included if time and resources permit in a sprint plan further down the road.</li>
-        <li><strong>Won't</strong> - Represents work that the team has decided is not necessary for the success of the Auro Design System or has agreed that this is work to be done, but not considered the responsibility of the Auro Design System.</li>
-      </ul>
-      <p>Following these guidelines, every new request, and even bug reports, can be judged fairly and prioritized appropriately.</p>
+      <p>We monitor the tickets and Internal Micosoft Teams <auro-hyperlink href="https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A850b95ad1ecf4c5db953e77774400a2a%40thread.skype%2FAuro%2520Support%2520Channel%3FgroupId%3Daa01c782-8f88-480d-85f1-0927b1757977&type=channel&deeplinkId=8777b121-2e88-49ae-b9cb-c3d776c93267&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true" target="_blank">Public Channel</auro-hyperlink> from 10-4 Pacific time Monday - Friday. During this time, all tickets and messages will be responded to within 1 hour.</p>
+      <p>All bugs and general support requests will be investigated immediately upon receipt.</p>
+      <p>All feature requests will be triaged during our next standup meeting (every Monday - Thursday morning). If your issue is urgent, send a message in our public channel.</p>
+      <p>The Auro Team will determine the scope, effort and priority of all support requests and document these decisions within the ticket.</p>
       <auro-header level="3" display="500">Pull Requests</auro-header>
-      <p>For pull requests, our SLA is the same. Please allow up to 48 hours for solicited code changes that are associated with an approved issue. If the pull request is unsolicited and not associated with an approved issue, please allow up to 72 hours for a response. To help expedite this process, please submit an issue for review prior to submitting a pull request. </p>
+      <p>For pull requests, please allow up to 48 hours for solicited code changes that are associated with an approved issue. If the pull request is unsolicited and not associated with an approved issue, please allow up to 72 hours for a response. To help expedite this process, please submit an issue for review prior to submitting a pull request. </p>
       <p>Please see our <auro-hyperlink href="/contributing" relative>Auro Design System Contributing Guidelines</auro-hyperlink> for more information.</p>
     </div>
   </auro-accordion>
