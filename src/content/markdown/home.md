@@ -60,7 +60,7 @@
   <auro-accordion id="submitIssue" chromeless noProfile>
     <span slot="trigger">Q: How do I submit an issue?</span>
     <div class="lightText">
-      <p>Auro is not an single repository, but an ecosystem of tools and components. Every part of the ecosystem has its own Github repo. To submit an issue with any of the repos in Auro's ecosystem, please see our <auro-hyperlink href="/component-status" relative>component status</auro-hyperlink> page and click/tap on the repo's corresponding <i>ISSUES</i> badge.</p>
+      <p>Auro is not a single repository, but an ecosystem of tools and components. Every part of the ecosystem has its own Github repo. To submit an issue with any of the repos in Auro's ecosystem, please see our <auro-hyperlink href="/component-status" relative>component status</auro-hyperlink> page and click/tap on the repo's corresponding <i>ISSUES</i> badge.</p>
       <p>There are also Github Issue links at the top of every Auro element page.</p>
     </div>
   </auro-accordion>
