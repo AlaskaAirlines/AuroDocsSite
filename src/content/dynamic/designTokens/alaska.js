@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import ThemePage from './components/ThemePage';
 import TokenSection from "./components/TokenSection";
+import EngineeringTokensNotice from "./components/EngineeringTokenNotice";
 import alaskaAllTokens from '@aurodesignsystem/design-tokens/dist/alaska/JSObject--allTokens.js';
 
 // Categories
-const { color, font } = alaskaAllTokens;
+const { color, font, component } = alaskaAllTokens;
 
 // Colors
 const colorTokens = [
@@ -23,6 +24,11 @@ const fontWeightTokens = [
   { title: "Body", tokens: font.weight.body },
   { title: "Display", tokens: font.weight.display },
   { title: "Heading", tokens: font.weight.heading }
+];
+
+// Component tokens
+const componentTokens = [
+  { title: "Component", tokens: component }
 ];
 
 class AlaskaTokens extends Component {
@@ -47,6 +53,13 @@ class AlaskaTokens extends Component {
         <h3 className="auro_heading auro_heading--500">Font Weight</h3>
         <TokenSection 
           tokens={fontWeightTokens}
+          headingLevel="h4"
+          headingClass="auro_heading auro_heading--400"
+        />
+
+        <EngineeringTokensNotice />
+        <TokenSection 
+          tokens={componentTokens}
           headingLevel="h4"
           headingClass="auro_heading auro_heading--400"
         />
