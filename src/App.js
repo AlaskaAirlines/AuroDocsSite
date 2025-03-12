@@ -105,6 +105,12 @@ import AlaskaClassicTokens from './content/dynamic/designTokens/alaska-classic';
 import HawaiianTokens from './content/dynamic/designTokens/hawaiian';
 import DesignTokensInstall from './content/dynamic/designTokens/install';
 
+// design tokens docs
+import DesignTokensDocsArchitecture from './content/dynamic/designTokens/docs/architecture';
+import DesignTokensDocsApiReference from './content/dynamic/designTokens/docs/api-reference';
+import DesignTokensDocsMigration from './content/dynamic/designTokens/docs/migration';
+import DesignTokensDocsThemes from './content/dynamic/designTokens/docs/themes';
+
 // color
 import ColorOverview from './content/dynamic/color/overview';
 import CoreDigitalPalette from './content/dynamic/color/digitalPalette';
@@ -534,6 +540,9 @@ function App() {
               {/* Getting Started/developers */}
               <Route path="/getting-started/developers" element={<Onboarding />} />
               <Route path="/getting-started/developers/compliance" element={<Compliance />} />
+              <Route path="/officehours" element={<Officehours />} />
+
+              {/* Design tokens */}
               <Route path="/getting-started/developers/design-tokens" element={<DesignTokens />} />
               <Route path="/design-tokens" element={<DesignTokens />} />
               <Route path="/getting-started/developers/design-tokens/install" element={<DesignTokensInstall />} />
@@ -542,7 +551,12 @@ function App() {
               <Route path="/getting-started/developers/design-tokens/alaska-classic" element={<AlaskaClassicTokens />} />
               <Route path="/getting-started/developers/design-tokens/hawaiian" element={<HawaiianTokens />} />
               <Route path="/design-tokens/deprecated" element={<AuroClassicTokens />} />
-              <Route path="/officehours" element={<Officehours />} />
+
+              {/* Design Tokens Docs */}
+              <Route path="/getting-started/developers/design-tokens/docs/architecture" element={<DesignTokensDocsArchitecture />} />
+              <Route path="/getting-started/developers/design-tokens/docs/api-reference" element={<DesignTokensDocsApiReference />} />
+              <Route path="/getting-started/developers/design-tokens/docs/migration" element={<DesignTokensDocsMigration />} />
+              <Route path="/getting-started/developers/design-tokens/docs/themes" element={<DesignTokensDocsThemes />} />
 
               {/* Color */}
               <Route path="/color/overview" element={<ColorOverview />} />
