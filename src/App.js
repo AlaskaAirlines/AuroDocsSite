@@ -20,6 +20,9 @@ import '@aurodesignsystem/design-tokens/dist/CSSCustomProperties--bundled.css';
 // Auro Classic custom properties
 import '@aurodesignsystem/design-tokens/dist/auro-classic/CSSCustomProperties.css';
 
+// Auro Classic custom properties
+import '@aurodesignsystem/design-tokens/dist/alaska/CSSCustomProperties--alaska.css';
+
 // Auro Components
 import '@alaskaairux/icons';
 import '@aurodesignsystem/auro-accordion';
