@@ -18,7 +18,8 @@ const createTokenMappings = (theme) => {
     { title: "Page Background", tokens: basic.color.pageBackground },
     { title: "Status", tokens: basic.color.status },
     { title: "Surface", tokens: basic.color.surface },
-    { title: "Text & Icon", tokens: basic.color.texticon }
+    { title: "Text & Icon", tokens: basic.color.texticon },
+    { title: "Tier Program", tokens: basic.color.tierProgram }
   ];
 
   const fontTokens = [
@@ -41,10 +42,13 @@ const createTokenMappings = (theme) => {
   // Advanced tokens
   const advancedColorTokens = [
     { title: "Accents", tokens: advanced.color.accents },
+    { title: "Avatar", tokens: advanced.color.avatar },
     { title: "Boolean", tokens: advanced.color.boolean },
     { title: "Button", tokens: advanced.color.button },
+    { title: "Flightline", tokens: advanced.color.flightline },
     { title: "Hyperlink", tokens: advanced.color.hyperlink },
     { title: "Shared", tokens: advanced.color.shared },
+    { title: "Skeleton", tokens: advanced.color.skeleton },
     { title: "State", tokens: advanced.color.state }
   ];
 
