@@ -1,6 +1,13 @@
 // All Auro web components need to be listed here to be packaged properly for IE11 support
 // This file uses dynamic imports to enable proper tree-shaking
 
+// Import essential components directly to make them available globally
+import '@aurodesignsystem/auro-accordion';
+import '@aurodesignsystem/auro-alert';
+import '@aurodesignsystem/auro-button';
+import '@aurodesignsystem/auro-hyperlink';
+import '@alaskaairux/icons';
+
 // Only import components based on current route or component needs
 export function loadAuroComponents(components) {
   const importPromises = [];
@@ -93,12 +100,7 @@ export function loadAuroComponents(components) {
   return Promise.all(importPromises);
 }
 
-// Register only core components needed for the initial render
-// Other components will be loaded on demand
+// Load all required components on initial page load
 export default function registerCoreComponents() {
-  // Import only essential components for initial page load
-  return Promise.all([
-    import('@aurodesignsystem/auro-button'),
-    import('@aurodesignsystem/auro-hyperlink')
-  ]);
+  return Promise.resolve(); // We're already importing the core components directly
 }

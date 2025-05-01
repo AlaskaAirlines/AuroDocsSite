@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
+// Import Nav directly to ensure it's not tree-shaken away
 import { Nav } from './Nav';
 import { FooterLinks } from "./FooterLinks";
 
@@ -21,7 +22,10 @@ const ThemePage = ({ theme, children, showFooter, renderSectionEl }) => {
   
   const content = (
     <>
-      <Nav />
+      {/* Use Suspense to handle the case where Nav might load asynchronously */}
+      <Suspense fallback={<div>Loading navigation...</div>}>
+        <Nav />
+      </Suspense>
       {children}
       {showFooter && <FooterLinks />}
     </>
@@ -30,7 +34,7 @@ const ThemePage = ({ theme, children, showFooter, renderSectionEl }) => {
   // Optionally return a section element wrapper
   // Necessary for use with renderComponentPage & sticky tabs
   return renderSectionEl ? (
-    <section {...themeProps}>
+    <section className="auro_baseType" {...themeProps}>
       {content}
     </section>
   ) : content;
