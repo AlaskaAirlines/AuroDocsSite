@@ -6,6 +6,9 @@ import '@aurodesignsystem/auro-accordion';
 import '@aurodesignsystem/auro-alert';
 import '@aurodesignsystem/auro-button';
 import '@aurodesignsystem/auro-hyperlink';
+import '@aurodesignsystem/auro-tokenlist';
+import '@aurodesignsystem/auro-tokenlist/dist/auro-tokenavatar';
+import '@aurodesignsystem/auro-tokenlist/dist/auro-tokendisplay';
 import '@alaskaairux/icons';
 
 // Only import components based on current route or component needs

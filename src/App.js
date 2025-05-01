@@ -463,6 +463,11 @@ const ComponentLoader = () => {
       componentsToLoad.push('tokenlist');
     }
     
+    // Load tokenlist component for design token pages
+    if (path.includes('/design-tokens') || path.includes('/getting-started/developers/design-tokens')) {
+      componentsToLoad.push('tokenlist');
+    }
+    
     // Load all required components for the current route
     if (componentsToLoad.length > 0) {
       loadAuroComponents(componentsToLoad).catch(error => {

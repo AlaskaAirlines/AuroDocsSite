@@ -1,5 +1,5 @@
 import React from "react";
-import { getTokens } from "../utils";
+import { getTokens } from "../utils/index.js";
 
 /**
  * TokenSection component that renders token sections with appropriate headings
