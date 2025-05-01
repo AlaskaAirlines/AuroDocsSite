@@ -74,13 +74,14 @@
   },
   "scripts": {
     "start": "vite",
-    "build": "npm run buildIcons && vite build",
+    "build": "npm run check-dependencies && npm run buildIcons && vite build",
     "preview": "vite preview",
     "test": "echo \"No tests specified\" && exit 0",
     "buildIconsScript": "node ./scripts/build-icon-lib.js",
     "buildPages": "node ./scripts/build-page-imports.js",
     "buildIcons": "npm-run-all buildPages buildIconsScript",
-    "dev": "npm-run-all buildIcons start"
+    "dev": "npm-run-all buildIcons start",
+    "check-dependencies": "node ./scripts/check-dependencies.js"
   },
   "husky": {
     "hooks": {
