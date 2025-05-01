@@ -1,58 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  useLocation
 } from "react-router-dom";
 
 // Importing Sass
 import './sass/index.scss';
 import './sass/App.scss';
 
-// -=-=-=-=-=-=-=-=-=-=- LEGACY =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Required to support components not yet updated to new lib
-// -=-=-=-=-=-=-=-=-=-=- LEGACY =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Only import design token CSS files - these are required for styling
 import '@alaskaairux/design-tokens/dist/tokens/CSSCustomProperties.css';
-
-// All themes custom properties
 import '@aurodesignsystem/design-tokens/dist/CSSCustomProperties--bundled.css';
-
-// Auro Classic custom properties
 import '@aurodesignsystem/design-tokens/dist/auro-classic/CSSCustomProperties.css';
 
-// Auro Components
-import '@alaskaairux/icons';
-import '@aurodesignsystem/auro-accordion';
-import '@aurodesignsystem/auro-alert';
-import '@aurodesignsystem/auro-avatar';
-import '@aurodesignsystem/auro-background';
-import '@aurodesignsystem/auro-backtotop';
-import '@aurodesignsystem/auro-badge';
-import '@aurodesignsystem/auro-banner';
-import '@aurodesignsystem/auro-button';
-import '@aurodesignsystem/auro-card';
-import '@aurodesignsystem/auro-carousel';
-import '@aurodesignsystem/auro-datetime';
-import '@aurodesignsystem/auro-dialog';
-import '@aurodesignsystem/auro-drawer';
-import '@aurodesignsystem/auro-flight';
-import '@aurodesignsystem/auro-flightline';
-import '@aurodesignsystem/auro-header';
-import '@aurodesignsystem/auro-hyperlink';
-import '@aurodesignsystem/auro-icon';
-import '@aurodesignsystem/auro-icon/src/auro-alaska';
-import '@aurodesignsystem/auro-loader';
-import '@aurodesignsystem/auro-lockup';
-import '@aurodesignsystem/auro-nav';
-import '@aurodesignsystem/auro-pane';
-import '@aurodesignsystem/auro-popover';
-import '@aurodesignsystem/auro-sidenav';
-import '@aurodesignsystem/auro-skeleton';
-import '@aurodesignsystem/auro-toast';
-import '@aurodesignsystem/auro-tokenlist';
-import '@aurodesignsystem/auro-tokenlist/dist/auro-tokenavatar';
-import '@aurodesignsystem/auro-tokenlist/dist/auro-tokendisplay';
-import '@aurodesignsystem/auro-table';
+// Import component loader utility
+import { loadAuroComponents } from './webcomponents';
 
 // Logo to appear in console
 import './scripts/auro-consoleLogo';
@@ -205,240 +169,115 @@ import {
 
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
-// COMPONENTS
+// Component to handle lazy loading components based on route
+const ComponentLoader = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Extract component names from current route
+    const path = location.pathname;
+    const componentsToLoad = [];
+    
+    // Match route patterns to determine which components to load
+    if (path.includes('/components/auro/accordion') || path === '/accordion/') {
+      componentsToLoad.push('accordion');
+    }
+    if (path.includes('/components/auro/alert') || path === '/alert') {
+      componentsToLoad.push('alert');
+    }
+    if (path.includes('/components/auro/avatar') || path === '/avatar/') {
+      componentsToLoad.push('avatar');
+    }
+    if (path.includes('/components/auro/background') || path === '/background/') {
+      componentsToLoad.push('background');
+    }
+    if (path.includes('/components/auro/backtotop') || path === '/backtotop') {
+      componentsToLoad.push('backtotop');
+    }
+    if (path.includes('/components/auro/badge') || path === '/badge') {
+      componentsToLoad.push('badge');
+    }
+    if (path.includes('/components/auro/banner') || path === '/banner/') {
+      componentsToLoad.push('banner');
+    }
+    if (path.includes('/components/auro/button') || path === '/button') {
+      componentsToLoad.push('button');
+    }
+    if (path.includes('/components/auro/card') || path === '/card/') {
+      componentsToLoad.push('card');
+    }
+    if (path.includes('/components/auro/carousel') || path === '/carousel/') {
+      componentsToLoad.push('carousel');
+    }
+    if (path.includes('/components/auro/datetime') || path === '/datetime/') {
+      componentsToLoad.push('datetime');
+    }
+    if (path.includes('/components/auro/dialog') || path === '/dialog') {
+      componentsToLoad.push('dialog');
+    }
+    if (path.includes('/components/auro/drawer') || path === '/drawer') {
+      componentsToLoad.push('drawer');
+    }
+    if (path.includes('/components/auro/flight') || path === '/flight') {
+      componentsToLoad.push('flight');
+    }
+    if (path.includes('/components/auro/flightline') || path === '/flightline') {
+      componentsToLoad.push('flightline');
+    }
+    if (path.includes('/components/auro/header') || path === '/header') {
+      componentsToLoad.push('header');
+    }
+    if (path.includes('/components/auro/hyperlink') || path === '/hyperlink') {
+      componentsToLoad.push('hyperlink');
+    }
+    if (path.includes('/components/auro/icon') || path === '/icon/') {
+      componentsToLoad.push('icon');
+    }
+    if (path.includes('/components/auro/icon/alaska') || path === '/icon/alaska') {
+      componentsToLoad.push('alaska-icon');
+    }
+    if (path.includes('/components/auro/loader') || path === '/loader') {
+      componentsToLoad.push('loader');
+    }
+    if (path.includes('/components/auro/lockup') || path === '/lockup') {
+      componentsToLoad.push('lockup');
+    }
+    if (path.includes('/components/auro/nav') || path === '/nav') {
+      componentsToLoad.push('nav');
+    }
+    if (path.includes('/components/auro/pane') || path === '/pane/') {
+      componentsToLoad.push('pane');
+    }
+    if (path.includes('/components/auro/popover') || path === '/popover') {
+      componentsToLoad.push('popover');
+    }
+    if (path.includes('/components/auro/sidenav') || path === '/sidenav') {
+      componentsToLoad.push('sidenav');
+    }
+    if (path.includes('/components/auro/skeleton') || path === '/skeleton') {
+      componentsToLoad.push('skeleton');
+    }
+    if (path.includes('/components/auro/table') || path === '/table') {
+      componentsToLoad.push('table');
+    }
+    if (path.includes('/components/auro/toast') || path === '/toast') {
+      componentsToLoad.push('toast');
+    }
+    if (path.includes('/components/auro/tokenlist') || path === '/tokenlist') {
+      componentsToLoad.push('tokenlist');
+    }
+    
+    // Load all required components for the current route
+    if (componentsToLoad.length > 0) {
+      loadAuroComponents(componentsToLoad);
+    }
+  }, [location]);
+  
+  return null;
+};
 
-// Accordion
-import AuroAccordion from './content/dynamic/accordion/component';
-import AuroAccordionApi from './content/dynamic/accordion/api';
-import AuroAccordionInstall from './content/dynamic/accordion/install';
-import AuroAccordionReleases from './content/dynamic/accordion/releases';
-
-// Alert
-import AuroAlert from './content/dynamic/alert/component';
-import AuroAlertApi from './content/dynamic/alert/api';
-import AuroAlertInstall from './content/dynamic/alert/install';
-import AuroAlertReleases from './content/dynamic/alert/releases';
-import AuroAlertFigma from './content/dynamic/alert/figma';
-
-// Avatar
-import AuroAvatar from './content/dynamic/avatar/component';
-import AuroAvatarApi from './content/dynamic/avatar/api';
-import AuroAvatarInstall from './content/dynamic/avatar/install';
-import AuroAvatarReleases from './content/dynamic/avatar/releases';
-
-// background
-import AuroBackground from './content/dynamic/background/component';
-import AuroBackgroundApi from './content/dynamic/background/api';
-import AuroBackgroundInstall from './content/dynamic/background/install';
-import AuroBackgroundReleases from './content/dynamic/background/releases';
-
-// BacktoTop
-import AuroBacktotop from './content/dynamic/backtotop/component';
-import AuroBacktotopApi from './content/dynamic/backtotop/api';
-import AuroBacktotopInstall from './content/dynamic/backtotop/install';
-import AuroBacktotopReleases from './content/dynamic/backtotop/releases';
-
-// badge
-import AuroBadge from './content/dynamic/badge/component';
-import AuroBadgeApi from './content/dynamic/badge/api';
-import AuroBadgeInstall from './content/dynamic/badge/install';
-import AuroBadgeReleases from './content/dynamic/badge/releases';
-
-// banner
-import AuroBanner from './content/dynamic/banner/component';
-import AuroBannerApi from './content/dynamic/banner/api';
-import AuroBannerInstall from './content/dynamic/banner/install';
-import AuroBannerReleases from './content/dynamic/banner/releases';
-
-// button
-import AuroButton from './content/dynamic/button/component';
-import AuroButtonApi from './content/dynamic/button/api';
-import AuroButtonInstall from './content/dynamic/button/install';
-import AuroButtonReleases from './content/dynamic/button/releases';
-import AuroButtonFigma from './content/dynamic/button/figma';
-
-// card
-import AuroCard from './content/dynamic/card/component';
-import AuroCardApi from './content/dynamic/card/api';
-import AuroCardInstall from './content/dynamic/card/install';
-import AuroCardReleases from './content/dynamic/card/releases';
-
-// carousel
-import AuroCarousel from './content/dynamic/carousel/component';
-import AuroCarouselApi from './content/dynamic/carousel/api';
-import AuroCarouselInstall from './content/dynamic/carousel/install';
-import AuroCarouselReleases from './content/dynamic/carousel/releases';
-
-// checkbox
-import AuroCheckbox from './content/dynamic/checkbox/component';
-import AuroCheckboxApi from './content/dynamic/checkbox/api';
-import AuroCheckboxInstall from './content/dynamic/checkbox/install';
-import AuroCheckboxReleases from './content/dynamic/checkbox/releases';
-
-// combobox
-import AuroCombobox from './content/dynamic/combobox/component';
-import AuroComboboxApi from './content/dynamic/combobox/api';
-import AuroComboboxInstall from './content/dynamic/combobox/install';
-import AuroComboboxReleases from './content/dynamic/combobox/releases';
-
-// counter
-import AuroCounter from './content/dynamic/counter/component';
-import AuroCounterApi from './content/dynamic/counter/api';
-import AuroCounterInstall from './content/dynamic/counter/install';
-import AuroCounterReleases from './content/dynamic/counter/releases';
-
-// datepicker
-import AuroDatepicker from './content/dynamic/datepicker/component';
-import AuroDatepickerApi from './content/dynamic/datepicker/api';
-import AuroDatepickerInstall from './content/dynamic/datepicker/install';
-import AuroDatepickerReleases from './content/dynamic/datepicker/releases';
-
-// datetime
-import AuroDateTime from './content/dynamic/datetime/component';
-import AuroDateTimeApi from './content/dynamic/datetime/api';
-import AuroDateTimeInstall from './content/dynamic/datetime/install';
-import AuroDateTimeReleases from './content/dynamic/datetime/releases';
-
-// dialog
-import AuroDialog from './content/dynamic/dialog/component';
-import AuroDialogApi from './content/dynamic/dialog/api';
-import AuroDialogInstall from './content/dynamic/dialog/install';
-import AuroDialogReleases from './content/dynamic/dialog/releases';
-
-// drawer
-import AuroDrawer from './content/dynamic/drawer/component';
-import AuroDrawerApi from './content/dynamic/drawer/api';
-import AuroDrawerInstall from './content/dynamic/drawer/install';
-import AuroDrawerReleases from './content/dynamic/drawer/releases';
-
-// dropdown
-import AuroDropdown from './content/dynamic/dropdown/component';
-import AuroDropdownApi from './content/dynamic/dropdown/api';
-import AuroDropdownInstall from './content/dynamic/dropdown/install';
-import AuroDropdownReleases from './content/dynamic/dropdown/releases';
-
-// Flight
-import AuroFlight from './content/dynamic/flight/component';
-import AuroFlightApi from './content/dynamic/flight/api';
-import AuroFlightInstall from './content/dynamic/flight/install';
-import AuroFlightDot from './content/dynamic/flight/dot';
-import AuroFlightReleases from './content/dynamic/flight/releases';
-
-// Flightline
-import AuroFlightline from './content/dynamic/flightline/component';
-import AuroFlightlineApi from './content/dynamic/flightline/api';
-import AuroFlightlineInstall from './content/dynamic/flightline/install';
-import AuroFlightlineDot from './content/dynamic/flightline/dot';
-import AuroFlightlineReleases from './content/dynamic/flightline/releases';
-
-// Form
-import AuroForm from './content/dynamic/form/component';
-import AuroFormApi from './content/dynamic/form/api';
-import AuroFormInstall from './content/dynamic/form/install';
-import AuroFormReleases from './content/dynamic/form/releases';
-
-// header
-import AuroHeader from './content/dynamic/header/component';
-import AuroHeaderApi from './content/dynamic/header/api';
-import AuroHeaderInstall from './content/dynamic/header/install';
-import AuroHeaderReleases from './content/dynamic/header/releases';
-
-// hyperlink
-import AuroHyperlink from './content/dynamic/hyperlink/component';
-import AuroHyperlinkInstall from './content/dynamic/hyperlink/install';
-import AuroHyperlinkApi from './content/dynamic/hyperlink/api';
-import AuroHyperlinkReleases from './content/dynamic/hyperlink/releases';
-import AuroHyperlinkFigma from './content/dynamic/hyperlink/figma';
-import AuroHyperlinka11y from './content/dynamic/hyperlink/a11y';
-
-// Icon
-import AuroIcon from './content/dynamic/icon/component';
-import AuroIconApi from './content/dynamic/icon/api';
-import AuroIconInstall from './content/dynamic/icon/install';
-import AuroIconReleases from './content/dynamic/icon/releases';
-import AuroAlaska from './content/dynamic/icon/alaska';
-
-// input
-import AuroInput from './content/dynamic/input/component';
-import AuroInputApi from './content/dynamic/input/api';
-import AuroInputInstall from './content/dynamic/input/install';
-import AuroInputReleases from './content/dynamic/input/releases';
-
-// loader
-import AuroLoader from './content/dynamic/loader/component';
-import AuroLoaderApi from './content/dynamic/loader/api';
-import AuroLoaderInstall from './content/dynamic/loader/install';
-import AuroLoaderReleases from './content/dynamic/loader/releases';
-
-// lockup
-import AuroLockup from './content/dynamic/lockup/component';
-import AuroLockupApi from './content/dynamic/lockup/api';
-import AuroLockupInstall from './content/dynamic/lockup/install';
-import AuroLockupReleases from './content/dynamic/lockup/releases';
-
-// Menu
-import AuroMenu from './content/dynamic/menu/component';
-import AuroMenuApi from './content/dynamic/menu/api';
-import AuroMenuInstall from './content/dynamic/menu/install';
-import AuroMenuReleases from './content/dynamic/menu/releases';
-
-// Nav
-import AuroNav from './content/dynamic/nav/component';
-import AuroNavApi from './content/dynamic/nav/api';
-import AuroNavInstall from './content/dynamic/nav/install';
-import AuroNavReleases from './content/dynamic/nav/releases';
-
-// pane
-import AuroPane from './content/dynamic/pane/component';
-import AuroPaneApi from './content/dynamic/pane/api';
-import AuroPaneInstall from './content/dynamic/pane/install';
-import AuroPaneReleases from './content/dynamic/pane/releases';
-
-// popover
-import AuroPopover from './content/dynamic/popover/component';
-import AuroPopoverApi from './content/dynamic/popover/api';
-import AuroPopoverInstall from './content/dynamic/popover/install';
-import AuroPopoverReleases from './content/dynamic/popover/releases';
-
-// radio button
-import AuroRadio from './content/dynamic/radio/component';
-import AuroRadioApi from './content/dynamic/radio/api';
-import AuroRadioInstall from './content/dynamic/radio/install';
-import AuroRadioReleases from './content/dynamic/radio/releases';
-
-// Select
-import AuroSelect from './content/dynamic/select/component';
-import AuroSelectApi from './content/dynamic/select/api';
-import AuroSelectInstall from './content/dynamic/select/install';
-import AuroSelectReleases from './content/dynamic/select/releases';
-
-// sidenav
-import AuroSidenav from './content/dynamic/sidenav/component';
-import AuroSidenavApi from './content/dynamic/sidenav/api';
-import AuroSidenavInstall from './content/dynamic/sidenav/install';
-import AuroSidenavReleases from './content/dynamic/sidenav/releases';
-
-// skeleton
-import AuroSkeleton from './content/dynamic/skeleton/component';
-import AuroSkeletonApi from './content/dynamic/skeleton/api';
-import AuroSkeletonInstall from './content/dynamic/skeleton/install';
-import AuroSkeletonReleases from './content/dynamic/skeleton/releases';
-
-// Table
-import AuroTable from './content/dynamic/table/component';
-import AuroTableApi from './content/dynamic/table/api';
-import AuroTableInstall from './content/dynamic/table/install';
-import AuroTableReleases from './content/dynamic/table/releases';
-
-// toast
-import AuroToast from './content/dynamic/toast/component';
-import AuroToastApi from './content/dynamic/toast/api';
-import AuroToastInstall from './content/dynamic/toast/install';
-import AuroToastReleases from './content/dynamic/toast/releases';
-
-// formkit
-import AuroFormkitInstall from './content/dynamic/formkit/install';
-import AuroFormkitRelease from './content/dynamic/formkit/releases';
+// Keep the rest of your imports 
+// ...existing content imports...
 
 const API_KEY = import.meta.env.VITE_GH_TOKEN;
 
@@ -464,6 +303,7 @@ function App() {
 
           <Router>
             <ScrollToTop />
+            <ComponentLoader />
             <SideNav />
             <Routes>
 

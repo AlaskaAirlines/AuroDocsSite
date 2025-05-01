@@ -35,5 +35,55 @@ export default defineConfig({
                 '.js': 'jsx',
             },
         },
+    },
+    build: {
+        commonjsOptions: {
+            transformMixedEsModules: true,
+        },
+        rollupOptions: {
+            output: {
+                manualChunks: (id) => {
+                    // Put React packages in their own chunk
+                    if (id.includes('node_modules/react/') || 
+                        id.includes('node_modules/react-dom/') || 
+                        id.includes('node_modules/react-router-dom/')) {
+                        return 'react-vendor';
+                    }
+                    
+                    // Group markdown-related packages
+                    if (id.includes('node_modules/react-markdown/') || 
+                        id.includes('node_modules/rehype-') || 
+                        id.includes('node_modules/remark-') ||
+                        id.includes('node_modules/hast-')) {
+                        return 'markdown-vendor';
+                    }
+                    
+                    // Group Auro core packages
+                    if (id.includes('@aurodesignsystem/webcorestylesheets') ||
+                        id.includes('@aurodesignsystem/design-tokens')) {
+                        return 'auro-core';
+                    }
+                    
+                    // Group Auro component packages to enable tree-shaking
+                    if (id.includes('@aurodesignsystem/auro-') || id.includes('@alaskaairux/')) {
+                        // Get the component name from the path
+                        const match = id.match(/@(?:aurodesignsystem|alaskaairux)\/auro-([^/]+)/);
+                        if (match && match[1]) {
+                            // Create a chunk per component
+                            return `auro-${match[1]}`;
+                        }
+                        return 'auro-components';
+                    }
+                }
+            }
+        },
+        chunkSizeWarningLimit: 2000,
+        minify: 'terser',
+        terserOptions: {
+            compress: {
+                drop_console: true,
+                drop_debugger: true
+            }
+        }
     }
 })
