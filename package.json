@@ -39,7 +39,7 @@
     "@aurodesignsystem/auro-table": "^4.1.0",
     "@aurodesignsystem/auro-toast": "^3.1.0",
     "@aurodesignsystem/auro-tokenlist": "^1.4.0",
-    "@aurodesignsystem/design-tokens": "5.14.0",
+    "@aurodesignsystem/design-tokens": "5.15.1",
     "@aurodesignsystem/wc-generator": "^4.7.1",
     "@aurodesignsystem/webcorestylesheets": "^6.3.1",
     "@commitlint/cli": "^19.6.0",

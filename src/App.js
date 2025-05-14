@@ -103,6 +103,8 @@ import AuroClassicTokens from './content/dynamic/designTokens/auro-classic';
 import AlaskaTokens from './content/dynamic/designTokens/alaska';
 import AlaskaClassicTokens from './content/dynamic/designTokens/alaska-classic';
 import HawaiianTokens from './content/dynamic/designTokens/hawaiian';
+import Auro1Tokens from './content/dynamic/designTokens/auro-1';
+import Auro2Tokens from './content/dynamic/designTokens/auro-2';
 import DesignTokensInstall from './content/dynamic/designTokens/install';
 
 // design tokens docs
@@ -550,6 +552,8 @@ function App() {
               <Route path="/getting-started/developers/design-tokens/alaska" element={<AlaskaTokens />} />
               <Route path="/getting-started/developers/design-tokens/alaska-classic" element={<AlaskaClassicTokens />} />
               <Route path="/getting-started/developers/design-tokens/hawaiian" element={<HawaiianTokens />} />
+              <Route path="/getting-started/developers/design-tokens/auro-1" element={<Auro1Tokens />} />
+              <Route path="/getting-started/developers/design-tokens/auro-2" element={<Auro2Tokens />} />
               <Route path="/design-tokens/deprecated" element={<AuroClassicTokens />} />
 
               {/* Design Tokens Docs */}
