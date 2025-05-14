@@ -2,6 +2,7 @@ import React from "react";
 import ThemePage from './ThemePage';
 import TokenSection from "./TokenSection";
 import AdvancedTokensNotice from "./AdvancedTokensNotice";
+import BasicTokensNotice from "./BasicTokensNotice";
 import VersionChecker from './VersionChecker';
 
 const ThemeTokens = ({ theme, themeName, basicTokensMap, advancedTokensMap, introContent }) => {
@@ -17,10 +18,13 @@ const ThemeTokens = ({ theme, themeName, basicTokensMap, advancedTokensMap, intr
       {/* Display intro content if provided */}
       {introContent && <div className="theme-intro">{introContent}</div>}
 
-      <h2 className="auro_heading auro_heading--600">Colors</h2>
+      <h2 className="auro_heading auro_heading--600">Basic Tokens</h2>
+      <BasicTokensNotice />
+
+      <h3 className="auro_heading auro_heading--600">Colors</h3>
       <TokenSection 
         tokens={basicColorTokens}
-        headingLevel="h3"
+        headingLevel="h4"
         headingClass="auro_heading auro_heading--400"
         tokenListProps={{
           swatchType: "rectangle",
@@ -28,17 +32,17 @@ const ThemeTokens = ({ theme, themeName, basicTokensMap, advancedTokensMap, intr
         }}
       />
 
-      <h2 className="auro_heading auro_heading--600">Typography</h2>
+      <h3 className="auro_heading auro_heading--600">Typography</h3>
       <TokenSection 
         tokens={fontTokens}
-        headingLevel="h3"
+        headingLevel="h4"
         headingClass="auro_heading auro_heading--400"
       />
 
-      <h2 className="auro_heading auro_heading--600">Corner Radius</h2>
+      <h3 className="auro_heading auro_heading--600">Corner Radius</h3>
       <TokenSection 
         tokens={cornerRadiusTokens}
-        headingLevel="h3"
+        headingLevel="h4"
         headingClass="auro_heading auro_heading--400"
       />
 
