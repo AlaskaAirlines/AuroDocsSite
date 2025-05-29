@@ -6,7 +6,7 @@ import BasicTokensNotice from "./BasicTokensNotice";
 import VersionChecker from './VersionChecker';
 
 const ThemeTokens = ({ theme, themeName, basicTokensMap, advancedTokensMap, introContent }) => {
-  const { basicColorTokens, fontTokens, cornerRadiusTokens } = basicTokensMap;
+  const { basicColorTokens, typeTokens } = basicTokensMap;
   const { advancedColorTokens } = advancedTokensMap;
   
   return (
@@ -32,16 +32,9 @@ const ThemeTokens = ({ theme, themeName, basicTokensMap, advancedTokensMap, intr
         }}
       />
 
-      <h3 className="auro_heading auro_heading--600">Typography</h3>
+      <h3 className="auro_heading auro_heading--600">Type</h3>
       <TokenSection 
-        tokens={fontTokens}
-        headingLevel="h4"
-        headingClass="auro_heading auro_heading--400"
-      />
-
-      <h3 className="auro_heading auro_heading--600">Corner Radius</h3>
-      <TokenSection 
-        tokens={cornerRadiusTokens}
+        tokens={typeTokens}
         headingLevel="h4"
         headingClass="auro_heading auro_heading--400"
       />

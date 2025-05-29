@@ -12,7 +12,7 @@ import { FooterLinks } from "./FooterLinks";
  * @param {boolean} props.renderSectionEl - Whether to render content within a section element wrapper
  * @returns {React.ReactElement} Themed section or fragment containing children
  */
-const ThemePage = ({ theme, children, showFooter, renderSectionEl }) => {
+const ThemePage = ({ theme = '', children, showFooter = true, renderSectionEl = true }) => {
   const themeProps = {};
   
   if (theme) {
@@ -41,13 +41,6 @@ ThemePage.propTypes = {
   children: PropTypes.node.isRequired,
   showFooter: PropTypes.bool,
   renderSectionEl: PropTypes.bool
-};
-
-// Default props
-ThemePage.defaultProps = {
-  theme: '',
-  showFooter: true,
-  renderSectionEl: true
 };
 
 export default ThemePage;
