@@ -24,21 +24,17 @@ const createTokenMappings = (theme) => {
     { title: "Tier Program", tokens: basic.color.tierProgram }
   ];
 
-  const fontTokens = [
-    { title: "Accent", tokens: basic.text.accent },
-    { title: "Body", tokens: basic.text.body },
-    { title: "Display", tokens: basic.text.display },
-    { title: "Heading", tokens: basic.text.heading }
-  ];
-
-  const cornerRadiusTokens = [
-    { title: "Corner Radius", tokens: basic.cornerRadius }
+  const typeTokens = [
+    { title: "Family", tokens: basic.type.family },
+    { title: "Size", tokens: basic.type.size },
+    { title: "Weight", tokens: basic.type.weight },
+    { title: "Line Height", tokens: basic.type.lineHeight },
+    { title: "Letter Spacing", tokens: basic.type.letterSpacing }
   ];
 
   const basicTokensMap = {
     basicColorTokens,
-    fontTokens,
-    cornerRadiusTokens
+    typeTokens
   };
 
   // Advanced tokens

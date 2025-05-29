@@ -75,7 +75,7 @@ class AuroClassicTokens extends Component {
         <h1 className="auro_heading auro_heading--display">Auro Classic Design Tokens</h1>
 
         <p><span style={warningStyle}>DEPRECATED</span>: The <strong>color tokens</strong> from Auro Classic are deprecated and provided solely for backward compatibility with existing content. Other design tokens remain supported.</p>
-        <p>Please use v5.x tokens for all new&nbsp;development.</p>
+        <p>Please use v6 or later tokens for all new&nbsp;development.</p>
 
         <div className="auro_heading auro_heading--600 version-indicator">v4.x Tokens</div>
 
@@ -84,7 +84,7 @@ class AuroClassicTokens extends Component {
         <h2 className="auro_heading auro_heading--600">Colors</h2>
 
         <p><span style={warningStyle}>DEPRECATED</span>: The <strong>color tokens</strong> from Auro Classic are deprecated and provided solely for backward compatibility with existing content.</p>
-        <p>Please use v5.x tokens for all new&nbsp;development.</p>
+        <p>Please use v6 or later tokens for all new&nbsp;development.</p>
 
         <TokenSection 
           tokens={colorTokens}
