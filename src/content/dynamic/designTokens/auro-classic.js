@@ -81,6 +81,13 @@ class AuroClassicTokens extends Component {
 
         <TokenSection tokens={generalTokens} />
 
+        <h2 className="auro_heading auro_heading--600">Typography</h2>
+        <TokenSection 
+          tokens={typographyTokens}
+          headingLevel="h3"
+          headingClass="auro_heading auro_heading--400"
+        />
+
         <h2 className="auro_heading auro_heading--600">Colors</h2>
 
         <p><span style={warningStyle}>DEPRECATED</span>: The <strong>color tokens</strong> from Auro Classic are deprecated and provided solely for backward compatibility with existing content.</p>
@@ -94,13 +101,6 @@ class AuroClassicTokens extends Component {
             swatchType: "rectangle",
             swatch: true
           }}
-        />
-
-        <h2 className="auro_heading auro_heading--600">Typography</h2>
-        <TokenSection 
-          tokens={typographyTokens}
-          headingLevel="h3"
-          headingClass="auro_heading auro_heading--400"
         />
       </ThemePage>
     );
