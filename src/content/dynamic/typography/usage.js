@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import LinkIcons from '~/components/linkIcons';
 import header from '~/assets/typography/header.png';
-import allTokens from '@aurodesignsystem/design-tokens/dist/auro-classic/JSObject--deprecated.js';
+import allTokens from '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/JSObject--deprecated.js';
 import _getTokens from "~/functions/getTokens";
 import '~/sass/markdown.scss';
 import { Nav } from './nav.js';

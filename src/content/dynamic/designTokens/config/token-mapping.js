@@ -1,8 +1,8 @@
-import alaskaAllTokens from '@aurodesignsystem/design-tokens/dist/alaska/JSObject--allTokens.js';
-import alaskaClassicAllTokens from '@aurodesignsystem/design-tokens/dist/alaska-classic/JSObject--allTokens.js';
-import hawaiianAllTokens from '@aurodesignsystem/design-tokens/dist/hawaiian/JSObject--allTokens.js';
-import auro1AllTokens from '@aurodesignsystem/design-tokens/dist/auro-1/JSObject--allTokens.js';
-import auro2AllTokens from '@aurodesignsystem/design-tokens/dist/auro-2/JSObject--allTokens.js';
+import alaskaAllTokens from '@aurodesignsystem/design-tokens/dist/themes/alaska/JSObject--allTokens.js';
+import alaskaClassicAllTokens from '@aurodesignsystem/design-tokens/dist/themes/alaska-classic/JSObject--allTokens.js';
+import hawaiianAllTokens from '@aurodesignsystem/design-tokens/dist/themes/hawaiian/JSObject--allTokens.js';
+import auro1AllTokens from '@aurodesignsystem/design-tokens/dist/themes/auro-1/JSObject--allTokens.js';
+import auro2AllTokens from '@aurodesignsystem/design-tokens/dist/themes/auro-2/JSObject--allTokens.js';
 
 /**
  * Creates token mappings for a given theme
@@ -25,11 +25,11 @@ const createTokenMappings = (theme) => {
   ];
 
   const typeTokens = [
+    { title: "Brand", tokens: basic.type.brand },
     { title: "Family", tokens: basic.type.family },
-    { title: "Size", tokens: basic.type.size },
-    { title: "Weight", tokens: basic.type.weight },
+    { title: "Letter Spacing", tokens: basic.type.letterSpacing },
     { title: "Line Height", tokens: basic.type.lineHeight },
-    { title: "Letter Spacing", tokens: basic.type.letterSpacing }
+    { title: "Weight", tokens: basic.type.weight }
   ];
 
   const basicTokensMap = {

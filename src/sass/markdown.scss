@@ -7,14 +7,14 @@
 // ----------------------- DO NOT EDIT -----------------------------
 
 // Import Auro tokens
-@import '@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables';
+@import '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables';
 @import "@aurodesignsystem/webcorestylesheets/src/breakpoints";
 
 // Auro typography and spacing
 $prefix: true;
 $paragraph: true;
 @import '@aurodesignsystem/webcorestylesheets/src/focus-visible';
-@import "@aurodesignsystem/webcorestylesheets/src/essentials-ac";
+
 @import "@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles";
 @import "@aurodesignsystem/webcorestylesheets/src/headings";
 @import "@aurodesignsystem/webcorestylesheets/src/utilityMixins/layoutPropertiesGenerator";

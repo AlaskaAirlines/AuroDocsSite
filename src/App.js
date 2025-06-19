@@ -15,10 +15,10 @@ import './sass/App.scss';
 import '@alaskaairux/design-tokens/dist/tokens/CSSCustomProperties.css';
 
 // All themes custom properties
-import '@aurodesignsystem/design-tokens/dist/CSSCustomProperties--bundled.css';
+import '@aurodesignsystem/design-tokens/dist/themes/CSSCustomProperties--bundled.css';
 
 // Auro Classic custom properties
-import '@aurodesignsystem/design-tokens/dist/auro-classic/CSSCustomProperties.css';
+import '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/CSSCustomProperties.css';
 
 // Auro Components
 import '@alaskaairux/icons';

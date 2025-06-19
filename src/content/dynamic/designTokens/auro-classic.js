@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import ThemePage from './components/ThemePage';
 import TokenSection from "./components/TokenSection";
-import auroClassicAllTokens from '@aurodesignsystem/design-tokens/dist/auro-classic/JSObject--allTokens';
+import auroClassicAllTokens from '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/JSObject--allTokens';
 
 // Auro Classic custom properties
-import '@aurodesignsystem/design-tokens/dist/auro-classic/CSSCustomProperties.css';
+import '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/CSSCustomProperties.css';
 
 // Categories
 const {
