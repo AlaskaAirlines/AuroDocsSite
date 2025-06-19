@@ -4,7 +4,7 @@ import markdownOptions from "~/functions/markdownOptions";
 import getTokens from "~/functions/getTokens"
 import overview from './personalityPalette.md'
 import { Nav} from './nav.js';
-import data from '@aurodesignsystem/design-tokens/dist/auro-classic/JSData--color.js'
+import data from '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/JSData--color.js'
 import ExternalLink from '@alaskaairux/icons/dist/icons/interface/external-link-sm.svg?react';
 
 const midnight = data.color.brand.midnight;

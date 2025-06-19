@@ -124,7 +124,7 @@ export default function SideNav(props) {
                 {navBlock.items.map(link => (
                   <NavLink key={link.route} to={link.route} 
 
-                    className={`auro_hyperlink auro_hyperlink--nav ${link.active ? 'auro_hyperlink--active': ''} ${link.subNav ? 'auro_hyperlink--subNav': ''} ${link.parent ? 'auro_hyperlink--parent': ''}`}>
+                    className={`hyperlink hyperlink--nav ${link.active ? 'hyperlink--active': ''} ${link.subNav ? 'hyperlink--subNav': ''} ${link.parent ? 'hyperlink--parent': ''}`}>
 
                     {/* onClick event that sets nav item state to isActive */}
                     <span

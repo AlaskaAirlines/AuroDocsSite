@@ -3,12 +3,10 @@
 /* auro tokens for legacy components */
 // @import '@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
 
-@import '@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables';
+@import '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables';
 @import "@aurodesignsystem/webcorestylesheets/src/breakpoints";
 @import "@aurodesignsystem/webcorestylesheets/src/animation";
 @import "@aurodesignsystem/webcorestylesheets/src/utilityMixins/anchor-roleTab";
-
-@import "@aurodesignsystem/webcorestylesheets/src/essentials-ac";
 
 $prefix: true;
 $paragraph: true;
@@ -194,21 +192,21 @@ auro-swatch-list {
   }
 }
 
-.auro_hyperlink.active,
-.auro_hyperlink--active,
+.hyperlink.active,
+.hyperlink--active,
 .hyperlink--active {
   color: var(--ds-color-text-primary-default) !important;
   text-decoration: none !important;
   cursor: default;
 }
 
-.auro_hyperlink--active.auro_hyperlink--nav:not(.is-touching):hover,
+.hyperlink--active.hyperlink--nav:not(.is-touching):hover,
 .hyperlink--active.hyperlink--nav:not(.is-touching):hover {
   text-decoration: none !important;
   cursor: default;
 }
 
-.auro_hyperlink--nav {
+.hyperlink--nav {
   margin-top: var(--ds-size-200);
 
   &:first-child {
@@ -216,12 +214,12 @@ auro-swatch-list {
   }
 }
 
-.auro_hyperlink--subNav {
+.hyperlink--subNav {
   margin-top: 0;
   padding-left: var(--ds-size-100);
 }
 
-.auro_hyperlink--parent + .auro_hyperlink--parent {
+.hyperlink--parent + .hyperlink--parent {
   margin-top: 0;
 }
 
@@ -547,7 +545,7 @@ pre {
 // -------------------------------------------------------------
 
 .link {
-  @extend .auro_hyperlink;
+  @extend .hyperlink;
 
   &.active {
     color: #054687;
