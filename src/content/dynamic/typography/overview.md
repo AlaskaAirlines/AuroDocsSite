@@ -1,4 +1,4 @@
-The Auro Design System implements all font application through the use of a `class="..."` based system. This class based system makes it easy to consistently and accurately apply all font related CSS rules across all themes that the Auro Design System  supports. Content creates no longer need to apply specific CSS rules (e.g. `font-family`, `line-height`, `letter-spacing`, etc.) throughout their code. Simply apply the correct CSS class to your HTML element.
+The Auro Design System implements all font application through the use of a `class="..."` based system. This class based system makes it easy to consistently and accurately apply all font related CSS rules across all themes that the Auro Design System  supports. Content creators no longer need to apply specific CSS rules (e.g. `font-family`, `line-height`, `letter-spacing`, etc.) throughout their code. Simply apply the correct CSS class to your HTML element.
 
 The Auro Design System typography includes for font groups:
 - **body** - used for all general / default text.
