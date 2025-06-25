@@ -25,7 +25,7 @@ class Typography extends Component {
 
         <auro-header level="1" display="display">Usage</auro-header>
 
-        The Auro Design System typography includes for font groups:
+        The Auro Design System typography includes four font groups:
         <ul>
           <li><strong>body</strong> - used for all general / default text.</li>
           <li><strong>heading</strong> - used in the `auro-header` component and for applying to `h1`, `h2`, etc. elements directly.</li>
