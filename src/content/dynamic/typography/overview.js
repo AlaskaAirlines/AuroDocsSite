@@ -53,7 +53,7 @@ class Colors extends Component {
         <auro-header level="2" display="600">The Old Way: CSS Rules</auro-header>
 
         <p className="auro_baseParagraph">
-          The Auro Design System typography was previously applied using CSS rules with custom properties. This method required inline styles or custom CSS to apply typography styles to elements.
+          The Auro Design System typography was previously done using CSS selectors with various rules and CSS variable values to apply typography styles to elements.
           While this approach worked, it was less maintainable and made it harder to update typography styles across a site.
         </p>
 
