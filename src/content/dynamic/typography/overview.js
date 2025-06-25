@@ -84,7 +84,7 @@ class Colors extends Component {
     </head>
     <body>
       <p>
-        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
       </p>
     </body>
   </html>
@@ -114,7 +114,7 @@ class Colors extends Component {
     </head>
     <body class="body-default">
       <p class="body-lg">
-        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
       </p>
     </body>
   </html>
