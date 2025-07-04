@@ -426,6 +426,12 @@ import AuroSkeletonApi from './content/dynamic/skeleton/api';
 import AuroSkeletonInstall from './content/dynamic/skeleton/install';
 import AuroSkeletonReleases from './content/dynamic/skeleton/releases';
 
+// Slideshow
+import AuroSlideshow from './content/dynamic/slideshow/component';
+import AuroSlideshowApi from './content/dynamic/slideshow/api';
+import AuroSlideshowInstall from './content/dynamic/slideshow/install';
+import AuroSlideshowReleases from './content/dynamic/slideshow/releases';
+
 // Table
 import AuroTable from './content/dynamic/table/component';
 import AuroTableApi from './content/dynamic/table/api';
@@ -830,6 +836,12 @@ function App() {
               <Route path="/components/auro/skeleton/install" element={<AuroSkeletonInstall />} />
               <Route path="/components/auro/skeleton/api" element={<AuroSkeletonApi />} />
               <Route path="/components/auro/skeleton/releases" element={<AuroSkeletonReleases />} />
+
+              {/* Auro Slideshow */}
+              <Route path="/components/auro/slideshow" element={<AuroSlideshow />} />
+              <Route path="/components/auro/slideshow/install" element={<AuroSlideshowInstall />} />
+              <Route path="/components/auro/slideshow/api" element={<AuroSlideshowApi />} />
+              <Route path="/components/auro/slideshow/releases" element={<AuroSlideshowReleases />} />
 
               {/* Auro Table */}
               <Route path="/components/auro/table" element={<AuroTable />} />
