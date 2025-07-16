@@ -42,7 +42,7 @@
     "@aurodesignsystem/auro-tokenlist": "^1.4.0",
     "@aurodesignsystem/design-tokens": "8.2.1",
     "@aurodesignsystem/wc-generator": "^4.7.1",
-    "@aurodesignsystem/webcorestylesheets": "^10.0.0",
+    "@aurodesignsystem/webcorestylesheets": "^10.0.1",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@vitejs/plugin-react": "^4.3.3",

@@ -49,12 +49,6 @@ class Typography extends Component {
           Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
         </div>
 
-        <auro-header level="5" display="400">body-md</auro-header>
-
-        <div className="exampleWrapper body-md">
-          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
-        </div>
-
         <auro-header level="5" display="400">body-sm</auro-header>
 
         <div className="exampleWrapper body-sm">
