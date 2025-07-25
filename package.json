@@ -24,7 +24,7 @@
     "@aurodesignsystem/auro-dialog": "^3.1.4",
     "@aurodesignsystem/auro-drawer": "^4.3.3",
     "@aurodesignsystem/auro-flight": "^4.3.0",
-    "@aurodesignsystem/auro-flightline": "^5.0.2",
+    "@aurodesignsystem/auro-flightline": "5.0.1",
     "@aurodesignsystem/auro-formkit": "^5.0.0",
     "@aurodesignsystem/auro-header": "^4.0.2",
     "@aurodesignsystem/auro-hyperlink": "^6.0.1",
