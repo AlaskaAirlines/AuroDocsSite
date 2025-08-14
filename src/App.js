@@ -120,7 +120,7 @@ import PersonalityPalette from './content/dynamic/color/personalityPalette';
 
 // typography
 import TypographyOverview from './content/dynamic/typography/overview';
-import TypographyUsage from './content/dynamic/typography/usage';
+import TypographyUsageRoute from './content/dynamic/typography/usage.route';
 
 // icons
 import IconsGuidelines from './content/dynamic/icons/guidelines';
@@ -602,7 +602,8 @@ function App() {
 
               {/* Typography */}
               <Route path="/typography/overview" element={<TypographyOverview />} />
-              <Route path="/typography/usage" element={<TypographyUsage />} />
+              <Route path="/typography/usage" element={<TypographyUsageRoute />} />
+              <Route path="/typography/usage/:theme" element={<TypographyUsageRoute />} />
 
               {/* Icons */}
               <Route path="/icons/guidelines" element={<IconsGuidelines />} />
