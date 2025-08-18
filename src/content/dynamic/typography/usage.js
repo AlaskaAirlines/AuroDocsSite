@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import LinkIcons from '~/components/linkIcons';
 import header from '~/assets/typography/header.png';
-import allTokens from '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/JSObject--deprecated.js';
 import _getTokens from "~/functions/getTokens";
 import '~/sass/markdown.scss';
 import { Nav } from './nav.js';
@@ -12,7 +10,6 @@ import ThemedPreviewFrame from './ThemedPreviewFrame';
 class Typography extends Component {
 
   showVersion() {
-
     const dependencies = packageJson.dependencies['@aurodesignsystem/webcorestylesheets'];
 
     return `@aurodesignsystem/webcorestylesheets: ${dependencies}`;
@@ -26,7 +23,6 @@ class Typography extends Component {
         <Nav/>
         <ThemeTabs />
         <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
-
 
         <auro-header level="1" display="display">Usage</auro-header>
 
