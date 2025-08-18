@@ -1,19 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
+import { getThemeCssUrl } from '~/config/themes';
 
 const CDN_URL = 'https://cdn.jsdelivr.net/npm/@aurodesignsystem';
-const WCSS_THEME_PATH = `${CDN_URL}/webcorestylesheets@latest/dist/bundled/themes`;
 
 const TOKENS_BUNDLED = `${CDN_URL}/design-tokens@latest/dist/themes/CSSCustomProperties--bundled.css`;
 const ELEMENT_DEMO_STYLES = `${CDN_URL}/webcorestylesheets@latest/dist/elementDemoStyles.css`;
-
-const THEME_GLOBAL_CSS_URLS = {
-  'alaska': `${WCSS_THEME_PATH}/alaska.global.min.css`,
-  'alaska-classic': `${WCSS_THEME_PATH}/alaska-classic.global.min.css`,
-  'hawaiian': `${WCSS_THEME_PATH}/hawaiian.global.min.css`,
-  'auro-1': `${WCSS_THEME_PATH}/auro-1.global.min.css`,
-  'auro-2': `${WCSS_THEME_PATH}/auro-2.global.min.css`
-};
 
 // Register auro-header inside the iframe
 const AURO_HEADER_SCRIPT = `${CDN_URL}/auro-header@latest/dist/auro-header__bundled.js`;
@@ -50,7 +42,7 @@ export default function ThemedPreviewFrame({ themeSlug, themeCode, children }) {
     ensureLink('element-demo-styles', ELEMENT_DEMO_STYLES);
 
     // Theme WCSS bundle for this slug
-    const themeHref = THEME_GLOBAL_CSS_URLS[themeSlug];
+    const themeHref = getThemeCssUrl(themeSlug);
     if (themeHref) {
       ensureLink('wcss-theme', themeHref);
     }
