@@ -94,6 +94,27 @@ export default function ThemedPreviewFrame({ themeSlug, themeCode, children }) {
     };
   }, [themeSlug, themeCode, children]);
 
+  // Cleanup effect for component unmount
+  useEffect(() => {
+    return () => {
+      // Unmount React root and cleanup all listeners on component unmount
+      if (rootRef.current) {
+        try {
+          rootRef.current.unmount();
+        } catch (_) {}
+        rootRef.current = null;
+      }
+      
+      // Disconnect ResizeObserver
+      if (roRef.current) {
+        try {
+          roRef.current.disconnect();
+        } catch (_) {}
+        roRef.current = null;
+      }
+    };
+  }, []);
+
   return (
     <iframe
       ref={iframeRef}
