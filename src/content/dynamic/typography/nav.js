@@ -7,7 +7,7 @@ export class Nav extends Component {
     return (
       <div role="tablist" className="tabList">
         <NavLink role="tab" end className="tab link" to={`/typography/overview`} >Overview</NavLink>
-        <NavLink role="tab" end className="tab link" to={`/typography/usage`} >Usage</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/typography/usage/alaska`} >Usage</NavLink>
       </div>
     )
   }
