@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
-import { getThemeCssUrl } from '~/config/themes';
-
-const CDN_URL = 'https://cdn.jsdelivr.net/npm/@aurodesignsystem';
+import { getThemeCssUrl, CDN_URL } from '~/config/themes';
 
 const TOKENS_BUNDLED = `${CDN_URL}/design-tokens@latest/dist/themes/CSSCustomProperties--bundled.css`;
 const ELEMENT_DEMO_STYLES = `${CDN_URL}/webcorestylesheets@latest/dist/elementDemoStyles.css`;

@@ -3,7 +3,7 @@
  * Maps theme slugs to their display names, codes, and CSS URLs
  */
 
-const CDN_URL = 'https://cdn.jsdelivr.net/npm/@aurodesignsystem';
+export const CDN_URL = 'https://cdn.jsdelivr.net/npm/@aurodesignsystem';
 const WCSS_THEME_PATH = `${CDN_URL}/webcorestylesheets@latest/dist/bundled/themes`;
 
 /**
