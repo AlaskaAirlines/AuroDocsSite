@@ -183,7 +183,7 @@ class Typography extends Component {
             Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
           </div>
 
-          <auro-header level="5" display="400">accent-2xx</auro-header>
+          <auro-header level="5" display="400">accent-2xs</auro-header>
 
           <div className="exampleWrapper accent-2xs">
             Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
