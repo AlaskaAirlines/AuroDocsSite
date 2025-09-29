@@ -1,4 +1,5 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
+import { initExamples } from "@aurodesignsystem/auro-formkit/auro-radio/demo/api.js";
 import content from '@aurodesignsystem/auro-formkit/auro-radio/demo/api.md';
 
 class AuroContent extends AuroComponentContent {
@@ -8,6 +9,12 @@ class AuroContent extends AuroComponentContent {
 
     this.markdownContent = content; 
   };
+
+  componentDidMount() {
+    super.componentDidMount();
+
+    initExamples();
+  }
 }
 
 export default AuroContent;
