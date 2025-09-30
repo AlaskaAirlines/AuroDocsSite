@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
-import { initExamples } from "@aurodesignsystem/auro-popover/demo/api.min.js";
+import { initExamples } from "@aurodesignsystem/auro-popover/demo/api.js";
 import content from '@aurodesignsystem/auro-popover/demo/api.md';
 
 class AuroContent extends AuroComponentContent {

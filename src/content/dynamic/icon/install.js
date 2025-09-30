@@ -1,6 +1,6 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
 import { Nav } from './nav';
-import content from '@aurodesignsystem/auro-icon/README.md';
+import content from '@aurodesignsystem/auro-icon/readme.md';
 
 class AuroContent extends AuroComponentContent {
 

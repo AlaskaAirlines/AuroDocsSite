@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
-import content from '@aurodesignsystem/auro-skeleton/README.md';
+import content from '@aurodesignsystem/auro-skeleton/readme.md';
 
 class AuroContent extends AuroComponentContent {
 

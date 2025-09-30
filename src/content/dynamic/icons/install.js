@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderIconsPage";
-import content from '@aurodesignsystem/auro-icon/README.md';
+import content from '@aurodesignsystem/auro-icon/readme.md';
 
 class AuroContent extends AuroComponentContent {
 

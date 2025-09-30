@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
-import '@aurodesignsystem/auro-datetime/demo/index.min.js';
+import '@aurodesignsystem/auro-datetime/demo/index.js';
 import content from '@aurodesignsystem/auro-datetime/demo/index.md';
 
 class AuroContent extends AuroComponentContent {
