@@ -39,7 +39,7 @@
     "@aurodesignsystem/auro-slideshow": "^1.2.1",
     "@aurodesignsystem/auro-table": "^5.0.0",
     "@aurodesignsystem/auro-toast": "^3.2.3",
-    "@aurodesignsystem/auro-tokenlist": "^1.4.2",
+    "@aurodesignsystem/auro-tokenlist": "^1.5.0",
     "@aurodesignsystem/design-tokens": "8.5.0",
     "@aurodesignsystem/wc-generator": "^4.7.1",
     "@aurodesignsystem/webcorestylesheets": "^10.1.1",
