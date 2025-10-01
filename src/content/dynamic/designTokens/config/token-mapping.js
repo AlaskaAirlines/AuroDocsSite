@@ -43,6 +43,7 @@ const createTokenMappings = (theme) => {
     { title: "Avatar", tokens: advanced.color.avatar },
     { title: "Boolean", tokens: advanced.color.boolean },
     { title: "Button", tokens: advanced.color.button },
+    { title: "Expanded Widget", tokens: advanced.color.expandedWidget },
     { title: "Flightline", tokens: advanced.color.flightline },
     { title: "Hyperlink", tokens: advanced.color.hyperlink },
     { title: "Shared", tokens: advanced.color.shared },
