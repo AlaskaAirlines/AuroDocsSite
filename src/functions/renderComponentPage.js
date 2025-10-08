@@ -236,6 +236,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
    * @returns {object} The component nav items.
    */
   renderNav() {
+    const isFormkit = this.name === 'formkit';
     return (
       <div role="tablist" className="tabList">
         <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}`}  id="componentLink">{this.convertToUpperCase(this.name)}</NavLink>
@@ -269,7 +270,11 @@ class AuroComponentContent extends MarkdownPageWrapper {
         <LinkIcons
           github={`https://github.com/AlaskaAirlines/auro-${this.name}/issues`}
           npm={`https://www.npmjs.com/package/@${this.nameSpace}/auro-${this.name}`}
-          code={`https://github.com/AlaskaAirlines/auro-${this.name}/blob/master/src/auro-${this.name}.js`}
+          code={
+            isFormkit
+              ? "https://github.com/AlaskaAirlines/auro-formkit/tree/main/components"
+              : `https://github.com/AlaskaAirlines/auro-${this.name}/blob/master/src/auro-${this.name}.js`
+          }
         />
       </div>
     );
