@@ -6,7 +6,7 @@ import markdownOptions from "~/functions/markdownOptions";
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 import packageJson from 'ROOT/package.json';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-[component]/master/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-[component]/master/readme.md';
 
 class Auro[Component]Install extends MarkdownPageWrapper {
 

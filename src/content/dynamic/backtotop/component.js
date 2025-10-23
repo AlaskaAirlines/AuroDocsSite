@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
-import '@aurodesignsystem/auro-backtotop/demo/index.min.js';
+import '@aurodesignsystem/auro-backtotop/demo/index.js';
 import content from '@aurodesignsystem/auro-backtotop/demo/index.md';
 
 class AuroContent extends AuroComponentContent {

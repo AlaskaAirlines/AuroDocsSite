@@ -21,7 +21,7 @@ $paragraph: true;
 @import "@aurodesignsystem/webcorestylesheets/src/componentSupport/table";
 $prefix: null;
 
-@import url('https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css');
+@import "@aurodesignsystem/webcorestylesheets/dist/elementDemoStyles.css";
 
 .auro-markdown {
   h1 {

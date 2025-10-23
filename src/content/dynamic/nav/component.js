@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
-import '@aurodesignsystem/auro-nav/demo/index.min.js';
+import '@aurodesignsystem/auro-nav/demo/index.js';
 import content from '@aurodesignsystem/auro-nav/demo/index.md';
 
 class AuroContent extends AuroComponentContent {
