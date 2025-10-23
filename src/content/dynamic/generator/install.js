@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import markdownOptions from "~/functions/markdownOptions";
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/refs/heads/master/README.md';
+const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/refs/heads/master/readme.md';
 
 class AuroButtonApi extends MarkdownPageWrapper {
 

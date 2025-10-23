@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
-import { initExamples } from '@aurodesignsystem/auro-drawer/demo/api.min.js';
+import { initExamples } from '@aurodesignsystem/auro-drawer/demo/api.js';
 import content from '@aurodesignsystem/auro-drawer/demo/api.md';
 
 class AuroContent extends AuroComponentContent {

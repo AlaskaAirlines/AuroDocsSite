@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
-import '@aurodesignsystem/auro-badge/demo/index.min.js';
+import '@aurodesignsystem/auro-badge/demo/index.js';
 import content from '@aurodesignsystem/auro-badge/demo/index.md';
 
 class AuroContent extends AuroComponentContent {

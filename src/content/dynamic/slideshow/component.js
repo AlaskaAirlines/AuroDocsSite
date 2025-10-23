@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
-import '@aurodesignsystem/auro-slideshow/demo/demo-index.js';
+import '@aurodesignsystem/auro-slideshow/demo/index.js';
 import content from '@aurodesignsystem/auro-slideshow/demo/index.md';
 
 class AuroContent extends AuroComponentContent {
