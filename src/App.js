@@ -132,9 +132,6 @@ import IconsWaysToUse from './content/dynamic/icons/ways-to-use';
 import LayoutGrid from './content/dynamic/layout/grid';
 import LayoutSpacing from './content/dynamic/layout/spacing';
 
-// Utilities
-import ThemeSwitcher from './content/dynamic/utilities/theme-switcher';
-
 // wcss
 import WcssFeatures from './content/dynamic/wcss/features';
 import WcssTests from './content/dynamic/wcss/tests';
@@ -219,7 +216,6 @@ import AuroAlert from './content/dynamic/alert/component';
 import AuroAlertApi from './content/dynamic/alert/api';
 import AuroAlertInstall from './content/dynamic/alert/install';
 import AuroAlertReleases from './content/dynamic/alert/releases';
-import AuroAlertFigma from './content/dynamic/alert/figma';
 
 // Avatar
 import AuroAvatar from './content/dynamic/avatar/component';
@@ -540,10 +536,6 @@ function App() {
               <Route path="/table" element={<AuroTable />} />
               <Route path="/toast" element={<AuroToast />} />
 
-              {/* Utilities */}
-              <Route path="/utilities/theme-switcher" element={<ThemeSwitcher />} />
-
-
               {/* Getting Started/developers */}
               <Route path="/getting-started/developers" element={<Onboarding />} />
               <Route path="/getting-started/developers/compliance" element={<Compliance />} />
@@ -628,7 +620,6 @@ function App() {
               <Route path="/components/auro/alert/install" element={<AuroAlertInstall />} />
               <Route path="/components/auro/alert/api" element={<AuroAlertApi />} />
               <Route path="/components/auro/alert/releases" element={<AuroAlertReleases />} />
-              <Route path="/components/auro/alert/figma" element={<AuroAlertFigma />} />
 
               {/* avatar */}
               <Route path="/components/auro/avatar/" element={<AuroAvatar />} />

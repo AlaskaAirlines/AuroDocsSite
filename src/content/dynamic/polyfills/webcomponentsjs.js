@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import markdownOptions from "~/functions/markdownOptions";
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
-const markdownContent = 'https://raw.githubusercontent.com/webcomponents/polyfills/master/readme.md';
+const markdownContent = 'https://raw.githubusercontent.com/webcomponents/polyfills/master/README.md';
 
 class Webcomponentsjs extends MarkdownPageWrapper {
 
