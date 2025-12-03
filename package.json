@@ -38,6 +38,7 @@
     "@aurodesignsystem/auro-skeleton": "^5.0.0",
     "@aurodesignsystem/auro-slideshow": "^1.2.2",
     "@aurodesignsystem/auro-table": "^5.1.0",
+    "@aurodesignsystem/auro-tail": "^1.0.0",
     "@aurodesignsystem/auro-toast": "^4.0.2",
     "@aurodesignsystem/auro-tokenlist": "^1.5.1",
     "@aurodesignsystem/design-tokens": "8.7.0",

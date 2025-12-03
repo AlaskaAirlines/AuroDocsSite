@@ -52,6 +52,7 @@ import '@aurodesignsystem/auro-tokenlist';
 import '@aurodesignsystem/auro-tokenlist/dist/auro-tokenavatar';
 import '@aurodesignsystem/auro-tokenlist/dist/auro-tokendisplay';
 import '@aurodesignsystem/auro-table';
+import '@aurodesignsystem/auro-tail';
 
 // Logo to appear in console
 import './scripts/auro-consoleLogo';
@@ -433,13 +434,19 @@ import AuroTableApi from './content/dynamic/table/api';
 import AuroTableInstall from './content/dynamic/table/install';
 import AuroTableReleases from './content/dynamic/table/releases';
 
-// toast
+// Tail
+import AuroTail from './content/dynamic/tail/component';
+import AuroTailApi from './content/dynamic/tail/api';
+import AuroTailInstall from './content/dynamic/tail/install';
+import AuroTailReleases from './content/dynamic/tail/releases';
+
+// Toast
 import AuroToast from './content/dynamic/toast/component';
 import AuroToastApi from './content/dynamic/toast/api';
 import AuroToastInstall from './content/dynamic/toast/install';
 import AuroToastReleases from './content/dynamic/toast/releases';
 
-// formkit
+// Formkit
 import AuroFormkitInstall from './content/dynamic/formkit/install';
 import AuroFormkitRelease from './content/dynamic/formkit/releases';
 
@@ -840,6 +847,11 @@ function App() {
               <Route path="/components/auro/table/api" element={<AuroTableApi />} />
               <Route path="/components/auro/table/releases" element={<AuroTableReleases />} />
 
+              {/* Auro Tail */}
+              <Route path="/components/auro/tail" element={<AuroTail />} />
+              <Route path="/components/auro/tail/install" element={<AuroTailInstall />} />
+              <Route path="/components/auro/tail/api" element={<AuroTailApi />} />
+              <Route path="/components/auro/tail/releases" element={<AuroTailReleases />} />
               {/* Auro Toast */}
               <Route path="/components/auro/toast" element={<AuroToast />} />
               <Route path="/components/auro/toast/install" element={<AuroToastInstall />} />
