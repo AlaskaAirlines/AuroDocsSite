@@ -463,7 +463,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <main className="main-wrapper">
+      <main className="main-wrapper body-default">
         <Header />
         <div className="wrapper">
           <input id="menuCheckbox" type="checkbox" className="menuCheckbox util_displayHiddenVisually"></input>

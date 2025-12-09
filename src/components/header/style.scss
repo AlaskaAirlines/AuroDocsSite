@@ -18,3 +18,15 @@
     padding: 10px 0 10px 25px;
   }
 }
+
+.header-bar {
+  display: flex;
+  flex-direction: row;
+  z-index: var(--ds-depth-overlay);
+  align-items: center;
+  padding-right: var(--ds-size-100);
+
+  #theme-switcher {
+    min-width: 150px;
+  }
+}
