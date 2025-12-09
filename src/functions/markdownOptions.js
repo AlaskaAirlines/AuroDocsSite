@@ -19,7 +19,7 @@ function linkRenderer(props) {
       return (
         <a
           href={props.href}
-          class="externalLink"
+          className="externalLink"
           target="_blank"
           rel="noopener noreferrer"
         >
