@@ -12,7 +12,7 @@
     "@apollo/client": "^3.13.8",
     "@aurodesignsystem/auro-accordion": "^6.1.0",
     "@aurodesignsystem/auro-alert": "^5.0.1",
-    "@aurodesignsystem/auro-avatar": "^7.0.0",
+    "@aurodesignsystem/auro-avatar": "^7.1.0",
     "@aurodesignsystem/auro-background": "^5.0.0",
     "@aurodesignsystem/auro-backtotop": "^5.0.0",
     "@aurodesignsystem/auro-badge": "^6.1.1",
