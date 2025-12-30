@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import './style.scss';
 
+const ALLOWED_THEMES = ['alaska', 'hawaiian', 'atmos'];
+
 class Header extends Component {
   constructor() {
     super();
@@ -12,12 +14,11 @@ class Header extends Component {
   }
   
   updateTheme(theme) {
-    if (this.state.siteTheme !== theme) {
+    const safeTheme = ALLOWED_THEMES.includes(theme) ? theme : this.state.siteTheme;
 
-      this.state.siteTheme = theme;
-      this.setState({ siteTheme: theme });
-
-      console.warn(this.state.siteTheme + ' selected');
+    if (this.state.siteTheme !== safeTheme) {
+      this.state.siteTheme = safeTheme;
+      this.setState({ siteTheme: safeTheme });
 
       document.querySelectorAll('link[data-aag-theme]').forEach((link) => {
         link.remove();
@@ -37,6 +38,7 @@ class Header extends Component {
       if (this.state.siteTheme === 'atmos') {
         wcssHref = 'auro-1';
       }
+
       newWcssLink.setAttribute('href', `https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/bundled/themes/${wcssHref}.global.min.css`);
       document.head.appendChild(newWcssLink);
     }
