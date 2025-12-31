@@ -27,7 +27,8 @@ class Header extends Component {
       const newTokenLink = document.createElement('link');
       newTokenLink.setAttribute('rel', 'stylesheet');
       newTokenLink.setAttribute('data-aag-theme', '');
-      newTokenLink.setAttribute('href', `../../src/styles/tokens/${this.state.siteTheme}.css`);
+      newTokenLink.setAttribute('href', `https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens/dist/web/${this.state.siteTheme}.min.css`);
+
       document.head.appendChild(newTokenLink);
 
       const newWcssLink = document.createElement('link');
