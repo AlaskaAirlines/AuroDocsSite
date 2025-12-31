@@ -70,7 +70,8 @@ $sideNavTop: 86px;
   line-height: 1.5;
   padding: 10px;
   background-color: var(--ds-advanced-color-button-primary-background);
-  border-color: var(--ds-advanced-color-button-primary-border);
+  border-color: var(--ds-basic-color-border-bold) !important;
+  border-left: 0 !important;
 
   svg {
     fill: var(--ds-advanced-color-button-primary-text);

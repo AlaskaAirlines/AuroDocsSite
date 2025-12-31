@@ -41,7 +41,7 @@
     "@aurodesignsystem/auro-tail": "^1.0.1",
     "@aurodesignsystem/auro-toast": "^4.0.3",
     "@aurodesignsystem/auro-tokenlist": "^1.5.1",
-    "@aurodesignsystem/design-tokens": "8.7.0",
+    "@aurodesignsystem/design-tokens": "8.9.0",
     "@aurodesignsystem/wc-generator": "^4.7.1",
     "@aurodesignsystem/webcorestylesheets": "^10.1.4",
     "@commitlint/cli": "^19.8.1",
