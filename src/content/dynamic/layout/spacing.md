@@ -35,7 +35,7 @@ Horizontal - The horizontal space between items
 
 ## Inset padding
 
-See [WC Style Sheets support](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_inset)
+See [WC Style Sheets support](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-inset-css)
 
 Default – The padding around an element where all sides are equal
 
