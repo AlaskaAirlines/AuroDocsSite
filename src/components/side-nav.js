@@ -127,9 +127,21 @@ export default function SideNav(props) {
               {/* TODO: Toggle HIDDEN attr on click to hide/show nav items within a block */}
               <div className="navBlock">
                 {navBlock.items.map((link) => (
-                  <auro-hyperlink href={link.route} type="nav" key={link.route} active={`${isActive(link)}`} >
-                    {link.linkTitle}
-                  </auro-hyperlink>
+                  <NavLink key={link.route} to={link.route} 
+
+                    className={`hyperlink hyperlink--nav ${link.active ? 'hyperlink--active': ''} ${link.subNav ? 'hyperlink--subNav': ''} ${link.parent ? 'hyperlink--parent': ''}`}>
+
+                    {/* onClick event that sets nav item state to isActive */}
+                    <span
+                      onClick={() => {
+                        siteNav.forEach(navBlock => navBlock.items.forEach(link => link.active = false));
+                        link.active = true;
+                        setNav([...siteNav]);
+                      }}>
+
+                      {link.linkTitle}
+                    </span>
+                  </NavLink>
                 ))}
               </div>
             </section>

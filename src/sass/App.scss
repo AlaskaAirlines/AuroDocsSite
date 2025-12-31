@@ -238,7 +238,7 @@ auro-swatch-list {
     margin: var(--ds-size-300) 0 0;
   }
 
-  auro-hyperlink {
+  a {
     margin-bottom: var(--ds-size-50);
     display: block;
 
@@ -246,7 +246,7 @@ auro-swatch-list {
       margin-bottom: 0;
     }
 
-    &[active="true"] {
+    &.hyperlink--active {
       background-color: var(--ds-basic-color-surface-accent1-muted);
       pointer-events: none;
       --ds-auro-hyperlink-nav-visited-color-default: var(--ds-color-text-primary-default) !important;
