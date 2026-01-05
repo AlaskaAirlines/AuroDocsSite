@@ -34,7 +34,7 @@ $sideNavTop: 86px;
   z-index: var(--ds-depth-overlay);
   width: 150px;
   display: none;
-  padding: 0;
+  padding: 0 !important;
 
   box-shadow: inset 0 0 0 1px var(--ds-auro-dropdown-trigger-outline-color);
 
@@ -69,20 +69,20 @@ $sideNavTop: 86px;
 .gsc-search-button-v2 {
   line-height: 1.5;
   padding: 10px;
-  background-color: var(--ds-advanced-color-button-primary-background);
+  background-color: var(--ds-advanced-color-button-primary-background) !important;
   border-color: var(--ds-basic-color-border-bold) !important;
   border-left: 0 !important;
 
   svg {
-    fill: var(--ds-advanced-color-button-primary-text);
+    fill: var(--ds-advanced-color-button-primary-text) !important;
   }
 
   &:hover {
     background-color: var(--ds-advanced-color-button-primary-background-hover);
-    border-color: var(--ds-advanced-color-button-primary-border-hover);
+    border-color: var(--ds-advanced-color-button-primary-border-hover) !important;
 
     svg {
-      fill: var(--ds-advanced-color-button-primary-text-hover);
+      fill: var(--ds-advanced-color-button-primary-text-hover) !important;
     }
   }
 }
