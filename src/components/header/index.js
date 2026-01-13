@@ -24,18 +24,10 @@ class Header extends Component {
         link.remove();
       });
 
-      let cssHref = this.state.siteTheme;
-      let cssFolder = this.state.siteTheme;
-
-      if (this.state.siteTheme === 'atmos') {
-        cssHref = 'auro1';
-        cssFolder = 'auro-1';
-      }
-
       const newTokenLink = document.createElement('link');
       newTokenLink.setAttribute('rel', 'stylesheet');
       newTokenLink.setAttribute('data-aag-theme', '');
-      newTokenLink.setAttribute('href', `https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens/dist/themes/${cssFolder}/CSSCustomProperties--${cssHref}.css`);
+      newTokenLink.setAttribute('href', `https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens/dist/web/${this.state.siteTheme}.min.css`);
 
       document.head.appendChild(newTokenLink);
 
