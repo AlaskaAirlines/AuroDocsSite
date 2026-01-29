@@ -13,7 +13,9 @@ class AuroContent extends AuroComponentContent {
   componentDidMount() {
     super.componentDidMount();
 
-    initExamples();
+    setTimeout(() => {
+      initExamples();
+    }, 100);
   }
 }
 
