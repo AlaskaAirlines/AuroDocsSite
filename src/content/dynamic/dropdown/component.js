@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
-import "@aurodesignsystem/auro-formkit/auro-dropdown/demo/index.js";
+import { initExamples } from "@aurodesignsystem/auro-formkit/auro-dropdown/demo/index.js";
 import content from '@aurodesignsystem/auro-formkit/auro-dropdown/demo/index.md';
 
 class AuroContent extends AuroComponentContent {
@@ -9,6 +9,14 @@ class AuroContent extends AuroComponentContent {
 
     this.markdownContent = content; 
   };
+
+  componentDidMount() {
+    super.componentDidMount();
+
+    setTimeout(() => {
+      initExamples();
+    }, 100);
+  }
 }
 
 export default AuroContent;
