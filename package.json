@@ -23,6 +23,7 @@
     "@aurodesignsystem/auro-datetime": "^4.0.1",
     "@aurodesignsystem/auro-dialog": "^4.1.1",
     "@aurodesignsystem/auro-drawer": "^5.1.1",
+    "@aurodesignsystem-dev/auro-drawer": "0.0.0-pr122.1",
     "@aurodesignsystem/auro-flight": "^5.0.1",
     "@aurodesignsystem/auro-flightline": "^6.0.1",
     "@aurodesignsystem/auro-formkit": "^5.10.0",

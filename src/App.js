@@ -34,7 +34,7 @@ import '@aurodesignsystem/auro-card';
 import '@aurodesignsystem/auro-carousel';
 import '@aurodesignsystem/auro-datetime';
 import '@aurodesignsystem/auro-dialog';
-import '@aurodesignsystem/auro-drawer';
+import '@aurodesignsystem-dev/auro-drawer';
 import '@aurodesignsystem/auro-flight';
 import '@aurodesignsystem/auro-flightline';
 import '@aurodesignsystem/auro-header';
