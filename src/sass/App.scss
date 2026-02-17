@@ -45,7 +45,7 @@ $sideNavTop: 86px;
 }
 
 .gsc-search-box {
-  margin-bottom: 0 !important;
+  margin: 0 !important;
 }
 
 .gsc-input {
@@ -61,6 +61,7 @@ $sideNavTop: 86px;
 }
 
 .gsc-search-button {
+  display: block !important;
   margin-left: 0 !important;
   border-radius: 0 6px 6px 0 !important;
   height: 58px !important;
@@ -78,11 +79,11 @@ $sideNavTop: 86px;
   }
 
   &:hover {
-    background-color: var(--ds-advanced-color-button-primary-background-hover);
+    background-color: var(--ds-advanced-color-button-primary-background-hover) !important;
     border-color: var(--ds-advanced-color-button-primary-border-hover) !important;
 
     svg {
-      fill: var(--ds-advanced-color-button-primary-text-hover) !important;
+      fill: var(--ds-advanced-color-button-primary-text) !important;
     }
   }
 }

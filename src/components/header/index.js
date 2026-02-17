@@ -55,7 +55,7 @@ class Header extends Component {
     const searchInput = document.querySelector('#gsc-i-id1');
 
     if (searchInput) {
-      searchInput.setAttribute('placeholder', 'Search Auro docs');
+      searchInput.setAttribute('placeholder', 'Search');
     }
   }
   
