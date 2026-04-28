@@ -406,6 +406,11 @@ import AuroRadioReleases from './content/dynamic/radio/releases';
 
 // Select
 import AuroSelect from './content/dynamic/select/component';
+import AuroSelectDesign from './content/dynamic/select/design';
+import AuroSelectGettingStarted from './content/dynamic/select/getting-started';
+import AuroSelectAccessibility from './content/dynamic/select/accessibility';
+import AuroSelectVoiceOver from './content/dynamic/select/voiceOver';
+import AuroSelectKeyboardBehavior from './content/dynamic/select/keyboard-behavior';
 import AuroSelectApi from './content/dynamic/select/api';
 import AuroSelectInstall from './content/dynamic/select/install';
 import AuroSelectReleases from './content/dynamic/select/releases';
@@ -822,6 +827,11 @@ function App() {
               <Route path="/components/auro/select/install" element={<AuroSelectInstall />} />
               <Route path="/components/auro/select/api" element={<AuroSelectApi />} />
               <Route path="/components/auro/select/releases" element={<AuroSelectReleases />} />
+              <Route path="/components/auro/select/design" element={<AuroSelectDesign />} />
+              <Route path="/components/auro/select/getting-started" element={<AuroSelectGettingStarted />} />
+              <Route path="/components/auro/select/accessibility" element={<AuroSelectAccessibility />} />
+              <Route path="/components/auro/select/voice-over" element={<AuroSelectVoiceOver />} />
+              <Route path="/components/auro/select/keyboard-behavior" element={<AuroSelectKeyboardBehavior />} />
 
               {/* Auro SideNav */}
               <Route path="/components/auro/sidenav" element={<AuroSidenav />} />

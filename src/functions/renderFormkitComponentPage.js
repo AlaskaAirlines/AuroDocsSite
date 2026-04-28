@@ -28,7 +28,11 @@ class AuroComponentContent extends MarkdownPageWrapper {
     // Flags for component nav for inconsistent pages
     this.hasFigma = false;
     this.hasDOT = false;
+    this.hasGettingStarted = false;
+    this.hasDesign = false;
     this.hasAccessibility = false;
+    this.hasVoiceover = false;
+    this.hasKeyboardBehavior = false;
     this.hasApi = true;
     this.hasInstall  = true;
 
@@ -216,8 +220,28 @@ class AuroComponentContent extends MarkdownPageWrapper {
       <div role="tablist" className="tabList">
         <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}`}  id="componentLink">{this.convertToUpperCase(this.name)}</NavLink>
         {
-          this.hasInstall ?
-          <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/install`} >Install</NavLink>
+          this.hasGettingStarted ?
+          <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/getting-started`} >Getting Started</NavLink>
+          : undefined
+        }
+        {
+          this.hasDesign ?
+          <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/design`} >Design</NavLink>
+          : undefined
+        }
+        {
+          this.hasKeyboardBehavior ?
+            <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/keyboard-behavior`} >Keyboard Behavior</NavLink>
+          : undefined
+        }
+        {
+          this.hasAccessibility ?
+            <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/accessibility`} >A11Y</NavLink>
+          : undefined
+        }
+        {
+          this.hasVoiceover ?
+            <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/voice-over`} >VoiceOver</NavLink>
           : undefined
         }
         {
@@ -226,16 +250,11 @@ class AuroComponentContent extends MarkdownPageWrapper {
           : undefined
         }
         {
-          this.hasDOT ?
-          <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/dot`} >DoT compliance</NavLink>
+          this.hasInstall ?
+          <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/install`} >Readme</NavLink>
           : undefined
         }
-        <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/releases`} >Formkit Releases</NavLink>
-        {
-          this.hasAccessibility ?
-            <NavLink role="tab" end className="tab link" to={`/components/auro/hyperlink/a11y`} >Accessibility</NavLink>
-          : undefined
-        }
+        <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/releases`} >Releases</NavLink>
 
         <LinkIcons
           github={`https://github.com/AlaskaAirlines/auro-formkit/issues`}
