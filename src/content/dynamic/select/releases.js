@@ -1,5 +1,15 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
 
-class AuroContent extends AuroComponentContent {}
+class AuroContent extends AuroComponentContent {
+  constructor(props) {
+    super(props);
+
+    this.hasAccessibility = true;
+    this.hasVoiceover = true;
+    this.hasGettingStarted = true;
+    this.hasDesign = true;
+    this.hasKeyboardBehavior = true;
+  };
+}
 
 export default AuroContent;

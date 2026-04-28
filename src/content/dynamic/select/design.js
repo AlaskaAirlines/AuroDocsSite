@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
-import content from '@aurodesignsystem/auro-formkit/auro-select/readme.md';
+import content from '@aurodesignsystem/auro-formkit/auro-select/demo/design.md';
 
 class AuroContent extends AuroComponentContent {
 
@@ -11,8 +11,12 @@ class AuroContent extends AuroComponentContent {
     this.hasGettingStarted = true;
     this.hasDesign = true;
     this.hasKeyboardBehavior = true;
-    this.markdownContent = content;
+    this.markdownContent = content; 
   };
+
+  componentDidMount() {
+    super.componentDidMount();
+  }
 }
 
 export default AuroContent;
