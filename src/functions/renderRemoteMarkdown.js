@@ -45,7 +45,10 @@ function openAccordion(id) {
   if (target) {
     target.setAttribute('expanded', '');
     setTimeout(() => {
-      const headerOffset = 80; // sticky header height + padding
+      // Account for fixed header (86px) and sticky tab bar
+      const tabList = document.querySelector('.tabList');
+      const tabListHeight = tabList ? tabList.offsetHeight : 0;
+      const headerOffset = 86 + tabListHeight + 16; // header + tabs + padding
       const elementPosition = target.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: elementPosition - headerOffset, behavior: 'smooth' });
     }, 550);
