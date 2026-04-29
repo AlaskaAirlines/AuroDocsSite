@@ -3,6 +3,7 @@ import { Nav } from './nav';
 import ReactMarkdown from "react-markdown";
 import markdownOptions from "~/functions/markdownOptions";
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
+import Footer from '~/components/footer';
 
 const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WebCoreStyleSheets/master/FEATURES.md';
 
@@ -20,13 +21,12 @@ class AuroButtonInstall extends MarkdownPageWrapper {
   render() {
     return (
       <section className="auro_baseType">
-
         <Nav />
-
         <section className="auro-markdown">
           <ReactMarkdown
             children={this.state.contentBuild}
             {... markdownOptions}/>
+          <Footer />
         </section>
       </section>
     );

@@ -1,6 +1,6 @@
-# Design guidelines
+<auro-header level="1">Design guidelines</auro-header>
 
-### Layout
+<auro-header level="3">Layout</auro-header>
 
 Icons are created on a 20-pixel grid and exported on a 24-pixel artboard. An icon's content should be constrained to the “live area” of its grid. The outer padding is added to give sufficient display room.
 
@@ -10,12 +10,12 @@ Icons are created on the grid using foundational shapes. Included in the grid te
 
 ![](/images/content/iconsDesign/icons_shapes.png)
 
-### Size
+<auro-header level="3">Size</auro-header>
 Icons can be scaled to provide 3 sizes: small (16 pixels), medium (24 pixels), and large (32 pixels). The default size of an icon is medium (24 pixels), but designers are able to use small or large sizes if needed. Icons should not exceed the largest size available.  Follow the guidelines on the Illustrations page for larger sized imagery.
 
 ![](/images/content/iconsDesign/icons_sizes.png)
 
-### Space
+<auro-header level="3">Space</auro-header>
 
 Clearance area around the icon is needed to allow for legibility and touch. When an actionable icon is used by itself, it should have a minimum touch target area of 40 pixels.
 
@@ -25,28 +25,28 @@ When mouse and keyboard are the primary input methods—or when icons are paired
 
 ![](/images/content/iconsDesign/icons_pairing.png)
 
-### Color
+<auro-header level="3">Color</auro-header>
 
-Icon colors change depending on their background, their importance on a page (e.g., primary, emphasis, accent, etc.) and the color theme being used. Refer to the [Color overview](/color/overview) for guidelines on color usage.
+Icon colors change depending on their background, their importance on a page (e.g., primary, emphasis, accent, etc.) and the color theme being used. Refer to the <auro-hyperlink href="/color/overview" relative>Color overview</auro-hyperlink> for guidelines on color usage.
 
 ![](/images/content/iconsDesign/icons_color.png)
 
 
-## Style
+<auro-header level="2">Style</auro-header>
 
-### Stroke
+<auro-header level="3">Stroke</auro-header>
 
 Our icons use a uniform stoke of 1.5 pixels for both interior and exterior lines.  Strokes have a 1.5-pixel rounded terminus or butt-cap.
 
 ![](/images/content/iconsDesign/Icons_Stroke.jpg)
 
-## Radius
+<auro-header level="2">Radius</auro-header>
 
 Our icons generally have a curved exterior characterized by a radius of 3 pixels. More detailed icons may call for a 2-pixel radius.
 
 ![](/images/content/iconsDesign/Icons_corners.jpg)
 
-## Fill
+<auro-header level="2">Fill</auro-header>
 
 Use filled icons in one of two cases.
 
@@ -55,12 +55,12 @@ Use filled icons in one of two cases.
 
 ![](/images/content/iconsDesign/Icons_FilledUnfilled.jpg)
 
-## Pixel offset
+<auro-header level="2">Pixel offset</auro-header>
 A 1.5-pixel stroke prevents snapping every anchor point to a pixel. Instead, our icons have edges and anchor points on a whole-pixel, half-pixel, or (in some cases) a quarter-pixel x, y coordinate.
 
 ![](/images/content/iconsDesign/icons_pixelalignment.png)
 
-## Usage
+<auro-header level="2">Usage</auro-header>
 
 Icons should be used with intent and purpose. In layouts, effective icon usage includes supporting copy, a link, or a navigation element. Only use the icons in the sizes and colors specified.
 

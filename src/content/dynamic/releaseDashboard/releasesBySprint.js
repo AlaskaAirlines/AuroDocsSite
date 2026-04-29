@@ -3,6 +3,7 @@ import Query from '~/functions/renderQuery';
 import { gql } from '@apollo/client';
 import calculateSprints, { createSprintReleaseDataset } from '~/functions/sprintCalculator';
 import Release from './release';
+import Footer from '~/components/footer';
 
 const RELEASES = gql`
 {
@@ -31,10 +32,8 @@ class ReleasesBySprint extends Component {
     const sprints = calculateSprints(new Date());
     return (
       <section id="releases-by-sprint">
-
         <h1 className="auro_heading auro_heading--display">Auro release dashboard</h1>
         <p>The following is a list of Auro product releases and changelog notes.</p>
-
         <Query query={RELEASES}>
           {({ loading, error, data }) => {
             if (loading) return <auro-loader laser onlight></auro-loader>;
@@ -47,6 +46,7 @@ class ReleasesBySprint extends Component {
             ));
           }}
         </Query>
+        <Footer />
       </section>
     );
   }

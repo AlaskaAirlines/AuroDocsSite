@@ -1,8 +1,8 @@
-# Accessibility statement for <span class="basic-information website-name">Alaska Airlines and the Auro Design System</span>
+<auro-header level="1">Accessibility statement for <span class="basic-information website-name">Alaska Airlines and the Auro Design System</span></auro-header>
 
 <span class="basic-information organization-name">Alaska Airlines</span> is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone, and applying the relevant accessibility standards.
 
-### Measures to support accessibility
+<auro-header level="3">Measures to support accessibility</auro-header>
 
 <span class="basic-information organization-name">Auro</span> takes the following measures to ensure accessibility of <span class="basic-information website-name">The Auro Design System</span>:
 
@@ -10,11 +10,11 @@
 *   Provide continual accessibility training for our staff.
 *   Employ formal accessibility quality assurance methods.
 
-### Conformance status
+<auro-header level="3">Conformance status</auro-header>
 
-The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. <span class="basic-information website-name">The Auro Design System</span> is <span class="basic-information conformance-status" data-printfilter="lowercase">partially conformant</span> with <span class="basic-information conformance-standard"><span data-negate="">WCAG 2.0 level AA</span>.</span> <span><span class="basic-information conformance-status">Partially conformant</span> means that <span class="basic-information conformance-meaning">some parts of the content do not fully conform to the accessibility standard</span>.</span>
+The <auro-hyperlink href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">Web Content Accessibility Guidelines (WCAG)</auro-hyperlink> defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. <span class="basic-information website-name">The Auro Design System</span> is <span class="basic-information conformance-status" data-printfilter="lowercase">partially conformant</span> with <span class="basic-information conformance-standard"><span data-negate="">WCAG 2.0 level AA</span>.</span> <span><span class="basic-information conformance-status">Partially conformant</span> means that <span class="basic-information conformance-meaning">some parts of the content do not fully conform to the accessibility standard</span>.</span>
 
-### Feedback
+<auro-header level="3">Feedback</auro-header>
 
 We welcome your feedback on the accessibility of <span class="basic-information website-name">The Auro Design System</span>. Please let us know if you encounter accessibility barriers on <span class="basic-information website-name">The Auro Design System</span>:
 
@@ -22,7 +22,7 @@ We welcome your feedback on the accessibility of <span class="basic-information 
 
 We try to respond to feedback within <span class="feedback responsetime">48 hours</span>.
 
-### Technical specifications
+<auro-header level="3">Technical specifications</auro-header>
 
 Accessibility of <span class="basic-information website-name">The Auro Design System</span> relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:
 
@@ -33,7 +33,7 @@ Accessibility of <span class="basic-information website-name">The Auro Design Sy
 
 These technologies are relied upon for conformance with the accessibility standards used.
 
-### Assessment approach
+<auro-header level="3">Assessment approach</auro-header>
 
 <span class="basic-information organization-name">Auro</span> assessed the accessibility of <span class="basic-information website-name">The Auro Design System</span> by the following approaches:
 
@@ -41,4 +41,4 @@ These technologies are relied upon for conformance with the accessibility standa
 
 * * *
 
-This statement was created on <span class="basic-information statement-created-date">3 December 2020</span> using the [W3C Accessibility Statement Generator Tool](https://www.w3.org/WAI/planning/statements/).
+This statement was created on <span class="basic-information statement-created-date">3 December 2020</span> using the <auro-hyperlink href="https://www.w3.org/WAI/planning/statements/" target="_blank">W3C Accessibility Statement Generator Tool</auro-hyperlink>.

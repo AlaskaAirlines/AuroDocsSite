@@ -1,4 +1,4 @@
-# Welcome to the new content template
+<auro-header level="1">Welcome to the new content template</auro-header>
 
 For starters, do not rename the files in this duplicated directory. Also, if you didn't duplicate the directory and you are editing inside the template, STOP! Revert changes and start over.
 

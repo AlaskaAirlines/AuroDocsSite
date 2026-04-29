@@ -9,7 +9,7 @@ class AlaskaTokens extends Component {
     return (
       <ThemeTokens 
         theme="a1"
-        themeName="Auro 1"
+        themeName="Atmos"
         basicTokensMap={basicTokensMap}
         advancedTokensMap={advancedTokensMap}
       />

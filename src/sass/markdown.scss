@@ -23,32 +23,45 @@ $prefix: null;
 
 @import "@aurodesignsystem/webcorestylesheets/dist/elementDemoStyles.css";
 
-// Override elementDemoStyles.css layout rules that collapse content height.
-// Upstream markdown files contain .contentWrapper/.mainContent/.scrollWrapper
-// elements designed for a viewport-locked standalone demo page. In the docsite
-// these need to flow naturally instead.
-.contentWrapper {
-  flex: unset;
-}
-
-.mainContent {
-  flex-basis: auto;
-}
-
-.scrollWrapper {
-  flex-basis: auto;
-  min-height: auto;
-}
-
-// Override body/main rules from elementDemoStyles.css that lock layout to viewport
+// Override body/main global layout rules from elementDemoStyles.css that
+// lock the page to viewport height and break the docsite scroll behavior.
 body {
-  height: auto !important;
-  display: block !important;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
 }
 
 main {
   display: block !important;
   flex: unset !important;
+}
+
+.main-wrapper {
+  height: 100vh;
+
+  .wrapper {
+    height: calc(100vh - 65px);
+
+    & > section {
+      height: 100%;
+
+      & > article,
+      & > section,
+      & > section:nth-child(2) {
+        height: calc(100% - 37px);
+        overflow-y: auto;
+        // background-color: red;
+      }
+
+       &.auro_baseType {
+        height: calc(100% - 37px);
+
+        .tabList {
+          top: 0;
+        }
+      }
+    }
+  }
 }
 
 // Anchor nav inside markdown content should size to fit link text

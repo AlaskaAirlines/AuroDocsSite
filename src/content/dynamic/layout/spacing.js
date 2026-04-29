@@ -5,6 +5,7 @@ import content from './spacing.md'
 import { Nav} from './nav.js';
 import header from './spacing_header.png';
 import ExternalLink from '@alaskaairux/icons/dist/icons/interface/external-link-sm.svg?react';
+import Footer from '~/components/footer';
 
 class Colors extends Component {
 
@@ -72,13 +73,13 @@ class Colors extends Component {
       <section className="auro_baseType">
         <Nav />
         <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
-
         <h1 className="auro_heading auro_heading--display">Spacing</h1>
         <section className="auro-markdown">
           <ReactMarkdown
             children={this.state.contentBuild}
             {... markdownOptions}/>
         </section>
+        <Footer />
       </section>
     );
   }

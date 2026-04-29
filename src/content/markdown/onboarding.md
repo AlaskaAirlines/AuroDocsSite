@@ -1,6 +1,6 @@
-# Engineering Startup Guide
+<auro-header level="1">Engineering Startup Guide</auro-header>
 
-## Overview
+<auro-header level="2">Overview</auro-header>
 
 This guide is intended to help software engineers through the steps necessary to begin contributing to the Auro Design System. There are few hard requirements for your developer environment and some topics presented in this guide are recommendations based on our own preferences.
 
@@ -14,36 +14,40 @@ We will cover the following topics:
 
 _Note: This guide assumes a base level of technical skill. If you need to contribute to our codebase, yet are not comfortable working with a code editor, terminal, or git commands please contact the Auro team for assistance._
 
-## Setup your computer
+<auro-header level="2">Setup your computer</auro-header>
 
 **Integrated Developer Environment**
 
-Install your IDE of choice. We recommend Visual Studio Code which can be downloaded at [code.visualstudio.com/download](https://code.visualstudio.com/download).
+Install your IDE of choice. We recommend Visual Studio Code which can be downloaded at <auro-hyperlink href="https://code.visualstudio.com/download" target="_blank">code.visualstudio.com/download</auro-hyperlink>.
 
 **Node Version Manager**
 
-Install a node version manager. We recommend [NVM](https://nvm.sh).
+Install a node version manager. We recommend <auro-hyperlink href="https://nvm.sh" target="_blank">NVM</auro-hyperlink>.
 
 Run either of the following commands in a terminal window to install NVM:
 
-`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash`
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+```
 
 or
 
-`wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash`
+```shell
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+```
 
 **Browsers**
 
-- [Firefox](https://www.mozilla.org/en-US/firefox/new/): Open-source browser from Mozilla
-- [Chrome](https://www.google.com/chrome/): Google's flagship browser
-- [Edge](https://www.microsoft.com/en-us/edge): Microsoft's browser based on Chromium
-- [Safari](https://www.apple.com/safari/): Apple's browser (comes pre-installed on macOS)
+- <auro-hyperlink href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</auro-hyperlink>: Open-source browser from Mozilla
+- <auro-hyperlink href="https://www.google.com/chrome/" target="_blank">Chrome</auro-hyperlink>: Google's flagship browser
+- <auro-hyperlink href="https://www.microsoft.com/en-us/edge" target="_blank">Edge</auro-hyperlink>: Microsoft's browser based on Chromium
+- <auro-hyperlink href="https://www.apple.com/safari/" target="_blank">Safari</auro-hyperlink>: Apple's browser (comes pre-installed on macOS)
 
 All browser clients should be installed for validating your code changes.
 
-## Accounts and Permissions
+<auro-header level="2">Accounts and Permissions</auro-header>
 
-A GitHub account is required for contribution. If you do not have an account, you can set up a new one at [github.com/signup](https://github.com/signup). You may use your own personal account, however, you are required to attach your `@alaskaair.com` work email address to the account. This can be done at [github.com/settings/emails](https://github.com/settings/emails) after you login.
+A GitHub account is required for contribution. If you do not have an account, you can set up a new one at <auro-hyperlink href="https://github.com/signup" target="_blank">github.com/signup</auro-hyperlink>. You may use your own personal account, however, you are required to attach your `@alaskaair.com` work email address to the account. This can be done at <auro-hyperlink href="https://github.com/settings/emails" target="_blank">github.com/settings/emails</auro-hyperlink> after you login.
 
 **Join the AlaskaAirlines GitHub organization**
 
@@ -54,17 +58,17 @@ To join the organization, you will need to provide your GitHub username to your 
 **Configure an SSH Key**
 
   1. Run `ssh-keygen` in a terminal to create a new SSH Key
-  1. Copy the contents of `~/.ssh/id_rsa.pub` to your GitHub account at [github.com/settings/keys](https://github.com/settings/keys).
+  1. Copy the contents of `~/.ssh/id_rsa.pub` to your GitHub account at <auro-hyperlink href="https://github.com/settings/keys" target="_blank">github.com/settings/keys</auro-hyperlink>.
 
-For more details see [docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh).
+For more details see <auro-hyperlink href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh" target="_blank">docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh</auro-hyperlink>.
 
 **GitHub CLI**
 
-We recommend using the GitHub CLI as it simplifies certain actions such as cloning a repo. You can get it at [cli.github.com](https://cli.github.com).
+We recommend using the GitHub CLI as it simplifies certain actions such as cloning a repo. You can get it at <auro-hyperlink href="https://cli.github.com" target="_blank">cli.github.com</auro-hyperlink>.
 
 _Note: the instructions later in this document assume you have installed GiTHub CLI._
 
-## Clone your first Auro repository
+<auro-header level="2">Clone your first Auro repository</auro-header>
 
 For the purposes of this example documentation we will use `auro-hyperlink`. The instructions are the same for all repositories, only the command parameters change based on the name of the project.
 
@@ -74,7 +78,7 @@ For the purposes of this example documentation we will use `auro-hyperlink`. The
 
 You should now see all the repository code in your IDE.
 
-## Run the component localhost
+<auro-header level="2">Run the component localhost</auro-header>
 
 1. In the IDE open `./package.json`
 1. Within package.json find the `engines` key. This will tell you which version of node the component requires.<br /><br />
@@ -98,15 +102,15 @@ When the localhost is running via `npm run dev` the browser window will automati
 
 Any errors discovered while running those commands must be resolved before submitting your code.
 
-Before doing any Git commits and Pull Requests review our [Contributing Guidelines](https://auro.alaskaair.com/contributing) to learn about the requirements.
+Before doing any Git commits and Pull Requests review our <auro-hyperlink href="/contributing" relative>Contributing Guidelines</auro-hyperlink> to learn about the requirements.
 
-## Additional Reading
+<auro-header level="2">Additional Reading</auro-header>
 
 We recommend that you take some time to become familiar with our documentation site as well as certain other resources.
 
-- [Auro Design System](https://auro.alaskaair.com/)<br />
+- <auro-hyperlink href="/" relative>Auro Design System</auro-hyperlink><br />
 We have quite a few components in the Auro ecosystem. It is recommended that you take some time to browse through them on the doc site and familiarize yourself with the API and UI/UX of the component library.
-  - [Contributing Guidelines](https://auro.alaskaair.com/contributing)
-  - [CSS Guidelines](https://auro.alaskaair.com/css/conventions)
-  - [Support & FAQ](https://auro.alaskaair.com/auro-support)
-- LIT Documentation: [lit.dev/docs/](https://lit.dev/docs/)
+  - <auro-hyperlink href="/contributing" relative>Contributing Guidelines</auro-hyperlink>
+  - <auro-hyperlink href="/css/conventions" relative>CSS Guidelines</auro-hyperlink>
+  - <auro-hyperlink href="/auro-support" relative>Support & FAQ</auro-hyperlink>
+- LIT Documentation: <auro-hyperlink href="https://lit.dev/docs/" target="_blank">lit.dev/docs/</auro-hyperlink>

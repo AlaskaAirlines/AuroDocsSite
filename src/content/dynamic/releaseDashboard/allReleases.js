@@ -3,6 +3,7 @@ import Query from '~/functions/renderQuery';
 import { gql } from '@apollo/client';
 import Release from './release';
 import { Nav } from './nav';
+import Footer from '~/components/footer';
 
 const RELEASES = gql`
 {
@@ -29,12 +30,9 @@ class AllReleases extends Component {
   render() {
     return (
       <section id="releases">
-
         <Nav />
-
         <h1 className="auro_heading auro_heading--display">Auro release dashboard</h1>
         <p>The following is a list of all Auro Products and their most recent releases.</p>
-
         <Query query={RELEASES}>
           {({ loading, error, data }) => {
             if (loading) return <auro-loader laser onlight></auro-loader>;
@@ -47,6 +45,7 @@ class AllReleases extends Component {
             ));
           }}
         </Query>
+        <Footer />
       </section>
     )
   }

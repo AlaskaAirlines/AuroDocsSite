@@ -61,7 +61,7 @@ To maintain repository history health, it is best practice to [rebase branches o
 
 If you have push access to the repo
 
-```
+```shell
 $ git checkout main
 $ git pull
 $ git checkout [feature branch]

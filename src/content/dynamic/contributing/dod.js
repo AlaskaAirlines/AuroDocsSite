@@ -11,9 +11,7 @@ class AuroContributing extends MarkdownPageWrapper {
   render() {
     return (
       <section className="auro_baseType">
-
         <Nav />
-
         <section className="auro-markdown">
             <RenderRemoteMarkdown markdownUrl={markdownContent} />
         </section>

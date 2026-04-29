@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Project from './project';
 import axios from 'axios';
+import Footer from '~/components/footer';
 
 
 class UseDashboard extends Component {
@@ -46,6 +47,7 @@ class UseDashboard extends Component {
         {this.state.isLoading ? <p className="isLoading">Loading...</p> : this.state.Projects.map(({Name, Repositories}, index) => (
           <Project key={index + '_' + Name} name={Name} repos={Repositories} />
         ))}
+        <Footer />
       </section>
     );
   }

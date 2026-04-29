@@ -7,7 +7,6 @@ class AuroContent extends AuroComponentContent {
     super(props);
 
     this.hasAccessibility = true;
-    this.hasFigma = true;
     this.markdownContent = content; 
   };
 }

@@ -129,6 +129,7 @@ class ColorsOverview extends Component {
     return (
       <section className="auro_baseType">
         <Nav />
+        <section className="auro-markdown">
 
         <h1 className="auro_heading auro_heading--display">Digital Brand Palette</h1>
 
@@ -186,7 +187,6 @@ class ColorsOverview extends Component {
         </div>
         <auro-tokendisplay componentData={this.getColors(alert, 'default', [])}></auro-tokendisplay>
 
-        <section className="auro-markdown">
           <ReactMarkdown
             children={this.state.transparentColorsBuild}
             {... markdownOptions}/>

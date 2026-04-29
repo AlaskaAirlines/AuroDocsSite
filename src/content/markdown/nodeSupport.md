@@ -1,14 +1,14 @@
-# Auro Node support
+<auro-header level="1">Auro Node support</auro-header>
 
 This document is designed to illustrate and communicate Auro's commitment to security and the safety of our users by supporting the latest development environments and dependencies whenever and wherever possible.
 
 The Auro team is committed to an overlapping support model for Node.js. This means that each repo should be able to be used within the current Active LTS as well as the previous version that is in maintenance. Keeping in mind, these are recommended versions and not a strict specification.
 
-## Lit element Node support
+<auro-header level="2">Lit element Node support</auro-header>
 
-Additionally for general consumption of Auro tech, the version of Node your app should support is based on direct dependencies. For Lit Element, [documentation states](https://lit.dev/docs/v1/getting-started/#:~:text=Node.js%20and%20npm%20for%20managing%20dependencies.%20Requires%20Node.js%2010%20or%20greater.) "*Node 10 or greater*" (as of Q4 2023). That said, repositories state supporting latest -2 for development and testing. We feel that this will be a consistent trend. For our purposes we are choosing not to support a version of Node that has exceeded its End of Life date.
+Additionally for general consumption of Auro tech, the version of Node your app should support is based on direct dependencies. For Lit Element, <auro-hyperlink href="https://lit.dev/docs/v1/getting-started/#:~:text=Node.js%20and%20npm%20for%20managing%20dependencies.%20Requires%20Node.js%2010%20or%20greater." target="_blank">documentation states</auro-hyperlink> "*Node 10 or greater*" (as of Q4 2023). That said, repositories state supporting latest -2 for development and testing. We feel that this will be a consistent trend. For our purposes we are choosing not to support a version of Node that has exceeded its End of Life date.
 
-## How we maintain versions
+<auro-header level="2">How we maintain versions</auro-header>
 
 The following illustrates how this would appear in the `./package.json` file as Auro is not directly supporting any odd-numbered releases.
 
@@ -36,7 +36,7 @@ Repo `settings.yml` file will reference:
 contexts: ["test (20.x)", "test (22.x)", "license/cla"]
 ```
 
-Following the Node.js Release Working Group [release schedule](https://github.com/nodejs/release#release-schedule) Auro commits to maintaining a similar schedule of support whereas by the 1st quarter of the year we will begin migration to the next LTS which is expected to be completed by the 4th quarter of the same year.
+Following the Node.js Release Working Group <auro-hyperlink href="https://github.com/nodejs/release#release-schedule" target="_blank">release schedule</auro-hyperlink> Auro commits to maintaining a similar schedule of support whereas by the 1st quarter of the year we will begin migration to the next LTS which is expected to be completed by the 4th quarter of the same year.
 
 | Release  | Auro Status         |Initial Release | Active LTS Start | Maintenance Start | End-of-life|
 | :--:     | :---:               | :---:          | :---:            | :---:             | :---:      |

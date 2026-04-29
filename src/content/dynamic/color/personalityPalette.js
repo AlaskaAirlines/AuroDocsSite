@@ -98,14 +98,13 @@ class ColorsOverview extends Component {
     return (
       <section className="auro_baseType">
         <Nav />
+        <section className="auro-markdown">
 
         <h1 className="auro_heading auro_heading--display">Digital Personality Brand Palette</h1>
 
-        <section className="auro-markdown">
           <ReactMarkdown
             children={this.state.overviewBuild}
             {... markdownOptions}/>
-        </section>
 
         <h3 className="auro_heading auro_heading--400">Midnight</h3>
         <auro-tokenlist swatchType="circle" componentData={getTokens(midnight, [])}></auro-tokenlist>
@@ -136,6 +135,7 @@ class ColorsOverview extends Component {
 
         <h3 className="auro_heading auro_heading--400">Gray</h3>
         <auro-tokenlist swatchType="circle" componentData={getTokens(gray, [])}></auro-tokenlist>
+        </section>
       </section>
     );
   }
