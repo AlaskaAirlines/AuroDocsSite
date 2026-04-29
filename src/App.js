@@ -412,7 +412,6 @@ import AuroSelectAccessibility from './content/dynamic/select/accessibility';
 import AuroSelectVoiceOver from './content/dynamic/select/voiceOver';
 import AuroSelectKeyboardBehavior from './content/dynamic/select/keyboard-behavior';
 import AuroSelectApi from './content/dynamic/select/api';
-import AuroSelectInstall from './content/dynamic/select/install';
 import AuroSelectReleases from './content/dynamic/select/releases';
 
 // sidenav
@@ -824,7 +823,6 @@ function App() {
 
               {/* Auro Select */}
               <Route path="/components/auro/select" element={<AuroSelect />} />
-              <Route path="/components/auro/select/install" element={<AuroSelectInstall />} />
               <Route path="/components/auro/select/api" element={<AuroSelectApi />} />
               <Route path="/components/auro/select/releases" element={<AuroSelectReleases />} />
               <Route path="/components/auro/select/design" element={<AuroSelectDesign />} />
