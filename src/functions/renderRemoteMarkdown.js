@@ -53,6 +53,22 @@ function openAccordion(id) {
 }
 
 /**
+ * Fix React's class attribute handling on custom elements.
+ * React converts `class` to `className` which renders as a literal `classname`
+ * attribute on custom elements (web components). This function moves it back.
+ * @param {HTMLElement} container - The container element to search.
+ */
+function fixCustomElementClasses(container) {
+  container.querySelectorAll('*').forEach((el) => {
+    if (el.tagName.includes('-') && el.hasAttribute('classname')) {
+      const val = el.getAttribute('classname');
+      el.removeAttribute('classname');
+      el.setAttribute('class', val);
+    }
+  });
+}
+
+/**
  * Fetch the markdown file and render the content.
  * @param {string} markdown - The path to the markdown file.
  * @private
@@ -87,6 +103,7 @@ const RenderRemoteMarkdown = ({ markdownUrl }) => {
   useEffect(() => {
     if (text && containerRef.current) {
       addCopyButtons(containerRef.current);
+      fixCustomElementClasses(containerRef.current);
 
       // Bind click listeners from data-open-accordion attributes
       containerRef.current.querySelectorAll('[data-open-accordion]').forEach((el) => {
