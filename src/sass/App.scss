@@ -182,27 +182,56 @@ footer,
 .wrapper > section {
   margin: var(--ds-size-400);
   padding-top: var(--ds-size-200);
+  // padding: var(--ds-size-200) var(--ds-size-200) 0;
+  // margin: var(--ds-size-200) auto 0 230px;
 
   @include auro_breakpoint($min: $ds-grid-breakpoint-sm) {
-    max-width: 55%;
-    margin: var(--ds-size-200) auto 0 250px;
+    padding: var(--ds-size-200) var(--ds-size-200) 0;
+    margin: 0 auto 0 230px;
+  //   // max-width: 55%;
+  //   margin: var(--ds-size-200) auto 0 250px;
   }
 
-  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
-    max-width: 60%;
-    margin: var(--ds-size-200) auto 0 290px;
-  }
+  // @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
+  //   // max-width: 60%;
+  //   margin: var(--ds-size-200) auto 0 290px;
+  // }
 
-  @include auro_breakpoint($min: $ds-grid-breakpoint-xl) {
-    max-width: 64rem;
-    margin: var(--ds-size-200) auto 0 25%;
-  }
+  // @include auro_breakpoint($min: $ds-grid-breakpoint-xl) {
+  //   // max-width: 64rem;
+  //   margin: var(--ds-size-200) auto 0 25%;
+  // }
 }
-// -=-=-=-=-=-=-=-=-= body wrapper -=-=-=-=-=-=-=-=-=-=-=
 
 footer {
-  padding-top:var(--ds-size-800);
-  padding-bottom: $sideNavTop;
+  margin: 0; //  0 0 230px;
+  text-align: center;
+}
+
+// .auro-markdown ~ footer {
+//   margin: 0 0 0 230px;
+//   // text-align: center;
+
+//   background-color: aquamarine;
+// }
+// -=-=-=-=-=-=-=-=-= body wrapper -=-=-=-=-=-=-=-=-=-=-=
+
+.auro_baseType {
+  // background-color: lime;
+  display: flex;
+  flex-direction: column;
+}
+
+.auro-markdown {
+  // background-color: orange;
+  height: calc(100vh - 35px - 58px - 16px - 52px);
+  overflow-y: auto;
+  // margin-top: var(--ds-size-400) !important;
+}
+
+footer {
+  padding-top: var(--ds-size-400);
+  padding-bottom: var(--ds-size-200);
   color: var(--ds-color-text-secondary-default);
   font-weight: 100;
 }
@@ -260,14 +289,14 @@ auro-swatch-list {
     display: block;
     opacity: 1;
     left: auto;
-    width: 180px;
+    // width: 180px;
     top: $sideNavTop;
     padding-bottom: 100px;
   }
 
-  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
-    width: 215px;
-  }
+  // @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
+    width: 230px;
+  // }
 }
 
 .hyperlink.active,
@@ -636,8 +665,8 @@ pre {
 
 .tabList {
   height: auto;
-  line-height: 1.5rem;
-  margin-bottom: 2rem;
+  line-height: 1.5rem !important;
+  // margin-bottom: 2rem;
   position: sticky;
   top: $sideNavTop;
   background: linear-gradient(180deg, rgba(255,255,255,.99) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,.9) 100%);

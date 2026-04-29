@@ -3,6 +3,7 @@ import { Nav } from './nav';
 import Query from '~/functions/renderQuery';
 import { gql } from '@apollo/client';
 import Issues from './issues';
+import Footer from '~/components/footer';
 
 const typeBug = gql`
 {
@@ -62,9 +63,7 @@ class NotReviewed extends Component {
   render() {
     return (
       <section>
-
         <Nav />
-
         <h1 className="auro_heading auro_heading--display">Not reviewed</h1>
         <p>Issues that have not been reviewed by the team.</p>
         <auro-accordion-group>
@@ -81,6 +80,7 @@ class NotReviewed extends Component {
             }}
           </Query>
         </auro-accordion-group>
+        <Footer />
       </section>
     )
   }

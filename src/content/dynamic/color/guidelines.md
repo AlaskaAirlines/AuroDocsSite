@@ -1,6 +1,6 @@
-## Design guidelines
+<auro-header level="2">Design guidelines</auro-header>
 
-### Reserve the use of blue
+<auro-header level="3">Reserve the use of blue</auro-header>
 
 Midnight is our primary brand color, and should be used sparingly to avoid overuse—giving more prominence to the Alaska Airlines brand.
 

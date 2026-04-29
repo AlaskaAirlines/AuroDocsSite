@@ -4,6 +4,7 @@ import { gql } from '@apollo/client';
 import Epic from './epic';
 import Issue from './issue';
 import { Nav } from './nav';
+import Footer from '~/components/footer';
 
 const epic = gql`
 {
@@ -67,9 +68,7 @@ class AllEpics extends Component {
   render() {
     return (
       <section id="projectZero">
-
         <Nav />
-
         <Query query={epic}>
           {({ loading, error, data }) => {
             if (loading) return <p className="isLoading">Loading...</p>;
@@ -95,6 +94,7 @@ class AllEpics extends Component {
             ));
           }}
         </Query>
+        <Footer />
       </section>
     )
   }

@@ -3,6 +3,7 @@ import { Nav } from './nav';
 import Query from '~/functions/renderQuery';
 import { gql } from '@apollo/client';
 import Issues from './issues';
+import Footer from '~/components/footer';
 
 
 const allWork = gql`
@@ -63,12 +64,9 @@ class PlannedWork extends Component {
   render() {
     return (
       <section>
-
         <Nav />
-
         <h1 className="auro_heading auro_heading--display">All open issues</h1>
         <p>The following is a list of all open issues.</p>
-
         <auro-accordion-group>
           <Query query={allWork}>
             {({ loading, error, data }) => {
@@ -83,6 +81,7 @@ class PlannedWork extends Component {
             }}
           </Query>
         </auro-accordion-group>
+        <Footer />
       </section>
     )
   }

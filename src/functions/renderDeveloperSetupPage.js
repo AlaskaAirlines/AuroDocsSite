@@ -7,6 +7,7 @@ class AuroContent extends RenderMarkdownPage {
     return (
       <section className="auro_baseType">
         <div role="tablist" className="tabList">
+          <NavLink role="tab" end className="tab link" to={`/developer-setup/npm`} >NPM</NavLink>
           <NavLink role="tab" end className="tab link" to={`/developer-setup/windows`} >Windows</NavLink>
           <NavLink role="tab" end className="tab link" to={`/developer-setup/macos`} >macOS</NavLink>
           <NavLink role="tab" end className="tab link" to={`/developer-setup/linux`} >Linux</NavLink>

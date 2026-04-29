@@ -6,6 +6,7 @@ import markdownContent from './issuePrLables.md'; // this document needs to be a
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 import data from './labelSettings.json'; // this data needs to be a request against data file in github, not local
 import Template from './issuePrLablesTemplate';
+import Footer from '~/components/footer';
 
 // const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/template/...';
 
@@ -23,71 +24,66 @@ class AuroContributingIssues extends MarkdownPageWrapper {
 
     return (
       <section className="auro_baseType">
-
         <Nav />
-
         <section className="auro-markdown">
           <ReactMarkdown
             children={this.state.contentBuild}
             {... markdownOptions}/>
+          <auro-header level="2" display="700">Current project labels</auro-header>
+          <p>The list below is a representation of the current set of labels, their descriptions and the process to use them.</p>
+          <auro-header level="3" display="500">Default labels</auro-header>
+          <table className="auro_table">
+            <thead>
+              <tr>
+                <th>Label</th>
+                <th>Description</th>
+                <th>Process</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map(({name, cat, color, description, process}, index) => (
+                cat === 'default'
+                  ? <Template key={index + '_' + name} name={name} color={color} description={description} process={process}/>
+                  : ''
+              ))}
+            </tbody>
+          </table>
+          <auro-header level="3" display="500">Status labels</auro-header>
+          <table className="auro_table">
+            <thead>
+              <tr>
+                <th>Label</th>
+                <th>Description</th>
+                <th>Process</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map(({name, cat, color, description, process}, index) => (
+                cat === 'status'
+                  ? <Template key={index + '_' + name} name={name} color={color} description={description} process={process}/>
+                  : ''
+              ))}
+            </tbody>
+          </table>
+          <auro-header level="3" display="500">Type labels</auro-header>
+          <table className="auro_table">
+            <thead>
+              <tr>
+                <th>Label</th>
+                <th>Description</th>
+                <th>Process</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map(({name, cat, color, description, process}, index) => (
+                cat === 'type'
+                  ? <Template key={index + '_' + name} name={name} color={color} description={description} process={process}/>
+                  : ''
+              ))}
+            </tbody>
+          </table>
+          <Footer />
         </section>
-
-        <auro-header level="2" display="700">Current project labels</auro-header>
-        <p>The list below is a representation of the current set of labels, their descriptions and the process to use them.</p>
-
-        <auro-header level="3" display="500">Default labels</auro-header>
-        <table className="auro_table">
-          <thead>
-            <tr>
-              <th>Label</th>
-              <th>Description</th>
-              <th>Process</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map(({name, cat, color, description, process}, index) => (
-              cat === 'default'
-                ? <Template key={index + '_' + name} name={name} color={color} description={description} process={process}/>
-                : ''
-            ))}
-          </tbody>
-        </table>
-
-        <auro-header level="3" display="500">Status labels</auro-header>
-        <table className="auro_table">
-          <thead>
-            <tr>
-              <th>Label</th>
-              <th>Description</th>
-              <th>Process</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map(({name, cat, color, description, process}, index) => (
-              cat === 'status'
-                ? <Template key={index + '_' + name} name={name} color={color} description={description} process={process}/>
-                : ''
-            ))}
-          </tbody>
-        </table>
-
-        <auro-header level="3" display="500">Type labels</auro-header>
-        <table className="auro_table">
-          <thead>
-            <tr>
-              <th>Label</th>
-              <th>Description</th>
-              <th>Process</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map(({name, cat, color, description, process}, index) => (
-              cat === 'type'
-                ? <Template key={index + '_' + name} name={name} color={color} description={description} process={process}/>
-                : ''
-            ))}
-          </tbody>
-        </table>
       </section>
     );
   }

@@ -1,16 +1,16 @@
 Our spacing model is grounded in both math and visual psychology.  We achieve rhythm and hierarchy by grouping related elements, and building an appropriate distance between elements that are less closely related. Focus on optimizing screen real estate and prioritizing white space.
 
-## Spacing concepts
+<auro-header level="2">Spacing concepts</auro-header>
 
-### Box model
+<auro-header level="3">Box model</auro-header>
 
 All HTML elements can be considered boxes. Based off of the HTML foundational box model.
 
 ![](/images/content/spacing/space_boxmodel.png)
 
-## Margin
+<auro-header level="2">Margin</auro-header>
 
-See [WC Style Sheets support](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_spacing)
+See <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-layout-mixin-auro_spacing" target="_blank">WC Style Sheets support</auro-hyperlink>
 
 Vertical - The vertical space between items
 
@@ -33,9 +33,9 @@ Horizontal - The horizontal space between items
 |48px|xxl|var(--auro-size-xxl)|
 |64px|xxxl|var(--auro-size-xxxl)|
 
-## Inset padding
+<auro-header level="2">Inset padding</auro-header>
 
-See [WC Style Sheets support](https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-inset-css)
+See <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#utility-inset-css" target="_blank">WC Style Sheets support</auro-hyperlink>
 
 Default – The padding around an element where all sides are equal
 

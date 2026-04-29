@@ -3,6 +3,7 @@ import { Nav } from './nav';
 import Query from '~/functions/renderQuery';
 import { gql } from '@apollo/client';
 import Pr from './prs';
+import Footer from '~/components/footer';
 
 const openRequests = gql`
 {
@@ -60,14 +61,10 @@ class PullRequestStatus extends Component {
   render() {
     return (
       <section>
-
         <Nav />
-
         <auro-header level="1" display="display">Open Pull Requests</auro-header>
         <p>The following is a list of open Pull Requests per project repo. Only repos that are open to the public will be seen in this list.</p>
-
         <auro-header level="3" display="600">Auro custom elements</auro-header>
-
         <table className="auro_table">
           <thead>
             <tr>
@@ -98,6 +95,7 @@ class PullRequestStatus extends Component {
             </Query>
           </tbody>
         </table>
+        <Footer />
       </section>
     )
   }

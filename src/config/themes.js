@@ -26,28 +26,22 @@ export const THEMES = [
     cssUrl: `${WCSS_THEME_PATH}/alaska.global.min.css`
   },
   {
-    slug: 'alaska-classic',
-    displayName: 'Alaska Classic',
-    code: 'asc',
-    cssUrl: `${WCSS_THEME_PATH}/alaska-classic.global.min.css`
-  },
-  {
     slug: 'hawaiian',
     displayName: 'Hawaiian',
     code: 'ha',
     cssUrl: `${WCSS_THEME_PATH}/hawaiian.global.min.css`
   },
   {
-    slug: 'auro-1',
-    displayName: 'Auro 1',
+    slug: 'atmos',
+    displayName: 'Atmos',
     code: 'a1',
     cssUrl: `${WCSS_THEME_PATH}/auro-1.global.min.css`
   },
   {
-    slug: 'auro-2',
-    displayName: 'Auro 2',
-    code: 'a2',
-    cssUrl: `${WCSS_THEME_PATH}/auro-2.global.min.css`
+    slug: 'alaska-classic',
+    displayName: 'Alaska Classic',
+    code: 'asc',
+    cssUrl: `${WCSS_THEME_PATH}/alaska-classic.global.min.css`
   }
 ];
 

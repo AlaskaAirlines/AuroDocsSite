@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import markdownOptions from "~/functions/markdownOptions";
 import guidelines from './guidelines.md'
 import { Nav} from './nav.js';
+import Footer from '~/components/footer';
 
 
 class Colors extends Component {
@@ -42,13 +43,12 @@ class Colors extends Component {
   render() {
     return (
       <section className="auro_baseType">
-
         <Nav />
-
         <section className="auro-markdown">
           <ReactMarkdown
             children={this.state.guidelinesBuild}
             {... markdownOptions}/>
+          <Footer />
         </section>
       </section>
     );

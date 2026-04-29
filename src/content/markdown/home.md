@@ -1,4 +1,4 @@
-# Say hello to Auro!
+<auro-header level="1">Say hello to Auro!</auro-header>
 
 <div class="imageBox">
   <div class="quoteBox">
@@ -28,7 +28,7 @@
   <auro-hyperlink type="cta" onDark href="https://github.com/AlaskaAirlines/WC-Generator/discussions" slot="action" target="_blank">View open discussions</auro-hyperlink>
 </auro-banner>
 
-## Auro's top FAQs
+<auro-header level="2">Auro's top FAQs</auro-header>
 
 <style>
   .lightText {
@@ -124,7 +124,7 @@
   </auro-accordion>
 <auro-accordion-group>
 
-## What people are saying about Auro
+<auro-header level="2">What people are saying about Auro</auro-header>
 
 <div class="auro_util_displayFlex columns home--quotes">
   <div>

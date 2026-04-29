@@ -1,12 +1,12 @@
 The grid is a responsive, mobile first, fluid system that scales 12 columns across the viewport of a device.  The grid is based on a 16 pixel uniform spacing structure that's used to appropriately arrange content into aligned columns and rows.
 
-## Anatomy
+<auro-header level="2">Anatomy</auro-header>
 
 ![](/images/content/grid/grid_breakpoint_anatomy.png)
 
-## Breakpoints
+<auro-header level="2">Breakpoints</auro-header>
 
-See [breakpoint support in web core style sheets](https://alaskaairlines.github.io/WebCoreStyleSheets/#responsive)
+See <auro-hyperlink href="https://alaskaairlines.github.io/WebCoreStyleSheets/#responsive" target="_blank">breakpoint support in web core style sheets</auro-hyperlink>
 
 Columns, gutters, and margins scale as the device and viewport increases or decreases.  Different breakpoints require either a fixed or fluid responsive grid.
 
@@ -22,7 +22,7 @@ Columns, gutters, and margins scale as the device and viewport increases or decr
 |MD (Medium)|≥ 1024px|Tablet (landscape)|32px|32px|Fluid|
 |LG (Large)|≥ 1232px|Desktop|32px|32px|Fixed|
 
-## Guidlines
+<auro-header level="2">Guidlines</auro-header>
 
 Two grid sizes are available within the toolkit. Both grids are based on a 12 column structure, but have different gutter and margin sizes.
 
@@ -40,7 +40,7 @@ Two grid sizes are available within the toolkit. Both grids are based on a 12 co
 |Tablet|11" iPad Pro (portrait)|834 x 1194px|
 |Desktop||1440 x 900px|
 
-### Behavior
+<auro-header level="3">Behavior</auro-header>
 
 * Avoid breaking alignment or slightly oversizing a container to add visual interest or emphasis
 * Create relationships and hierarchy among content elements using the margins and gutters in the grid shared by the page layout

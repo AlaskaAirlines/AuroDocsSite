@@ -3,6 +3,7 @@ import { Nav } from './nav';
 import Query from '~/functions/renderQuery';
 import { gql } from '@apollo/client';
 import Issues from './issues';
+import Footer from '~/components/footer';
 
 const typeBug = gql`
 {
@@ -62,9 +63,7 @@ class Bugs extends Component {
   render() {
     return (
       <section>
-
         <Nav />
-
         <h1 className="auro_heading auro_heading--display">Bugs</h1>
         <p>With all code, there are issues to be addressed. The following are reported bugs that if you can help with, we would love the support! </p>
         <auro-accordion-group>
@@ -81,6 +80,7 @@ class Bugs extends Component {
             }}
           </Query>
         </auro-accordion-group>
+        <Footer />
       </section>
     )
   }

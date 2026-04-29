@@ -80,15 +80,7 @@ import DevSetupMac from './content/dynamic/devSetup/devSetupMac';
 import DevSetupLinux from './content/dynamic/devSetup/devSetupLinux';
 import DevSetupNpm from './content/dynamic/devSetup/devSetupNpm';
 
-// WC-Generator
-import Generator from './content/dynamic/generator/index';
-import GeneratorInstall from './content/dynamic/generator/install';
-import GeneratorApi from './content/dynamic/generator/api';
-import GeneratorBestPractice from './content/dynamic/generator/bestPractice';
-import GeneratorDefineApi from './content/dynamic/generator/defineApi';
-import GeneratorUpgrade from './content/dynamic/generator/upgrade';
-import CommonDefs from './content/dynamic/generator/commonDefs';
-import GeneratorReleases from './content/dynamic/generator/releases';
+
 
 // Contributing
 import Contributing from './content/dynamic/contributing/contributing';
@@ -104,7 +96,6 @@ import AlaskaTokens from './content/dynamic/designTokens/alaska';
 import AlaskaClassicTokens from './content/dynamic/designTokens/alaska-classic';
 import HawaiianTokens from './content/dynamic/designTokens/hawaiian';
 import Auro1Tokens from './content/dynamic/designTokens/auro-1';
-import Auro2Tokens from './content/dynamic/designTokens/auro-2';
 import DesignTokensInstall from './content/dynamic/designTokens/install';
 
 // design tokens docs
@@ -164,7 +155,6 @@ import ReleaseSummary from './content/dynamic/releaseDashboard/summaryDashboard'
 import UseDashboard from './content/dynamic/useDashboard/useDashboard';
 
 // imported block components
-import Footer from './components/footer';
 import Header from './components/header';
 import SideNav from './components/side-nav';
 
@@ -346,7 +336,6 @@ import AuroHyperlink from './content/dynamic/hyperlink/component';
 import AuroHyperlinkInstall from './content/dynamic/hyperlink/install';
 import AuroHyperlinkApi from './content/dynamic/hyperlink/api';
 import AuroHyperlinkReleases from './content/dynamic/hyperlink/releases';
-import AuroHyperlinkFigma from './content/dynamic/hyperlink/figma';
 import AuroHyperlinka11y from './content/dynamic/hyperlink/a11y';
 
 // Icon
@@ -561,7 +550,6 @@ function App() {
               <Route path="/getting-started/developers/design-tokens/alaska-classic" element={<AlaskaClassicTokens />} />
               <Route path="/getting-started/developers/design-tokens/hawaiian" element={<HawaiianTokens />} />
               <Route path="/getting-started/developers/design-tokens/auro-1" element={<Auro1Tokens />} />
-              <Route path="/getting-started/developers/design-tokens/auro-2" element={<Auro2Tokens />} />
               <Route path="/design-tokens/deprecated" element={<AuroClassicTokens />} />
 
               {/* Design Tokens Docs */}
@@ -575,22 +563,7 @@ function App() {
               <Route path="/color/digital-palette" element={<CoreDigitalPalette />} />
               <Route path="/color/personality-palette" element={<PersonalityPalette />} />
 
-              {/* Generator */}
-              <Route end path="/generator" element={<Generator />} />
-              <Route path="/generator/install" element={<GeneratorInstall />} />
-              <Route path="/generator/api" element={<GeneratorApi />} />
-              <Route path="/generator/best-practice" element={<GeneratorBestPractice />} />
-              <Route path="/generator/upgrade" element={<GeneratorUpgrade />} />
-              <Route path="/generator/define-api" element={<GeneratorDefineApi />} />
-              <Route path="/common-defs" element={<CommonDefs />} />
-              <Route path="/generator/releases" element={<GeneratorReleases />} />
 
-              {/* Legacy routes */}
-              <Route path="/getting-started/developers/generator/install" element={<GeneratorInstall />} />
-              <Route path="/getting-started/developers/generator/generator/api" element={<GeneratorApi />} />
-              <Route path="/getting-started/developers/generator/generator/best-practice" element={<GeneratorBestPractice />} />
-              <Route path="/getting-started/developers/generator/upgrade" element={<GeneratorUpgrade />} />
-              <Route path="/getting-started/developers/generator/define-api" element={<GeneratorDefineApi />} />
 
               {/* Generator */}
               <Route path="/contributing" element={<Contributing />} />
@@ -763,7 +736,6 @@ function App() {
               <Route path="/components/auro/hyperlink/install" element={<AuroHyperlinkInstall />} />
               <Route path="/components/auro/hyperlink/api" element={<AuroHyperlinkApi />} />
               <Route path="/components/auro/hyperlink/releases" element={<AuroHyperlinkReleases />} />
-              <Route path="/components/auro/hyperlink/figma" element={<AuroHyperlinkFigma />} />
               <Route path="/components/auro/hyperlink/a11y" element={<AuroHyperlinka11y />} />
 
               {/* icon */}
@@ -914,7 +886,6 @@ function App() {
             </Routes>
           </Router>
         </div>
-        <Footer />
       </main>
     </ApolloProvider>
   )

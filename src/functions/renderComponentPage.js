@@ -328,7 +328,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
               ))
             }}
           </Query>
-          
+
         </section>
       );
     } else if (this.figmaPage) {
@@ -356,9 +356,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
 
           { this.renderNav() }
 
-          <section
-            className="auro-markdown"
-            >
+          <section className="auro-markdown">
               <RenderRemoteMarkdown markdownUrl={this.markdownContent} />
             </section>
         </section>

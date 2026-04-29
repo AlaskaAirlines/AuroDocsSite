@@ -5,7 +5,7 @@
   }
 </style>
 
-# Auro support
+<auro-header level="1">Auro support</auro-header>
 
 <auro-banner billboard slim alignLeft>
   <picture slot="displayImage">
@@ -27,7 +27,7 @@
 
 <p>Alaska Airlines employees may also ask questions in our <auro-hyperlink href="https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A850b95ad1ecf4c5db953e77774400a2a%40thread.skype%2FAuro%2520Support%2520Channel%3FgroupId%3Daa01c782-8f88-480d-85f1-0927b1757977&type=channel&deeplinkId=8777b121-2e88-49ae-b9cb-c3d776c93267&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true" target="_blank">Microsoft Teams Support Channel</a>.</p>
 
-## Frequently asked questions
+<auro-header level="2">Frequently asked questions</auro-header>
 
 Please see the items below for commonly asked questions regarding development and instillation of the Auro Design System.
 
@@ -144,7 +144,7 @@ Please see the items below for commonly asked questions regarding development an
   </auro-accordion>
 </auro-accordion-group>
 
-## Frequently asked process questions
+<auro-header level="2">Frequently asked process questions</auro-header>
 
 <auro-accordion-group>
   <auro-accordion id="newWork" chromeless noProfile>
@@ -172,7 +172,7 @@ Please see the items below for commonly asked questions regarding development an
   </auro-accordion>
 </auro-accordion-group>
 
-## Frequently asked Tech support questions
+<auro-header level="2">Frequently asked Tech support questions</auro-header>
 
 <auro-accordion-group>
   <auro-accordion id="github" chromeless noProfile>

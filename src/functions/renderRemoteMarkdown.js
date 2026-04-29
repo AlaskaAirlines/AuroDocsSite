@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import markdownOptions from "~/functions/markdownOptions";
+import Footer from '~/components/footer';
 import '~/sass/markdown.scss';
 
 /**
@@ -9,7 +10,7 @@ import '~/sass/markdown.scss';
  * @private
  */
 function addCopyButtons(container) {
-  container.querySelectorAll('pre[class*="language-"]').forEach((pre) => {
+  container.querySelectorAll('pre:has(code.hljs), pre[class*="language-"], pre:has(code[class*="language-"])').forEach((pre) => {
     // Skip if already wrapped
     if (pre.parentNode.classList.contains('pre-wrapper')) return;
 
@@ -119,6 +120,17 @@ const RenderRemoteMarkdown = ({ markdownUrl }) => {
     }
   }, [text]);
 
+  // Move the footer element into .mainContent after markdown renders
+  useEffect(() => {
+    if (text && containerRef.current) {
+      const mainContent = containerRef.current.querySelector('.mainContent');
+      const footerEl = containerRef.current.querySelector('.markdown-footer');
+      if (mainContent && footerEl) {
+        mainContent.appendChild(footerEl);
+      }
+    }
+  }, [text]);
+
   return (
     <div ref={containerRef}>
       {text && (
@@ -127,6 +139,9 @@ const RenderRemoteMarkdown = ({ markdownUrl }) => {
           {... markdownOptions}
         />
       )}
+      <div className="markdown-footer">
+        <Footer />
+      </div>
     </div>
   );
 };

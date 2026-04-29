@@ -3,6 +3,7 @@ import Query from '~/functions/renderQuery';
 import { gql } from '@apollo/client';
 import Summary from './summary';
 import { Nav } from './nav';
+import Footer from '~/components/footer';
 
 const milestones = gql`
 {
@@ -33,9 +34,7 @@ class Milestones extends Component {
     return (
       <section id="releases-by-sprint">
         <Nav />
-
         <h1 className="auro_heading auro_heading--display">Auro release summaries</h1>
-
         <Query query={milestones}>
           {({ loading, error, data }) => {
             if (loading) return <auro-loader laser onlight></auro-loader>;
@@ -48,6 +47,7 @@ class Milestones extends Component {
             ));
           }}
         </Query>
+        <Footer />
       </section>
     );
   }

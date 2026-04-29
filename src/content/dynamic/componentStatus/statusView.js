@@ -4,6 +4,7 @@ import Query from '~/functions/renderQuery';
 import { gql } from '@apollo/client';
 import Repo from './repo';
 import LabsRepo from './labsRepo';
+import Footer from '~/components/footer';
 
 const componentStatus = gql`
 {
@@ -358,17 +359,12 @@ class ComponentStatus extends Component {
   render() {
     return (
       <section>
-
         <Nav />
-
         <auro-header level="1" display="display">Status</auro-header>
-
         <p>Auro custom elements are a collection of custom elements maintained by Alaska Airlines that implement the Auro Design System. Tools and developed elements that are universally useable in almost any development environment including <auro-hyperlink href="/reactSetup" relative>React,</auro-hyperlink> <auro-hyperlink href="/svelteSetup" relative>Svelte,</auro-hyperlink> or simply standard <auro-hyperlink href="/javascriptSetup" relative>JavaScript.</auro-hyperlink></p>
         <p>Auro custom elements are always in a 'work in progress' status and releases are subject to major changes.</p>
         <p>For more information about how we address Node support maintenance, see our <auro-hyperlink href="/node-support" relative>Auro Node support</auro-hyperlink> page.</p>
-
         <auro-header level="3" display="600">Auro custom elements</auro-header>
-
         <table className="auro_table">
           <thead>
             <tr>
@@ -507,6 +503,7 @@ class ComponentStatus extends Component {
             </Query>
           </tbody>
         </table>
+        <Footer />
       </section>
     )
   }

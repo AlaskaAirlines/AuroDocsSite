@@ -4,6 +4,7 @@ import markdownOptions from "~/functions/markdownOptions";
 import content from './grid.md'
 import { Nav} from './nav.js';
 import header from './grid_header.png';
+import Footer from '~/components/footer';
 
 
 class Colors extends Component {
@@ -44,13 +45,13 @@ class Colors extends Component {
       <section className="auro_baseType">
         <Nav />
         <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
-
         <h1 className="auro_heading auro_heading--display">Grid</h1>
         <section className="auro-markdown">
           <ReactMarkdown
             children={this.state.contentBuild}
             {... markdownOptions}/>
         </section>
+        <Footer />
       </section>
     );
   }

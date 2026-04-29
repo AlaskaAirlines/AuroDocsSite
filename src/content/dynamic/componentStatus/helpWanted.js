@@ -3,6 +3,7 @@ import { Nav } from './nav';
 import Query from '~/functions/renderQuery';
 import { gql } from '@apollo/client';
 import Issues from './issues';
+import Footer from '~/components/footer';
 
 const helpWanted = gql`
 {
@@ -62,9 +63,7 @@ class HelpWanted extends Component {
   render() {
     return (
       <section>
-
         <Nav />
-
         <h1 className="auro_heading auro_heading--display">Help Wanted</h1>
         <p>The following issues are open tickets with the Auro Design System and help is greatly appreciated. If you see an issue here that you feel you can help with, design, a11y, or feature, please reach out and we would be excited to work with you!</p>
         <auro-accordion-group>
@@ -81,6 +80,7 @@ class HelpWanted extends Component {
             }}
           </Query>
         </auro-accordion-group>
+        <Footer />
       </section>
     )
   }

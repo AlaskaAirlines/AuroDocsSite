@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Nav } from './Nav';
 import { FooterLinks } from "./FooterLinks";
+import Footer from '~/components/footer';
 
 /**
  * ThemePage component
@@ -24,14 +25,20 @@ const ThemePage = ({ theme = '', children, showFooter = true, renderSectionEl = 
       <Nav />
       {children}
       {showFooter && <FooterLinks />}
+      {renderSectionEl && <Footer />}
     </>
   );
   
   // Optionally return a section element wrapper
   // Necessary for use with renderComponentPage & sticky tabs
   return renderSectionEl ? (
-    <section {...themeProps}>
-      {content}
+    <section className="auro_baseType" {...themeProps}>
+      <Nav />
+      <section className="auro-markdown">
+        {children}
+        {showFooter && <FooterLinks />}
+        <Footer />
+      </section>
     </section>
   ) : content;
 };
