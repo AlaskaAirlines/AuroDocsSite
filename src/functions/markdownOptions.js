@@ -38,5 +38,5 @@ export default {
     a: linkRenderer,
   },
   remarkPlugins: [remarkGfm, remarkRehype],
-  rehypePlugins: [[rehypeExternalLinks], rehypeHighlight, rehypeRaw],
+  rehypePlugins: [[rehypeExternalLinks], rehypeRaw, rehypeHighlight],
 };

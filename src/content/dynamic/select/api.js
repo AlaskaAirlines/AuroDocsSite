@@ -1,5 +1,4 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
-import { initExamples } from "@aurodesignsystem/auro-formkit/auro-select/demo/api.js";
 import content from '@aurodesignsystem/auro-formkit/auro-select/demo/api.md';
 
 class AuroContent extends AuroComponentContent {
@@ -10,6 +9,7 @@ class AuroContent extends AuroComponentContent {
     this.hasAccessibility = true;
     this.hasVoiceover = true;
     this.hasGettingStarted = true;
+    this.hasCustomize = true;
     this.hasDesign = true;
     this.hasKeyboardBehavior = true;
     this.hasInstall = false;
@@ -18,8 +18,6 @@ class AuroContent extends AuroComponentContent {
 
   componentDidMount() {
     super.componentDidMount();
-
-    initExamples();
   }
 }
 

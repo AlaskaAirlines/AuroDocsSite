@@ -268,6 +268,12 @@ import AuroCombobox from './content/dynamic/combobox/component';
 import AuroComboboxApi from './content/dynamic/combobox/api';
 import AuroComboboxInstall from './content/dynamic/combobox/install';
 import AuroComboboxReleases from './content/dynamic/combobox/releases';
+import AuroComboboxDesign from './content/dynamic/combobox/design';
+import AuroComboboxGettingStarted from './content/dynamic/combobox/getting-started';
+import AuroComboboxAccessibility from './content/dynamic/combobox/accessibility';
+import AuroComboboxVoiceOver from './content/dynamic/combobox/voiceover';
+import AuroComboboxKeyboardBehavior from './content/dynamic/combobox/keyboard-behavior';
+import AuroComboboxCustomize from './content/dynamic/combobox/customize';
 
 // counter
 import AuroCounter from './content/dynamic/counter/component';
@@ -402,6 +408,7 @@ import AuroSelectVoiceOver from './content/dynamic/select/voiceOver';
 import AuroSelectKeyboardBehavior from './content/dynamic/select/keyboard-behavior';
 import AuroSelectApi from './content/dynamic/select/api';
 import AuroSelectReleases from './content/dynamic/select/releases';
+import AuroSelectCustomize from './content/dynamic/select/customize';
 
 // sidenav
 import AuroSidenav from './content/dynamic/sidenav/component';
@@ -665,6 +672,12 @@ function App() {
               <Route path="/components/auro/combobox/install" element={<AuroComboboxInstall />} />
               <Route path="/components/auro/combobox/api" element={<AuroComboboxApi />} />
               <Route path="/components/auro/combobox/releases" element={<AuroComboboxReleases />} />
+              <Route path="/components/auro/combobox/design" element={<AuroComboboxDesign />} />
+              <Route path="/components/auro/combobox/getting-started" element={<AuroComboboxGettingStarted />} />
+              <Route path="/components/auro/combobox/customize" element={<AuroComboboxCustomize />} />
+              <Route path="/components/auro/combobox/accessibility" element={<AuroComboboxAccessibility />} />
+              <Route path="/components/auro/combobox/voice-over" element={<AuroComboboxVoiceOver />} />
+              <Route path="/components/auro/combobox/keyboard-behavior" element={<AuroComboboxKeyboardBehavior />} />
 
               {/* Auro Counter */}
               <Route path="/components/auro/counter" element={<AuroCounter />} />
@@ -799,6 +812,7 @@ function App() {
               <Route path="/components/auro/select/releases" element={<AuroSelectReleases />} />
               <Route path="/components/auro/select/design" element={<AuroSelectDesign />} />
               <Route path="/components/auro/select/getting-started" element={<AuroSelectGettingStarted />} />
+              <Route path="/components/auro/select/customize" element={<AuroSelectCustomize />} />
               <Route path="/components/auro/select/accessibility" element={<AuroSelectAccessibility />} />
               <Route path="/components/auro/select/voice-over" element={<AuroSelectVoiceOver />} />
               <Route path="/components/auro/select/keyboard-behavior" element={<AuroSelectKeyboardBehavior />} />
