@@ -225,6 +225,11 @@ class AuroComponentContent extends MarkdownPageWrapper {
           : undefined
         }
         {
+          this.hasCustomize ?
+          <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/customize`} >Customize</NavLink>
+          : undefined
+        }
+        {
           this.hasDesign ?
           <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}/design`} >Design</NavLink>
           : undefined

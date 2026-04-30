@@ -7,6 +7,7 @@ class AuroContent extends AuroComponentContent {
     this.hasAccessibility = true;
     this.hasVoiceover = true;
     this.hasGettingStarted = true;
+    this.hasCustomize = true;
     this.hasDesign = true;
     this.hasKeyboardBehavior = true;
     this.hasInstall = false;

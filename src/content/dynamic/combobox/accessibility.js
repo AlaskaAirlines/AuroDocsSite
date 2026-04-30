@@ -1,5 +1,5 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
-import content from '@aurodesignsystem/auro-formkit/auro-combobox/readme.md';
+import content from '@aurodesignsystem/auro-formkit/auro-combobox/demo/accessibility.md';
 
 class AuroContent extends AuroComponentContent {
 
@@ -15,6 +15,10 @@ class AuroContent extends AuroComponentContent {
     this.hasInstall = false;
     this.markdownContent = content; 
   };
+
+  componentDidMount() {
+    super.componentDidMount();
+  }
 }
 
 export default AuroContent;
