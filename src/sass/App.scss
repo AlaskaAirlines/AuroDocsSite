@@ -680,6 +680,15 @@ pre {
   @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
     line-height: 3rem;
   }
+
+  &.subTabList {
+    top: calc(#{$sideNavTop} + 3.5rem);
+    z-index: 9;
+
+    @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
+      top: calc(#{$sideNavTop} + 4rem);
+    }
+  }
 }
 
 .tab {

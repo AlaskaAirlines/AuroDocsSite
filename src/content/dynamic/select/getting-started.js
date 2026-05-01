@@ -13,6 +13,7 @@ class AuroContent extends AuroComponentContent {
     this.hasDesign = true;
     this.hasKeyboardBehavior = true;
     this.hasInstall = false;
+    this.hasSubNav = true;
     this.markdownContent = content; 
   };
 
