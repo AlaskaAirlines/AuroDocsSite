@@ -356,6 +356,12 @@ import AuroInput from './content/dynamic/input/component';
 import AuroInputApi from './content/dynamic/input/api';
 import AuroInputInstall from './content/dynamic/input/install';
 import AuroInputReleases from './content/dynamic/input/releases';
+import AuroInputDesign from './content/dynamic/input/design';
+import AuroInputGettingStarted from './content/dynamic/input/getting-started';
+import AuroInputAccessibility from './content/dynamic/input/accessibility';
+import AuroInputVoiceOver from './content/dynamic/input/voiceover';
+import AuroInputKeyboardBehavior from './content/dynamic/input/keyboard-behavior';
+import AuroInputCustomize from './content/dynamic/input/customize';
 
 // loader
 import AuroLoader from './content/dynamic/loader/component';
@@ -763,6 +769,12 @@ function App() {
               <Route path="/components/auro/input/install" element={<AuroInputInstall />} />
               <Route path="/components/auro/input/api" element={<AuroInputApi />} />
               <Route path="/components/auro/input/releases" element={<AuroInputReleases />} />
+              <Route path="/components/auro/input/design" element={<AuroInputDesign />} />
+              <Route path="/components/auro/input/getting-started" element={<AuroInputGettingStarted />} />
+              <Route path="/components/auro/input/customize" element={<AuroInputCustomize />} />
+              <Route path="/components/auro/input/accessibility" element={<AuroInputAccessibility />} />
+              <Route path="/components/auro/input/voice-over" element={<AuroInputVoiceOver />} />
+              <Route path="/components/auro/input/keyboard-behavior" element={<AuroInputKeyboardBehavior />} />
 
               {/* Auro Loader */}
               <Route path="/components/auro/loader" element={<AuroLoader />} />
