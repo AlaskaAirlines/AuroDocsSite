@@ -35,6 +35,7 @@ class AuroComponentContent extends MarkdownPageWrapper {
     this.hasKeyboardBehavior = false;
     this.hasApi = true;
     this.hasInstall  = true;
+    this.hasSubNav = false;
 
     // Flags for identifying which page template is being rendered
     this.releasePage = false;
@@ -216,6 +217,10 @@ class AuroComponentContent extends MarkdownPageWrapper {
    * @returns {object} The component nav items.
    */
   renderNav() {
+    if (this.hasSubNav) {
+      return this.renderGroupedNav();
+    }
+
     return (
       <div role="tablist" className="tabList">
         <NavLink role="tab" end className="tab link" to={`/components/auro/${this.name}`}  id="componentLink">{this.convertToUpperCase(this.name)}</NavLink>
@@ -266,6 +271,64 @@ class AuroComponentContent extends MarkdownPageWrapper {
           npm={`https://www.npmjs.com/package/@${this.nameSpace}/auro-formkit`}
           code={`https://github.com/AlaskaAirlines/auro-formkit/blob/main/components/${this.name}/src/auro-${this.name}.js`}
         />
+      </div>
+    );
+  }
+
+  /**
+   * Render grouped nav with primary tabs and contextual sub-tabs.
+   * @private
+   * @returns {object} The grouped component nav items.
+   */
+  renderGroupedNav() {
+    const basePath = `/components/auro/${this.name}`;
+    const path = window.location.pathname;
+
+    const codeRoutes = [`${basePath}/getting-started`, `${basePath}/customize`, `${basePath}/api`];
+    const a11yRoutes = [`${basePath}/keyboard-behavior`, `${basePath}/voice-over`, `${basePath}/accessibility`];
+
+    const isCodeSection = codeRoutes.includes(path);
+    const isA11ySection = a11yRoutes.includes(path);
+
+    return (
+      <div>
+        <div role="tablist" className="tabList">
+          <NavLink role="tab" end className="tab link" to={basePath}>Overview</NavLink>
+          <NavLink
+            role="tab"
+            className={() => `tab link ${isCodeSection ? 'active' : ''}`}
+            to={`${basePath}/getting-started`}
+          >Code</NavLink>
+          <NavLink role="tab" end className="tab link" to={`${basePath}/design`}>Design</NavLink>
+          <NavLink
+            role="tab"
+            className={() => `tab link ${isA11ySection ? 'active' : ''}`}
+            to={`${basePath}/keyboard-behavior`}
+          >Accessibility</NavLink>
+          <NavLink role="tab" end className="tab link" to={`${basePath}/releases`}>Releases</NavLink>
+
+          <LinkIcons
+            github={`https://github.com/AlaskaAirlines/auro-formkit/issues`}
+            npm={`https://www.npmjs.com/package/@${this.nameSpace}/auro-formkit`}
+            code={`https://github.com/AlaskaAirlines/auro-formkit/blob/main/components/${this.name}/src/auro-${this.name}.js`}
+          />
+        </div>
+
+        {isCodeSection && (
+          <div role="tablist" className="tabList subTabList">
+            <NavLink role="tab" end className="tab link" to={`${basePath}/getting-started`}>Getting Started</NavLink>
+            <NavLink role="tab" end className="tab link" to={`${basePath}/customize`}>Customize</NavLink>
+            <NavLink role="tab" end className="tab link" to={`${basePath}/api`}>API</NavLink>
+          </div>
+        )}
+
+        {isA11ySection && (
+          <div role="tablist" className="tabList subTabList">
+            <NavLink role="tab" end className="tab link" to={`${basePath}/keyboard-behavior`}>Keyboard Behavior</NavLink>
+            <NavLink role="tab" end className="tab link" to={`${basePath}/voice-over`}>VoiceOver</NavLink>
+            <NavLink role="tab" end className="tab link" to={`${basePath}/accessibility`}>Aria</NavLink>
+          </div>
+        )}
       </div>
     );
   }
