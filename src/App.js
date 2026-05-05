@@ -262,6 +262,12 @@ import AuroCheckbox from './content/dynamic/checkbox/component';
 import AuroCheckboxApi from './content/dynamic/checkbox/api';
 import AuroCheckboxInstall from './content/dynamic/checkbox/install';
 import AuroCheckboxReleases from './content/dynamic/checkbox/releases';
+import AuroCheckboxDesign from './content/dynamic/checkbox/design';
+import AuroCheckboxGettingStarted from './content/dynamic/checkbox/getting-started';
+import AuroCheckboxAccessibility from './content/dynamic/checkbox/accessibility';
+import AuroCheckboxVoiceOver from './content/dynamic/checkbox/voiceover';
+import AuroCheckboxKeyboardBehavior from './content/dynamic/checkbox/keyboard-behavior';
+import AuroCheckboxCustomize from './content/dynamic/checkbox/customize';
 
 // combobox
 import AuroCombobox from './content/dynamic/combobox/component';
@@ -280,12 +286,24 @@ import AuroCounter from './content/dynamic/counter/component';
 import AuroCounterApi from './content/dynamic/counter/api';
 import AuroCounterInstall from './content/dynamic/counter/install';
 import AuroCounterReleases from './content/dynamic/counter/releases';
+import AuroCounterDesign from './content/dynamic/counter/design';
+import AuroCounterGettingStarted from './content/dynamic/counter/getting-started';
+import AuroCounterAccessibility from './content/dynamic/counter/accessibility';
+import AuroCounterVoiceOver from './content/dynamic/counter/voiceover';
+import AuroCounterKeyboardBehavior from './content/dynamic/counter/keyboard-behavior';
+import AuroCounterCustomize from './content/dynamic/counter/customize';
 
 // datepicker
 import AuroDatepicker from './content/dynamic/datepicker/component';
 import AuroDatepickerApi from './content/dynamic/datepicker/api';
 import AuroDatepickerInstall from './content/dynamic/datepicker/install';
 import AuroDatepickerReleases from './content/dynamic/datepicker/releases';
+import AuroDatepickerDesign from './content/dynamic/datepicker/design';
+import AuroDatepickerGettingStarted from './content/dynamic/datepicker/getting-started';
+import AuroDatepickerAccessibility from './content/dynamic/datepicker/accessibility';
+import AuroDatepickerVoiceOver from './content/dynamic/datepicker/voiceover';
+import AuroDatepickerKeyboardBehavior from './content/dynamic/datepicker/keyboard-behavior';
+import AuroDatepickerCustomize from './content/dynamic/datepicker/customize';
 
 // datetime
 import AuroDateTime from './content/dynamic/datetime/component';
@@ -310,6 +328,12 @@ import AuroDropdown from './content/dynamic/dropdown/component';
 import AuroDropdownApi from './content/dynamic/dropdown/api';
 import AuroDropdownInstall from './content/dynamic/dropdown/install';
 import AuroDropdownReleases from './content/dynamic/dropdown/releases';
+import AuroDropdownDesign from './content/dynamic/dropdown/design';
+import AuroDropdownGettingStarted from './content/dynamic/dropdown/getting-started';
+import AuroDropdownAccessibility from './content/dynamic/dropdown/accessibility';
+import AuroDropdownVoiceOver from './content/dynamic/dropdown/voiceover';
+import AuroDropdownKeyboardBehavior from './content/dynamic/dropdown/keyboard-behavior';
+import AuroDropdownCustomize from './content/dynamic/dropdown/customize';
 
 // Flight
 import AuroFlight from './content/dynamic/flight/component';
@@ -329,8 +353,11 @@ import AuroFlightlineReleases from './content/dynamic/flightline/releases';
 import AuroForm from './content/dynamic/form/component';
 import AuroFormApi from './content/dynamic/form/api';
 import AuroFormInstall from './content/dynamic/form/install';
-import AuroFormReleases from './content/dynamic/form/releases';
-
+import AuroFormReleases from './content/dynamic/form/releases';import AuroFormGettingStarted from './content/dynamic/form/getting-started';
+import AuroFormAccessibility from './content/dynamic/form/accessibility';
+import AuroFormVoiceOver from './content/dynamic/form/voiceover';
+import AuroFormKeyboardBehavior from './content/dynamic/form/keyboard-behavior';
+import AuroFormCustomize from './content/dynamic/form/customize';
 // header
 import AuroHeader from './content/dynamic/header/component';
 import AuroHeaderApi from './content/dynamic/header/api';
@@ -379,8 +406,12 @@ import AuroLockupReleases from './content/dynamic/lockup/releases';
 import AuroMenu from './content/dynamic/menu/component';
 import AuroMenuApi from './content/dynamic/menu/api';
 import AuroMenuInstall from './content/dynamic/menu/install';
-import AuroMenuReleases from './content/dynamic/menu/releases';
-
+import AuroMenuReleases from './content/dynamic/menu/releases';import AuroMenuDesign from './content/dynamic/menu/design';
+import AuroMenuGettingStarted from './content/dynamic/menu/getting-started';
+import AuroMenuAccessibility from './content/dynamic/menu/accessibility';
+import AuroMenuVoiceOver from './content/dynamic/menu/voiceover';
+import AuroMenuKeyboardBehavior from './content/dynamic/menu/keyboard-behavior';
+import AuroMenuCustomize from './content/dynamic/menu/customize';
 // Nav
 import AuroNav from './content/dynamic/nav/component';
 import AuroNavApi from './content/dynamic/nav/api';
@@ -404,6 +435,12 @@ import AuroRadio from './content/dynamic/radio/component';
 import AuroRadioApi from './content/dynamic/radio/api';
 import AuroRadioInstall from './content/dynamic/radio/install';
 import AuroRadioReleases from './content/dynamic/radio/releases';
+import AuroRadioDesign from './content/dynamic/radio/design';
+import AuroRadioGettingStarted from './content/dynamic/radio/getting-started';
+import AuroRadioAccessibility from './content/dynamic/radio/accessibility';
+import AuroRadioVoiceOver from './content/dynamic/radio/voiceover';
+import AuroRadioKeyboardBehavior from './content/dynamic/radio/keyboard-behavior';
+import AuroRadioCustomize from './content/dynamic/radio/customize';
 
 // Select
 import AuroSelect from './content/dynamic/select/component';
@@ -672,6 +709,12 @@ function App() {
               <Route path="/components/auro/checkbox/install" element={<AuroCheckboxInstall />} />
               <Route path="/components/auro/checkbox/api" element={<AuroCheckboxApi />} />
               <Route path="/components/auro/checkbox/releases" element={<AuroCheckboxReleases />} />
+              <Route path="/components/auro/checkbox/design" element={<AuroCheckboxDesign />} />
+              <Route path="/components/auro/checkbox/getting-started" element={<AuroCheckboxGettingStarted />} />
+              <Route path="/components/auro/checkbox/customize" element={<AuroCheckboxCustomize />} />
+              <Route path="/components/auro/checkbox/accessibility" element={<AuroCheckboxAccessibility />} />
+              <Route path="/components/auro/checkbox/voice-over" element={<AuroCheckboxVoiceOver />} />
+              <Route path="/components/auro/checkbox/keyboard-behavior" element={<AuroCheckboxKeyboardBehavior />} />
 
               {/* Auro Combobox */}
               <Route path="/components/auro/combobox" element={<AuroCombobox />} />
@@ -690,12 +733,24 @@ function App() {
               <Route path="/components/auro/counter/install" element={<AuroCounterInstall />} />
               <Route path="/components/auro/counter/api" element={<AuroCounterApi />} />
               <Route path="/components/auro/counter/releases" element={<AuroCounterReleases />} />
+              <Route path="/components/auro/counter/design" element={<AuroCounterDesign />} />
+              <Route path="/components/auro/counter/getting-started" element={<AuroCounterGettingStarted />} />
+              <Route path="/components/auro/counter/customize" element={<AuroCounterCustomize />} />
+              <Route path="/components/auro/counter/accessibility" element={<AuroCounterAccessibility />} />
+              <Route path="/components/auro/counter/voice-over" element={<AuroCounterVoiceOver />} />
+              <Route path="/components/auro/counter/keyboard-behavior" element={<AuroCounterKeyboardBehavior />} />
 
               {/* Auro Datepicker */}
               <Route path="/components/auro/datepicker" element={<AuroDatepicker />} />
               <Route path="/components/auro/datepicker/install" element={<AuroDatepickerInstall />} />
               <Route path="/components/auro/datepicker/api" element={<AuroDatepickerApi />} />
               <Route path="/components/auro/datepicker/releases" element={<AuroDatepickerReleases />} />
+              <Route path="/components/auro/datepicker/design" element={<AuroDatepickerDesign />} />
+              <Route path="/components/auro/datepicker/getting-started" element={<AuroDatepickerGettingStarted />} />
+              <Route path="/components/auro/datepicker/customize" element={<AuroDatepickerCustomize />} />
+              <Route path="/components/auro/datepicker/accessibility" element={<AuroDatepickerAccessibility />} />
+              <Route path="/components/auro/datepicker/voice-over" element={<AuroDatepickerVoiceOver />} />
+              <Route path="/components/auro/datepicker/keyboard-behavior" element={<AuroDatepickerKeyboardBehavior />} />
 
               {/* Auro Date/Time */}
               <Route path="/components/auro/datetime" element={<AuroDateTime />} />
@@ -720,6 +775,12 @@ function App() {
               <Route path="/components/auro/dropdown/install" element={<AuroDropdownInstall />} />
               <Route path="/components/auro/dropdown/api" element={<AuroDropdownApi />} />
               <Route path="/components/auro/dropdown/releases" element={<AuroDropdownReleases />} />
+              <Route path="/components/auro/dropdown/design" element={<AuroDropdownDesign />} />
+              <Route path="/components/auro/dropdown/getting-started" element={<AuroDropdownGettingStarted />} />
+              <Route path="/components/auro/dropdown/customize" element={<AuroDropdownCustomize />} />
+              <Route path="/components/auro/dropdown/accessibility" element={<AuroDropdownAccessibility />} />
+              <Route path="/components/auro/dropdown/voice-over" element={<AuroDropdownVoiceOver />} />
+              <Route path="/components/auro/dropdown/keyboard-behavior" element={<AuroDropdownKeyboardBehavior />} />
 
               {/* Auro Flight */}
               <Route path="/components/auro/flight" element={<AuroFlight />} />
@@ -743,6 +804,11 @@ function App() {
               <Route path="/components/auro/form/install" element={<AuroFormInstall />} />
               <Route path="/components/auro/form/api" element={<AuroFormApi />} />
               <Route path="/components/auro/form/releases" element={<AuroFormReleases />} />
+              <Route path="/components/auro/form/getting-started" element={<AuroFormGettingStarted />} />
+              <Route path="/components/auro/form/customize" element={<AuroFormCustomize />} />
+              <Route path="/components/auro/form/accessibility" element={<AuroFormAccessibility />} />
+              <Route path="/components/auro/form/voice-over" element={<AuroFormVoiceOver />} />
+              <Route path="/components/auro/form/keyboard-behavior" element={<AuroFormKeyboardBehavior />} />
 
               {/* Auro Header */}
               <Route path="/components/auro/header" element={<AuroHeader />} />
@@ -793,6 +859,12 @@ function App() {
               <Route path="/components/auro/menu/install" element={<AuroMenuInstall />} />
               <Route path="/components/auro/menu/api" element={<AuroMenuApi />} />
               <Route path="/components/auro/menu/releases" element={<AuroMenuReleases />} />
+              <Route path="/components/auro/menu/design" element={<AuroMenuDesign />} />
+              <Route path="/components/auro/menu/getting-started" element={<AuroMenuGettingStarted />} />
+              <Route path="/components/auro/menu/customize" element={<AuroMenuCustomize />} />
+              <Route path="/components/auro/menu/accessibility" element={<AuroMenuAccessibility />} />
+              <Route path="/components/auro/menu/voice-over" element={<AuroMenuVoiceOver />} />
+              <Route path="/components/auro/menu/keyboard-behavior" element={<AuroMenuKeyboardBehavior />} />
 
               {/* Auro Nav */}
               <Route path="/components/auro/nav" element={<AuroNav />} />
@@ -817,6 +889,12 @@ function App() {
               <Route path="/components/auro/radio/install" element={<AuroRadioInstall />} />
               <Route path="/components/auro/radio/api" element={<AuroRadioApi />} />
               <Route path="/components/auro/radio/releases" element={<AuroRadioReleases />} />
+              <Route path="/components/auro/radio/design" element={<AuroRadioDesign />} />
+              <Route path="/components/auro/radio/getting-started" element={<AuroRadioGettingStarted />} />
+              <Route path="/components/auro/radio/customize" element={<AuroRadioCustomize />} />
+              <Route path="/components/auro/radio/accessibility" element={<AuroRadioAccessibility />} />
+              <Route path="/components/auro/radio/voice-over" element={<AuroRadioVoiceOver />} />
+              <Route path="/components/auro/radio/keyboard-behavior" element={<AuroRadioKeyboardBehavior />} />
 
               {/* Auro Select */}
               <Route path="/components/auro/select" element={<AuroSelect />} />

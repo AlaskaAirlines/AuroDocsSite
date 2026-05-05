@@ -299,7 +299,9 @@ class AuroComponentContent extends MarkdownPageWrapper {
             className={() => `tab link ${isCodeSection ? 'active' : ''}`}
             to={`${basePath}/getting-started`}
           >Code</NavLink>
-          <NavLink role="tab" end className="tab link" to={`${basePath}/design`}>Design</NavLink>
+          {this.hasDesign && (
+            <NavLink role="tab" end className="tab link" to={`${basePath}/design`}>Design</NavLink>
+          )}
           <NavLink
             role="tab"
             className={() => `tab link ${isA11ySection ? 'active' : ''}`}
