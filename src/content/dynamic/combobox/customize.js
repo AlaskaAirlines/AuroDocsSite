@@ -1,4 +1,5 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
+import { initExamples } from '@aurodesignsystem/auro-formkit/auro-combobox/demo/customize.js';
 import content from '@aurodesignsystem/auro-formkit/auro-combobox/demo/customize.md';
 
 class AuroContent extends AuroComponentContent {
@@ -19,6 +20,8 @@ class AuroContent extends AuroComponentContent {
 
   componentDidMount() {
     super.componentDidMount();
+
+    initExamples();
   }
 }
 

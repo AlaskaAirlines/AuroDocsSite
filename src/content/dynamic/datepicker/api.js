@@ -1,5 +1,4 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
-import { initExamples } from '@aurodesignsystem/auro-formkit/auro-datepicker/demo/api.js';
 import content from '@aurodesignsystem/auro-formkit/auro-datepicker/demo/api.md';
 
 class AuroContent extends AuroComponentContent {
@@ -21,8 +20,6 @@ class AuroContent extends AuroComponentContent {
 
   componentDidMount() {
     super.componentDidMount();
-
-    initExamples();
   }
 }
 
