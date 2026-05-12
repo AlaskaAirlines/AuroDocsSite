@@ -51,5 +51,12 @@ export default defineConfig({
                 '.js': 'jsx',
             },
         },
-    }
+    },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                silenceDeprecations: ['legacy-js-api', 'import', 'global-builtin'],
+            },
+        },
+    },
 })
