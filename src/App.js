@@ -447,7 +447,7 @@ import AuroSelect from './content/dynamic/select/component';
 import AuroSelectDesign from './content/dynamic/select/design';
 import AuroSelectGettingStarted from './content/dynamic/select/getting-started';
 import AuroSelectAccessibility from './content/dynamic/select/accessibility';
-import AuroSelectVoiceOver from './content/dynamic/select/voiceOver';
+import AuroSelectVoiceOver from './content/dynamic/select/voiceover';
 import AuroSelectKeyboardBehavior from './content/dynamic/select/keyboard-behavior';
 import AuroSelectApi from './content/dynamic/select/api';
 import AuroSelectReleases from './content/dynamic/select/releases';
