@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import ThemeTokens from './components/ThemeTokens';
-import { auro1Tokens } from './config/token-mapping';
+import { AtmosTokens } from './config/token-mapping';
 
 class AlaskaTokens extends Component {
   render() {
-    const { basicTokensMap, advancedTokensMap } = auro1Tokens;
+    const { basicTokensMap, advancedTokensMap } = AtmosTokens;
     
     return (
       <ThemeTokens 

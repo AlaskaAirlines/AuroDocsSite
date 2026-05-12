@@ -45,7 +45,7 @@ const ThemePage = ({ theme = '', children, showFooter = true, renderSectionEl = 
 
 ThemePage.propTypes = {
   theme: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   showFooter: PropTypes.bool,
   renderSectionEl: PropTypes.bool
 };
