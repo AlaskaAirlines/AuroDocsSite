@@ -1,8 +1,7 @@
 import alaskaAllTokens from '@aurodesignsystem/design-tokens/dist/themes/alaska/JSObject--allTokens.js';
 import alaskaClassicAllTokens from '@aurodesignsystem/design-tokens/dist/themes/alaska-classic/JSObject--allTokens.js';
 import hawaiianAllTokens from '@aurodesignsystem/design-tokens/dist/themes/hawaiian/JSObject--allTokens.js';
-import auro1AllTokens from '@aurodesignsystem/design-tokens/dist/themes/auro-1/JSObject--allTokens.js';
-import auro2AllTokens from '@aurodesignsystem/design-tokens/dist/themes/auro-2/JSObject--allTokens.js';
+import AtmosAllTokens from '@aurodesignsystem/design-tokens/dist/themes/auro-1/JSObject--allTokens.js';
 
 /**
  * Creates token mappings for a given theme
@@ -65,13 +64,11 @@ const createTokenMappings = (theme) => {
 export const alaskaTokens = createTokenMappings(alaskaAllTokens);
 export const alaskaClassicTokens = createTokenMappings(alaskaClassicAllTokens);
 export const hawaiianTokens = createTokenMappings(hawaiianAllTokens);
-export const auro1Tokens = createTokenMappings(auro1AllTokens);
-export const auro2Tokens = createTokenMappings(auro2AllTokens);
+export const AtmosTokens = createTokenMappings(AtmosAllTokens);
 
 export default {
   alaska: alaskaTokens,
   alaskaClassic: alaskaClassicTokens,
   hawaiian: hawaiianTokens,
-  auro1: auro1Tokens,
-  auro2: auro2Tokens
+  atmos: AtmosTokens
 };

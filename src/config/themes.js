@@ -35,7 +35,7 @@ export const THEMES = [
     slug: 'atmos',
     displayName: 'Atmos',
     code: 'a1',
-    cssUrl: `${WCSS_THEME_PATH}/auro-1.global.min.css`
+    cssUrl: `${WCSS_THEME_PATH}/atmos.global.min.css`
   },
   {
     slug: 'alaska-classic',

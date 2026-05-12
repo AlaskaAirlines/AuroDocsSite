@@ -37,7 +37,7 @@ class Header extends Component {
       let wcssHref = this.state.siteTheme;
 
       if (this.state.siteTheme === 'atmos') {
-        wcssHref = 'auro-1';
+        wcssHref = 'atmos';
       }
 
       newWcssLink.setAttribute('href', `https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/bundled/themes/${wcssHref}.global.min.css`);
