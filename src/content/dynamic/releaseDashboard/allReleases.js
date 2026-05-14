@@ -31,21 +31,23 @@ class AllReleases extends Component {
     return (
       <section id="releases">
         <Nav />
-        <h1 className="auro_heading auro_heading--display">Auro release dashboard</h1>
-        <p>The following is a list of all Auro Products and their most recent releases.</p>
-        <Query query={RELEASES}>
-          {({ loading, error, data }) => {
-            if (loading) return <auro-loader laser onlight></auro-loader>;
-            if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
+        <section className="auro-markdown">
+          <h1 className="auro_heading auro_heading--display">Auro release dashboard</h1>
+          <p>The following is a list of all Auro Products and their most recent releases.</p>
+          <Query query={RELEASES}>
+            {({ loading, error, data }) => {
+              if (loading) return <auro-loader laser onlight></auro-loader>;
+              if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
 
-            return data.organization.team.repositories.nodes.map(({ name, releases }, index) => (
-              releases.nodes.length > 0
-                ? <Release key={index + '_' + name} name={name} releases={releases.nodes} />
-                : ''
-            ));
-          }}
-        </Query>
-        <Footer />
+              return data.organization.team.repositories.nodes.map(({ name, releases }, index) => (
+                releases.nodes.length > 0
+                  ? <Release key={index + '_' + name} name={name} releases={releases.nodes} />
+                  : ''
+              ));
+            }}
+          </Query>
+          <Footer />
+        </section>
       </section>
     )
   }
