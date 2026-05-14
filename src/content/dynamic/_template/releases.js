@@ -29,14 +29,10 @@ class AllReleases extends Component {
   render() {
     return (
       <section id="releases">
-
         <Nav />
-
         <section className="auro-markdown">
-
           <h1 className="auro_heading auro_heading--display">Releases</h1>
           <p>The following is a list of all Auro element releases.</p>
-
           <Query query={RELEASES}>
             {({ loading, error, data }) => {
               if (loading) return <auro-loader laser onlight></auro-loader>;
