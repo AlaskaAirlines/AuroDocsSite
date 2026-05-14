@@ -63,13 +63,16 @@ class Header extends Component {
 
     applyPlaceholder();
 
-    this.searchObserver = new MutationObserver(applyPlaceholder);
-    this.searchObserver.observe(document.body, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ['placeholder'],
-    });
+    const searchContainer = document.querySelector('.gcse-search');
+    if (searchContainer && typeof MutationObserver !== 'undefined') {
+      this.searchObserver = new MutationObserver(applyPlaceholder);
+      this.searchObserver.observe(searchContainer, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['placeholder'],
+      });
+    }
   }
 
   componentWillUnmount() {
