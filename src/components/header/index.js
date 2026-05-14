@@ -52,10 +52,29 @@ class Header extends Component {
       this.updateTheme(e.target.value);
     });
 
-    const searchInput = document.querySelector('#gsc-i-id1');
+    // GCS loads async and re-renders #gsc-i-id1 on focus/blur/results, wiping
+    // any placeholder we set. Re-apply via MutationObserver so it sticks.
+    const applyPlaceholder = () => {
+      const searchInput = document.querySelector('#gsc-i-id1');
+      if (searchInput && searchInput.getAttribute('placeholder') !== 'Search') {
+        searchInput.setAttribute('placeholder', 'Search');
+      }
+    };
 
-    if (searchInput) {
-      searchInput.setAttribute('placeholder', 'Search');
+    applyPlaceholder();
+
+    this.searchObserver = new MutationObserver(applyPlaceholder);
+    this.searchObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['placeholder'],
+    });
+  }
+
+  componentWillUnmount() {
+    if (this.searchObserver) {
+      this.searchObserver.disconnect();
     }
   }
   
