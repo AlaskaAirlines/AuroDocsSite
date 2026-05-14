@@ -6,7 +6,7 @@ This repo is the home for [auro.alaskaair.com](https://auro.alaskaair.com).
 
 This project adheres to all open-source best practices. Please review the Auro [Contributing Guidelines](https://auro.alaskaair.com/getting-started/developers/contributing) for any information regarding the editing of the site. 
 
-## Run site locally
+## Run site locally 
 
 After cloning the repo locally, please address these simple steps; 
 
