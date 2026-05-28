@@ -5,46 +5,72 @@ import fs from 'fs';
 import svgr from "vite-plugin-svgr";
 
 /**
- * Custom plugin to copy dependency dist directories from node_modules to the public folder.
+ * Custom plugin to serve dependency dist directories during dev and copy them to dist on build.
  */
 function copyDepFiles() {
+  const mappings = [
+    {
+      urlPrefix: '/styles',
+      nodeModulesPath: './node_modules/@aurodesignsystem/webcorestylesheets/dist',
+    },
+    {
+      urlPrefix: '/tokens',
+      nodeModulesPath: './node_modules/@aurodesignsystem/design-tokens/dist',
+    },
+  ];
+
+  function copyDir(src, dest) {
+    if (!fs.existsSync(dest)) {
+      fs.mkdirSync(dest, { recursive: true });
+    }
+
+    for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+      const srcPath = path.join(src, entry.name);
+      const destPath = path.join(dest, entry.name);
+
+      if (entry.isDirectory()) {
+        copyDir(srcPath, destPath);
+      } else {
+        fs.copyFileSync(srcPath, destPath);
+      }
+    }
+  }
+
   return {
     name: "copy-dep-files",
-    buildStart() {
-      function copyDir(src, dest) {
-        if (!fs.existsSync(dest)) {
-          fs.mkdirSync(dest, { recursive: true });
-        }
 
-        for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
-          const srcPath = path.join(src, entry.name);
-          const destPath = path.join(dest, entry.name);
+    // Dev: serve files directly from node_modules
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        for (const { urlPrefix, nodeModulesPath } of mappings) {
+          if (req.url.startsWith(urlPrefix)) {
+            const relativePath = req.url.slice(urlPrefix.length);
+            const filePath = path.resolve(nodeModulesPath + relativePath);
 
-          if (entry.isDirectory()) {
-            copyDir(srcPath, destPath);
-          } else {
-            fs.copyFileSync(srcPath, destPath);
+            if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+              const ext = path.extname(filePath);
+              const mimeTypes = { '.css': 'text/css', '.js': 'application/javascript', '.json': 'application/json' };
+              res.setHeader('Content-Type', mimeTypes[ext] || 'application/octet-stream');
+              fs.createReadStream(filePath).pipe(res);
+              return;
+            }
           }
         }
-      }
+        next();
+      });
+    },
 
-      const copies = [
-        {
-          src: "./node_modules/@aurodesignsystem/webcorestylesheets/dist",
-          dest: "./public/styles",
-        },
-        {
-          src: "./node_modules/@aurodesignsystem/design-tokens/dist",
-          dest: "./public/tokens",
-        },
-      ];
+    // Build: copy files into dist
+    closeBundle() {
+      const outDir = path.resolve('./dist');
 
-      for (const { src, dest } of copies) {
+      for (const { urlPrefix, nodeModulesPath } of mappings) {
+        const dest = path.join(outDir, urlPrefix);
         try {
-          copyDir(path.resolve(src), path.resolve(dest));
-          console.log(`Copied ${src} -> ${dest}`);
+          copyDir(path.resolve(nodeModulesPath), dest);
+          console.log(`Copied ${nodeModulesPath} -> ${dest}`);
         } catch (error) {
-          console.error(`Error copying ${src}:`, error);
+          console.error(`Error copying ${nodeModulesPath}:`, error);
         }
       }
     },
