@@ -27,7 +27,7 @@ class Header extends Component {
       const newTokenLink = document.createElement('link');
       newTokenLink.setAttribute('rel', 'stylesheet');
       newTokenLink.setAttribute('data-aag-theme', '');
-      newTokenLink.setAttribute('href', `https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens/dist/web/${this.state.siteTheme}.min.css`);
+      newTokenLink.setAttribute('href', `/tokens/web/${this.state.siteTheme}.min.css`);
 
       document.head.appendChild(newTokenLink);
 
@@ -40,7 +40,7 @@ class Header extends Component {
         wcssHref = 'atmos';
       }
 
-      newWcssLink.setAttribute('href', `https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/bundled/themes/${wcssHref}.global.min.css`);
+      newWcssLink.setAttribute('href', `/styles/bundled/themes/${wcssHref}.global.min.css`);
       document.head.appendChild(newWcssLink);
     }
   }

@@ -1,0 +1,123 @@
+/*
+  Copyright (c) Alaska Air. All right reserved. Licensed under the Apache-2.0 license
+  See LICENSE in the project root for license information.
+*/
+/* --------------------------------------------------------------------- */
+/*
+  This file is reserved for CDN consumption of web components
+  and not intended to be used with standard dynamic projects.
+*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *:before, *:after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+*:focus-visible {
+  outline: 0;
+}
+*:focus-visible {
+  outline: 0;
+}
+
+:focus:not(:focus-visible) {
+  outline: 3px solid transparent;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--ds-text-body-size-default, 1rem);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body,
+.baseType {
+  margin: 0;
+  color: var(--ds-color-text-primary-default, #222222);
+  font-family: var(--ds-font-family-default, "AS Circular", Helvetica Neue, Arial, sans-serif);
+  font-variant-ligatures: no-common-ligatures;
+  font-size: var(--ds-text-body-size-default, 1rem);
+  font-weight: var(--ds-text-body-default-weight, 500);
+  line-height: var(--ds-text-body-height-default, 1.5rem);
+}
+
+.baseParagraph {
+  margin: 0 0 1rem;
+  line-height: var(--ds-text-body-height-default, 1.5rem);
+}
+.baseParagraph .hyperlink {
+  text-decoration: underline;
+}
+
+.hyperlink {
+  text-decoration: underline;
+  color: var(--ds-color-ui-default-default, #0074c8);
+}
+.hyperlink:visited {
+  color: var(--ds-color-ui-default-default, #0074c8);
+}
+.hyperlink--nav {
+  display: block;
+  text-decoration: none;
+}
+.hyperlink--nav:not(.is-touching):hover {
+  text-decoration: underline !important;
+}
+.hyperlink--ondark {
+  color: var(--ds-color-ui-default-inverse, #00cff0);
+}
+.hyperlink--ondark:not(.is-touching):hover {
+  color: var(--ds-color-ui-hover-inverse, #5de3f7);
+}
+.hyperlink--ondark:visited {
+  color: var(--ds-color-ui-default-inverse, #00cff0);
+}
+.hyperlink:not(.is-touching):hover {
+  text-decoration: none;
+  color: var(--ds-color-ui-hover-default, #054687);
+}
+
+img {
+  max-width: 100%;
+}
+
+small,
+.type--small {
+  font-size: var(--ds-text-body-size-xs, 0.75rem);
+  line-height: var(--ds-text-body-height-xs, 1rem);
+}
+
+/* stylelint-disable-line scss/dollar-variable-first-in-block */
+.fineprint {
+  font-family: var(--ds-font-family-default, "AS Circular", Helvetica Neue, Arial, sans-serif);
+  font-size: var(--ds-text-body-size-xs, 0.75rem);
+  line-height: var(--ds-text-body-height-xs, 1rem);
+  color: var(--ds-color-text-secondary-default, #626b79);
+}
+
+@font-face {
+  font-family: "AS Circular";
+  font-weight: var(--ds-text-heading-display-weight, 100);
+  font-style: normal;
+  font-display: fallback;
+  src: url("https://resource.alaskaair.net/-/media/4E8D77C0D7A8411AB9C351C1EFF86681.woff2") format("woff2"), url("https://resource.alaskaair.net/-/media/CAAEEC88586944808EDE9B36A3460098.woff") format("woff");
+}
+@font-face {
+  font-family: "AS Circular";
+  font-weight: var(--ds-text-heading-medium-weight, 300);
+  font-style: normal;
+  font-display: fallback;
+  src: url("https://resource.alaskaair.net/-/media/A5558137DB0F4B818D85EBE44FDC542E.woff2") format("woff2"), url("https://resource.alaskaair.net/-/media/F4E82B6C6CBA46B4A322B4B99B2CBC63.woff") format("woff");
+}
+@font-face {
+  font-family: "AS Circular";
+  font-weight: var(--ds-text-body-default-weight, 500);
+  font-style: normal;
+  font-display: fallback;
+  src: url("https://resource.alaskaair.net/-/media/1DD02F55437F4346B7EF7D5A08326D71.woff2") format("woff2"), url("https://resource.alaskaair.net/-/media/2339807B68A344348447336D15035425.woff") format("woff");
+}
