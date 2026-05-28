@@ -1,8 +1,0 @@
-body {
-  padding: var(--ds-size-400, 2rem);
-}
-
-main {
-  margin: 0 auto;
-  max-width: 64rem;
-}
