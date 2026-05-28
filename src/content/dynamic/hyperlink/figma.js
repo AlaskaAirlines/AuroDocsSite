@@ -6,6 +6,8 @@ class AuroContent extends AuroComponentContent {
     super(props);
 
     this.hasAccessibility = true;
+    this.hasWhy = true;
+    this.hasCssOnly = true;
     this.hasFigma = true;
   };
 }

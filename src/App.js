@@ -370,6 +370,8 @@ import AuroHyperlinkInstall from './content/dynamic/hyperlink/install';
 import AuroHyperlinkApi from './content/dynamic/hyperlink/api';
 import AuroHyperlinkReleases from './content/dynamic/hyperlink/releases';
 import AuroHyperlinka11y from './content/dynamic/hyperlink/a11y';
+import AuroHyperlinkWhy from './content/dynamic/hyperlink/why';
+import AuroHyperlinkCssOnly from './content/dynamic/hyperlink/cssOnly';
 
 // Icon
 import AuroIcon from './content/dynamic/icon/component';
@@ -822,6 +824,8 @@ function App() {
               <Route path="/components/auro/hyperlink/api" element={<AuroHyperlinkApi />} />
               <Route path="/components/auro/hyperlink/releases" element={<AuroHyperlinkReleases />} />
               <Route path="/components/auro/hyperlink/a11y" element={<AuroHyperlinka11y />} />
+              <Route path="/components/auro/hyperlink/why" element={<AuroHyperlinkWhy />} />
+              <Route path="/components/auro/hyperlink/css-only" element={<AuroHyperlinkCssOnly />} />
 
               {/* icon */}
               <Route path="/components/auro/icon/" element={<AuroIcon />} />
