@@ -10,6 +10,8 @@
 // invoking `swapSearchButtonIcon` on mount and from a MutationObserver.
 // =============================================================================
 
+// Scoped under #gcse-search-host so the swap stays isolated to this header's
+// GCS instance and matches the scoped CSS rules in `src/sass/App.scss`.
 const SEARCH_BUTTON_SELECTOR = '#gcse-search-host .gsc-search-button-v2';
 
 export function swapSearchButtonIcon() {
