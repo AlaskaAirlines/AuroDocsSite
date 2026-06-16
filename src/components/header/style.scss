@@ -24,8 +24,7 @@
   flex-direction: row;
   z-index: var(--ds-depth-overlay);
   align-items: center;
-  // offset to account for margin by GCS on the search wrapper
-  gap: calc(var(--ds-size-300) - 1px);
+  gap: var(--ds-size-300);
   padding-right: var(--ds-size-100);
 
   #theme-switcher {
