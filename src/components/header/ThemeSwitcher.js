@@ -15,39 +15,46 @@ const detectCurrentTheme = () => {
 
 function ThemeSwitcher() {
   const switcherRef = useRef(null);
-  const [initialTheme] = useState(detectCurrentTheme);
+  const [theme, setTheme] = useState(detectCurrentTheme);
+  const isFirstRender = useRef(true);
+
+  // Apply the theme to <head> whenever it changes. Skip the first render so
+  // we don't redundantly re-inject the already-applied theme on mount.
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    document.querySelectorAll('link[data-aag-theme]').forEach((link) => link.remove());
+
+    const addLink = (href) => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.dataset.aagTheme = '';
+      link.href = href;
+      document.head.appendChild(link);
+    };
+
+    addLink(`/tokens/web/${theme}.min.css`);
+    addLink(`/styles/bundled/themes/${theme}.global.min.css`);
+  }, [theme]);
 
   useEffect(() => {
     const el = switcherRef.current;
     if (!el) return undefined;
 
-    let currentTheme = initialTheme;
-
     const onInput = (e) => {
-      const theme = e.target.value;
-      if (!THEMES.includes(theme) || theme === currentTheme) return;
-      currentTheme = theme;
-
-      document.querySelectorAll('link[data-aag-theme]').forEach((link) => link.remove());
-
-      const addLink = (href) => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.dataset.aagTheme = '';
-        link.href = href;
-        document.head.appendChild(link);
-      };
-
-      addLink(`/tokens/web/${theme}.min.css`);
-      addLink(`/styles/bundled/themes/${theme}.global.min.css`);
+      if (THEMES.includes(e.target.value)) {
+        setTheme(e.target.value);
+      }
     };
 
     el.addEventListener('input', onInput);
     return () => el.removeEventListener('input', onInput);
-  }, [initialTheme]);
+  }, []);
 
   return (
-    <auro-select ref={switcherRef} id="theme-switcher" value={initialTheme} required>
+    <auro-select ref={switcherRef} id="theme-switcher" value={theme} required>
       <span slot="label">Site Theme</span>
       <auro-menu>
         {THEMES.map((t) => (
