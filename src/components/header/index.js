@@ -46,11 +46,14 @@ class Header extends Component {
   }
   
   componentDidMount() {
-    const themeSwitcher = document.querySelector('#theme-switcher');
-
-    themeSwitcher.addEventListener('input', (e) => {
+    // Store refs to the element and handler so componentWillUnmount can
+    // detach the listener if Header is ever unmounted/remounted.
+    this.themeSwitcher = document.querySelector('#theme-switcher');
+    this.onThemeSwitcherInput = (e) => {
       this.updateTheme(e.target.value);
-    });
+    };
+
+    this.themeSwitcher.addEventListener('input', this.onThemeSwitcherInput);
 
     // GCS loads async and re-renders #gsc-i-id1 on focus/blur/results, wiping
     // any placeholder we set. Re-apply via MutationObserver so it sticks.
@@ -76,8 +79,15 @@ class Header extends Component {
   }
 
   componentWillUnmount() {
+    // Disconnect the placeholder observer to avoid leaking it across mounts.
     if (this.searchObserver) {
       this.searchObserver.disconnect();
+      this.searchObserver = null;
+    }
+
+    // Detach the theme-switcher listener registered in componentDidMount.
+    if (this.themeSwitcher && this.onThemeSwitcherInput) {
+      this.themeSwitcher.removeEventListener('input', this.onThemeSwitcherInput);
     }
   }
   
