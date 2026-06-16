@@ -68,23 +68,34 @@ $sideNavTop: 86px;
 }
 
 .gsc-search-button-v2 {
-  line-height: 1.5;
+  line-height: 1;
   padding: 10px;
   background-color: var(--ds-advanced-color-button-primary-background) !important;
   border-color: var(--ds-basic-color-border-bold) !important;
   border-left: 0 !important;
+  position: relative;
+  color: var(--ds-advanced-color-button-primary-text) !important;
 
+  // Hide the GCS magnifier SVG; we replace it with an arrow via ::after to
+  // avoid duplicating the search icon already shown inside the input.
   svg {
-    fill: var(--ds-advanced-color-button-primary-text) !important;
+    display: none !important;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--ds-advanced-color-button-primary-text);
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M5 12h12m-5-6 6 6-6 6' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat center / contain;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M5 12h12m-5-6 6 6-6 6' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat center / contain;
   }
 
   &:hover {
     background-color: var(--ds-advanced-color-button-primary-background-hover) !important;
     border-color: var(--ds-advanced-color-button-primary-border-hover) !important;
-
-    svg {
-      fill: var(--ds-advanced-color-button-primary-text) !important;
-    }
+    cursor: pointer;
   }
 }
 
