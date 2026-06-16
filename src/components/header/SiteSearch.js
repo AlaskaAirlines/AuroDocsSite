@@ -27,10 +27,17 @@ class SiteSearch extends Component {
       callback: renderGcseSearch,
     };
 
-    const gcseScript = document.createElement('script');
-    gcseScript.async = true;
-    gcseScript.src = GCSE_SCRIPT_SRC;
-    document.head.appendChild(gcseScript);
+    // Avoid injecting a duplicate GCSE script on remount/HMR — the callback
+    // only fires on the initial load, so render directly if it's already there.
+    const existingScript = document.querySelector(`script[src="${GCSE_SCRIPT_SRC}"]`);
+    if (existingScript) {
+      renderGcseSearch();
+    } else {
+      const gcseScript = document.createElement('script');
+      gcseScript.async = true;
+      gcseScript.src = GCSE_SCRIPT_SRC;
+      document.head.appendChild(gcseScript);
+    }
 
     // GCS re-renders #gsc-i-id1 on focus/blur/results, wiping any placeholder
     // we set. Re-apply via MutationObserver so it sticks. The icon swap also
