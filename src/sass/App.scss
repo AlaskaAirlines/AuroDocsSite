@@ -21,86 +21,86 @@ body {
 $sideNavHeight: 120px;
 $sideNavTop: 86px;
 
-// customization for use with the google search widget
-.gsc-control-cse {
-  width: 150px;
-  display: none;
-  padding: 0 !important;
-  background: transparent;
-  box-shadow: none;
-
-  @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
-    display: block;
-    width: 350px !important;
-  }
-}
-
-.gsc-search-box {
-  margin: 0 !important;
-  // GCS renders the input + submit as a <table>
-  border-spacing: 0 !important;
-}
-
-.gsc-input {
-  padding-right: 0 !important;
-  background: unset !important;
-  height: 48px !important;
-}
-
-.gsc-input-box {
-  border-radius: 6px !important;
-  border-color: var(--ds-basic-color-border-bold) !important;
-}
-
-// GCS renders a .gsc-clear-button <td> between the input cell and the
-// submit. Even with nothing visible inside, it carries width that bleeds
-// into the gap. Nullify it so the gap below is the single source of truth.
-#gcse-search-host .gsc-clear-button {
-  display: none !important;
-  width: 0 !important;
-  padding: 0 !important;
-}
-
-// GCS injects its own stylesheet at script load time with
-// .gsc-search-button. Scope under #gcse-search-host to beat it on specificity.
-#gcse-search-host .gsc-search-button {
-  display: block !important;
-  margin-left: 0;
-  padding: 0 0 0 var(--ds-size-100);
-  background: transparent;
-}
-
-// GCS injects its own stylesheet at script load time with
-// .gsc-search-button. Scope under #gcse-search-host to beat it on specificity.
-#gcse-search-host .gsc-search-button-v2 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  margin-left: 0;
-  padding: 0;
-  width: 58px;
-  height: 58px;
-  background-color: var(--ds-advanced-color-button-primary-background);
-  border-color: var(--ds-basic-color-border-bold);
-  border-radius: 6px;
-  color: var(--ds-advanced-color-button-primary-text);
-
-  // Hide GCS's original magnifier SVG only after searchIconSwap.js has
-  // replaced it with auro-icon (marked via data-icon-swapped). Keeps the
-  // submit button from rendering empty if the swap ever fails to run.
-  &[data-icon-swapped] > svg {
+// customization for use with the google search widget.
+// All rules scoped under #gcse-search-host so they only apply to this header's
+// GCS instance and beat GCS's class-only injected stylesheet on specificity.
+#gcse-search-host {
+  .gsc-control-cse {
+    width: 150px;
     display: none;
+    padding: 0 !important;
+    background: transparent;
+    box-shadow: none;
+
+    @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
+      display: block;
+      width: 350px !important;
+    }
   }
 
-  auro-icon {
+  .gsc-search-box {
+    margin: 0 !important;
+    // GCS renders the input + submit as a <table>
+    border-spacing: 0 !important;
+  }
+
+  .gsc-input {
+    padding-right: 0 !important;
+    background: unset !important;
+    height: 48px !important;
+  }
+
+  .gsc-input-box {
+    border-radius: 6px !important;
+    border-color: var(--ds-basic-color-border-bold) !important;
+  }
+
+  // GCS renders a .gsc-clear-button <td> between the input cell and the
+  // submit. Even with nothing visible inside, it carries width that bleeds
+  // into the gap. Nullify it so the gap below is the single source of truth.
+  .gsc-clear-button {
+    display: none !important;
+    width: 0 !important;
+    padding: 0 !important;
+  }
+
+  .gsc-search-button {
+    display: block !important;
+    margin-left: 0;
+    padding: 0 0 0 var(--ds-size-100);
+    background: transparent;
+  }
+
+  .gsc-search-button-v2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    margin-left: 0;
+    padding: 0;
+    width: 58px;
+    height: 58px;
+    background-color: var(--ds-advanced-color-button-primary-background);
+    border-color: var(--ds-basic-color-border-bold);
+    border-radius: 6px;
     color: var(--ds-advanced-color-button-primary-text);
-  }
 
-  &:hover {
-    background-color: var(--ds-advanced-color-button-primary-background-hover) !important;
-    border-color: var(--ds-advanced-color-button-primary-border-hover) !important;
-    cursor: pointer;
+    // Hide GCS's original magnifier SVG only after searchIconSwap.js has
+    // replaced it with auro-icon (marked via data-icon-swapped). Keeps the
+    // submit button from rendering empty if the swap ever fails to run.
+    &[data-icon-swapped] > svg {
+      display: none;
+    }
+
+    auro-icon {
+      color: var(--ds-advanced-color-button-primary-text);
+    }
+
+    &:hover {
+      background-color: var(--ds-advanced-color-button-primary-background-hover) !important;
+      border-color: var(--ds-advanced-color-button-primary-border-hover) !important;
+      cursor: pointer;
+    }
   }
 }
 
