@@ -8,10 +8,6 @@
 // Because we don't own the GCS markup, the swap must run after GCS hydrates the
 // button and re-run whenever GCS re-renders it. The caller is responsible for
 // invoking `swapSearchButtonIcon` on mount and from a MutationObserver.
-//
-// To revert this behavior, delete this file, remove the import + call from
-// `src/components/header/index.js`, and delete the matching
-// `.gsc-search-button-v2 svg { display: none }` rule in `src/sass/App.scss`.
 // =============================================================================
 
 const SEARCH_BUTTON_SELECTOR = '.gsc-search-button-v2';
