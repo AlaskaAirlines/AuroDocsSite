@@ -10,7 +10,8 @@
   padding: 10px;
   position: sticky;
   top: 0;
-  z-index: 10;
+  // Must clear .sidenav
+  z-index: var(--ds-depth-overlay);
   border-bottom: 1px solid var(--auro-color-border-primary-on-light);
   background-color: white;
 
