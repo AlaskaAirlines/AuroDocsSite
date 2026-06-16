@@ -10,7 +10,7 @@
 // invoking `swapSearchButtonIcon` on mount and from a MutationObserver.
 // =============================================================================
 
-const SEARCH_BUTTON_SELECTOR = '.gsc-search-button-v2';
+const SEARCH_BUTTON_SELECTOR = '#gcse-search-host .gsc-search-button-v2';
 
 export function swapSearchButtonIcon() {
   const searchButton = document.querySelector(SEARCH_BUTTON_SELECTOR);
