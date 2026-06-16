@@ -1,16 +1,20 @@
-import React, { Component } from 'react';
-import { swapSearchButtonIcon } from './searchIconSwap';
+import React, { useEffect, useRef } from 'react';
+import { HOST_ID, swapSearchButtonIcon } from './searchIconSwap';
 
-const HOST_ID = 'gcse-search-host';
 const GCSE_SCRIPT_SRC = 'https://cse.google.com/cse.js?cx=b792c366f1ce73e3d';
 
-class SiteSearch extends Component {
-  componentDidMount() {
+function SiteSearch() {
+  const hostRef = useRef(null);
+
+  useEffect(() => {
+    const host = hostRef.current;
+    if (!host) return undefined;
+
     // Load Google Custom Search on demand and explicitly render the widget
     // into our React-mounted host div. `parsetags: 'explicit'` keeps GCS from
     // auto-scanning the page — we own the timing instead.
     const renderGcseSearch = () => {
-      if (window.google && window.google.search && window.google.search.cse) {
+      if (window.google?.search?.cse) {
         try {
           window.google.search.cse.element.render({
             div: HOST_ID,
@@ -27,54 +31,53 @@ class SiteSearch extends Component {
       callback: renderGcseSearch,
     };
 
-    // Avoid injecting a duplicate GCSE script on remount/HMR — the callback
-    // only fires on the initial load, so render directly if it's already there.
+    // Avoid injecting a duplicate GCSE script on remount/HMR. Three cases:
+    //   1) No script yet → inject; the callback above fires on load.
+    //   2) Script present and API ready → render directly.
+    //   3) Script present but API not yet ready (still loading) → do nothing;
+    //      the callback we just installed will fire when load finishes.
     const existingScript = document.querySelector(`script[src="${GCSE_SCRIPT_SRC}"]`);
-    if (existingScript) {
-      renderGcseSearch();
-    } else {
+    if (!existingScript) {
       const gcseScript = document.createElement('script');
       gcseScript.async = true;
       gcseScript.src = GCSE_SCRIPT_SRC;
       document.head.appendChild(gcseScript);
+    } else if (window.google?.search?.cse) {
+      renderGcseSearch();
     }
 
-    // GCS re-renders #gsc-i-id1 on focus/blur/results, wiping any placeholder
-    // we set. Re-apply via MutationObserver so it sticks. The icon swap also
-    // re-runs on every tick so the auro-icon survives GCS re-renders.
+    // GCS re-renders its input/button subtree on focus/blur/results, wiping
+    // any customizations we apply. Re-apply on every relevant DOM change.
     const applySearchCustomizations = () => {
-      const searchInput = document.querySelector('#gsc-i-id1');
+      const searchInput = host.querySelector('#gsc-i-id1');
       if (searchInput && searchInput.getAttribute('placeholder') !== 'Search') {
         searchInput.setAttribute('placeholder', 'Search');
       }
-
       swapSearchButtonIcon();
     };
 
     applySearchCustomizations();
 
-    const searchContainer = document.getElementById(HOST_ID);
-    if (searchContainer && typeof MutationObserver !== 'undefined') {
-      this.searchObserver = new MutationObserver(applySearchCustomizations);
-      this.searchObserver.observe(searchContainer, {
-        childList: true,
-        subtree: true,
-        attributes: true,
-        attributeFilter: ['placeholder'],
-      });
+    let observer;
+    if (typeof MutationObserver !== 'undefined') {
+      observer = new MutationObserver(applySearchCustomizations);
+      // childList + subtree is enough: GCS replaces nodes wholesale on each
+      // re-render, so we don't need to watch individual attributes (which
+      // would also create a feedback loop with our own setAttribute calls).
+      observer.observe(host, { childList: true, subtree: true });
     }
-  }
 
-  componentWillUnmount() {
-    if (this.searchObserver) {
-      this.searchObserver.disconnect();
-      this.searchObserver = null;
-    }
-  }
+    return () => {
+      if (observer) observer.disconnect();
+      // Drop the global only if it still points at this mount's closure, so
+      // a remount that already installed a fresh callback isn't clobbered.
+      if (window.__gcse && window.__gcse.callback === renderGcseSearch) {
+        delete window.__gcse;
+      }
+    };
+  }, []);
 
-  render() {
-    return <div id={HOST_ID} />;
-  }
+  return <div ref={hostRef} id={HOST_ID} />;
 }
 
 export default SiteSearch;
