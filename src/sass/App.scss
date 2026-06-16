@@ -86,9 +86,10 @@ $sideNavTop: 86px;
   border-radius: 6px;
   color: var(--ds-advanced-color-button-primary-text);
 
-  // Hide GCS's original magnifier SVG so it doesn't flash before
-  // searchIconSwap.js replaces it with auro-icon.
-  > svg {
+  // Hide GCS's original magnifier SVG only after searchIconSwap.js has
+  // replaced it with auro-icon (marked via data-icon-swapped). Keeps the
+  // submit button from rendering empty if the swap ever fails to run.
+  &[data-icon-swapped] > svg {
     display: none;
   }
 

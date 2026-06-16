@@ -29,4 +29,9 @@ export function swapSearchButtonIcon() {
   icon.setAttribute('name', 'arrow-right');
   icon.setAttribute('customColor', '');
   searchButton.appendChild(icon);
+
+  // Marker the CSS keys off so GCS's original SVG is only hidden once the
+  // replacement icon is actually in the DOM — avoids an empty button if this
+  // function ever fails to run.
+  searchButton.dataset.iconSwapped = '';
 }
