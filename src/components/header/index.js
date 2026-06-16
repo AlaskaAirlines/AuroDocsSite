@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './style.scss';
+import { swapSearchButtonIcon } from './searchIconSwap';
 
 const ALLOWED_THEMES = ['alaska', 'hawaiian', 'atmos'];
 
@@ -57,18 +58,22 @@ class Header extends Component {
 
     // GCS loads async and re-renders #gsc-i-id1 on focus/blur/results, wiping
     // any placeholder we set. Re-apply via MutationObserver so it sticks.
-    const applyPlaceholder = () => {
+    // The icon swap (handled in searchIconSwap.js) also re-runs on every tick
+    // so the auro-icon stays in place across GCS re-renders.
+    const applySearchCustomizations = () => {
       const searchInput = document.querySelector('#gsc-i-id1');
       if (searchInput && searchInput.getAttribute('placeholder') !== 'Search') {
         searchInput.setAttribute('placeholder', 'Search');
       }
+
+      swapSearchButtonIcon();
     };
 
-    applyPlaceholder();
+    applySearchCustomizations();
 
     const searchContainer = document.querySelector('.gcse-search');
     if (searchContainer && typeof MutationObserver !== 'undefined') {
-      this.searchObserver = new MutationObserver(applyPlaceholder);
+      this.searchObserver = new MutationObserver(applySearchCustomizations);
       this.searchObserver.observe(searchContainer, {
         childList: true,
         subtree: true,
