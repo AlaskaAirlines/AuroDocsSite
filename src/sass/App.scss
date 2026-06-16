@@ -28,15 +28,11 @@ $sideNavTop: 86px;
 
 // customization for use with the google search widget
 .gsc-control-cse {
-  position: fixed;
-  top: 12px;
-  right: 165px;
-  z-index: var(--ds-depth-overlay);
   width: 150px;
   display: none;
   padding: 0 !important;
-
-  box-shadow: inset 0 0 0 1px var(--ds-auro-dropdown-trigger-outline-color);
+  background: transparent;
+  box-shadow: none;
 
   @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
     display: block;
@@ -46,6 +42,9 @@ $sideNavTop: 86px;
 
 .gsc-search-box {
   margin: 0 !important;
+  // GCS renders the input + submit as a <table>; collapse its border-spacing
+  // so the 8px gap below comes from our padding alone.
+  border-spacing: 0 !important;
 }
 
 .gsc-input {
@@ -59,26 +58,51 @@ $sideNavTop: 86px;
   border-color: var(--ds-basic-color-border-bold) !important;
 }
 
-.gsc-search-button {
-  display: block !important;
-  margin-left: 0 !important;
-  border-radius: 0 6px 6px 0 !important;
-  height: 58px !important;
-  width: 58px !important;
+// GCS renders a `.gsc-clear-button` <td> between the input cell and the
+// submit. Even with nothing visible inside, it carries width that bleeds
+// into the gap. Nullify it so the gap below is the single source of truth.
+#gcse-search-host .gsc-clear-button {
+  display: none !important;
+  width: 0 !important;
+  padding: 0 !important;
 }
 
-.gsc-search-button-v2 {
+// GCS injects its own stylesheet at script load time with
+// `.gsc-search-button { display: none !important }` (used for the v1 button).
+// Scope under `#gcse-search-host` to beat it on specificity.
+//
+// This is the ONE place the input-to-button gap is set. Border-spacing on
+// the table is zeroed above; the clear-button cell is collapsed above; so
+// `padding-left` here is the entire visible gap.
+#gcse-search-host .gsc-search-button {
+  display: block !important;
+  // GCS sets `margin-left: 2px` on this <td>; zero it so padding is the
+  // sole contributor to the gap.
+  margin-left: 0;
+  padding: 0 0 0 var(--ds-size-100);
+  background: transparent;
+}
+
+#gcse-search-host .gsc-search-button-v2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
-  padding: 10px;
-  background-color: var(--ds-advanced-color-button-primary-background) !important;
-  border-color: var(--ds-basic-color-border-bold) !important;
-  border-left: 0 !important;
-  color: var(--ds-advanced-color-button-primary-text) !important;
+  // GCS sets `margin-left: 2px` on the button; zero it so the gap is owned
+  // by the parent <td>'s padding-left alone.
+  margin-left: 0;
+  padding: 0;
+  width: 58px;
+  height: 58px;
+  background-color: var(--ds-advanced-color-button-primary-background);
+  border-color: var(--ds-basic-color-border-bold);
+  border-radius: 6px;
+  color: var(--ds-advanced-color-button-primary-text);
 
   // Hide GCS's original magnifier SVG so it doesn't flash before
   // searchIconSwap.js replaces it with auro-icon arrow-right.
   > svg {
-    display: none !important;
+    display: none;
   }
 
   auro-icon {
