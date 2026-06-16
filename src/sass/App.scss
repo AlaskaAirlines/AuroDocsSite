@@ -1,8 +1,3 @@
-// Auro Support
-/* ------------------------ Auro Support ------------------------ */
-/* auro tokens for legacy components */
-// @import '@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
-
 @import '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables';
 @import "@aurodesignsystem/webcorestylesheets/src/breakpoints";
 @import "@aurodesignsystem/webcorestylesheets/src/animation";
@@ -42,8 +37,7 @@ $sideNavTop: 86px;
 
 .gsc-search-box {
   margin: 0 !important;
-  // GCS renders the input + submit as a <table>; collapse its border-spacing
-  // so the 8px gap below comes from our padding alone.
+  // GCS renders the input + submit as a <table>
   border-spacing: 0 !important;
 }
 
@@ -58,7 +52,7 @@ $sideNavTop: 86px;
   border-color: var(--ds-basic-color-border-bold) !important;
 }
 
-// GCS renders a `.gsc-clear-button` <td> between the input cell and the
+// GCS renders a .gsc-clear-button <td> between the input cell and the
 // submit. Even with nothing visible inside, it carries width that bleeds
 // into the gap. Nullify it so the gap below is the single source of truth.
 #gcse-search-host .gsc-clear-button {
@@ -68,28 +62,21 @@ $sideNavTop: 86px;
 }
 
 // GCS injects its own stylesheet at script load time with
-// `.gsc-search-button { display: none !important }` (used for the v1 button).
-// Scope under `#gcse-search-host` to beat it on specificity.
-//
-// This is the ONE place the input-to-button gap is set. Border-spacing on
-// the table is zeroed above; the clear-button cell is collapsed above; so
-// `padding-left` here is the entire visible gap.
+// .gsc-search-button. Scope under #gcse-search-host to beat it on specificity.
 #gcse-search-host .gsc-search-button {
   display: block !important;
-  // GCS sets `margin-left: 2px` on this <td>; zero it so padding is the
-  // sole contributor to the gap.
   margin-left: 0;
   padding: 0 0 0 var(--ds-size-100);
   background: transparent;
 }
 
+// GCS injects its own stylesheet at script load time with
+// .gsc-search-button. Scope under #gcse-search-host to beat it on specificity.
 #gcse-search-host .gsc-search-button-v2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
-  // GCS sets `margin-left: 2px` on the button; zero it so the gap is owned
-  // by the parent <td>'s padding-left alone.
   margin-left: 0;
   padding: 0;
   width: 58px;
@@ -100,7 +87,7 @@ $sideNavTop: 86px;
   color: var(--ds-advanced-color-button-primary-text);
 
   // Hide GCS's original magnifier SVG so it doesn't flash before
-  // searchIconSwap.js replaces it with auro-icon arrow-right.
+  // searchIconSwap.js replaces it with auro-icon.
   > svg {
     display: none;
   }
@@ -210,51 +197,27 @@ footer,
 .wrapper > section {
   margin: var(--ds-size-400);
   padding-top: var(--ds-size-200);
-  // padding: var(--ds-size-200) var(--ds-size-200) 0;
-  // margin: var(--ds-size-200) auto 0 230px;
 
   @include auro_breakpoint($min: $ds-grid-breakpoint-sm) {
     padding: var(--ds-size-200) var(--ds-size-200) 0;
     margin: 0 auto 0 230px;
-  //   // max-width: 55%;
-  //   margin: var(--ds-size-200) auto 0 250px;
   }
-
-  // @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
-  //   // max-width: 60%;
-  //   margin: var(--ds-size-200) auto 0 290px;
-  // }
-
-  // @include auro_breakpoint($min: $ds-grid-breakpoint-xl) {
-  //   // max-width: 64rem;
-  //   margin: var(--ds-size-200) auto 0 25%;
-  // }
 }
 
 footer {
-  margin: 0; //  0 0 230px;
+  margin: 0;
   text-align: center;
 }
 
-// .auro-markdown ~ footer {
-//   margin: 0 0 0 230px;
-//   // text-align: center;
-
-//   background-color: aquamarine;
-// }
 // -=-=-=-=-=-=-=-=-= body wrapper -=-=-=-=-=-=-=-=-=-=-=
-
 .auro_baseType {
-  // background-color: lime;
   display: flex;
   flex-direction: column;
 }
 
 .auro-markdown {
-  // background-color: orange;
   height: calc(100vh - 35px - 58px - 16px - 52px);
   overflow-y: auto;
-  // margin-top: var(--ds-size-400) !important;
 }
 
 footer {
@@ -317,14 +280,11 @@ auro-swatch-list {
     display: block;
     opacity: 1;
     left: auto;
-    // width: 180px;
     top: $sideNavTop;
     padding-bottom: 100px;
   }
 
-  // @include auro_breakpoint($min: $ds-grid-breakpoint-md) {
-    width: 230px;
-  // }
+  width: 230px;
 }
 
 .hyperlink.active,
@@ -446,7 +406,7 @@ code:not(.html):not(.css):not(.js) {
   margin-bottom: var(--ds-size-600);
 }
 
-// animation speed for auro-loader //
+// animation speed for auro-loader
 .slow::part(element) {
   animation-duration: 8s;
 }
@@ -583,7 +543,6 @@ pre {
     }
   }
 }
-// ----------------------------------------------
 
 // ------------ color view -----------------
 .avatarWrapper {
@@ -616,8 +575,6 @@ pre {
     padding-right: 5%;
   }
 }
-// -------------------------------------------
-
 
 // ----------- color transparency view ------------------------
 .transparencyBlock {
@@ -677,6 +634,7 @@ pre {
 .auro-rgb-color-brand-alpine-400--90 {
   background-color: color-mix(in srgb, var(--ds-color-brand-alpine-400) 90%, transparent);
 }
+
 // -------------------------------------------------------------
 
 .link {
@@ -694,7 +652,6 @@ pre {
 .tabList {
   height: auto;
   line-height: 1.5rem !important;
-  // margin-bottom: 2rem;
   position: sticky;
   top: $sideNavTop;
   background: linear-gradient(180deg, rgba(255,255,255,.99) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,.9) 100%);
@@ -755,7 +712,6 @@ pre {
   outline: unset;
 }
 
-// this really should be done in the component?
 auro-tokens-list {
   display: block;
   overflow: scroll;
@@ -776,7 +732,6 @@ img[src*='shields.io'] {
   white-space: nowrap;
 }
 
-
 // release views
 .releaseWrapper {
   margin: var(--ds-size-300) 0;
@@ -792,10 +747,8 @@ img[src*='shields.io'] {
   }
 }
 
-
 // CSS Loader
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// Pretty sure this was replaced with auro-loader work
 .isLoading {
   color: var(--ds-color-background-darker);
   font-size: 80px;
@@ -890,7 +843,6 @@ img[src*='shields.io'] {
 
 // Sticky headers
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-// Something to support in Auro table?
 .auro_table--audit {
   th {
     white-space: nowrap;
