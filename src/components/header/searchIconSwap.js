@@ -25,6 +25,17 @@ export function swapSearchButtonIcon() {
     return;
   }
 
+  // If auro-icon hasn't registered yet, leave GCS's original SVG in place so
+  // the CSS fallback (gcs-svg-fallback animation in App.scss) can reveal it
+  // instead of us committing the swap to an invisible custom element. Retry
+  // once the element is defined.
+  if (!window.customElements || !window.customElements.get('auro-icon')) {
+    if (window.customElements && window.customElements.whenDefined) {
+      window.customElements.whenDefined('auro-icon').then(swapSearchButtonIcon);
+    }
+    return;
+  }
+
   const icon = document.createElement('auro-icon');
   icon.setAttribute('category', 'interface');
   icon.setAttribute('name', 'arrow-right');
