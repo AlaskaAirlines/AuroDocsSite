@@ -125,22 +125,16 @@ export default function SideNav(props) {
               {/* TODO: Toggle HIDDEN attr on click to hide/show nav items within a block */}
               <div className="navBlock">
                 {navBlock.items.map((link) => (
-                  <NavLink key={link.route} to={link.route} 
-
+                  <NavLink key={link.route} to={link.route}
+                    onClick={() => {
+                      siteNav.forEach(navBlock => navBlock.items.forEach(link => link.active = false));
+                      link.active = true;
+                      setNav([...siteNav]);
+                      const menuCheckbox = document.getElementById('menuCheckbox');
+                      if (menuCheckbox) menuCheckbox.checked = false;
+                    }}
                     className={`hyperlink hyperlink--nav ${link.active ? 'hyperlink--active': ''} ${link.subNav ? 'hyperlink--subNav': ''} ${link.parent ? 'hyperlink--parent': ''}`}>
-
-                    {/* onClick event that sets nav item state to isActive */}
-                    <span
-                      onClick={() => {
-                        siteNav.forEach(navBlock => navBlock.items.forEach(link => link.active = false));
-                        link.active = true;
-                        setNav([...siteNav]);
-                        const menuCheckbox = document.getElementById('menuCheckbox');
-                        if (menuCheckbox) menuCheckbox.checked = false;
-                      }}>
-
-                      {link.linkTitle}
-                    </span>
+                    <span>{link.linkTitle}</span>
                   </NavLink>
                 ))}
               </div>
