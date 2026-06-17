@@ -135,6 +135,8 @@ export default function SideNav(props) {
                         siteNav.forEach(navBlock => navBlock.items.forEach(link => link.active = false));
                         link.active = true;
                         setNav([...siteNav]);
+                        const menuCheckbox = document.getElementById('menuCheckbox');
+                        if (menuCheckbox) menuCheckbox.checked = false;
                       }}>
 
                       {link.linkTitle}
