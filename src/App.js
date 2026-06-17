@@ -512,7 +512,7 @@ function App() {
         <main className="main-wrapper body-default">
           <Header />
           <div className="wrapper">
-            <input id="menuCheckbox" type="checkbox" className="menuCheckbox util_displayHiddenVisually"></input>
+            <input id="menuCheckbox" type="checkbox" className="menuCheckbox auro_util_displayHiddenVisually"></input>
             <label htmlFor="menuCheckbox" className="menuCheckbox--label">
               <img className="menuIcon" src="https://img.icons8.com/material/24/000000/menu--v1.png" alt="icon"></img>
               <img className="closeIcon" width="24" src="https://img.icons8.com/material/26/000000/multiply--v1.png" alt="icon"></img>
