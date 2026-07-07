@@ -76,14 +76,13 @@ All components use the `<auro-*>` custom element tag. Props are set as HTML attr
 | Icon | `@aurodesignsystem/auro-icon` | `<auro-icon>` | Alaska Airlines icon library wrapper |
 | Loader | `@aurodesignsystem/auro-loader` | `<auro-loader>` | Loading spinner |
 | Lockup | `@aurodesignsystem/auro-lockup` | `<auro-lockup>` | Image + text layout lockup |
-| Nav | `@aurodesignsystem/auro-nav` | `<auro-nav>` | Breadcrumb / secondary navigation |
+| Nav | `@aurodesignsystem/auro-nav` | `<auro-nav>` | Breadcrumb navigation |
 | Pane | `@aurodesignsystem/auro-pane` | `<auro-pane>` | Selectable pricing or option pane |
 | Popover | `@aurodesignsystem/auro-popover` | `<auro-popover>` | Tooltip-style popover overlay |
 | Side Nav | `@aurodesignsystem/auro-sidenav` | `<auro-sidenav>` | Vertical side navigation |
 | Skeleton | `@aurodesignsystem/auro-skeleton` | `<auro-skeleton>` | Loading placeholder skeleton |
-| Slideshow | `@aurodesignsystem/auro-slideshow` | `<auro-slideshow>` | Image/content slideshow |
 | Table | `@aurodesignsystem/auro-table` | `<auro-table>` | Accessible data table |
-| Tabs | `@aurodesignsystem/auro-tabs` | `<auro-tabs>` | Tabbed content panels |
+| Tail | `@aurodesignsystem/auro-tail` | `<auro-tail>` | Alaska, Hawaiian, and partner airline tail graphics |
 | Toast | `@aurodesignsystem/auro-toast` | `<auro-toast>` | Transient notification toast |
 | Token List | `@aurodesignsystem/auro-tokenlist` | `<auro-tokenlist>` | Design token display utilities |
 
@@ -97,7 +96,7 @@ All components use the `<auro-*>` custom element tag. Props are set as HTML attr
 ### Alert message
 ```html
 <auro-alert type="success">Your changes have been saved.</auro-alert>
-<!-- types: error | warning | success | information -->
+<!-- types: information | error | success | warning -->
 ```
 
 ### Form input (from auro-formkit)
@@ -122,7 +121,7 @@ All components use the `<auro-*>` custom element tag. Props are set as HTML attr
   <span slot="header">Dialog Title</span>
   <div slot="content">Dialog body content</div>
 </auro-dialog>
-<auro-button onclick="document.querySelector('#myDialog').setAttribute('open', true)">Open</auro-button>
+<auro-button onclick="document.querySelector('#myDialog').show()">Open</auro-button>
 ```
 
 ## Accessibility
@@ -149,7 +148,7 @@ Auro supports multiple visual themes via CSS custom property overrides. Set on t
 | CLI | `@aurodesignsystem/auro-cli` | Component builds, docs generation, migrations |
 | Design Tokens | `@aurodesignsystem/design-tokens` | CSS custom properties for color, spacing, type |
 | Icons | `@alaskaairux/icons` | Alaska Airlines SVG icon library |
-| Web Core Style Sheets | `@aurodesignsystem/WebCoreStyleSheets` | Base CSS reset and utility classes |
+| Web Core Style Sheets | `@aurodesignsystem/webcorestylesheets` | Base CSS reset and utility classes |
 
 ## Key Documentation Pages
 
