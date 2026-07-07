@@ -45,7 +45,7 @@ npm install @aurodesignsystem/design-tokens
 @import "@aurodesignsystem/design-tokens/dist/themes/CSSCustomProperties--bundled.css";
 ```
 
-Token naming convention: `--ds-color-*`, `--ds-size-*`, `--ds-font-*`, `--ds-border-*`
+Token naming convention: `--ds-basic-*` and `--ds-advanced-*` (e.g. `--ds-advanced-color-*`, `--ds-basic-color-*`)
 
 Token reference: https://auro.alaskaair.com/getting-started/developers/token-usage
 
@@ -76,8 +76,8 @@ All components use the `<auro-*>` custom element tag. Props are set as HTML attr
 | Icon | `@aurodesignsystem/auro-icon` | `<auro-icon>` | Alaska Airlines icon library wrapper |
 | Loader | `@aurodesignsystem/auro-loader` | `<auro-loader>` | Loading spinner |
 | Lockup | `@aurodesignsystem/auro-lockup` | `<auro-lockup>` | Image + text layout lockup |
-| Nav | `@aurodesignsystem/auro-nav` | `<auro-nav>` | Breadcrumb navigation |
-| Pane | `@aurodesignsystem/auro-pane` | `<auro-pane>` | Selectable pricing or option pane |
+| Nav | `@aurodesignsystem/auro-nav` | `<auro-nav>` | Secondary navigation aid (relation to higher-level pages) |
+| Pane | `@aurodesignsystem/auro-pane` | `<auro-pane>` | Selectable shoulder dates with associated prices |
 | Popover | `@aurodesignsystem/auro-popover` | `<auro-popover>` | Tooltip-style popover overlay |
 | Side Nav | `@aurodesignsystem/auro-sidenav` | `<auro-sidenav>` | Vertical side navigation |
 | Skeleton | `@aurodesignsystem/auro-skeleton` | `<auro-skeleton>` | Loading placeholder skeleton |
@@ -100,8 +100,11 @@ All components use the `<auro-*>` custom element tag. Props are set as HTML attr
 ```
 
 ### Form input (from auro-formkit)
+The field label is a slot, not an attribute. Import via subpath (auro-formkit has no root export).
 ```html
-<auro-input label="Email" type="email" required></auro-input>
+<auro-input type="email" required>
+  <span slot="label">Email</span>
+</auro-input>
 ```
 
 ### Icon usage
@@ -137,7 +140,7 @@ Auro supports multiple visual themes via CSS custom property overrides. Set on t
 
 ```css
 :root {
-  --ds-color-brand-base-100: #01426a; /* Alaska blue */
+  --ds-advanced-color-button-primary-background: #01426a; /* Alaska blue */
 }
 ```
 
