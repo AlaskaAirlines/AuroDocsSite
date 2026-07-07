@@ -1,0 +1,160 @@
+# Auro Design System
+
+> Auro is Alaska Airlines' open-source design system built on web components (custom elements). It provides accessible, themeable UI components, design tokens, and tooling for building Alaska Airlines digital products across web frameworks.
+
+## Overview
+
+- **Technology:** Web Components (Custom Elements v1), built with Lit
+- **Frameworks:** Framework-agnostic; works with React, Vue, Angular, Svelte, or plain HTML
+- **npm scope:** `@aurodesignsystem/` (primary), `@alaskaairux/` (legacy)
+- **Docs site:** https://auro.alaskaair.com
+- **GitHub org:** https://github.com/AlaskaAirlines
+- **License:** Apache-2.0
+
+## Installing Components
+
+Each component is a separate npm package. Install individually:
+
+```bash
+npm install @aurodesignsystem/auro-button
+```
+
+Register the custom element before use:
+
+```js
+import "@aurodesignsystem/auro-button";
+// element is now available as <auro-button> in HTML
+```
+
+All components support CDN usage via unpkg:
+
+```html
+<script type="module" src="https://unpkg.com/@aurodesignsystem/auro-button/dist/registered.js"></script>
+```
+
+## Design Tokens
+
+Design tokens are in `@aurodesignsystem/design-tokens`. They are distributed as CSS custom properties.
+
+```bash
+npm install @aurodesignsystem/design-tokens
+```
+
+```css
+/* Import all themes */
+@import "@aurodesignsystem/design-tokens/dist/themes/CSSCustomProperties--bundled.css";
+```
+
+Token naming convention: `--ds-color-*`, `--ds-size-*`, `--ds-font-*`, `--ds-border-*`
+
+Token reference: https://auro.alaskaair.com/getting-started/developers/token-usage
+
+## Component Library
+
+All components use the `<auro-*>` custom element tag. Props are set as HTML attributes or JavaScript properties.
+
+| Component | Package | Element Tag | Description |
+|---|---|---|---|
+| Accordion | `@aurodesignsystem/auro-accordion` | `<auro-accordion>` | Expandable content sections |
+| Alert | `@aurodesignsystem/auro-alert` | `<auro-alert>` | Inline status messages (info, success, warning, error) |
+| Avatar | `@aurodesignsystem/auro-avatar` | `<auro-avatar>` | User or entity avatar display |
+| Background | `@aurodesignsystem/auro-background` | `<auro-background>` | Themed background wrapper |
+| Back to Top | `@aurodesignsystem/auro-backtotop` | `<auro-backtotop>` | Scroll-to-top button |
+| Badge | `@aurodesignsystem/auro-badge` | `<auro-badge>` | Status or count badge |
+| Banner | `@aurodesignsystem/auro-banner` | `<auro-banner>` | Full-width promotional banner |
+| Button | `@aurodesignsystem/auro-button` | `<auro-button>` | Primary interactive button with loading state |
+| Card | `@aurodesignsystem/auro-card` | `<auro-card>` | Content card container |
+| Carousel | `@aurodesignsystem/auro-carousel` | `<auro-carousel>` | Horizontally scrollable content carousel |
+| Date/Time | `@aurodesignsystem/auro-datetime` | `<auro-datetime>` | Localized date and time formatting |
+| Dialog | `@aurodesignsystem/auro-dialog` | `<auro-dialog>` | Modal dialog overlay |
+| Drawer | `@aurodesignsystem/auro-drawer` | `<auro-drawer>` | Slide-in panel from screen edge |
+| Flight | `@aurodesignsystem/auro-flight` | `<auro-flight>` | Flight segment display (origin, destination, stops) |
+| Flightline | `@aurodesignsystem/auro-flightline` | `<auro-flightline>` | Visual flight path/stop indicator |
+| Form Kit | `@aurodesignsystem/auro-formkit` | `<auro-input>`, `<auro-select>`, `<auro-datepicker>`, `<auro-combobox>`, `<auro-checkbox>`, `<auro-radio>` | Full form component suite |
+| Header | `@aurodesignsystem/auro-header` | `<auro-header>` | Page/section heading with hierarchy |
+| Hyperlink | `@aurodesignsystem/auro-hyperlink` | `<auro-hyperlink>` | Accessible anchor link |
+| Icon | `@aurodesignsystem/auro-icon` | `<auro-icon>` | Alaska Airlines icon library wrapper |
+| Loader | `@aurodesignsystem/auro-loader` | `<auro-loader>` | Loading spinner |
+| Lockup | `@aurodesignsystem/auro-lockup` | `<auro-lockup>` | Image + text layout lockup |
+| Nav | `@aurodesignsystem/auro-nav` | `<auro-nav>` | Breadcrumb / secondary navigation |
+| Pane | `@aurodesignsystem/auro-pane` | `<auro-pane>` | Selectable pricing or option pane |
+| Popover | `@aurodesignsystem/auro-popover` | `<auro-popover>` | Tooltip-style popover overlay |
+| Side Nav | `@aurodesignsystem/auro-sidenav` | `<auro-sidenav>` | Vertical side navigation |
+| Skeleton | `@aurodesignsystem/auro-skeleton` | `<auro-skeleton>` | Loading placeholder skeleton |
+| Slideshow | `@aurodesignsystem/auro-slideshow` | `<auro-slideshow>` | Image/content slideshow |
+| Table | `@aurodesignsystem/auro-table` | `<auro-table>` | Accessible data table |
+| Tabs | `@aurodesignsystem/auro-tabs` | `<auro-tabs>` | Tabbed content panels |
+| Toast | `@aurodesignsystem/auro-toast` | `<auro-toast>` | Transient notification toast |
+| Token List | `@aurodesignsystem/auro-tokenlist` | `<auro-tokenlist>` | Design token display utilities |
+
+## Common Patterns
+
+### Button with loading state
+```html
+<auro-button loading>Save</auro-button>
+```
+
+### Alert message
+```html
+<auro-alert type="success">Your changes have been saved.</auro-alert>
+<!-- types: error | warning | success | information -->
+```
+
+### Form input (from auro-formkit)
+```html
+<auro-input label="Email" type="email" required></auro-input>
+```
+
+### Icon usage
+```html
+<auro-icon category="interface" name="arrow-right"></auro-icon>
+```
+
+### Hyperlink
+```html
+<auro-hyperlink href="/flights">View flights</auro-hyperlink>
+<auro-hyperlink href="https://example.com" target="_blank">External link</auro-hyperlink>
+```
+
+### Dialog (modal)
+```html
+<auro-dialog id="myDialog">
+  <span slot="header">Dialog Title</span>
+  <div slot="content">Dialog body content</div>
+</auro-dialog>
+<auro-button onclick="document.querySelector('#myDialog').setAttribute('open', true)">Open</auro-button>
+```
+
+## Accessibility
+
+All Auro components are built to WCAG 2.1 AA standards. Key notes:
+- Use the `ariaLabel` slot on `<auro-button>` for icon-only buttons
+- `<auro-hyperlink>` handles rel="noopener noreferrer" automatically for external links
+- All form components in auro-formkit include built-in error state and aria-invalid handling
+
+## Theming
+
+Auro supports multiple visual themes via CSS custom property overrides. Set on the `:root` or a scoped container:
+
+```css
+:root {
+  --ds-color-brand-base-100: #01426a; /* Alaska blue */
+}
+```
+
+## Tooling
+
+| Tool | Package | Purpose |
+|---|---|---|
+| CLI | `@aurodesignsystem/auro-cli` | Component builds, docs generation, migrations |
+| Design Tokens | `@aurodesignsystem/design-tokens` | CSS custom properties for color, spacing, type |
+| Icons | `@alaskaairux/icons` | Alaska Airlines SVG icon library |
+| Web Core Style Sheets | `@aurodesignsystem/WebCoreStyleSheets` | Base CSS reset and utility classes |
+
+## Key Documentation Pages
+
+- Getting started: https://auro.alaskaair.com/getting-started/developers/overview
+- Component status: https://auro.alaskaair.com/component-status
+- Design tokens: https://auro.alaskaair.com/getting-started/developers/token-usage
+- Contributing: https://auro.alaskaair.com/getting-started/developers/contributing
+- Browser support: https://auro.alaskaair.com/support/browsersSupport
