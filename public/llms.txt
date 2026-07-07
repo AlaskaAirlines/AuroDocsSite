@@ -81,7 +81,9 @@ All components use the `<auro-*>` custom element tag. Props are set as HTML attr
 | Popover | `@aurodesignsystem/auro-popover` | `<auro-popover>` | Tooltip-style popover overlay |
 | Side Nav | `@aurodesignsystem/auro-sidenav` | `<auro-sidenav>` | Vertical side navigation |
 | Skeleton | `@aurodesignsystem/auro-skeleton` | `<auro-skeleton>` | Loading placeholder skeleton |
+| Slideshow | `@aurodesignsystem/auro-slideshow` | `<auro-slideshow>` | Image/content slideshow |
 | Table | `@aurodesignsystem/auro-table` | `<auro-table>` | Accessible data table |
+| Tabs | `@aurodesignsystem/auro-tabs` | `<auro-tabs>` | Tabbed content panels |
 | Tail | `@aurodesignsystem/auro-tail` | `<auro-tail>` | Alaska, Hawaiian, and partner airline tail graphics |
 | Toast | `@aurodesignsystem/auro-toast` | `<auro-toast>` | Transient notification toast |
 | Token List | `@aurodesignsystem/auro-tokenlist` | `<auro-tokenlist>` | Design token display utilities |
