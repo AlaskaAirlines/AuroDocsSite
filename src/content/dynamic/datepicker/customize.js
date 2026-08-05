@@ -1,4 +1,5 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
+import { initExamples } from '@aurodesignsystem/auro-formkit/auro-datepicker/demo/customize.js';
 import content from '@aurodesignsystem/auro-formkit/auro-datepicker/demo/customize.md';
 
 class AuroContent extends AuroComponentContent {
@@ -15,11 +16,13 @@ class AuroContent extends AuroComponentContent {
     this.hasInstall = false;
     this.hasSubNav = true;
     this.hasCustomElementRegistration = false;
-    this.markdownContent = content; 
+    this.markdownContent = content;
   };
 
   componentDidMount() {
     super.componentDidMount();
+
+    initExamples();
   }
 }
 

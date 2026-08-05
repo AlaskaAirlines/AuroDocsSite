@@ -1,4 +1,5 @@
 import AuroComponentContent from "~/functions/renderFormkitComponentPage";
+import { initExamples } from '@aurodesignsystem/auro-formkit/auro-checkbox/demo/customize.js';
 import content from '@aurodesignsystem/auro-formkit/auro-checkbox/demo/customize.md';
 
 class AuroContent extends AuroComponentContent {
@@ -14,11 +15,13 @@ class AuroContent extends AuroComponentContent {
     this.hasKeyboardBehavior = true;
     this.hasInstall = false;
     this.hasSubNav = true;
-    this.markdownContent = content; 
+    this.markdownContent = content;
   };
 
   componentDidMount() {
     super.componentDidMount();
+
+    initExamples();
   }
 }
 
