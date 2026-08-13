@@ -82,13 +82,8 @@
     "buildPages": "node ./scripts/build-page-imports.js",
     "buildIcons": "npm-run-all buildPages buildIconsScript",
     "dev": "npm-run-all buildIcons start",
-    "check-dependencies": "node ./scripts/check-dependencies.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "check-dependencies": "node ./scripts/check-dependencies.js",
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": "react-app"
