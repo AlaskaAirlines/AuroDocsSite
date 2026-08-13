@@ -2,6 +2,7 @@ import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from "react-markdown";
 import markdownOptions from "~/functions/markdownOptions";
+import fetchMarkdown from "~/functions/fetchMarkdown";
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 import Footer from '~/components/footer';
 
@@ -11,7 +12,7 @@ class AuroButtonInstall extends MarkdownPageWrapper {
 
   // function to get text from MD document
   UNSAFE_componentWillMount() {
-    fetch(markdownContent).then((response) => response.text()).then((text) => {
+    fetchMarkdown(markdownContent).then((text) => {
       this.setState({
         contentBuild: text
       })

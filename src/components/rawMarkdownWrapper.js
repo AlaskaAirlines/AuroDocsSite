@@ -2,6 +2,7 @@ import React, { Component, createRef } from "react";
 import '~/sass/markdown.scss';
 import ReactMarkdown from 'react-markdown';
 import markdownOptions from "~/functions/markdownOptions";
+import fetchMarkdown from "~/functions/fetchMarkdown";
 import Footer from '~/components/footer';
 
 /**
@@ -45,7 +46,7 @@ export class RawMarkdownWrapper extends Component {
 
   // function to get text from MD document
   UNSAFE_componentWillMount() {
-    fetch(this.getMarkdown()).then((response) => response.text()).then((text) => {
+    fetchMarkdown(this.getMarkdown()).then((text) => {
       this.setState({
         docsGenerator: text
       })

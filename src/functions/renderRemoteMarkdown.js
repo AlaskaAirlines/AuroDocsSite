@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import markdownOptions from "~/functions/markdownOptions";
+import fetchMarkdown from "~/functions/fetchMarkdown";
 import Footer from '~/components/footer';
 import '~/sass/markdown.scss';
 
@@ -84,8 +85,7 @@ const RenderRemoteMarkdown = ({ markdownUrl }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(markdownUrl);
-      let text = await response.text();
+      let text = await fetchMarkdown(markdownUrl);
 
       // React strips inline onclick string attributes, so convert them to
       // data attributes that survive rendering and can be bound after mount

@@ -2,6 +2,7 @@ import React from "react";
 import { Nav } from './nav';
 import ReactMarkdown from "react-markdown";
 import markdownOptions from "~/functions/markdownOptions";
+import fetchMarkdown from "~/functions/fetchMarkdown";
 // import markdownContent from '@aurodesignsystem/auro-tokenlist/docs/api.md'
 import { MarkdownPageWrapper } from '~/components/markdownPageWrapper';
 
@@ -10,7 +11,7 @@ const markdownContent = 'https://raw.githubusercontent.com/AlaskaAirlines/auro-t
 class AuroTokenListApi extends MarkdownPageWrapper {
 
   UNSAFE_componentWillMount() {
-    fetch(markdownContent).then((response) => response.text()).then((text) => {
+    fetchMarkdown(markdownContent).then((text) => {
       this.setState({
         contentBuild: text
       })
