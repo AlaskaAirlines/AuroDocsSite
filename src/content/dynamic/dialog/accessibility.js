@@ -1,6 +1,6 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
-import { initExamples } from '@aurodesignsystem/auro-dialog/demo/index.js';
-import content from '@aurodesignsystem/auro-dialog/demo/index.md';
+import { initExamples } from '@aurodesignsystem/auro-dialog/demo/accessibility.js';
+import content from '@aurodesignsystem/auro-dialog/demo/accessibility.md';
 
 class AuroContent extends AuroComponentContent {
 
