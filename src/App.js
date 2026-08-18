@@ -314,8 +314,13 @@ import AuroDateTimeReleases from './content/dynamic/datetime/releases';
 // dialog
 import AuroDialog from './content/dynamic/dialog/component';
 import AuroDialogApi from './content/dynamic/dialog/api';
-import AuroDialogInstall from './content/dynamic/dialog/install';
 import AuroDialogReleases from './content/dynamic/dialog/releases';
+import AuroDialogGettingStarted from './content/dynamic/dialog/getting-started';
+import AuroDialogCustomize from './content/dynamic/dialog/customize';
+import AuroDialogDesign from './content/dynamic/dialog/design';
+import AuroDialogAccessibility from './content/dynamic/dialog/accessibility';
+import AuroDialogKeyboardBehavior from './content/dynamic/dialog/keyboard-behavior';
+import AuroDialogVoiceOver from './content/dynamic/dialog/voiceover';
 
 // drawer
 import AuroDrawer from './content/dynamic/drawer/component';
@@ -762,8 +767,13 @@ function App() {
 
               {/* Auro Dialog */}
               <Route path="/components/auro/dialog" element={<AuroDialog />} />
-              <Route path="/components/auro/dialog/install" element={<AuroDialogInstall />} />
+              <Route path="/components/auro/dialog/getting-started" element={<AuroDialogGettingStarted />} />
+              <Route path="/components/auro/dialog/customize" element={<AuroDialogCustomize />} />
               <Route path="/components/auro/dialog/api" element={<AuroDialogApi />} />
+              <Route path="/components/auro/dialog/design" element={<AuroDialogDesign />} />
+              <Route path="/components/auro/dialog/accessibility" element={<AuroDialogAccessibility />} />
+              <Route path="/components/auro/dialog/keyboard-behavior" element={<AuroDialogKeyboardBehavior />} />
+              <Route path="/components/auro/dialog/voice-over" element={<AuroDialogVoiceOver />} />
               <Route path="/components/auro/dialog/releases" element={<AuroDialogReleases />} />
 
               {/* Auro drawer */}

@@ -1,5 +1,4 @@
 import AuroComponentContent from "~/functions/renderComponentPage";
-import { initExamples } from '@aurodesignsystem/auro-dialog/demo/api.js';
 import content from '@aurodesignsystem/auro-dialog/demo/api.md';
 
 class AuroContent extends AuroComponentContent {
@@ -7,14 +6,16 @@ class AuroContent extends AuroComponentContent {
   constructor(props) {
     super(props);
 
-    this.markdownContent = content; 
+    this.hasAccessibility = true;
+    this.hasVoiceover = true;
+    this.hasGettingStarted = true;
+    this.hasCustomize = true;
+    this.hasDesign = true;
+    this.hasKeyboardBehavior = true;
+    this.hasInstall = false;
+    this.hasSubNav = true;
+    this.markdownContent = content;
   };
-
-  componentDidMount() {
-    super.componentDidMount();
-
-    initExamples();
-  }
 }
 
 export default AuroContent;
