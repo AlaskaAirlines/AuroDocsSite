@@ -1,0 +1,114 @@
+# Auro Design System
+
+> Auro is Alaska Airlines' open-source design system. The documentation site at auro.alaskaair.com provides guidance, API references, and installation instructions for Auro's web components, design tokens, and foundational design standards (color, typography, icons, and layout).
+
+Auro components are framework-agnostic custom elements (web components) that work with any modern framework or with plain HTML/JavaScript. Most component pages follow a consistent structure: an overview/examples page, plus dedicated `install`, `api`, and `releases` pages. All links below are relative to https://auro.alaskaair.com.
+
+## Getting started
+
+- [Auro home](https://auro.alaskaair.com/): Overview of the Auro design system and documentation site.
+- [Getting started for developers](https://auro.alaskaair.com/getting-started/developers): Onboarding guide for developers adopting Auro.
+- [Developer setup (macOS)](https://auro.alaskaair.com/developer-setup/macOS): Local environment setup for macOS.
+- [Developer setup (Windows)](https://auro.alaskaair.com/developer-setup/windows): Local environment setup for Windows.
+- [Developer setup (Linux)](https://auro.alaskaair.com/developer-setup/linux): Local environment setup for Linux.
+- [Developer setup (npm)](https://auro.alaskaair.com/developer-setup/npm): Installing and configuring Auro packages from npm.
+- [Compliance](https://auro.alaskaair.com/getting-started/developers/compliance): Requirements for building compliant Auro experiences.
+- [Design philosophy](https://auro.alaskaair.com/design-philosophy): The principles behind the Auro design system.
+- [Voice and tone](https://auro.alaskaair.com/core/voice-and-tone): Content and writing guidance for Auro experiences.
+- [Auro support / FAQ](https://auro.alaskaair.com/auro-support): Frequently asked questions and how to get help.
+- [Office hours](https://auro.alaskaair.com/officehours): How to reach the Auro team during office hours.
+- [Accessibility statement](https://auro.alaskaair.com/a11y-statement): Auro's commitment to accessibility.
+
+## Design foundations
+
+- [Color overview](https://auro.alaskaair.com/color/overview): Introduction to Auro's color system.
+- [Digital color palette](https://auro.alaskaair.com/color/digital-palette): Core digital color palette.
+- [Personality color palette](https://auro.alaskaair.com/color/personality-palette): Expressive/personality color palette.
+- [Typography overview](https://auro.alaskaair.com/typography/overview): Auro's typographic system.
+- [Typography usage](https://auro.alaskaair.com/typography/usage): How to apply Auro typography.
+- [Icons](https://auro.alaskaair.com/icons): Browse the Auro icon library.
+- [Icon guidelines](https://auro.alaskaair.com/icons/guidelines): Guidelines for using Auro icons.
+- [Icon installation](https://auro.alaskaair.com/icons/install): Installing the Auro icon library.
+- [Ways to use icons](https://auro.alaskaair.com/icons/ways-to-use): Different integration methods for icons.
+- [Layout grid](https://auro.alaskaair.com/layout/grid): Grid system for layouts.
+- [Layout spacing](https://auro.alaskaair.com/layout/spacing): Spacing scale and usage.
+
+## Design tokens
+
+- [Design tokens overview](https://auro.alaskaair.com/design-tokens): Introduction to Auro design tokens.
+- [Design tokens install](https://auro.alaskaair.com/getting-started/developers/design-tokens/install): Installing the design tokens package.
+- [Tokens architecture](https://auro.alaskaair.com/getting-started/developers/design-tokens/docs/architecture): How the token system is structured.
+- [Tokens API reference](https://auro.alaskaair.com/getting-started/developers/design-tokens/docs/api-reference): Reference for available tokens.
+- [Tokens migration](https://auro.alaskaair.com/getting-started/developers/design-tokens/docs/migration): Migrating between token versions.
+- [Tokens themes](https://auro.alaskaair.com/getting-started/developers/design-tokens/docs/themes): Theming with design tokens.
+
+## Components
+
+- [Accordion](https://auro.alaskaair.com/components/auro/accordion): Expandable/collapsible content sections.
+- [Alert](https://auro.alaskaair.com/components/auro/alert): Contextual alert messaging.
+- [Avatar](https://auro.alaskaair.com/components/auro/avatar): User or entity avatar display.
+- [Background](https://auro.alaskaair.com/components/auro/background): Decorative background element.
+- [Back to top](https://auro.alaskaair.com/components/auro/backtotop): Scroll-to-top control.
+- [Badge](https://auro.alaskaair.com/components/auro/badge): Small status/count indicator.
+- [Banner](https://auro.alaskaair.com/components/auro/banner): Prominent page-level messaging.
+- [Button](https://auro.alaskaair.com/components/auro/button): Interactive button element.
+- [Card](https://auro.alaskaair.com/components/auro/card): Content container card.
+- [Carousel](https://auro.alaskaair.com/components/auro/carousel): Rotating content carousel.
+- [Checkbox](https://auro.alaskaair.com/components/auro/checkbox): Checkbox form control.
+- [Combobox](https://auro.alaskaair.com/components/auro/combobox): Combined input and menu selection.
+- [Counter](https://auro.alaskaair.com/components/auro/counter): Numeric counter/stepper control.
+- [Datepicker](https://auro.alaskaair.com/components/auro/datepicker): Date selection control.
+- [Datetime](https://auro.alaskaair.com/components/auro/datetime): Date and time formatting/display.
+- [Dialog](https://auro.alaskaair.com/components/auro/dialog): Modal dialog overlay.
+- [Drawer](https://auro.alaskaair.com/components/auro/drawer): Slide-in panel/drawer.
+- [Dropdown](https://auro.alaskaair.com/components/auro/dropdown): Dropdown trigger and bib.
+- [Flight](https://auro.alaskaair.com/components/auro/flight): Flight information display.
+- [Flightline](https://auro.alaskaair.com/components/auro/flightline): Flight route/timeline display.
+- [Form](https://auro.alaskaair.com/components/auro/form): Form wrapper and validation.
+- [Formkit](https://auro.alaskaair.com/components/auro/formkit): Bundled form component toolkit.
+- [Header](https://auro.alaskaair.com/components/auro/header): Page/section header component.
+- [Hyperlink](https://auro.alaskaair.com/components/auro/hyperlink): Styled hyperlink element.
+- [Icon](https://auro.alaskaair.com/components/auro/icon): Render individual Auro icons.
+- [Input](https://auro.alaskaair.com/components/auro/input): Text input form control.
+- [Loader](https://auro.alaskaair.com/components/auro/loader): Loading indicator.
+- [Lockup](https://auro.alaskaair.com/components/auro/lockup): Brand lockup component.
+- [Menu](https://auro.alaskaair.com/components/auro/menu): Selectable menu list.
+- [Nav](https://auro.alaskaair.com/components/auro/nav): Navigation component.
+- [Pane](https://auro.alaskaair.com/components/auro/pane): Content pane container.
+- [Popover](https://auro.alaskaair.com/components/auro/popover): Contextual popover overlay.
+- [Radio](https://auro.alaskaair.com/components/auro/radio): Radio button form control.
+- [Select](https://auro.alaskaair.com/components/auro/select): Select/dropdown form control.
+- [Sidenav](https://auro.alaskaair.com/components/auro/sidenav): Side navigation component.
+- [Skeleton](https://auro.alaskaair.com/components/auro/skeleton): Loading skeleton placeholder.
+- [Slideshow](https://auro.alaskaair.com/components/auro/slideshow): Slideshow/gallery component.
+- [Table](https://auro.alaskaair.com/components/auro/table): Data table component.
+- [Tail](https://auro.alaskaair.com/components/auro/tail): Tail/pointer accent element.
+- [Toast](https://auro.alaskaair.com/components/auro/toast): Transient toast notification.
+- [Tokenlist](https://auro.alaskaair.com/components/auro/tokenlist): Design token list display.
+
+## Contributing
+
+- [Contributing overview](https://auro.alaskaair.com/contributing): How to contribute to Auro.
+- [Contributing upstream](https://auro.alaskaair.com/contributing/upstream): Working with upstream dependencies.
+- [Git workflow](https://auro.alaskaair.com/contributing/git-workflow): Branching and commit conventions.
+- [Issues, PRs, and labels](https://auro.alaskaair.com/contributing/issues-prs-labels): Issue and pull request process.
+- [Definition of done](https://auro.alaskaair.com/definition-of-done): Criteria for completed work.
+
+## Optional
+
+- [Browser support](https://auro.alaskaair.com/support/browsersSupport): Supported browsers.
+- [Node support](https://auro.alaskaair.com/node-support): Supported Node.js versions.
+- [Slots](https://auro.alaskaair.com/support/slots): Using slots in Auro components.
+- [Custom properties](https://auro.alaskaair.com/support/custom-properties): CSS custom properties reference.
+- [WebCoreStyleSheets](https://auro.alaskaair.com/webcorestylesheets): Shared core stylesheets.
+- [CSS conventions](https://auro.alaskaair.com/css/conventions): CSS authoring conventions.
+- [CSS guidelines](https://auro.alaskaair.com/css/guidelines): CSS guidelines.
+- [Custom element CSS](https://auro.alaskaair.com/css/custom-element-css): Styling custom elements.
+- [Idiomatic CSS](https://auro.alaskaair.com/css/idiomatic-css): Idiomatic CSS reference.
+- [JavaScript example project](https://auro.alaskaair.com/javascriptSetup): Using Auro with plain JavaScript.
+- [React example project](https://auro.alaskaair.com/reactSetup): Using Auro with React.
+- [Svelte example project](https://auro.alaskaair.com/svelteSetup): Using Auro with Svelte.
+- [Component status](https://auro.alaskaair.com/component-status): Development status of components.
+- [All releases](https://auro.alaskaair.com/support/all-releases): Release history across components.
+- [Releases by sprint](https://auro.alaskaair.com/support/releases-by-sprint): Releases grouped by sprint.
+- [Releases summary](https://auro.alaskaair.com/support/releases-summary): Summary release dashboard.
