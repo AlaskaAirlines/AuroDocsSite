@@ -563,6 +563,20 @@ pre {
   }
 }
 
+// Tails & pictograms are large, full-color brand artwork rendered as <img> (each
+// SVG stays its own document so its internal ids don't collide). Constrain them to
+// fit the demo box, leaving room for the filename label.
+.graphicList .iconsWrapper img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100px;
+
+  @include auro_breakpoint($min: $ds-grid-breakpoint-sm) {
+    max-height: 120px;
+  }
+}
+
 // ------------ color view -----------------
 .avatarWrapper {
   display: block;

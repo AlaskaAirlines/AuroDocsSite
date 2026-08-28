@@ -28,6 +28,8 @@ yarn-error.log*
 src/content/docsExport.js
 src/content/dynamic/icons/iconList.js
 src/content/dynamic/icons/deprecatedIconList.js
+src/content/dynamic/icons/tailList.js
+src/content/dynamic/icons/pictogramList.js
 
 # Secrets
 .env

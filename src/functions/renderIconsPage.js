@@ -1,7 +1,9 @@
 import RenderMarkdownPage from "~/functions/renderComponentPage";
-import { NavLink } from "react-router-dom";
-import LinkIcons from './../components/linkIcons';
-import packageJson from 'ROOT/package.json';
+// Shared iconography tab strip — single source of truth for the Icons/Tails/
+// Pictograms/Install/etc. tabs. Both the markdown-driven icon pages (which
+// extend this class) and the hand-authored gallery pages (icons.js, tails.js,
+// pictograms.js) render the same <Nav /> so the tab list can't drift.
+import { Nav } from '~/content/dynamic/icons/nav.js';
 
 class AuroContent extends RenderMarkdownPage {
   constructor(props) {
@@ -13,28 +15,8 @@ class AuroContent extends RenderMarkdownPage {
     this.hasCustomElementRegistration = false;
   };
 
-  showVersion() {
-    const dependencies = packageJson.dependencies['@alaskaairux/icons'];
-    return `@alaskaairux/icons: ${dependencies}`;
-  };
-
   renderNav() {
-    return (
-      <div role="tablist" className="tabList">
-        <NavLink role="tab" end className="tab link" to={`/icons`} >Icons</NavLink>
-        <NavLink role="tab" end className="tab link" to={`/icons/guidelines`} >Design guidelines</NavLink>
-        <NavLink role="tab" end className="tab link" to={`/icons/install`} >Install</NavLink>
-        <NavLink role="tab" end className="tab link" to={`/icons/ways-to-use`} >Ways to use</NavLink>
-        <NavLink role="tab" end className="tab link" to={`/deprecated-icons`} >Deprecated Icons</NavLink>
-
-        <LinkIcons
-          github="https://github.com/AlaskaAirlines/Icons/issues"
-          npm="https://www.npmjs.com/package/@alaskaairux/icons"
-          code="https://github.com/AlaskaAirlines/Icons/tree/master/src/icons"
-          version={this.showVersion()}
-        />
-      </div>
-    );
+    return <Nav />;
   }
 }
 
