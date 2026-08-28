@@ -15,6 +15,8 @@ export class Nav extends Component {
     return (
       <div role="tablist" className="tabList">
         <NavLink role="tab" end className="tab link" to={`/icons`} >Icons</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/tails`} >Tails</NavLink>
+        <NavLink role="tab" end className="tab link" to={`/pictograms`} >Pictograms</NavLink>
         <NavLink role="tab" end className="tab link" to={`/icons/guidelines`} >Design guidelines</NavLink>
         <NavLink role="tab" end className="tab link" to={`/icons/install`} >Install</NavLink>
         <NavLink role="tab" end className="tab link" to={`/icons/ways-to-use`} >Ways to use</NavLink>

@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 export default function SideNav(props) {
 
-  const [siteNav, setNav] = useState([
+  const [siteNav] = useState([
     {
       header: "Welcome to Auro",
       items: [
@@ -32,7 +32,10 @@ export default function SideNav(props) {
       items: [
         { linkTitle: "Color", route: "/color/overview", parent: true },
         { linkTitle: "Typography", route: "/typography/overview", parent: true },
-        { linkTitle: "Icons", route: "/icons", parent: true },
+        // Single "Iconography" entry; the Icons/Tails/Pictograms tab strip
+        // (src/content/dynamic/icons/nav.js) handles navigation between them.
+        // activeRoutes keeps the entry highlighted across all three sub-pages.
+        { linkTitle: "Iconography", route: "/icons", parent: true, activeRoutes: ["/icons", "/tails", "/pictograms", "/icons/guidelines", "/icons/install", "/icons/ways-to-use", "/deprecated-icons"] },
         // { linkTitle: "Layout", route: "/layout/grid", parent: true },
         { linkTitle: "Voice and tone", route: "/core/voice-and-tone", parent: true }
       ]
@@ -101,13 +104,16 @@ export default function SideNav(props) {
     }
   ]);
 
-  function isActive(link) {
-    const activeURL = window.location.pathname;
+  const { pathname } = useLocation();
 
-    if (activeURL === link.route) {
-      return true;
+  // A link is highlighted when the current path matches its route, or any of
+  // its declared activeRoutes (used to keep one nav entry active across the
+  // sub-pages it groups, e.g. Iconography -> Icons/Tails/Pictograms).
+  function isActive(link) {
+    if (link.activeRoutes) {
+      return link.activeRoutes.includes(pathname);
     }
-    return false;
+    return pathname === link.route;
   }
 
   return (
@@ -127,13 +133,12 @@ export default function SideNav(props) {
                 {navBlock.items.map((link) => (
                   <NavLink key={link.route} to={link.route}
                     onClick={() => {
-                      siteNav.forEach(navBlock => navBlock.items.forEach(link => link.active = false));
-                      link.active = true;
-                      setNav([...siteNav]);
+                      // Close the mobile nav flyout on selection. Active-highlighting
+                      // is derived from the current route via isActive() below.
                       const menuCheckbox = document.getElementById('menuCheckbox');
                       if (menuCheckbox) menuCheckbox.checked = false;
                     }}
-                    className={`hyperlink hyperlink--nav ${link.active ? 'hyperlink--active': ''} ${link.subNav ? 'hyperlink--subNav': ''} ${link.parent ? 'hyperlink--parent': ''}`}>
+                    className={`hyperlink hyperlink--nav ${isActive(link) ? 'hyperlink--active': ''} ${link.subNav ? 'hyperlink--subNav': ''} ${link.parent ? 'hyperlink--parent': ''}`}>
                     <span>{link.linkTitle}</span>
                   </NavLink>
                 ))}
