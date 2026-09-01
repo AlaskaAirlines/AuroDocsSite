@@ -44,7 +44,7 @@ class Colors extends Component {
     return (
       <section className="auro_baseType">
         <Nav />
-        <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
+        <img className="util_stackMargin400--bottom" src={header} alt="page header" />
         <h1 className="auro_heading auro_heading--display">Grid</h1>
         <section className="auro-markdown">
           <ReactMarkdown

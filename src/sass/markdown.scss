@@ -6,21 +6,25 @@
 
 // ----------------------- DO NOT EDIT -----------------------------
 
-// Import Auro tokens
-@import '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables';
-@import "@aurodesignsystem/webcorestylesheets/src/breakpoints";
+// Import Auro tokens (referenced directly below as $ds-* var() fallbacks and $ds-grid-breakpoint-lg).
+@use '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables' as *;
 
-// Auro typography and spacing
-$prefix: true;
-$paragraph: true;
-@import '@aurodesignsystem/webcorestylesheets/src/focus-visible';
+// Prefix config for the prefixed utility classes — fontStyles is the only consumer here.
+// This replaces the former `$prefix: true;`. The old `$paragraph: true;` and the trailing
+// `$prefix: null;` reset were inert: no imported partial reads $paragraph, headings/table/
+// layoutPropertiesGenerator don't use the prefix, and elementDemoStyles is plain CSS.
+@use "@aurodesignsystem/webcorestylesheets/src/libSupport/manageScope" with (
+  $prefix: true
+);
 
-@import "@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles";
-@import "@aurodesignsystem/webcorestylesheets/src/headings";
-@import "@aurodesignsystem/webcorestylesheets/src/utilityMixins/layoutPropertiesGenerator";
-@import "@aurodesignsystem/webcorestylesheets/src/componentSupport/table";
-$prefix: null;
+@use "@aurodesignsystem/webcorestylesheets/src/breakpoints" as *;
+@use '@aurodesignsystem/webcorestylesheets/src/focus-visible' as *;
+@use "@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles" as *;
+@use "@aurodesignsystem/webcorestylesheets/src/headings" as *;
+@use "@aurodesignsystem/webcorestylesheets/src/utilityMixins/layoutPropertiesGenerator" as *;
+@use "@aurodesignsystem/webcorestylesheets/src/componentSupport/table" as *;
 
+// Plain CSS shipped in WCSS dist — kept as a CSS @import (not a Sass module).
 @import "@aurodesignsystem/webcorestylesheets/dist/elementDemoStyles";
 
 // Override body/main global layout rules from elementDemoStyles.css that

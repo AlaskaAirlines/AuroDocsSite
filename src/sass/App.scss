@@ -1,14 +1,26 @@
-@import '@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables';
-@import "@aurodesignsystem/webcorestylesheets/src/breakpoints";
-@import "@aurodesignsystem/webcorestylesheets/src/animation";
-@import "@aurodesignsystem/webcorestylesheets/src/utilityMixins/anchor-roleTab";
+// WCSS 12 moved to the Sass module system (@use/@forward); legacy @import is
+// deprecated in Dart Sass (removed in 3.0). Load tokens and WCSS partials via @use.
+//
+// Design tokens: WCSS partials now @use the tokens themselves, so a pre-import is no
+// longer required (and a bare @import here now collides with the partials' `@use ... as *`).
+// App.scss still references $ds-grid-breakpoint-* directly, so we @use the tokens here;
+// `as *` keeps them unqualified, matching the previous global @import.
+@use "@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables" as *;
 
-$prefix: true;
-$paragraph: true;
-$focus: true;
-@import "@aurodesignsystem/webcorestylesheets/src/utilityClasses/typeProperties";
-@import "@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles";
-@import "@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties";
+// Scope/prefix must be configured at the first load of manageScope, before any utility
+// partial that consumes it — in v12 globals no longer flow into modules. This replaces the
+// former `$prefix: true;`. The old `$paragraph`/`$focus` globals were inert here (owned by
+// essentials/core partials this file does not import), so they are dropped.
+@use "@aurodesignsystem/webcorestylesheets/src/libSupport/manageScope" with (
+  $prefix: true
+);
+
+@use "@aurodesignsystem/webcorestylesheets/src/breakpoints" as *;
+@use "@aurodesignsystem/webcorestylesheets/src/animation" as *;
+@use "@aurodesignsystem/webcorestylesheets/src/utilityMixins/anchor-roleTab" as *;
+@use "@aurodesignsystem/webcorestylesheets/src/utilityClasses/typeProperties" as *;
+@use "@aurodesignsystem/webcorestylesheets/src/utilityClasses/fontStyles" as *;
+@use "@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties" as *;
 
 %see {
   outline: 2px solid red;

@@ -51,7 +51,7 @@ class ThemeSwitcher extends Component {
 
         <auro-header>Auro Theme Switcher</auro-header>
 
-        <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
+        <img className="util_stackMargin400--bottom" src={header} alt="page header" />
 
         <h2 level="3">Overview</h2>
 
