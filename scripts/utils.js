@@ -27,6 +27,12 @@ const getImportName = (filePath) => {
   const file = getFile(filePath)
   let name = file.split('.')[0]
   name = name.replace(/-/g, '')
+  // A JS import identifier cannot begin with a digit, so a file like
+  // "24-7-support.svg" (-> "247support") would emit an invalid import and break
+  // the generated module. Prefix "Svg" when the name would start with a number.
+  if (/^\d/.test(name)) {
+    name = `Svg${name}`
+  }
   const camelCaseName = name.charAt(0).toUpperCase() + name.substring(1)
 
   return camelCaseName
