@@ -80,6 +80,7 @@
     "pretest": "npm run buildIconsScript",
     "test": "vitest run",
     "test:watch": "vitest",
+    "pretest:watch": "npm run buildIconsScript",
     "buildIconsScript": "node ./scripts/build-icon-lib.js",
     "buildPages": "node ./scripts/build-page-imports.js",
     "buildIcons": "npm-run-all buildPages buildIconsScript",

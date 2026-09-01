@@ -106,14 +106,27 @@ export default function SideNav(props) {
 
   const { pathname } = useLocation();
 
-  // A link is highlighted when the current path matches its route, or any of
-  // its declared activeRoutes (used to keep one nav entry active across the
-  // sub-pages it groups, e.g. Iconography -> Icons/Tails/Pictograms).
+  // Highlight the nav entry whose route best matches the current path. A route
+  // matches exactly or as an ancestor (so a component's /api, /install, /releases
+  // sub-tabs keep the parent highlighted); trailing slashes (e.g.
+  // "/components/auro/pane/") are normalized. When several routes match, only the
+  // most specific (longest) one wins — this prevents "/getting-started/developers"
+  // from staying lit on "/getting-started/developers/design-tokens".
+  const normalizeRoute = (route) => route.replace(/\/$/, '');
+  const routeMatchesPath = (route) => {
+    const base = normalizeRoute(route);
+    return pathname === base || pathname.startsWith(`${base}/`);
+  };
+  const bestMatch = siteNav
+    .flatMap((block) => block.items)
+    .flatMap((link) => link.activeRoutes || [link.route])
+    .filter(routeMatchesPath)
+    .map(normalizeRoute)
+    .sort((a, b) => b.length - a.length)[0];
+
   function isActive(link) {
-    if (link.activeRoutes) {
-      return link.activeRoutes.includes(pathname);
-    }
-    return pathname === link.route;
+    const routes = link.activeRoutes || [link.route];
+    return bestMatch !== undefined && routes.some((r) => normalizeRoute(r) === bestMatch);
   }
 
   return (
