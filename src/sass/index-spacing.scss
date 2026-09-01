@@ -1,0 +1,19 @@
+/* index-spacing.scss */
+// Spacing utility classes (`util_stackMargin*`, `util_stackPadding*`, …) used across the docs
+// site markup. These are intentionally UNPREFIXED (manageScope default `$prefix: null`) and use
+// the `!important` flag — the opposite config from the prefixed utilities in ./index.scss.
+//
+// WCSS 12 configures shared modules (manageScope / important) once per compilation, so these
+// utilities live in their own stylesheet entry (imported separately in App.js) to keep their
+// config isolated from index.scss. This replaces the v11 `$important: true;` +
+// `$auro-spacing-types: stack;` globals that were set mid-file before the legacy @import.
+@use '@aurodesignsystem/webcorestylesheets/src/utilityVariables/important' with (
+  $important: true
+);
+
+// spacingUtility self-loads the design-token map it needs; we only pass the spacing types
+// (v11 `$auro-spacing-types: stack;` → v12 `$ds-spacing-types`). Prefix is left at its default
+// (null → unprefixed `util_*`), matching the class names used in the docs markup.
+@use '@aurodesignsystem/webcorestylesheets/src/utilityMixins/spacingUtility' with (
+  $ds-spacing-types: stack
+);

@@ -7,6 +7,7 @@ import {
 
 // Importing Sass
 import './sass/index.scss';
+import './sass/index-spacing.scss';
 import './sass/App.scss';
 
 // -=-=-=-=-=-=-=-=-=-=- LEGACY =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

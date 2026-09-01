@@ -8,7 +8,7 @@ import { THEMES } from "~/config/themes";
 export default class ThemeTabs extends Component {
   render() {
     return (
-      <div role="tablist" className="tabList util_stackMarginMd--bottom">
+      <div role="tablist" className="tabList util_stackMargin200--bottom">
         {THEMES.map(theme => (
           <NavLink 
             key={theme.slug}

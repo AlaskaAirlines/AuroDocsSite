@@ -24,7 +24,7 @@ class Typography extends Component {
         <Nav/>
         <ThemeTabs />
         <section className="auro-markdown">
-        <img className="util_stackMarginXl--bottom" src={header} alt="page header" />
+        <img className="util_stackMargin400--bottom" src={header} alt="page header" />
 
         <auro-header level="1">Usage</auro-header>
 

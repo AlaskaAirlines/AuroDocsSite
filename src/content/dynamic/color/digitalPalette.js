@@ -134,7 +134,7 @@ class ColorsOverview extends Component {
         <h1 className="auro_heading auro_heading--display">Digital Brand Palette</h1>
 
         <h2 className="auro_heading auro_heading--600">Background</h2>
-        <img className="util_marginBottom--xl" src={windows} alt="page header" />
+        <img className="util_stackMargin400--bottom" src={windows} alt="page header" />
         <auro-tokendisplay componentData={this.getColors(background, 'neutral', [])}></auro-tokendisplay>
 
         <h2 className="auro_heading auro_heading--600">User Interaction</h2>

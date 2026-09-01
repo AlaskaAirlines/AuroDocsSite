@@ -68,7 +68,7 @@ class AllIssues extends Component {
                       </span>
                     </auro-drawer>
                   </div>
-                  <div className="labelWrapper util_stackPaddingMd--top">
+                  <div className="labelWrapper util_stackPadding200--top">
                     {labels.nodes.map(({name, color, description}, index) => (
                       <div key={index + '_' + name} title={description} className="issueLabel" style={{'font-weight':'bold', backgroundColor: '#' + color, color: this.getContrastYIQ(color)}}>
                         {name}

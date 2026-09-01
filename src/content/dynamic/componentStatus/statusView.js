@@ -358,10 +358,11 @@ const Labs = gql`
 class ComponentStatus extends Component {
   render() {
     return (
-      <section>
+      <section className="auro_baseType">
         <Nav />
+        <section className="auro-markdown">
         <auro-header level="1" display="display">Status</auro-header>
-        <p>Auro custom elements are a collection of custom elements maintained by Alaska Airlines that implement the Auro Design System. Tools and developed elements that are universally useable in almost any development environment including <auro-hyperlink href="/reactSetup" relative>React,</auro-hyperlink> <auro-hyperlink href="/svelteSetup" relative>Svelte,</auro-hyperlink> or simply standard <auro-hyperlink href="/javascriptSetup" relative>JavaScript.</auro-hyperlink></p>
+        <p style={{ marginTop: 'var(--ds-size-200)' }}>Auro custom elements are a collection of custom elements maintained by Alaska Airlines that implement the Auro Design System. Tools and developed elements that are universally useable in almost any development environment including <auro-hyperlink href="/reactSetup" relative>React,</auro-hyperlink> <auro-hyperlink href="/svelteSetup" relative>Svelte,</auro-hyperlink> or simply standard <auro-hyperlink href="/javascriptSetup" relative>JavaScript.</auro-hyperlink></p>
         <p>Auro custom elements are always in a 'work in progress' status and releases are subject to major changes.</p>
         <p>For more information about how we address Node support maintenance, see our <auro-hyperlink href="/node-support" relative>Auro Node support</auro-hyperlink> page.</p>
         <auro-header level="3" display="600">Auro custom elements</auro-header>
@@ -504,6 +505,7 @@ class ComponentStatus extends Component {
           </tbody>
         </table>
         <Footer />
+        </section>
       </section>
     )
   }
