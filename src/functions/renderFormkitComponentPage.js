@@ -344,19 +344,13 @@ class AuroComponentContent extends MarkdownPageWrapper {
 
       const RELEASES = gql`
       {
-        organization(login: "AlaskaAirlines") {
-          team(slug: "auro-team") {
-            repositories(first: 1, orderBy: {field: NAME, direction: ASC}, query: "${this.componentName}") {
-              nodes {
-                name
-                releases(first: 20, orderBy: {field: CREATED_AT, direction: DESC}) {
-                  nodes {
-                    name
-                    updatedAt
-                    description
-                  }
-                }
-              }
+        repository(owner: "AlaskaAirlines", name: "${this.componentName}") {
+          name
+          releases(first: 20, orderBy: {field: CREATED_AT, direction: DESC}) {
+            nodes {
+              name
+              updatedAt
+              description
             }
           }
         }
@@ -374,13 +368,13 @@ class AuroComponentContent extends MarkdownPageWrapper {
               {({loading, error, data}) => {
 
                 if (loading) return <auro-loader laser onlight></auro-loader>;
-                if (error) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
-    
-                return data.organization.team.repositories.nodes.map(({ name, releases }, index) => (
-                  releases.nodes.length > 0
-                    ? <Release key={index + '_' + name} name={name} releases={releases.nodes} />
-                    : ''
-                ))
+
+                const repo = data?.repository;
+                if (error || !repo) return <p>We are unable to connect to GitHub at the moment, please try back later.</p>;
+
+                return repo.releases.nodes.length > 0
+                  ? <Release name={repo.name} releases={repo.releases.nodes} />
+                  : '';
               }}
             </Query>
 
