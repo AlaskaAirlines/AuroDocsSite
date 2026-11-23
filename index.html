@@ -77,7 +77,18 @@
     <title>Auro Design System | Alaska Airlines | Seattle, WA</title>
     <link rel="stylesheet" href="/styles/elementDemoStyles.css">
     <link rel="stylesheet" data-aag-theme href="/tokens/web/alaska.min.css">
-    <link rel="stylesheet" data-aag-theme href="/styles/bundled/themes/alaska.global.min.css">
+    <script>
+      // Load the staging WCSS theme bundle on localhost only
+      (function () {
+        var suffix = location.hostname === 'localhost' ? '-stg' : '';
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.setAttribute('data-aag-theme', '');
+        link.href = '/styles/bundled/themes/alaska' + suffix + '.global.min.css';
+        // Insert in place to keep the original cascade order
+        document.currentScript.parentNode.insertBefore(link, document.currentScript);
+      })();
+    </script>
     <link rel="stylesheet" href="/styles/bundled/type/classes.alaska.css">
   </head>
   <body>
