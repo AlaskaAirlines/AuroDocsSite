@@ -36,7 +36,9 @@ function ThemeSwitcher() {
     };
 
     addLink(`/tokens/web/${theme}.min.css`);
-    addLink(`/styles/bundled/themes/${theme}.global.min.css`);
+    // Staging WCSS theme bundle on localhost only
+    const wcssSuffix = window.location.hostname === 'localhost' ? '-stg' : '';
+    addLink(`/styles/bundled/themes/${theme}${wcssSuffix}.global.min.css`);
   }, [theme]);
 
   useEffect(() => {
