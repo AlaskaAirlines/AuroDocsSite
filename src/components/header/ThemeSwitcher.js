@@ -3,6 +3,11 @@ import React, { useEffect, useRef, useState } from 'react';
 const THEMES = ['alaska', 'hawaiian', 'atmos'];
 const DEFAULT_THEME = 'alaska';
 
+// Hosts that load the staging WCSS theme bundle: localhost, loopback, private
+// LAN IPs, and *.local, so other devices on the local network get it too.
+// Keep in sync with the inline script in index.html.
+const LOCAL_HOST_PATTERN = /^(localhost|127(\.\d+){3}|\[::1\]|10(\.\d+){3}|192\.168(\.\d+){2}|172\.(1[6-9]|2\d|3[01])(\.\d+){2}|.+\.local)$/;
+
 // Recover the active theme from the previously-injected token stylesheet so
 // that on remount we don't reset state back to alaska while hawaiian/atmos
 // links remain on <head>.
@@ -36,8 +41,8 @@ function ThemeSwitcher() {
     };
 
     addLink(`/tokens/web/${theme}.min.css`);
-    // Staging WCSS theme bundle on localhost only
-    const wcssSuffix = window.location.hostname === 'localhost' ? '-stg' : '';
+    // Staging WCSS theme bundle on local hosts only
+    const wcssSuffix = LOCAL_HOST_PATTERN.test(window.location.hostname) ? '-stg' : '';
     addLink(`/styles/bundled/themes/${theme}${wcssSuffix}.global.min.css`);
   }, [theme]);
 
