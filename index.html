@@ -78,9 +78,12 @@
     <link rel="stylesheet" href="/styles/elementDemoStyles.css">
     <link rel="stylesheet" data-aag-theme href="/tokens/web/alaska.min.css">
     <script>
-      // Load the staging WCSS theme bundle on localhost only
+      // Load the staging WCSS theme bundle on local hosts only (localhost,
+      // loopback, private LAN IPs, *.local) so other devices on the network
+      // also get it. Keep this pattern in sync with ThemeSwitcher.js.
       (function () {
-        var suffix = location.hostname === 'localhost' ? '-stg' : '';
+        var isLocal = /^(localhost|127(\.\d+){3}|\[::1\]|10(\.\d+){3}|192\.168(\.\d+){2}|172\.(1[6-9]|2\d|3[01])(\.\d+){2}|.+\.local)$/.test(location.hostname);
+        var suffix = isLocal ? '-stg' : '';
         var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.setAttribute('data-aag-theme', '');
